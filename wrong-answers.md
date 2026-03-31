@@ -3,6 +3,9 @@
 ## Telnet core features
 **Original prompt:** “Which of the following statements describe an important feature or service provided by Telnet? (Select three.)”
 
+![Telnet question screenshot](images/20260330-telnet.jpg)
+
+
 **Correct choices:**
 - Provides username and password authentication
 - Transmits data in an unencrypted form
