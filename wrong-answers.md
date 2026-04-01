@@ -104,4 +104,56 @@
 - HTTPS = 443, LDAPS = 636. 445 is the odd one out dedicated to SMB.
 
 **Memory hook:** Think "4-4-5" → 44 = Windows (WinNT), **5** = SMB. Or remember the trio 143/443/445/636 (mail/web/file/LDAP).
+---
+
+## LDAP port 389 and NetBIOS port set
+![LDAP port question](images/2026-03-31-ldap389.jpg)
+
+**Question:** "Which port is used for standard, unencrypted LDAP communication?"
+
+|  |  |
+| --- | --- |
+| ❌ My answer | HTTPS |
+| ✅ Correct | Port 389 (LDAP) |
+
+**Why:** LDAP plain text = TCP/UDP 389. When secured with TLS (LDAPS) it moves to 636. HTTPS is 443. SMTP 25, POP3 110, etc. Memorize the core auth/file ports.
+
+**Memory hook:** "3-8-9" → LDAP. Add 200 → 589? no. For secure, think "6-3-6" = LDAPS.
+
+![NetBIOS question](images/2026-03-31-netbios.jpg)
+
+**Question:** NetBIOS assigned ports (select 3).
+
+| Port | Service |
+| --- | --- |
+| 137 | NetBIOS Name Service |
+| 138 | NetBIOS Datagram Service |
+| 139 | NetBIOS Session Service |
+
+I selected 136 instead of 139.
+
+**Why:**
+- NetBIOS uses 137/138/139. There is no 136 service.
+- Port 135 is RPC endpoint mapper; 445 is SMB over TCP.
+
+**Memory hook:** "NetBIOS = 137-139" consecutive block; 135 = RPC, 445 = SMB.
+---
+
+## POP3 vs SMTP, and DHCP client port
+![POP3 vs SMTP question](images/2026-03-31-pop3.jpg)
+
+**Question:** Which protocol does a client use to download email from a server? (picked SMTP)
+- SMTP = sending mail (port 25/587)
+- **POP3 = receiving mail** (port 110 / POP3S 995)
+- IMAP is the other retrieval protocol (port 143/993)
+
+**Memory hook:** *Send* = SMTP, *Pull* = POP/IMAP.
+
+![DHCP client port question](images/2026-03-31-dhcp68.jpg)
+
+**Question:** DHCP client UDP port for receiving responses? Answer is **68**.
+- DHCP server listens on UDP 67.
+- DHCP client listens on UDP 68 to receive OFFER/ACK.
+
+**Memory hook:** "Server=67, Client=68" — ascending order.
 
