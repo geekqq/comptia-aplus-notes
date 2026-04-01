@@ -33,4 +33,38 @@
 - File servers (NAS/SAN) are the ones optimized for storing files.
 
 **Memory hook:** Print server = "document traffic controller"—think of it as the dispatcher for printers, not a storage bin.
+---
+
+## Wireless basics – channel width, Bluetooth traits, 802.11 features
+![Wireless question set](images/2026-03-31-wireless.jpg)
+
+### 1. Increasing channel width
+- ❌ My answer: "Reduces interference from neighboring channels"
+- ✅ Correct: "Increases data throughput but may cause more interference"
+
+**Why:** Wider channels (40/80/160 MHz) give more bandwidth, but their larger footprint overlaps more adjacent channels, so interference risk rises instead of shrinking. Use narrow 20 MHz in noisy environments.
+
+### 2. Bluetooth characteristics (select all that apply)
+- ❌ Missed: Operates in the 2.4 GHz ISM band
+- ❌ Incorrectly chose: Requires line-of-sight (其实 BT 是短距射频，不需要 LOS)
+- ✅ Correct traits:
+  - 2.4 GHz ISM band
+  - Short-range wireless communication
+  - Optimized for creating PANs
+  - Used for peripherals / wearables / IoT
+
+**Why:** Bluetooth is a frequency-hopping spread spectrum tech in the 2.4 GHz band. It’s meant for PANs and peripherals. Line-of-sight是红外的特性，不是 BT。
+
+### 3. 802.11 network characteristics (select 3)
+- ❌ Missed: Built to support both infrastructure and ad-hoc topologies
+- ❌ Incorrectly chose: Designed to operate in licensed bands (802.11 uses unlicensed ISM/UNII bands)
+- ✅ Correct picks:
+  - Supports infrastructure + ad-hoc
+  - Engineered for high-speed wireless data transmission
+  - Standardized by IEEE as a wireless alternative to wired LANs
+
+**Memory hooks:**
+- Channel width ↑ ⇒ throughput ↑ but interference ↑
+- Bluetooth = 2.4 GHz PAN, no line-of-sight requirement.
+- 802.11 = IEEE WLANs in unlicensed bands, works in infrastructure or ad-hoc.
 
