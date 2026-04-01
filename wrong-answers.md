@@ -86,4 +86,22 @@
 - 5 GHz/6 GHz bands provide more spectrum and more non-overlapping channels, so they suffer less overlap.
 
 **Memory hook:** 2.4 GHz = "far but few" — further reach, but only a few clean channels.
+---
+
+## TCP port 445 – SMB/CIFS, not IMAP
+![TCP 445 question](images/2026-03-31-tcp445.jpg)
+
+**Question:** Which service runs on TCP port 445?
+
+|  |  |
+| --- | --- |
+| ❌ My answer | IMAP |
+| ✅ Correct | SMB (a.k.a. CIFS) |
+
+**Why:**
+- Port 445/TCP is used by Microsoft SMB over TCP (file & printer sharing). Windows uses it for network shares.
+- IMAP uses 143 (unencrypted) / 993 (IMAPS).
+- HTTPS = 443, LDAPS = 636. 445 is the odd one out dedicated to SMB.
+
+**Memory hook:** Think "4-4-5" → 44 = Windows (WinNT), **5** = SMB. Or remember the trio 143/443/445/636 (mail/web/file/LDAP).
 
