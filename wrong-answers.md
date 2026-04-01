@@ -67,4 +67,23 @@
 - Channel width ↑ ⇒ throughput ↑ but interference ↑
 - Bluetooth = 2.4 GHz PAN, no line-of-sight requirement.
 - 802.11 = IEEE WLANs in unlicensed bands, works in infrastructure or ad-hoc.
+---
+
+## 2.4 GHz vs higher bands
+![2.4 GHz comparison question](images/2026-03-31-24ghz.jpg)
+
+**Question:** Characteristics of the 2.4 GHz band compared to 5/6 GHz (select 3).
+
+|  |  |
+| --- | --- |
+| ❌ My wrong pick | "A wider number of available channels with less overlap" |
+| ❌ Missed | "The lowest number of non-overlapping channels" |
+| ✅ Already got | Longest range; higher susceptibility to interference |
+
+**Why:**
+- 2.4 GHz travels farther / penetrates walls better, but the band is crowded (Bluetooth, microwaves, etc.), so interference risk is high.
+- It only has **3** non-overlapping channels (1/6/11 in many regions). That’s the *fewest*, not the widest.
+- 5 GHz/6 GHz bands provide more spectrum and more non-overlapping channels, so they suffer less overlap.
+
+**Memory hook:** 2.4 GHz = "far but few" — further reach, but only a few clean channels.
 
