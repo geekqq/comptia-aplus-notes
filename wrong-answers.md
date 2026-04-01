@@ -1,159 +1,130 @@
-# CompTIA A+ Wrong-Answer Notebook
+# CompTIA A+ 错题笔记
 
-## Telnet core features
-**Original prompt:** “Which of the following statements describe an important feature or service provided by Telnet? (Select three.)”
+## Telnet 核心特性
+**题干：** “Which of the following statements describe an important feature or service provided by Telnet? (Select three.)”
 
 ![Telnet question screenshot](images/20260330-telnet.jpg)
 
+**正确选项：**
+- Provides username and password authentication（提供用户名/密码认证）
+- Transmits data in an unencrypted form（明文传输）
+- Enables remote login and command execution（远程登录执行命令）
 
-**Correct choices:**
-- Provides username and password authentication
-- Transmits data in an unencrypted form
-- Enables remote login and command execution
+**说明：** Telnet 虽然要输入账号密码，但整条链路都是明文，任何人抓包都能看到凭证和命令。因此只适合实验或内网环境；需要安全远程必用 SSH。题目里“Telnet 不提供认证”是常见陷阱。
 
-**Key takeaways:**
-- Telnet does have basic login prompts, but it sends *everything* in clear text, so credentials can be sniffed easily.
-- Because there is no encryption or integrity protection, Telnet should only be used on trusted internal labs. SSH has replaced it for real-world remote administration.
-- Any answer claiming Telnet “does not provide authentication” is a trap—it *does*, it’s just insecure.
 ---
 
-## Server roles – document output vs storage
+## 服务器角色：文件存储 vs 文档输出
 ![Server role question](images/2026-03-31-print-server.jpg)
 
-**Question:** "Which type of server does not primarily store files but facilitates document output?"
+**题干：** 哪种服务器主要负责文档输出而不是存储文件？
 
 |  |  |
 | --- | --- |
-| ❌ My answer | database server |
-| ✅ Correct | print server |
+| ❌ 我的答案 | database server |
+| ✅ 正确答案 | print server |
 
-**Key takeaways**
-- Print servers sit between users and printers: they accept print jobs, spool them, manage queues, and forward jobs to the right device. Their role is document *output*, not long-term file storage.
-- Database, web, and application servers focus on storing/processing data or hosting apps, but none are tailored to printer spooling.
-- File servers (NAS/SAN) are the ones optimized for storing files.
+**说明：** Print server 的职责是接收打印作业、排队、发送到指定打印机；本身不负责长期存储文件。数据库/应用服务器或文件服务器才负责数据存储。
 
-**Memory hook:** Print server = "document traffic controller"—think of it as the dispatcher for printers, not a storage bin.
 ---
 
-## Wireless basics – channel width, Bluetooth traits, 802.11 features
+## 无线基础：信道宽度 / 蓝牙 / 802.11
 ![Wireless question set](images/2026-03-31-wireless.jpg)
 
-### 1. Increasing channel width
-- ❌ My answer: "Reduces interference from neighboring channels"
-- ✅ Correct: "Increases data throughput but may cause more interference"
+### 1. 信道宽度
+- ❌ 我的答案：增大信道宽度会减少干扰
+- ✅ 正解：增大信道宽度可提升吞吐，但更容易与邻近信道重叠、引入干扰
 
-**Why:** Wider channels (40/80/160 MHz) give more bandwidth, but their larger footprint overlaps more adjacent channels, so interference risk rises instead of shrinking. Use narrow 20 MHz in noisy environments.
+### 2. 蓝牙特性（多选）
+- ✅ 正确：工作在 2.4 GHz ISM 频段、短距离通信、构建 PAN、连接外设/穿戴/IoT
+- ❌ 错误：认为需要视距（LOS）。蓝牙是跳频射频，不需要 LOS，视距是红外的特性
 
-### 2. Bluetooth characteristics (select all that apply)
-- ❌ Missed: Operates in the 2.4 GHz ISM band
-- ❌ Incorrectly chose: Requires line-of-sight (其实 BT 是短距射频，不需要 LOS)
-- ✅ Correct traits:
-  - 2.4 GHz ISM band
-  - Short-range wireless communication
-  - Optimized for creating PANs
-  - Used for peripherals / wearables / IoT
+### 3. 802.11 WLAN 特性（多选）
+- ✅ 正确：支持 Infrastructure 与 Ad-hoc 拓扑、由 IEEE 制定、用于高速无线局域网
+- ❌ 错误：说它运行在“许可频段”。实际上 802.11 使用 ISM/UNII 等免许可频段
 
-**Why:** Bluetooth is a frequency-hopping spread spectrum tech in the 2.4 GHz band. It’s meant for PANs and peripherals. Line-of-sight是红外的特性，不是 BT。
+**记忆：**
+- 信道宽度 ↑ ⇒ 带宽 ↑ 但干扰 ↑
+- 蓝牙 = 2.4 GHz PAN + 外设，不需要视距
+- 802.11 = IEEE WLAN，免许可频段，可基础设施或临时网络
 
-### 3. 802.11 network characteristics (select 3)
-- ❌ Missed: Built to support both infrastructure and ad-hoc topologies
-- ❌ Incorrectly chose: Designed to operate in licensed bands (802.11 uses unlicensed ISM/UNII bands)
-- ✅ Correct picks:
-  - Supports infrastructure + ad-hoc
-  - Engineered for high-speed wireless data transmission
-  - Standardized by IEEE as a wireless alternative to wired LANs
-
-**Memory hooks:**
-- Channel width ↑ ⇒ throughput ↑ but interference ↑
-- Bluetooth = 2.4 GHz PAN, no line-of-sight requirement.
-- 802.11 = IEEE WLANs in unlicensed bands, works in infrastructure or ad-hoc.
 ---
 
-## 2.4 GHz vs higher bands
+## 2.4 GHz 与高频段对比
 ![2.4 GHz comparison question](images/2026-03-31-24ghz.jpg)
 
-**Question:** Characteristics of the 2.4 GHz band compared to 5/6 GHz (select 3).
+| 特性 | 2.4 GHz | 5/6 GHz |
+| --- | --- | --- |
+| 覆盖 | ✅ 最远，穿墙最好 | 较近 |
+| 干扰 | ❌ 设备多、最容易受干扰 | 更干净 |
+| 非重叠信道数量 | ❌ 只有 3 个（1/6/11） | 更多信道 |
 
-|  |  |
-| --- | --- |
-| ❌ My wrong pick | "A wider number of available channels with less overlap" |
-| ❌ Missed | "The lowest number of non-overlapping channels" |
-| ✅ Already got | Longest range; higher susceptibility to interference |
+**记忆：** “2.4 = far but few”——覆盖远，但干净信道少。
 
-**Why:**
-- 2.4 GHz travels farther / penetrates walls better, but the band is crowded (Bluetooth, microwaves, etc.), so interference risk is high.
-- It only has **3** non-overlapping channels (1/6/11 in many regions). That’s the *fewest*, not the widest.
-- 5 GHz/6 GHz bands provide more spectrum and more non-overlapping channels, so they suffer less overlap.
-
-**Memory hook:** 2.4 GHz = "far but few" — further reach, but only a few clean channels.
 ---
 
-## TCP port 445 – SMB/CIFS, not IMAP
+## TCP 445 = SMB/CIFS
 ![TCP 445 question](images/2026-03-31-tcp445.jpg)
 
-**Question:** Which service runs on TCP port 445?
-
 |  |  |
 | --- | --- |
-| ❌ My answer | IMAP |
-| ✅ Correct | SMB (a.k.a. CIFS) |
+| ❌ 我的答案 | IMAP |
+| ✅ 正确答案 | SMB / CIFS |
 
-**Why:**
-- Port 445/TCP is used by Microsoft SMB over TCP (file & printer sharing). Windows uses it for network shares.
-- IMAP uses 143 (unencrypted) / 993 (IMAPS).
-- HTTPS = 443, LDAPS = 636. 445 is the odd one out dedicated to SMB.
+**说明：** 445/TCP 是 Windows SMB (文件/打印共享)。IMAP 是 143/993，HTTPS 是 443，LDAPS 是 636。记住 “143/443/445/636” 这组即可。
 
-**Memory hook:** Think "4-4-5" → 44 = Windows (WinNT), **5** = SMB. Or remember the trio 143/443/445/636 (mail/web/file/LDAP).
 ---
 
-## LDAP port 389 and NetBIOS port set
+## LDAP 389 & NetBIOS 137/138/139
 ![LDAP port question](images/2026-03-31-ldap389.jpg)
 
-**Question:** "Which port is used for standard, unencrypted LDAP communication?"
-
-|  |  |
-| --- | --- |
-| ❌ My answer | HTTPS |
-| ✅ Correct | Port 389 (LDAP) |
-
-**Why:** LDAP plain text = TCP/UDP 389. When secured with TLS (LDAPS) it moves to 636. HTTPS is 443. SMTP 25, POP3 110, etc. Memorize the core auth/file ports.
-
-**Memory hook:** "3-8-9" → LDAP. Add 200 → 589? no. For secure, think "6-3-6" = LDAPS.
+- LDAP 明文端口 = 389（TCP/UDP）
+- LDAPS 加密端口 = 636
+- HTTPS = 443
 
 ![NetBIOS question](images/2026-03-31-netbios.jpg)
 
-**Question:** NetBIOS assigned ports (select 3).
-
-| Port | Service |
+| 端口 | 服务 |
 | --- | --- |
 | 137 | NetBIOS Name Service |
 | 138 | NetBIOS Datagram Service |
 | 139 | NetBIOS Session Service |
 
-I selected 136 instead of 139.
+**记忆：** NetBIOS = 137-139 连续区间；135 是 RPC，445 是 SMB。
 
-**Why:**
-- NetBIOS uses 137/138/139. There is no 136 service.
-- Port 135 is RPC endpoint mapper; 445 is SMB over TCP.
-
-**Memory hook:** "NetBIOS = 137-139" consecutive block; 135 = RPC, 445 = SMB.
 ---
 
-## POP3 vs SMTP, and DHCP client port
+## POP3 vs SMTP；DHCP 客户端端口
 ![POP3 vs SMTP question](images/2026-03-31-pop3.jpg)
 
-**Question:** Which protocol does a client use to download email from a server? (picked SMTP)
-- SMTP = sending mail (port 25/587)
-- **POP3 = receiving mail** (port 110 / POP3S 995)
-- IMAP is the other retrieval protocol (port 143/993)
-
-**Memory hook:** *Send* = SMTP, *Pull* = POP/IMAP.
+- SMTP（25/587）负责“发”邮件
+- POP3（110/995）或 IMAP（143/993）负责“收”邮件
+- 题目问“客户端下载邮件” ⇒ 应选 POP3
 
 ![DHCP client port question](images/2026-03-31-dhcp68.jpg)
 
-**Question:** DHCP client UDP port for receiving responses? Answer is **68**.
-- DHCP server listens on UDP 67.
-- DHCP client listens on UDP 68 to receive OFFER/ACK.
+- DHCP Server 监听 UDP 67
+- DHCP Client 监听 UDP 68 接收 OFFER/ACK
+- 记法：Server=67、Client=68，数字递增
 
-**Memory hook:** "Server=67, Client=68" — ascending order.
+---
+
+## LDAP 389 再确认
+![LDAP port question](images/2026-03-31-ldap389.jpg)
+
+同上，LDAP 明文端口始终是 389；HTTPS/POP/SMTP 等各有固定端口，勿混淆。
+
+---
+
+## POP3 下载邮件
+![POP3 question](images/2026-03-31-pop3.jpg)
+
+客户端从服务器下载邮件 → POP3（或 IMAP）。SMTP 仅用于发信。
+
+---
+
+## DHCP 客户端端口 68
+![DHCP question](images/2026-03-31-dhcp68.jpg)
+
+DHCP 客户端接收响应使用 UDP 68；服务器监听 67。记成 “67→Server，68→Client”。
 
