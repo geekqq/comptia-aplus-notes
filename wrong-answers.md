@@ -127,4 +127,20 @@
 ![DHCP question](images/2026-03-31-dhcp68.jpg)
 
 DHCP 客户端接收响应使用 UDP 68；服务器监听 67。记成 “67→Server，68→Client”。
+---
+
+## 卫星网络特性
+![Satellite Internet question](images/2026-04-01-satellite.jpg)
+
+**正确特性（选 3）：**
+- 高延迟（High signal latency）
+- 易受天气影响（Interference / weather dependent）
+- 成本高于地面链路（Relatively high cost vs terrestrial）
+
+**错误选项：**
+- Lack of signal interference（卫星恰好容易被雨雪衰减）
+- Low signal latency（绕地轨道距离 3.6 万 km，往返延迟 500 ms 级别）
+- Cheaper…（建造/发射卫星成本极高）
+
+**记忆：** “卫星：贵、慢、怕天气”。
 
