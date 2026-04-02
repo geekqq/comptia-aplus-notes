@@ -143,4 +143,23 @@ DHCP 客户端接收响应使用 UDP 68；服务器监听 67。记成 “67→Se
 - Cheaper…（建造/发射卫星成本极高）
 
 **记忆：** “卫星：贵、慢、怕天气”。
+---
+
+## MAN / WAN / SAN / CAN 对比（巩固题）
+![MAN question](images/2026-04-01-man.jpg)
+
+**题干：** “连接一座城市范围内多条 LAN 的网络称为什么？”
+- ✅ MAN（Metropolitan Area Network）：覆盖城市/区域
+- WAN（Wide Area Network）：跨城市/国家甚至全球（例如互联网、企业广域网）
+- SAN（Storage Area Network）：专用存储网络（光纤通道/iSCSI）
+- CAN（Campus/Controller Area Network）：校园/企业园区或车载总线
+
+**记忆：**
+- LAN → 单一建筑/楼层
+- MAN → 城市级（地铁、城域光环）
+- WAN → 跨城/跨国
+- SAN → 和“存储”相关，不是地理范围
+- CAN → “校园/车载”专用
+
+虽然本题答对，但放进笔记方便以后回顾命名区别。
 
