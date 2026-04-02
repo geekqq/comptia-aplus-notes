@@ -180,4 +180,22 @@ DHCP 客户端接收响应使用 UDP 68；服务器监听 67。记成 “67→Se
 - NAS = “设备”→ 文件级共享
 - SAN = “网络”→ 块级访问（常用 FC/iSCSI）
 - iSCSI = 协议，SDN = 架构
+---
+
+## 线缆追踪工具：Toner & Probe
+![Toner question](images/2026-04-02-toner.jpg)
+
+**题干：** 哪种工具专门用来在一束电缆中追踪、识别单根线？
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Wire mapper |
+| ✅ 正确答案 | Toner & probe kit |
+
+**说明：**
+- Toner（发生器）给目标线缆注入音频信号，Probe（探头）沿束线寻找并通过蜂鸣声定位那根线，非常适合“从机柜追到墙面”的场景。
+- Wire mapper 侧重检测双绞线的线序是否正确（T568A/B），无法追踪线缆走向。
+- Cable certifier/line tester 则是用于带宽认证、阻抗/衰减测试，功能不同。
+
+**记忆：** 追线 = Toner+Probe，“听声音找线”；查线序 = Wire mapper。
 
