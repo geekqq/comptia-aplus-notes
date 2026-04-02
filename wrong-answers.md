@@ -198,4 +198,104 @@ DHCP 客户端接收响应使用 UDP 68；服务器监听 67。记成 “67→Se
 - Cable certifier/line tester 则是用于带宽认证、阻抗/衰减测试，功能不同。
 
 **记忆：** 追线 = Toner+Probe，“听声音找线”；查线序 = Wire mapper。
+---
+
+## Network tap 用途
+![Network tap question](images/2026-04-02-network-tap.jpg)
+
+**题干：** 哪种设备可以在不中断数据流的情况下监听网络流量？
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Ethernet adapter |
+| ✅ 正确答案 | Network tap |
+
+**说明：**
+- Network tap（TAP）是一个被动分流设备，把线上通讯复制一份给监控/IDS，原有链路不受影响。
+- 普通网卡需要把设备串入链路，会中断/改变流量；Repeater/Transceiver 也不是为监控设计。
+- 在交换机时代，SPAN/Port Mirroring 也能做到类似效果，但 TAP 的优点是“物理被动、不会掉包”。
+
+**记忆：** 想监听又不影响业务，首选 **Network TAP**。
+---
+
+## 显示面板三兄弟：IPS / TN / VA
+![Display technology question](images/2026-04-02-display.jpg)
+
+### IPS（In-Plane Switching）
+- ✅ 高色彩精度（High color quality）
+- ✅ 宽广视角（Wide viewing angles ≈ 178°）
+- ❗ 缺点：响应时间偏慢（Slow response time） ⇒ 不是游戏最佳，但细腻、色准好
+
+### TN（Twisted Nematic）
+- ✅ 响应时间最快（Fast response times）
+- ✅ 成本低，但色彩一般（Low color quality）
+- ✅ 视角最差（Low viewing angles，上下偏色明显）
+- ❗ 常用于电竞/办公显示器
+
+### VA（Vertical Alignment）
+- ✅ 对比度极高（High contrast ratios，黑位深）
+- ✅ 色彩比 TN 好（Good color quality），但不如 IPS
+- ✅ 视角比 TN 好、比 IPS 略差（Good viewing angles）
+- ❗ 响应时间介于 TN 与 IPS 之间
+
+**速记：**
+- *IPS* = Image Perfect & Stable → 色准/视角最好，响应慢
+- *TN* = Turbo & Narrow → 响应快，视角窄，色彩弱
+- *VA* = Very Amazing Blacks → 对比度王者，综合型选手
+---
+
+## 显示面板类型：IPS / TN / VA
+![IPS/TN/VA question](images/2026-04-02-display.jpg)
+
+### IPS（In-Plane Switching）
+- ✅ 高色彩准确度（High color quality）
+- ✅ 宽视角（Wide viewing angles）
+- ⚠︎ 响应时间相对慢（Slow response times）
+
+### TN（Twisted Nematic）
+- ✅ 响应时间快（Fast response times）
+- ✅ 成本低、常见于电竞显示器
+- ❌ 视角窄、色彩偏灰（Low color quality）
+
+### VA（Vertical Alignment）
+- ✅ 高对比度（High contrast ratios）
+- ✅ 色彩与视角介于 IPS 与 TN 之间（Good color quality + Good viewing angles）
+- ⚠︎ 响应时间中等，黑场表现优秀
+
+**记忆口诀：**
+- IPS = 色准 + 视角；缺点是慢
+- TN = 速度快；缺点是色彩/视角差
+- VA = 对比度王；折中
+---
+
+## 显示参数术语巩固
+![Display attributes question](images/2026-04-02-attributes.jpg)
+
+| 概念 | 正确认知 | 记忆重点 |
+| --- | --- | --- |
+| Pixel density（像素密度） | 同尺寸下像素越多 ⇒ 图像越清晰 | 以 PPI 表示，与“锐利度”直接相关 |
+| Refresh rate（刷新率） | 每秒刷新多少次（Hz）⇒ 越高越流畅 | 与动画/游戏流畅度有关 |
+| Color depth（色深） | 每像素可显示的色彩数量（bit/pixel） | 8-bit = 16.7M 色，10-bit = 10.7 亿色 |
+| **Color gamut（色域）** | 屏幕能覆盖的颜色空间范围（sRGB、DCI-P3 等） | 色域越大，可显示的颜色范围越广、色彩越饱满 |
+
+**Color gamut 补充：**
+- 常见色域：sRGB（网页标准）、Adobe RGB（摄影）、DCI-P3（影视）。
+- 广色域面板（如 95% DCI-P3）在看 HDR 内容或做设计时更准确。
+- 色域 ≠ 色深：一个是“覆盖范围”，一个是“每个颜色点的细腻程度”。
+---
+
+## 显示参数匹配：像素密度 / 颜色位深 / 刷新率 / 色域
+![Display attributes question](images/2026-04-02-attributes.jpg)
+
+| 概念 | 解释 | 题目正确匹配 |
+| --- | --- | --- |
+| Color Gamut（色域） | 显示器能覆盖的颜色范围，通常用 sRGB / Adobe RGB / DCI-P3 等标准衡量 | 显示器可呈现的颜色范围 |
+| Color Bit Depth（颜色位深） | 每个颜色通道的比特数，决定颜色阶梯数（8-bit=16.7M 色，10-bit=10.7 亿色） | 每像素颜色信息位数 |
+| Refresh Rate（刷新率） | 每秒刷新画面的次数（Hz），决定运动画面的流畅度 | 显示器刷新画面的速度 |
+| Pixel Density（像素密度） | PPI，单位面积内的像素数量，分辨率 ÷ 尺寸决定清晰度 | 给定显示尺寸和分辨率时的像素数 |
+
+**色域 Color Gamut 补充：**
+- 色域越大，可显示的颜色越多，颜色更饱满。
+- 常见标准：sRGB（网页）、Adobe RGB（摄影）、DCI-P3（影视）。
+- 题目要你匹配“能显示的颜色范围” ⇒ 选 Color Gamut。
 
