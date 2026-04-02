@@ -162,4 +162,22 @@ DHCP 客户端接收响应使用 UDP 68；服务器监听 67。记成 “67→Se
 - CAN → “校园/车载”专用
 
 虽然本题答对，但放进笔记方便以后回顾命名区别。
+---
+
+## SAN / NAS / iSCSI / SDN 区分
+![SAN question](images/2026-04-01-san.jpg)
+
+**题干：** 哪个缩写表示“专用的本地网络，由多个设备组成，提供集中式数据访问”？
+
+| 选项 | 说明 |
+| --- | --- |
+| SDN | Software-Defined Networking，指控制面/数据面解耦的网络架构，不是“存储网络” |
+| NAS | Network Attached Storage，通常是一台设备，通过 NFS/SMB 提供文件级共享 |
+| iSCSI | 一种基于 IP 的块级传输协议，可用来构建 SAN，但本身不是网络类型 |
+| **SAN** ✅ | Storage Area Network，独立的高速网络，用于在服务器和存储设备之间提供块级数据访问 |
+
+**记忆：**
+- NAS = “设备”→ 文件级共享
+- SAN = “网络”→ 块级访问（常用 FC/iSCSI）
+- iSCSI = 协议，SDN = 架构
 
