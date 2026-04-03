@@ -567,4 +567,37 @@ DHCP 客户端接收响应使用 UDP 68；服务器监听 67。记成 “67→Se
 **记忆：**
 - 看“网卡连接状态/启用禁用/IP 属性” → `ncpa.cpl`
 - 看“驱动/硬件状态” → `devmgmt.msc`
+---
+
+## ECC RAM 的真正作用
+![ECC RAM question](images/2026-04-03-ecc-ram.jpg)
+
+**题干：** ECC type RAM:
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Offers better performance in terms of speed when compared to a non-ECC type of RAM |
+| ✅ 正确答案 | Can detect and correct errors |
+
+**说明：**
+- **ECC = Error-Correcting Code memory**，核心作用是：
+  - 检测内存位错误
+  - 自动纠正单比特错误（部分还能检测多比特错误）
+- 它的目标是 **稳定性 / 数据完整性**，不是速度。
+- 因为 ECC 需要额外校验位和控制逻辑，性能通常不会比普通 non-ECC RAM 更快，反而可能略有开销。
+
+**常见应用场景：**
+- 服务器
+- 工作站
+- 数据库 / 虚拟化主机
+- 对数据可靠性要求高的环境
+
+**容易混淆的点：**
+- **Parity RAM** 只能检测错误，不能自动纠正。
+- **ECC RAM** 才是“能检测并纠正错误”的那一种。
+
+**记忆：**
+- Parity = 只会“报警”
+- ECC = 会“报警 + 纠错”
+- ECC 要的是稳，不是快
 
