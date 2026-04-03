@@ -634,4 +634,27 @@ DHCP 客户端接收响应使用 UDP 68；服务器监听 67。记成 “67→Se
 - 多出来 **1 个 bit** 检错 → **Parity bit**
 - 能纠错 → **ECC**
 - CRC 更像“整段数据做校验码”，不是单独加 1 bit
+---
+
+## DDR4 SDRAM 特征
+![DDR4 question](images/2026-04-03-ddr4.jpg)
+
+**正确特征（选 3）：**
+- **288 contact pins**
+- **A notch on the RAM module contact surface prevents the installation of incompatible memory types**
+- **32 GB maximum capacity per memory module**
+
+**为什么你会错：**
+- 你把 **64 GB maximum capacity per module** 选进去了，但这题考的是 A+ 常见基准知识点，标准答案按 **DDR4 单条 32 GB** 记。
+- 你漏了 **32 GB maximum capacity per memory module**。
+
+**其他错误项：**
+- **240 contact pins** → 这是 **DDR3 DIMM** 常见针脚数，不是 DDR4。
+- **Backwards compatible with earlier DDR SDRAM versions** → DDR 各代物理缺口和电气规格都不同，**不能向后兼容混插**。
+
+**记忆方法：**
+- DDR3 = **240 pins**
+- DDR4 = **288 pins**
+- DDR5 = **288 pins**（但缺口位置不同）
+- 看见 “DDR4” 先想到：**288 pin + 不兼容旧代 + 单条常考 32GB**
 
