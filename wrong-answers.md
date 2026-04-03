@@ -298,4 +298,20 @@ DHCP 客户端接收响应使用 UDP 68；服务器监听 67。记成 “67→Se
 - 色域越大，可显示的颜色越多，颜色更饱满。
 - 常见标准：sRGB（网页）、Adobe RGB（摄影）、DCI-P3（影视）。
 - 题目要你匹配“能显示的颜色范围” ⇒ 选 Color Gamut。
+---
+
+## 多模光纤特性
+![Multimode fiber question](images/2026-04-02-multimode.jpg)
+
+**正确特征（选 3）：**
+- 典型传输距离 ≤ 2 km（取决于 OM 级别）
+- 成本通常低于单模光纤（接收器/发射器更便宜）
+- 使用 **LED**（或 VCSEL）作为光源
+
+**错误认知：**
+- “Utilizes laser light” → 这是单模常用（激光/LC laser），多模更多使用 LED/VCSEL。
+- “Supports 100 km” → 只有单模才能跑这么远。
+- “More expensive” → 实际上多模核心大、器件便宜，成本低。
+
+**记忆：** 多模 = “短距 + LED + 便宜”；单模 = “长距 + 激光 + 贵”。
 
