@@ -797,4 +797,80 @@ DHCP 客户端接收响应使用 UDP 68；服务器监听 67。记成 “67→Se
 - **SRAM = Small / Speed / Storage for cache**
 - **DRAM = Dynamic / 大容量 / 主内存**
 - 两者都断电丢数据
+---
+
+## DB-9 串口连接器
+![DB-9 question](images/2026-04-03-db9.jpg)
+
+**正确答案：** DB-9
+
+**说明：**
+- DB-9（常见于 RS-232 串口）是老式 PC、网络设备 console、工业设备常见的**串行通信铜缆连接器**。
+- 你选的 **RG-59** 是同轴线规格，常见于监控/视频，不是串口连接器。
+
+**记忆：** 提到 serial / RS-232 / console port，就先想到 **DB-9**。
+
+---
+
+## Molex 供电接口
+![Molex question](images/2026-04-03-molex.jpg)
+
+**正确答案：** Molex connector
+
+**说明：**
+- Molex 是传统电脑内部常见的 4-pin 供电接口，常给老式硬盘、光驱、风扇等设备供电。
+- **D-sub** 主要是信号接口家族（如串口/VGA），不是机箱内部常见电源接口。
+- **Berg** 是更小的软驱供电接口，不是“最常见”的那一个。
+
+**记忆：** 老式机箱内部大电源头 = **Molex**；小软驱电源头 = **Berg**。
+
+---
+
+## 老旧移动设备常见 USB 接口
+![Old mobile USB question](images/2026-04-03-old-mobile-usb.jpg)
+
+**正确答案：**
+- MicroUSB
+- MiniUSB
+
+**说明：**
+- 题目强调 **older mobile devices** 且 **non-reversible**，因此答案是老式、不能正反插的手机接口。
+- **USB-C** 虽然用于移动设备，但它是可正反插的现代接口，不符合题意。
+- **USB Type-A / Type-B** 主要不是移动设备常见接口。
+
+**记忆：** 旧手机 + 不能正反插 = **MicroUSB / MiniUSB**。
+
+---
+
+## F-type connector 特征
+![F-type question](images/2026-04-03-f-type.jpg)
+
+**正确特征：**
+- Threaded / screw-on connector（螺纹拧紧）
+- Coaxial cabling（同轴线）
+- Satellite/cable TV、cable modem 等场景
+
+**说明：**
+- F-type 是家用电视、有线网络、Cable modem 最常见的同轴接口。
+- 你错选的 **bayonet-style / twist-and-lock** 是 **BNC** 的特征，不是 F-type。
+
+**记忆：** F-type = 家用同轴电视口，**拧上去**；BNC = 专业设备口，**卡上去**。
+
+---
+
+## eSATA 3.0 特征（更正）
+![eSATA question](images/2026-04-03-esata.jpg)
+
+**正确答案：**
+- Hot-swappable functionality
+- External connection for storage
+- A standard cable length of up to 2 meters
+- **6 Gbps data transfer rate**
+
+**说明：**
+- 这题问的是 **eSATA 3.0**，因此 **6 Gbps** 也属于正确特征。
+- eSATA 的核心定位：外接存储、支持热插拔、线长比内部 SATA 更长（常考 2 米）。
+- 普通内部 SATA 线缆常按 **1 米** 记；eSATA 常按 **2 米** 记。
+
+**记忆：** eSATA 3.0 = **外置存储 + 热插拔 + 2 米 + 6 Gbps**。
 
