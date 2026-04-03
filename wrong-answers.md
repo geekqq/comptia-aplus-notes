@@ -344,4 +344,153 @@ DHCP 客户端接收响应使用 UDP 68；服务器监听 67。记成 “67→Se
 | USB 3.2 Gen 2x2 | SuperSpeed++ | 20 Gbps |
 
 **记忆：** “2 = 480 Mbps” → 把 2 和 480 组成“2480”方便记忆。越往后代号越乱，建议记住“2=480、3=5G、3.1=10G”。
+---
+
+## USB 2.0 线缆最大长度
+![USB cable length question](images/2026-04-02-usb-length.jpg)
+
+- USB 2.0 规范规定：**单段线缆最长 5 米**（16.4 英尺）。
+- 超过 5 米需要使用有源延长线 / USB Hub 进行再生放大。
+- USB 3.x 因速率更高，推荐长度更短（一般 3 米）。
+
+**记忆：** “2.0 = 5 米，3.0 = 3 米” ——数字反过来方便记。
+---
+
+## USB 3.0 (SuperSpeed) 特性
+![USB 3.0 question](images/2026-04-02-usb3.jpg)
+
+**记住三件事：**
+- 速率：**5 Gbps**（SuperSpeed）
+- 向下兼容：可以接 USB 2.0/1.1 设备（速度降级）
+- 市面会用 “SuperSpeed USB” 标识（蓝色端口）
+
+**不是 USB 3.0 的：**
+- High Speed USB = 480 Mbps（USB 2.0）
+- 3 Gbps 是 SATA/Thunderbolt 的数字
+- 10 Gbps 是 USB 3.1 Gen2 / USB 3.2 Gen2
+---
+
+## USB 3.1 最大速率
+![USB 3.1 question](images/2026-04-02-usb31.jpg)
+
+- USB 3.1 Gen2 提供 **10 Gbps** 理论速率。
+- USB 3.0 / USB 3.1 Gen1 = 5 Gbps；USB 3.2 Gen2x2 = 20 Gbps。
+- 记忆：3.0=5G，3.1=10G，3.2=20G。
+---
+
+## USB 3.1 (Gen2) 速率
+![USB 3.1 question](images/2026-04-02-usb31.jpg)
+
+- USB 3.1 Gen2 = **10 Gbps**（也写作 USB 3.2 Gen2）
+- USB 3.2 Gen2x2 = 20 Gbps；USB4/Thunderbolt 3/4 = 40 Gbps
+- 记忆：3.1 = 10G（数字 3.1 “像” 10），不要和 3.0 (5G) 或 2.0 (480M) 混淆。
+
+---
+
+## Thunderbolt 光纤线缆长度
+![Thunderbolt cable question](images/2026-04-02-thunderbolt.jpg)
+
+- 金属线缆：一般 3m（雷雳 3/4）
+- **光纤 Thunderbolt**：最长 **60 m**，速度保持 10/20/40 Gbps
+- 如果题目提“fiber-optic Thunderbolt” ⇒ 记住 60 m。
+
+---
+
+## Inverter（逆变器）作用
+![Inverter question](images/2026-04-02-inverter.jpg)
+
+- **DC ➜ AC**：把笔记本电池（直流）转成驱动荧光灯/背光需要的交流
+- **LCD CCFL 背光供电**：老式 CCFL 背光必须用 inverter 升压
+- **用于把 DC 电源供给 AC 设备**，例如车载逆变器供笔记本充电
+- 错误说法：“把 AC 变 DC”（那是整流器 rectifier）
+
+---
+
+## SATA 基础
+![SATA rev1/2 questions](images/2026-04-02-sata.jpg)
+
+| 版本 | 速率 | 线缆长度 |
+| --- | --- | --- |
+| SATA 1.0 | **1.5 Gbps** | **1 米** |
+| SATA 2.0 | **3.0 Gbps** | **1 米** |
+| SATA 3.0 | 6.0 Gbps | 1 米 |
+
+- SATA 数据线连接器 = **7 pin**
+- SATA 电源连接器 = **15 pin**（3×3 组 + 地线）
+
+![SATA power/data question](images/2026-04-03-sata-pins.jpg)
+
+**记忆：** “数据 7 / 电源 15 / 线长 1m”。提到 3m、6Gbps+SATA2 都是陷阱。
+
+---
+
+## macOS Installer 格式
+![macOS installer question](images/2026-04-03-macos-installer.jpg)
+
+- macOS Installer 处理 `.pkg` 包（Package）
+- `.dmg` 是磁盘镜像，里面可能包含 `.pkg` 或 `.app`
+- `.app` 是应用包；`.exe` 是 Windows 可执行
+
+**记忆：** “Installer = pkg；镜像 = dmg；App = .app”。
+
+---
+
+## Thunderbolt 光纤线最大长度
+![Thunderbolt question](images/2026-04-02-thunderbolt.jpg)
+
+- 光纤 Thunderbolt 线最长可到 **60 米**。
+- 这题容易和普通铜线长度搞混；铜线通常更短，光纤版本才适合更远距离。
+- 记忆：Thunderbolt 光纤 = 长距离，高带宽。
+
+---
+
+## 反相器（Inverter）功能
+![Inverter question](images/2026-04-02-inverter.jpg)
+
+**正确功能（选 3）：**
+- 把 **DC 转成 AC**
+- 让 **DC 电源可以驱动 AC 设备**
+- 给老式 LCD 背光提供所需高压
+
+**易错点：**
+- 把 AC 转 DC 的是 **adapter / power supply / rectifier**，不是 inverter。
+- OLED 不需要传统 CCFL 背光，所以不靠 inverter 供背光。
+
+**记忆：** inverter = 反过来，**直流变交流**。
+
+---
+
+## SATA 基础知识：版本、针脚、长度
+![SATA revision question](images/2026-04-02-sata.jpg)
+![SATA data pins question](images/2026-04-03-sata-pins.jpg)
+
+### SATA 1.0
+- 速率：**1.5 Gbps**
+- 线缆最大长度：**1 meter**
+
+### SATA 2.0
+- 速率：**3 Gbps**
+- 线缆最大长度：**1 meter**
+
+### SATA 3.0
+- 速率：**6 Gbps**
+- 线缆最大长度：一般仍按 **1 meter** 记
+
+### 接口针脚
+- **SATA 数据线接口：7 pins**
+- **SATA 电源接口：15 pins**
+
+**记忆：**
+- SATA 速率：**1.5 / 3 / 6 Gbps**
+- 数据 7 pin，供电 15 pin
+- SATA 线缆考试常记 **1 米**
+
+---
+
+## macOS 启动安装盘文件系统
+![macOS installer question](images/2026-04-03-macos-installer.jpg)
+
+- 制作可启动的 macOS 安装 U 盘，常见要求是 **HFS+（Mac OS Extended, Journaled）**。
+- 新系统日常使用常见 APFS，但做旧版/通用安装介质题目时，常考 **HFS+**。
+- 记忆：安装盘/兼容性题，优先想到 **Mac OS Extended (Journaled)**。
 
