@@ -493,4 +493,30 @@ DHCP 客户端接收响应使用 UDP 68；服务器监听 67。记成 “67→Se
 - 制作可启动的 macOS 安装 U 盘，常见要求是 **HFS+（Mac OS Extended, Journaled）**。
 - 新系统日常使用常见 APFS，但做旧版/通用安装介质题目时，常考 **HFS+**。
 - 记忆：安装盘/兼容性题，优先想到 **Mac OS Extended (Journaled)**。
+---
+
+## Windows 按流量计费连接（Metered Connection）
+![Metered connection question](images/2026-04-03-metered-connection.jpg)
+
+**题干：** Which Windows utility is used to enable or disable a metered connection?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Internet Options |
+| ✅ 正确答案 | Settings app |
+
+**说明：**
+- Windows 里的 **Metered connection（按流量计费连接）** 是在 **Settings / 设置** 里配置的，不是在传统控制面板的 Internet Options。
+- 这项设置常见路径：
+  - **Settings → Network & Internet → Wi‑Fi / Ethernet → 当前网络 → Metered connection**
+- 打开后，Windows 会尽量减少后台数据使用，比如：
+  - 限制部分更新下载
+  - 降低 OneDrive / 应用后台同步频率
+  - 避免不必要的数据消耗
+
+**易错点：**
+- **Internet Options** 更偏 IE/旧式网络属性，不负责这个现代网络流量开关。
+- **Network and Sharing Center** 是旧控制面板入口，很多现代网络选项已经迁到 Settings。
+
+**记忆：** 现代 Windows 网络功能优先去 **Settings app** 找；看到 “metered connection” 就想到 **Settings → Network & Internet**。
 
