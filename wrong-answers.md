@@ -330,4 +330,18 @@ DHCP 客户端接收响应使用 UDP 68；服务器监听 67。记成 “67→Se
 - 真正要过风管、吊顶才选 Plenum (CMP) 或 Riser (CMR)。
 
 **记忆：** 直埋 = “走地下 / 户外”，关键词是防水、防腐、厚外被；若题目提“火灾、吊顶”，那才是 Plenum。
+---
+
+## USB 版本与速率
+![USB 2.0 question](images/2026-04-02-usb2.jpg)
+
+| 标称 | 别名 | 理论速率 |
+| --- | --- | --- |
+| USB 1.1 | Full Speed | 12 Mbps |
+| **USB 2.0** | **Hi-Speed** | **480 Mbps** |
+| USB 3.2 Gen 1 | SuperSpeed USB | 5 Gbps |
+| USB 3.2 Gen 2 | SuperSpeed+ | 10 Gbps |
+| USB 3.2 Gen 2x2 | SuperSpeed++ | 20 Gbps |
+
+**记忆：** “2 = 480 Mbps” → 把 2 和 480 组成“2480”方便记忆。越往后代号越乱，建议记住“2=480、3=5G、3.1=10G”。
 
