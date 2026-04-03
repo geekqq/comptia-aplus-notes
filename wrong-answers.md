@@ -748,4 +748,53 @@ DHCP 客户端接收响应使用 UDP 68；服务器监听 67。记成 “67→Se
 - **D = Dynamic = 需要刷新**
 - **DRAM = 大、便宜、慢、做主内存**
 - **SRAM = 小、贵、快、做缓存**
+---
+
+## SRAM 的核心特征
+![SRAM question](images/2026-04-03-sram.jpg)
+
+**题干：** Which of the answers listed below refer(s) to the characteristic feature(s) of Static Random-Access Memory (SRAM)? (Select all that apply)
+
+**正确答案：**
+- **Faster than Dynamic Random-Access Memory (DRAM)**（比 DRAM 快）
+- **More expensive in comparison to DRAM**（比 DRAM 贵）
+- **Volatile storage media type**（易失性）
+- **Utilized for CPU cache memory chips**（常用于 CPU cache）
+
+### 为什么这几个是对的
+#### 1. SRAM 比 DRAM 快
+- SRAM 不需要像 DRAM 那样持续 refresh
+- 因此访问延迟更低，速度更快
+
+#### 2. SRAM 更贵
+- SRAM 单位容量成本更高
+- 所以不适合做大容量主内存
+
+#### 3. SRAM 也是易失性存储
+- 断电一样会丢数据
+- 这点和 DRAM 一样，千万别把它看成 non-volatile
+
+#### 4. SRAM 常用于 CPU Cache
+- 因为它快，所以适合做 L1/L2/L3 cache
+- 但太贵，不适合拿来做普通 RAM 条
+
+### 为什么这些选项是错的
+- **Non-volatile storage media type** → 错，SRAM 也是断电丢数据
+- **Widely used as the primary storage media** → 错，这是 DRAM 的定位
+- **Less expensive than DRAM** → 错，SRAM 更贵
+- **Slower than DRAM** → 错，SRAM 更快
+
+### 和 DRAM 一起背
+| 项目 | DRAM | SRAM |
+| --- | --- | --- |
+| 速度 | 慢 | 快 |
+| 价格 | 便宜 | 贵 |
+| 用途 | 主内存 | CPU Cache |
+| 是否易失性 | 是 | 是 |
+| 是否刷新 | 要 | 不要 |
+
+**记忆口诀：**
+- **SRAM = Small / Speed / Storage for cache**
+- **DRAM = Dynamic / 大容量 / 主内存**
+- 两者都断电丢数据
 
