@@ -519,4 +519,28 @@ DHCP 客户端接收响应使用 UDP 68；服务器监听 67。记成 “67→Se
 - **Network and Sharing Center** 是旧控制面板入口，很多现代网络选项已经迁到 Settings。
 
 **记忆：** 现代 Windows 网络功能优先去 **Settings app** 找；看到 “metered connection” 就想到 **Settings → Network & Internet**。
+---
+
+## Windows 创建新网络连接的入口
+![Set up a new connection question](images/2026-04-03-new-connection.jpg)
+
+**题干：** Which sequence of steps in Windows provides access to an interface for creating network connections? (Select 2 answers)
+
+**正确答案：**
+1. **Windows Control Panel (icon view) → Network and Sharing Center → Set up a new connection or network**
+2. **Windows Control Panel (category view) → View network status and tasks → Set up a new connection or network**
+
+**说明：**
+- 这道题考的是 **同一个功能入口在 Control Panel 两种视图下的不同路径**。
+- 如果你用 **icon view（图标视图）**，可以直接看到 **Network and Sharing Center**。
+- 如果你用 **category view（分类视图）**，要先点 **View network status and tasks**，本质上也是进入 **Network and Sharing Center**。
+
+**为什么别的选项不对：**
+- **Internet Options** 是浏览器/旧网络属性，不是创建网络连接的主入口。
+- **Network and Internet → Set up a new connection or network** 少了一步，因为分类视图下通常还要进 **View network status and tasks**。
+
+**记忆：**
+- 关键词永远是 **Network and Sharing Center**。
+- 分类视图：先看 **network status and tasks**
+- 图标视图：直接进 **Network and Sharing Center**
 
