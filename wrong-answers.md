@@ -314,4 +314,20 @@ DHCP 客户端接收响应使用 UDP 68；服务器监听 67。记成 “67→Se
 - “More expensive” → 实际上多模核心大、器件便宜，成本低。
 
 **记忆：** 多模 = “短距 + LED + 便宜”；单模 = “长距 + 激光 + 贵”。
+---
+
+## Direct Burial STP 电缆特性
+![Direct burial STP question](images/2026-04-02-direct-burial.jpg)
+
+**正确特征：**
+- Enhanced shielding（加强屏蔽）
+- Water & chemical resistance（防水/防化学腐蚀）
+- Durable outer jacket（抗撕裂、抗压）
+- Outdoor / Underground network use（户外/直埋场景）
+
+**为什么不是 Plenum-rated？**
+- Plenum 等级是针对建筑内部空气回风层（防火低烟），而直埋电缆关注的是 **防潮 / 防腐 / 防压**；两者应用场景不同。
+- 真正要过风管、吊顶才选 Plenum (CMP) 或 Riser (CMR)。
+
+**记忆：** 直埋 = “走地下 / 户外”，关键词是防水、防腐、厚外被；若题目提“火灾、吊顶”，那才是 Plenum。
 
