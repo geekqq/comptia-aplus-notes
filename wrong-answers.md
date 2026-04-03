@@ -689,4 +689,63 @@ DHCP 客户端接收响应使用 UDP 68；服务器监听 67。记成 “67→Se
 - DDR3：**240 + 16**
 - DDR4：**288 + 32**
 - 都有缺口，都不能向后兼容
+---
+
+## DRAM 的核心特征
+![DRAM question](images/2026-04-03-dram.jpg)
+
+**题干：** Which of the following answers describes the characteristics of Dynamic Random-Access Memory (DRAM)? (Select all that apply)
+
+**正确答案：**
+- **Volatile storage media type**（易失性存储）
+- **Slower than Static Random-Access Memory (SRAM)**（比 SRAM 慢）
+- **Widely used as the primary storage media**（作为主内存广泛使用）
+- **Less expensive in comparison to Static Random-Access Memory (SRAM)**（比 SRAM 便宜）
+
+### 为什么这些是对的
+#### 1. DRAM 是易失性存储
+- 断电后数据会消失
+- 所以它属于 **volatile memory**
+
+#### 2. DRAM 比 SRAM 慢
+- DRAM 需要周期性刷新（refresh）
+- 结构更简单，但访问速度不如 SRAM
+
+#### 3. DRAM 是电脑里的主内存
+- 你平时插在主板内存槽里的 DDR3 / DDR4 / DDR5，本质上都属于 **DRAM**
+- 所以它被广泛用作系统主内存（regular RAM modules）
+
+#### 4. DRAM 比 SRAM 便宜
+- DRAM 单位容量成本更低
+- 因此适合做大容量内存
+
+---
+
+## DRAM vs SRAM 一次记住
+| 项目 | DRAM | SRAM |
+| --- | --- | --- |
+| 全称 | Dynamic RAM | Static RAM |
+| 是否易失性 | 易失性 | 易失性 |
+| 速度 | 较慢 | 较快 |
+| 成本 | 较低 | 较高 |
+| 容量 | 可做很大 | 通常较小 |
+| 典型用途 | 主内存（系统 RAM） | CPU Cache |
+| 是否需要刷新 | 需要 | 不需要 |
+
+---
+
+## 为什么这些选项是错的
+- **Utilized for CPU cache memory chips**
+  - 这个更符合 **SRAM**，不是 DRAM
+- **More expensive than SRAM**
+  - 反了，DRAM 更便宜
+- **Non-volatile storage media type**
+  - 不对，DRAM 断电丢数据
+- **Faster than SRAM**
+  - 也反了，SRAM 更快
+
+**记忆口诀：**
+- **D = Dynamic = 需要刷新**
+- **DRAM = 大、便宜、慢、做主内存**
+- **SRAM = 小、贵、快、做缓存**
 
