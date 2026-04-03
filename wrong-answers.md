@@ -657,4 +657,36 @@ DHCP 客户端接收响应使用 UDP 68；服务器监听 67。记成 “67→Se
 - DDR4 = **288 pins**
 - DDR5 = **288 pins**（但缺口位置不同）
 - 看见 “DDR4” 先想到：**288 pin + 不兼容旧代 + 单条常考 32GB**
+---
+
+## DDR3 SDRAM 特征
+![DDR3 question](images/2026-04-03-ddr3.jpg)
+
+**正确特征（选 3）：**
+- **240 contact pins**
+- **A notch on the RAM module contact surface prevents the installation of incompatible memory types**
+- **16 GB maximum capacity per memory module**
+
+**这题的关键：**
+- DDR3 常考容量按 **单条 16GB** 记
+- DDR3 的桌面 DIMM 针脚数是 **240 pin**
+- 和 DDR4 一样，也有**防呆缺口**，不能乱插
+
+**为什么你错：**
+- 你漏掉了 **16 GB maximum capacity per memory module**
+- 你选了 **Backwards compatible with earlier DDR SDRAM versions**，这不对
+
+**为什么“不向后兼容”：**
+- 各代 DDR 的**缺口位置不同**
+- 电压、时序、控制器要求不同
+- 所以 DDR、DDR2、DDR3、DDR4 之间**不能混插**
+
+**对照记忆：**
+- DDR3 = **240 pins / 16GB**
+- DDR4 = **288 pins / 32GB**
+
+**记忆口诀：**
+- DDR3：**240 + 16**
+- DDR4：**288 + 32**
+- 都有缺口，都不能向后兼容
 
