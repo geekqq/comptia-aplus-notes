@@ -543,4 +543,28 @@ DHCP 客户端接收响应使用 UDP 68；服务器监听 67。记成 “67→Se
 - 关键词永远是 **Network and Sharing Center**。
 - 分类视图：先看 **network status and tasks**
 - 图标视图：直接进 **Network and Sharing Center**
+---
+
+## 打开 Network Connections（查看所有网卡）
+![Network Connections applet question](images/2026-04-03-network-connections-applet.jpg)
+
+**题干：** What is the correct sequence of steps for accessing the Network Connections applet that displays all available network adapters in Windows? (Select all that apply)
+
+**正确答案：**
+- **Windows Run dialog → 输入 `ncpa.cpl` → Enter**
+- **Control Panel (category view) → Network and Internet → Network and Sharing Center → Change adapter settings**
+- **Control Panel (icon view) → Network and Sharing Center → Change adapter settings**
+
+**说明：**
+- 这道题问的是 **打开 Network Connections 小程序（能看到所有网卡）**，不是打开 **Device Manager**。
+- `ncpa.cpl` 是最快捷的命令，直接跳到网卡列表页面。
+- `Change adapter settings` 才是进入“所有网络适配器”列表的关键入口。
+
+**为什么错项不对：**
+- **Device Manager > Network adapters** 看到的是硬件设备树，不是 Network Connections applet。
+- **Hardware and Sound > Devices and Printers > Network adapters** 这条路径本身就不是标准入口。
+
+**记忆：**
+- 看“网卡连接状态/启用禁用/IP 属性” → `ncpa.cpl`
+- 看“驱动/硬件状态” → `devmgmt.msc`
 
