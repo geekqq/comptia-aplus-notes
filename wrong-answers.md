@@ -987,4 +987,39 @@ DHCP 客户端接收响应使用 UDP 68；服务器监听 67。记成 “67→Se
 - **SAS = 企业级 / 高可靠 / 服务器阵列**
 - **SATA = 家用普及**
 - **NVMe = 闪存高速低延迟**
+---
+
+## 被 M.2 取代的旧 SSD 外形：mSATA
+![mSATA question](images/2026-04-05-msata.jpg)
+
+**题干：** Which answer refers to an older, portable-device SSD form factor superseded by M.2?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | mPCIe |
+| ✅ 正确答案 | mSATA |
+
+### 为什么是 mSATA
+- **mSATA**（mini-SATA）是早期笔记本、超极本、迷你设备中常见的小型 SSD 接口/外形。
+- 后来被 **M.2** 广泛取代，因为 M.2 更灵活：
+  - 支持 SATA
+  - 也支持 PCIe / NVMe
+  - 尺寸选择更多（2242 / 2260 / 2280 等）
+
+### 为什么不是 mPCIe
+- **mPCIe**（mini PCI Express）主要是给：
+  - 无线网卡
+  - WWAN 卡
+  - 其他扩展卡
+- 它不是“被 M.2 取代的旧 SSD 主流外形”这道题的标准答案。
+- 虽然外观上 mSATA 和 mPCIe 有点像，很容易混淆，但用途不同。
+
+### 另外几个选项为什么不对
+- **NVMe**：这是协议/接口栈，不是那个“旧便携 SSD 外形”
+- **SATA Express**：这是另一类接口标准，也不是题目要的老便携 SSD 形态
+
+### 最简单记忆
+- **mSATA = 老的迷你 SSD 形态**
+- **M.2 = 新一代，后来把 mSATA 基本取代了**
+- **mPCIe = 老扩展卡插槽，不是 SSD 形态答案**
 
