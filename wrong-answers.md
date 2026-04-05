@@ -898,4 +898,45 @@ DHCP 客户端接收响应使用 UDP 68；服务器监听 67。记成 “67→Se
 - 家用盘：5400 / 7200
 - 企业盘：10K / **15K**
 - 问“最高”就优先想到 **15,000 RPM**
+---
+
+## NVMe 的核心特征
+![NVMe question](images/2026-04-05-nvme.jpg)
+
+**题干：** Which of the statements listed below can be used to describe the features of NVMe? (Select 2 answers)
+
+**正确答案：**
+- **Developed specifically for SSDs**
+- **Uses the PCIe interface for data transfer**
+
+### 为什么这两个是对的
+#### 1. NVMe 是专门为 SSD 设计的
+- NVMe（Non-Volatile Memory Express）不是给机械硬盘设计的老协议
+- 它是为了充分发挥闪存/SSD 的低延迟和高并发能力而制定的
+
+#### 2. NVMe 走的是 PCIe
+- NVMe SSD 使用 **PCIe 总线**传输数据
+- 所以速度远高于传统 SATA SSD
+
+### 你错的地方
+你选了：
+- **Capped at a maximum data transfer rate of 6 Gbps**
+
+这个是 **SATA III** 的典型数字，不是 NVMe。
+
+### 为什么别的选项不对
+- **Designed as a general-purpose interface for various hardware devices**
+  - 这更像在说 PCIe 本身，不是 NVMe 协议的定义
+- **Optimized for multi-drive RAID configurations**
+  - 不是 NVMe 的核心定义特征
+
+### 最简单对比
+| 技术 | 典型总线 | 常见上限印象 |
+| --- | --- | --- |
+| SATA SSD | SATA | 6 Gbps |
+| NVMe SSD | PCIe | 明显高于 SATA |
+
+**记忆：**
+- **SATA = 6 Gbps**
+- **NVMe = PCIe + 专为 SSD 设计**
 
