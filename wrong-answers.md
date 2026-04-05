@@ -1083,4 +1083,82 @@ RAID 10 虽然也很可靠，但它的容错能力取决于：
 
 **一句话：**
 RAID 10 很强，但容错取决于坏盘分布；RAID 6 明确能扛任意两块盘，因此这题标准答案是 **RAID 6**。
+---
+
+## TPM 的核心能力
+![TPM question](images/2026-04-05-tpm.jpg)
+
+**TPM 常考功能：**
+- 安全生成并存储加密密钥
+- 给 BitLocker / 全盘加密保存密钥
+- 记录启动过程（measured boot）
+- 参与完整性检查 / attestation
+
+**容易混淆：**
+- “只允许受信任启动文件运行”更像 **Secure Boot** 的直接描述
+- TPM 更偏向 **密钥、启动测量、完整性证明**
+- TPM 不负责“加密单个用户账号”
+
+**记忆：** TPM = **key / boot / integrity / attestation**。
+
+---
+
+## 为什么高端主板也不能兼容不同厂商 CPU
+![CPU socket compatibility question](images/2026-04-05-cpu-socket.jpg)
+
+**错误说法：** 高端主板会配备能兼容不同厂商 CPU 的 socket。
+
+**为什么错：**
+- CPU socket 必须和 CPU 平台严格匹配
+- Intel 和 AMD 的 socket 物理结构、电气定义、针脚布局都不同
+- 就算同厂商，不同代际也经常不兼容
+
+**记忆：** 主板再高端，也不能跨厂商通用 CPU 插槽。
+
+---
+
+## eSATA 这道判断题为什么是 False
+![eSATA false question](images/2026-04-05-esata-false.jpg)
+
+**错误点在最后一句：**
+- eSATA 是外部存储接口
+- 可以通过主板后置 I/O 或 bracket 引出
+- **不是**“直接插在主板上的专用 slot”
+
+**记忆：** eSATA = 外部版 SATA 接口，不是主板插槽标准。
+
+---
+
+## CPU 辅助供电接口
+![CPU power question](images/2026-04-05-cpu-power.jpg)
+
+**正确答案：**
+- 4-pin 12V connector
+- 4+4-pin 12V connector
+- 8-pin 12V connector
+
+**说明：**
+- 这些都属于主板上给 CPU 供电的 ATX12V / EPS12V 接口
+- PCIe 6-pin / 8-pin 是给显卡供电，不是 CPU 供电
+
+**记忆：**
+- CPU 供电看 **12V / 4-pin / 4+4 / 8-pin**
+- PCIe 6/8-pin 想到显卡
+
+---
+
+## 主板尺寸：ITX 比 microATX 更小
+![ITX size question](images/2026-04-05-itx.jpg)
+
+**正确答案：** ITX（通常指 Mini-ITX）
+
+**大小顺序（大 → 小）：**
+- EE-ATX
+- E-ATX
+- ATX
+- microATX
+- Mini-ITX
+
+**记忆：**
+- microATX 是小板，但 **ITX 更小**
 
