@@ -939,4 +939,52 @@ DHCP 客户端接收响应使用 UDP 68；服务器监听 67。记成 “67→Se
 **记忆：**
 - **SATA = 6 Gbps**
 - **NVMe = PCIe + 专为 SSD 设计**
+---
+
+## SAS 的核心特征
+![SAS question](images/2026-04-05-sas.jpg)
+
+**题干：** What are the key features of SAS? (Select 3 answers)
+
+**正确答案：**
+- **Designed for systems requiring high redundancy, error correction, and uptime**
+- **Optimized for multi-drive configurations in a daisy-chain topology**
+- **Commonly implemented in mission-critical environments like servers and data centers**
+
+### 为什么这三个是对的
+#### 1. 高可靠性 / 高可用性
+- SAS（Serial Attached SCSI）强调企业级稳定性
+- 适合要求高冗余、纠错、长时间连续运行的环境
+
+#### 2. 适合多盘配置
+- SAS 面向服务器/存储阵列场景
+- 支持多设备连接、扩展器（expander）、复杂盘柜结构
+- 所以题目里说它适合多驱动器配置是对的
+
+#### 3. 常见于关键业务环境
+- 服务器
+- 数据中心
+- 企业存储系统
+这些正是 SAS 的典型使用场景
+
+### 你错选的为什么不对
+#### Widely used in 2.5-inch SSDs replacing traditional HDDs
+- 这个说法更像在描述 **消费级 SATA SSD** 的普及场景
+- SAS 虽然也有 SAS SSD，但不是这类题想表达的核心特征
+
+#### Developed specifically for high-throughput, low-latency flash storage environments
+- 这更像 **NVMe** 的描述
+- NVMe 才是专门为闪存/低延迟 SSD 环境设计的协议
+
+### 你要这样区分
+| 技术 | 典型定位 |
+| --- | --- |
+| SATA | 消费级存储，便宜，普及广 |
+| SAS | 企业级存储，可靠性高，服务器/数据中心 |
+| NVMe | 面向 PCIe 闪存，高吞吐、低延迟 |
+
+**记忆：**
+- **SAS = 企业级 / 高可靠 / 服务器阵列**
+- **SATA = 家用普及**
+- **NVMe = 闪存高速低延迟**
 
