@@ -1161,4 +1161,49 @@ RAID 10 很强，但容错取决于坏盘分布；RAID 6 明确能扛任意两�
 
 **记忆：**
 - microATX 是小板，但 **ITX 更小**
+---
+
+## Memory card 和 flash drive 的区别
+![Memory card vs flash drive question](images/2026-04-05-memory-card-vs-flash-drive.jpg)
+
+**题干：** Which features can be used to distinguish memory cards from flash drives? (Select 2 answers)
+
+**正确答案：**
+- **Compatible with dedicated slots or card readers**
+- **Primarily designed to expand storage capacity of compact electronics**
+
+### 为什么这两个是对的
+#### 1. 需要专用卡槽或读卡器
+- Memory card（如 SD / microSD）通常不是直接插 USB 用
+- 它更常通过：
+  - 相机/手机/游戏机卡槽
+  - 读卡器
+来读写数据
+
+#### 2. 主要给小型电子设备扩容
+- Memory card 的典型场景是：
+  - 手机
+  - 相机
+  - 行车记录仪
+  - 无人机
+  - Switch 等小型设备
+- 它的定位是“嵌进去扩容”
+
+### 为什么你选的那个不对
+#### Designed for general-purpose file transfer and storage
+- 这更像 **USB flash drive（U盘）** 的典型用途
+- U 盘强调“拿来拷文件、通用传输”
+- 不是区分 memory card 的关键特征
+
+### 为什么另外几项也不行
+- **Non-volatile, rewritable storage media type**
+  - 两者都是，不构成区分
+- **Solid-state memory technology**
+  - 两者也都是闪存，不构成区分
+- **Plug-and-play across most devices supporting USB**
+  - 这更偏向 flash drive，不是 memory card
+
+### 最简单记忆
+- **Memory card** = 卡槽 / 读卡器 / 小设备扩容
+- **Flash drive** = USB / 通用拷文件 / 即插即用
 
