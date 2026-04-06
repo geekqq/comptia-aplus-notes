@@ -1206,4 +1206,40 @@ RAID 10 很强，但容错取决于坏盘分布；RAID 6 明确能扛任意两�
 ### 最简单记忆
 - **Memory card** = 卡槽 / 读卡器 / 小设备扩容
 - **Flash drive** = USB / 通用拷文件 / 即插即用
+---
+
+## 工业与嵌入式常见小型低功耗主板：ITX
+![ITX embedded question](images/2026-04-05-itx-embedded.jpg)
+
+**题干：** Which answer refers to a low-power consumption, small form factor motherboard type used in industrial and embedded PC applications?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | LPX |
+| ✅ 正确答案 | ITX |
+
+### 为什么是 ITX
+- **ITX（尤其 Mini-ITX）** 的典型特点就是：
+  - 小尺寸
+  - 低功耗平台常见
+  - 很适合工业控制、嵌入式设备、迷你主机、瘦客户端
+- 它在嵌入式/工控/小型化主机里非常常见
+
+### 为什么不是 LPX
+- **LPX** 是很老的主板规格
+- 主要是早期低矮桌面机箱时代的旧标准
+- 现在考试里如果强调：
+  - 小型
+  - 低功耗
+  - 工业 / embedded
+  更应该想到 **ITX**，不是 LPX
+
+### 其他选项为什么不对
+- **ATX**：标准大板，不是小型嵌入式取向
+- **NLX**：也是较老的桌面主板标准，不是这题最符合的答案
+
+### 最简单记忆
+- **ITX = 小、低功耗、嵌入式/工业常见**
+- **ATX = 标准台式机大板**
+- **LPX / NLX = 老规格，考试里多当干扰项**
 
