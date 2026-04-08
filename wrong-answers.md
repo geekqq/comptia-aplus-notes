@@ -1372,4 +1372,41 @@ SPF 看“谁发的”，DKIM 看“有没有被改”，DMARC 负责“最后�
 
 **一句话：**
 看到“combine multiple physical server resources into one bucket/pool”，直接想到 **resource pooling**。
+---
+
+## Community Cloud（社区云）
+![Community cloud question](images/2026-04-07-community-cloud.jpg)
+
+**题干：** 多个组织通过第三方共同共享一个云，这种云叫什么？
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | partnered cloud |
+| ✅ 正确答案 | community cloud |
+
+### 为什么是 community cloud
+- **Community cloud** 指的是：
+  - 多个有共同需求、共同政策、共同安全要求的组织
+  - 共享同一个云环境
+- 常见例子：
+  - 多家政府机构共享一套云
+  - 多家医院/医疗组织共享合规云环境
+  - 多个教育或研究机构共享云资源
+
+### 为什么不是 partnered cloud
+- **partnered cloud** 不是标准的云部署模型术语
+- 云计算常考的正式部署模型通常是：
+  - **private cloud**
+  - **public cloud**
+  - **hybrid cloud**
+  - **community cloud**
+
+### 一句话区分
+- **Private cloud** = 一家自己用
+- **Public cloud** = 面向公众/市场提供
+- **Hybrid cloud** = 私有 + 公有混合
+- **Community cloud** = 多个组织共享，同一类需求
+
+**记忆：**
+看到“several organizations share a cloud”，就想到 **community cloud**。
 
