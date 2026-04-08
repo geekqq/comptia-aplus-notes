@@ -1294,4 +1294,48 @@ RAID 10 很强，但容错取决于坏盘分布；RAID 6 明确能扛任意两�
 
 **一句话：**
 SPF 看“谁发的”，DKIM 看“有没有被改”，DMARC 负责“最后怎么判、怎么处理”。
+---
+
+## 虚拟化 / 云计算里的 Rapid Elasticity
+![Rapid elasticity question](images/2026-04-07-rapid-elasticity.jpg)
+
+**题干：** 能根据当下需要，快速给服务器增加或移除资源，这个特性叫什么？
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | rapid availability |
+| ✅ 正确答案 | rapid elasticity |
+
+### 为什么是 rapid elasticity
+- **Rapid elasticity** 指的是：
+  - 资源可以快速扩展（scale out / scale up）
+  - 也可以快速缩减（scale in / scale down）
+- 核心是：
+  > **按需求快速增减资源**
+
+这正好符合题目里说的：
+- quickly add resources
+- remove resources depending on needs
+
+### 为什么不是 rapid availability
+- availability 讲的是：
+  - 服务是否持续可用
+  - 高可用（HA）
+  - 容错 / 故障切换
+- 它不是“按需快速扩缩容”的概念
+
+### 容易混淆的另一个词：On-demand self-service
+- **On-demand self-service** 是指：
+  - 用户自己就能申请/创建资源
+  - 不需要人工介入
+- 它强调的是“自助开通”
+- 不是题目这里强调的“资源弹性伸缩”
+
+### 最简单记忆
+- **Rapid elasticity** = 资源弹性伸缩
+- **Availability** = 可用性 / 稳定在线
+- **On-demand self-service** = 用户自己开资源
+
+**一句话：**
+看到“按需要快速加减资源”，就想到 **rapid elasticity**。
 
