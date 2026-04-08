@@ -1338,4 +1338,38 @@ SPF 看“谁发的”，DKIM 看“有没有被改”，DMARC 负责“最后�
 
 **一句话：**
 看到“按需要快速加减资源”，就想到 **rapid elasticity**。
+---
+
+## Resource Pooling（资源池化）
+![Resource pooling question](images/2026-04-07-resource-pooling.jpg)
+
+**题干：** 把多台物理服务器的资源合并成一个“池子”，再按需分配给虚拟机，这个概念叫什么？
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | resource allocation |
+| ✅ 正确答案 | resource pooling |
+
+### 为什么是 resource pooling
+- **Resource pooling** 指的是：
+  - 把多个物理资源（CPU、内存、存储、网络）汇集起来
+  - 形成一个共享资源池
+  - 再由虚拟机或服务按需使用
+- 这就是虚拟化 / 云平台常见的底层资源管理方式
+
+### 为什么不是 resource allocation
+- **Resource allocation** 是“分配资源”这个动作本身
+- 比如：给某台虚拟机分 4 核 CPU、8GB 内存
+- 它不是“先把很多服务器资源汇总成池”的概念
+
+### 你可以这样理解
+- **Pooling** = 先把资源集中成池
+- **Allocation** = 再从池里分给某个对象
+
+### 最简单记忆
+- **resource pooling** = 资源池化，先汇总
+- **resource allocation** = 资源分配，后发放
+
+**一句话：**
+看到“combine multiple physical server resources into one bucket/pool”，直接想到 **resource pooling**。
 
