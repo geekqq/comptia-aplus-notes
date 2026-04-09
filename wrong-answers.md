@@ -1501,4 +1501,37 @@ SPF 看“谁发的”，DKIM 看“有没有被改”，DMARC 负责“最后�
 **记忆：**
 - 32-bit 程序 → 32 或 64 都行
 - 64-bit 程序 → 必须 64-bit OS
+---
+
+## Intel 硬件虚拟化技术：VT-x
+![VT-x question](images/2026-04-09-vtx.jpg)
+
+**题干：** A set of Intel CPU hardware enhancements that enable virtualization is known as:
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Hyper-V |
+| ✅ 正确答案 | VT-x |
+
+### 为什么是 VT-x
+- **Intel VT-x** 是 Intel CPU 内建的**硬件虚拟化扩展技术**
+- 它让处理器更高效地支持虚拟机运行
+- 题目说的是：
+  > Intel CPU hardware enhancements
+  所以问的是 CPU 硬件层面的特性名称
+
+### 为什么不是 Hyper-V
+- **Hyper-V** 是微软的虚拟化平台 / Hypervisor
+- 它是软件/平台层面的虚拟化解决方案
+- 不是 Intel CPU 的硬件增强名称
+
+### 其他选项顺手区分
+- **Xen**：一种 hypervisor / 虚拟化平台
+- **ESXi**：VMware 的 hypervisor
+- **VT-x**：Intel CPU 的硬件虚拟化扩展
+
+### 最简单记忆
+- **VT-x** = Intel 硬件虚拟化技术
+- **AMD-V** = AMD 的对应技术
+- **Hyper-V / Xen / ESXi** = 虚拟化平台，不是 CPU 指令集/硬件扩展名
 
