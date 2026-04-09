@@ -1534,4 +1534,47 @@ SPF 看“谁发的”，DKIM 看“有没有被改”，DMARC 负责“最后�
 - **VT-x** = Intel 硬件虚拟化技术
 - **AMD-V** = AMD 的对应技术
 - **Hyper-V / Xen / ESXi** = 虚拟化平台，不是 CPU 指令集/硬件扩展名
+---
+
+## Boot password vs BIOS/UEFI setup password
+![Boot password question](images/2026-04-09-boot-password.jpg)
+
+**题干：** Which of the answers listed below refer(s) to a boot password? (Select all that apply)
+
+**正确理解：**
+- ✅ **Primarily protects against unauthorized use of the device**
+- ✅ **Required before the OS loads to prevent unauthorized access**
+- ✅ **Does not restrict access to BIOS/UEFI settings**
+
+### 为什么这几个是对的
+#### 1. Boot password 是开机前拦截
+- 它会在系统启动、进入操作系统之前要求输入密码
+- 目的是阻止别人直接开机使用设备
+
+#### 2. 它主要保护设备使用权
+- 没有密码，就不能顺利进入 OS
+- 所以它针对的是“未授权使用设备”
+
+#### 3. 它不等于 BIOS/UEFI 设置密码
+- Boot password 和 BIOS/UEFI setup password 是两回事
+- 题目里最容易错的点就是把两者混在一起
+
+### 为什么你错的那些不对
+#### Required to access and modify BIOS/UEFI settings
+- 这是 **BIOS/UEFI setup password** 的描述
+- 不是 boot password
+
+#### Activated only when entering the BIOS configuration menu
+- 这也是 setup password 的逻辑，不是 boot password
+
+#### Prevents configuration changes to firmware settings
+- 这同样是在说保护固件配置，而不是阻止系统启动
+
+### 最简单区分
+- **Boot password** = 开机前拦你，防止别人用电脑
+- **BIOS/UEFI setup password** = 进固件设置时拦你，防止别人改配置
+
+**记忆：**
+- 想防止别人“用电脑” → **boot password**
+- 想防止别人“改 BIOS” → **setup password**
 
