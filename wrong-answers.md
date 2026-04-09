@@ -1442,4 +1442,63 @@ SPF 看“谁发的”，DKIM 看“有没有被改”，DMARC 负责“最后�
 ### 最简单记忆
 - **Windows 11 查开机启动项 → Task Manager**
 - **MSConfig** 更像旧时代排障工具，不是现在这题的标准答案
+---
+
+## net user / net use 区别
+![net user and net use question](images/2026-04-08-net-user-use.jpg)
+
+**正确答案：**
+- `net user` → 查看/管理本机用户账户
+- `net use` → 映射网络驱动器 / 使用共享资源
+
+**记忆：**
+- **user 管账号**
+- **use 管共享盘**
+
+---
+
+## macOS 里类似 ISO 的文件：DMG
+![DMG question](images/2026-04-08-dmg.jpg)
+
+**正确答案：** `.dmg`
+
+**说明：**
+- `.dmg` 是 macOS 常见的 **磁盘映像文件**（Disk Image）
+- 功能上最接近 Windows/Linux 里常说的 `.iso`
+- `.pkg` 是安装包，不是磁盘映像；`.zip` 是压缩包
+
+**记忆：** Mac 磁盘映像 = **DMG**。
+
+---
+
+## Fast Startup 为什么对应 Hibernation
+![Fast Startup question](images/2026-04-08-fast-startup.jpg)
+
+**正确答案：** Hibernation
+
+**说明：**
+- Windows Fast Startup 本质上是 **Hybrid Shutdown**
+- 关机时会把内核会话写到磁盘（类似休眠文件）
+- 下次开机更快恢复
+- 所以它依赖的是 **hibernation 机制**，不是普通 sleep/standby
+
+**记忆：** Fast Startup = 半个 hibernation。
+
+---
+
+## 32-bit 应用可以运行在哪些系统上
+![32-bit app question](images/2026-04-08-32bit-app.jpg)
+
+**正确答案：** both 32-bit and 64-bit OSs
+
+**说明：**
+- 大多数 **32-bit 应用** 可以运行在：
+  - 32-bit OS
+  - 64-bit OS
+- 因为 64-bit 系统通常提供对 32-bit 程序的向下兼容
+- 反过来，**64-bit 应用** 通常不能跑在 32-bit OS 上
+
+**记忆：**
+- 32-bit 程序 → 32 或 64 都行
+- 64-bit 程序 → 必须 64-bit OS
 
