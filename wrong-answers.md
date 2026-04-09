@@ -1409,4 +1409,37 @@ SPF 看“谁发的”，DKIM 看“有没有被改”，DMARC 负责“最后�
 
 **记忆：**
 看到“several organizations share a cloud”，就想到 **community cloud**。
+---
+
+## Windows 11 查看开机启动项：Task Manager
+![Startup apps question](images/2026-04-08-startup-apps.jpg)
+
+**题干：** 用户抱怨笔记本开机太慢，怀疑有很多进程在启动时自动运行。要用哪个工具查看 Windows 11 启动时会被加载的进程？
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | MSConfig |
+| ✅ 正确答案 | Task Manager |
+
+### 为什么是 Task Manager
+在 **Windows 10 / 11** 里，最直接查看和管理启动项的位置是：
+- **Task Manager → Startup apps / Startup**
+
+这里可以看到：
+- 哪些程序开机启动
+- 启动影响（Startup impact）
+- 是否启用/禁用
+
+### 为什么不是 MSConfig
+- **MSConfig（System Configuration）** 是老工具
+- 现在它已经不是管理普通启动项的首选入口
+- 在新版本 Windows 中，很多启动项管理实际上会把你引导到 **Task Manager**
+
+### 其他选项为什么不对
+- **Startup**：这不是独立工具名，题目要的是 utility
+- **Performance Monitor**：主要看性能计数器/监控，不是看开机启动项的首选工具
+
+### 最简单记忆
+- **Windows 11 查开机启动项 → Task Manager**
+- **MSConfig** 更像旧时代排障工具，不是现在这题的标准答案
 
