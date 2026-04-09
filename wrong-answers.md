@@ -1649,4 +1649,55 @@ SPF 看“谁发的”，DKIM 看“有没有被改”，DMARC 负责“最后�
 
 **一句话：**
 看到“32-bit CPU architecture”，标准答案优先想到 **x86**。
+---
+
+## 为什么看到 `Program Files (x86)` 反而说明系统多半是 64-bit
+![Program Files x86 question](images/2026-04-09-program-files-x86.jpg)
+
+**错误描述：** 如果出现 `Program Files (x86)`，就说明系统是 32-bit 架构和 32-bit OS。
+
+**为什么错：**
+- `Program Files (x86)` 通常出现在 **64-bit Windows** 上
+- 它是专门给 **32-bit 程序** 准备的目录
+- 同时系统里通常还有：
+  - `C:\Program Files`（给 64-bit 程序）
+  - `C:\Program Files (x86)`（给 32-bit 程序）
+
+**记忆：**
+看到 `Program Files (x86)`，先想到：
+> **这是 64-bit Windows 在兼容 32-bit 应用**
+
+---
+
+## RISC 是什么
+![RISC question](images/2026-04-09-risc.jpg)
+
+**题干：** A CPU design based on an instruction set that tries to improve speed by utilizing relatively few and simple instructions is called:
+
+**正确答案：** **RISC**
+
+### 为什么是 RISC
+- **RISC = Reduced Instruction Set Computer**
+- 核心思想是：
+  - 指令数量相对少
+  - 指令更简单
+  - 每条指令尽量执行得更快
+- 这样可以提升处理效率，特别适合流水线（pipeline）设计
+
+### 对比 CISC
+- **CISC = Complex Instruction Set Computer**
+- 指令更多、更复杂
+- 单条指令能做更多事，但设计更复杂
+
+### 其他选项为什么不是标准答案
+- **IA-64**：Intel Itanium 架构名字，不是“少而简单指令集设计”的通用术语
+- **EPIC**：一种和 Itanium 相关的设计理念，不是这类基础题最标准答案
+- **CISC**：和题目描述方向相反
+
+### 最简单记忆
+- **RISC** = 指令少、简单、快
+- **CISC** = 指令多、复杂
+
+**一句话：**
+看到“few and simple instructions” 就直接想到 **RISC**。
 
