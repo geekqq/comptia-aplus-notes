@@ -1731,4 +1731,35 @@ SPF 看“谁发的”，DKIM 看“有没有被改”，DMARC 负责“最后�
 ### 最简单记忆
 - **ARM = 低功耗 + RISC + 移动设备/嵌入式**
 - **x86/x64 = 传统 PC / laptop / server 主力**
+---
+
+## 欧洲民用插座标准电压范围
+![Europe voltage question](images/2026-04-09-europe-voltage.jpg)
+
+**题干：** What is the standard voltage range used for power outlets in Europe?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | 210–220 VAC |
+| ✅ 正确答案 | 220–240 VAC |
+
+### 为什么是 220–240 VAC
+- 在 CompTIA 这类基础考试里，欧洲常见民用市电通常记作：
+  - **220–240 VAC**
+- 美国/加拿大则通常记作：
+  - **110–120 VAC**
+
+### 为什么 210–220 VAC 不对
+- 这个范围不是这类考试里标准记法
+- 即使现实世界不同国家会有细节差异，考试通常按：
+  - 北美：110–120V
+  - 欧洲：220–240V
+来记
+
+### 最简单记忆
+- **US / Canada = 110–120 VAC**
+- **Europe = 220–240 VAC**
+
+**一句话：**
+欧洲电压题看到选项时，优先想到 **220–240 VAC**。
 
