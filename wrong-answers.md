@@ -1577,4 +1577,43 @@ SPF 看“谁发的”，DKIM 看“有没有被改”，DMARC 负责“最后�
 **记忆：**
 - 想防止别人“用电脑” → **boot password**
 - 想防止别人“改 BIOS” → **setup password**
+---
+
+## TPM vs HSM 对照表
+![TPM vs HSM question](images/2026-04-09-tpm-vs-hsm.jpg)
+
+### TPM（Trusted Platform Module）
+**典型特征：**
+- 嵌入在消费者设备或主板中
+- 安全性通常绑定在**单台设备**上
+- 提供基础密码学功能：
+  - 密钥生成/存储
+  - 平台完整性支持
+  - measured boot / attestation
+
+### HSM（Hardware Security Module）
+**典型特征：**
+- 用于**集中式密钥管理**
+- 支持高强度/高吞吐密码学操作
+- 可被多个设备、用户、系统通过网络共享使用
+- 形态可以是：
+  - network-attached appliance
+  - PCIe card
+  - USB device
+
+### 一眼区分
+| 维度 | TPM | HSM |
+| --- | --- | --- |
+| 典型位置 | 主板/设备内部 | 独立设备/卡/网络设备 |
+| 服务对象 | 单台设备 | 多设备/多系统 |
+| 主要用途 | 本机信任根、启动完整性、BitLocker | 企业级密钥管理、签名、证书、加密服务 |
+| 规模 | 基础/本地 | 集中/高负载 |
+
+### 记忆口诀
+- **TPM** = 绑在一台机器上的安全芯片
+- **HSM** = 给很多系统提供加密服务的硬件安全模块
+
+**考试抓关键词：**
+- 看到 **single device / embedded / platform integrity** → TPM
+- 看到 **centralized key management / multiple systems / network appliance** → HSM
 
