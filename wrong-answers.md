@@ -1700,4 +1700,35 @@ SPF 看“谁发的”，DKIM 看“有没有被改”，DMARC 负责“最后�
 
 **一句话：**
 看到“few and simple instructions” 就直接想到 **RISC**。
+---
+
+## ARM CPU 的典型特征
+![ARM CPU question](images/2026-04-09-arm.jpg)
+
+**ARM 常考特征：**
+- 低功耗（lowered power consumption）
+- RISC 风格，指令更简洁
+- 常见于移动设备和嵌入式系统
+- 很适合电池供电设备
+
+### 这题最容易错的点
+你错选了：
+- **Typically used in personal computers, laptops, and servers**
+
+这在现实里不是完全没有，但在 **CompTIA / 基础考试语境** 下，ARM 的“典型定位”主要仍然是：
+- 手机
+- 平板
+- IoT
+- 路由器
+- 嵌入式设备
+
+而不是传统 PC / laptop / server 主流平台。
+
+### 另外一个常见误区
+- **Employs complex instructions** 这更像 **CISC**（如传统 x86）的描述
+- ARM 更偏 **RISC**，强调更简单的指令集和更高的能效
+
+### 最简单记忆
+- **ARM = 低功耗 + RISC + 移动设备/嵌入式**
+- **x86/x64 = 传统 PC / laptop / server 主力**
 
