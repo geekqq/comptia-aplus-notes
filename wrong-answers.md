@@ -1616,4 +1616,37 @@ SPF 看“谁发的”，DKIM 看“有没有被改”，DMARC 负责“最后�
 **考试抓关键词：**
 - 看到 **single device / embedded / platform integrity** → TPM
 - 看到 **centralized key management / multiple systems / network appliance** → HSM
+---
+
+## 32-bit CPU 架构：x86
+![x86 question](images/2026-04-09-x86.jpg)
+
+**题干：** Which of the following terms refers to a 32-bit CPU architecture?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | x32 |
+| ✅ 正确答案 | x86 |
+
+### 为什么是 x86
+- **x86** 在考试语境里通常指传统 **32-bit CPU architecture**
+- 它源于 Intel 早期 80x86 处理器家族（8086、80286、80386、80486）
+- 后来提到 32-bit Windows / 32-bit CPU / 32-bit instruction set，常常就简写成 **x86**
+
+### 为什么不是 x64
+- **x64** 指的是 **64-bit 架构**
+- 也常见写法：x86-64 / AMD64
+
+### 为什么 x32 不对
+- **x32** 不是这类基础考试里标准的 32-bit CPU 架构名称
+- 这题要考的是最经典的术语：
+  - **x86 = 32-bit**
+  - **x64 = 64-bit**
+
+### 最简单记忆
+- **x86 = 32-bit**
+- **x64 = 64-bit**
+
+**一句话：**
+看到“32-bit CPU architecture”，标准答案优先想到 **x86**。
 
