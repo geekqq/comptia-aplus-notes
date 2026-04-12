@@ -2342,4 +2342,47 @@ PC 电源常见几条主要电压轨：
 
 **一句话：**
 看到“stuck in the print queue”，第一反应就是 **restart the print spooler service**。
+---
+
+## 喷墨打印机 grinding noise 常见原因
+![Inkjet grinding noise question](images/2026-04-12-inkjet-grinding-noise.jpg)
+
+**题干：** In an inkjet printer, which issues are commonly associated with a grinding noise? (Select 3 answers)
+
+**正确答案：**
+- **Worn, damaged or misaligned paper feed rollers**
+- **Small paper pieces or foreign objects stuck in the paper path**
+- **Printhead carriage mechanism malfunctions (e.g., misaligned or obstructed carriage)**
+
+### 为什么这三个是对的
+#### 1. Paper feed rollers 问题
+- 纸张进纸滚轮磨损、错位、损坏时，容易打滑或摩擦异常
+- 会发出 grinding / grinding-like noise
+
+#### 2. Paper path 里有异物
+- 小纸屑、碎片、异物卡在纸路里
+- 机械部件运动时会摩擦、卡顿、发出刺耳噪音
+
+#### 3. Printhead carriage 机构异常
+- 喷头小车错位、卡住、轨道受阻
+- 来回移动时容易发出 grinding noise
+
+### 为什么你选的 drum unit 不对
+- 题目明确说的是 **inkjet printer**
+- **drum unit（成像鼓）** 是激光打印机的概念
+- 喷墨打印机不该优先往 drum / fuser 这类激光机部件上想
+
+### 为什么 fuser 也不对
+- **fuser** 同样是激光打印机组件
+- 喷墨打印机没有用加热熔融碳粉的 fuser 这一套结构
+
+### 最简单记忆
+- **喷墨机异响** → 先想：
+  - 进纸滚轮
+  - 纸路异物
+  - 喷头小车
+- **drum / fuser** → 这是激光打印机思路
+
+**一句话：**
+看到 **inkjet + grinding noise**，优先检查滚轮、纸路异物、喷头小车，不要跳去选 drum 或 fuser。
 
