@@ -2300,4 +2300,46 @@ PC 电源常见几条主要电压轨：
 
 **一句话：**
 看到 **inkjet + vertical lines**，优先想到 **喷头清洁**，不要跳去选激光打印机的 drum。
+---
+
+## 打印队列卡住：先重启 Print Spooler
+![Print spooler question](images/2026-04-12-print-spooler.jpg)
+
+**题干：** A user reports that several documents are stuck in the print queue and not printing. What should a technician try first?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Check for paper jams in the printer |
+| ✅ 正确答案 | Restart the print spooler service |
+
+### 为什么答案是 Restart the print spooler service
+- 题目关键词是：
+  - **documents are stuck in the print queue**
+  - **not printing**
+- 这更像是 **打印后台处理服务（print spooler）** 卡住了
+- Print spooler 负责：
+  - 接收打印任务
+  - 暂存打印作业
+  - 按顺序把任务送给打印机
+
+如果队列卡死、任务堆住，最常见的第一步就是：
+> **重启 print spooler service**
+
+### 为什么不是先查纸张卡纸
+- 纸张卡住当然也可能影响打印
+- 但题目强调的是：
+  - **多个文档都卡在队列里**
+- 这更偏向系统/服务层面的打印队列问题，不是单纯机械卡纸优先
+
+### 为什么其他项不是第一步
+- **Clear all print jobs from the queue**：有时也会做，但标准题里更常把“重启 spooler”当第一步
+- **Verify the network connection status**：更适合网络打印机离线、找不到打印机的场景
+
+### 最简单记忆
+- **卡在 print queue** → 先想 **print spooler**
+- **打印机完全离线** → 再想网络/连接
+- **纸张报错/异响** → 再想 jam
+
+**一句话：**
+看到“stuck in the print queue”，第一反应就是 **restart the print spooler service**。
 
