@@ -2223,4 +2223,39 @@ PC 电源常见几条主要电压轨：
 
 **一句话：**
 看到 “MFD + single computer + direct wired” 就先想到 **USB**。
+---
+
+## 多用户有线网络访问 MFD：Ethernet
+![MFD Ethernet question](images/2026-04-12-mfd-ethernet.jpg)
+
+**题干：** Which connectivity option would be the most suitable in a scenario where multiple users on a wired network need access to MFD functions?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Parallel port |
+| ✅ 正确答案 | Ethernet |
+
+### 为什么答案是 Ethernet
+- 题目关键词是：
+  - **multiple users**
+  - **wired network**
+- 这说明打印机/MFD 应该接入局域网，让多台电脑共享使用
+- 最适合这种场景的就是：
+  > **Ethernet（以太网）**
+
+### 为什么不是 Parallel port
+- Parallel port 是老式本地直连接口
+- 更像是一台电脑直接连一台打印机的旧方案
+- 不适合现代多用户网络共享场景
+
+### 其他选项为什么不对
+- **Serial port**：不是现代 MFD 网络共享主流方式
+- **KVM switch**：用于切换键盘/显示器/鼠标控制多台电脑，不是打印机网络连接方案
+
+### 最简单记忆
+- **单机直连** → USB
+- **多用户网络共享** → Ethernet
+
+**一句话：**
+看到 “multiple users + wired network” 就先想到 **Ethernet**。
 
