@@ -2114,4 +2114,38 @@ PC 电源常见几条主要电压轨：
 
 **一句话：**
 看到 12V rail，优先想到 **风扇/机械件、显卡、PCIe 扩展卡**。
+---
+
+## PCL vs PostScript 对照
+![PCL vs PostScript question](images/2026-04-12-pcl-postscript.jpg)
+
+### PCL（Printer Command Language）
+**典型特征：**
+- 更适合 **high-volume / everyday printing**
+- 打印通常更快
+- 对打印机内存和处理器要求更低
+- 不如 PostScript 适合专业图形和精细排版
+
+### PostScript
+**典型特征：**
+- 更适合 **professional design / desktop publishing / graphic arts**
+- 处理复杂页面更强
+- 通常比 PCL 更慢一些
+- 更吃内存和处理器资源
+
+### 一眼区分
+| 项目 | PCL | PostScript |
+| --- | --- | --- |
+| 速度 | 较快 | 较慢 |
+| 资源占用 | 较低 | 较高 |
+| 日常办公 | 更适合 | 可以但不是优势 |
+| 专业设计/排版 | 较弱 | 更强 |
+
+### 题目常见陷阱
+- 看到 **high-volume / efficient / less demanding** → 选 **PCL**
+- 看到 **graphic arts / desktop publishing / more resource-intensive** → 选 **PostScript**
+
+### 最简单记忆
+- **PCL = 快、轻、办公**
+- **PostScript = 准、重、设计**
 
