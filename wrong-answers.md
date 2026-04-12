@@ -2031,4 +2031,44 @@ SMTP 是什么？
 
 **一句话：**
 看到“modern MFD 的最常见无线连接”，优先想到 **802.11 / Wi‑Fi**。
+---
+
+## 5V 电压轨常见供电对象
+![5V rail question](images/2026-04-12-5v-rail.jpg)
+
+**题干：** Which of the PC components listed below operate on the 5V voltage rail?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Graphics cards |
+| ✅ 正确答案 | USB ports and devices |
+
+### 为什么答案是 USB ports and devices
+PC 电源常见几条主要电压轨：
+- **+12V**
+- **+5V**
+- **+3.3V**
+
+其中 **USB 端口标准供电就是 5V**，所以：
+- USB 接口
+- USB 外设
+通常都和 **5V rail** 直接相关。
+
+### 为什么显卡不对
+现代显卡主要依赖：
+- **12V rail**
+- 来自 PCIe 插槽和 6-pin / 8-pin PCIe 电源接口
+
+所以显卡不是这题的 5V 正确答案。
+
+### 其他几个顺手区分
+- **CPUs**：核心供电最终很低，但主要由主板 VRM 从 **12V** 降压转换而来，不直接按“5V rail 设备”来记。
+- **RAM slots**：更偏向低压供电（如 1.2V、1.35V、1.5V），不是考试里典型的 5V rail 代表。
+
+### 最简单记忆
+- **USB = 5V**
+- **显卡 / CPU = 更偏 12V 路线**
+
+**一句话：**
+看到 5V rail 题，优先想到 **USB ports and devices**。
 
