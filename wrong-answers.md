@@ -2385,4 +2385,48 @@ PC 电源常见几条主要电压轨：
 
 **一句话：**
 看到 **inkjet + grinding noise**，优先检查滚轮、纸路异物、喷头小车，不要跳去选 drum 或 fuser。
+---
+
+## 默认页面方向先看 Printer driver settings
+![Default page orientation question](images/2026-04-12-default-page-orientation.jpg)
+
+**题干：** Which of the print configuration options listed below would be the best place to verify default page orientation settings?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Print dialog options |
+| ✅ 正确答案 | Printer driver settings |
+
+### 为什么答案是 Printer driver settings
+题目问的是：
+> **default** page orientation settings
+
+“default” 的重点是：
+- 系统或打印机驱动层面的默认配置
+- 不是某一次打印任务临时选项
+
+所以最合适的查看位置是：
+> **Printer driver settings**
+
+这里通常能设置：
+- 默认横向/纵向
+- 默认纸张大小
+- 默认双面打印
+- 默认质量模式
+
+### 为什么不是 Print dialog options
+- **Print dialog** 更多是当前这一趟打印任务的临时设置
+- 比如你这次打印临时改成横向、双面、缩放等
+- 它不一定代表系统默认值
+
+### 其他选项为什么不对
+- **Application settings**：应用自己的页面设置，不一定是打印机默认配置
+- **Printer utility settings**：更常见于维护/状态/清洁/耗材等工具，不是默认页面方向的首选位置
+
+### 最简单记忆
+- **default** 打印参数 → 先看 **printer driver settings**
+- **这一次临时打印怎么打** → 看 **print dialog**
+
+**一句话：**
+看到题目问 **default page orientation**，优先想到 **printer driver settings**，不是 print dialog。
 
