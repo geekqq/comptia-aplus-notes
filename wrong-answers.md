@@ -2148,4 +2148,40 @@ PC 电源常见几条主要电压轨：
 ### 最简单记忆
 - **PCL = 快、轻、办公**
 - **PostScript = 准、重、设计**
+---
+
+## Firmware vs device driver（MFD 题）
+![Firmware vs driver question](images/2026-04-12-firmware-vs-driver.jpg)
+
+**题干：** Which type of software is embedded within an MFD and provides basic instructions for its hardware to initialize and perform its core tasks?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Device driver |
+| ✅ 正确答案 | Firmware |
+
+### 为什么答案是 Firmware
+- **Firmware** 是嵌在设备内部的软件
+- 它直接负责：
+  - 开机初始化
+  - 底层硬件控制
+  - 设备核心任务执行
+- 题目里的关键词：
+  - **embedded within an MFD**
+  - **basic instructions for hardware**
+  这几乎就是 firmware 的定义
+
+### 为什么不是 Device driver
+- **Device driver** 通常安装在电脑/操作系统里
+- 它负责让 OS 和外部设备通信
+- 它不是“设备内部自带、负责初始化硬件”的那层软件
+
+### 顺手区分
+- **Firmware** = 在设备里面，控制硬件
+- **Driver** = 在电脑系统里，连接 OS 和设备
+- **Print spooler** = 管理打印队列
+- **Middleware** = 中间层软件
+
+**记忆：**
+看到 **embedded + hardware initialization**，优先想到 **firmware**。
 
