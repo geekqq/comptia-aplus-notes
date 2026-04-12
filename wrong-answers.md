@@ -1822,4 +1822,48 @@ SPF 看“谁发的”，DKIM 看“有没有被改”，DMARC 负责“最后�
 
 **一句话：**
 不管在美国还是欧洲，墙上是 AC，但电脑内部大多数元件真正吃的是 **DC**。
+---
+
+## ADF 是什么：Automatic Document Feeder
+![ADF question](images/2026-04-12-adf.jpg)
+
+**题干：** Which MFD component would be most useful for handling multi-page documents?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | transfer roller |
+| ✅ 正确答案 | ADF |
+
+### ADF 是什么
+**ADF = Automatic Document Feeder**
+中文常叫：
+- 自动文稿送纸器
+- 自动进稿器
+
+### 它的作用
+ADF 的作用就是：
+> 一次放一叠纸，让打印机/扫描仪/复印机自动一张一张送进去处理。
+
+特别适合：
+- 多页扫描
+- 多页复印
+- 多页传真
+
+### 为什么这题答案是 ADF
+因为题目问的是：
+> **哪一个 MFD 组件最适合处理 multi-page documents**
+
+最符合的就是 ADF，它本来就是为“多页文档自动连续进纸”设计的。
+
+### 为什么不是 transfer roller
+- **transfer roller** 属于打印成像过程里的内部组件
+- 它负责把碳粉图像转移到纸张上
+- 它不是为了“方便处理多页文件”而设计的用户侧功能组件
+
+### 最简单记忆
+- **ADF** = 一叠纸自动送进去
+- **Flatbed glass** = 一页一页手动放上去
+
+**一句话：**
+看到“multi-page documents”，优先想到 **ADF**。
 
