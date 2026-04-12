@@ -2184,4 +2184,43 @@ PC 电源常见几条主要电压轨：
 
 **记忆：**
 看到 **embedded + hardware initialization**，优先想到 **firmware**。
+---
+
+## MFD 和单台电脑直连最常用：USB
+![MFD direct wired connection question](images/2026-04-12-mfd-usb.jpg)
+
+**题干：** Which option would typically be used to set up a direct, wired connection between an MFD and a single computer host?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | PS/2 |
+| ✅ 正确答案 | USB |
+
+### 为什么答案是 USB
+- 打印机 / MFD 和单台电脑做**直接有线连接**时，最常见的就是 **USB**
+- 这是最典型的“本机直连打印机”方式
+
+### 为什么不是 PS/2
+- **PS/2** 是老式键盘和鼠标接口
+- 它不是给打印机/MFD 连接电脑用的标准接口
+
+### 为什么 RJ45 不算这题的最佳答案
+- RJ45 通常用于网络连接
+- 更适合把打印机接入局域网，让多台设备共享
+- 题目强调的是：
+  - **direct**
+  - **single computer host**
+所以更典型答案还是 USB
+
+### 为什么 PCIe 不对
+- PCIe 是主板扩展总线
+- 不是外接打印机/MFD 的接口
+
+### 最简单记忆
+- **单机直连打印机** → USB
+- **网络共享打印机** → RJ45 / Wi‑Fi
+- **PS/2** → 键盘鼠标
+
+**一句话：**
+看到 “MFD + single computer + direct wired” 就先想到 **USB**。
 
