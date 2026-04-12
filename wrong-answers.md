@@ -2429,4 +2429,53 @@ PC 电源常见几条主要电压轨：
 
 **一句话：**
 看到题目问 **default page orientation**，优先想到 **printer driver settings**，不是 print dialog。
+---
+
+## 打印机无法识别纸盒：最不可能的原因
+![Paper tray recognition question](images/2026-04-12-paper-tray-recognition.jpg)
+
+**题干：** Which of the following is the least likely cause of a printer failing to recognize a paper tray?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Printer settings that do not match the paper type or size |
+| ✅ 正确答案 | Use of lower-grade, inexpensive, or recycled paper |
+
+### 为什么答案是“低质量/再生纸”
+题目问的是：
+> **最不可能导致打印机“识别不到纸盒”的原因**
+
+低质量纸、便宜纸、再生纸，确实可能导致：
+- 卡纸
+- 进纸不顺
+- 打印质量差
+- 多页进纸
+
+但是它**通常不会导致打印机连纸盒本身都识别不到**。
+
+### 更可能导致“识别不到纸盒”的原因有哪些
+#### 1. 脏了或坏掉的纸盒传感器
+- 这是最典型原因之一
+- 传感器读不到纸盒状态，自然就像“没装纸盒”一样
+
+#### 2. 纸盒没有插好 / 没有完全就位
+- 如果纸盒没坐实，打印机也可能检测不到
+
+#### 3. 某些设置与纸盒配置不匹配
+- 尤其在高级打印机里，纸盒大小/类型检测和设置不一致，可能导致使用异常或识别逻辑错误
+- 所以它比“纸张质量差”更接近题目想考的原因
+
+### 最简单记忆
+- **识别不到纸盒** → 优先想：
+  - 传感器
+  - 纸盒没插好
+  - 配置/检测不匹配
+- **纸太差** → 更容易想到：
+  - 卡纸
+  - 打印质量差
+  - 进纸问题
+  但不是“纸盒识别不到”
+
+**一句话：**
+低质量纸会影响打印和进纸，但通常不是“打印机识别不到纸盒”的首要原因，所以它是 **least likely**。
 
