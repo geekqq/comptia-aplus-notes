@@ -2258,4 +2258,46 @@ PC 电源常见几条主要电压轨：
 
 **一句话：**
 看到 “multiple users + wired network” 就先想到 **Ethernet**。
+---
+
+## 喷墨打印机出现竖线：先清洁 printheads
+![Inkjet vertical lines question](images/2026-04-12-inkjet-vertical-lines.jpg)
+
+**题干：** Which troubleshooting step would resolve vertical lines on the output pages of an inkjet printer?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Replacing the imaging drum |
+| ✅ 正确答案 | Cleaning printheads |
+
+### 为什么答案是 Cleaning printheads
+- 题目明确说的是 **inkjet printer（喷墨打印机）**
+- 喷墨打印机如果输出出现竖线、断线、条纹，最常见原因就是：
+  - 喷头堵塞
+  - 喷嘴出墨不均匀
+- 所以最典型的处理步骤是：
+  > **Cleaning printheads**
+
+### 为什么你选的 imaging drum 不对
+- **Imaging drum（成像鼓）** 是激光打印机/硒鼓体系里的部件
+- 喷墨打印机没有这一套“鼓组件”作为核心成像结构
+- 所以这道题里看到 **inkjet**，就应该先排除 drum / toner 这种激光机思路
+
+### 为什么 toner cartridge 也不对
+- **Toner cartridge** 属于激光打印机
+- 喷墨打印机用的是 **ink cartridge / ink tank**，不是 toner
+
+### 为什么 updating printer drivers 不是首选
+- 驱动问题更容易引发：
+  - 乱码
+  - 无法打印
+  - 格式异常
+- 而“竖线/条纹”这种更像硬件/喷头问题，不是驱动优先项
+
+### 最简单记忆
+- **喷墨（inkjet）条纹/断线** → 先想 **clean printheads**
+- **激光（laser）成像问题** → 才去想 drum / toner / fuser
+
+**一句话：**
+看到 **inkjet + vertical lines**，优先想到 **喷头清洁**，不要跳去选激光打印机的 drum。
 
