@@ -1866,4 +1866,53 @@ ADF 的作用就是：
 
 **一句话：**
 看到“multi-page documents”，优先想到 **ADF**。
+---
+
+## 扫描到个人网盘：Cloud service
+![Cloud service scan question](images/2026-04-12-cloud-scan.jpg)
+
+**题干：** 用户想从多功能打印机扫描一份文件，并且稍后从个人在线存储账户远程访问它。应该配置哪个功能？
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Scan to network folder |
+| ✅ 正确答案 | Cloud service |
+
+### 为什么正确答案是 Cloud service
+题目的关键词是：
+- **personal online storage account**
+- **access it remotely**
+
+这说明目标不是把文件存在本地局域网共享里，
+而是要把文件送到类似：
+- Google Drive
+- OneDrive
+- Dropbox
+- Box
+这类**云端存储服务**里。
+
+所以应该配置的是：
+> **Cloud service**
+
+### 为什么不是 Scan to network folder
+- **Scan to network folder** 是把扫描件保存到：
+  - 局域网里的共享文件夹
+  - NAS
+  - SMB 共享目录
+- 这更适合办公室内网使用
+- 但题目强调的是：
+  - 个人在线存储账户
+  - 远程访问
+所以更符合云服务，而不是本地网络文件夹
+
+### 其他选项为什么不对
+- **Web print service**：偏向网络打印，不是扫描到个人网盘
+- **Network file share**：描述的是网络共享概念，不是最贴合题意的配置功能
+
+### 最简单记忆
+- **内网共享扫描** → Scan to network folder
+- **扫描到个人网盘 / 云端** → Cloud service
+
+**一句话：**
+看到 “personal online storage account” 就优先想到 **Cloud service**。
 
