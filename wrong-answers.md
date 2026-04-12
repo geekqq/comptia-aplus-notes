@@ -1915,4 +1915,46 @@ ADF 的作用就是：
 
 **一句话：**
 看到 “personal online storage account” 就优先想到 **Cloud service**。
+---
+
+## 通过 SMTP 发送扫描件：Email
+![Scan to email question](images/2026-04-12-scan-to-email.jpg)
+
+**题干：** Which option allows an MFD to send a scanned document via an SMTP server?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Print from cloud |
+| ✅ 正确答案 | Email |
+
+### 为什么答案是 Email
+题目里的关键词是：
+- **send a scanned document**
+- **via an SMTP server**
+
+SMTP 是什么？
+- **SMTP = Simple Mail Transfer Protocol**
+- 它是用来 **发送电子邮件** 的协议
+
+所以如果 MFD 要通过 SMTP server 把扫描件发出去，
+那对应的功能一定是：
+> **Email / Scan to Email**
+
+### 为什么不是 Print from cloud
+- **Print from cloud** 是从云端取文件来打印
+- 它不是把扫描件通过 SMTP 发出去
+- 题目在考的是“发邮件”，不是“云打印”
+
+### 为什么其他选项也不对
+- **SMB**：用于共享文件夹 / 网络共享，不是邮件发送协议
+- **Fax**：传真走电话线路/传真协议，不是 SMTP
+
+### 最简单记忆
+- **SMTP** = 发邮件 → **Email**
+- **SMB** = 共享文件夹
+- **Cloud print** = 从云端拿文件打印
+- **Fax** = 传真
+
+**一句话：**
+看到 **SMTP**，就先想到 **Email**。
 
