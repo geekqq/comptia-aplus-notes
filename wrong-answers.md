@@ -1957,4 +1957,41 @@ SMTP 是什么？
 
 **一句话：**
 看到 **SMTP**，就先想到 **Email**。
+---
+
+## Tray settings：按纸张尺寸/类型/重量配置打印
+![Tray settings question](images/2026-04-12-tray-settings.jpg)
+
+**题干：** Which printer setting allows configuration of a printout based on its paper size, type, or weight?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Paper orientation settings |
+| ✅ 正确答案 | Tray settings |
+
+### 为什么答案是 Tray settings
+打印机的 **tray settings（纸盒设置）** 通常用于定义某个纸盒里装的纸张属性，比如：
+- 纸张尺寸（A4 / Letter / Legal）
+- 纸张类型（普通纸 / 标签纸 / 卡纸 / 照片纸）
+- 纸张重量（gsm / 厚纸）
+
+打印任务就可以根据这些设置，自动选择合适的纸盒和打印参数。
+
+### 为什么不是 Paper orientation settings
+- **Paper orientation** 只决定页面方向：
+  - Portrait（纵向）
+  - Landscape（横向）
+- 它不负责定义纸张尺寸、类型、重量
+
+### 其他选项为什么不对
+- **Media type settings** 听起来有点像，但题目问的是打印机里哪一项“允许你根据纸张尺寸/类型/重量去配置输出”，标准答案更偏 **tray settings**，因为纸盒本身就是承载这些纸张属性配置的地方。
+- **Print scaling settings** 是缩放比例，不是纸张物理属性。
+
+### 最简单记忆
+- **Tray settings** = 纸盒里放的是什么纸
+- **Orientation** = 横着打还是竖着打
+- **Scaling** = 放大/缩小
+
+**一句话：**
+看到“size / type / weight of paper”，优先想到 **tray settings**。
 
