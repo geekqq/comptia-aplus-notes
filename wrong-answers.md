@@ -2071,4 +2071,47 @@ PC 电源常见几条主要电压轨：
 
 **一句话：**
 看到 5V rail 题，优先想到 **USB ports and devices**。
+---
+
+## 12V 电压轨常见供电对象
+![12V rail question](images/2026-04-12-12v-rail.jpg)
+
+**题干：** Which of the following PC components typically draw power from the 12V voltage rail provided by the power supply? (Select 3 answers)
+
+**正确答案：**
+- **Mechanical parts (e.g., case fans, motors, actuators)**
+- **Graphics cards**
+- **PCIe expansion cards**
+
+### 为什么这三个是对的
+#### 1. Mechanical parts
+- 风扇、马达、机械执行件通常很常见地使用 **12V**
+- 因为它们需要更高功率、更适合 12V 供电
+
+#### 2. Graphics cards
+- 现代显卡主要靠 **12V rail**
+- 电力来源包括：
+  - PCIe 插槽
+  - 6-pin / 8-pin PCIe 电源接口
+
+#### 3. PCIe expansion cards
+- 很多扩展卡也会通过 PCIe 插槽获得 **12V** 供电
+- 所以这是这题容易漏掉的一项
+
+### 为什么 USB ports and devices 不对
+- USB 标准供电是 **5V**
+- 所以这项属于前一题的答案，不是 12V rail 代表
+
+### 为什么 RAM / chipset 也不对
+- RAM 和主板芯片组实际工作电压通常更低
+- 往往由主板进一步降压转换后供电
+- 不作为这类题里“典型 12V rail 设备”来记
+
+### 最简单记忆
+- **12V** → 风扇 / 显卡 / 扩展卡 / 马达
+- **5V** → USB
+- **低压核心供电** → RAM / 芯片组（由主板稳压降压）
+
+**一句话：**
+看到 12V rail，优先想到 **风扇/机械件、显卡、PCIe 扩展卡**。
 
