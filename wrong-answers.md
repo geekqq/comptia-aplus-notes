@@ -2747,4 +2747,48 @@ Sandbox 也常用于：
 
 **一句话：**
 sandbox 的重点不是资源共享，而是 **把不可信代码关起来安全观察**。
+---
+
+## 虚拟机适合测试新软件的原因
+![VM testing benefits question](images/2026-04-13-vm-testing-benefits.jpg)
+
+**题干：** Which features make virtual machines well-suited for testing new software? (Select 2 answers)
+
+**正确答案：**
+- **Ability to revert to a previous state using snapshots**
+- **Support for software compatibility checks across multiple OS setups**
+
+### 为什么这两个是对的
+#### 1. 可以通过 snapshots 回滚到之前状态
+- 这是 VM 做测试最经典的优势之一
+- 装软件、改配置、做实验之后，如果出问题：
+  - 直接回滚
+  - 不用重装系统
+  - 非常适合反复测试
+
+#### 2. 可以跨多个 OS 环境做兼容性检查
+- VM 很适合快速准备不同系统环境
+- 比如测试软件在：
+  - Windows 10
+  - Windows 11
+  - Linux
+  等不同系统里的表现
+- 所以 compatibility checks across multiple OS setups 是标准答案
+
+### 为什么 real-time monitoring of system resource usage 不对
+- 实时资源监控当然有用
+- 但它不是“VM 特别适合测试新软件”的核心特征
+- 这更像一般系统监控能力，不是这题想考的 VM testing 优势
+
+### 为什么其他选项不对
+- **Scaling of computing resources for better performance**：更偏云/资源管理，不是测试新软件的核心理由
+- **Automatic reduction of software licensing costs**：明显不是 VM 的主要 testing feature
+
+### 最简单记忆
+VM 做软件测试时优先记：
+- **snapshots / rollback**
+- **multi-OS compatibility testing**
+
+**一句话：**
+虚拟机之所以适合测试新软件，核心就是：**能快照回滚**，还能**跨多个系统环境做兼容性测试**。
 
