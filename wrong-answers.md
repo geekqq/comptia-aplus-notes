@@ -2605,4 +2605,46 @@ PC 电源常见几条主要电压轨：
 
 **一句话：**
 看到“thermal printer 里负责 moving paper through the printer”，优先想到 **feed assembly**。
+---
+
+## 打印机 ribbon 需要更换的迹象
+![Printer ribbon replacement signs question](images/2026-04-13-printer-ribbon-replacement-signs.jpg)
+
+**题干：** Which of the signs listed below may indicate that a printer ribbon needs replacement? (Select 2 answers)
+
+**正确答案：**
+- **Faded or light print output**
+- **Characters appearing incomplete**
+
+### 为什么这两个是对的
+#### 1. Faded or light print output
+- ribbon（色带）墨量不足或磨损时
+- 最典型表现就是打印出来颜色变淡、发虚、变浅
+
+#### 2. Characters appearing incomplete
+- 色带局部磨损、供墨不均匀时
+- 某些字会打不完整、缺笔画、断断续续
+- 这也是非常典型的色带老化表现
+
+### 为什么 repetitive smudging of characters 不是最佳答案
+- **smudging（字符反复污迹/拖脏）** 更像是：
+  - 打印头脏污
+  - 机械接触问题
+  - 压力/对位异常
+  - 介质问题
+- 它不是“色带该换了”的最典型、最标准信号
+
+### 其他选项为什么不对
+- **Frequent paper jams**：更偏进纸路径、滚轮、纸张问题
+- **Paper feeding too slowly**：更偏送纸机构问题，不是 ribbon 首选症状
+
+### 最简单记忆
+- **ribbon 快没了 / 老化** →
+  - 打印变淡
+  - 字不完整
+- **jam / feed slow** → 机械送纸问题
+- **smudge** → 更像脏污/接触问题，不是 ribbon 首选答案
+
+**一句话：**
+看到 printer ribbon replacement，优先想到 **print faded** 和 **characters incomplete**。
 
