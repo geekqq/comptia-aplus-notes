@@ -3045,4 +3045,48 @@ community cloud 不是“多云互联”，而是**一群有共同规则和共�
 
 **一句话：**
 看到 **cross-platform virtualization**，优先想到“让软件跨操作系统运行”，不要先想到“同时跑多个 OS”。
+---
+
+## 被攻破 VM 的影响控制：靠隔离（Isolation）
+![VM isolation security question](images/2026-04-13-vm-isolation-security.jpg)
+
+**题干：** Which of the following security best practices helps prevent a compromised virtual machine from affecting other virtual machines or the host system?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Conducting regular vulnerability scans of the virtual machines |
+| ✅ 正确答案 | Ensuring proper isolation between virtual machines |
+
+### 为什么答案是 Ensuring proper isolation between virtual machines
+题目关键词是：
+- **a compromised virtual machine**
+- **affecting other virtual machines or the host system**
+
+这题不是在问“怎么发现漏洞”，而是在问：
+> **如果一台 VM 已经被攻破，怎样尽量阻止它继续影响别的 VM 和宿主机？**
+
+最核心的做法就是：
+> **做好虚拟机之间的隔离（isolation）**
+
+### 为什么 regular vulnerability scans 不对
+- 漏洞扫描当然是好习惯
+- 它的作用是：
+  - 提前发现漏洞
+  - 帮助修补风险
+- 但它不是“限制已被攻破 VM 扩散影响”的最直接答案
+
+### 其他选项为什么不是最佳答案
+- **MFA for hypervisor access**：保护管理员访问很重要，但不是这题的核心隔离控制点
+- **IDS on the network**：偏检测和告警，不是最直接的“阻断横向影响”措施
+
+### 最简单记忆
+看到：
+- **compromised VM**
+- **prevent affecting other VMs / host**
+
+就优先想到：
+### **Isolation**
+
+**一句话：**
+一台 VM 已经出事后，最重要的是把它和其他 VM/宿主机隔离开，降低横向影响。
 
