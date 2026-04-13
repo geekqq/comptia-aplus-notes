@@ -2842,4 +2842,58 @@ VM 做软件测试时优先记：
 **一句话：**
 看到 **application virtualization**，不要先想“虚拟硬件/跑不同系统”，而要先想：
 **让应用脱离宿主系统直接安装依赖，也能被隔离运行。**
+---
+
+## Community cloud 的典型例子
+![Community cloud examples question](images/2026-04-13-community-cloud-examples.jpg)
+
+**题干：** Which of the following answers refer to example implementations of the community cloud deployment model? (Select 3 answers)
+
+**正确答案：**
+- **A cloud environment developed for universities conducting joint research projects**
+- **A shared cloud used by several government agencies**
+- **A cloud-based solution for public safety organizations with similar data handling policies**
+
+### 为什么这三个是对的
+**Community cloud** 的核心不是“很多人都能用”，而是：
+> **一群有共同需求、共同政策、共同安全/合规要求的组织，共享一套云环境**
+
+#### 1. Universities conducting joint research projects
+- 多所大学一起做研究
+- 有共同目标和合作需求
+- 很符合 community cloud 的概念
+
+#### 2. Shared cloud used by several government agencies
+- 多个政府机构共享云资源
+- 往往有类似的政策、合规、安全需求
+- 也是典型 community cloud
+
+#### 3. Public safety organizations with similar data handling policies
+- 公共安全组织之间如果有相似的数据处理规则
+- 共享一套云平台就很符合 community cloud
+- 这也是你这题漏掉的正确答案
+
+### 为什么 federated cloud infrastructure 不对
+- **Federated cloud** 更强调多个独立 provider / system 之间的联合或互联
+- 它不一定基于“共同组织群体、共同政策、共同使命”
+- 所以不属于这题在考的 community cloud 典型例子
+
+### 为什么 multinational private clouds 不对
+- 这是跨地区的多个 private cloud 设计
+- 核心更像企业内部多区域私有云架构
+- 不是多个相似组织共享同一社区云
+
+### 最简单记忆
+**Community cloud** 看到就先想：
+- **同一类组织**
+- **共同政策/共同需求**
+- **共享一套云环境**
+
+例如：
+- 大学联盟
+- 政府机构
+- 公共安全组织
+
+**一句话：**
+community cloud 不是“多云互联”，而是**一群有共同规则和共同目标的组织共用同一个云**。
 
