@@ -3010,4 +3010,39 @@ community cloud 不是“多云互联”，而是**一群有共同规则和共�
 
 **一句话：**
 看到“deliver virtual desktops to multiple users”，优先想到 **VDI**，不要选 VNC 或 RDP 这种远程访问协议。
+---
+
+## Cross-platform virtualization 的主要优势
+![Cross-platform virtualization question](images/2026-04-13-cross-platform-virtualization.jpg)
+
+**题干：** What is the primary advantage of using cross-platform virtualization?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Running multiple operating systems simultaneously |
+| ✅ 正确答案 | Enabling software to run on an unsupported operating system |
+
+### 为什么答案是这个
+**Cross-platform virtualization** 的重点在于：
+- 解决平台不兼容问题
+- 让某些原本不能直接在当前 OS 上运行的软件，有机会在隔离/兼容环境中运行
+
+所以它最核心的优势是：
+> **让软件能够在原本不支持的操作系统上运行**
+
+### 为什么你选的“同时运行多个操作系统”不对
+- **Running multiple operating systems simultaneously** 更像是一般 virtualization / hypervisor 的常见能力
+- 但题目问的是 **cross-platform virtualization** 的主要优势
+- 这里考点不在“多系统同时运行”，而在“跨平台兼容”
+
+### 其他选项为什么不对
+- **Allowing virtual machines to run without a host OS**：这更偏 bare-metal / type 1 hypervisor 角度，不是这题重点
+- **Providing direct hardware access for legacy applications**：不是 cross-platform virtualization 的核心定义
+
+### 最简单记忆
+- **cross-platform virtualization** → 跨平台兼容
+- **general virtualization** → 多系统同时运行 / 资源隔离 / 快照等
+
+**一句话：**
+看到 **cross-platform virtualization**，优先想到“让软件跨操作系统运行”，不要先想到“同时跑多个 OS”。
 
