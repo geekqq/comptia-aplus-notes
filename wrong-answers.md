@@ -2791,4 +2791,55 @@ VM 做软件测试时优先记：
 
 **一句话：**
 虚拟机之所以适合测试新软件，核心就是：**能快照回滚**，还能**跨多个系统环境做兼容性测试**。
+---
+
+## Application virtualization 的主要目的
+![Application virtualization purpose question](images/2026-04-13-application-virtualization-purpose.jpg)
+
+**题干：** What is the primary purpose of application virtualization?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | To emulate computer hardware for running different operating systems |
+| ✅ 正确答案 | To run software without installing it directly on the host operating system |
+
+### 为什么答案是这个
+**Application virtualization** 的重点不是虚拟整台电脑，也不是模拟硬件，
+而是：
+> **把某个应用隔离出来运行**
+> **不需要像传统方式那样直接安装进宿主系统**
+
+也就是说，它主要解决的是：
+- 软件部署更方便
+- 降低和宿主系统的冲突
+- 更容易隔离运行环境
+- 更容易集中管理应用
+
+### 为什么你选的那个不对
+你选的是：
+> **To emulate computer hardware for running different operating systems**
+
+这个描述更像是：
+- **hardware virtualization**
+- **virtual machines (VMs)**
+
+也就是虚拟出一整套计算机环境，用来跑不同操作系统。
+这不是 **application virtualization**，而是更接近 **system / hardware virtualization**。
+
+### 最简单区分
+#### Application virtualization
+- 虚拟的是“应用”
+- 目标：**不直接装进宿主系统也能运行**
+
+#### VM / hardware virtualization
+- 虚拟的是“整台机器 / 硬件环境”
+- 目标：**运行另一个操作系统**
+
+### 最简单记忆
+- **App virtualization** → 不直接装系统里，也能跑应用
+- **VM / hardware virtualization** → 虚拟电脑，跑别的 OS
+
+**一句话：**
+看到 **application virtualization**，不要先想“虚拟硬件/跑不同系统”，而要先想：
+**让应用脱离宿主系统直接安装依赖，也能被隔离运行。**
 
