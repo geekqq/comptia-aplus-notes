@@ -2896,4 +2896,63 @@ VM 做软件测试时优先记：
 
 **一句话：**
 community cloud 不是“多云互联”，而是**一群有共同规则和共同目标的组织共用同一个云**。
+---
+
+## 第三方拥有并多租户共享：Public cloud
+![Public cloud definition question](images/2026-04-13-public-cloud-definition.jpg)
+
+**题干：** Which of the following answers refers to a cloud deployment model where computing resources are owned and operated by a third-party cloud service provider and shared across multiple organizations or tenants?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Community cloud |
+| ✅ 正确答案 | Public cloud |
+
+### 为什么答案是 Public cloud
+题目里的关键词非常明显：
+- **owned and operated by a third-party cloud service provider**
+- **shared across multiple organizations or tenants**
+
+这正是：
+> **Public cloud（公有云）**
+
+也就是像：
+- AWS
+- Microsoft Azure
+- Google Cloud
+
+这种由第三方云服务商拥有和运营，多个客户共享底层云资源的模式。
+
+### 为什么不是 Community cloud
+**Community cloud** 的重点是：
+- 一群有共同需求/共同政策/共同合规要求的组织
+- 共用一套云环境
+
+它不强调“面向广泛租户，由第三方提供给很多不同组织共享”这种公有云特征。
+
+### 顺手对比一下
+#### Public cloud
+- 第三方 provider 拥有和运营
+- 多租户共享
+- 面向广泛客户
+
+#### Community cloud
+- 面向某个特定群体/社区
+- 组织之间有共同规则或共同使命
+- 不是“泛化给所有租户”的公有模式
+
+#### Private cloud
+- 给单一组织专用
+- 不共享给多个租户
+
+#### Hybrid cloud
+- 是多种云模型混合使用
+- 不是单独一种“第三方多租户共享”的定义
+
+### 最简单记忆
+- **third-party + shared by many tenants** → **Public cloud**
+- **shared by similar organizations with common policies** → **Community cloud**
+
+**一句话：**
+看到“第三方拥有运营 + 多租户共享”，直接选 **public cloud**。
 
