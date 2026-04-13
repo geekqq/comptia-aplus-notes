@@ -2515,4 +2515,52 @@ PC 电源常见几条主要电压轨：
 
 **一句话：**
 看到“激光打印机里一整套定期更换的易损件包”，就想到 **maintenance kit**。
+---
+
+## 清洁激光打印机内部的合适工具
+![Laser printer cleaning tools question](images/2026-04-13-laser-printer-cleaning-tools.jpg)
+
+**题干：** Which of the following tools would be the most appropriate for cleaning the inside of a laser printer? (Select 3 answers)
+
+**正确答案：**
+- **Toner vacuum**
+- **Toner cleaning wipes**
+- **Isopropyl alcohol**
+
+### 为什么这三个是对的
+#### 1. Toner vacuum
+- 专门用于清理碳粉
+- 普通吸尘器不适合处理 toner 细粉，可能造成污染甚至损坏设备
+
+#### 2. Toner cleaning wipes
+- 适合清洁打印机内部表面上的碳粉残留
+- 比纸巾更专业，也不容易掉屑
+
+#### 3. Isopropyl alcohol
+- 常用于清洁电子设备和某些打印机内部部件
+- 挥发快、残留少，是考试里常见标准答案
+
+### 为什么你选的 Paper towels 不对
+- 纸巾容易掉纸屑
+- 不适合精密设备内部清洁
+- 也可能把碳粉擦得到处都是
+
+### 为什么普通家用吸尘器不对
+- **Regular vacuum** 不适合处理 toner
+- 碳粉颗粒非常细，可能穿过滤网或造成静电问题
+- 所以考试里通常强调要用 **toner vacuum**
+
+### 为什么 compressed air 通常不是最佳答案
+- 压缩空气可能把碳粉吹得更散
+- 会把粉尘扩散到机器内部或空气中
+- 所以它通常不是题目里的“most appropriate”首选
+
+### 最简单记忆
+清洁 **laser printer 内部** 时优先记：
+- **toner vacuum**
+- **toner cleaning wipes**
+- **isopropyl alcohol**
+
+**一句话：**
+清激光打印机内部，优先用专业 toner 工具和异丙醇，不要用纸巾或普通吸尘器。
 
