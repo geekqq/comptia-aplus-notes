@@ -3147,4 +3147,65 @@ community cloud 不是“多云互联”，而是**一群有共同规则和共�
 
 **一句话：**
 看到 **shared networking**，就优先想到 **NAT 模式**，不要和 **bridged networking** 混起来。
+---
+
+## 虚拟化存储性能最关键：High IOPS + Low latency
+![Storage performance IOPS latency question](images/2026-04-13-storage-performance-iops-latency.jpg)
+
+**题干：** Which storage characteristics are considered critical for optimal performance in a virtualized environment? (Select 2 answers)
+
+**正确答案：**
+- **High IOPS**
+- **Low latency**
+
+### 为什么这两个是对的
+#### 1. High IOPS
+IOPS = **Input/Output Operations Per Second**
+也就是：
+- 存储每秒能处理多少次读写请求
+
+虚拟化环境里通常会有：
+- 多台 VM 同时访问存储
+- 大量随机读写
+- 数据库 / 系统盘 / 日志混合访问
+
+所以 **IOPS 高不高**，对 VM 体验非常关键。
+
+#### 2. Low latency
+Latency = **延迟**
+也就是：
+- 一次存储请求发出后，要多久才拿到结果
+
+如果 latency 高：
+- VM 会卡
+- 应用会慢
+- 桌面虚拟化体验会差
+- 数据库响应也会变慢
+
+所以 **低延迟** 是另一个核心指标。
+
+### 为什么 file system type 不对
+- 文件系统类型可能会影响表现
+- 但它不是这题想考的“最关键、最通用的存储性能指标”
+- 考试更常考的是：
+  - **IOPS**
+  - **latency**
+
+### 为什么 hypervisor type 不对
+- hypervisor 类型影响的是虚拟化平台架构
+- 但题目问的是：
+  > **storage characteristics**
+- 所以更直接的答案必须是存储本身的性能指标，而不是 hypervisor 分类
+
+### 最简单记忆
+看到：
+- **storage performance**
+- **virtualized environment**
+
+就优先想到：
+- **IOPS**
+- **Latency**
+
+**一句话：**
+虚拟化环境里存储好不好，最关键先看 **高 IOPS** 和 **低延迟**。
 
