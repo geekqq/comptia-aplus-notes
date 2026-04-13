@@ -3089,4 +3089,62 @@ community cloud 不是“多云互联”，而是**一群有共同规则和共�
 
 **一句话：**
 一台 VM 已经出事后，最重要的是把它和其他 VM/宿主机隔离开，降低横向影响。
+---
+
+## Shared networking = NAT（不是 bridged）
+![Shared networking NAT question](images/2026-04-13-shared-networking-nat.jpg)
+
+**题干：** Which of the following are true regarding a shared networking configuration for a virtual machine? (Select 3 answers)
+
+**正确答案：**
+- **The VM receives its TCP/IP configuration settings from a virtual DHCP server managed by the hypervisor**
+- **The VM uses the IP address of the host machine for outbound communication via NAT**
+- **The VM's private address is not advertised on the LAN, preventing direct inbound connections**
+
+### 这题本质在考什么
+这题本质上就是在考：
+> **shared networking（共享网络） = NAT 模式**
+和
+> **bridged networking（桥接模式）**
+的区别。
+
+### 为什么这三个是对的
+#### 1. 虚拟 DHCP server 管理 TCP/IP 配置
+- shared / NAT 模式下，VM 往往不是直接从物理网络 DHCP 拿地址
+- 而是从 hypervisor 提供的虚拟 DHCP 获得私有 IP
+
+#### 2. 出站通信通过宿主机 NAT
+- VM 对外上网时，通常借用宿主机做 NAT
+- 所以题目里说：
+  > **uses the IP address of the host machine for outbound communication via NAT**
+  这是非常典型的 shared networking 描述
+
+#### 3. VM 私有地址不会直接公布在局域网里
+- NAT 模式下，VM 通常藏在宿主机后面
+- 局域网其他设备一般不能直接主动连进 VM
+- 所以 direct inbound connections 默认受限
+
+### 为什么 bridged 相关描述不对
+如果是 **bridged networking**，通常会是：
+- VM 直接接到物理网络
+- VM 像一台独立电脑
+- VM 从物理网络 DHCP 拿地址
+- 局域网设备可以直接看到并访问它
+
+而这题正确答案明显不是这种行为，所以它考的是 **NAT/shared**。
+
+### 最简单记忆
+#### Shared / NAT
+- 虚拟 DHCP
+- 私有地址
+- 通过 host NAT 出网
+- 外部默认难以直接连入
+
+#### Bridged
+- 直接接物理网络
+- 独立 IP
+- 像真实机器一样出现在 LAN 上
+
+**一句话：**
+看到 **shared networking**，就优先想到 **NAT 模式**，不要和 **bridged networking** 混起来。
 
