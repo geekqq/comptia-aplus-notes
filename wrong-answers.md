@@ -2478,4 +2478,41 @@ PC 电源常见几条主要电压轨：
 
 **一句话：**
 低质量纸会影响打印和进纸，但通常不是“打印机识别不到纸盒”的首要原因，所以它是 **least likely**。
+---
+
+## 激光打印机定期更换部件套装：Maintenance kit
+![Maintenance kit question](images/2026-04-13-maintenance-kit.jpg)
+
+**题干：** A prepackaged set of laser printer spare parts, typically including components with a limited lifespan that must be replaced to maintain consistent performance and prevent failures, is commonly referred to as:
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Service component pack |
+| ✅ 正确答案 | Maintenance kit |
+
+### 为什么答案是 Maintenance kit
+在激光打印机里，**maintenance kit（维护套件）** 是标准术语。
+它通常是一整套预包装的易损部件，用来在达到一定打印页数后统一更换，保证机器继续稳定工作。
+
+### Maintenance kit 里常见会包含什么
+常见可能包括：
+- **fuser（定影组件）**
+- **transfer roller（转印辊）**
+- **pickup rollers（进纸滚轮）**
+- 其他寿命型耗损部件
+
+这些零件不是每次都坏，但随着打印量增加，会逐渐磨损。
+
+### 为什么不是 Service component pack
+- 这个说法听起来像“你猜也说得通”
+- 但它不是考试里、也不是打印机维护里最标准的术语
+- 题目问的是“commonly referred to as”，也就是行业常用名称
+- 标准答案就是 **Maintenance kit**
+
+### 最简单记忆
+- **laser printer + prepackaged spare parts + limited lifespan**
+  → **maintenance kit**
+
+**一句话：**
+看到“激光打印机里一整套定期更换的易损件包”，就想到 **maintenance kit**。
 
