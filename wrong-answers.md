@@ -2955,4 +2955,59 @@ community cloud 不是“多云互联”，而是**一群有共同规则和共�
 
 **一句话：**
 看到“第三方拥有运营 + 多租户共享”，直接选 **public cloud**。
+---
+
+## 多用户虚拟桌面平台：VDI（不是 VNC）
+![VDI vs VNC question](images/2026-04-13-vdi-vs-vnc.jpg)
+
+**题干：** Which of the answers listed below refers to a virtualization platform used to deliver virtual desktops to multiple users?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | VNC |
+| ✅ 正确答案 | VDI |
+
+### 为什么答案是 VDI
+**VDI = Virtual Desktop Infrastructure**
+它本身就是：
+> **用于向多个用户交付虚拟桌面的平台/架构**
+
+也就是说，题目里说的：
+- virtualization platform
+- deliver virtual desktops
+- to multiple users
+
+这几个关键词合在一起，标准答案就是：
+> **VDI**
+
+### 为什么 VNC 不对
+**VNC = Virtual Network Computing**
+它是：
+- 远程桌面访问协议 / 远程控制方式
+- 用来连接和查看某台远程桌面
+
+但它**不是**用来“向多个用户提供虚拟桌面平台”的整体架构。
+
+### 顺手区分一下
+#### VDI
+- 是虚拟桌面基础设施
+- 提供、管理、交付虚拟桌面
+- 面向多个用户
+
+#### VNC
+- 是远程访问/远程控制技术
+- 用来连接到已有桌面
+- 不是桌面交付平台
+
+#### RDP
+- 也是远程桌面协议
+- 和 VNC 一样，更偏“连接方式”
+- 不是题目要的 virtualization platform
+
+### 最简单记忆
+- **VDI** → 提供虚拟桌面平台
+- **VNC / RDP** → 远程连接到桌面
+
+**一句话：**
+看到“deliver virtual desktops to multiple users”，优先想到 **VDI**，不要选 VNC 或 RDP 这种远程访问协议。
 
