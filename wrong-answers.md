@@ -2700,4 +2700,51 @@ Impact printer 的 **printhead** 出问题时，优先想：
 
 **一句话：**
 看到 impact printer printhead failure，先想到 **缺点缺线、深浅不均**。
+---
+
+## Sandboxed environment 的主要好处
+![Sandbox benefits question](images/2026-04-13-sandbox-benefits.jpg)
+
+**题干：** What are the primary benefits of using a sandboxed environment in virtualization? (Select 2 answers)
+
+**正确答案：**
+- **Isolating untrusted software or code to prevent damage to the host system**
+- **Analyzing malware in a controlled environment**
+
+### 为什么这两个是对的
+#### 1. 隔离不可信软件/代码
+Sandbox 的核心价值就是：
+- 把不可信程序放进隔离环境里运行
+- 避免它直接影响宿主机
+- 降低系统被破坏、被感染、被改动的风险
+
+#### 2. 在受控环境中分析恶意软件
+Sandbox 也常用于：
+- 动态观察恶意软件行为
+- 安全测试
+- 分析文件/程序是否有危险
+
+因为它提供了一个：
+> **controlled environment（受控环境）**
+
+### 为什么 sharing resources between multiple virtual machines 不对
+- 这是虚拟化平台可能具备的资源管理能力
+- 但不是“sandboxed environment 的主要 benefit”
+- sandbox 的重点是：
+  - **隔离**
+  - **安全测试**
+  - **受控运行**
+不是共享资源
+
+### 其他选项为什么不对
+- **Enabling cross-platform application development**：这更像开发/兼容性用途，不是 sandbox 核心 benefit
+- **Running multiple operating systems on a single physical machine**：这是 virtualization 的一般能力，不是 sandbox 特有好处
+
+### 最简单记忆
+**Sandbox** 看到就优先想到：
+- **Isolation（隔离）**
+- **Safe testing / malware analysis（安全测试 / 恶意软件分析）**
+
+**一句话：**
+sandbox 的重点不是资源共享，而是 **把不可信代码关起来安全观察**。
 
