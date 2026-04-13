@@ -2563,4 +2563,46 @@ PC 电源常见几条主要电压轨：
 
 **一句话：**
 清激光打印机内部，优先用专业 toner 工具和异丙醇，不要用纸巾或普通吸尘器。
+---
+
+## 热敏打印机推动纸张前进的部件：Feed assembly
+![Thermal printer feed assembly question](images/2026-04-13-thermal-printer-feed-assembly.jpg)
+
+**题干：** Which of the answers listed below refers to a thermal printer's component responsible for moving paper through the printer during the printing process?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Platen roller |
+| ✅ 正确答案 | Feed assembly |
+
+### 为什么答案是 Feed assembly
+题目问的是：
+> **负责在打印过程中让纸张通过打印机前进的组件**
+
+这个更偏向整套**送纸机构 / 进纸组件**，标准答案是：
+> **Feed assembly**
+
+也就是负责把纸张持续往前输送的那套机构。
+
+### 为什么 platen roller 容易选错
+**Platen roller（压纸滚筒）** 在热敏打印机里当然也很重要，
+它会：
+- 压住纸张
+- 配合打印头工作
+- 帮助纸张稳定通过打印区域
+
+但题目考的是更广义、直接负责“moving paper through the printer”的组件名称，
+所以标准答案给的是：
+> **Feed assembly**
+
+### 其他选项为什么不对
+- **Transfer belt**：更像激光打印机相关部件，不是热敏打印机这题的正确思路
+- **Paper guide**：负责引导纸路，不是主要的送纸驱动组件
+
+### 最简单记忆
+- **Feed assembly** = 负责送纸前进的整套机构
+- **Platen roller** = 其中相关的重要滚轮部件，但不是这题要的最佳答案
+
+**一句话：**
+看到“thermal printer 里负责 moving paper through the printer”，优先想到 **feed assembly**。
 
