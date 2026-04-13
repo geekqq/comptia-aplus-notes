@@ -2647,4 +2647,57 @@ PC 电源常见几条主要电压轨：
 
 **一句话：**
 看到 printer ribbon replacement，优先想到 **print faded** 和 **characters incomplete**。
+---
+
+## Impact printer printhead 故障的典型症状
+![Impact printer printhead failure question](images/2026-04-13-impact-printer-printhead-failure.jpg)
+
+**题干：** Which of the following symptoms may indicate a failing impact printer printhead? (Select 3 answers)
+
+**正确答案：**
+- **Vertical lines or dots are missing in printouts**
+- **Printed characters or images appear faint or with inconsistent darkness**
+- **Horizontal lines or dots are missing in printouts**
+
+### 为什么这三个是对的
+Impact printer（击打式打印机）的 printhead 如果有针损坏、磨损或击打不均，最常见就是：
+
+#### 1. Vertical lines or dots missing
+- 某些针不工作时，会造成特定位置的点打不出来
+- 结果就是印出来会有缺失的竖向点列/线条
+
+#### 2. Faint or inconsistent darkness
+- 打印头击打力度不一致，或部分针工作异常
+- 会导致字符深浅不均、发淡、不稳定
+
+#### 3. Horizontal lines or dots missing
+- 点阵式输出本来就是一行一行的点构成
+- printhead 异常时，也可能出现横向缺点、缺线
+
+### 为什么 misaligned output due to incorrect paper feed 不对
+- 这更偏向：
+  - 送纸问题
+  - 纸张走位问题
+  - 机械对位问题
+- 它不是 printhead 故障最直接的典型症状
+
+### 为什么 excessive noise 不是最佳答案
+- 噪音大更可能和：
+  - 机械磨损
+  - 齿轮/马达/进纸机构
+  - 设备本身结构特性
+  有关
+- 不属于 printhead failing 的标准核心症状
+
+### 最简单记忆
+Impact printer 的 **printhead** 出问题时，优先想：
+- **missing dots/lines**
+- **print faint / darkness inconsistent**
+
+不要优先想：
+- paper feed misalignment
+- excessive noise
+
+**一句话：**
+看到 impact printer printhead failure，先想到 **缺点缺线、深浅不均**。
 
