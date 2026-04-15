@@ -3647,4 +3647,47 @@ RAID 0 只提供性能，不提供冗余；一块盘坏掉后，不能像其他�
 
 **一句话：**
 电脑内部“啪”一声后马上关机，考试里最典型的答案就是 **blown capacitor**。
+---
+
+## 过热最直接的典型结果：Random system shutdowns
+![Overheating random shutdowns question](images/2026-04-14-overheating-random-shutdowns.jpg)
+
+**题干：** Which of the symptoms listed below is most likely a direct result of overheating?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Reduced cooling efficiency |
+| ✅ 正确答案 | Random system shutdowns |
+
+### 为什么答案是 Random system shutdowns
+过热最典型、最直接的系统级表现之一就是：
+- **突然关机**
+- **随机重启/掉电**
+- 保护性断电
+
+因为系统为了防止 CPU / GPU / 主板继续受损，
+温度过高时可能会触发：
+### **thermal protection**
+于是就出现：
+### **random system shutdowns**
+
+### 为什么你选的 Reduced cooling efficiency 不对
+这个很容易混，因为：
+- **reduced cooling efficiency** 更像是“导致过热的原因”
+- 不是“过热造成的直接症状”
+
+也就是说：
+- 散热效率下降 → 会导致过热
+- 过热之后 → 更直接看到的是随机关机、卡顿、降频、崩溃
+
+### 其他选项为什么不如 shutdown 典型
+- **Application crashes**：也可能出现，但不如随机关机更直接、更典型
+- **Blank screen during boot**：更偏硬件/显示/启动问题，不是过热的首选标准答案
+
+### 最简单记忆
+- **Cooling efficiency reduced** = 过热的原因
+- **Random shutdowns** = 过热的直接后果
+
+**一句话：**
+这题关键是分清“原因”和“结果”：散热差会导致过热，但过热最直接的典型结果是 **random system shutdowns**。
 
