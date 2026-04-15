@@ -3475,4 +3475,68 @@ Cloud 里的 **shared resources（共享资源）** 意味着：
 **一句话：**
 这题和前一题可以成对记：
 ### **shared 看性能下降，dedicated 看性能稳定 + 隔离更强 + 成本更高。**
+---
+
+## 换盘也救不回来的 RAID：RAID 0
+![RAID 0 no rebuild question](images/2026-04-14-raid0-no-rebuild.jpg)
+
+**题干：** In all the RAID levels listed below, restoring a RAID array after physical failure of one of the drives may involve a relatively straightforward step, namely, replacing the failed drive, except for:
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | RAID 10 |
+| ✅ 正确答案 | RAID 0 |
+
+### 这题在考什么
+题目其实是在问：
+> **哪一种 RAID 在坏掉一块盘之后，不能靠“换一块新盘”来恢复阵列？**
+
+答案就是：
+### **RAID 0**
+
+### 为什么 RAID 0 是对的
+因为 RAID 0：
+- 只有 **striping（条带化）**
+- **没有镜像**
+- **没有 parity**
+- **没有冗余**
+
+所以一旦一块盘坏了：
+## 整个阵列数据通常就直接没了
+
+这时你不是简单“换盘”就能 rebuild 回来，
+因为它根本没有冗余信息可用。
+
+### 为什么 RAID 10 不对
+你这题容易错在：
+- 感觉 RAID 10 更复杂
+- 直觉以为复杂结构更难恢复
+
+但 RAID 10 本质上有：
+- **镜像（RAID 1）**
+- 再加条带（RAID 0）
+
+所以它是有冗余的，
+坏一块盘后通常可以：
+- 换盘
+- 让阵列重建
+
+### 顺手对比
+- **RAID 0** → 只要性能，不要保护
+- **RAID 1** → 镜像，可换盘恢复
+- **RAID 5** → 有 parity，可换盘恢复
+- **RAID 6** → 双 parity，可换盘恢复
+- **RAID 10** → 有镜像，可换盘恢复
+
+### 最简单记忆
+## RAID 0 = 0 容错
+看到：
+- **坏盘**
+- **能不能换盘重建**
+
+第一反应就记：
+### **RAID 0 不行**
+
+**一句话：**
+RAID 0 只提供性能，不提供冗余；一块盘坏掉后，不能像其他冗余 RAID 那样通过换盘重建恢复。
 
