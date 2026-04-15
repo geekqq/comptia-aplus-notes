@@ -3313,4 +3313,57 @@ Latency = **延迟**
 **一句话：**
 看到 **egress**，第一反应就记：
 ### **出去 = data leaving cloud**
+---
+
+## Metered billing 常见核心项：Ingress + Egress data volume
+![Metered billing ingress egress question](images/2026-04-14-metered-billing-ingress-egress.jpg)
+
+**题干：** Which of the following are the core components of metered billing in cloud services? (Select 2 answers)
+
+**正确答案：**
+- **Volume of ingress data**
+- **Volume of egress data**
+
+### 这题你错在哪里
+你这题不是概念完全不会，而是：
+- 你已经选对了 **ingress data volume**
+- 但你没意识到 cloud metered billing 常常也会把：
+  > **egress 流量**
+  作为核心计费项之一
+
+### 为什么 ingress 和 egress 都重要
+在云服务里，metered billing（按量计费）常常会根据：
+- 进来的流量（ingress）
+- 出去的流量（egress）
+来计算费用
+
+尤其是：
+- 数据传输
+- 带宽
+- 跨区域/跨公网流量
+
+### 为什么 API calls 这题不是答案
+- 有些具体云服务确实会按 API calls 计费
+- 但这题问的是：
+  > **core components of metered billing in cloud services**
+- 这里更基础、更通用的答案是：
+  - **ingress data volume**
+  - **egress data volume**
+
+### 顺手再记一次
+- **Ingress** = 进来
+- **Egress** = 出去
+
+所以如果题目说 cloud 计费、流量、按量收费，
+就要马上想到：
+- 进站流量
+- 出站流量
+
+### 最简单记忆
+**metered billing + cloud traffic** →
+- **Ingress volume**
+- **Egress volume**
+
+**一句话：**
+云服务按量计费里，进入和离开云的数据流量都可能是核心计费指标，不要只想到 ingress。
 
