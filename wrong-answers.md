@@ -3208,4 +3208,66 @@ Latency = **延迟**
 
 **一句话：**
 虚拟化环境里存储好不好，最关键先看 **高 IOPS** 和 **低延迟**。
+---
+
+## 主板性能变差但不一定报错：Swollen/leaking capacitors
+![Swollen capacitors question](images/2026-04-14-swollen-capacitors-performance.jpg)
+
+**题干：** Which motherboard-related issue can result in degraded performance without triggering errors or shutdowns?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Corrupted BIOS/UEFI firmware |
+| ✅ 正确答案 | Swollen/leaking capacitors |
+
+### 为什么答案是 swollen/leaking capacitors
+主板上的电容负责：
+- 滤波
+- 稳压
+- 平滑供电
+
+如果电容出现：
+- **鼓包（swollen）**
+- **漏液（leaking）**
+
+系统不一定会立刻：
+- 蓝屏
+- 报错
+- 直接关机
+
+但很可能出现：
+- 性能变差
+- 不稳定
+- 反应变慢
+- 偶发异常
+
+也就是题目说的：
+> **degraded performance without triggering errors or shutdowns**
+
+### 为什么 corrupted BIOS/UEFI firmware 不对
+如果 BIOS/UEFI 真出问题，通常更容易出现：
+- 无法开机
+- POST 问题
+- 硬件识别异常
+- 明显故障症状
+
+它不是这题要考的那种：
+- 不一定报错
+- 但性能慢慢变差
+
+### 为什么另外两个更不对
+- **Improperly seated CPU**：通常会导致更明显的启动/稳定性问题，不太像“只是性能下降”
+- **Disconnected ATX power cable**：机器大概率根本就开不了机，不会只是轻微性能下降
+
+### 最简单记忆
+看到：
+- **motherboard-related**
+- **degraded performance**
+- **without errors/shutdowns**
+
+优先想到：
+### **坏电容 / 鼓包电容**
+
+**一句话：**
+主板电容鼓包或漏液时，系统可能不会立刻报错关机，但会先表现成供电不稳、性能下降。
 
