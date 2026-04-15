@@ -3603,4 +3603,48 @@ RAID 0 只提供性能，不提供冗余；一块盘坏掉后，不能像其他�
 
 **一句话：**
 如果题目是在问“先怎么判断盘是不是快坏了”，标准答案通常是先看硬盘自监控诊断数据，而不是先做 backup。
+---
+
+## 电脑啪一声后关机：优先想到 blown capacitor
+![Popping sound blown capacitor question](images/2026-04-14-popping-sound-blown-capacitor.jpg)
+
+**题干：** A user reports a popping sound from their computer, followed by it shutting down. What is the most probable cause?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Power surge from the wall outlet |
+| ✅ 正确答案 | Blown capacitor |
+
+### 为什么答案是 blown capacitor
+题目关键词非常典型：
+- **popping sound**
+- **followed by it shutting down**
+
+这很像电子元件（尤其电容）损坏时的表现。
+### **Blown capacitor（爆掉的电容）**
+可能会：
+- 发出“啪”一声
+- 冒味道或轻微爆裂声
+- 之后导致系统立即断电或关机
+
+### 为什么不是 power surge from the wall outlet
+- 墙上电源浪涌当然也可能损坏设备
+- 但题目问的是：
+  > **most probable cause**
+- 这里给出的“啪一声 + 立刻关机”更像是机器内部元件本身炸掉，尤其是电容
+
+### 为什么另外两个更不对
+- **Failing hard drive**：硬盘坏通常不会表现成“啪一声然后整机断电”
+- **Static electricity discharge**：静电更偏瞬间放电风险，不是这种典型设备内部爆裂故障描述
+
+### 最简单记忆
+看到：
+- **popping sound**
+- **computer shuts down**
+
+优先想到：
+### **blown capacitor**
+
+**一句话：**
+电脑内部“啪”一声后马上关机，考试里最典型的答案就是 **blown capacitor**。
 
