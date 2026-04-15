@@ -3417,4 +3417,62 @@ Cloud 里的 **shared resources（共享资源）** 意味着：
 
 **一句话：**
 共享资源最大的隐患不是你来管理底层，而是大家一起用时，可能在高峰期互相抢资源导致性能变差。
+---
+
+## Dedicated resources 和 shared resources 刚好相反
+![Dedicated resources effects question](images/2026-04-14-dedicated-resources-effects.jpg)
+
+**题干：** Which of the answers listed below describe effects of using dedicated resources in cloud computing? (Select 3 answers)
+
+**正确答案：**
+- **Consistent and reliable performance**
+- **Higher, fixed costs regardless of resource use**
+- **Greater control and stronger data isolation**
+
+### 这题和前一题的关系
+对，你这题和前面那道 **shared resources** 的题，核心上就是：
+## **刚好反着记**
+
+### Shared resources 常见缺点
+- 高峰期可能性能下降
+- 多租户抢资源
+- 隔离感较弱一些
+
+### Dedicated resources 常见特点
+- 性能更稳定
+- 隔离更强
+- 但成本更高，而且往往更固定
+
+### 为什么这三个是对的
+#### 1. Consistent and reliable performance
+- dedicated resources = 资源不跟别人抢
+- 所以更容易得到稳定、可预测的性能
+- 这正好和 shared resources 的“高峰期可能性能下降”相反
+
+#### 2. Higher, fixed costs regardless of resource use
+- 专属资源意味着你为这批资源长期买单
+- 即使没用满，也要承担更高、更固定的成本
+- 所以它不像 pay-as-you-go 那样灵活省钱
+
+#### 3. Greater control and stronger data isolation
+- dedicated resources 通常意味着：
+  - 更少租户共享
+  - 更强隔离
+  - 更多控制权
+- 对安全和合规场景往往更有吸引力
+
+### 为什么你错选的 Performance degradation during peak usage 不对
+- 这个更像 **shared resources** 的典型问题
+- 不是 dedicated resources 的特点
+- 你可以把这两个题配在一起记：
+  - **shared** → 高峰期可能掉性能
+  - **dedicated** → 性能更稳定
+
+### 最简单记忆
+- **Shared** → 便宜/灵活，但高峰期可能被抢资源
+- **Dedicated** → 贵一些，但更稳、更可控、更隔离
+
+**一句话：**
+这题和前一题可以成对记：
+### **shared 看性能下降，dedicated 看性能稳定 + 隔离更强 + 成本更高。**
 
