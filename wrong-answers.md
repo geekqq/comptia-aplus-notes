@@ -3539,4 +3539,68 @@ Cloud 里的 **shared resources（共享资源）** 意味着：
 
 **一句话：**
 RAID 0 只提供性能，不提供冗余；一块盘坏掉后，不能像其他冗余 RAID 那样通过换盘重建恢复。
+---
+
+## RAID 文件损坏先查硬盘健康：看 S.M.A.R.T. 数据
+![RAID SMART first step question](images/2026-04-14-raid-smart-first-step.jpg)
+
+**题干：** A technician discovers that critical files in a RAID configuration are becoming corrupted and some data is missing. Which troubleshooting action should be performed first to determine if the drives are failing?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Back up all data before initiating any troubleshooting steps |
+| ✅ 正确答案 | Evaluate the storage devices' self-monitoring diagnostic data for anomalies |
+
+### 这题在考什么
+题目不是在问：
+> **最安全的总体做法是什么？**
+
+而是在问：
+> **为了先判断硬盘是不是正在坏掉，第一步该做什么？**
+
+所以关键词是：
+### **to determine if the drives are failing**
+
+### 为什么答案是看 S.M.A.R.T. / self-monitoring diagnostic data
+如果你想先确认硬盘是不是出问题，最直接的第一步就是：
+- 看硬盘的健康监控信息
+- 看有没有异常指标
+- 看有没有 impending failure 的迹象
+
+也就是：
+> **Evaluate the storage devices' self-monitoring diagnostic data for anomalies**
+
+这实际上就是在看：
+### **S.M.A.R.T. 数据**
+
+### 为什么你选的 backup 不是这题答案
+你选的：
+> **Back up all data before initiating any troubleshooting steps**
+
+这个思路在现实里其实不算错，
+甚至从风险角度说很合理。 
+但这题考的是：
+- **哪一步最先用来判断 drives are failing**
+
+也就是说它要的是：
+### **诊断动作**
+不是：
+### **风险控制动作**
+
+所以这题标准答案不会选 backup。
+
+### 其他选项为什么不是第一步
+- **Review operating system logs**：也有帮助，但不如直接看硬盘自监控数据更直接
+- **Check RAID controller firmware**：更偏后续排查，不是判断 drive failure 的首选第一步
+
+### 最简单记忆
+看到：
+- **drives are failing?**
+- **first troubleshooting action**
+
+第一反应就记：
+### **先看 S.M.A.R.T. / self-monitoring diagnostics**
+
+**一句话：**
+如果题目是在问“先怎么判断盘是不是快坏了”，标准答案通常是先看硬盘自监控诊断数据，而不是先做 backup。
 
