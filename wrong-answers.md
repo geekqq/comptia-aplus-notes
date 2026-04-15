@@ -3270,4 +3270,47 @@ Latency = **延迟**
 
 **一句话：**
 主板电容鼓包或漏液时，系统可能不会立刻报错关机，但会先表现成供电不稳、性能下降。
+---
+
+## Egress = Data leaving cloud
+![Egress question](images/2026-04-14-egress-data-leaving-cloud.jpg)
+
+**题干：** In the context of metered utilization, what does the term egress refer to?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Data upload speed |
+| ✅ 正确答案 | Data leaving cloud |
+
+### 这题核心
+你这题其实不是不会，主要是**马虎**了。
+因为：
+
+### **egress**
+本身就很容易联想到：
+> **出去 / 离开**
+
+所以在 cloud / metered utilization 语境里，
+它指的就是：
+> **Data leaving cloud**
+
+### 为什么不是 Data upload speed
+- 题目问的是 **egress refer to what**
+- 它考的是：
+  - 数据流动方向
+  - 不是速度（speed）
+- 所以关键不是“上传速度快慢”，而是：
+  > **数据从云环境往外流出**
+
+### 顺手对比
+- **Egress** → 数据离开云 / 离开网络
+- **Ingress** → 数据进入云 / 进入网络
+
+### 最简单记忆
+- **Egress** = Exit = 出去
+- **Ingress** = In = 进入
+
+**一句话：**
+看到 **egress**，第一反应就记：
+### **出去 = data leaving cloud**
 
