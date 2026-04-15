@@ -3366,4 +3366,55 @@ Latency = **延迟**
 
 **一句话：**
 云服务按量计费里，进入和离开云的数据流量都可能是核心计费指标，不要只想到 ingress。
+---
+
+## Cloud 共享资源的潜在缺点：高峰期性能下降
+![Shared cloud resources drawback question](images/2026-04-14-shared-cloud-resources-performance.jpg)
+
+**题干：** What is a potential drawback of using shared resources in a cloud environment?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | More complex management of the underlying infrastructure for the user |
+| ✅ 正确答案 | Possible performance degradation during high demand periods |
+
+### 为什么答案是这个
+Cloud 里的 **shared resources（共享资源）** 意味着：
+- 多个用户/租户共用同一批底层资源
+- 在高峰时段，大家都在抢资源
+
+所以一个典型缺点就是：
+> **高需求时期可能出现性能下降**
+
+比如：
+- 响应变慢
+- 资源争抢
+- 吞吐下降
+- 延迟升高
+
+### 为什么你选的那个不对
+你选的是：
+> **More complex management of the underlying infrastructure for the user**
+
+这其实更像是反过来的。
+因为 cloud 的一个优点恰恰是：
+- 用户通常**不用**自己复杂地管理底层基础设施
+- 底层很多管理工作是 provider 负责的
+
+所以它不是“shared resources”的典型 drawback。
+
+### 其他选项为什么不对
+- **Difficulty in managing multiple cloud instances simultaneously**：更像运维管理问题，不是共享资源本身的直接缺点
+- **Inability to scale resources up or down based on demand**：这反而违背 cloud 的典型优势，cloud 通常就是强调弹性伸缩
+
+### 最简单记忆
+看到：
+- **shared resources**
+- **cloud environment**
+
+优先想到的缺点就是：
+### **高峰期可能性能下降**
+
+**一句话：**
+共享资源最大的隐患不是你来管理底层，而是大家一起用时，可能在高峰期互相抢资源导致性能变差。
 
