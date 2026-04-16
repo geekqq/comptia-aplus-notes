@@ -3855,4 +3855,75 @@ monitor dim 题先走最基础排查：亮度、eco mode、线缆连接，而不
 
 **一句话：**
 这题关键是分清“亮不亮”和“颜色对不对”不是同一件事；washed-out 或 incorrect colors 更该查校色、驱动和线缆，不是先调 brightness。
+---
+
+## 黑色死点（dead pixel）题：None of the above
+![Dead black pixel question](images/2026-04-15-dead-black-pixel-none-of-above.jpg)
+
+**题干：** A technician is diagnosing an LCD panel where one pixel remains black at all times and never changes color. Which troubleshooting step should be attempted first?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Use an app that flashes primary colors or high-contrast patterns |
+| ✅ 正确答案 | None of the above |
+
+### 这题为什么容易错
+因为很多人会把：
+- **stuck pixel（卡住的像素）**
+和
+- **dead pixel（坏掉的像素）**
+混在一起。
+
+题目这里明确说的是：
+> **one pixel remains black at all times and never changes color**
+
+这更像：
+## **dead pixel**
+也就是：
+- 像素已经坏了
+- 不响应
+- 不会再亮
+
+### 为什么 flashing app 不对
+你选的：
+> **Use an app that flashes primary colors or high-contrast patterns**
+
+这种方法有时是拿来尝试修：
+### **stuck pixel**
+也就是像素卡在某个颜色上，还不是完全坏死。
+
+但题目这里是：
+- 一直黑
+- 从不变色
+
+这种更像硬件层面的死点，
+所以这类方法通常没用。
+
+### 为什么其他三个也不对
+- **Switch the monitor off and unplug it for an extended period**
+- **Apply light, localized pressure to the affected pixel area**
+- **Tap the screen around the affected pixel with a soft object**
+
+这些都更像民间偏方 / 针对 stuck pixel 的尝试，
+但对明确的 **dead black pixel** 不是标准可靠的 first troubleshooting step。
+
+所以考试这里才给：
+## **None of the above**
+
+### 那现实中应该怎么处理
+如果真的是：
+### **dead pixel**
+更现实的处理办法通常是：
+- 确认是否在保修/厂商像素政策范围内
+- 申请换屏 / 维修 / 更换显示器
+
+也就是说：
+## 不是“修像素”，而是“确认硬件缺陷并走更换/保修流程”
+
+### 最简单记忆
+- **stuck pixel** → 有时还能尝试软件闪烁/温和方法
+- **dead pixel** → 通常修不回来，更偏硬件缺陷
+
+**一句话：**
+这题关键是分清：题目描述的是 **dead black pixel**，不是 stuck pixel，所以前面那些“修复像素”的招数都不是标准答案，正确是 **None of the above**。
 
