@@ -3690,4 +3690,59 @@ RAID 0 只提供性能，不提供冗余；一块盘坏掉后，不能像其他�
 
 **一句话：**
 这题关键是分清“原因”和“结果”：散热差会导致过热，但过热最直接的典型结果是 **random system shutdowns**。
+---
+
+## 显示器画面发暗：先查亮度/节能/线缆
+![Dim monitor troubleshooting question](images/2026-04-15-dim-monitor-troubleshooting.jpg)
+
+**题干：** A user complains that the image displayed on their monitor is dim. What should be the initial troubleshooting steps? (Select 3 answers)
+
+**正确答案：**
+- **Check the brightness and contrast settings on the monitor**
+- **Verify the monitor's power-saving or eco mode is disabled**
+- **Inspect the video and power cable connections**
+
+### 这题在考什么
+题目问的是：
+> **initial troubleshooting steps**
+
+也就是：
+### 先做最基础、最直接、最常见的检查
+
+### 为什么这三个是对的
+#### 1. Check the brightness and contrast settings
+- 画面发暗时，最先就该看亮度/对比度
+- 这是最直接的显示设置问题
+
+#### 2. Verify eco mode / power-saving is disabled
+- 很多显示器开了节能模式后会明显变暗
+- 所以这也是初步排查里很典型的一步
+
+#### 3. Inspect the video and power cable connections
+- 线缆松动、供电异常、视频连接问题
+- 也可能造成显示异常、亮度异常、信号表现不稳定
+- 这也是考试里典型的 first-step 检查动作
+
+### 为什么你选的 dynamic contrast 不对
+- **dynamic contrast** 更像某种增强/优化功能
+- 不是“画面发暗时最基础的初步排查步骤”
+- 考试这里更看重基础 troubleshooting 逻辑，而不是打开额外增强功能
+
+### 为什么 saturation 也不对
+- **saturation（饱和度）** 影响的是颜色鲜艳程度
+- 不直接对应“整体变暗”的核心问题
+- 所以不是首选排查项
+
+### 最简单记忆
+显示器发暗先查三件事：
+- **亮度/对比度**
+- **节能模式**
+- **线缆连接**
+
+不要先去想：
+- 动态对比增强
+- 饱和度微调
+
+**一句话：**
+monitor dim 题先走最基础排查：亮度、eco mode、线缆连接，而不是先开高级画质功能。
 
