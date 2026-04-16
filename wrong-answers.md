@@ -3986,4 +3986,51 @@ monitor dim 题先走最基础排查：亮度、eco mode、线缆连接，而不
 
 **一句话：**
 投影机灯泡寿命最怕热管理做不好：要么没冷却完就断电，要么散热差长期过热。
+---
+
+## Burnt-out projector bulb 最常见症状：开机但没图像
+![Burnt-out projector bulb symptom question](images/2026-04-15-burnt-out-projector-bulb-symptom.jpg)
+
+**题干：** What is the most common symptom of a burnt-out projector bulb?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | The projector shuts down immediately after powering on |
+| ✅ 正确答案 | The projector powers on, but no image is displayed |
+
+### 为什么答案是这个
+投影机灯泡如果已经 **burnt out（烧坏）**，最典型的结果就是：
+- 机器本身还能通电
+- 风扇、指示灯、系统可能还能启动
+- 但因为没有可用光源，
+### **画面不会被投出来**
+
+所以最常见症状是：
+> **The projector powers on, but no image is displayed**
+
+### 为什么你选的“开机后马上关机”不对
+- 这个现象更像：
+  - 过热保护
+  - 电源问题
+  - 内部硬件故障
+  - 风扇/散热异常
+- 不是 projector bulb 烧掉后最典型、最标准的第一症状
+
+### 为什么 dim or distorted image 不是最佳答案
+- 画面变暗、失真，确实可能表示灯泡老化
+- 但题目问的是：
+  > **burnt-out bulb**
+- “烧坏”比“老化”更严重，
+  所以更典型的结果是：
+  ## **直接没有图像**
+
+### 其他选项为什么不对
+- **Fails to detect input sources**：更像输入源/接口/信号问题，不是 bulb 的典型故障表现
+
+### 最简单记忆
+- **Lamp aging** → 画面变暗
+- **Lamp burnt out** → 开机但没图像
+
+**一句话：**
+投影机灯泡彻底烧坏时，最典型的是机器还能开，但没有图像可投，不是立刻整机关机。
 
