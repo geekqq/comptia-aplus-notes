@@ -3745,4 +3745,53 @@ RAID 0 只提供性能，不提供冗余；一块盘坏掉后，不能像其他�
 
 **一句话：**
 monitor dim 题先走最基础排查：亮度、eco mode、线缆连接，而不是先开高级画质功能。
+---
+
+## 笔记本声音没走外接显示器：先查默认音频设备 + 显示器是否支持音频
+![Audio external display question](images/2026-04-15-audio-external-display.jpg)
+
+**题干：** Which of the following actions would help resolve an issue where audio plays through laptop speakers instead of an intended external display? (Select 2 answers)
+
+**正确答案：**
+- **Verify that the monitor supports audio over the selected input**
+- **Set the external display as the default audio device**
+
+### 为什么这两个是对的
+#### 1. Verify that the monitor supports audio over the selected input
+这题最容易漏掉的点就在这里：
+- 不是所有显示器都支持音频输出
+- 就算支持，也不一定每种输入方式都支持音频
+
+例如：
+- HDMI 通常可以同时传音频和视频
+- DisplayPort 也常常支持音频
+- 但某些转接器、某些接口模式、某些显示器本身可能不支持
+
+所以第一步就要确认：
+> **这个显示器在当前选用的输入接口下，到底支不支持音频**
+
+#### 2. Set the external display as the default audio device
+即使外接显示器支持音频，系统也可能默认还在走：
+- laptop speakers
+- internal audio device
+
+所以必须把：
+> **外接显示器/外接音频设备设成默认输出设备**
+
+### 为什么 Disable the laptop’s internal speakers 不对
+- 这个做法太粗暴
+- 也不是标准 troubleshooting 的首选
+- 你真正要做的是把正确输出设备设为 default，而不是先把内建喇叭禁掉
+
+### 为什么另外两个不对
+- **Turn off automatic audio device switching**：不是这个场景最核心的解决动作
+- **Adjust the equalizer settings**：均衡器不会解决“声音走错设备”的问题
+
+### 最简单记忆
+外接显示器没出声时，先查两件事：
+- **显示器/接口支不支持音频**
+- **它是不是默认音频输出设备**
+
+**一句话：**
+这题关键不是禁用笔记本喇叭，而是确认外接显示器有音频能力，并把它设为默认音频输出。
 
