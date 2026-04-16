@@ -3926,4 +3926,64 @@ monitor dim 题先走最基础排查：亮度、eco mode、线缆连接，而不
 
 **一句话：**
 这题关键是分清：题目描述的是 **dead black pixel**，不是 stuck pixel，所以前面那些“修复像素”的招数都不是标准答案，正确是 **None of the above**。
+---
+
+## 会缩短 projector bulb 寿命的两种误用
+![Projector bulb misuse question](images/2026-04-15-projector-bulb-misuse.jpg)
+
+**题干：** What types of misuse can shorten the life of a projector bulb? (Select 2 answers)
+
+**正确答案：**
+- **Powering off the projector without allowing it to cool down**
+- **Allowing frequent overheating due to poor ventilation**
+
+### 为什么这两个是对的
+#### 1. Powering off the projector without allowing it to cool down
+投影机灯泡工作时温度很高。
+如果你在它还很热的时候就粗暴断电，
+会让：
+- 散热流程被打断
+- 灯泡热冲击更大
+- 寿命明显缩短
+
+这就是 projector 题里很经典的考点：
+### **关机后要让它正常冷却**
+
+#### 2. Allowing frequent overheating due to poor ventilation
+如果通风差：
+- 热量排不出去
+- 灯泡长期高温工作
+- 老化速度会明显加快
+
+所以“过热 + 散热不好”一定是会伤灯泡寿命的。
+
+### 为什么 bypassing lamp replacement warnings 不对
+这个选项看起来很像对，
+因为听起来像是在“硬撑着继续用”。
+
+但题目问的是：
+> **types of misuse can shorten the life of a projector bulb**
+
+更直接缩短寿命的是：
+- **热冲击**
+- **长期过热**
+
+而手动重置 lamp warning 更像：
+- 忽略维护提示
+- 继续使用老旧灯泡
+- 有风险
+
+但它不是这题最标准、最直接的两个“伤灯泡寿命”的 misuse。
+
+### 其他选项为什么不对
+- **Setting the projector to the highest refresh rate**：不是 projector bulb 寿命的核心因素
+- **Using the projector in a brightly lit room**：影响观感，不是直接缩短 bulb life 的关键 misuse
+
+### 最简单记忆
+ projector bulb 最怕两件事：
+- **没冷却就断电**
+- **长期过热 / 通风差**
+
+**一句话：**
+投影机灯泡寿命最怕热管理做不好：要么没冷却完就断电，要么散热差长期过热。
 
