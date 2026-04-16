@@ -3794,4 +3794,65 @@ monitor dim 题先走最基础排查：亮度、eco mode、线缆连接，而不
 
 **一句话：**
 这题关键不是禁用笔记本喇叭，而是确认外接显示器有音频能力，并把它设为默认音频输出。
+---
+
+## 洗白/色彩不对不等于亮度问题
+![Washed out colors question](images/2026-04-15-washed-out-colors-not-brightness.jpg)
+
+**题干：** Which of the troubleshooting steps listed below would **not** address a monitor displaying washed-out or incorrect colors?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Verify cable connection integrity |
+| ✅ 正确答案 | Adjust the monitor brightness level |
+
+### 这题为什么容易错
+因为“washed-out”看起来很像：
+- 太亮
+- 发白
+- 颜色淡
+
+所以很容易下意识想到：
+### **调亮度**
+
+但这题问的是：
+> **哪一个步骤不会真正解决 washed-out 或颜色错误的问题**
+
+### 为什么答案是 Adjust the monitor brightness level
+- **亮度（brightness）** 主要影响的是明暗程度
+- 但题目重点是：
+  - **washed-out colors**
+  - **incorrect colors**
+- 这更偏向：
+  - 颜色校准问题
+  - 显示配置问题
+  - 线缆/信号问题
+  - 驱动/输出问题
+
+所以调亮度并不是处理“颜色不对”的核心步骤。
+
+### 为什么 Verify cable connection integrity 反而是合理排查
+你这题错在把它排除了。
+但实际上：
+- 视频线缆接触不良
+- 接口松动
+- 传输异常
+都可能导致：
+  - 颜色偏差
+  - 色彩异常
+  - 显示不正常
+
+所以检查线缆完整性，反而是很合理的 troubleshooting step。
+
+### 其他正确方向为什么能帮助
+- **Update graphics and display drivers** → 可能修复输出/色彩问题
+- **Check color calibration settings** → 直接对准颜色问题
+- **Reset monitor to factory defaults** → 排除显示器设置被改乱
+
+### 最简单记忆
+- **Brightness** → 主要管明暗
+- **Color calibration / cable / driver** → 更直接管颜色异常
+
+**一句话：**
+这题关键是分清“亮不亮”和“颜色对不对”不是同一件事；washed-out 或 incorrect colors 更该查校色、驱动和线缆，不是先调 brightness。
 
