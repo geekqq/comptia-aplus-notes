@@ -4033,4 +4033,54 @@ monitor dim 题先走最基础排查：亮度、eco mode、线缆连接，而不
 
 **一句话：**
 投影机灯泡彻底烧坏时，最典型的是机器还能开，但没有图像可投，不是立刻整机关机。
+---
+
+## RAID 发出告警声常见含义：Drive failure + Array degradation
+![RAID audible alarms question](images/2026-04-15-raid-audible-alarms.jpg)
+
+**题干：** If a RAID array is producing audible alarms, what does this typically indicate? (Select 2 answers)
+
+**正确答案：**
+- **Drive failure**
+- **Array degradation**
+
+### 为什么这两个是对的
+RAID 控制器或 RAID 阵列发出 **audible alarms（蜂鸣/报警声）**，
+最常见的含义通常是：
+- 某块盘出问题了
+- 阵列已经不是健康完整状态了
+
+#### 1. Drive failure
+- 这是 RAID 告警里最经典的原因之一
+- 某块硬盘坏了、掉线、异常
+- 阵列会发出声音提醒管理员尽快处理
+
+#### 2. Array degradation
+- 即使阵列还没完全挂掉，只要已经失去冗余、进入 degraded 状态
+- 很多 RAID 控制器也会报警
+- 所以这也是标准答案
+
+### 为什么 system overheating 不对
+- 系统过热当然也可能触发某些设备报警
+- 但题目明确是在问：
+  > **RAID array is producing audible alarms**
+- RAID 题里最典型的答案还是：
+  - drive failure
+  - array degradation
+- 不是优先想到整机过热
+
+### 为什么其他选项不对
+- **Pending reboot request**：不是 RAID 告警的典型含义
+- **Insufficient power supply**：可能引发硬件问题，但不是 RAID 阵列报警最标准的直接含义
+
+### 最简单记忆
+看到：
+- **RAID audible alarm**
+
+优先想到：
+- **盘坏了**
+- **阵列 degraded 了**
+
+**一句话：**
+RAID 一响，先想盘故障和阵列降级，不要先想到系统过热。
 
