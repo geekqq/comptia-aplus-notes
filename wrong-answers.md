@@ -4934,4 +4934,80 @@ VoIP 题里：
 
 **一句话：**
 这题不是在考显卡或服务器，而是在考电脑内部哪些程序正在偷偷吃网络带宽，导致游戏高延迟和卡顿尖峰。
+---
+
+## 判断网络拥塞：看“多设备一起慢” + “高峰时段变慢”
+![Network congestion multiple devices busy periods question](images/2026-04-18-network-congestion-multiple-devices-busy-periods.jpg)
+
+**题干：** Which symptoms are most likely to indicate that slow network speeds are caused by network congestion rather than a hardware or software issue? (Select 2 answers)
+
+**正确答案：**
+- **The slowness is noticeable across multiple devices**
+- **The issue occurs during specific, busy periods**
+
+### 为什么这两个是对的
+网络拥塞（network congestion）的核心特征就是：
+- **不是单一设备的问题**
+- 而是网络整体在某些时段被挤满了
+
+#### 1. The slowness is noticeable across multiple devices
+如果：
+- 手机慢
+- 电脑也慢
+- 平板也慢
+
+那就更像：
+### **整个网络路径都在堵**
+而不是某一台设备硬件、驱动或系统出问题。
+
+#### 2. The issue occurs during specific, busy periods
+如果网络问题总在：
+- 晚上高峰
+- 大家都在用网的时候
+- 某些忙碌时段
+出现，
+这非常符合：
+### **network congestion**
+
+### 为什么你选的 intermittently without a clear pattern 不对
+你选的是：
+- **The issue occurs intermittently without a clear pattern**
+
+这个描述太泛了。
+它可能对应很多情况：
+- 网卡接触不良
+- 驱动异常
+- 路由器偶发问题
+- ISP 抖动
+- 无线信号不稳
+
+它并不能特别有力地指向：
+### **network congestion**
+
+### 为什么“only one device”不对
+如果只有一台设备慢，
+那更该怀疑：
+- 该设备的网卡
+- 驱动
+- 设置
+- 本机软件问题
+
+而不是网络整体拥塞。
+
+### 为什么 ISP throttling 不是答案
+ISP throttling 当然也可能导致慢，
+但题目问的是：
+> **most likely indicate network congestion**
+
+所以更标准的线索还是：
+- 多设备一起慢
+- 在高峰期慢
+
+### 最简单记忆
+判断“是网络拥塞，不是单机问题”时，先看：
+- **是不是多台设备都慢**
+- **是不是忙的时候才慢**
+
+**一句话：**
+网络拥塞最典型的两个信号就是：**多设备一起慢**，而且**总在高峰时段慢**。
 
