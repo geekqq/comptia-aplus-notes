@@ -4450,4 +4450,62 @@ digitizer 预防就记三件事：
 
 **一句话：**
 这题错在把“完全放空再充满”当成现代手机电池保养原则；但对今天常见的锂电池来说，频繁深度放电并不会延长寿命，反而更伤电池。
+---
+
+## 随机花屏和彩色闪烁像素：先想 GPU 过热或故障
+![Artifacts failing GPU question](images/2026-04-17-artifacts-failing-gpu.jpg)
+
+**题干：** A user reports that their monitor displays random artifacts and flickering colored pixels. What is a common hardware cause for this type of distortion?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Damaged backlight in the monitor |
+| ✅ 正确答案 | Overheating or failing graphics card |
+
+### 为什么答案是 failing / overheating graphics card
+题目里的关键词：
+- **random artifacts**
+- **flickering colored pixels**
+
+这非常像：
+## **GPU / graphics card 输出异常**
+
+常见原因包括：
+- 显卡过热
+- 显卡显存出问题
+- GPU 本身故障
+- 显卡老化
+
+这些都会导致：
+- 花屏
+- 彩色噪点
+- 闪烁像素
+- 图像失真
+
+### 为什么 damaged backlight 不对
+**背光（backlight）** 出问题更常见的现象是：
+- 画面变暗
+- 屏幕局部发黑
+- 亮度不均
+- 背光闪烁
+
+但它通常不会导致这种：
+### **随机彩色像素 / artifacts / 花屏**
+
+这种更像是视频信号或 GPU 渲染输出问题，
+不是单纯背光照明问题。
+
+### 为什么驱动不是最佳答案
+- **Outdated or corrupted display driver** 也可能导致显示异常
+- 但题目问的是：
+  > **common hardware cause**
+- 所以这里更应该优先选硬件层面的：
+### **graphics card**
+
+### 最简单记忆
+- **Backlight 问题** → 暗、黑、亮度异常
+- **GPU 问题** → 花屏、彩点、随机 artifacts
+
+**一句话：**
+看到随机花屏和彩色闪烁像素，优先想到显卡过热或故障，而不是显示器背光坏掉。
 
