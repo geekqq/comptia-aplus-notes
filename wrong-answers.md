@@ -4585,4 +4585,79 @@ digitizer 预防就记三件事：
 
 **一句话：**
 这题不是在考操作系统 UI 缩放，而是在考“分辨率是否原生”和“显示器自身缩放模式是否正确”。
+---
+
+## 花屏 + 颜色错位 + 文字锯齿：先查视频线，不是电源线
+![Garbled image video cable first question](images/2026-04-17-garbled-image-video-cable-first.jpg)
+
+**题干：** A monitor intermittently displays a distorted, garbled image with misaligned colors and jagged text. Which step should a technician take first?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Test the monitor with a different power cable |
+| ✅ 正确答案 | Reseat or replace the video cable |
+
+### 为什么答案是 video cable
+题目描述的是：
+- **distorted / garbled image**
+- **misaligned colors**
+- **jagged text**
+- 而且是 **intermittently**（间歇性）发生
+
+这组症状最像的是：
+## **视频信号传输有问题**
+也就是：
+- 视频线松动
+- 视频线损坏
+- 接口接触不良
+- 信号链路不稳定
+
+所以第一步最标准的排查就是：
+### **Reseat or replace the video cable**
+
+### 为什么 power cable 不对
+你选的是：
+- **Test the monitor with a different power cable**
+
+电源线问题更常导致的是：
+- 显示器断电
+- 黑屏
+- 完全不亮
+- 闪断
+
+但题目这里不是“没电”或“亮不起来”，
+而是：
+### **图像内容本身被扭曲、乱码、颜色错位**
+
+这更像视频信号问题，不像供电问题。
+
+### 为什么 alternate video input port 不是 first step
+- 换另一个视频输入口当然也可能是后续排查步骤
+- 但考试问的是：
+  > **first**
+- 更基础、更直接的第一步还是先：
+  - 重新插紧视频线
+  - 或直接换一根视频线
+
+### 为什么 firmware 不是首选
+- firmware 太靠后了
+- 这种间歇性花屏、颜色错位，考试里先想物理连接和线缆
+- 不会一上来先更新固件
+
+### 最简单记忆
+看到：
+- **garbled image**
+- **misaligned colors**
+- **jagged text**
+- **intermittent**
+
+先想：
+### **video cable / video signal path**
+
+不要先想：
+- power cable
+- firmware
+
+**一句话：**
+这题关键是区分“供电问题”和“视频信号问题”：花屏、颜色错位、乱码文字更像视频线或视频信号链路异常，所以 first step 是先重插或更换视频线。
 
