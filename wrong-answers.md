@@ -4774,4 +4774,78 @@ VoIP 题里：
 **一句话：**
 这题和上一题要成对记：
 ### **回声+延迟看 latency；断续失真看 jitter。**
+---
+
+## Limited connectivity + 红叉：先查网卡状态和物理连接
+![Limited connectivity first steps question](images/2026-04-18-limited-connectivity-first-steps.jpg)
+
+**题干：** An administrator is troubleshooting a computer showing "Limited Connectivity." The network icon in the Windows taskbar displays an "X" symbol, indicating no active network connection. Which of the actions listed below should the administrator take first? (Select 2 answers)
+
+**正确答案：**
+- **Verify the network adapter status**
+- **Check the physical network connection**
+
+### 为什么答案是这两个
+题目给出的最关键线索是：
+- **taskbar 显示 X symbol**
+- **no active network connection**
+
+这说明问题更偏向：
+### **链路层 / 设备层 / 物理连接层**
+
+所以 first steps 应该优先查：
+
+#### 1. Verify the network adapter status
+- 网卡有没有被禁用
+- 网卡有没有正常识别
+- 网卡状态是否异常
+
+#### 2. Check the physical network connection
+- 网线有没有插好
+- 接口有没有松
+- 物理链路是不是根本没起来
+
+### 为什么 run network diagnostics 不是 first answer
+你选的：
+- **Run the built-in network diagnostics tool**
+
+这个不能说完全没用，
+但题目问的是：
+### **should take first**
+
+而当系统已经明确显示：
+- **没有活动连接**
+- **X symbol**
+
+考试更偏向先做最基础的：
+- 物理连接检查
+- 网卡状态确认
+
+而不是一上来先跑软件诊断工具。
+
+### 为什么 renew IP address 不对
+- 如果连路都没起来，
+- 还没到 DHCP / IP 续租那一步
+- 所以 `renew IP` 太靠后了
+
+### 为什么 update driver 不是 first step
+- 驱动问题当然可能存在
+- 但它不是这种“完全没活动连接”场景下的首选起手步骤
+
+### 最简单记忆
+看到：
+- **network icon 红叉 / X**
+- **no active network connection**
+
+先想：
+- **网卡状态**
+- **物理连接**
+
+不是先想：
+- IP 续租
+- diagnostics
+- driver
+
+**一句话：**
+红叉 + 没活动连接，先查“网卡有没有起来”和“网线有没有接好”，这是最标准的 first steps。
 
