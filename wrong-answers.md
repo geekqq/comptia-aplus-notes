@@ -4148,4 +4148,69 @@ RAID 一响，先想盘故障和阵列降级，不要先想到系统过热。
 
 **一句话：**
 如果题目强调的是 **persistent malware**，考试里最稳的标准答案通常就是 **factory reset**。
+---
+
+## 平板摔后局部触控失灵：先 power cycle
+![Tablet dropped touchscreen power cycle question](images/2026-04-17-tablet-dropped-touchscreen-power-cycle.jpg)
+
+**题干：** After dropping their tablet, a user notices that a section of the touchscreen no longer registers any input. What is the first troubleshooting step they should take?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Remove the screen protector and test the touch response |
+| ✅ 正确答案 | Power cycle the device |
+
+### 为什么答案是 Power cycle the device
+这题考的是：
+### **first troubleshooting step**
+
+即使题目里提到是“摔过”，考试逻辑通常还是先从：
+- 最基础
+- 最低风险
+- 最简单
+的步骤开始
+
+所以第一步先：
+## **重启设备 / power cycle**
+
+因为有时触控失灵不一定完全是物理损坏，
+也可能是：
+- 临时触控驱动异常
+- 系统卡住
+- 触控服务出问题
+
+先重启是标准起手式。
+
+### 为什么你选的 screen protector 不对
+你选的：
+- **Remove the screen protector and test the touch response**
+
+这个不是完全不合理，
+因为保护膜确实可能影响触控。 
+但题目重点是：
+> **first troubleshooting step**
+
+考试会优先选：
+### **power cycle**
+而不是一上来就去拆贴膜或动外部配件。
+
+### 其他选项为什么不对
+- **Check if the device is overheating**：和“摔后局部触控失灵”不够直接相关
+- **Apply light, localized pressure to the affected area**：风险更高，也不是标准 first step
+
+### 最简单记忆
+题目只要问：
+- **first troubleshooting step**
+
+先想：
+- **重启 / 重新上电 / power cycle**
+
+如果题目后面再问下一步，
+才去排查：
+- 屏幕保护膜
+- 物理损伤
+- digitizer 问题
+
+**一句话：**
+这题关键不是你选项完全离谱，而是考试特别强调 **first step** —— 先 power cycle，再考虑更具体的物理排查。
 
