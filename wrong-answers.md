@@ -4660,4 +4660,58 @@ digitizer 预防就记三件事：
 
 **一句话：**
 这题关键是区分“供电问题”和“视频信号问题”：花屏、颜色错位、乱码文字更像视频线或视频信号链路异常，所以 first step 是先重插或更换视频线。
+---
+
+## VoIP 声音断断续续/失真：最常见是 jitter
+![VoIP jitter choppy audio question](images/2026-04-18-voip-jitter-choppy-audio.jpg)
+
+**题干：** What is the most likely cause of choppy or distorted audio during a VoIP call?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Corrupted audio codec |
+| ✅ 正确答案 | Jitter |
+
+### 为什么答案是 jitter
+在 VoIP 通话里，**jitter** 指的是：
+- 数据包到达时间不稳定
+- 有的包快，有的包慢
+- 音频流不均匀
+
+这会直接导致：
+- 声音断断续续
+- 语音卡顿
+- 音频失真
+- 通话不流畅
+
+所以题目里说的：
+> **choppy or distorted audio during a VoIP call**
+最典型先想到的就是：
+### **jitter**
+
+### 为什么 corrupted audio codec 不对
+- codec 出问题当然也可能引发音频异常
+- 但题目问的是：
+  > **most likely cause**
+- 在 VoIP 题里，最经典、最标准的网络型原因就是：
+  - **latency**
+  - **packet loss**
+  - **jitter**
+
+而“断断续续、失真”最常考的就是：
+### **jitter**
+
+### 顺手区分一下
+- **Latency** → 延迟大，讲话有明显滞后
+- **Jitter** → 包到达不均匀，声音断断续续、发抖、失真
+- **Packet loss** → 丢字、声音缺块、突然听不清
+
+### 最简单记忆
+VoIP 题里：
+- **jitter** → 声音卡、抖、断续
+- **latency** → 延迟
+- **packet loss** → 掉字/缺失
+
+**一句话：**
+VoIP 通话里如果声音断断续续、听起来失真，考试里最标准的答案通常是 **jitter**。
 
