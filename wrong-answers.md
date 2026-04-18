@@ -5077,4 +5077,78 @@ ISP throttling 当然也可能导致慢，
 
 **一句话：**
 这题关键是分清“单机问题”和“网络整体问题”：既然别的设备都正常，就该优先修这台笔记本自己的无线网卡驱动。
+---
+
+## 手机越来越慢、卡顿、冻结：先清缓存 + 卸载不用的 App
+![Phone slow clear cache uninstall apps question](images/2026-04-18-phone-slow-clear-cache-uninstall-apps.jpg)
+
+**题干：** A user complains their mobile phone has become increasingly slow, with apps taking a long time to open and frequently freezing. Which steps should a technician try first when troubleshooting this issue? (Select 2 answers)
+
+**正确答案：**
+- **Clear cached data**
+- **Uninstall unused apps**
+
+### 为什么答案是这两个
+题目强调的是：
+- 手机越来越慢
+- App 打开很久
+- 经常冻结
+- 而且问的是：
+### **should try first**
+
+这类题的 first steps 通常优先选：
+- 最基础
+- 最低风险
+- 最常见、最直接
+的优化动作。
+
+#### 1. Clear cached data
+- App 缓存堆积太多时，确实可能导致：
+  - 打开慢
+  - 运行卡
+  - 反应迟钝
+- 清缓存是标准 first step 之一
+
+#### 2. Uninstall unused apps
+- 很多没用的 App 会：
+  - 占存储
+  - 吃后台资源
+  - 占内存或同步资源
+- 所以卸载不用的 App，也是一种非常典型的初步排查/优化动作
+
+### 为什么 benchmark test 不对
+你错选了：
+- **Run a benchmark test on the device**
+
+benchmark 更像是：
+- 测性能
+- 对比跑分
+- 诊断深层硬件能力
+
+但题目问的是：
+### **first troubleshooting steps**
+所以考试不会优先让你先跑基准测试，
+而会先做更实际、更基础的处理。
+
+### 为什么 battery usage 不是答案
+- 查看 battery usage 有时能发现耗电异常 App
+- 但它不是这题“卡顿/打开慢/冻结”最标准的 first response
+- 不如清缓存和卸载没用 App 更直接
+
+### 为什么 power-saving mode 不对
+- 省电模式有时反而可能限制性能
+- 它不是解决“已经变慢”的标准 first-step troubleshooting 动作
+
+### 最简单记忆
+手机越来越慢时，先想：
+- **清缓存**
+- **删没用的 App**
+
+不要先想：
+- benchmark
+- 跑分
+- 省电模式
+
+**一句话：**
+这题考的是手机变慢时最基础的 first-step 处理：先清缓存，再删掉不用的 App，而不是先跑 benchmark。
 
