@@ -4714,4 +4714,64 @@ VoIP 题里：
 
 **一句话：**
 VoIP 通话里如果声音断断续续、听起来失真，考试里最标准的答案通常是 **jitter**。
+---
+
+## VoIP 听到自己声音延迟回声：更像 high latency，不是 jitter
+![VoIP echo high latency question](images/2026-04-18-voip-echo-high-latency.jpg)
+
+**题干：** During a VoIP call, a user hears their own voice echoing back to them with a slight delay. Which network performance issue is this symptom most indicative of?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Jitter |
+| ✅ 正确答案 | High latency |
+
+### 为什么答案是 high latency
+题目关键词是：
+- **hears their own voice echoing back**
+- **with a slight delay**
+
+这道题考的重点是：
+## **延迟（latency）**
+
+因为声音经过网络传输、再返回到自己耳朵里，如果延迟明显变大，
+就会听到：
+- 自己声音的回声
+- 而且会“慢半拍”回来
+
+所以这种：
+### **echo + delay**
+最标准先想到的是：
+### **high latency**
+
+### 为什么 jitter 不对
+你前一题选 jitter 是对“声音断断续续、失真”那种描述。
+但这题不一样，
+它不是说：
+- choppy
+- broken
+- stuttering
+
+而是说：
+- **echoing back**
+- **slight delay**
+
+这更像：
+## **网络延迟过高**
+不是包到达时间抖动不均匀。
+
+### 顺手区分一下
+- **High latency** → 声音延迟、对话有回声感、讲话对不上拍
+- **Jitter** → 声音卡、抖、断续、不平滑
+- **Packet loss** → 丢字、听不全、声音缺块
+
+### 最简单记忆
+VoIP 题里：
+- **echo + delay** → **latency**
+- **choppy / distorted** → **jitter**
+- **cutting out / missing words** → **packet loss**
+
+**一句话：**
+这题和上一题要成对记：
+### **回声+延迟看 latency；断续失真看 jitter。**
 
