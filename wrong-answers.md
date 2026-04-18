@@ -4343,4 +4343,64 @@ digitizer 预防就记三件事：
 
 **一句话：**
 你这题差一点点，核心补充就是：手机进水后，别忘了把可取出的 **SIM 卡和存储卡** 也拿出来，减少损伤并帮助干燥。
+---
+
+## 手机 Wi‑Fi 断连先重置 Wi‑Fi adapter，不是先整机硬重启
+![Wi-Fi adapter first step question](images/2026-04-17-wifi-adapter-first-step.jpg)
+
+**题干：** A user reports their mobile device frequently loses Wi-Fi connection or cannot connect to any networks. What is the best first troubleshooting step?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Perform a hard reboot (forced restart) of the device |
+| ✅ 正确答案 | Restart the device’s Wi‑Fi adapter to reset the connection |
+
+### 为什么答案是重启 Wi‑Fi adapter
+题目问的是：
+### **best first troubleshooting step**
+
+而故障点很明确：
+- **Wi‑Fi connection**
+- **cannot connect to any networks**
+
+所以最直接、最有针对性的 first step 应该是：
+## **先重置 Wi‑Fi 本身**
+也就是：
+- 关掉再打开 Wi‑Fi
+- 重启 Wi‑Fi adapter
+- 刷新无线连接状态
+
+### 为什么整机 hard reboot 不是最佳答案
+你选的：
+- **Perform a hard reboot**
+
+这个不是完全不能做，
+但它范围更大、更笼统。
+考试这里更偏好：
+### **先做最贴近问题本身的最小排查动作**
+
+问题是 Wi‑Fi，
+那就先动：
+### **Wi‑Fi adapter**
+而不是一上来先整机强制重启。
+
+### 为什么其他选项不对
+- **Remove and reinsert the SIM card**：SIM 卡和 Wi‑Fi 故障不直接相关
+- **Forget all networks and try to reconnect**：这通常是后续步骤，不如先重置 Wi‑Fi adapter 更基础
+
+### 最简单记忆
+题目如果是：
+- **某个特定功能失灵**
+- 又问 **best first step**
+
+先想：
+### **先重置那个功能本身**
+
+所以：
+- Wi‑Fi 出问题 → 先重启 Wi‑Fi
+- 蓝牙出问题 → 先重启蓝牙
+- 不是先整机硬重启
+
+**一句话：**
+这题关键是“先局部重置，再全局重启”：Wi‑Fi 有问题，考试里最标准的第一步是先重置 Wi‑Fi adapter。
 
