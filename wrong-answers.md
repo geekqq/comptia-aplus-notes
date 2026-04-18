@@ -4848,4 +4848,90 @@ VoIP 题里：
 
 **一句话：**
 红叉 + 没活动连接，先查“网卡有没有起来”和“网线有没有接好”，这是最标准的 first steps。
+---
+
+## 游戏高延迟/lag spikes：先想后台进程和带宽占用
+![Gaming latency bandwidth background processes question](images/2026-04-18-gaming-latency-bandwidth-background-processes.jpg)
+
+**题干：** A user notices their online gaming experience suffers from high network latency and lag spikes. What common internal factors on their computer could explain these symptoms, particularly if they have many installed programs? (Select 2 answers)
+
+**正确答案：**
+- **Ongoing background processes or updates are slowing down the network connection**
+- **Other, currently active applications are consuming bandwidth**
+
+### 这题为什么容易错
+因为你看到：
+- **lag spikes**
+- **gaming performance**
+
+很容易联想到：
+- 过热
+- 服务器问题
+- 帧率下降
+
+但题目真正的关键词是：
+### **high network latency**
+而且还特别提示：
+### **particularly if they have many installed programs**
+
+这就是在暗示：
+- 后台程序多
+- 更新服务多
+- 同时运行的应用多
+- 带宽被别的进程抢走了
+
+### 为什么正确答案是这两个
+#### 1. Ongoing background processes or updates are slowing down the network connection
+很多安装的软件会在后台：
+- 自动更新
+- 同步数据
+- 上传下载
+- 检查服务
+
+这些都会让网络变慢，造成：
+- latency 升高
+- lag spikes
+- 游戏延迟不稳定
+
+#### 2. Other, currently active applications are consuming bandwidth
+比如：
+- 浏览器下载
+- 云同步
+- 视频播放
+- 后台更新器
+- 其他联网应用
+
+这些会直接吃掉带宽，导致在线游戏延迟变高。
+
+### 为什么 overheating 不对
+- 过热更容易导致：
+  - 掉帧
+  - 降频
+  - 性能下降
+- 但题目强调的是：
+  ### **network latency**
+- 所以它不是最佳答案
+
+### 为什么 remote game servers overloaded 不对
+- 这个选项确实可能导致游戏卡
+- 但题目问的是：
+  > **common internal factors on their computer**
+- 服务器过载是外部因素，不是电脑内部因素
+
+### 为什么 graphics options 太高也不对
+- 图形设置太高会影响 FPS
+- 但不会是题目这里想考的“高网络延迟”的核心解释
+
+### 最简单记忆
+看到：
+- **network latency**
+- **lag spikes**
+- **many installed programs**
+
+先想：
+- **后台更新/后台进程**
+- **其他程序占带宽**
+
+**一句话：**
+这题不是在考显卡或服务器，而是在考电脑内部哪些程序正在偷偷吃网络带宽，导致游戏高延迟和卡顿尖峰。
 
