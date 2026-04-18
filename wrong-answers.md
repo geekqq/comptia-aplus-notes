@@ -4508,4 +4508,81 @@ digitizer 预防就记三件事：
 
 **一句话：**
 看到随机花屏和彩色闪烁像素，优先想到显卡过热或故障，而不是显示器背光坏掉。
+---
+
+## 画面比屏幕小、四周黑边：先查 native resolution 和显示器缩放
+![Small display black borders question](images/2026-04-17-small-display-black-borders.jpg)
+
+**题干：** A display area on a user's monitor appears significantly smaller than the physical screen size, with black borders on all four sides. Which of the steps listed below would be relevant in troubleshooting this problem? (Select 2 answers)
+
+**正确答案：**
+- **Verify if the resolution is set to the monitor's native resolution**
+- **Modify display scaling in the monitor's built-in on-screen menu**
+
+### 为什么答案是这两个
+题目描述的是：
+- 画面明显比屏幕小
+- 四边都有黑边
+
+这类问题最常见的两个方向就是：
+## 1. 分辨率不对
+如果没有设到显示器的：
+### **native resolution（原生分辨率）**
+就可能出现：
+- 图像缩在中间
+- 黑边
+- 不能铺满屏幕
+
+所以先确认：
+> **resolution 是否设为显示器原生分辨率**
+
+## 2. 显示器自身的缩放/显示模式不对
+有些显示器 OSD 菜单里会有：
+- scaling
+- aspect ratio
+- display mode
+- 1:1 / full / auto
+
+如果这里设置不对，
+也会出现：
+- 四周黑边
+- 图像没铺满
+
+所以：
+> **在显示器内建菜单中调整显示缩放**
+也是标准答案。
+
+### 为什么你选的 OS scale and layout 不对
+你选的是：
+- **Adjust the scale and layout options in the OS display settings**
+
+这个容易错，因为 Windows/macOS 里的 scale（125%、150%）听起来像能把画面变大。
+但它主要影响的是：
+- UI 元素大小
+- 字体大小
+- 图标/界面缩放
+
+它不等于解决：
+### **画面没有正确填满物理屏幕**
+
+所以这题更关键的是：
+- **分辨率**
+- **显示器自身缩放模式**
+而不是 OS 的界面缩放比例。
+
+### 为什么“set scaling to a higher percentage”更不对
+这个更明显是在调 UI 放大比例，
+不是在解决屏幕黑边 / 画面尺寸没铺满的问题。
+
+### 最简单记忆
+看到：
+- **画面缩在中间**
+- **四边黑边**
+
+先查两个东西：
+- **native resolution**
+- **monitor OSD scaling / aspect setting**
+
+**一句话：**
+这题不是在考操作系统 UI 缩放，而是在考“分辨率是否原生”和“显示器自身缩放模式是否正确”。
 
