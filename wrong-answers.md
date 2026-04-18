@@ -4083,4 +4083,69 @@ RAID 控制器或 RAID 阵列发出 **audible alarms（蜂鸣/报警声）**，
 
 **一句话：**
 RAID 一响，先想盘故障和阵列降级，不要先想到系统过热。
+---
+
+## 手机 persistent malware 最稳的清除方式：Factory reset
+![Mobile persistent malware question](images/2026-04-17-mobile-persistent-malware-factory-reset.jpg)
+
+**题干：** Which approach works best for eliminating persistent malware from a mobile device?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Running a reputable anti-malware scan |
+| ✅ 正确答案 | Performing a factory reset of the device |
+
+### 为什么答案是 factory reset
+题目里的关键词是：
+### **persistent malware**
+也就是：
+- 顽固恶意软件
+- 一直残留
+- 不容易被普通清理方式干掉
+
+这时候最稳、最彻底的做法通常就是：
+## **factory reset（恢复出厂设置）**
+
+因为它会：
+- 清掉用户空间里的大部分恶意软件
+- 把设备恢复到初始状态
+- 比单纯扫描/卸载更彻底
+
+### 为什么 anti-malware scan 不对
+你选的：
+- **Running a reputable anti-malware scan**
+
+这个不是完全没用，
+但它更像是：
+- 初步检查
+- 尝试清理
+- 一般性处理
+
+题目问的是：
+> **works best for eliminating persistent malware**
+
+也就是说，要选**最有效、最彻底**的方案。 
+所以标准答案不会是扫描，而是：
+### **factory reset**
+
+### 为什么 hard reset 不是答案
+这个题里容易混：
+- **hard reset**
+- **factory reset**
+
+在很多考试语境里：
+- **hard reset** 更像强制重启/硬重启
+- **factory reset** 才是恢复出厂设置、真正清除数据和配置
+
+所以这里必须选：
+### **factory reset**
+
+### 最简单记忆
+- **scan** → 尝试查杀
+- **safe mode** → 辅助排查
+- **uninstall app** → 针对明显来源
+- **factory reset** → 对 persistent malware 最彻底
+
+**一句话：**
+如果题目强调的是 **persistent malware**，考试里最稳的标准答案通常就是 **factory reset**。
 
