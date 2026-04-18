@@ -5010,4 +5010,71 @@ ISP throttling 当然也可能导致慢，
 
 **一句话：**
 网络拥塞最典型的两个信号就是：**多设备一起慢**，而且**总在高峰时段慢**。
+---
+
+## 只有这台笔记本 Wi‑Fi 老掉线：优先查无线网卡驱动
+![Wi-Fi drops single laptop driver question](images/2026-04-18-wifi-drops-single-laptop-driver.jpg)
+
+**题干：** A user's laptop connects to the wireless network, but the connection is unstable and frequently drops, even after forcing reconnection and restarting the system. Other nearby devices on the same network are functioning normally. Which action should the technician take to resolve the problem?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Check the router's logs for unusual activity |
+| ✅ 正确答案 | Update or reinstall the laptop's wireless adapter driver |
+
+### 为什么答案是无线网卡驱动
+题目里的关键线索是：
+- 只有 **这台 laptop** 有问题
+- 其他 nearby devices 在同一个网络上都正常
+- 说明问题更像是：
+  ## **单机问题**
+  而不是路由器整体问题
+
+再加上：
+- 已经试过重新连接
+- 也已经重启系统
+- 但还是频繁掉线
+
+这时很合理的下一步就是：
+### **更新或重装无线网卡驱动**
+
+因为驱动异常、兼容性问题、驱动损坏，都可能导致：
+- Wi‑Fi 不稳定
+- 反复断连
+- 时好时坏
+
+### 为什么你选的 router logs 不对
+你选的是：
+- **Check the router's logs for unusual activity**
+
+如果：
+- 多台设备都出问题
+- 整个网络都不稳定
+- 路由器本身明显异常
+
+那查 router logs 会更有意义。
+
+但这题已经明确告诉你：
+### **其他设备都正常**
+所以这不太像是路由器整体故障。
+
+### 为什么不是 connect to a different Wi‑Fi network
+- 这当然也可以帮助进一步验证
+- 但题目问的是：
+  > **Which action should the technician take to resolve the problem?**
+- 在已知“只有这台机器异常”的前提下，考试更标准的答案还是：
+### **处理本机无线网卡驱动**
+
+### 为什么 malware scan 不对
+- 恶意软件可能影响网络
+- 但这不是这类“单机无线不稳定”题里最典型、最标准的优先处理点
+
+### 最简单记忆
+- **只有一台设备 Wi‑Fi 不稳，其他设备正常**
+  → 先想 **本机无线网卡 / 驱动**
+- **多台设备一起不稳**
+  → 才更像路由器/网络侧问题
+
+**一句话：**
+这题关键是分清“单机问题”和“网络整体问题”：既然别的设备都正常，就该优先修这台笔记本自己的无线网卡驱动。
 
