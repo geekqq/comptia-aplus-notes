@@ -4290,4 +4290,57 @@ digitizer 预防就记三件事：
 
 **一句话：**
 这题关键不是“贴更厚的膜”，而是用更合理的整体防护方案：高质量保护壳 + 屏幕保护，并避免冲击和恶劣环境。
+---
+
+## 手机进水后别漏掉：取出 SIM 卡和存储卡
+![Water spill smartphone question](images/2026-04-17-water-spill-phone-sim-memory.jpg)
+
+**题干：** A user accidentally spills water on their smartphone. What actions should the user take to minimize the damage? (Select all that apply)
+
+**正确答案：**
+- **Leave the device powered off until it dries**
+- **Remove the battery if possible (after disconnecting power)**
+- **Disconnect any external accessories or cables**
+- **Remove the SIM card and memory card if accessible**
+
+### 你这题其实做得已经很好
+你前面三项都答对了：
+- 保持关机直到干燥
+- 能拆电池就拆电池
+- 断开外部配件和线缆
+
+你唯一漏掉的是：
+### **Remove the SIM card and memory card if accessible**
+
+### 为什么这个也要做
+手机进水后，除了保护主板和供电，
+还要尽量：
+- 减少接口/卡槽处残留水分
+- 保护 SIM 卡和存储卡本身
+- 让设备更容易彻底干燥
+
+所以如果能安全取出：
+- **SIM 卡**
+- **memory card**
+
+也属于标准的减损步骤。
+
+### 为什么吹风机不对
+题目里那个错误选项：
+- **Use a direct heat source (e.g., a hairdryer)**
+
+这个不推荐，因为：
+- 热风可能把水分吹到更深处
+- 可能导致元件受热损伤
+- 不是标准安全做法
+
+### 最简单记忆
+手机进水先做四件事：
+- **断电 / 不要开机**
+- **拆掉可拆电池**
+- **拔掉线缆和配件**
+- **能拿出来的卡（SIM / memory card）先拿出来**
+
+**一句话：**
+你这题差一点点，核心补充就是：手机进水后，别忘了把可取出的 **SIM 卡和存储卡** 也拿出来，减少损伤并帮助干燥。
 
