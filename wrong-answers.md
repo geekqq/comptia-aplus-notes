@@ -4403,4 +4403,51 @@ digitizer 预防就记三件事：
 
 **一句话：**
 这题关键是“先局部重置，再全局重启”：Wi‑Fi 有问题，考试里最标准的第一步是先重置 Wi‑Fi adapter。
+---
+
+## 现代手机电池别老是完全放空再充满
+![Modern battery full discharge myth question](images/2026-04-17-modern-battery-full-discharge-myth.jpg)
+
+**题干：** Why is the following statement incorrect? “To keep the battery in good condition, it is best to regularly allow it to fully discharge before recharging it back to 100%, as this practice helps preserve the lifespan of modern mobile device batteries.”
+
+### 为什么这段话是错的
+这段话把：
+- **老式电池时代的习惯**
+错误地套到了：
+- **现代移动设备常见的锂电池**
+上。
+
+现代手机/平板最常见的是：
+- **Lithium-ion (Li-ion)**
+- **Lithium-polymer (Li-polymer)**
+
+这类电池通常：
+## **不喜欢频繁深度放电**
+
+也就是说：
+- 不应该经常故意用到 0%
+- 再从 0% 充回 100%
+- 这种做法并不会“保养寿命”
+- 反而可能增加电池压力
+
+### 为什么很多人会误会
+这个误区很多来自以前的：
+- **NiCd（镍镉）电池**
+- 以及“memory effect（记忆效应）”的旧观念
+
+但现代锂电池并不适用这套逻辑。
+
+### 现代电池更合理的使用思路
+考试里不用死背具体百分比，
+但大方向要记住：
+- **不用刻意完全放空**
+- **随用随充通常没问题**
+- **尽量避免长期极端状态（比如长期 0% 或长期高温满电）**
+
+### 最简单记忆
+- **老观念**：用到没电再充
+- **现代锂电池**：别老是完全放空
+
+**一句话：**
+这题错在把“完全放空再充满”当成现代手机电池保养原则；但对今天常见的锂电池来说，频繁深度放电并不会延长寿命，反而更伤电池。
 
