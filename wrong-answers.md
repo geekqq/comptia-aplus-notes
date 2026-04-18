@@ -4213,4 +4213,81 @@ RAID 一响，先想盘故障和阵列降级，不要先想到系统过热。
 
 **一句话：**
 这题关键不是你选项完全离谱，而是考试特别强调 **first step** —— 先 power cycle，再考虑更具体的物理排查。
+---
+
+## 降低 digitizer 问题风险：保护设备，不是加厚贴膜
+![Digitizer prevention question](images/2026-04-17-digitizer-prevention.jpg)
+
+**题干：** Which of the following measures reduce the risk of digitizer issues on a mobile device? (Select 3 answers)
+
+**正确答案：**
+- **Avoid dropping the device or applying excessive pressure to the screen**
+- **Use a high-quality case and screen guard for impact resistance**
+- **Keep the device away from moisture and extreme temperatures**
+
+### 你这题错在哪里
+你前两个正确点其实已经抓到了：
+- 不要摔、不压屏幕
+- 远离潮湿和极端温度
+
+你错在把：
+- **Use a thicker screen protector to shield against extreme impacts**
+选进去了
+而漏掉了：
+- **Use a high-quality case and screen guard for impact resistance**
+
+### 为什么“high-quality case and screen guard”是对的
+digitizer 问题很多和：
+- 跌落
+- 冲击
+- 挤压
+- 外部损伤
+有关
+
+所以正确的预防思路是：
+### **整体保护设备**
+也就是：
+- 用靠谱的保护壳
+- 配合合适的屏幕保护方案
+
+这比“单纯变厚”更合理，也更符合考试标准答案。
+
+### 为什么“thicker screen protector”不对
+这个选项很迷惑人，因为听起来像：
+> 更厚 = 更安全
+
+但考试这里不认可这种说法，原因是：
+- “更厚”不等于更好
+- 过厚保护膜反而可能影响触控体验
+- 也不是 digitizer protection 的标准表述
+
+题目更接受的是：
+### **high-quality case + screen guard**
+而不是：
+### **thicker protector**
+
+### 为什么另外两个正确选项成立
+#### 1. Avoid dropping / excessive pressure
+- digitizer 很怕冲击和挤压
+- 这是最直接的预防措施
+
+#### 2. Keep away from moisture and extreme temperatures
+- 湿气、温度异常会影响触控层和设备稳定性
+- 也会增加故障风险
+
+### 为什么 stylus 那项不是答案
+- 正常使用 stylus 并不是导致 digitizer 问题的核心风险
+- 题目更关注的是：
+  - 冲击
+  - 环境损伤
+  - 物理防护
+
+### 最简单记忆
+digitizer 预防就记三件事：
+- **别摔别压**
+- **用好壳 + 屏幕保护**
+- **远离潮湿和极端温度**
+
+**一句话：**
+这题关键不是“贴更厚的膜”，而是用更合理的整体防护方案：高质量保护壳 + 屏幕保护，并避免冲击和恶劣环境。
 
