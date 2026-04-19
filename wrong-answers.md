@@ -5211,4 +5211,60 @@ benchmark 更像是：
 
 **一句话：**
 port flapping 最常见先从物理层入手，所以 first step 是先检查 physical connections，而不是先重启设备。
+---
+
+## UTP 最容易受干扰，但现实里也最常见
+![UTP susceptible interference question](images/2026-04-18-utp-most-susceptible-interference.jpg)
+
+**题干：** Which of the following cable types is most susceptible to external interference?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | [用户原题截图中的误选项] |
+| ✅ 正确答案 | UTP |
+
+### 为什么答案是 UTP
+**UTP = Unshielded Twisted Pair**
+重点就在：
+### **Unshielded（没有屏蔽层）**
+
+所以在这些常见线材里：
+- **UTP**：没有额外屏蔽，最容易受 EMI / RFI 干扰
+- **STP**：有屏蔽层，比 UTP 更抗干扰
+- **Coaxial**：本身有屏蔽结构，抗干扰比 UTP 强
+- **Fiber optic**：走光信号，几乎不受电磁干扰
+
+所以考试里一旦问：
+> **most susceptible to external interference**
+标准答案就是：
+## **UTP**
+
+### 为什么现实里我们却最常见 UTP
+这题容易让人困惑的点就在这里：
+- **最容易受干扰**
+并不等于
+- **不能用 / 不常见**
+
+现实里 UTP 反而最常见，因为它：
+- 更便宜
+- 更轻、更软、好布线
+- 一般家庭和办公室环境下通常已经够用
+- 双绞结构本身也能抵消一部分干扰
+
+### 为什么不是大家都用 STP
+因为 STP 虽然更抗干扰，但也有代价：
+- 更贵
+- 更硬
+- 安装更麻烦
+- 接地要求更高
+
+所以不是所有场景都值得上 STP。
+
+### 最简单记忆
+- **UTP** → 最常见，但也最怕外部干扰
+- **STP** → 更抗干扰，但更贵更麻烦
+- **Fiber** → 最不怕 EMI
+
+**一句话：**
+UTP 之所以是这题答案，是因为它在常见线材里最容易受外部干扰；但现实里它仍最常见，是因为便宜、好装，而且普通环境下通常已经够用了。
 
