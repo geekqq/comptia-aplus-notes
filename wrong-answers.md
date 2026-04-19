@@ -5267,4 +5267,64 @@ port flapping 最常见先从物理层入手，所以 first step 是先检查 ph
 
 **一句话：**
 UTP 之所以是这题答案，是因为它在常见线材里最容易受外部干扰；但现实里它仍最常见，是因为便宜、好装，而且普通环境下通常已经够用了。
+---
+
+## Fiber optic 对外部电磁干扰几乎免疫
+![Fiber optic immunity interference question](images/2026-04-18-fiber-optic-immunity-interference.jpg)
+
+**题干：** Which network cabling provides immunity against external interference?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | UTP |
+| ✅ 正确答案 | Fiber optic |
+
+### 对，你这里可以直接这样记
+## **光纤线最抗电磁干扰**
+更准确一点说：
+### **Fiber optic 对外部电磁干扰几乎免疫**
+
+### 为什么答案是 Fiber optic
+因为光纤传输的不是电信号，
+而是：
+## **光信号**
+
+所以它不像铜缆那样会受到：
+- EMI（electromagnetic interference，电磁干扰）
+- RFI（radio frequency interference，射频干扰）
+
+影响。
+
+也正因为这样，考试里只要看到：
+> **immunity against external interference**
+最标准答案通常就是：
+## **Fiber optic**
+
+### 和上一题怎么配对记
+你前一题是：
+> **most susceptible to external interference**
+答案是：
+### **UTP**
+
+这一题是：
+> **provides immunity against external interference**
+答案是：
+### **Fiber optic**
+
+所以你可以成对背：
+- **UTP** → 最怕外部干扰
+- **Fiber optic** → 最不怕外部干扰
+
+### 顺手比较一下
+- **UTP** → 无屏蔽，最容易受干扰
+- **STP** → 有屏蔽，比 UTP 更抗干扰
+- **Coaxial** → 也有屏蔽，抗干扰比 UTP 强
+- **Fiber optic** → 走光，不走电，几乎不受 EMI 影响
+
+### 最简单记忆
+- **most susceptible** → UTP
+- **most immune / immunity** → Fiber optic
+
+**一句话：**
+对，光纤线可以直接记成：**最抗电磁干扰**；因为它传的是光，不是电。
 
