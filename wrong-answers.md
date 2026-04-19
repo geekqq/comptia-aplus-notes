@@ -5392,4 +5392,64 @@ UTP 之所以是这题答案，是因为它在常见线材里最容易受外部�
 
 **一句话：**
 这题关键是分清“内网正常、外网异常”：既然问题已经明确落在 WAN side signal loss，上一步排查完成后，最合理的下一步就是联系 ISP。
+---
+
+## 喷墨打印机 grinding noise 别漏掉：paper feed rollers
+![Inkjet grinding noise rollers question](images/2026-04-18-inkjet-grinding-noise-rollers.jpg)
+
+**题干：** In an inkjet printer, which issues are commonly associated with a grinding noise? (Select 3 answers)
+
+**正确答案：**
+- **Worn, damaged or misaligned paper feed rollers**
+- **Small paper pieces or foreign objects stuck in the paper path**
+- **Printhead carriage mechanism malfunctions (e.g., misaligned or obstructed carriage)**
+
+### 这题你这次错在哪里
+你这次其实已经抓到两项了：
+- 纸路里有异物
+- 喷头小车机构异常
+
+你漏掉的是：
+### **Worn, damaged or misaligned paper feed rollers**
+
+而你错选的是：
+- **Worn or damaged gears and bearings affecting the drum unit**
+
+### 为什么 paper feed rollers 是对的
+喷墨打印机如果出现 grinding noise，
+很常见的机械来源就是：
+- 进纸滚轮磨损
+- 滚轮错位
+- 滚轮损坏
+- 滚轮摩擦异常
+
+所以：
+### **paper feed rollers**
+是非常典型的正确答案。
+
+### 为什么 drum unit 不对
+这题的关键还是：
+## **题目说的是 inkjet printer**
+
+而：
+- **drum unit**
+- **fuser rollers**
+
+这些更偏：
+### **laser printer（激光打印机）**
+的思路，
+不是喷墨打印机这题的正确方向。
+
+### 最简单记忆
+喷墨打印机 grinding noise 先想三件事：
+- **paper feed rollers**
+- **paper path 里有异物**
+- **printhead carriage 小车机构**
+
+不要先想：
+- drum unit
+- fuser
+
+**一句话：**
+这题核心还是“先分清 inkjet 还是 laser”：只要是喷墨打印机 grinding noise，优先查进纸滚轮、纸路异物、喷头小车，不要跳到 drum unit 上去。
 
