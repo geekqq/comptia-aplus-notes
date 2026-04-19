@@ -5327,4 +5327,69 @@ UTP 之所以是这题答案，是因为它在常见线材里最容易受外部�
 
 **一句话：**
 对，光纤线可以直接记成：**最抗电磁干扰**；因为它传的是光，不是电。
+---
+
+## 局域网正常但 WAN 反复掉线：下一步联系 ISP
+![WAN signal loss contact ISP question](images/2026-04-18-wan-signal-loss-contact-isp.jpg)
+
+**题干：** A technician is called to a small office where users are experiencing random Internet connection drops. Network cabling has been checked and confirmed to be intact, and ping tests to the local gateway remain successful even during the outages. The office uses a commercial-grade router and switch, both of which pass diagnostics, but the router's admin interface logs show repeated signal loss on the WAN side. What is the most appropriate next step?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Restart the router |
+| ✅ 正确答案 | Contact the ISP |
+
+### 为什么答案是 Contact the ISP
+这题其实线索已经给得很完整了：
+- **内网线缆已经检查过，完好**
+- **ping 本地网关在故障期间仍然成功**
+- **路由器和交换机诊断也通过**
+- 但 **WAN side 日志反复显示 signal loss**
+
+这说明什么？
+## **局域网内部基本没问题，问题更像出在 ISP / 外线 / WAN 侧**
+
+所以最合适的下一步就是：
+### **联系 ISP**
+
+### 为什么 restart the router 不对
+你选的：
+- **Restart the router**
+
+如果前面还没做基础排查，重启当然常见。 
+但这题已经明确告诉你：
+- 本地网关没问题
+- 设备诊断也通过
+- WAN side 明确报 signal loss
+
+这种时候再去重启路由器，
+不是最合适的“下一步”。
+
+### 为什么 firewall rules 不对
+- 防火墙规则问题更可能导致：
+  - 某些流量被拦
+  - 特定服务不通
+- 但题目是：
+  - **random Internet connection drops**
+  - **WAN signal loss**
+- 这不是 firewall 典型表现。
+
+### 为什么 speed test 不对
+- speed test 更适合测快慢
+- 但这里已经不是“慢不慢”的问题，
+而是：
+### **WAN 侧反复掉线 / 丢信号**
+- 所以 speed test 并不是最合适下一步。
+
+### 最简单记忆
+看到：
+- **local gateway 正常**
+- **LAN 没问题**
+- **WAN logs show signal loss**
+
+就优先想到：
+### **联系 ISP**
+
+**一句话：**
+这题关键是分清“内网正常、外网异常”：既然问题已经明确落在 WAN side signal loss，上一步排查完成后，最合理的下一步就是联系 ISP。
 
