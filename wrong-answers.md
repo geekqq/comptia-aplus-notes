@@ -5151,4 +5151,64 @@ benchmark 更像是：
 
 **一句话：**
 这题考的是手机变慢时最基础的 first-step 处理：先清缓存，再删掉不用的 App，而不是先跑 benchmark。
+---
+
+## Port flapping 先查物理连接，不是先重启设备
+![Port flapping first step question](images/2026-04-18-port-flapping-first-step.jpg)
+
+**题干：** What is the recommended first step when troubleshooting port flapping?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Restart the device |
+| ✅ 正确答案 | Check physical connections |
+
+### 为什么答案是 Check physical connections
+**Port flapping** 通常指的是：
+- 端口一会儿 up
+- 一会儿 down
+- 链路反复跳动
+
+这种情况最先该怀疑的就是：
+### **物理层问题**
+比如：
+- 网线松动
+- 接口接触不良
+- 模块没插牢
+- 线缆损坏
+- 端口本身物理不稳定
+
+所以 first step 最标准的就是：
+## **先检查 physical connections**
+
+### 为什么 restart the device 不对
+重启设备不是绝对不能做，
+但它不是最基础、最直接的第一步。
+
+题目问的是：
+### **recommended first step**
+
+而 port flapping 是很典型的：
+### **先查线、查口、查连接**
+
+不是一上来先重启。
+
+### 为什么其他选项更靠后
+- **Disable all unused physical ports**：和当前这个 flapping 端口不直接相关
+- **Update the device's firmware**：属于更后面的排查/修复动作，不是最初步的检查
+
+### 最简单记忆
+看到：
+- **port flapping**
+
+第一反应就记：
+### **物理层先查**
+也就是：
+- 线
+- 口
+- 接头
+- 模块
+
+**一句话：**
+port flapping 最常见先从物理层入手，所以 first step 是先检查 physical connections，而不是先重启设备。
 
