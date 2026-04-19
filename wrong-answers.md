@@ -5666,4 +5666,63 @@ EMI 更多是：
 
 **一句话：**
 防静电用品防的是 **ESD（Electrostatic Discharge，静电放电）**，不是 EMI。
+---
+
+## BIOS/UEFI 设置保存在 CMOS，不是 ROM
+![CMOS vs ROM BIOS settings question](images/2026-04-18-cmos-vs-rom-bios-settings.jpg)
+
+**题干：** Which hardware component in a PC stores BIOS/UEFI configuration settings and retains them using battery power?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | ROM |
+| ✅ 正确答案 | CMOS |
+
+### 这题核心怎么理解
+题目问的不是：
+- BIOS/UEFI 程序代码本身存在哪
+
+而是问：
+- **BIOS/UEFI 的配置设置（configuration settings）存在哪**
+- 而且还强调：
+  > **retains them using battery power**
+
+这里的关键词已经直接在提示：
+## **CMOS**
+
+### 为什么答案是 CMOS
+CMOS 在考试语境里通常就是：
+- 存放 BIOS/UEFI 设置参数
+- 比如日期时间、启动顺序、硬件配置选项等
+- 靠主板上的电池维持这些设置不丢失
+
+所以一看到：
+- **settings**
+- **battery power**
+
+就应该优先想到：
+### **CMOS**
+
+### 为什么 ROM 不对
+你选的 ROM 更像是：
+- 固件程序本体所在的位置（更偏只读固件存储概念）
+- 不是这题要考的“靠电池维持的 BIOS 配置参数”
+
+也就是说：
+- **ROM / flash** → 更偏 BIOS/UEFI 程序代码
+- **CMOS** → 更偏 BIOS/UEFI 设置参数
+
+### 另外两个为什么不对
+- **SRAM**：虽然有些底层实现会涉及，但考试里标准答案不是这样答
+- **EEPROM**：也更偏存储技术类型，不是这题 A+ 最标准的概念答案
+
+### 最简单记忆
+- **BIOS 程序** → 想固件/flash/ROM
+- **BIOS 设置 + 电池供电保持** → 想 **CMOS**
+
+### 一句话口诀
+## **程序看 BIOS，设置看 CMOS。**
+
+**一句话：**
+这题错在把“BIOS 程序本体”和“BIOS 设置参数”混了；考试里凡是问“靠电池维持的 BIOS/UEFI 设置”，标准答案几乎都是 **CMOS**。
 
