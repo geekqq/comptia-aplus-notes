@@ -5452,4 +5452,70 @@ UTP 之所以是这题答案，是因为它在常见线材里最容易受外部�
 
 **一句话：**
 这题核心还是“先分清 inkjet 还是 laser”：只要是喷墨打印机 grinding noise，优先查进纸滚轮、纸路异物、喷头小车，不要跳到 drum unit 上去。
+---
+
+## IMAP 不是发信，SMTP 才是发信
+![IMAP vs SMTP question](images/2026-04-18-imap-vs-smtp.jpg)
+
+**题干：** IMAP is used for:
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Sending email messages |
+| ✅ 正确答案 | Retrieving email messages from a mail server |
+
+### 为什么这题容易混
+因为：
+- **IMAP**
+- **POP3**
+- **SMTP**
+
+这三个都是邮件相关协议，
+最容易在考试里串掉。
+
+### 最核心先记住
+- **SMTP = 发信**
+- **POP3 / IMAP = 收信**
+
+所以这题：
+### **IMAP**
+不是拿来发送邮件的，
+而是用来：
+### **从邮件服务器读取 / 同步邮件**
+
+### 为什么答案是 IMAP = retrieving email
+IMAP 的典型用途是：
+- 从邮件服务器查看邮件
+- 保持邮件在服务器上
+- 多设备同步邮箱状态
+
+所以标准答案是：
+> **Retrieving email messages from a mail server**
+
+### 为什么 sending email 是 SMTP
+发送邮件对应的是：
+## **SMTP = Simple Mail Transfer Protocol**
+
+考试里只要看到：
+- **send email**
+- **outgoing mail**
+
+就先想：
+### **SMTP**
+
+### POP3 和 IMAP 顺手区分
+- **POP3** → 收邮件，偏下载到本地
+- **IMAP** → 收邮件，偏服务器同步
+- **SMTP** → 发邮件
+
+### 最简单记忆法
+- **SMTP** → **S = Send**
+- **POP3** → **P = Pull**（拉下来）
+- **IMAP** → **邮件留在服务器同步看**
+
+### 一句话口诀
+## **SMTP 发，POP3 收，IMAP 也是收，但更偏同步。**
+
+**一句话：**
+这题错在把 IMAP 和 SMTP 混了；IMAP 用来从服务器读取/同步邮件，真正负责发邮件的是 SMTP。
 
