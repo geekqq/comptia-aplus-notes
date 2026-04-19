@@ -5597,4 +5597,73 @@ IMAP 的典型用途是：
 
 ### 一句话记忆
 **AES 是现代主流强加密；DES、RC4、3DES 都是更老、更弱或已过时的方案。**
+---
+
+## 防静电用品防的是 ESD，不是 EMI
+![ESD antistatic protection question](images/2026-04-18-esd-antistatic-protection.jpg)
+
+**题干：** Antistatic bags, antistatic wrist straps, and ground mats are all countermeasures used to protect computer and communications equipment components against:
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | EMI |
+| ✅ 正确答案 | ESD |
+
+### 这题你卡住的点
+你已经知道这题在说：
+### **防静电**
+但一时没想起来英文缩写是什么。
+
+答案是：
+## **ESD = Electrostatic Discharge**
+中文就是：
+### **静电放电**
+
+### 为什么答案是 ESD
+题目里的这些东西：
+- **antistatic bags**
+- **antistatic wrist straps**
+- **ground mats**
+
+都是典型的：
+## **防静电措施**
+
+它们的作用是保护电脑零件，避免被：
+### **ESD（静电放电）**
+打坏。
+
+### 为什么 EMI 不对
+你选的：
+## **EMI = Electromagnetic Interference**
+中文是：
+### **电磁干扰**
+
+EMI 更多是：
+- 信号受干扰
+- 通信受影响
+- 线缆、设备之间的电磁影响
+
+而不是“人身上的静电把电子元件打坏”这种场景。
+
+### 顺手把几个缩写区分一下
+- **ESD** = Electrostatic Discharge = 静电放电
+- **EMI** = Electromagnetic Interference = 电磁干扰
+- **RFI** = Radio Frequency Interference = 射频干扰
+- **EFT** = Electrical Fast Transient = 快速电瞬变
+
+### 最简单记忆
+看到：
+- 防静电袋
+- 防静电手环
+- 接地垫
+
+就直接想到：
+## **ESD**
+
+你可以这样背：
+### **Static → ESD**
+### **Interference → EMI / RFI**
+
+**一句话：**
+防静电用品防的是 **ESD（Electrostatic Discharge，静电放电）**，不是 EMI。
 
