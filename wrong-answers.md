@@ -6762,4 +6762,93 @@ PUP 不是“纯恶意软件”那种黑白分明的东西，而是那种用户�
 
 ## 一句话总结
 **这题的关键不是逐个猜缩写，而是分清层级：题目问的是“软件、平台、基础设施等各种服务的远程交付总称”，所以答案是 XaaS；FaaS 只是其中某一种具体服务形态。**
+---
+
+## 题目说 parallel interface standards，就想到 SCSI，不是 PCIe
+![SCSI vs PCIe parallel interface question](images/2026-04-19-scsi-vs-pcie-parallel-interface.jpg)
+
+**题干：** Which of the answers listed below refers to a set of parallel interface standards designed for connecting peripheral devices?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | PCIe |
+| ✅ 正确答案 | SCSI |
+
+### 这题为什么容易错
+因为你前面刚学了：
+- **PCI = Peripheral Component Interconnect**
+- peripheral devices
+
+所以这题一看到：
+### **connecting peripheral devices**
+很容易又往 PCI / PCIe 那边跑。
+
+但这题真正决定答案的关键词不是 peripheral，
+而是：
+## **a set of parallel interface standards**
+
+### 为什么答案是 SCSI
+## **SCSI = Small Computer System Interface**
+它是一组接口标准，
+历史上常用于连接：
+- 硬盘
+- 扫描仪
+- 磁带机
+- 光驱
+- 其他外围设备
+
+而且经典 SCSI 很重要的一个特征就是：
+### **早期/经典 SCSI 是并行接口（parallel）**
+
+所以题目问：
+> **a set of parallel interface standards**
+这正好对应：
+## **SCSI**
+
+### 为什么 PCIe 不对
+## **PCIe = PCI Express**
+它是：
+- 主板扩展总线
+- 串行（serial）高速互连
+- 给显卡、网卡、NVMe 扩展卡等用
+
+重点是：
+### **Express = 现代高速串行总线**
+
+所以它和题目里的：
+### **parallel interface standards**
+不匹配。
+
+### 为什么 SATA 不对
+- SATA 也是串行接口
+- 它的名字就有：
+### **Serial ATA**
+- 所以也不可能是 parallel
+
+### 为什么 NVMe 不对
+- NVMe 是存储协议 / 接口生态里的现代方案
+- 更偏基于 PCIe 的高速存储
+- 也不是题目说的“parallel interface standards”
+
+### 最简单记忆
+如果题目出现：
+- **parallel**
+- **older peripheral interface**
+
+先想：
+## **SCSI**
+
+如果题目出现：
+- **PCIe**
+- **Express**
+- **high-speed expansion**
+
+就记住：
+## **它是串行，不是并行**
+
+### 一句话口诀
+## **SCSI 老并行，SATA/PCIe 都是串行。**
+
+**一句话：**
+这题错在被 “peripheral devices” 带偏了；真正决定答案的是 **parallel interface standards**，而经典符合这个描述的是 **SCSI**，不是 PCIe。
 
