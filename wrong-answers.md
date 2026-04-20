@@ -6065,4 +6065,93 @@ UTM 常常会整合：
 
 **一句话：**
 UTM 就是 **Unified Threat Management**，意思是一台设备/平台统一提供多种安全防护，是“单点整合多种威胁防护”的典型答案。
+---
+
+## Peripheral devices 在这题里指扩展卡类设备，所以答案是 PCI
+![PCI vs PS2 peripheral bus question](images/2026-04-19-pci-vs-ps2-peripheral-bus.jpg)
+
+**题干：** Which of the following terms refers to an older hardware bus standard, now largely deprecated, used to connect peripheral devices directly to a computer’s motherboard?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | PS/2 |
+| ✅ 正确答案 | PCI |
+
+### 你这题真正卡住的点
+不是单纯不知道 PCI，
+而是：
+## **没完全理解 peripheral devices 在这题里的意思**
+
+### peripheral device 一般指什么
+**Peripheral device** 广义上就是：
+> **围绕主机工作的外设 / 外围设备**
+
+常见包括：
+- 键盘
+- 鼠标
+- 打印机
+- 显示器
+- 声卡
+- 网卡
+- 显卡
+- 存储控制卡
+
+但在这道题里，
+它不是在强调“键盘鼠标接口”那种外设，
+而是在说：
+### **直接接到主板扩展总线上的外围设备/扩展卡**
+
+这时候最符合题意的就是：
+## **PCI**
+
+### 为什么答案是 PCI
+**PCI = Peripheral Component Interconnect**
+中文可以理解成：
+### **外围组件互连总线**
+
+它就是一种比较老的主板扩展总线标准，
+用来把各种扩展卡直接插到主板上。
+
+例如以前常见用 PCI 接的：
+- 声卡
+- 网卡
+- 电视卡
+- USB 扩展卡
+- 某些控制卡
+
+所以题目说：
+- **older hardware bus standard**
+- **used to connect peripheral devices directly to a computer’s motherboard**
+
+最标准答案就是：
+### **PCI**
+
+### 为什么 PS/2 不对
+你选的：
+## **PS/2**
+它更多是：
+- 键盘/鼠标接口标准
+- 不是主板扩展总线（bus standard）
+
+也就是说：
+- **PS/2** 是一种外设接口
+- **PCI** 是一种主板扩展总线
+
+这题考的是后者。
+
+### 另外两个为什么不对
+- **S/PDIF**：数字音频接口，不是主板扩展总线
+- **COM**：串口（serial port），也不是主板扩展总线
+
+### 最简单记忆
+- **PCI** → 主板扩展总线，插扩展卡
+- **PS/2** → 键盘鼠标接口
+- **COM** → 串口
+- **S/PDIF** → 数字音频接口
+
+### 一句话口诀
+## **PCI 是总线，PS/2 是接口。**
+
+**一句话：**
+这题里的 peripheral devices 更偏“扩展卡类外围设备”，所以问到“老的主板总线标准”，答案是 **PCI**，不是 PS/2。
 
