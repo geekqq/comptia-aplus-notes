@@ -5725,4 +5725,68 @@ CMOS 在考试语境里通常就是：
 
 **一句话：**
 这题错在把“BIOS 程序本体”和“BIOS 设置参数”混了；考试里凡是问“靠电池维持的 BIOS/UEFI 设置”，标准答案几乎都是 **CMOS**。
+---
+
+## 保护机密信息不被乱传：DLP，不是 EDR
+![DLP vs EDR question](images/2026-04-19-dlp-vs-edr.jpg)
+
+**题干：** Which of the following answers refers to a software- or hardware-based security solution designed to detect and prevent the unauthorized use or transmission of confidential information?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | EDR |
+| ✅ 正确答案 | DLP |
+
+### 为什么答案是 DLP
+这题的关键词非常明确：
+- **detect and prevent**
+- **unauthorized use or transmission**
+- **confidential information**
+
+这其实就是在描述：
+## **DLP = Data Loss Prevention**
+
+中文可以理解成：
+### **数据泄露防护 / 数据丢失防护**
+
+它的核心目标就是：
+- 识别敏感数据
+- 防止敏感数据被未授权地复制、发送、上传、外传
+
+比如防止：
+- 员工把公司机密发到私人邮箱
+- 把敏感文件拷到 U 盘
+- 把机密内容上传到外部云盘
+
+### 为什么 EDR 不对
+你选的：
+## **EDR = Endpoint Detection and Response**
+
+它更偏向：
+- 端点安全
+- 检测恶意行为
+- 响应攻击
+- 发现终端被入侵、异常进程、可疑活动
+
+EDR 的重点是：
+### **检测和响应终端威胁**
+不是重点防止机密信息外泄。
+
+### 另外两个为什么不对
+- **DEP** = Data Execution Prevention，偏内存执行保护，防止恶意代码在不该执行的内存区域运行
+- **XDR** = Extended Detection and Response，偏跨多个安全层面的威胁检测与响应
+
+它们都不是这题说的“防止敏感信息被未授权传输”的标准答案。
+
+### 最简单记忆
+- **DLP** → 防数据泄露
+- **EDR** → 查终端威胁
+- **XDR** → 更广范围的检测与响应
+- **DEP** → 防止恶意代码执行
+
+### 一句话口诀
+## **机密数据外泄看 DLP，终端被黑看 EDR。**
+
+**一句话：**
+这题错在把“端点威胁检测”当成了“敏感数据防外泄”；题目描述的其实是 **DLP（Data Loss Prevention）**。
 
