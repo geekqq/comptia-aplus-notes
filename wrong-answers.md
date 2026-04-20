@@ -8007,4 +8007,90 @@ VA 的视角也不该直接打成“low viewing angles”。
 
 **一句话：**
 你错在把“参与安全启动的固件”选成了“安全微控制器”；题目只要看到 **embedded microcontroller + disk encryption + integrity verification**，优先想到 **TPM**。
+---
+
+## 微软强调 resilience / integrity / enterprise storage 时，先想 ReFS，不是 ZFS
+![ReFS vs ZFS Btrfs XFS question](images/2026-04-19-refs-vs-zfs-btrfs-xfs.jpg)
+
+**题干：** Which of the following refers to a Microsoft file system specifically designed for maximum resilience, data integrity, and large-scale storage deployments in enterprise environments?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | ZFS |
+| ✅ 正确答案 | ReFS |
+
+### 为什么这题容易错
+因为你抓到的那几个关键词：
+- resilience
+- data integrity
+- large-scale storage
+
+这些描述确实也很像：
+## **ZFS**
+
+所以你选 ZFS 其实不是瞎选，
+而是：
+### **抓对了“特性”，但没抓住“Microsoft”这个限定词**
+
+### 为什么答案是 ReFS
+## **ReFS = Resilient File System**
+它是：
+### **微软的文件系统**
+
+而且名字里就已经把关键词写出来了：
+- **Resilient**
+
+它就是为了：
+- 更强的数据完整性
+- 更强的容错/抗损能力
+- 更适合企业级、大规模存储场景
+
+所以题目一旦写：
+- **Microsoft file system**
+- **maximum resilience**
+- **data integrity**
+- **large-scale storage deployments**
+
+标准答案就是：
+## **ReFS**
+
+### 为什么 ZFS 不对
+## **ZFS** 也确实很强调：
+- 数据完整性
+- 大容量存储
+- 企业/服务器场景
+
+但它不是微软的文件系统。
+它更常和：
+- Solaris
+- BSD
+- Linux / OpenZFS 生态
+联系起来。
+
+所以这题错就错在：
+### **忘了题目限定的是 Microsoft file system**
+
+### 另外两个顺手区分
+#### Btrfs
+- Linux 常见现代文件系统之一
+- 也强调快照、校验、现代存储特性
+- 不是微软文件系统
+
+#### XFS
+- Linux/Unix 常见高性能文件系统
+- 不是微软文件系统
+
+### 最简单记忆法
+- **ReFS** → Microsoft 企业级弹性文件系统
+- **ZFS** → 很强的大存储/完整性文件系统，但不是 Microsoft
+- **Btrfs / XFS** → 也都不是 Microsoft
+
+### 一句话口诀
+## **题目只要写 Microsoft + resilience，就优先选 ReFS。**
+
+### 再压缩成一句
+## **微软看 ReFS，类企业大存储但非微软常见看 ZFS。**
+
+**一句话：**
+你这题不是不会，而是被 ZFS 的特性吸引过去了；但题目已经明确说了 **Microsoft file system**，所以必须选 **ReFS（Resilient File System）**。
 
