@@ -10343,4 +10343,106 @@ hot swap 不是 adapter 的典型功能，
 
 **一句话：**
 这题就是纯记忆点：**USB 2.0 = 480 Mbps**，你这次是把它往更高代 USB 的速度上带偏了。
+---
+
+## USB 3.0 这题别被 10Gbps 带偏：USB 3.0 = SuperSpeed = 5 Gbps，并向下兼容
+![USB 3.0 vs 2.0 vs 3.1 speeds question](images/2026-04-20-usb-3-0-vs-2-0-vs-3-1-speeds.jpg)
+
+**题干：** Which of the following answers refer to the USB 3.0 standard? (Select 3 answers)
+
+**正确答案：**
+- **Backward compatibility with earlier USB versions**
+- **5 Gbps data transfer rate**
+- **SuperSpeed USB**
+
+### 先回答你
+对，## **USB 3.0 = 5 Gbps**。
+
+你刚才问的“多少米”，
+这里题目里的 **Gbps** 不是“米”，
+而是：
+### **Gigabits per second（每秒多少十亿位）**
+
+也就是：
+## **传输速度单位**
+不是长度单位。
+
+所以：
+- **5 Gbps** = 速度
+- **不是 5 米**
+
+---
+
+## 为什么这题会错
+你已经选对了两个：
+- **Backward compatibility with earlier USB versions** ✅
+- **SuperSpeed USB** ✅
+
+你错在把：
+- **10 Gbps data transfer rate**
+选进去了
+
+而漏掉了：
+- **5 Gbps data transfer rate**
+
+### 这题最核心记忆
+## **USB 3.0 = SuperSpeed = 5 Gbps**
+
+不是：
+- 3 Gbps
+- 10 Gbps
+
+---
+
+## 最简单一起对比
+### USB 1.1
+- **12 Mbps**
+- **Full-Speed USB**
+
+### USB 2.0
+- **480 Mbps**
+- **Hi-Speed USB**
+
+### USB 3.0 / USB 3.1 Gen 1
+- **5 Gbps**
+- **SuperSpeed USB**
+
+### USB 3.1 Gen 2
+- **10 Gbps**
+
+---
+
+## 为什么你会被 10 Gbps 带偏
+因为现在 USB 命名特别容易乱：
+- USB 3.0
+- USB 3.1 Gen 1
+- USB 3.1 Gen 2
+
+其中：
+- **USB 3.0 = USB 3.1 Gen 1 = 5 Gbps**
+- **USB 3.1 Gen 2 = 10 Gbps**
+
+所以题目只要明确说：
+## **USB 3.0**
+就先锁：
+### **5 Gbps + SuperSpeed**
+
+---
+
+## 最简单记忆法
+## **USB 2.0 = 480 Mbps**
+## **USB 3.0 = 5 Gbps**
+## **USB 3.1 Gen 2 = 10 Gbps**
+
+### 一句话口诀
+## **USB2 记 480，USB3 记 5G，3.1 Gen2 才 10G。**
+
+### 再压缩成考试秒杀版
+- **Hi-Speed** → **USB 2.0**
+- **SuperSpeed** → **USB 3.0 / 3.1 Gen 1**
+- **5 Gbps** → **USB 3.0**
+- **10 Gbps** → **USB 3.1 Gen 2**
+
+**一句话：**
+这题错在把 **USB 3.1 Gen 2 的 10 Gbps** 记成了 **USB 3.0**；标准记法是：**USB 3.0 = SuperSpeed = 5 Gbps，并且向下兼容。**
 
