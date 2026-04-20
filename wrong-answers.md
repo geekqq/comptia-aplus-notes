@@ -7370,4 +7370,66 @@ OLED 每个像素自己发光，
 
 **一句话：**
 这题错在把“邮件商务诈骗”看成了“网页请求伪造”；题目描述的是典型 **BEC（Business Email Compromise）**，不是 CSRF。
+---
+
+## 化学品安全信息文档看 MSDS，不是 SOP
+![MSDS vs SOP question](images/2026-04-19-msds-vs-sop.jpg)
+
+**题干：** Which of the following acronyms refers to a document that outlines safety information, hazards, and handling instructions for chemicals or materials?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | SOP |
+| ✅ 正确答案 | MSDS |
+
+### 正确答案先记住
+## **MSDS = Material Safety Data Sheet**
+中文可以理解成：
+### **材料安全数据表 / 化学品安全说明书**
+
+它的作用就是：
+- 列出化学品或材料的危险信息
+- 说明怎么安全处理
+- 告诉你储存、接触、防护、泄漏处理等要求
+
+所以题目说：
+> **safety information, hazards, and handling instructions for chemicals or materials**
+
+标准答案就是：
+## **MSDS**
+
+### 为什么 SOP 不对
+你选的：
+## **SOP = Standard Operating Procedure**
+中文就是：
+### **标准操作流程 / 标准作业程序**
+
+SOP 讲的是：
+- 某项工作应该怎么做
+- 步骤是什么
+- 操作规范是什么
+
+它可以用于很多场景：
+- 维修流程
+- 开机流程
+- 备份流程
+- 实验流程
+
+但它不是专门针对：
+### **化学品安全信息和危害说明**
+所以这题不能选 SOP。
+
+### 另外两个顺手看一下
+- **EPA** → 通常联想到美国环境保护署（Environmental Protection Agency），不是这种文档名称
+- **MSRP** → Manufacturer's Suggested Retail Price，厂商建议零售价，更不相关
+
+### 最简单记忆法
+- **MSDS** → 化学品安全说明书
+- **SOP** → 标准操作流程
+
+### 一句话口诀
+## **化学品安全看 MSDS，做事流程看 SOP。**
+
+**一句话：**
+这题错在把“化学品安全文档”和“操作流程文档”混了；前者是 **MSDS**，后者是 **SOP**。
 
