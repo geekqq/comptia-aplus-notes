@@ -7706,4 +7706,74 @@ DRM 就是通过技术手段控制数字内容的访问和使用，防止未授�
 
 ### 一句话口诀
 ## **小U盘老兼容看 FAT32，大文件U盘看 exFAT，Windows硬盘看 NTFS。**
+---
+
+## “optimized for flash drives” 这种题更偏 exFAT，不是 FAT32
+![exFAT optimized for flash drives question](images/2026-04-19-exfat-optimized-for-flash-drives.jpg)
+
+**题干：** A Microsoft-proprietary file system optimized for flash drives is known as:
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | FAT32 |
+| ✅ 正确答案 | exFAT |
+
+### 这题和你刚刚问的那个点要分开记
+如果题目只是问：
+- **flash drive 常见文件系统**
+- **兼容性最好**
+
+很多时候你会想到：
+## **FAT32**
+
+但这题问得更精确：
+> **Microsoft-proprietary**
+> **optimized for flash drives**
+
+这两个关键词一出来，
+更标准的答案就是：
+## **exFAT**
+
+### 为什么答案是 exFAT
+**exFAT = Extended File Allocation Table**
+它是微软推出、
+专门更适合闪存和移动存储设备的文件系统。
+
+它的典型特点是：
+- 适合 **flash drives / SDXC / 外接移动存储**
+- 支持 **大文件**
+- 没有 FAT32 那个 **4GB 单文件限制**
+- 比 FAT32 更现代
+
+所以题目如果强调：
+### **optimized for flash drives**
+优先想到：
+## **exFAT**
+
+### 为什么 FAT32 这题不对
+因为 FAT32 更像：
+- 老牌、兼容性高
+- 通用性强
+- 但不是这题想考的“微软专门为 flash drive 优化”的那个标准答案
+
+而且 FAT32 还有：
+- **4GB 单文件限制**
+
+所以这题用词更偏向：
+## **exFAT**
+
+### 另外两个为什么不对
+- **NFS** → 网络文件系统（Network File System），不是 U 盘文件系统
+- **CDFS** → 光盘文件系统（CD File System），不是 flash drive 文件系统
+
+### 最简单区分
+- **FAT32** → 通用兼容，老设备友好，但卡 4GB
+- **exFAT** → 更适合闪存/大文件/现代移动存储
+- **NTFS** → Windows 硬盘常见
+
+### 一句话口诀
+## **问“最通用”常想 FAT32；问“flash drive 优化”优先 exFAT。**
+
+**一句话：**
+你刚刚那个泛化记忆没错，但这道题问得更具体：它强调的是 **Microsoft-proprietary + optimized for flash drives**，所以标准答案要选 **exFAT**。
 
