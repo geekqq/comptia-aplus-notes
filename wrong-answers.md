@@ -9974,4 +9974,109 @@ Stone 这块你说得对，**端口号就是硬骨头，但同时也是最值得
 
 **一句话：**
 对，**color gamut 就是色域**；你以后看到 “the range of colors a display can reproduce” 就直接对应 **色域**。
+---
+
+## OLED 这题又错在“亮度”上：考试更稳的三个点是无背光、超薄可弯、黑位/对比度极强
+![OLED key features question](images/2026-04-20-oled-key-features-contrast-black-backlight.jpg)
+
+**题干：** What are the key features of an OLED display? (Select 3 answers)
+
+**正确答案：**
+- **Enables lightweight, bendable, and ultra-slim screens**
+- **Works without backlight**
+- **Provides exceptional contrast ratio and black levels**
+
+### 你这次为什么又错
+你前两项其实已经对了：
+- **Enables lightweight, bendable, and ultra-slim screens** ✅
+- **Works without backlight** ✅
+
+你错在第三项又被：
+### **greater brightness levels**
+带偏了。
+
+但考试里更稳、更核心的 OLED 特征是：
+## **黑位特别好，对比度特别强**
+
+所以应该选：
+### **Provides exceptional contrast ratio and black levels**
+
+---
+
+## OLED 最稳的三个核心标签
+### 1. Works without backlight
+这个你已经记住了。
+
+因为 OLED 每个像素自己发光，
+所以：
+## **不需要背光**
+
+---
+
+### 2. Enables lightweight, bendable, and ultra-slim screens
+因为没有传统 LCD 那套背光结构，
+所以 OLED 更容易做成：
+- 更薄
+- 更轻
+- 可弯曲
+
+这个你也答对了。
+
+---
+
+### 3. Provides exceptional contrast ratio and black levels
+这才是你这次漏掉的最核心考点。
+
+因为像素可以单独关闭，
+所以 OLED 的：
+- 黑色更纯
+- 黑位更深
+- 对比度更强
+
+这基本就是 OLED 最有代表性的卖点之一。
+
+---
+
+## 为什么 greater brightness levels 这题不选
+这类题你最近已经被坑过一次了。
+原因就是：
+### **考试题库更稳地把 OLED 记成“对比和黑位强”，而不是“亮度最强”**
+
+现实世界里不同 OLED / LCD 面板亮度表现会有差异，
+但在这类 A+ 题库里，
+更稳定的正确标签通常是：
+- **no backlight**
+- **excellent contrast / black levels**
+- **thin / bendable**
+
+而不是把 “greater brightness” 当作首选特征。
+
+---
+
+## 为什么 longer lifespan / less burn-in 不对
+这个其实和 OLED 的常见印象相反。
+题库更常记的是：
+- OLED 可能更容易有烧屏/burn-in 风险
+- 寿命并不是它相对 LCD 的绝对强项
+
+所以这项不能选。
+
+---
+
+## 最简单记忆法
+你以后就把 OLED 死记成这三个：
+## **无背光 + 超薄可弯 + 黑位/对比度极强**
+
+不要优先记成：
+- 亮度更高
+- 寿命更长
+- 更不容易 burn-in
+
+---
+
+## 一句话口诀
+## **OLED 看黑、看薄、看自发光；亮度别乱选，寿命别瞎吹。**
+
+**一句话：**
+你这题不是不会，而是又被“亮度更高”这个很像优点的选项带偏了；考试里 OLED 最稳的正确三件套是：**无背光、超薄可弯、黑位和对比度极强。**
 
