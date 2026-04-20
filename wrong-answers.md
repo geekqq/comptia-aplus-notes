@@ -10283,4 +10283,64 @@ hot swap 不是 adapter 的典型功能，
 
 **一句话：**
 你这题错在把“接口标准/设备支持的热插拔能力”当成了“转接头本身的功能”；考试里 cable adapter 最典型的功能还是：**接口形态调整 + 信号转换。**
+---
+
+## USB 2.0 = 480 Mbps，别和 3.x 搞混
+![USB 2.0 speed question](images/2026-04-20-usb-2-0-speed-480-mbps.jpg)
+
+**题干：** USB 2.0 (a.k.a. Hi-Speed USB) specifies the maximum data transfer rate of:
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | 960 Mbps |
+| ✅ 正确答案 | 480 Mbps |
+
+### 正确答案先死记
+## **USB 2.0 = 480 Mbps**
+
+这个就是标准考点，
+没什么花活，
+就是：
+### **Hi-Speed USB = 480 Mbps**
+
+### 你为什么会错成 960 Mbps
+因为 USB 速度数字很容易串，
+尤其：
+- 480
+- 5 Gbps
+- 10 Gbps
+
+看久了会下意识往更大的数字靠。
+
+但：
+## **960 Mbps 不是 USB 2.0 的标准答案**
+
+### 最简单顺手一起记
+#### USB 1.1
+- **12 Mbps**
+- Full-Speed
+
+#### USB 2.0
+- **480 Mbps**
+- Hi-Speed
+
+#### USB 3.0 / USB 3.1 Gen 1
+- **5 Gbps**
+- SuperSpeed
+
+#### USB 3.1 Gen 2
+- **10 Gbps**
+
+### 最简单记忆法
+## **1.1 = 12，2.0 = 480，3.0 = 5G，3.1 Gen2 = 10G**
+
+### 一句话口诀
+## **USB2 记 480，USB3 起步 5G。**
+
+### 再压缩成考试秒杀版
+- **USB 2.0 / Hi-Speed** → **480 Mbps**
+- **USB 3.0 / SuperSpeed** → **5 Gbps**
+
+**一句话：**
+这题就是纯记忆点：**USB 2.0 = 480 Mbps**，你这次是把它往更高代 USB 的速度上带偏了。
 
