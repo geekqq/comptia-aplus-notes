@@ -8903,4 +8903,77 @@ CAC 就是 **Common Access Card**，是美国国防部发放的智能卡，用�
 
 **一句话：**
 这题错在把“个人可识别信息”选成了“公钥基础设施”；看到 **identify a person**，优先想到 **PII**。
+---
+
+## 通过网卡走网络安装操作系统看 PXE，不是 NFS
+![PXE network OS installation question](images/2026-04-19-pxe-network-os-installation.jpg)
+
+**题干：** Which of the following enables operating system installation over a network interface?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | NFS |
+| ✅ 正确答案 | PXE |
+
+### 为什么答案是 PXE
+## **PXE = Preboot eXecution Environment**
+它的作用就是：
+### **让电脑通过网卡/网络启动，并从网络获取启动或安装环境**
+
+所以题目说：
+> **operating system installation over a network interface**
+
+这个最标准的答案就是：
+## **PXE**
+
+### PXE 最简单怎么理解
+你可以把 PXE 先记成：
+## **网卡启动 / 网络装系统**
+
+也就是电脑不用先从本地硬盘或 U 盘启动，
+而是：
+- 通过网卡启动
+- 从网络服务器拿启动文件
+- 进入部署/安装流程
+
+### 为什么 NFS 不对
+## **NFS = Network File System**
+它是：
+### **网络文件系统 / 网络共享文件协议**
+
+它的作用更像：
+- 共享目录
+- 让远程机器访问文件
+
+它不是“让机器通过网卡启动并安装操作系统”的那个核心技术名词。
+
+所以这题不能选 NFS。
+
+### 另外两个也顺手区分
+#### MMC = Microsoft Management Console
+- 管理工具框架
+- 不是网络装系统
+
+#### WDS = Windows Deployment Services
+- Windows 部署服务
+- 它确实和网络部署 Windows 有关
+- 但题目问的是更底层、通用的：
+### **enables installation over a network interface**
+这更核心地指向 **PXE**
+
+你可以理解成：
+- **PXE** → 网络启动机制
+- **WDS** → 利用 PXE 等机制做 Windows 网络部署的服务
+
+### 最简单记忆法
+- **PXE** → 网卡启动 / 网络装系统
+- **WDS** → Windows 网络部署服务
+- **NFS** → 网络文件共享
+- **MMC** → 管理控制台
+
+### 一句话口诀
+## **PXE 管网启装系统，WDS 管 Windows 部署，NFS 管共享文件。**
+
+**一句话：**
+这题错在把“网络文件共享协议”选成了“网络启动装系统机制”；只要看到 **over a network interface 安装操作系统**，优先想到 **PXE**。
 
