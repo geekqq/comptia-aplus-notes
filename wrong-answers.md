@@ -8830,4 +8830,77 @@ CAC 就是 **Common Access Card**，是美国国防部发放的智能卡，用�
 
 **一句话：**
 这题关键不是只看“response across many places”，而是抓住 **combines data from multiple security tools**，这更像 **SIEM** 的标准定义。
+---
+
+## 能唯一识别个人的信息看 PII，不是 PKI
+![PII vs PKI PHI PIV question](images/2026-04-19-pii-vs-pki-phi-piv.jpg)
+
+**题干：** Which of the answers listed below refers to any type of information pertaining to an individual that can be used to uniquely identify that person?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | PKI |
+| ✅ 正确答案 | PII |
+
+### 为什么答案是 PII
+## **PII = Personally Identifiable Information**
+中文就是：
+### **个人可识别信息**
+
+它指的是：
+- 任何能识别某个人身份的信息
+
+比如：
+- 姓名
+- 社安号
+- 驾照号
+- 住址
+- 电话
+- 邮箱
+- 出生日期
+- 其他可单独或组合识别个人的信息
+
+所以题目说：
+> **information pertaining to an individual that can be used to uniquely identify that person**
+
+这就是非常标准的：
+## **PII**
+
+### 为什么 PKI 不对
+## **PKI = Public Key Infrastructure**
+它是：
+### **公钥基础设施**
+
+用于：
+- 证书
+- 公钥/私钥
+- 数字签名
+- 加密信任体系
+
+它是安全基础设施，
+不是“个人身份信息”的类型。
+
+### 另外几个顺手区分
+#### PHI = Protected Health Information
+- 受保护健康信息
+- 是医疗健康相关的敏感个人信息
+- 可以看作更特定场景下的信息类型
+- 但题目问的是更广义、通用的“可识别个人信息”
+所以更标准答案是 **PII**
+
+#### PIV = Personal Identity Verification
+- 政府身份验证卡/体系相关概念
+- 不是“个人信息类别”
+
+### 最简单记忆法
+- **PII** → 个人可识别信息
+- **PHI** → 医疗健康相关个人信息
+- **PKI** → 公钥基础设施
+- **PIV** → 身份验证卡/体系
+
+### 一句话口诀
+## **PII 是个人信息，PHI 是健康信息，PKI 是密钥体系。**
+
+**一句话：**
+这题错在把“个人可识别信息”选成了“公钥基础设施”；看到 **identify a person**，优先想到 **PII**。
 
