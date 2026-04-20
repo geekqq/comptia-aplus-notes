@@ -7295,4 +7295,79 @@ OLED 每个像素自己发光，
 
 ### 一句话总结
 **这题错在把“通用顺序规则”当成了“备份轮换方案名”。真正专门指备份轮换策略的是 GFS（Grandfather-Father-Son）。**
+---
+
+## 冒充公司联系人发邮件骗转账/泄密：BEC，不是 CSRF
+![BEC vs CSRF XSS APT question](images/2026-04-19-bec-vs-csrf-xss-apt.jpg)
+
+**题干：** Which cyberattack involves impersonating a legitimate business contact via email to trick employees into harmful actions such as transferring funds or sharing sensitive information?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | CSRF |
+| ✅ 正确答案 | BEC |
+
+### 为什么答案是 BEC
+## **BEC = Business Email Compromise**
+中文可以理解成：
+### **商业邮件诈骗 / 商务邮件入侵欺骗**
+
+它的典型特点就是：
+- 冒充老板、财务、客户、供应商等合法商务联系人
+- 通过 email 骗员工：
+  - 转账
+  - 改打款账户
+  - 发敏感资料
+  - 泄露内部信息
+
+而题目里的关键词几乎就是 BEC 的定义：
+- **impersonating a legitimate business contact via email**
+- **transferring funds**
+- **sharing sensitive information**
+
+所以标准答案一定是：
+## **BEC**
+
+### 为什么 CSRF 不对
+你选的：
+## **CSRF = Cross-Site Request Forgery**
+中文就是：
+### **跨站请求伪造**
+
+它是一种：
+- Web 攻击
+- 利用用户已登录状态，诱导浏览器替用户发请求
+
+比如：
+- 你登录着某网站
+- 攻击者诱导你点一个恶意链接/页面
+- 浏览器帮你偷偷执行操作
+
+所以 CSRF 的重点是：
+### **网站请求伪造**
+不是冒充商务邮件联系人。
+
+### 为什么 XSS 不对
+## **XSS = Cross-Site Scripting**
+- 跨站脚本攻击
+- 主要是往网页里注入恶意脚本
+- 不是商务邮件诈骗
+
+### 为什么 APT 不对
+## **APT = Advanced Persistent Threat**
+- 高级持续性威胁
+- 更偏长期、有组织、持续渗透攻击
+- 范围太大，不是题目里这种很具体的“冒充商务联系人发邮件骗钱”场景
+
+### 最简单记忆法
+- **BEC** → 冒充商务联系人发邮件骗钱/骗资料
+- **CSRF** → 伪造网站请求
+- **XSS** → 网页脚本注入
+- **APT** → 长期高级渗透威胁
+
+### 一句话口诀
+## **邮件冒充骗转账看 BEC，网页伪造请求看 CSRF。**
+
+**一句话：**
+这题错在把“邮件商务诈骗”看成了“网页请求伪造”；题目描述的是典型 **BEC（Business Email Compromise）**，不是 CSRF。
 
