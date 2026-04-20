@@ -10575,4 +10575,43 @@ hot swap 不是 adapter 的典型功能，
 
 **一句话：**
 这题就是送分记忆题：**Thunderbolt copper cable 的最大长度 = 3 meters。**
+---
+
+## Thunderbolt 长度题一起记：铜缆 3 米，光纤 60 米
+![Thunderbolt fiber cable max length question](images/2026-04-20-thunderbolt-fiber-cable-max-length-60m.jpg)
+
+**题干：** The fiber-optic Thunderbolt interface allows for a maximum cable length of:
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | 50 meters |
+| ✅ 正确答案 | 60 meters |
+
+### 这题最好和上一题一起背
+你刚刚那题是：
+## **Thunderbolt copper cable = up to 3 meters**
+
+这一题则是：
+## **Thunderbolt fiber-optic interface = up to 60 meters**
+
+所以这两个一起记最稳。
+
+### 最简单对照
+- **Thunderbolt copper** → **3 m**
+- **Thunderbolt fiber** → **60 m**
+
+### 为什么你会错成 50 米
+因为这种长度题很容易靠感觉猜一个“差不多的整数字”。
+但这题就是纯记忆点，
+标准答案要死记成：
+## **60 meters**
+
+### 最简单记忆法
+## **铜短光长：铜 3 米，光 60 米。**
+
+### 一句话口诀
+## **Thunderbolt 铜缆 3 米，光纤 60 米。**
+
+**一句话：**
+这题别单独记，最好和上一题捆绑：**Thunderbolt 铜缆最远 3 m，光纤版本最远 60 m。**
 
