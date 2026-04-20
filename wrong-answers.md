@@ -10079,4 +10079,100 @@ Stone 这块你说得对，**端口号就是硬骨头，但同时也是最值得
 
 **一句话：**
 你这题不是不会，而是又被“亮度更高”这个很像优点的选项带偏了；考试里 OLED 最稳的正确三件套是：**无背光、超薄可弯、黑位和对比度极强。**
+---
+
+## Mini-LED 不是自发光：它还是背光 LCD，只是背光更细、更亮、控光更强
+![Mini-LED features question](images/2026-04-20-mini-led-features-backlight-brightness.jpg)
+
+**题干：** Which of the statements listed below refer to Mini-LED displays? (Select 3 answers)
+
+**正确答案：**
+- **Use a backlight system with smaller, more densely packed LEDs**
+- **Offer excellent contrast due to refined backlight control**
+- **Achieve high peak brightness suitable for bright environments**
+
+### 你这题错在哪里
+你前两项已经对了：
+- **Use a backlight system with smaller, more densely packed LEDs** ✅
+- **Offer excellent contrast due to refined backlight control** ✅
+
+你错在把：
+- **Enable greater control of color accuracy due to self-emissive pixels**
+选进去了
+
+而漏掉了：
+- **Achieve high peak brightness suitable for bright environments**
+
+### 这题最核心的判断点
+## **Mini-LED 不是自发光面板。**
+
+它本质上还是：
+### **LCD + 更先进的 LED 背光系统**
+
+也就是说：
+- 它 **需要背光**
+- 它不是 OLED / MicroLED 那种像素自发光路线
+
+所以只要题目出现：
+- **self-emissive pixels**
+- **do not require a backlight**
+- **true black by turning off individual pixels**
+
+这些都更像：
+## **OLED / MicroLED**
+而不是 Mini-LED。
+
+### Mini-LED 最稳的三个核心点
+#### 1. Smaller, more densely packed LEDs
+Mini-LED 的本质就是：
+- 背光 LED 更小
+- 排列更密
+- 分区控光更精细
+
+#### 2. Excellent contrast due to refined backlight control
+因为控光分区更细，
+所以对比度表现会更强。
+
+但注意：
+### 它是“更好的背光控光”，不是“像素自己关掉”
+
+#### 3. High peak brightness
+这就是你这题漏掉的关键。
+Mini-LED 很常见的优势之一就是：
+## **高亮度 / 高 peak brightness**
+
+所以在亮环境下表现更有优势。
+
+### 为什么 self-emissive 那项不对
+因为 Mini-LED 不是：
+### **self-emissive pixels**
+
+像素自己发光这套，更像：
+- OLED
+- MicroLED
+
+Mini-LED 仍然是背光 LCD 路线。
+
+### 最简单记忆法
+你以后直接这样背：
+## **Mini-LED = 背光更小更密，控光更好，更亮，但不是自发光。**
+
+### 再和 OLED 顺手区分
+#### Mini-LED
+- 要背光
+- 高亮度
+- 更强分区控光
+- 对比好，但不是像素级自发光真黑
+
+#### OLED
+- 不要背光
+- 像素自发光
+- 真黑、对比极强
+- 更容易和“self-emissive”绑定
+
+### 一句话口诀
+## **Mini-LED 看背光更细更亮；OLED 看自发光和真黑。**
+
+**一句话：**
+这题错在把 Mini-LED 误记成自发光技术；它其实还是 **背光 LCD**，所以正确记法是：**更小更密的背光 LED、控光更强、峰值亮度更高。**
 
