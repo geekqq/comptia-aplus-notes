@@ -8749,4 +8749,85 @@ TN 你以后就固定背成：**快、便宜、但颜色和视角都差**；看�
 
 **一句话：**
 CAC 就是 **Common Access Card**，是美国国防部发放的智能卡，用来做身份识别、认证，以及进入建筑和访问信息系统。
+---
+
+## 多种安全工具数据集中分析与关联检测：SIEM，不是 NDR
+![SIEM vs XDR NDR EDR question](images/2026-04-19-siem-vs-xdr-ndr-edr.jpg)
+
+**题干：** Which acronym refers to a cybersecurity approach that combines data from multiple security tools to provide comprehensive threat detection and response across endpoints, networks, and cloud environments?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | NDR |
+| ✅ 正确答案 | SIEM |
+
+### 为什么这题容易错
+因为题目里有这些词：
+- **comprehensive threat detection and response**
+- **across endpoints, networks, and cloud environments**
+
+这些描述看起来很像：
+## **XDR**
+
+所以如果你选 XDR，我都觉得很正常。
+你这次选 NDR，更像是被：
+### **networks**
+这个词带偏了。
+
+### 为什么答案是 SIEM
+## **SIEM = Security Information and Event Management**
+它的核心就是：
+- 收集多个安全工具/系统的数据
+- 统一集中分析
+- 关联事件
+- 帮助检测威胁和响应
+
+题目最关键的词其实是：
+### **combines data from multiple security tools**
+
+这句话非常像 SIEM 的标准定义。
+
+所以标准答案是：
+## **SIEM**
+
+### 为什么 NDR 不对
+## **NDR = Network Detection and Response**
+它重点是：
+- **网络层** 检测与响应
+
+而题目说的是：
+- 不只是网络
+- 还包括 endpoints、cloud
+- 而且是把多个安全工具的数据合在一起
+
+所以 NDR 范围太窄了。
+
+### 为什么 EDR 不对
+## **EDR = Endpoint Detection and Response**
+- 重点是终端
+- 不是跨网络、云、多个工具的数据整合
+
+### 为什么 XDR 这题也没中
+## **XDR = Extended Detection and Response**
+它确实强调跨层整合检测与响应，
+所以看起来很像这题。
+
+但这道题更强调的是：
+### **combines data from multiple security tools**
+### **Security Information and Event Management** 这种“集中收集和关联分析”味道更重
+
+所以这套题给的标准答案是：
+## **SIEM**
+
+### 最简单区分
+- **EDR** → 终端检测与响应
+- **NDR** → 网络检测与响应
+- **XDR** → 跨层整合检测与响应
+- **SIEM** → **汇总多个工具日志/事件并集中关联分析**
+
+### 一句话口诀
+## **EDR 看终端，NDR 看网络，XDR 看跨层，SIEM 看集中收集与关联分析。**
+
+**一句话：**
+这题关键不是只看“response across many places”，而是抓住 **combines data from multiple security tools**，这更像 **SIEM** 的标准定义。
 
