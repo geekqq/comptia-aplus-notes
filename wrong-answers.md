@@ -7071,4 +7071,115 @@ OLED 每个像素自己发光，
 
 **一句话：**
 这题最值得记住的是：**OLED 的核心优势是无背光和高对比度/好色彩，但这套题里亮度并不是它的加分项，标准答案反而是 lower light output。**
+---
+
+## 规定用户如何使用电脑和网络资源的文件：AUP
+![AUP vs SLA EULA BPA question](images/2026-04-19-aup-vs-sla-eula-bpa.jpg)
+
+**题干：** A type of document stipulating rules of behavior to be followed by users of computers, networks, and associated resources is known as:
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | BPA |
+| ✅ 正确答案 | AUP |
+
+### 正确答案先记住
+## **AUP = Acceptable Use Policy**
+中文可以理解成：
+### **可接受使用政策 / 使用规范**
+
+它的作用就是：
+- 规定用户怎么使用电脑、网络、邮箱、系统资源
+- 哪些行为允许
+- 哪些行为不允许
+
+所以题目里说：
+> **rules of behavior to be followed by users of computers, networks, and associated resources**
+
+这就是非常标准的：
+## **AUP**
+
+---
+
+## 这几个缩写分别是什么
+
+### 1. AUP = Acceptable Use Policy
+#### 中文：
+- 可接受使用政策
+- 使用规范
+
+#### 干什么：
+- 规定用户使用 IT 资源时的行为规则
+- 比如：
+  - 不能乱装软件
+  - 不能访问违规网站
+  - 不能滥用公司网络
+  - 不能把公司资源拿去做私人违规用途
+
+#### 记忆：
+## **AUP = 用户行为规则**
+
+---
+
+### 2. SLA = Service Level Agreement
+#### 中文：
+- 服务级别协议
+
+#### 干什么：
+- 约定服务质量
+- 比如：
+  - 可用性 99.9%
+  - 响应时间
+  - 维修恢复时间
+  - 服务承诺
+
+#### 记忆：
+## **SLA = 服务承诺 / 服务质量协议**
+
+它不是讲“用户行为规范”的。
+
+---
+
+### 3. EULA = End User License Agreement
+#### 中文：
+- 终端用户许可协议
+
+#### 干什么：
+- 软件授权条款
+- 告诉你：
+  - 你能不能装
+  - 能装几台
+  - 能不能复制/商用/转售
+
+#### 记忆：
+## **EULA = 软件使用授权协议**
+
+它不是网络行为规范。
+
+---
+
+### 4. BPA
+这个缩写在 IT 场景里并不是这题的标准答案，
+常见语境也不如前面三个稳定。
+你这题只要记住：
+### **它不是规定用户网络行为规则的标准文件名**
+就够了。
+
+---
+
+## 最简单对照记忆
+| 缩写 | 全称 | 中文 | 你先记成什么 |
+| --- | --- | --- | --- |
+| **AUP** | Acceptable Use Policy | 可接受使用政策 | **用户行为规则** |
+| **SLA** | Service Level Agreement | 服务级别协议 | **服务承诺** |
+| **EULA** | End User License Agreement | 终端用户许可协议 | **软件授权条款** |
+| **BPA** | （这题里不是标准答案） | - | **先别选它** |
+
+---
+
+## 一句话口诀
+## **AUP 管行为，SLA 管服务，EULA 管授权。**
+
+### 一句话总结
+**这题错在把“用户行为规范文件”和别的协议类缩写混了；凡是题目提到用户如何使用电脑、网络和资源的规则，优先想到 AUP（Acceptable Use Policy）。**
 
