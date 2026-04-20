@@ -5998,4 +5998,71 @@ GPO 更像：
 
 ### 一句话总结
 **这题的关键不是背缩写外形，而是分清类别：UAC 管权限提升，OTP 管认证，MMC 是管理工具框架，GPO 是策略配置。**
+---
+
+## UTM = Unified Threat Management
+![UTM unified threat management question](images/2026-04-19-utm-unified-threat-management.jpg)
+
+**题干：** Which of the following terms refers to a network security solution providing a single point of protection against various types of threats?
+
+✅ **正确答案：UTM**
+
+### UTM 是什么
+## **UTM = Unified Threat Management**
+中文可以理解成：
+### **统一威胁管理**
+
+它的核心意思是：
+> **把多种网络安全功能整合到一个统一的安全设备/平台里**
+
+也就是“单点保护、多种功能”。
+
+### 为什么这题答案是 UTM
+题目关键词是：
+- **single point of protection**
+- **various types of threats**
+
+这正是 UTM 的典型定义：
+- 一个设备 / 一个网关
+- 同时提供多种安全能力
+- 一起防御不同类型威胁
+
+### UTM 常见集成功能
+UTM 常常会整合：
+- Firewall
+- IDS / IPS
+- Antivirus / antimalware
+- Content filtering
+- VPN
+- Web filtering
+- Spam filtering
+
+所以你可以把它理解成：
+### **安全功能大杂烩，一台设备全包**
+
+### 其他几个为什么不是最佳答案
+#### IDP
+- 更偏 **Intrusion Detection/Prevention**
+- 只是其中一种安全能力，不是“统一整合平台”
+
+#### AV
+- 只是 **Antivirus**
+- 不是整套网络安全平台
+
+#### NGFW
+- **Next-Generation Firewall**
+- 很强，也会集成一些高级能力
+- 但题目这种最标准、最广义“单点整合多种威胁防护”的说法，考试更常对应 **UTM**
+
+### 最简单记忆
+- **UTM** → 安全大合集 / 一体化安全网关
+- **AV** → 杀毒
+- **IDP** → 入侵检测/防御
+- **NGFW** → 下一代防火墙
+
+### 一句话口诀
+## **UTM 管一揽子安全，AV 只管杀毒。**
+
+**一句话：**
+UTM 就是 **Unified Threat Management**，意思是一台设备/平台统一提供多种安全防护，是“单点整合多种威胁防护”的典型答案。
 
