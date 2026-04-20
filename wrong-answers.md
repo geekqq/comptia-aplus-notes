@@ -8546,4 +8546,76 @@ CMDB 就是用来记录 IT 环境里各类配置项和它们关系的数据库�
 
 **一句话：**
 这题错在把“认证框架 EAP”和“WPA 时代替代 WEP 的加密机制 TKIP”混了；看到 **WPA + replace WEP**，优先想 **TKIP**。
+---
+
+## TN 面板：快，但颜色差、视角差
+![TN panel features question](images/2026-04-19-tn-panel-features.jpg)
+
+**题干：** What are the characteristic features of the TN display technology? (Select 3 answers)
+
+**正确答案：**
+- **Low viewing angles**
+- **Fast response times**
+- **Low color quality**
+
+### TN 最核心的三件事
+你可以直接死记：
+## **TN = 快，但颜色差、视角差**
+
+也就是：
+- **Fast response times**
+- **Low color quality**
+- **Low viewing angles**
+
+### 你这题错在哪里
+你前两项其实已经对了：
+- **Fast response times** ✅
+- **Low color quality** ✅
+
+你错在第三项把：
+- **Low viewing angles**
+看成了：
+- **Wide viewing angles**
+
+但 TN 最典型的弱点之一，
+恰恰就是：
+## **视角差**
+
+### 为什么 TN 容易记混
+因为你最近一直在做：
+- IPS
+- VA
+- OLED
+- TN
+
+这几个面板一起考时，
+最容易串的就是：
+- 谁视角好
+- 谁色彩好
+- 谁速度快
+
+### 最简单暴力对比
+#### TN
+- **速度最快/快**
+- **颜色较差**
+- **视角较差**
+
+#### IPS
+- **颜色最好**
+- **视角最好**
+- **响应偏慢（考试记忆）**
+
+#### VA
+- **对比度强**
+- **颜色不错**
+- **视角不错**
+
+### 最短口诀
+## **TN 快但差，IPS 美但慢，VA 黑得深。**
+
+再专门补一句：
+## **TN 不是 wide viewing angles，而是 low viewing angles。**
+
+**一句话：**
+TN 你以后就固定背成：**快、便宜、但颜色和视角都差**；看到 wide viewing angles 就别选 TN。
 
