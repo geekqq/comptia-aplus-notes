@@ -6472,4 +6472,87 @@ PAN 更强调的是：
 
 **一句话：**
 你会纠结很正常，因为 DVI-I 也带模拟；但只要题目强调“before digital connections 常用的经典模拟显示接口”，考试标准答案通常就是 **VGA**。
+---
+
+## PUP = Potentially Unwanted Program，不一定算明确恶意软件
+![PUP potentially unwanted program question](images/2026-04-19-pup-potentially-unwanted-program.jpg)
+
+**题干：** What is a PUP? (Select 3 answers)
+
+**正确答案：**
+- **A type of computer program not explicitly classified as malware by AV software**
+- **A type of software that may adversely affect the computer's security and performance, compromise user's privacy, or display unsolicited ads**
+- **An application downloaded and installed with the user's consent, but often without fully informed agreement (typically bundled with other software)**
+
+### 先把缩写记住
+## **PUP = Potentially Unwanted Program**
+中文可以理解成：
+### **潜在不受欢迎程序 / 潜在有害但未必算恶意的软件**
+
+### 为什么你会觉得陌生
+因为 PUP 不是像：
+- virus
+- trojan
+- worm
+那种经典恶意软件词。
+
+它更像是一个：
+## **灰色地带的分类**
+
+意思是：
+- 它不一定被明确判定为 malware
+- 但它很烦、很脏、很可疑
+- 可能影响性能、隐私、安全
+- 常常夹带安装、弹广告、改浏览器设置
+
+### 为什么正确答案里第一条很关键
+#### **not explicitly classified as malware by AV software**
+这正是 PUP 的核心。
+它常常不是“明确病毒”，
+所以很多杀毒软件不会把它直接当作传统 malware，
+但仍然会：
+- 提醒你它不受欢迎
+- 建议移除
+- 归类为 PUP/PUA
+
+### 为什么第三条也是对的
+#### **installed with the user's consent, but often without fully informed agreement**
+这也很典型。
+PUP 常常：
+- 不是偷偷黑进来
+- 而是你安装别的软件时顺手被带进来
+- 用户 technically 点了同意
+- 但其实没有真正看懂或明确想装它
+
+比如：
+- 软件安装包捆绑工具栏
+- 默认勾选附加软件
+- 浏览器首页被改
+- 弹广告插件跟着进来
+
+### 为什么 “downloaded without consent” 不对
+你错选了：
+- **An application downloaded and installed without the user's consent (illegal app)**
+
+这个更像：
+### **恶意软件 / 非法程序 / 未授权安装行为**
+
+而 PUP 的特点恰恰常常是：
+- **形式上有 consent**
+- 但不是 fully informed consent
+
+也就是说：
+### **你点过“下一步”，但你未必真的知道它会装进来什么**
+
+### 最简单记忆
+PUP 你就记三点：
+1. **不一定被明确定义成 malware**
+2. **可能影响隐私、安全、性能，还会弹广告**
+3. **常常是捆绑安装、半哄半骗装进去的**
+
+### 一句话口诀
+## **PUP = 不是明确病毒，但很烦、很脏、常捆绑、可能伤隐私和性能。**
+
+**一句话：**
+PUP 不是“纯恶意软件”那种黑白分明的东西，而是那种用户表面上点了安装、但实际上并不真正想要，而且可能影响安全、性能和隐私的灰色软件。
 
