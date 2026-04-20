@@ -8093,4 +8093,78 @@ VA 的视角也不该直接打成“low viewing angles”。
 
 **一句话：**
 你这题不是不会，而是被 ZFS 的特性吸引过去了；但题目已经明确说了 **Microsoft file system**，所以必须选 **ReFS（Resilient File System）**。
+---
+
+## 第三方持续监控+检测+响应服务看 MDR，不是 EDR
+![MDR vs EDR XDR IAM question](images/2026-04-19-mdr-vs-edr-xdr-iam.jpg)
+
+**题干：** Which cybersecurity service offers continuous monitoring, threat detection, and response, typically managed by a third party to protect an organization from advanced threats?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | EDR |
+| ✅ 正确答案 | MDR |
+
+### 为什么答案是 MDR
+题目最关键的限定词是：
+- **service**
+- **continuous monitoring, threat detection, and response**
+- **typically managed by a third party**
+
+这里的重点不是单纯一个产品功能，
+而是：
+## **由第三方托管/代管的安全监控与响应服务**
+
+这就是：
+## **MDR = Managed Detection and Response**
+
+### MDR 到底是什么
+你可以先把 MDR 记成：
+### **外包型 / 托管型的检测与响应服务**
+
+也就是：
+- 有持续监控
+- 有威胁检测
+- 有响应处置
+- 常由第三方安全团队来做
+
+### 为什么 EDR 不对
+## **EDR = Endpoint Detection and Response**
+它重点是：
+- 终端（endpoint）层面的检测和响应
+- 更像产品/能力类别
+- 焦点在设备端点安全
+
+它不一定自带：
+### **third-party managed service**
+
+所以题目如果强调：
+- **managed by a third party**
+
+答案更该选：
+## **MDR**
+不是 EDR。
+
+### XDR 为什么也不对
+## **XDR = Extended Detection and Response**
+它更偏：
+- 跨多个安全层面整合检测与响应
+- 不是这题最关键的“第三方托管服务”概念
+
+### IAM 为什么不对
+## **IAM = Identity and Access Management**
+- 身份与访问管理
+- 完全不是这题要的“检测与响应服务”
+
+### 最简单记忆法
+- **EDR** → 终端检测与响应
+- **XDR** → 扩展/跨层检测与响应
+- **MDR** → **托管检测与响应服务**
+- **IAM** → 身份和权限管理
+
+### 一句话口诀
+## **EDR 看终端，XDR 看扩展整合，MDR 看第三方托管服务。**
+
+**一句话：**
+这题错在把“安全产品/能力”当成了“第三方托管服务”；题目只要强调 **managed by a third party**，优先想到 **MDR**。
 
