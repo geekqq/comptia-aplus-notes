@@ -9678,4 +9678,110 @@ Stone 这块你说得对，**端口号就是硬骨头，但同时也是最值得
 
 **一句话：**
 这题最稳的抓法就是：**只要出现 UDP + Wi‑Fi/VPN + AAA 接入认证，就优先选 RADIUS；TACACS+ 更偏管理员设备访问，LDAP 是目录，Kerberos 是票据认证。**
+---
+
+## DHCP 两个高频概念：给单个设备固定 IP 是 Reservation；可分配地址池整体叫 Scope
+![DHCP reservation vs scope question](images/2026-04-20-dhcp-reservation-vs-scope.jpg)
+
+**题目 1：** What is the standard DHCP term for a permanent IP address assignment made by the server to a specific device?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Binding |
+| ✅ 正确答案 | Reservation |
+
+**题目 2：** What is the correct DHCP term for the defined pool of IP addresses that a DHCP server can assign to clients?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Range |
+| ✅ 正确答案 | Scope |
+
+### 这两个为什么容易混
+因为它们都跟 DHCP 分配 IP 有关，
+而且现实里你脑子里会自然冒出这些词：
+- binding
+- range
+- pool
+- fixed IP
+
+但考试要的是：
+## **标准 DHCP 术语**
+
+所以这两题不能按“意思差不多”来选，
+要按题库标准名词背。
+
+---
+
+## 1. Reservation 是什么
+### **Reservation = 给某个特定设备保留固定 IP**
+
+也就是：
+- DHCP 服务器仍然发 IP
+- 但它总是把同一个 IP 发给同一台设备
+- 通常根据 **MAC 地址** 绑定
+
+所以题目说：
+> **permanent IP address assignment made by the server to a specific device**
+
+标准答案就是：
+## **Reservation**
+
+### 你为什么会选 Binding
+因为 “binding” 在 DHCP 语境里也不是完全陌生，
+它能让人联想到：
+- 设备和 IP 的绑定关系
+
+但考试里问这种“给特定设备固定发同一个 IP”的标准术语，
+更规范的答案是：
+## **Reservation**
+
+### 最简单记忆
+## **Reservation = 给某台设备预留固定 IP。**
+
+---
+
+## 2. Scope 是什么
+### **Scope = DHCP 可分配地址池 / 地址范围整体定义**
+
+也就是：
+- 这个 DHCP 服务器可以发哪些 IP
+- 子网掩码是什么
+- 网关、租期等相关配置可能也属于这个范围定义的一部分
+
+所以题目说：
+> **defined pool of IP addresses that a DHCP server can assign to clients**
+
+标准答案就是：
+## **Scope**
+
+### 为什么你会选 Range
+因为从自然语言角度看，
+“地址范围”确实很像 range。
+
+但这题问的是：
+### **correct DHCP term**
+
+在 DHCP 标准/管理术语里，
+这个更正式地叫：
+## **Scope**
+
+### 最简单记忆
+## **Scope = DHCP 整个可发号池。**
+
+---
+
+## 最简单一口气区分
+- **Reservation** → 给一台特定设备保留固定 IP
+- **Scope** → DHCP 整个地址池/可分配范围
+
+### 一句话口诀
+## **单机固定看 Reservation，整池发号看 Scope。**
+
+### 再压缩成考试秒杀版
+- **specific device + permanent IP** → **Reservation**
+- **defined pool of IPs for clients** → **Scope**
+
+**一句话：**
+这两题的关键是把“给单个设备固定发同一个地址”和“整个 DHCP 可分配地址池”分开：前者是 **Reservation**，后者是 **Scope**。
 
