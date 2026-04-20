@@ -6243,4 +6243,161 @@ PAN 更强调的是：
 
 **一句话：**
 这题错在被 “network” 这个词带偏了；真正决定答案的是后半句那些“传感器、可穿戴、智能家居、设备协作”的描述，它们明显指向 **IoT**，不是 **PAN**。
+---
+
+## WEP / WPA / TKIP / AES / CCMP 很容易混：先分“标准”和“算法/机制”
+![WEP WPA TKIP AES CCMP question](images/2026-04-19-wep-wpa-tkip-aes-ccmp.jpg)
+
+**题干：** Which of the acronyms listed below refers to a security standard introduced to address the vulnerabilities found in WEP?
+
+✅ **正确答案：WPA**
+
+### 为什么答案是 WPA
+题目问的是：
+> **a security standard introduced to address the vulnerabilities found in WEP**
+
+这里问的是：
+## **哪一个是“标准（standard）”**
+
+答案就是：
+### **WPA = Wi‑Fi Protected Access**
+
+它是为了修补 **WEP** 漏洞而推出的安全标准。
+
+---
+
+## 这些缩写怎么区分
+你最容易混，是因为它们不是同一层级的东西。
+最简单先这样分：
+
+### 一、标准 / 协议家族
+- **WEP**
+- **WPA**
+- **WPA2**
+- **WPA3**
+
+这些更像：
+## **整套无线安全标准**
+
+---
+
+### 二、标准内部使用的加密/保护机制
+- **TKIP**
+- **CCMP**
+- **AES**
+
+这些更像：
+## **标准里面用到的算法或保护机制**
+
+所以这题问“标准”，
+你就要优先从：
+- WEP
+- WPA
+这类里选，
+而不是去选 TKIP / AES / CCMP。
+
+---
+
+## 每个缩写最简单理解
+
+### 1. WEP
+**WEP = Wired Equivalent Privacy**
+- 很老
+- 很弱
+- 漏洞多
+- 现在基本视为不安全
+
+#### 记忆：
+## **WEP = 老旧、已破**
+
+---
+
+### 2. WPA
+**WPA = Wi‑Fi Protected Access**
+- 为了解决 WEP 问题推出
+- 是过渡性的更安全标准
+- 常和 **TKIP** 联系在一起
+
+#### 记忆：
+## **WPA = 修补 WEP 的第一代改进版**
+
+---
+
+### 3. TKIP
+**TKIP = Temporal Key Integrity Protocol**
+- 主要和 **WPA** 绑定在一起想
+- 是 WPA 时代的重要保护机制
+- 比 WEP 强，但也已经老了
+
+#### 记忆：
+## **TKIP = WPA 时代的旧方案**
+
+---
+
+### 4. AES
+**AES = Advanced Encryption Standard**
+- 现代强加密算法
+- 比旧方案更安全
+- 常和 WPA2 / 更现代无线安全联系起来
+
+#### 记忆：
+## **AES = 新且强的加密算法**
+
+---
+
+### 5. CCMP
+**CCMP = Counter Mode with Cipher Block Chaining Message Authentication Code Protocol**
+- 很拗口，不用硬背全称
+- 考试里主要记它和 **AES** 连在一起
+- 常作为 WPA2 安全机制的代表
+
+#### 记忆：
+## **CCMP = WPA2 常见搭档，背后靠 AES**
+
+---
+
+## 最好记的关系图
+### 第一层：标准
+- **WEP** → 最老最弱
+- **WPA** → 为修补 WEP 而来
+- **WPA2** → 更强、更现代
+
+### 第二层：机制/算法
+- **TKIP** → WPA 常配套
+- **CCMP / AES** → WPA2 常配套
+
+---
+
+## 最简单考试记忆法
+### 一句话版本
+- **WEP** = 老旧不安全
+- **WPA** = 修 WEP 的标准
+- **TKIP** = WPA 常搭档
+- **AES/CCMP** = WPA2 常搭档
+
+---
+
+## 你这题为什么会选错/容易乱
+因为题目问的是：
+### **security standard**
+
+只有：
+- **WPA**
+符合“标准”这个描述。
+
+而：
+- **TKIP**
+- **AES**
+- **CCMP**
+
+更偏加密/保护机制，
+不是题目要的“标准名称”。
+
+---
+
+## 超短口诀
+## **WEP 老，WPA 补，TKIP 跟 WPA，AES/CCMP 跟 WPA2。**
+
+**一句话：**
+这题关键不是背所有全称，而是先分层：**WPA 是标准，TKIP/AES/CCMP 是标准里用到的机制。** 所以题目问“修补 WEP 的安全标准”，答案就是 **WPA**。
 
