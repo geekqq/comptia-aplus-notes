@@ -9174,4 +9174,96 @@ CAC 就是 **Common Access Card**，是美国国防部发放的智能卡，用�
 
 **一句话：**
 这题错在把“软件开发生命周期”选成了“评估和改进开发流程的框架”；题目只要出现 **evaluating and improving software development processes**，优先想到 **SPICE**。
+---
+
+## NFC：近距离通信，可支付/配对/门禁，但不是无线充电
+![NFC features question](images/2026-04-20-nfc-contactless-pairing-access-not-charging.jpg)
+
+**题干：** NFC enables: (Select all that apply)
+
+**正确答案：**
+- **Contactless payment transactions**
+- **Device pairing and data exchange**
+- **Access control and authentication**
+
+### 你这题错在哪
+你已经选对了两项：
+- **Contactless payment transactions** ✅
+- **Access control and authentication** ✅
+
+漏掉的是：
+- **Device pairing and data exchange** ✅
+
+错选的是：
+- **Wireless charging of mobile devices** ❌
+
+### NFC 到底是什么
+## **NFC = Near Field Communication**
+中文就是：
+### **近场通信**
+
+它的核心特点是：
+- **距离很短**
+- 设备靠得很近才能通信
+- 适合快速识别、触碰配对、短距离数据交换
+
+### NFC 常见能做什么
+#### 1. Contactless payment transactions
+这个你已经记对了。
+比如：
+- Apple Pay
+- Google Pay
+- 刷手机/卡支付
+
+#### 2. Device pairing and data exchange
+这个你漏了。
+NFC 很常用于：
+- 设备快速配对
+- 小量数据交换
+- 触碰建立连接（比如帮蓝牙快速配对）
+
+所以这项是对的。
+
+#### 3. Access control and authentication
+这个你也选对了。
+比如：
+- 门禁卡
+- 手机刷门
+- 身份验证标签
+
+### 为什么 wireless charging 不对
+这个最容易被误选。
+因为手机“贴上去”这个动作很像 NFC，
+但：
+## **无线充电通常是 Qi / 电磁感应充电，不是 NFC 的核心功能**
+
+也就是说：
+- **NFC** → 通信
+- **Qi / wireless charging** → 供电/充电
+
+所以题目问 NFC enables，
+不能选：
+### **Wireless charging of mobile devices**
+
+### 为什么 long-range wireless communication 不对
+因为 NFC 就是：
+## **Near Field**
+也就是近距离，
+不是长距离无线通信。
+
+### 最简单记忆法
+NFC 你就记三件事：
+- **支付**
+- **配对/短距数据交换**
+- **门禁/认证**
+
+不要记成：
+- 长距离通信
+- 无线充电
+
+### 一句话口诀
+## **NFC 管近距离“碰一碰”通信，不管远距离，也不负责充电。**
+
+**一句话：**
+NFC 的核心是近距离通信，所以它能做 **支付、配对/数据交换、门禁认证**，但 **不能把“无线充电”当成 NFC 功能**。
 
