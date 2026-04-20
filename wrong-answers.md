@@ -10655,4 +10655,83 @@ hot swap 不是 adapter 的典型功能，
 
 **一句话：**
 这题就是纯记忆点：**SATA data connector = 7 pins**，不要和 **SATA power connector = 15 pins** 混掉。
+---
+
+## F-type connector：同轴 + 螺纹拧上去 + cable TV / cable modem
+![F-type connector features question](images/2026-04-20-f-type-connector-threaded-coax-cable-tv.jpg)
+
+**题干：** What are the characteristic features of the F-type connector? (Select 3 answers)
+
+**正确答案：**
+- **Threaded (screw-on) connector**
+- **Satellite/cable TV, broadband Internet connections via cable modems**
+- **Coaxial cabling**
+
+### F-type connector 是什么
+你可以先把它直接记成：
+## **有线电视/同轴宽带那种拧上去的接头**
+
+它最典型的三个标签就是：
+### 1. Coaxial cabling
+- 用在 **同轴电缆** 上
+
+### 2. Threaded (screw-on) connector
+- 是 **螺纹式 / 拧上去** 的
+- 不是卡口扭锁那种
+
+### 3. Satellite / cable TV / cable modem
+- 常见于：
+  - 有线电视
+  - 卫星电视
+  - cable modem 宽带
+
+---
+
+## 你这题错在哪里
+你已经选对了两项：
+- **Coaxial cabling** ✅
+- **Satellite/cable TV, broadband Internet via cable modems** ✅
+
+你错在把：
+- **Threaded (screw-on) connector**
+漏掉了
+
+反而选了：
+- **Bayonet-style (twist-and-lock) connector** ❌
+
+### 为什么 bayonet-style 不对
+因为这种：
+- **twist-and-lock / bayonet-style**
+更像：
+## **BNC connector**
+
+也就是说：
+- **F-type** → 螺纹拧紧（screw-on）
+- **BNC** → 卡口旋锁（bayonet twist-lock）
+
+这两个特别容易混。
+
+---
+
+## 最简单区分
+### F-type
+- 同轴
+- 螺纹拧上去
+- cable TV / satellite / cable modem
+
+### BNC
+- 同轴
+- 卡口式旋锁
+- 更常见于测试设备 / CCTV / 专业视频环境
+
+---
+
+## 一句话口诀
+## **F 头拧着上，BNC 扭着锁。**
+
+### 再补一句
+## **F-type 看 cable TV，BNC 看测试/CCTV。**
+
+**一句话：**
+F-type connector 就是 **用在同轴线上的螺纹式接头**，常见于 **有线电视、卫星电视、cable modem 宽带**；你这次是把它和 **BNC 的 bayonet twist-lock** 搞混了。
 
