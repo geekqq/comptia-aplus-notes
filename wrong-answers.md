@@ -8390,4 +8390,84 @@ DB-9 是一种老式串行接口连接器，
 
 **一句话：**
 这题错在把“同轴电缆型号”选成了“串行通信连接器”；题目只要出现 **serial communication on older PCs**，优先想到 **DB-9**。
+---
+
+## CMDB：记录配置项（CI）的数据库，像 IT 资产和系统关系总账本
+![CMDB items question](images/2026-04-19-cmdb-items-server-hardware-installed-applications.jpg)
+
+**题干：** Which of the answers listed below refer to valid examples of items tracked in a CMDB? (Select 2 answers)
+
+**正确答案：**
+- **Server hardware**
+- **Installed applications**
+
+### CMDB 是什么
+## **CMDB = Configuration Management Database**
+中文可以理解成：
+### **配置管理数据库**
+
+它的作用是：
+- 记录 IT 环境里的配置项（Configuration Items, CI）
+- 追踪这些东西是什么、在哪里、彼此怎么关联
+
+你可以把它理解成：
+## **IT 资产 / 系统配置 / 依赖关系的总账本**
+
+### CMDB 里通常会记录什么
+典型会记录：
+- 服务器硬件
+- 安装的软件 / 应用
+- 网络设备
+- 虚拟机
+- 数据库实例
+- 服务之间依赖关系
+- 配置项的版本/归属/状态
+
+所以这题的正确答案：
+- **Server hardware**
+- **Installed applications**
+
+都很合理，
+因为它们都是：
+### **配置项（CI）**
+
+### 为什么 Asset disposal records 不对
+你选的：
+## **Asset disposal records**
+这个更像：
+- 资产报废记录
+- 生命周期末端处理文档
+- 资产管理流程记录
+
+它不是 CMDB 最核心想追踪的“当前配置项”。
+
+### 为什么其他两个也不对
+#### Log data
+- 日志数据属于监控/审计/运维数据
+- 不是 CMDB 的核心配置项
+
+#### User passwords
+- 用户密码属于敏感凭据
+- 不应作为 CMDB 里这种配置项示例去记
+
+### 最简单记忆法
+CMDB 你先记一句：
+## **CMDB 记录“系统里有什么、怎么配、彼此怎么连”。**
+
+所以最像 CMDB 的通常是：
+- 服务器
+- 应用
+- 网络设备
+- 服务依赖
+
+而不像的是：
+- 日志
+- 密码
+- 报废记录
+
+### 一句话口诀
+## **CMDB 管配置项，不管日志、密码、报废单。**
+
+**一句话：**
+CMDB 就是用来记录 IT 环境里各类配置项和它们关系的数据库，所以 **server hardware** 和 **installed applications** 属于 CMDB 典型跟踪对象。
 
