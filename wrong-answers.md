@@ -6642,4 +6642,124 @@ PUP 不是“纯恶意软件”那种黑白分明的东西，而是那种用户�
 
 **一句话：**
 这题虽然是记忆题，但最实用的分法就是：**产品寿命结束看 EOL，厂商支持结束看 EOS。**
+---
+
+## 远程交付各种计算服务的大概念：XaaS
+![XaaS vs FaaS EaaS AaaS question](images/2026-04-19-xaas-vs-faas-eaas-aaas.jpg)
+
+**题干：** Which of the following terms describes the remote delivery of a wide range of computing services, including software, platforms, and infrastructure?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | EaaS |
+| ✅ 正确答案 | XaaS |
+
+### 这题为什么会让人懵
+因为这几个缩写平时确实不常一起见：
+- **XaaS**
+- **FaaS**
+- **EaaS**
+- **AaaS**
+
+它们都长得很像，
+但这题真正想考的是：
+## **“总称” vs “某一种具体服务”**
+
+### 为什么答案是 XaaS
+## **XaaS = Anything as a Service**
+也常理解成：
+### **Everything as a Service**
+
+它是一个：
+## **总称 / 大概念**
+
+意思是：
+- 软件可以作为服务交付（SaaS）
+- 平台可以作为服务交付（PaaS）
+- 基础设施可以作为服务交付（IaaS）
+- 甚至更多东西都可以 as a service 方式远程提供
+
+所以题目里说：
+> **a wide range of computing services, including software, platforms, and infrastructure**
+
+这明显是在描述：
+## **XaaS**
+
+### 你可以怎么理解 XaaS
+它其实就是：
+### **“各种东西都可以打包成云服务提供”**
+
+所以只要题目出现：
+- 很广泛
+- 包括软件、平台、基础设施
+- 各种计算服务的远程交付
+
+先想：
+## **XaaS**
+
+---
+
+## 其他几个分别是什么
+
+### 1. FaaS = Function as a Service
+这个比较常见。
+
+#### 含义：
+- 把某个函数/代码执行能力作为服务提供
+- 属于 serverless 的常见概念
+- 例如：事件触发某段函数运行
+
+#### 记忆：
+## **FaaS = 函数级服务 / serverless 函数**
+
+---
+
+### 2. EaaS
+这个缩写在不同场景下可能会有不同解释，
+常见比如：
+- **Everything as a Service**
+- **Endpoint as a Service**
+- **Education as a Service**
+- **Energy as a Service**
+
+所以在考试里如果题目问的是：
+### **总的、广义的“各种计算服务远程交付”**
+更标准、最常见的答案还是：
+## **XaaS**
+
+也正因为 EaaS 语义不够稳定，
+它不是这题最标准的答案。
+
+---
+
+### 3. AaaS
+这个也比较泛，常见可能有：
+- **Authentication as a Service**
+- **Analytics as a Service**
+- **Application as a Service**
+
+总之它通常不是这题要的“总称答案”。
+
+---
+
+## 最简单记忆法
+### 大总称
+- **XaaS** → 各种 as-a-service 的总称
+
+### 具体一种
+- **FaaS** → Function as a Service
+- 其他像 AaaS / EaaS 常常语义更具体或更不稳定
+
+---
+
+## 一句话口诀
+## **XaaS 是大总称，FaaS 是具体一种。**
+
+### 再压缩成一句
+- **SaaS / PaaS / IaaS 都能被装进 XaaS 这个大筐里**
+
+---
+
+## 一句话总结
+**这题的关键不是逐个猜缩写，而是分清层级：题目问的是“软件、平台、基础设施等各种服务的远程交付总称”，所以答案是 XaaS；FaaS 只是其中某一种具体服务形态。**
 
