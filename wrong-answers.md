@@ -6851,4 +6851,80 @@ PUP 不是“纯恶意软件”那种黑白分明的东西，而是那种用户�
 
 **一句话：**
 这题错在被 “peripheral devices” 带偏了；真正决定答案的是 **parallel interface standards**，而经典符合这个描述的是 **SCSI**，不是 PCIe。
+---
+
+## IPS 的特点：颜色好、视角广，但响应偏慢
+![IPS features question](images/2026-04-19-ips-features-color-viewing-speed.jpg)
+
+**题干：** What are the characteristic features of IPS? (Select 3 answers)
+
+**正确答案：**
+- **High color quality**
+- **Wide viewing angles**
+- **Slow response times**
+
+### 为什么 IPS 这题老容易记混
+因为显示器面板题本质上就在考：
+### **“优点是哪几个，代价是哪几个”**
+
+而 IPS 最典型的一组特征就是：
+## **颜色好 + 视角广 + 响应相对慢**
+
+### 1. High color quality
+IPS 面板一直最常被提到的优点之一就是：
+- 颜色表现好
+- 色准更好
+- 适合图片、设计、日常观感
+
+所以：
+### **High color quality**
+是标准答案。
+
+### 2. Wide viewing angles
+IPS 的另一个经典优点就是：
+- 从侧面看颜色和亮度变化没那么严重
+- 视角宽
+
+所以：
+### **Wide viewing angles**
+也是标准答案。
+
+### 3. Slow response times
+这题最容易错在这里。
+很多人一看到“好面板”，就下意识觉得它各方面都更强。
+
+但考试里 IPS 常见的“代价”是：
+- 响应时间通常不如更偏速度型的面板
+- 所以在经典对比里，
+### **slow response times**
+会被当成 IPS 的典型特征之一。
+
+### 你为什么会错
+你选了：
+- **Fast response times**
+- **Low color quality**
+
+这两个刚好都和 IPS 的经典印象相反：
+- IPS 不是以“最快响应”出名
+- IPS 也不是低色质
+
+### 最简单记忆法
+你可以直接把 IPS 背成：
+## **IPS = Image Pretty Stable**
+虽然这不是正式全称，
+但非常好记：
+- **Image Pretty** → 颜色好
+- **Stable** → 视角看着更稳定
+- 代价：**速度不算最快**
+
+### 再和其他面板顺手区分
+- **IPS** → 颜色好、视角广、速度偏慢
+- **TN** → 速度快、颜色和视角差一些
+- **VA** → 对比度高，处于中间路线
+
+### 一句话口诀
+## **IPS 看色彩和视角，别看速度。**
+
+**一句话：**
+这题最值得死记的就是：**IPS = 高色质 + 广视角 + 响应偏慢**。
 
