@@ -10175,4 +10175,112 @@ Mini-LED 仍然是背光 LCD 路线。
 
 **一句话：**
 这题错在把 Mini-LED 误记成自发光技术；它其实还是 **背光 LCD**，所以正确记法是：**更小更密的背光 LED、控光更强、峰值亮度更高。**
+---
+
+## Cable adapter 主要做“接口形态调整”和“信号转换”，不等于自带热插拔能力
+![Cable adapter functions signal conversion vs hot swap question](images/2026-04-20-cable-adapter-functions-signal-conversion-vs-hot-swap.jpg)
+
+**题干：** Which of the answers listed below describe the functionalities typically offered by cable adapters? (Select 2 answers)
+
+**正确答案：**
+- **Signal conversion (e.g., digital to analog)**
+- **Connector form factor adjustment**
+
+### 先回答你：为什么不能选 hot swap？
+因为：
+## **热插拔能力主要是接口/总线/设备标准本身的特性，不是 cable adapter 的“典型功能”。**
+
+也就是说，
+一个转接头/适配器本身通常负责的是：
+- 物理接口转换
+- 形态匹配
+- 有时做信号转换
+
+但它**不负责定义设备能不能在开机状态下安全插拔**。
+
+### 这题最核心的判断点
+你要先分清：
+## **adapter 是“转换/适配”工具，不是“能力赋予器”。**
+
+所以 cable adapter 最典型做的是两件事：
+
+### 1. Connector form factor adjustment
+这个你答对了。
+就是：
+- 一边这个口
+- 一边那个口
+- 帮你把插头形态适配起来
+
+比如：
+- USB-C 转 USB-A
+- HDMI 转 DVI
+- 3.5mm 转 6.35mm
+
+### 2. Signal conversion
+这个你漏了。
+有些 adapter 不只是改插头形状，
+还会负责：
+### **信号类型转换**
+
+比如：
+- 数字转模拟
+- 某种显示信号转另一种信号
+
+所以：
+### **Signal conversion**
+是对的。
+
+### 为什么 hot swap capability 不对
+#### hot swap 是什么
+**Hot swap / hot plug** 指的是：
+- 设备在系统通电/运行状态下
+- 可以安全插入/移除
+- 不需要关机
+
+这更取决于：
+- 接口标准
+- 硬件设计
+- 驱动/系统支持
+
+比如：
+- USB 常见支持热插拔
+- SATA 在某些场景也支持 hot swap
+- 但这不是因为“转接头会提供热插拔能力”
+
+所以题目问：
+### **cable adapters typically offered functionalities**
+
+hot swap 不是 adapter 的典型功能，
+而是连接标准/设备平台的属性。
+
+### 为什么 single-port-to-multi-port expansion 也不对
+因为那更像：
+- hub
+- dock
+- splitter
+- expansion device
+
+不属于 cable adapter 最典型、最基础的功能定义。
+
+### 为什么 signal amplification 也不对
+因为放大信号更像：
+- repeater
+- active booster
+- amplifier
+
+不是一般 cable adapter 的核心功能。
+
+### 最简单记忆法
+## **Adapter 主要做两件事：改接口、转信号。**
+
+不要优先记成它能：
+- 赋予热插拔
+- 扩展多口
+- 放大信号
+
+### 一句话口诀
+## **转接头管“接得上”和“信号通”，不管热插拔，也不负责放大和扩口。**
+
+**一句话：**
+你这题错在把“接口标准/设备支持的热插拔能力”当成了“转接头本身的功能”；考试里 cable adapter 最典型的功能还是：**接口形态调整 + 信号转换。**
 
