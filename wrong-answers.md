@@ -8976,4 +8976,68 @@ CAC 就是 **Common Access Card**，是美国国防部发放的智能卡，用�
 
 **一句话：**
 这题错在把“网络文件共享协议”选成了“网络启动装系统机制”；只要看到 **over a network interface 安装操作系统**，优先想到 **PXE**。
+---
+
+## 交换认证和授权数据的标记语言看 SAML，不是 XHTML
+![SAML authn authz markup language question](images/2026-04-19-saml-authn-authz-markup-language.jpg)
+
+**题干：** Which of the acronyms listed below refers to a markup language for exchanging authentication and authorization data?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | XHTML |
+| ✅ 正确答案 | SAML |
+
+### 为什么答案是 SAML
+## **SAML = Security Assertion Markup Language**
+它就是：
+### **用来交换认证（authentication）和授权（authorization）数据的标记语言/标准**
+
+题目里几乎直接把定义写出来了：
+- **markup language**
+- **exchanging authentication and authorization data**
+
+这就是：
+## **SAML**
+
+### SAML 最简单怎么理解
+你可以把它先记成：
+## **单点登录/身份联邦里常见的“认证声明交换格式”**
+
+常见场景比如：
+- 企业单点登录（SSO）
+- 身份提供者（IdP）和服务提供者（SP）之间传递登录/身份信息
+
+### 为什么 XHTML 不对
+## **XHTML = Extensible HyperText Markup Language**
+它是：
+### **网页标记语言**
+
+也就是 HTML 的更严格 XML 风格版本，
+和网页结构/页面描述有关，
+不是拿来交换认证和授权数据的安全标准。
+
+### 另外两个顺手区分
+#### XML
+- 通用标记语言格式/元语言
+- 很多东西可以基于 XML 表达
+- 但题目问的是“专门用来交换认证授权数据的 acronym”
+更具体标准答案是 **SAML**
+
+#### SOAP
+- 协议/消息交换框架
+- 用于 Web services
+- 不是这题问的身份认证授权标记语言
+
+### 最简单记忆法
+- **SAML** → 认证/授权数据交换，SSO 常见
+- **XHTML** → 网页语言
+- **XML** → 通用标记格式
+- **SOAP** → Web 服务消息协议/框架
+
+### 一句话口诀
+## **登录身份声明交换看 SAML，网页结构看 XHTML。**
+
+**一句话：**
+这题错在把“网页标记语言”选成了“认证授权数据交换语言”；看到 **authentication + authorization + markup language**，优先想到 **SAML**。
 
