@@ -10800,4 +10800,78 @@ F-type connector 就是 **用在同轴线上的螺纹式接头**，常见于 **�
 
 **一句话：**
 这题不能选 none of the above，因为 **multipart paper** 本身就是“用于打印过程中直接生成 duplicate copies”的标准答案。
+---
+
+## Impact printer printhead 故障：缺点缺线 + 打印发虚/深浅不一，不是“噪音大”
+![Impact printer printhead symptoms question](images/2026-04-20-impact-printer-printhead-symptoms.jpg)
+
+**题干：** Which of the following symptoms may indicate a failing impact printer printhead? (Select 3 answers)
+
+**正确答案：**
+- **Vertical lines or dots are missing in printouts**
+- **Printed characters or images appear faint or with inconsistent darkness**
+- **Horizontal lines or dots are missing in printouts**
+
+### 你这题为什么会错
+你已经选对了两项：
+- **Vertical lines or dots are missing in printouts** ✅
+- **Horizontal lines or dots are missing in printouts** ✅
+
+你漏掉的是：
+- **Printed characters or images appear faint or with inconsistent darkness** ✅
+
+你错选的是：
+- **Excessive noise during printer operation** ❌
+
+### 为什么“faint / inconsistent darkness”是对的
+impact printer 的 printhead 如果开始故障，
+常见表现就是：
+- 有些针打得不够有力
+- 某些位置击打不稳定
+- 打印出来发虚
+- 深浅不一致
+
+所以：
+## **Printed characters or images appear faint or with inconsistent darkness**
+很符合 printhead 变差的症状。
+
+### 为什么“excessive noise”不对
+因为 impact printer 本来就：
+## **很吵**
+
+它靠机械击打打印，
+天生噪音就比较大。
+
+所以“噪音大”不够特异，
+不能直接当成 printhead failing 的标准故障症状。
+
+换句话说：
+- **impact printer noisy** ≠ 一定 printhead 坏了
+
+### 最值得记的三个症状
+你可以直接记成：
+## **缺点、缺线、发虚/深浅不一**
+
+也就是：
+- **Vertical lines or dots missing**
+- **Horizontal lines or dots missing**
+- **Faint / inconsistent darkness**
+
+### 为什么纸张走偏那项不对
+**Misaligned printed output due to incorrect paper feed**
+更像：
+- 进纸问题
+- 走纸机构问题
+- 对位/输纸问题
+
+不是 printhead 自己故障的最核心表现。
+
+### 最简单记忆法
+## **Printhead 坏 → 打不全、打不匀；不是单纯更吵。**
+
+### 一句话口诀
+## **针头坏，缺点缺线还发虚；本来就吵别乱选噪音。**
+
+**一句话：**
+这题关键是抓住 printhead 故障会直接影响“打出来的质量”——**缺线、缺点、深浅不一**；而 **impact printer 本来就很吵**，所以噪音大不是这题该选的核心症状。
 
