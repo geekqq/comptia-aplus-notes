@@ -7509,4 +7509,90 @@ SMB/CIFS 更多是：
 
 **一句话：**
 第一个选项错，是因为 SMB/CIFS 的典型定位是 **Windows/局域网文件共享协议**，不是“专门为互联网安全文件共享优化”的协议。
+---
+
+## Authentication process 更贴近 MFA，不是 SSO
+![MFA vs SSO authentication question](images/2026-04-19-mfa-vs-sso-authentication.jpg)
+
+**题干：** Which of the terms listed below best applies to the authentication process?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | SSO |
+| ✅ 正确答案 | MFA |
+
+### 为什么答案是 MFA
+这题问的是：
+## **authentication process（认证过程）**
+
+在这几个选项里，最直接和“认证怎么进行”相关的是：
+### **MFA = Multi-Factor Authentication**
+
+也就是：
+- 多因素认证
+- 用多个认证要素来验证身份
+
+例如：
+- 密码
+- 手机验证码
+- 指纹/面容
+- 安全令牌
+
+这显然就是非常典型的：
+## **身份认证过程**
+
+### 为什么 SSO 不对
+你选的是：
+## **SSO = Single Sign-On**
+中文就是：
+### **单点登录**
+
+SSO 的重点不是“认证有几个因素”，
+而是：
+- 用户登录一次
+- 可以访问多个系统
+- 不用每个系统都重新登录
+
+所以 SSO 更偏：
+### **登录体验 / 身份联用机制**
+而不是这题在考的“认证过程本身最典型的术语”。
+
+### 为什么 UAC 不对
+## **UAC = User Account Control**
+- 用户帐户控制
+- 更偏权限提升、管理员确认
+- 不是认证过程本身
+
+### 为什么 ACL 不对
+## **ACL = Access Control List**
+- 访问控制列表
+- 决定谁能访问什么资源
+- 更偏授权（authorization）
+- 不是认证（authentication）
+
+### 最简单区分
+- **MFA** → 你是谁？怎么证明你是你？（认证）
+- **SSO** → 登一次能进多个系统（登录联用）
+- **ACL** → 你能访问什么（授权）
+- **UAC** → 提权确认
+
+### 最简单记忆法
+如果题目问：
+- **authentication process**
+- 验证身份怎么做
+
+优先想：
+## **MFA**
+
+如果题目问：
+- 登录一次进入多个系统
+
+才更像：
+## **SSO**
+
+### 一句话口诀
+## **MFA 管认证，SSO 管一次登录多处通行，ACL 管权限。**
+
+**一句话：**
+这题错在把“认证方式”选成了“登录联用机制”；题目问 authentication process，本质更贴近 **MFA（多因素认证）**，不是 SSO。
 
