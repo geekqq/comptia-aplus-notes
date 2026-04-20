@@ -7852,4 +7852,80 @@ SC 不用这么记。
 
 **一句话：**
 你这题不是不会，是把 **SC** 和 **ST** 又串了：**SC 看 push-pull + datacom/telecom；ST 才是 bayonet twist-lock + 老网络风格。**
+---
+
+## IPS / TN / VA 三兄弟最容易串：VA 记“高对比 + 颜色不错 + 视角也不错”
+![VA panel features question](images/2026-04-19-va-panel-features.jpg)
+
+**题干：** The VA display technology can be characterized by: (Select 3 answers)
+
+**正确答案：**
+- **High contrast ratios**
+- **Good viewing angles**
+- **Good color quality**
+
+### 为什么你又会错
+因为显示器面板题真的就是三兄弟互相打架：
+- **TN**
+- **IPS**
+- **VA**
+
+你这次错在把：
+### **VA 的“还不错 viewing angles”**
+记成了：
+### **low viewing angles**
+
+其实更该这样记：
+## **VA = 对比度强，颜色不错，视角也不错（但速度通常不如 TN）**
+
+### VA 这题怎么记
+#### 1. High contrast ratios
+这是 VA 最标志性的强项。
+### **VA 最爱考的就是高对比度**
+黑位通常比 IPS/TN 更有优势。
+
+#### 2. Good color quality
+VA 不是低色质。
+它的颜色表现是不错的，
+虽然考试里很多人会更先把“好颜色”联想到 IPS，
+但 VA 也不是差色彩。
+
+#### 3. Good viewing angles
+VA 的视角也不该直接打成“low viewing angles”。
+它通常比 TN 好，
+虽然很多资料会说它不如 IPS 那么强，
+但考试里这里给的是：
+### **good viewing angles**
+
+### 你怎么防止再混
+不要把三兄弟都背成“谁都差不多”。
+要硬拆成：
+
+#### TN
+- **速度快**
+- **颜色一般**
+- **视角差**
+
+#### IPS
+- **颜色最好**
+- **视角最好**
+- **速度偏慢（考试记忆）**
+
+#### VA
+- **对比度最好/很强**
+- **颜色不错**
+- **视角不错**
+- 夹在 IPS 和 TN 中间，但更偏“画面对比强”
+
+### 最简单暴力记忆法
+## **TN 看速度，IPS 看色彩和视角，VA 看对比度。**
+
+然后再补一句：
+## **VA 不是低视角、也不是低色质。**
+
+### 一句话口诀
+## **TN 快但差，IPS 美但慢，VA 黑得深。**
+
+**一句话：**
+这题最该记的是：**VA 的主标签是高对比度，不要把它误记成低视角面板；在这套题里，VA = 高对比 + 好颜色 + 好视角。**
 
