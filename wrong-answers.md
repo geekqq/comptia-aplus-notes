@@ -8686,4 +8686,67 @@ TN 你以后就固定背成：**快、便宜、但颜色和视角都差**；看�
 
 **一句话：**
 这题关键不是搞懂所有缩写，而是分清层级：**VDI 是“给很多用户交付虚拟桌面”的平台/架构；RDP/VNC 只是连接方式，而 VDE 在这题里不是标准答案。**
+---
+
+## CAC：美国国防部发的智能卡，用于身份识别、认证和门禁/系统访问
+![CAC smart card DoD question](images/2026-04-19-cac-smart-card-dod.jpg)
+
+**题干：** Which of the terms listed below refers to a smart card issued by the U.S. Department of Defense for secure identification, authentication, and access to both physical locations and information systems?
+
+✅ **正确答案：CAC**
+
+### CAC 是什么
+## **CAC = Common Access Card**
+它是：
+### **美国国防部（DoD）使用的智能身份证卡 / 访问卡**
+
+它的作用包括：
+- 身份识别（identification）
+- 身份认证（authentication）
+- 进入实体场所（physical access）
+- 访问信息系统（logical / system access）
+
+所以题目里说：
+- **issued by the U.S. Department of Defense**
+- **smart card**
+- **identification, authentication, and access**
+
+这几个关键词一出来，
+答案就是：
+## **CAC**
+
+### 为什么这题你虽然是猜的，但其实抓对了
+因为它最显眼的限定词就是：
+### **U.S. Department of Defense**
+
+只要和 DoD + smart card + access 放在一起，
+考试里基本就是：
+## **CAC**
+
+### 其他几个顺手区分
+#### PIV = Personal Identity Verification
+- 也是政府相关身份验证卡概念
+- 但更偏联邦政府广泛身份验证标准/卡体系
+- 这题明确写 **DoD**，所以更标准是 **CAC**
+
+#### EMV
+- 银行卡芯片支付标准
+- 和 DoD 身份卡无关
+
+#### eSIM
+- 嵌入式 SIM 卡
+- 移动通信相关
+- 更不相关
+
+### 最简单记忆法
+- **CAC** → DoD 智能卡
+- **PIV** → 政府身份验证卡/标准
+- **EMV** → 银行卡芯片支付
+- **eSIM** → 手机通信 SIM
+
+### 一句话口诀
+## **DoD 智能卡看 CAC，银行卡芯片看 EMV，手机虚拟卡看 eSIM。**
+
+**一句话：**
+CAC 就是 **Common Access Card**，是美国国防部发放的智能卡，用来做身份识别、认证，以及进入建筑和访问信息系统。
 
