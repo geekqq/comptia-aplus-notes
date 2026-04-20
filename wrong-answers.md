@@ -9040,4 +9040,74 @@ CAC 就是 **Common Access Card**，是美国国防部发放的智能卡，用�
 
 **一句话：**
 这题错在把“网页标记语言”选成了“认证授权数据交换语言”；看到 **authentication + authorization + markup language**，优先想到 **SAML**。
+---
+
+## 美国联邦政府员工/承包商智能卡身份认证标准看 PIV
+![PIV federal smart card authentication question](images/2026-04-19-piv-federal-smart-card-authentication.jpg)
+
+**题干：** Which of the answers listed below refers to a standardized method employed by the U.S. federal government to authenticate the identities of employees and contractors via smart card-based credentials?
+
+✅ **正确答案：PIV**
+
+### 为什么答案是 PIV
+## **PIV = Personal Identity Verification**
+它指的是：
+### **美国联邦政府用于员工和承包商身份验证的标准化方法/体系**
+
+题目里的关键词几乎就是 PIV 的定义：
+- **U.S. federal government**
+- **authenticate identities of employees and contractors**
+- **smart card-based credentials**
+
+所以答案就是：
+## **PIV**
+
+### PIV 最简单怎么理解
+你可以把它先记成：
+## **美国联邦政府通用的身份验证智能卡标准/体系**
+
+它强调的是：
+- 联邦政府身份认证
+- 标准化
+- 智能卡凭证
+
+### 和 CAC 怎么区分
+这个最容易混，
+因为两者都跟政府/智能卡/身份认证有关。
+
+#### CAC
+- **Common Access Card**
+- 更偏 **美国国防部（DoD）**
+- 是具体那张卡
+
+#### PIV
+- **Personal Identity Verification**
+- 更偏 **美国联邦政府范围的标准化身份验证体系/方法**
+- 是标准/验证框架概念更强
+
+### 为什么其他几个不对
+#### MFA
+- 多因素认证
+- 太泛了，不是题目说的联邦政府智能卡标准
+
+#### SAE
+- 常见于 Wi-Fi 安全（Simultaneous Authentication of Equals）等语境
+- 不相关
+
+#### PKI
+- 公钥基础设施
+- 是底层信任/证书体系
+- 不是题目问的那个联邦政府智能卡身份验证标准名称
+
+### 最简单记忆法
+- **PIV** → 联邦政府智能卡身份验证标准
+- **CAC** → DoD 智能卡
+- **PKI** → 公钥基础设施
+- **MFA** → 多因素认证
+
+### 一句话口诀
+## **联邦政府标准看 PIV，国防部卡片看 CAC。**
+
+**一句话：**
+这题虽然你答对了，但特别值得记：**PIV 是美国联邦政府员工/承包商使用智能卡凭证做身份认证的标准化方法；DoD 那张具体卡更常叫 CAC。**
 
