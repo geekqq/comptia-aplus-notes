@@ -5898,4 +5898,104 @@ ROM 是：
 
 **一句话：**
 这题错在把“通用系统内存 DRAM”和“显卡专用显存 VRAM”混了；凡是题目提到 **image/video data + GPU fast access**，优先选 **VRAM**。
+---
+
+## 让程序以另一用户权限运行：UAC（不是 OTP / MMC / GPO）
+![UAC vs OTP MMC GPO question](images/2026-04-19-uac-vs-otp-mmc-gpo.jpg)
+
+**题干：** Which of the MS Windows features allows users to run programs with the security privileges of another user?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | UAC |
+| ✅ 正确答案 | UAC |
+
+> 这题你是瞎猜猜对了，但你想把几个缩写都搞清楚，这个很值。
+
+### 为什么这题答案是 UAC
+## **UAC = User Account Control**
+中文一般就是：
+### **用户帐户控制**
+
+它的作用是：
+- 控制权限提升
+- 在需要管理员权限时弹出确认
+- 允许程序以更高权限运行（在合适授权下）
+
+所以这题里最接近“让程序以另一层级/更高权限的安全权限运行”的 Windows 功能，考试会指向：
+## **UAC**
+
+---
+
+## 其他几个缩写分别是什么
+
+### 1. OTP = One-Time Password
+中文：
+### **一次性密码**
+
+#### 用途：
+- 多因素认证
+- 登录验证码
+- 短时有效密码
+
+#### 关键词：
+- 认证
+- 验证码
+- MFA
+
+它和“Windows 权限控制功能”不是一类东西。
+
+---
+
+### 2. MMC = Microsoft Management Console
+中文：
+### **微软管理控制台**
+
+#### 用途：
+- 打开管理工具的框架
+- 例如：
+  - Device Manager
+  - Event Viewer
+  - Disk Management
+  - Local Users and Groups
+
+MMC 更像一个：
+### **管理工具容器 / 管理框架**
+不是权限提升功能本身。
+
+---
+
+### 3. GPO = Group Policy Object
+中文：
+### **组策略对象**
+
+#### 用途：
+- 在 Windows 域环境或本地策略中统一下发配置
+- 控制用户和计算机策略
+- 安全设置、脚本、桌面策略、系统限制等
+
+GPO 更像：
+### **管理规则 / 策略配置机制**
+也不是这题说的“让程序以另一用户权限运行”的功能。
+
+---
+
+## 最简单对照记忆
+| 缩写 | 全称 | 中文 | 你先记成什么 |
+| --- | --- | --- | --- |
+| **UAC** | User Account Control | 用户帐户控制 | **权限提升 / 管理员确认** |
+| **OTP** | One-Time Password | 一次性密码 | **验证码** |
+| **MMC** | Microsoft Management Console | 微软管理控制台 | **管理工具框架** |
+| **GPO** | Group Policy Object | 组策略对象 | **统一策略配置** |
+
+---
+
+## 最简单口诀
+- **UAC** → 提权确认
+- **OTP** → 一次性密码
+- **MMC** → 管理控制台
+- **GPO** → 组策略
+
+### 一句话总结
+**这题的关键不是背缩写外形，而是分清类别：UAC 管权限提升，OTP 管认证，MMC 是管理工具框架，GPO 是策略配置。**
 
