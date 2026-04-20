@@ -6927,4 +6927,75 @@ IPS 的另一个经典优点就是：
 
 **一句话：**
 这题最值得死记的就是：**IPS = 高色质 + 广视角 + 响应偏慢**。
+---
+
+## LC 光纤接口：小、像 RJ-45 卡扣、适合高密度环境
+![LC fiber connector question](images/2026-04-19-lc-fiber-connector.jpg)
+
+**题干：** Which of the following characteristics describe the LC fiber-optic connector? (Select 3 answers)
+
+**正确答案：**
+- **Latch locking mechanism similar to RJ-45 connectors**
+- **Common in high-density network environments like data centers**
+- **Small form factor connector**
+
+### 这题为什么会错
+你把 LC 和那种更老、更大、带旋转锁定的光纤接口混了。
+你选了：
+- **Large cylindrical shape**
+- **Bayonet twist-and-lock mechanism**
+
+这两个更像是在描述：
+## **ST connector**
+不是 LC。
+
+### LC 到底长什么样
+## **LC = Lucent Connector**
+它最典型的三个记忆点就是：
+
+### 1. Small form factor connector
+- LC 是小型化光纤接口
+- 体积比 SC、ST 这类老接口更小
+- 很适合高密度布线
+
+### 2. Latch locking mechanism similar to RJ-45
+- LC 的卡扣感觉很像网线头（RJ-45）那种按压卡扣
+- 所以考试很爱拿这个来当辨识点
+
+### 3. Common in high-density network environments like data centers
+- 因为它小，所以在：
+  - 机房
+  - 数据中心
+  - 高密度光纤配线环境
+  很常见
+
+### 为什么你选的两个不对
+#### Large cylindrical shape
+- LC 不是“大圆柱头”
+- 它恰恰是：
+### **small form factor**
+
+#### Bayonet twist-and-lock mechanism
+- 这种“旋转卡口 / twist-and-lock”更像 ST 接头
+- LC 不是这种锁定方式
+- LC 是更像 RJ-45 的卡扣式
+
+### 最简单记忆法
+你可以把 LC 直接记成：
+## **LC = Little Connector**
+虽然这不是正式全称，
+但考试里特别好用：
+- **Little** → 小型接口
+- **Clip** → 像 RJ-45 卡扣
+- **Crowded racks** → 适合高密度机房/数据中心
+
+### 顺手和 ST 区分
+- **LC** → 小、卡扣像 RJ-45、数据中心常见
+- **ST** → 更老、更大、圆柱、旋转锁定
+
+### 一句话口诀
+## **LC 小而精，像网线卡扣；ST 大而圆，要拧着锁。**
+
+**一句话：**
+这题的关键是把 LC 和 ST 分开：**LC 是小型、高密度、RJ-45 风格卡扣；你错选的“大圆柱 + 旋转锁定”更像 ST。**
 
