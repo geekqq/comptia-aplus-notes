@@ -8470,4 +8470,80 @@ CMDB 你先记一句：
 
 **一句话：**
 CMDB 就是用来记录 IT 环境里各类配置项和它们关系的数据库，所以 **server hardware** 和 **installed applications** 属于 CMDB 典型跟踪对象。
+---
+
+## 跟 WPA 一起出来、用来替代 WEP 的协议看 TKIP，不是 EAP
+![TKIP with WPA replace WEP question](images/2026-04-19-tkip-with-wpa-replace-wep.jpg)
+
+**题干：** Which of the following wireless encryption protocols was introduced with WPA to replace WEP?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | EAP |
+| ✅ 正确答案 | TKIP |
+
+### 为什么这题又容易混
+因为你脑子里现在已经有这些词：
+- WPA
+- TKIP
+- AES
+- CCMP
+- EAP
+
+它们都经常跟无线安全一起出现，
+所以特别容易串。
+
+### 为什么答案是 TKIP
+## **TKIP = Temporal Key Integrity Protocol**
+它就是：
+### **WPA 时代用来替代 WEP 的过渡性加密/保护机制**
+
+所以题目说：
+> **introduced with WPA to replace WEP**
+
+标准答案就是：
+## **TKIP**
+
+### 你最该记的关系
+- **WEP** → 老旧、不安全
+- **WPA** → 为修补 WEP 而来
+- **TKIP** → **WPA 搭档**，用来替代 WEP 的旧机制
+- **WPA2** → 更现代
+- **AES / CCMP** → 常和 WPA2 绑一起记
+
+### 为什么 EAP 不对
+## **EAP = Extensible Authentication Protocol**
+它是：
+### **认证框架 / 认证协议体系**
+
+它管的是：
+- 身份验证
+- 认证流程
+
+而不是题目问的这种：
+### **with WPA introduced to replace WEP 的无线加密协议/机制**
+
+所以不能选 EAP。
+
+### 为什么 AES / CCMP 这题不选
+- **AES** → 更偏加密算法
+- **CCMP** → 常和 WPA2 相关
+
+如果题目问：
+- WPA2 使用什么更现代机制
+那更容易想到它们。
+
+但题目明确说的是：
+### **introduced with WPA to replace WEP**
+这更典型就是：
+## **TKIP**
+
+### 最简单记忆法
+## **WPA 配 TKIP，WPA2 配 AES/CCMP。**
+
+### 一句话口诀
+## **WEP 老，WPA 补，TKIP 跟 WPA，AES/CCMP 跟 WPA2。**
+
+**一句话：**
+这题错在把“认证框架 EAP”和“WPA 时代替代 WEP 的加密机制 TKIP”混了；看到 **WPA + replace WEP**，优先想 **TKIP**。
 
