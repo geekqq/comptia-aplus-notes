@@ -8244,4 +8244,85 @@ PAM 专门管的是：
 
 **一句话：**
 你这题错在把“通用身份访问管理”选成了“特权账户管理”；只要看到 **elevated privileges / critical systems**，优先选 **PAM**。
+---
+
+## 题目写“hardware + cryptographic key management + encryption functions”时，这题偏 HSM，不是 TPM
+![HSM vs TPM key management question](images/2026-04-19-hsm-vs-tpm-key-management.jpg)
+
+**题干：** Which of the following answers refers to hardware, often accompanied by software or firmware, designed to provide cryptographic key management and encryption functions?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | TPM |
+| ✅ 正确答案 | HSM |
+
+### 为什么这题会和上一题混
+因为上一题刚讲过：
+- TPM
+- secure boot
+- disk encryption
+- integrity verification
+
+所以你这题很容易继续惯性选：
+## **TPM**
+
+但这题的关键词已经换了，
+它强调的是：
+- **hardware, often accompanied by software or firmware**
+- **cryptographic key management**
+- **encryption functions**
+
+这套描述更偏：
+## **HSM = Hardware Security Module**
+
+### HSM 到底是什么
+HSM 是：
+### **专门做密钥管理和加密操作的硬件安全模块**
+
+它的核心任务是：
+- 安全存储加密密钥
+- 执行加密/解密操作
+- 支持证书、签名、密钥生命周期管理
+- 常用于高安全要求环境
+
+你可以把它理解成：
+## **更偏专业密钥管理的加密保险柜/安全盒子**
+
+### 为什么 TPM 这题不对
+## **TPM** 也是安全硬件，
+也跟密钥和加密有关系，
+所以你错得很正常。
+
+但 TPM 更典型的考试定位是：
+- PC/主板上的安全芯片
+- secure boot
+- BitLocker / platform trust
+- integrity verification
+
+而题目如果明显强调：
+### **cryptographic key management and encryption functions**
+而且把它描述成一种专门硬件模块，
+更标准的答案就是：
+## **HSM**
+
+### 另外两个为什么不对
+#### EFS = Encrypting File System
+- Windows 文件系统加密功能
+- 不是硬件模块
+
+#### SFC = System File Checker
+- Windows 系统文件检查工具
+- 更不相关
+
+### 最简单区分
+- **TPM** → PC 里的安全芯片，偏 secure boot / disk encryption trust
+- **HSM** → 专门管理密钥、做加密操作的安全硬件模块
+- **EFS** → 文件系统加密功能
+- **SFC** → 系统文件检查
+
+### 一句话口诀
+## **TPM 像电脑里的安全芯片，HSM 像专门管密钥的硬件保险柜。**
+
+**一句话：**
+这题错在把“PC 安全芯片”选成了“专用密钥管理硬件模块”；题目只要突出 **cryptographic key management**，更标准答案通常就是 **HSM**。
 
