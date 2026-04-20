@@ -8325,4 +8325,69 @@ HSM 是：
 
 **一句话：**
 这题错在把“PC 安全芯片”选成了“专用密钥管理硬件模块”；题目只要突出 **cryptographic key management**，更标准答案通常就是 **HSM**。
+---
+
+## 老式串行铜缆连接器看 DB-9，不是 RG-59
+![DB-9 serial connector question](images/2026-04-19-db9-serial-connector.jpg)
+
+**题干：** Which of the following answers refers to a serial communication copper connector often found on older PCs, networking equipment, and industrial hardware?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | RG-59 |
+| ✅ 正确答案 | DB-9 |
+
+### 为什么答案是 DB-9
+题目最关键的词是：
+- **serial communication**
+- **copper connector**
+- **older PCs, networking equipment, industrial hardware**
+
+这几个关键词组合起来，
+最典型的答案就是：
+## **DB-9**
+
+### DB-9 是什么
+DB-9 是一种老式串行接口连接器，
+经常和：
+- RS-232 串口
+- 老电脑串口设备
+- 工业控制/网络设备控制台口
+联系在一起。
+
+你可以把它先记成：
+### **老式串口头 / 串行通信接口头**
+
+### 为什么 RG-59 不对
+你选的：
+## **RG-59**
+它是：
+### **同轴电缆类型**
+
+常见用途更偏：
+- 视频监控
+- 有线电视/视频信号
+- 射频/同轴传输
+
+它不是“串行通信连接器”。
+
+### 另外两个顺手排除
+#### RG-6
+- 也是同轴电缆类型
+- 不是串行接口连接器
+
+#### PS/2
+- 键盘鼠标接口
+- 不是这题说的老式串行通信连接器
+
+### 最简单记忆法
+- **DB-9** → 老式串口连接器
+- **RG-59 / RG-6** → 同轴电缆
+- **PS/2** → 键盘鼠标接口
+
+### 一句话口诀
+## **串口看 DB-9，同轴看 RG，键鼠看 PS/2。**
+
+**一句话：**
+这题错在把“同轴电缆型号”选成了“串行通信连接器”；题目只要出现 **serial communication on older PCs**，优先想到 **DB-9**。
 
