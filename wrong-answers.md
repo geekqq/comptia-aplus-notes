@@ -5789,4 +5789,113 @@ EDR 的重点是：
 
 **一句话：**
 这题错在把“端点威胁检测”当成了“敏感数据防外泄”；题目描述的其实是 **DLP（Data Loss Prevention）**。
+---
+
+## 图像和视频数据给 GPU 快速访问：VRAM，不是 DRAM
+![VRAM vs DRAM vs SRAM question](images/2026-04-19-vram-vs-dram-vs-sram.jpg)
+
+**题干：** Which type of memory is specifically designed to store image and video data for fast access by the graphics processor?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | DRAM |
+| ✅ 正确答案 | VRAM |
+
+### 这题核心
+题目问的是：
+> **专门为图像和视频数据设计，供 GPU 快速访问的内存**
+
+标准答案就是：
+## **VRAM**
+
+因为：
+- **V = Video**
+- 它就是显卡 / 图形处理相关的专用显存
+
+---
+
+## SRAM、DRAM、VRAM 怎么区分
+
+### 1. VRAM（Video RAM）
+这是这题的答案。
+
+#### 用途：
+- 存图像数据
+- 存纹理、帧缓冲、视频数据
+- 给 GPU 高速访问
+
+#### 关键词：
+- **graphics**
+- **video**
+- **GPU**
+- **image rendering**
+
+#### 最简单记忆：
+## **VRAM = 显卡用的内存 / 显存**
+
+---
+
+### 2. DRAM（Dynamic RAM）
+这是电脑最常见的：
+## **主内存 / 系统内存（RAM）**
+
+#### 用途：
+- 给 CPU 运行程序时临时存数据
+- 也就是我们平时说的内存条，大多就是 DRAM 类
+
+#### 特点：
+- 容量大
+- 成本较低
+- 需要不断刷新（refresh）
+
+#### 最简单记忆：
+## **DRAM = 电脑主内存**
+
+你这题会错，就是因为 DRAM 也是 RAM，
+但它不是“专门给 GPU 存图像视频数据”的那种内存。
+
+---
+
+### 3. SRAM（Static RAM）
+SRAM 通常更常见于：
+## **cache（缓存）**
+
+#### 用途：
+- CPU cache
+- 高速缓冲
+- 对速度要求很高的小容量存储
+
+#### 特点：
+- 比 DRAM 更快
+- 不需要像 DRAM 那样刷新
+- 但更贵、容量更小
+
+#### 最简单记忆：
+## **SRAM = 快，但小，常用来做缓存**
+
+---
+
+## 最好记的三者对照
+| 类型 | 主要用途 | 最简单记忆 |
+| --- | --- | --- |
+| **VRAM** | 显卡/GPU 处理图像视频数据 | **显存** |
+| **DRAM** | 电脑主内存 | **内存条** |
+| **SRAM** | CPU 高速缓存 | **缓存 Cache** |
+
+---
+
+## 为什么 ROM 不对
+ROM 是：
+- 只读存储
+- 固件、启动代码之类
+
+不是拿来给 GPU 高速存图像视频数据的。
+
+---
+
+## 一句话口诀
+## **VRAM 看显卡，DRAM 看主内存，SRAM 看缓存。**
+
+**一句话：**
+这题错在把“通用系统内存 DRAM”和“显卡专用显存 VRAM”混了；凡是题目提到 **image/video data + GPU fast access**，优先选 **VRAM**。
 
