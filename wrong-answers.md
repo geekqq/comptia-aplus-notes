@@ -7928,4 +7928,83 @@ VA 的视角也不该直接打成“low viewing angles”。
 
 **一句话：**
 这题最该记的是：**VA 的主标签是高对比度，不要把它误记成低视角面板；在这套题里，VA = 高对比 + 好颜色 + 好视角。**
+---
+
+## 这题考的是安全芯片 TPM，不是启动固件 UEFI
+![TPM vs UEFI secure boot question](images/2026-04-19-tpm-vs-uefi-secure-boot.jpg)
+
+**题干：** Which of the following terms refers to an embedded microcontroller used for secure boot, disk encryption, and system integrity verification?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | UEFI |
+| ✅ 正确答案 | TPM |
+
+### 为什么答案是 TPM
+## **TPM = Trusted Platform Module**
+它就是主板上/系统里的：
+### **安全微控制器 / 安全芯片**
+
+题目里的关键词是：
+- **embedded microcontroller**
+- **secure boot**
+- **disk encryption**
+- **system integrity verification**
+
+这几个关键词加在一起，
+最标准答案就是：
+## **TPM**
+
+### TPM 主要干什么
+你可以先记 TPM 负责这些安全底层能力：
+- 存储加密密钥
+- 支持 BitLocker 这类磁盘加密
+- 支持 secure boot / platform trust
+- 做系统完整性校验
+
+所以它更像：
+### **硬件级安全根（root of trust）**
+
+### 为什么 UEFI 不对
+你选的：
+## **UEFI = Unified Extensible Firmware Interface**
+它是：
+- 现代固件接口
+- BIOS 的现代替代/扩展
+- 负责启动流程、硬件初始化、启动管理
+
+它确实和 **secure boot** 有关系，
+所以你会被带偏很正常。
+
+但这题问的不是：
+### **哪个技术参与启动流程**
+而是：
+### **哪一个是 embedded microcontroller**
+
+这一点就把答案锁死到：
+## **TPM**
+
+### 其他两个顺手区分
+#### SoC = System on a Chip
+- 片上系统
+- 把很多功能集成到一块芯片里
+- 不是这题说的安全微控制器名称
+
+#### HSM = Hardware Security Module
+- 硬件安全模块
+- 也是安全相关硬件
+- 但更常见于企业/服务器/密钥管理环境
+- 不是 PC 里这题最典型的答案
+
+### 最简单记忆法
+- **TPM** → 主板/电脑里的安全芯片
+- **UEFI** → 启动固件接口
+- **HSM** → 更大更专用的企业级安全模块
+- **SoC** → 集成式芯片平台
+
+### 一句话口诀
+## **TPM 是安全芯片，UEFI 是启动固件。**
+
+**一句话：**
+你错在把“参与安全启动的固件”选成了“安全微控制器”；题目只要看到 **embedded microcontroller + disk encryption + integrity verification**，优先想到 **TPM**。
 
