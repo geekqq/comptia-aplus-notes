@@ -8167,4 +8167,81 @@ VA 的视角也不该直接打成“low viewing angles”。
 
 **一句话：**
 这题错在把“安全产品/能力”当成了“第三方托管服务”；题目只要强调 **managed by a third party**，优先想到 **MDR**。
+---
+
+## 管理高权限账户看 PAM，不是 IAM
+![PAM vs IAM RBAC OAuth question](images/2026-04-19-pam-vs-iam-rbac-oauth.jpg)
+
+**题干：** Which acronym refers to the management of users with elevated privileges on critical systems?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | IAM |
+| ✅ 正确答案 | PAM |
+
+### 为什么这题容易错
+因为 **IAM** 和 **PAM** 都跟“身份和权限”有关，
+很容易一看到 user management 就选 IAM。
+
+但这题真正的关键词是：
+- **elevated privileges**
+- **critical systems**
+
+这不是泛泛地管理所有用户身份，
+而是在说：
+## **高权限账号 / 特权账号管理**
+
+所以答案是：
+## **PAM = Privileged Access Management**
+
+### PAM 到底是什么
+PAM 专门管的是：
+- 管理员账号
+- root / domain admin / 高权限服务账号
+- 对关键系统的特权访问
+- 减少滥用和被盗用风险
+
+所以只要题目提：
+- 高权限用户
+- 特权账号
+- 关键系统
+
+优先想到：
+## **PAM**
+
+### 为什么 IAM 不对
+## **IAM = Identity and Access Management**
+它更大、更泛：
+- 用户身份管理
+- 登录认证
+- 权限分配
+- 访问控制
+
+它是大框架，
+但这题问的是更具体的：
+### **高权限账户管理**
+所以要选 PAM，不是 IAM。
+
+### 另外两个顺手区分
+#### RBAC = Role-Based Access Control
+- 基于角色的访问控制
+- 讲“按角色分权限”
+- 不是专门的特权账户管理
+
+#### OAuth
+- 授权框架
+- 常见于第三方登录/授权访问
+- 更不是这题答案
+
+### 最简单记忆法
+- **IAM** → 管所有身份和访问的大框架
+- **PAM** → 管高权限账户
+- **RBAC** → 按角色给权限
+- **OAuth** → 授权协议/框架
+
+### 一句话口诀
+## **IAM 管大盘，PAM 管特权，RBAC 管角色，OAuth 管授权。**
+
+**一句话：**
+你这题错在把“通用身份访问管理”选成了“特权账户管理”；只要看到 **elevated privileges / critical systems**，优先选 **PAM**。
 
