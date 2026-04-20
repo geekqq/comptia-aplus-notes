@@ -7595,4 +7595,68 @@ SSO 的重点不是“认证有几个因素”，
 
 **一句话：**
 这题错在把“认证方式”选成了“登录联用机制”；题目问 authentication process，本质更贴近 **MFA（多因素认证）**，不是 SSO。
+---
+
+## DRM：控制数字内容使用，防止盗版/版权侵权
+![DRM copyright protection question](images/2026-04-19-drm-copyright-protection.jpg)
+
+**题干：** A type of control access technology providing protection against copyright infringements is referred to as:
+
+✅ **正确答案：DRM**
+
+### 先记缩写
+## **DRM = Digital Rights Management**
+中文可以理解成：
+### **数字版权管理**
+
+### 它到底是干什么的
+DRM 的核心就是：
+- 控制数字内容怎么被使用
+- 限制未授权复制、分享、播放、下载
+- 保护版权方的内容不被随便传播
+
+常见场景比如：
+- 电影/音乐平台限制下载和复制
+- 电子书限制复制、转发
+- 软件或游戏限制盗版使用
+
+所以题目说：
+> **control access technology**
+> **protection against copyright infringements**
+
+这就是非常标准的：
+## **DRM**
+
+### 为什么不是别的
+#### OEM
+- **Original Equipment Manufacturer**
+- 原始设备制造商
+- 讲厂商身份/授权来源，不是版权内容访问控制技术
+
+#### EULA
+- **End User License Agreement**
+- 终端用户许可协议
+- 是法律/授权条款文件
+- 不是“技术控制手段”
+
+#### AUP
+- **Acceptable Use Policy**
+- 可接受使用政策
+- 讲用户行为规范
+- 也不是版权保护技术
+
+### 最简单记忆法
+看到：
+- **数字内容**
+- **版权保护**
+- **限制复制/分享/使用**
+
+先想：
+## **DRM**
+
+### 一句话口诀
+## **DRM 管数字版权，EULA 管授权条款，AUP 管使用行为。**
+
+**一句话：**
+DRM 就是通过技术手段控制数字内容的访问和使用，防止未授权复制和传播，所以它是“防版权侵权”的标准答案。
 
