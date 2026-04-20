@@ -7182,4 +7182,117 @@ OLED 每个像素自己发光，
 
 ### 一句话总结
 **这题错在把“用户行为规范文件”和别的协议类缩写混了；凡是题目提到用户如何使用电脑、网络和资源的规则，优先想到 AUP（Acceptable Use Policy）。**
+---
+
+## 备份轮换方案看 GFS，不是 LIFO / FIFO / EFS
+![GFS vs LIFO FIFO EFS question](images/2026-04-19-gfs-vs-lifo-fifo-efs.jpg)
+
+**题干：** Which of the acronyms listed below refers to a backup rotation scheme?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | LIFO |
+| ✅ 正确答案 | GFS |
+
+### 正确答案先记住
+## **GFS = Grandfather-Father-Son**
+这是一种：
+### **备份轮换方案（backup rotation scheme）**
+
+它的核心思想是把备份分成不同时间层级来轮换保留：
+- **Son** → 每日/最近的备份
+- **Father** → 每周备份
+- **Grandfather** → 每月备份
+
+所以它就是很典型的：
+## **备份轮换策略名称**
+
+### 为什么这题容易错
+因为另外几个缩写看起来也像“规则”。
+尤其：
+- **LIFO**
+- **FIFO**
+
+它们确实是规则，
+但不是 IT 备份轮换方案里这题要考的那个标准名词。
+
+---
+
+## 其他几个缩写分别是什么
+
+### 1. GFS = Grandfather-Father-Son
+#### 含义：
+- 祖父-父-子备份轮换法
+
+#### 用途：
+- 组织不同时间层级的备份保留
+- 平衡：
+  - 最近恢复需求
+  - 历史版本保留
+  - 存储空间使用
+
+#### 最简单记忆：
+## **GFS = 备份轮换法**
+
+---
+
+### 2. LIFO = Last In, First Out
+#### 含义：
+- 后进先出
+
+#### 用途：
+- 更像数据结构 / 仓储 / 栈（stack）逻辑
+
+#### 记忆：
+## **LIFO = 栈 / 后进先出**
+
+它不是备份轮换方案名字。
+
+---
+
+### 3. FIFO = First In, First Out
+#### 含义：
+- 先进先出
+
+#### 用途：
+- 更像队列（queue）逻辑
+- 仓储、排队、缓冲处理也常见
+
+#### 记忆：
+## **FIFO = 队列 / 先进先出**
+
+它也不是这题说的备份轮换法。
+
+---
+
+### 4. EFS = Encrypting File System
+#### 含义：
+- 加密文件系统
+
+#### 用途：
+- Windows 文件加密功能
+- 用来保护文件内容
+
+#### 记忆：
+## **EFS = 文件加密**
+
+和备份轮换无关。
+
+---
+
+## 最简单对照记忆
+| 缩写 | 全称 | 你先记成什么 |
+| --- | --- | --- |
+| **GFS** | Grandfather-Father-Son | **备份轮换法** |
+| **LIFO** | Last In, First Out | **后进先出 / 栈** |
+| **FIFO** | First In, First Out | **先进先出 / 队列** |
+| **EFS** | Encrypting File System | **文件加密** |
+
+---
+
+## 一句话口诀
+## **备份轮换看 GFS，栈看 LIFO，队列看 FIFO，加密看 EFS。**
+
+### 一句话总结
+**这题错在把“通用顺序规则”当成了“备份轮换方案名”。真正专门指备份轮换策略的是 GFS（Grandfather-Father-Son）。**
 
