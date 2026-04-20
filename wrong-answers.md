@@ -7432,4 +7432,81 @@ SOP 讲的是：
 
 **一句话：**
 这题错在把“化学品安全文档”和“操作流程文档”混了；前者是 **MSDS**，后者是 **SOP**。
+---
+
+## SMB/CIFS 不是“面向互联网优化”的，它是局域网文件共享协议
+![SMB CIFS not internet optimized question](images/2026-04-19-smb-cifs-not-internet-optimized.jpg)
+
+**题干：** What are the characteristic features of SMB/CIFS? (Select 2 answers)
+
+**正确答案：**
+- **Primarily used in Microsoft Windows environments**
+- **Used to provide shared access to files, directories, and devices**
+
+### 你问的重点：为什么第一个选项错
+你选的第一个是：
+## **Optimized for secure file sharing over the Internet**
+
+它错的关键在于：
+### **SMB/CIFS 的典型使用场景不是“面向互联网优化”**
+而是：
+## **局域网 / 内网文件共享**
+
+### SMB/CIFS 到底是干什么的
+**SMB = Server Message Block**
+**CIFS = Common Internet File System**
+
+虽然名字里有个 **Internet**，
+但考试里你不要被这个词骗了。
+
+它更典型的用途是：
+- Windows 共享文件夹
+- 网络磁盘共享
+- 共享打印机
+- 共享目录 / 设备访问
+
+也就是：
+### **在内网里提供文件、目录和设备共享**
+
+### 为什么“optimized for secure file sharing over the Internet”不对
+这句话错在两层：
+
+#### 1. 不是“专门为互联网优化”
+SMB/CIFS 更多是：
+- 局域网协议
+- 企业/家庭内网共享协议
+- 不是那种专门拿来做公网文件共享的“互联网友好型”协议
+
+#### 2. 也不是这题想表达的“安全互联网共享方案”
+如果题目强调：
+- 安全地通过互联网共享文件
+- 公网远程安全访问
+
+考试里你更容易想到：
+- VPN
+- SFTP
+- HTTPS-based 方案
+而不是先想 SMB/CIFS。
+
+### 为什么第二个正确答案是对的
+#### **Used to provide shared access to files, directories, and devices**
+这才是 SMB/CIFS 最标准的描述。
+它的核心作用就是：
+- 文件共享
+- 目录共享
+- 打印机/设备共享
+
+### 最简单记忆
+- **SMB/CIFS** → Windows 内网共享
+- **不是** → “为互联网安全文件共享优化”的协议
+
+### 一句话口诀
+## **SMB/CIFS 看共享，不看互联网优化。**
+
+### 再压缩成一句
+- **Windows 文件共享** → SMB/CIFS
+- **安全公网传文件** → 不优先想 SMB/CIFS
+
+**一句话：**
+第一个选项错，是因为 SMB/CIFS 的典型定位是 **Windows/局域网文件共享协议**，不是“专门为互联网安全文件共享优化”的协议。
 
