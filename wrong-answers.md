@@ -9558,4 +9558,124 @@ Stone 这块你说得对，**端口号就是硬骨头，但同时也是最值得
 
 **一句话：**
 这题关键很直接：**只要看到 collecting diagnostic and monitoring data，就优先想到 Syslog server；其他选项分别属于跳板访问、攻击控制、工业控制，不是日志汇聚服务器。**
+---
+
+## AAA 里这题选 RADIUS：UDP、认证授权合一、常见于 VPN 和 Wi‑Fi
+![RADIUS vs LDAP TACACS+ Kerberos question](images/2026-04-20-radius-vs-ldap-tacacs-kerberos.jpg)
+
+**题干：** Which AAA solution uses UDP as its transport protocol, combines authentication and authorization, and is commonly deployed for network access control such as VPNs and Wi‑Fi authentication?
+
+✅ **正确答案：RADIUS**
+
+### 为什么答案是 RADIUS
+## **RADIUS = Remote Authentication Dial-In User Service**
+它最经典的考试特征就是：
+- **AAA 方案**
+- **使用 UDP**
+- **authentication + authorization 合在一起**
+- 常见于：
+  - **VPN**
+  - **Wi‑Fi / 802.1X**
+  - 网络接入控制
+
+所以题目里这几个关键词一组合：
+- **UDP**
+- **combines authentication and authorization**
+- **VPNs and Wi‑Fi authentication**
+
+标准答案就是：
+## **RADIUS**
+
+---
+
+## 这几个选项怎么区分
+
+### 1. RADIUS
+#### 你先记成：
+## **网络接入认证老熟人：Wi‑Fi / VPN 常见**
+
+#### 核心点：
+- 用 **UDP**
+- 认证和授权常放一起
+- AAA 常见方案
+- VPN / Wi‑Fi 很常见
+
+#### 最短记忆：
+## **RADIUS = UDP + Wi‑Fi/VPN**
+
+---
+
+### 2. TACACS+
+#### 你先记成：
+## **更偏网络设备管理员登录控制**
+
+#### 核心点：
+- 通常用 **TCP 49**
+- 常见于路由器/交换机/防火墙管理访问
+- 把 AAA 分得更清楚（尤其认证、授权、记账控制更细）
+
+#### 和 RADIUS 最好对比：
+- **RADIUS** → 网络接入（Wi‑Fi / VPN）
+- **TACACS+** → 设备管理登录（admin access）
+
+#### 最短记忆：
+## **TACACS+ = TCP + 管理员登录控制**
+
+---
+
+### 3. LDAP
+#### 你先记成：
+## **目录服务，不是 AAA 接入协议本体**
+
+#### 核心点：
+- **LDAP = Lightweight Directory Access Protocol**
+- 用来访问目录服务
+- 常查：
+  - 用户信息
+  - 组织结构
+  - 账号属性
+- 常和 Active Directory 这类目录体系联系在一起
+
+#### 最短记忆：
+## **LDAP = 查目录/账号信息**
+
+它不是这题这种“UDP + Wi‑Fi/VPN AAA”答案。
+
+---
+
+### 4. Kerberos
+#### 你先记成：
+## **票据式认证（ticket-based authentication）**
+
+#### 核心点：
+- 强调单点登录/域环境认证
+- 常见于 Windows 域 / Active Directory
+- 用票据（ticket）来证明身份
+
+#### 最短记忆：
+## **Kerberos = 域登录票据认证**
+
+它也不是这题要的“Wi‑Fi / VPN AAA 接入协议”。
+
+---
+
+## 最简单总对照
+- **RADIUS** → UDP，Wi‑Fi/VPN 接入认证
+- **TACACS+** → TCP，网络设备管理员登录控制
+- **LDAP** → 目录查询/账号信息
+- **Kerberos** → 域环境票据认证
+
+---
+
+## 一句话口诀
+## **RADIUS 管接入，TACACS+ 管管控，LDAP 管目录，Kerberos 管票据。**
+
+### 再压缩成考试速记版
+- **Wi‑Fi / VPN / UDP** → **RADIUS**
+- **Admin device login / TCP** → **TACACS+**
+- **Directory service** → **LDAP**
+- **Ticket authentication / AD** → **Kerberos**
+
+**一句话：**
+这题最稳的抓法就是：**只要出现 UDP + Wi‑Fi/VPN + AAA 接入认证，就优先选 RADIUS；TACACS+ 更偏管理员设备访问，LDAP 是目录，Kerberos 是票据认证。**
 
