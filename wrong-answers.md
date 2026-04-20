@@ -6998,4 +6998,77 @@ IPS 的另一个经典优点就是：
 
 **一句话：**
 这题的关键是把 LC 和 ST 分开：**LC 是小型、高密度、RJ-45 风格卡扣；你错选的“大圆柱 + 旋转锁定”更像 ST。**
+---
+
+## OLED：不要背成“更亮”，考试里先记“无背光 + 对比更好 + 亮度偏低”
+![OLED features question](images/2026-04-19-oled-features-backlight-brightness-contrast.jpg)
+
+**题干：** What are the characteristic features of an OLED display? (Select 3 answers)
+
+**正确答案：**
+- **Works without backlight**
+- **Lower light output (brightness) in comparison to LCDs**
+- **Better contrast ratio and color representation in comparison to LCDs**
+
+### 为什么这题容易错
+因为你前面已经记住 OLED 的优点：
+- 对比度好
+- 颜色表现好
+- 不需要背光
+
+于是很容易顺手把它也想成：
+### **亮度也更强**
+
+但这套题里，它要你记的特征是：
+## **OLED 不用背光，画质更好，但亮度不如 LCD 那样高**
+
+### 1. Works without backlight
+这是 OLED 最核心的标志性特点。
+OLED 每个像素自己发光，
+所以：
+### **不需要背光层**
+
+这也是为什么它能做到：
+- 真黑
+- 高对比度
+- 更薄
+
+### 2. Better contrast ratio and color representation
+这也是 OLED 最典型优点：
+- 黑色更纯
+- 对比度更高
+- 颜色表现更漂亮
+
+所以这项你选对了。
+
+### 3. Lower light output (brightness) in comparison to LCDs
+你错在这里。
+这套题想让你记的是：
+- OLED 虽然画质好
+- 但亮度这项不一定占优势
+- 所以考试里这里给的标准答案是：
+### **Lower light output**
+
+### 为什么 higher light output 不对
+因为这题不是在考“主观观感更艳丽”，
+而是在考这套资料里的典型面板特性记忆点。
+
+它要你形成的对比是：
+- **OLED** → 无背光、对比强、色彩好、亮度较低
+- **LCD** → 靠背光，亮度表现通常更稳定/更高
+
+### 最简单记忆法
+你可以直接背成：
+## **OLED = 自发光、黑得深、颜色好，但别默认它更亮。**
+
+### 再压缩一点
+- **OLED** → no backlight
+- **OLED** → better contrast/color
+- **OLED** → brightness 不要背成最强
+
+### 一句话口诀
+## **OLED 看黑和色，不看背光；亮度别瞎选更高。**
+
+**一句话：**
+这题最值得记住的是：**OLED 的核心优势是无背光和高对比度/好色彩，但这套题里亮度并不是它的加分项，标准答案反而是 lower light output。**
 
