@@ -10734,4 +10734,70 @@ hot swap 不是 adapter 的典型功能，
 
 **一句话：**
 F-type connector 就是 **用在同轴线上的螺纹式接头**，常见于 **有线电视、卫星电视、cable modem 宽带**；你这次是把它和 **BNC 的 bayonet twist-lock** 搞混了。
+---
+
+## 这种题别被“none of the above”骗：能打印时直接生成副本的是 multipart paper
+![Multipart paper duplicate copies question](images/2026-04-20-multipart-paper-duplicate-copies.jpg)
+
+**题干：** Which type of printing paper is designed to create duplicate copies during the printing process?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | None of the above |
+| ✅ 正确答案 | Multipart |
+
+### 对，这题正确答案就是
+## **Multipart paper**
+
+也就是：
+### **多联纸 / 复写联单纸**
+
+它的用途就是：
+- 一次打印
+- 同时得到多份副本
+
+最典型场景比如：
+- 发票
+- 收据
+- 出货单
+- 仓库联单
+- 老式针式打印机场景
+
+### 为什么不是 none of the above
+因为：
+## **multipart 本来就是“专门为了打印时直接生成多联副本”设计的纸**
+
+所以这题并不是“前面都不对”，
+而是第三个选项本身就是标准答案。
+
+---
+
+## 其他几个为什么不对
+### Thermal
+- **热敏纸**
+- 常见于小票/收银纸
+- 是靠受热显色
+- 不是“为了生成 duplicate copies”设计的
+
+### Duplex
+- **双面打印**
+- 指纸张两面都打印，或者打印模式支持双面
+- 这和“多联副本”不是一回事
+
+### Multipart
+- **多联纸 / 多层复写纸**
+- 才是这题要的“打印时直接产生副本”
+
+---
+
+## 最简单记忆法
+- **Thermal** → 热敏小票纸
+- **Duplex** → 双面打印
+- **Multipart** → 一打就出多联副本
+
+### 一句话口诀
+## **Thermal 出小票，Duplex 打双面，Multipart 出多联。**
+
+**一句话：**
+这题不能选 none of the above，因为 **multipart paper** 本身就是“用于打印过程中直接生成 duplicate copies”的标准答案。
 
