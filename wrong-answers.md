@@ -10524,4 +10524,55 @@ hot swap 不是 adapter 的典型功能，
 
 **一句话：**
 你这题错在把“同轴电缆型号”选成了“老式串口标准”；题目只要出现 **serial cable + modems/printers/mice**，优先想到 **RS-232**。
+---
+
+## Thunderbolt 铜缆最大长度先记 3 米，不要往 6 米猜
+![Thunderbolt copper cable max length question](images/2026-04-20-thunderbolt-copper-cable-max-length-3m.jpg)
+
+**题干：** What is the maximum allowable length for a Thunderbolt copper cable?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Up to 6 meters |
+| ✅ 正确答案 | Up to 3 meters |
+
+### 这题就是纯记忆点
+标准记法先直接背：
+## **Thunderbolt copper cable = up to 3 meters**
+
+你这次错在把长度往更长的方向猜了。
+
+### 为什么不是 6 米
+因为题库这里考的是：
+### **Thunderbolt 铜缆的最大允许长度**
+
+标准答案就是：
+## **3 meters**
+
+不是：
+- 6 m
+- 10 m
+- 15 m
+
+### 最简单记忆法
+你可以把它直接压成：
+## **Thunderbolt 铜线短，3 米封顶。**
+
+### 顺手提醒
+这类题很容易和：
+- USB 长度
+- HDMI 长度
+- 以太网 100 米
+- 光纤更长距离
+混在一起。
+
+但这题不要展开想太多，
+考试里先硬记：
+## **Thunderbolt copper = 3 m**
+
+### 一句话口诀
+## **Thunderbolt 铜缆不长，3 米就是上限。**
+
+**一句话：**
+这题就是送分记忆题：**Thunderbolt copper cable 的最大长度 = 3 meters。**
 
