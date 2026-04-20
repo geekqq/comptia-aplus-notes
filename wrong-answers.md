@@ -8618,4 +8618,72 @@ CMDB 就是用来记录 IT 环境里各类配置项和它们关系的数据库�
 
 **一句话：**
 TN 你以后就固定背成：**快、便宜、但颜色和视角都差**；看到 wide viewing angles 就别选 TN。
+---
+
+## 给一群用户交付虚拟桌面平台：VDI，不是 VDE
+![VDI vs VDE VNC RDP question](images/2026-04-19-vdi-vs-vde-vnc-rdp.jpg)
+
+**题干：** Which of the answers listed below refers to virtualization platform for delivering virtual desktops to a community of users?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | VDE |
+| ✅ 正确答案 | VDI |
+
+### 先说你问的：VDE 是什么？
+说实话，**在 CompTIA A+ 这种常见考试语境里，VDE 不是你应该优先记的标准答案**。
+
+这题真正该记的是：
+## **VDI = Virtual Desktop Infrastructure**
+
+也就是：
+### **虚拟桌面基础设施**
+
+它指的是：
+- 在服务器/数据中心统一运行桌面环境
+- 把虚拟桌面交付给很多用户
+- 用户远程访问自己的虚拟 Windows 桌面/工作环境
+
+所以题目说：
+> **virtualization platform for delivering virtual desktops to a community of users**
+
+标准答案就是：
+## **VDI**
+
+### 为什么 VDI 对，VNC/RDP 不对
+#### VDI
+- 是“虚拟桌面平台/架构”
+- 讲的是整套交付方式
+
+#### RDP
+- **Remote Desktop Protocol**
+- 远程桌面协议
+- 是“连接方式/协议”
+- 不是整套虚拟桌面平台
+
+#### VNC
+- 也是远程控制/远程桌面方式
+- 不是 VDI 平台概念
+
+### 那 VDE 怎么看
+你这题里可以先把它当成：
+## **干扰项 / 非标准答案项**
+
+至少在 A+ 复习里，
+你不用把它当核心知识点死记。
+
+你真正要稳稳记住的是：
+### **交付一群用户的虚拟桌面平台 = VDI**
+
+### 最简单记忆法
+- **VDI** → 虚拟桌面基础设施（平台/架构）
+- **RDP** → 远程桌面协议
+- **VNC** → 远程控制/远程桌面工具
+- **VDE** → 这题里别选它
+
+### 一句话口诀
+## **平台看 VDI，连接看 RDP/VNC。**
+
+**一句话：**
+这题关键不是搞懂所有缩写，而是分清层级：**VDI 是“给很多用户交付虚拟桌面”的平台/架构；RDP/VNC 只是连接方式，而 VDE 在这题里不是标准答案。**
 
