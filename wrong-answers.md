@@ -7776,4 +7776,80 @@ DRM 就是通过技术手段控制数字内容的访问和使用，防止未授�
 
 **一句话：**
 你刚刚那个泛化记忆没错，但这道题问得更具体：它强调的是 **Microsoft-proprietary + optimized for flash drives**，所以标准答案要选 **exFAT**。
+---
+
+## SC 接头别和 ST/LC 混：SC 是 push-pull，常见于 datacom / telecom
+![SC fiber connector question](images/2026-04-19-sc-fiber-connector.jpg)
+
+**题干：** Which of the answers listed below describe the SC fiber-optic connector? (Select 2 answers)
+
+**正确答案：**
+- **Widely used in datacom and telecom applications**
+- **Push-pull locking mechanism for easy insertion and removal**
+
+### 你为什么会“之前做过又错”
+因为光纤接头这几种真的很容易串：
+- **LC**
+- **SC**
+- **ST**
+
+它们都在考：
+- 外形
+- 锁定方式
+- 应用场景
+
+你这次错，其实是把 **SC** 又和 **ST** 混了。
+
+### 这题最关键的区分
+## **SC = push-pull**
+也就是：
+- 直接推入
+- 拉出拔掉
+- 不是旋转卡口
+
+所以：
+### **Push-pull locking mechanism**
+是对的。
+
+而你选的：
+### **Bayonet twist-and-lock mechanism**
+这个更像：
+## **ST**
+
+### SC 常见场景
+SC 是很常见的光纤接头，
+经常用于：
+- 数据通信（datacom）
+- 电信（telecom）
+
+所以：
+### **Widely used in datacom and telecom applications**
+也是对的。
+
+### 你错选的另一个为什么不对
+#### **Common in older networks and multimode fiber setups**
+这更像在往 **ST** 那类老一点的场景靠。
+SC 不用这么记。
+
+### 顺手把三种最容易混的放一起
+#### LC
+- 小型（small form factor）
+- 像 RJ-45 卡扣
+- 常见于高密度环境/数据中心
+
+#### SC
+- **Push-pull**
+- 常用于 datacom / telecom
+- 方头、插拔方便
+
+#### ST
+- 圆形
+- **Bayonet twist-lock**
+- 更老一些
+
+### 最简单记忆口诀
+## **LC 小卡扣，SC 推拉插，ST 圆头拧。**
+
+**一句话：**
+你这题不是不会，是把 **SC** 和 **ST** 又串了：**SC 看 push-pull + datacom/telecom；ST 才是 bayonet twist-lock + 老网络风格。**
 
