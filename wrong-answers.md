@@ -9110,4 +9110,68 @@ CAC 就是 **Common Access Card**，是美国国防部发放的智能卡，用�
 
 **一句话：**
 这题虽然你答对了，但特别值得记：**PIV 是美国联邦政府员工/承包商使用智能卡凭证做身份认证的标准化方法；DoD 那张具体卡更常叫 CAC。**
+---
+
+## 评估和改进软件开发流程的框架看 SPICE，不是 SDLC
+![SPICE vs SDLC QA ISO question](images/2026-04-19-spice-vs-sdlc-qa-iso.jpg)
+
+**题干：** Which of the following refers to a framework for evaluating and improving software development processes?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | SDLC |
+| ✅ 正确答案 | SPICE |
+
+### 为什么答案是 SPICE
+## **SPICE = Software Process Improvement and Capability Determination**
+它本身就是：
+### **用来评估和改进软件开发过程的框架/模型**
+
+题目里写的是：
+- **framework**
+- **evaluating and improving software development processes**
+
+这基本就是在描述：
+## **SPICE**
+
+### 为什么 SDLC 不对
+## **SDLC = Software Development Life Cycle**
+它是：
+### **软件开发生命周期**
+
+也就是软件开发通常经历的阶段，比如：
+- 需求
+- 设计
+- 开发
+- 测试
+- 部署
+- 维护
+
+所以 SDLC 更像：
+## **开发流程本身 / 生命周期阶段模型**
+而不是题目说的：
+### **用来评估和改进这些流程的框架**
+
+### 其他两个顺手区分
+#### QA = Quality Assurance
+- 质量保证
+- 是一个质量相关概念/活动领域
+- 不是这里特指的框架名称
+
+#### ISO
+- 国际标准化组织，或者泛指某些标准体系
+- 太宽泛
+- 不是这题最具体的答案
+
+### 最简单记忆法
+- **SDLC** → 软件开发过程本身
+- **SPICE** → 评估/改进软件开发过程的框架
+- **QA** → 质量保证
+- **ISO** → 标准体系/标准组织
+
+### 一句话口诀
+## **SDLC 是流程本身，SPICE 是给流程做体检和改进。**
+
+**一句话：**
+这题错在把“软件开发生命周期”选成了“评估和改进开发流程的框架”；题目只要出现 **evaluating and improving software development processes**，优先想到 **SPICE**。
 
