@@ -10614,4 +10614,45 @@ hot swap 不是 adapter 的典型功能，
 
 **一句话：**
 这题别单独记，最好和上一题捆绑：**Thunderbolt 铜缆最远 3 m，光纤版本最远 60 m。**
+---
+
+## SATA 数据线接口是 7 pins；别和电源口的 15 pins 混了
+![SATA data connector 7 pins question](images/2026-04-20-sata-data-connector-7-pins.jpg)
+
+**题干：** The SATA interface specification defines a data cable connector consisting of:
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | 8 pins |
+| ✅ 正确答案 | 7 pins |
+
+### 这题为什么容易错
+因为 SATA 很容易把：
+- **数据接口**
+和
+- **电源接口**
+混在一起。
+
+### 正确记法
+## **SATA data connector = 7 pins**
+
+这个就是数据线那一排。
+
+### 最容易一起混的另一个点
+## **SATA power connector = 15 pins**
+
+所以你以后最好成对记：
+- **SATA 数据口** → **7 pins**
+- **SATA 电源口** → **15 pins**
+
+这样就不容易再错成 8 pins。
+
+### 最简单记忆法
+## **数据 7，供电 15。**
+
+### 一句话口诀
+## **SATA 数据线 7 针，SATA 电源线 15 针。**
+
+**一句话：**
+这题就是纯记忆点：**SATA data connector = 7 pins**，不要和 **SATA power connector = 15 pins** 混掉。
 
