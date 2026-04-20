@@ -6154,4 +6154,93 @@ UTM 就是 **Unified Threat Management**，意思是一台设备/平台统一提
 
 **一句话：**
 这题里的 peripheral devices 更偏“扩展卡类外围设备”，所以问到“老的主板总线标准”，答案是 **PCI**，不是 PS/2。
+---
+
+## 这题虽然写 network，但真正考的是 IoT 设备生态，不是 PAN 范围
+![IoT vs PAN question](images/2026-04-19-iot-vs-pan.jpg)
+
+**题干：** Which of the following terms refers to a network of interconnected devices equipped with sensors, such as wearable technology and home automation devices, that can interact with each other and perform various tasks and functions?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | PAN |
+| ✅ 正确答案 | IoT |
+
+### 为什么这题容易误导
+你会选 PAN 很正常，
+因为题目一开头就写：
+### **refers to a network**
+
+这很容易让人直接往：
+- PAN
+- LAN
+- WAN
+
+这种“网络类型”上想。
+
+但这题真正决定答案的，不是前面的 **network**，
+而是后面这些关键词：
+- **interconnected devices**
+- **equipped with sensors**
+- **wearable technology**
+- **home automation devices**
+- **interact with each other**
+- **perform tasks and functions**
+
+这些合在一起，其实是在描述：
+## **IoT = Internet of Things**
+
+### 为什么答案是 IoT
+IoT 的核心就是：
+- 很多带传感器的设备联网
+- 设备彼此交互
+- 执行自动化任务
+
+典型例子正好就是：
+- 可穿戴设备
+- 智能家居设备
+- 传感器网络
+
+所以题目虽然用了 **network** 这个词，
+但它在考的是：
+### **智能设备互联生态**
+也就是 **IoT**。
+
+### 为什么不是 PAN
+## **PAN = Personal Area Network**
+PAN 更强调的是：
+- 个人周边的小范围网络
+- 短距离连接
+- 例如手机 + 蓝牙耳机 + 智能手表
+
+它强调的是：
+### **网络范围类型**
+而不是“智能设备、传感器、自动化功能”这种场景。
+
+### 顺手对比一下
+- **PAN** → 小范围、个人设备网络
+- **IoT** → 传感器 + 智能设备 + 自动化互联
+- **ICS** → 工业控制系统
+- **SoC** → 片上系统，不是网络
+
+### 最简单记忆
+如果看到：
+- **wearables**
+- **smart home**
+- **sensors**
+- **devices interact and perform tasks**
+
+先想：
+## **IoT**
+
+如果看到：
+- **short-range personal devices**
+- **around one person**
+- **Bluetooth-like personal network**
+
+才更像：
+## **PAN**
+
+**一句话：**
+这题错在被 “network” 这个词带偏了；真正决定答案的是后半句那些“传感器、可穿戴、智能家居、设备协作”的描述，它们明显指向 **IoT**，不是 **PAN**。
 
