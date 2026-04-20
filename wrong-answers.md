@@ -9266,4 +9266,80 @@ NFC 你就记三件事：
 
 **一句话：**
 NFC 的核心是近距离通信，所以它能做 **支付、配对/数据交换、门禁认证**，但 **不能把“无线充电”当成 NFC 功能**。
+---
+
+## 这题要分 headset 和 speakers：AUX 3.5mm 更放在 speakers 这栏记
+![Mobile accessories headset vs speakers question](images/2026-04-20-mobile-accessories-headset-vs-speakers.jpg)
+
+**题干：** Select the applicable connectivity options for each mobile accessory device.
+
+### 这题里正确配对是
+- **Stylus** → Passive (direct-touch) or Active (Bluetooth-enabled)
+- **Headset** → Wired (**3.5mm port/jack, USB-C, Lightning**) or Wireless (**Bluetooth**)
+- **Speakers** → Wired (**auxiliary 3.5mm port/jack, USB**) or Wireless (**Bluetooth, Wi-Fi**)
+- **Webcam** → Wired (**USB**) or Wireless (**Wi-Fi**)
+
+### 先回答你
+对，**在这道题的出题逻辑里，auxiliary 3.5mm 更是放在 speakers 这边记的。**
+
+但更准确一点说：
+- **AUX 本质上就是一种 3.5mm 音频连接方式**
+- 现实里耳机和音箱都可能用 3.5mm
+- **只是这道题的分类把 auxiliary 3.5mm 归给了 speakers**
+
+所以考试时你要按这题的“标准配法”记，
+不要完全按现实世界自由发挥。
+
+### 这题为什么你会错
+因为你是按现实直觉在选：
+- 耳机/耳麦也会想到 auxiliary 3.5mm
+- 音箱也可能想到 USB-C / Lightning / Bluetooth
+
+但这套题在故意做“固定归类”：
+
+#### Headset 这栏记法
+- **3.5mm port/jack**
+- **USB-C**
+- **Lightning**
+- **Bluetooth**
+
+它更偏“手机耳机/耳麦”的常见连接方式。
+
+#### Speakers 这栏记法
+- **auxiliary 3.5mm port/jack**
+- **USB**
+- **Bluetooth**
+- **Wi-Fi**
+
+它更偏“外接音箱/扬声器”的连接方式。
+
+### 最容易混的点
+#### Headset
+你要记成：
+- 有线：**3.5mm / USB-C / Lightning**
+- 无线：**Bluetooth**
+
+#### Speakers
+你要记成：
+- 有线：**auxiliary 3.5mm / USB**
+- 无线：**Bluetooth / Wi-Fi**
+
+### 为什么 Speakers 这里有 Wi‑Fi
+因为有些智能音箱/无线音箱会通过：
+- Wi‑Fi 网络播放
+- 局域网串流
+
+所以题库会把 **Wi‑Fi** 放进 speakers。
+
+而 headset 这题标准答案就不把 Wi‑Fi 放进去。
+
+### 最简单记忆法
+- **Headset** → 手机耳机：3.5mm / USB-C / Lightning / Bluetooth
+- **Speakers** → 音箱：AUX 3.5mm / USB / Bluetooth / Wi‑Fi
+
+### 一句话口诀
+## **耳机看 3.5、USB-C、Lightning、蓝牙；音箱看 AUX、USB、蓝牙、Wi‑Fi。**
+
+**一句话：**
+你可以先按这套题死记：**AUX 3.5mm 归 speakers；USB-C/Lightning 更归 headset。** 现实里边界会重叠，但考试先按题库标准来。
 
