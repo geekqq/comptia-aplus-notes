@@ -6400,4 +6400,76 @@ PAN 更强调的是：
 
 **一句话：**
 这题关键不是背所有全称，而是先分层：**WPA 是标准，TKIP/AES/CCMP 是标准里用到的机制。** 所以题目问“修补 WEP 的安全标准”，答案就是 **WPA**。
+---
+
+## 经典模拟显示接口先想 VGA，不要被 DVI-I 迷惑
+![VGA vs DVI-I analog monitor question](images/2026-04-19-vga-vs-dvi-i-analog-monitor.jpg)
+
+**题干：** Which of the following answers refers to an analog video interface standard commonly used for connecting computer monitors before digital connections?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | DVI-I |
+| ✅ 正确答案 | VGA |
+
+### 为什么这题容易在 VGA 和 DVI-I 之间犹豫
+因为：
+- **VGA** 是纯模拟视频接口
+- **DVI-I** 里面也带有模拟信号
+
+所以看到 **analog video interface** 时，很容易觉得 DVI-I 好像也说得通。
+
+但题目还有一个更关键的限定：
+### **commonly used for connecting computer monitors before digital connections**
+
+这句其实在提示：
+## **传统、经典、在数字接口普及前最常见的模拟显示器接口**
+
+这个标准答案就是：
+### **VGA**
+
+### 为什么答案是 VGA
+**VGA = Video Graphics Array**
+在很长一段时间里，它就是最常见的电脑显示器模拟接口。
+
+你可以把它直接联想到：
+- 老显示器蓝色接口
+- 15-pin D-sub
+- 传统模拟显示输出
+
+考试里只要问：
+- **老式模拟显示器接口**
+- **digital connections 之前常用**
+
+优先就选：
+## **VGA**
+
+### 为什么 DVI-I 不是这题标准答案
+**DVI-I = Digital Visual Interface - Integrated**
+它的特点是：
+- **同时支持数字 + 模拟**
+- 不是“经典老式纯模拟标准”的代表答案
+
+也就是说：
+- DVI-I 确实能带模拟信号
+- 但它不是题目想考的那个“最典型、最传统、数字接口普及前最常见的模拟显示标准”
+
+这题更像在考：
+### **VGA = 经典模拟显示接口**
+
+### 其他两个为什么更不对
+- **HDMI** → 数字接口
+- **XGA** → 分辨率标准，不是物理视频接口
+
+### 最简单记忆
+- **VGA** → 经典老式模拟显示接口
+- **DVI-I** → 兼容数字+模拟，但不是这题最标准答案
+- **HDMI** → 数字接口
+- **XGA** → 分辨率，不是接口
+
+### 一句话口诀
+## **老式模拟显示器接口看 VGA；DVI-I 虽带模拟，但更像过渡型接口。**
+
+**一句话：**
+你会纠结很正常，因为 DVI-I 也带模拟；但只要题目强调“before digital connections 常用的经典模拟显示接口”，考试标准答案通常就是 **VGA**。
 
