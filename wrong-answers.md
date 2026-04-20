@@ -9784,4 +9784,98 @@ Stone 这块你说得对，**端口号就是硬骨头，但同时也是最值得
 
 **一句话：**
 这两题的关键是把“给单个设备固定发同一个地址”和“整个 DHCP 可分配地址池”分开：前者是 **Reservation**，后者是 **Scope**。
+---
+
+## Cable modem 和 DSL 最容易混的点：Cable = TV/coax/shared；DSL = 电话线/twisted pair/dedicated
+![Cable modem vs DSL shared vs dedicated question](images/2026-04-20-cable-modem-vs-dsl-shared-vs-dedicated.jpg)
+
+### 题 1：Cable modem 的特征（选 3）
+**正确答案：**
+- **Cabling that carries TV signals**
+- **Coaxial cabling**
+- **Shared bandwidth**
+
+#### 为什么你会错
+你前两项其实选对了：
+- 走 **TV signals** ✅
+- 走 **coaxial cabling** ✅
+
+你错在第三项把：
+- **Shared bandwidth**
+看成了：
+- **Dedicated bandwidth**
+
+#### 这题最该记的点
+## **Cable modem = 走有线电视同轴网络，而且带宽是共享的。**
+
+也就是说，同一个区域/节点的用户会共享带宽资源。
+
+---
+
+### 题 2：通过标准有线电视基础设施上网叫什么
+**正确答案：**
+- **Cable broadband**
+
+#### 为什么不是 Dial-up
+- **Dial-up** 是老式电话拨号上网
+- 用电话线路，不是 cable TV infrastructure
+
+#### 最简单记忆
+## **电视线宽带 = Cable broadband，不是 Dial-up。**
+
+---
+
+### 题 3：DSL modem 的特征（选 3）
+**正确答案：**
+- **Dedicated bandwidth**
+- **Twisted-pair copper cabling**
+- **Telephone lines**
+
+#### 为什么你会错
+你后两项其实选对了：
+- **Twisted-pair copper cabling** ✅
+- **Telephone lines** ✅
+
+你错在把：
+- **Dedicated bandwidth**
+选漏了，
+反而选了：
+- **Shared bandwidth** ❌
+
+#### 这题最该记的点
+## **DSL = 走电话双绞线，而且更偏 dedicated bandwidth。**
+
+考试里通常这样区分：
+- **Cable** → shared bandwidth
+- **DSL** → dedicated bandwidth
+
+---
+
+## 这三题其实是一组联动记忆
+### Cable modem
+- **TV signals**
+- **Coaxial cabling**
+- **Shared bandwidth**
+- 关键词：**Cable broadband**
+
+### DSL modem
+- **Telephone lines**
+- **Twisted-pair copper cabling**
+- **Dedicated bandwidth**
+
+---
+
+## 最简单一口气背法
+## **Cable 走电视同轴、共享带宽；DSL 走电话双绞线、独享带宽。**
+
+### 一句话口诀
+## **Cable 看 TV/coax/shared；DSL 看 phone/twisted pair/dedicated。**
+
+### 再压缩成考试秒杀版
+- **有线电视基础设施上网** → **Cable broadband**
+- **Cable modem** → **Coax + TV + Shared**
+- **DSL modem** → **Phone line + Twisted pair + Dedicated**
+
+**一句话：**
+这三题其实就是同一组对照：**Cable modem 走电视同轴并共享带宽；DSL 走电话双绞线并更偏独享带宽。**
 
