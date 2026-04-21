@@ -12281,4 +12281,108 @@ dynamic contrast 更像显示效果功能，
 
 **一句话：**
 这题的核心是区分“画面问题”和“整机关机问题”：**视频线没插好更像没画面/信号异常，风扇故障、滤网积灰、供电不足才更像 intermittent shutdown 的原因。**
+---
+
+## 预防投影机间歇性关机，重点是散热通风：清滤网 + 保持通风口不堵
+![Prevent projector intermittent shutdowns airflow filters](images/2026-04-20-prevent-projector-intermittent-shutdowns-airflow-filters.jpg)
+
+**题干：** Which of the following actions can help prevent intermittent projector shutdowns? (Select 2 answers)
+
+**正确答案：**
+- **Regularly cleaning or replacing air filters**
+- **Keeping ventilation openings clear of obstructions**
+
+### 这题和上一题其实是一组
+上一题你已经碰到：
+## **projector intermittent shutdown**
+最像：
+- 过热
+- 散热问题
+- 风扇/灰尘/通风问题
+
+所以这题问“怎么预防”，
+答案自然就会回到：
+## **改善散热条件**
+
+---
+
+## 为什么正确答案是这两个
+### 1. Regularly cleaning or replacing air filters
+这个你答对了。
+
+因为投影机滤网如果太脏：
+- 进风受阻
+- 散热变差
+- 温度升高
+- 容易触发保护关机
+
+所以定期清洁/更换滤网，
+是非常标准的预防动作。
+
+### 2. Keeping ventilation openings clear of obstructions
+这个你漏掉了，
+但它其实和滤网是同一思路：
+## **保证空气流通**
+
+如果通风口被挡住：
+- 热气散不掉
+- 机器温度上升
+- 容易间歇性关机
+
+所以这项也是标准答案。
+
+---
+
+## 为什么 surge protector 不对
+你选的是：
+### **Using a surge protector in the power connection**
+
+这个做法当然有价值，
+但它更偏：
+- 防电涌
+- 保护设备供电安全
+
+它不是最直接针对：
+## **projector intermittent shutdown caused by overheating**
+
+所以在这道题里，
+它不是最优先的答案。
+
+换句话说：
+### 它保护供电，
+### 但不直接解决投影机最常见的“热导致间歇性关机”。
+
+---
+
+## 为什么另外两个也不对
+### Disabling auto-shutdown features in projector settings
+这看起来像“不要让它自动关机”，
+但如果机器是因为过热在保护自己，
+你去关掉相关自动保护并不是标准预防思路。
+
+### Decreasing the projector's lamp brightness
+这在某些现实情境里可能会影响发热，
+但不是这题最标准、最基础、最直接的预防动作。
+
+题库更喜欢你先想到：
+- **滤网**
+- **通风口**
+
+---
+
+## 最简单记忆法
+### 投影机防止间歇性关机先记两件事：
+## **清滤网**
+## **别挡住通风口**
+
+本质就一句：
+## **让它散热顺畅。**
+
+---
+
+## 一句话口诀
+## **投影机怕热，预防关机先清滤网、保通风。**
+
+**一句话：**
+这题的核心就是把 projector intermittent shutdown 直接和散热联系起来：**预防最标准的两招就是清理/更换滤网，以及保持通风口不被遮挡。**
 
