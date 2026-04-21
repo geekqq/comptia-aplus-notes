@@ -13316,4 +13316,96 @@ printhead carriage（喷头小车）会左右移动。
 
 **一句话：**
 这题的本质还是同一个坑：**题目写 inkjet，就别再往 laser printer 的 drum / fuser 那套跑；grinding noise 最常见还是 rollers、paper path 异物、以及 printhead carriage 机构问题。**
+---
+
+## Laser printer grinding noise：fuser、drum 齿轮/轴承、卡纸异物、paper feed rollers 都要查；printhead carriage 是喷墨那套
+![Laser printer grinding noise components](images/2026-04-20-laser-printer-grinding-noise-components.jpg)
+
+**题干：** Which possible issues should a technician investigate when a grinding noise is heard during laser printer operation? (Select all that apply)
+
+**正确答案：**
+- **Faulty or worn fuser rollers and bearings**
+- **Worn or damaged gears and bearings affecting the imaging drum assembly**
+- **Small foreign objects or paper pieces stuck in the paper path**
+- **Improperly aligned, worn, or faulty paper feed rollers**
+
+### 这题和上一题正好成对比
+上一题考的是：
+## **inkjet printer grinding noise**
+所以重点是：
+- rollers
+- paper path
+- printhead carriage
+
+而这题明确写的是：
+## **laser printer operation**
+
+所以现在脑子要切到 laser 那一套：
+- **fuser**
+- **imaging drum assembly**
+- **gears / bearings**
+- **paper path / feed rollers**
+
+---
+
+## 为什么你这次会漏掉 paper feed rollers
+因为你已经抓到了 laser printer 的典型部件：
+- **fuser rollers and bearings** ✅
+- **drum assembly gears / bearings** ✅
+- **paper path foreign objects** ✅
+
+这已经很好了。
+
+你漏掉的是：
+### **Improperly aligned, worn, or faulty paper feed rollers**
+
+其实它和“异物卡纸”属于同一层很常见的机械异响来源：
+## **进纸机构本身**
+
+所以这题最后一项也要一起选。
+
+---
+
+## 为什么 printhead carriage 不对
+这个选项是：
+### **Malfunctioning or obstructed printhead carriage**
+
+它是上一题喷墨机那边的典型答案，
+因为：
+## **printhead carriage 是 inkjet 那套**
+
+而 laser printer 没有像喷墨打印机那样左右跑的 printhead carriage 结构作为核心部件，
+所以这题不能选它。
+
+---
+
+## 最简单对照记忆
+### Inkjet grinding noise
+优先查：
+- **printhead carriage**
+- **paper feed rollers**
+- **paper path foreign objects**
+
+### Laser grinding noise
+优先查：
+- **fuser rollers / bearings**
+- **drum assembly gears / bearings**
+- **paper path foreign objects**
+- **paper feed rollers**
+
+---
+
+## 最简单记忆法
+### 看到 grinding noise 先分机器类型：
+- **Inkjet** → 想喷头 carriage
+- **Laser** → 想 fuser / drum / gears
+- **两边都别忘了** → paper path / feed rollers
+
+---
+
+## 一句话口诀
+## **喷墨有异响找 carriage，激光有异响找 fuser / drum；两边都要查 rollers 和卡纸。**
+
+**一句话：**
+这题最值得记的是“先按打印机类型切脑子”：**laser printer grinding noise 要查 fuser、drum、齿轮轴承、进纸滚轮和卡纸异物；printhead carriage 是 inkjet 那边的答案。**
 
