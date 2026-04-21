@@ -13094,4 +13094,115 @@ port flapping 更直接、更典型的是：
 
 **一句话：**
 这题的核心就是把 port flapping 当成“链路自己反复掉又起”的问题来看：**最先查线缆物理层和 speed/duplex mismatch，不先怪拓扑设计。**
+---
+
+## 喷墨打印机出现竖线，先想喷头堵塞/脏了 → cleaning printheads；不要选 toner
+![Inkjet vertical lines clean printheads](images/2026-04-20-inkjet-vertical-lines-clean-printheads.jpg)
+
+**题干：** Which of the troubleshooting steps listed below would resolve vertical lines on the output pages of an inkjet printer?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Replacing the toner cartridge |
+| ✅ 正确答案 | Cleaning printheads |
+
+### 这题最关键的词
+## **inkjet printer**
+
+你这题错得不在“竖线”这个症状本身，
+而是在：
+### **把 inkjet 和 laser printer 的耗材体系混了。**
+
+---
+
+## 为什么答案是 cleaning printheads
+喷墨打印机（inkjet）是靠：
+- 喷头（printhead）
+- 喷墨
+来成像的。
+
+如果喷头：
+- 堵了
+- 脏了
+- 某些喷嘴出墨不均
+
+就很容易造成：
+## **打印页上出现线条、缺线、竖线、条纹**
+
+所以题目说：
+### **vertical lines on output pages of an inkjet printer**
+最典型的修复动作就是：
+## **Cleaning printheads**
+
+---
+
+## 为什么你选 toner cartridge 不对
+因为：
+## **toner 是激光打印机（laser printer）那套东西**
+
+而这题明确写的是：
+### **inkjet printer**
+
+喷墨打印机用的是：
+- ink / ink cartridge
+- printhead
+
+不是：
+- toner cartridge
+- imaging drum
+
+所以一旦题目明确写：
+## **inkjet**
+就要立刻把脑子切到：
+### **喷头 / 墨盒 / 喷嘴清洁**
+这一套。
+
+---
+
+## 为什么 imaging drum 也不对
+### **imaging drum**
+也是更偏：
+## **laser printer**
+
+它和 toner 一样，
+都不属于 inkjet 这题的核心部件。
+
+---
+
+## 为什么 updating printer drivers 不对
+驱动问题更像：
+- 打印机无法识别
+- 任务异常
+- 功能不正常
+
+但“竖线”这种打印输出质量问题，
+在 inkjet 里更典型就是：
+## **printhead / nozzle / ink flow**
+而不是先去怪驱动。
+
+---
+
+## 最简单记忆法
+### 题目只要写：
+## **inkjet + lines / streaks / missing lines**
+
+优先想到：
+## **clean printheads**
+
+### 题目如果写 laser printer
+再去想：
+- toner
+- drum
+- fuser
+
+---
+
+## 一句话口诀
+## **喷墨看喷头，激光看 toner / drum。**
+
+### 再压缩一句
+## **Inkjet 出线条，先洗喷头；laser 才轮到 toner。**
+
+**一句话：**
+这题的关键就是别把喷墨和激光打印机混掉：**喷墨打印机出现竖线，最典型先做 printhead cleaning，不是更换 toner cartridge。**
 
