@@ -12591,4 +12591,98 @@ firmware update 属于：
 
 **一句话：**
 这题的核心是：**间歇性画面扭曲/乱码通常先按信号链路问题处理，所以第一步应先重插或更换视频线，而不是直接更新显示器固件。**
+---
+
+## 手机充电异常查供电问题，优先用 USB multimeter，不是 cable continuity tester
+![USB multimeter vs cable continuity tester charging question](images/2026-04-20-usb-multimeter-vs-cable-continuity-tester-charging.jpg)
+
+**题干：** Which tool is best suited to check for power delivery issues when a mobile device is not charging properly?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Cable continuity tester |
+| ✅ 正确答案 | USB multimeter |
+
+### 为什么答案是 USB multimeter
+题目关键词是：
+- **power delivery issues**
+- **mobile device not charging properly**
+
+这时候你最需要知道的是：
+## **USB 口到底有没有正常输出电压、电流，充电协商/供电情况正不正常**
+
+而：
+## **USB multimeter**
+正是拿来量：
+- 电压（V）
+- 电流（A）
+- 有时还包括功率（W）
+
+所以它最适合判断：
+### **充电供电到底有没有问题**
+
+---
+
+## 为什么 continuity tester 不对
+你选的：
+### **Cable continuity tester**
+更适合检查的是：
+- 导线是不是断了
+- 线路是不是通
+- 某根线有没有开路/短路类问题
+
+它更偏：
+## **“线有没有连通”**
+
+但题目问的是：
+## **power delivery issues**
+
+也就是说重点不只是“线通不通”，
+而是：
+- 供电电压够不够
+- 电流有没有输出
+- 充电表现正常不正常
+
+这种时候 continuity tester 信息不够，
+所以不是最佳答案。
+
+---
+
+## 为什么另外两个也不对
+### Voltage tester
+只测电压的话信息太有限，
+不像 USB multimeter 那样直接面向 USB 供电场景，
+也不如它适配充电问题诊断。
+
+### Diagnostic software
+软件可以看电池状态或系统报告，
+但题目问的是：
+### **check for power delivery issues**
+
+更直接的硬件层工具当然还是：
+## **USB multimeter**
+
+---
+
+## 最简单记忆法
+### 题目一旦出现：
+- 手机不正常充电
+- power delivery issue
+- USB 供电异常
+
+优先想到：
+## **USB multimeter**
+
+不要先选：
+- continuity tester
+- 软件
+- 普通 voltage tester
+
+---
+
+## 一句话口诀
+## **查充电供电看 USB multimeter，查线通不通才看 continuity tester。**
+
+**一句话：**
+这题关键是分清“线路连通”和“供电输出”不是一回事：**手机充电异常要看 USB 供电的电压/电流，最佳工具是 USB multimeter，不是 cable continuity tester。**
 
