@@ -11514,4 +11514,105 @@ format 更是建立在：
 
 **一句话：**
 这题的判断关键就在于：**如果 BIOS/UEFI 和系统里都看不到硬盘，问题大概率在物理层或底层识别阶段，所以第一步应先检查供电线和数据线连接。**
+---
+
+## RAID 阵列整个消失时，先查 RAID controller 和物理连接；不是先看普通盘正不正常
+![RAID array missing initial troubleshooting steps](images/2026-04-20-raid-array-missing-initial-steps.jpg)
+
+**题干：** What should be the initial troubleshooting steps when a RAID array is missing from the system? (Select 2 answers)
+
+**正确答案：**
+- **Check for loose/disconnected cables or a poorly seated RAID controller card**
+- **Ensure the RAID controller is recognized and enabled in the BIOS/UEFI settings**
+
+### 这题最核心的判断点
+题目不是说：
+- 某个普通盘慢
+- 某个分区有问题
+
+而是说：
+## **RAID array is missing from the system**
+
+只要整个 RAID 阵列都不见了，
+你第一反应就应该先查：
+### **RAID controller 有没有工作**
+和
+### **物理连接有没有问题**
+
+所以标准答案就是这两项：
+1. **Check for loose/disconnected cables or a poorly seated RAID controller card**
+2. **Ensure the RAID controller is recognized and enabled in the BIOS/UEFI settings**
+
+---
+
+## 为什么你错的那项不对
+你选的是：
+### **Examine whether other non-RAID drives are functioning normally**
+
+这个思路不算完全离谱，
+因为它属于“系统里其他盘工作正常吗”的排查方向。
+
+但问题是：
+### 这不是 RAID 阵列消失时最直接、最初始的排查动作。
+
+因为如果 RAID 阵列整个没了，
+更优先怀疑的是：
+- RAID controller 没识别
+- BIOS/UEFI 里 RAID 没启用
+- controller card 松了
+- 线松了
+
+而不是先去看普通 non-RAID drives。
+
+---
+
+## 为什么“OS Disk Management 里可见”没中
+这项也很像你会想选的答案：
+### **Confirm if the RAID array is visible in the OS Disk Management tool**
+
+但题库更强调的是：
+## **initial troubleshooting steps**
+
+也就是说先看更底层：
+- 控制器
+- BIOS/UEFI
+- 线缆/卡是否插好
+
+如果这些底层东西都没确认，
+那去 OS 里看 Disk Management，
+通常会被视作后面一步。
+
+所以不是这题最优先的两个答案。
+
+---
+
+## 为什么 power supply wattage 不对
+电源功率当然会影响整机稳定性，
+但“RAID 阵列整个 missing”这种题，
+最典型的第一步还是：
+- controller
+- cable
+- BIOS/UEFI recognition
+
+不是先去估算瓦数。
+
+---
+
+## 最简单记忆法
+### RAID 阵列整个不见了 → 先查两件事：
+## **控制器在不在 / BIOS 认不认**
+## **线松没松 / RAID 卡插好没**
+
+不要先分散去看：
+- 普通盘
+- OS Disk Management
+- 电源瓦数
+
+---
+
+## 一句话口诀
+## **RAID 阵列消失先查卡和线，再看 BIOS 认不认。**
+
+**一句话：**
+这题的关键是把“阵列整体 missing”当成控制器/连接层级的问题来想：**先查 RAID 卡和线缆，再确认 BIOS/UEFI 是否识别并启用了 RAID controller。**
 
