@@ -11699,4 +11699,78 @@ RAID 阵列发出 audible alarms，
 
 **一句话：**
 对，这题你可以直接压成一句话背：**RAID audible alarm 最典型表示 drive failure 或 array degradation。**
+---
+
+## 投影仪灯泡彻底烧坏最常见是“开机但没图像”，不是只是变暗
+![Burnt-out projector bulb no image question](images/2026-04-20-projector-bulb-burnt-out-no-image.jpg)
+
+**题干：** What is the most common symptom of a burnt-out projector bulb?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | The projector displays a dim or distorted image |
+| ✅ 正确答案 | The projector powers on, but no image is displayed |
+
+### 为什么这题容易错
+因为你选的：
+### **dim or distorted image**
+听起来也很像灯泡老化的症状，
+所以这个误区很常见。
+
+但题目问的是：
+## **burnt-out projector bulb**
+也就是：
+### **灯泡已经烧坏 / 彻底挂掉**
+
+这时候更典型的表现是：
+## **投影机能上电，但没有图像输出**
+
+所以标准答案是：
+### **The projector powers on, but no image is displayed**
+
+---
+
+## 为什么不是 dim or distorted image
+因为：
+- **dim image** 更像灯泡老化、亮度衰减、快不行了
+- 但 **burnt-out** 更像已经彻底失效
+
+也就是说：
+### 灯泡“快坏了”可能会变暗，
+### 灯泡“已经烧坏了”更可能直接没图像。
+
+所以这题考的是更后面的那个阶段。
+
+---
+
+## 为什么其他两个也不对
+### Fails to detect any input sources
+这更像：
+- 输入源问题
+- 信号线/输入口问题
+- source selection 问题
+
+不是灯泡烧坏的典型症状。
+
+### Shuts down immediately after powering on
+这可能和：
+- 过热
+- 保护机制
+- 电源问题
+- 其他硬件故障
+有关，
+但不是这题最典型的“burnt-out bulb”表现。
+
+---
+
+## 最简单记忆法
+### Projector bulb 你分两阶段记：
+- **老化** → 画面变暗
+- **烧坏** → 开机没图像
+
+### 一句话口诀
+## **灯泡老了会变暗，灯泡烧了就没画面。**
+
+**一句话：**
+这题错在把“灯泡老化”当成了“灯泡烧坏”；考试里如果明确写 **burnt-out projector bulb**，更标准的答案通常是：**机器能开机，但没有图像显示。**
 
