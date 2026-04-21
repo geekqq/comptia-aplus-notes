@@ -11209,4 +11209,115 @@ n- artifact
 
 **一句话：**
 这题考试思路很直接：**主板电容顶部鼓起就是明显故障征兆，最佳做法不是继续测、按、等，而是更换主板或受影响部件。**
+---
+
+## RAID 文件损坏先看系统日志，不是先备份；题目问的是“先判断盘是不是坏”
+![RAID corruption first step review OS logs](images/2026-04-20-raid-corruption-first-step-review-os-logs.jpg)
+
+**题干：** A technician discovers that critical files in a RAID configuration are becoming corrupted and some data is missing. Which troubleshooting action should be performed first to determine if the drives are failing?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Back up all data before initiating any troubleshooting steps |
+| ✅ 正确答案 | Review operating system logs for disk-related errors |
+
+### 这题为什么你会选备份
+因为从现实处置角度，
+你想到：
+## **先保数据**
+这个思路其实一点都不离谱，甚至很像真实工作中会做的事。
+
+但这题问得非常窄，
+它问的是：
+> **Which troubleshooting action should be performed first to determine if the drives are failing?**
+
+注意重点是：
+## **为了先判断硬盘是不是坏了，第一步该做什么**
+
+在这个出题逻辑里，
+最先要做的是：
+## **Review operating system logs for disk-related errors**
+
+---
+
+## 为什么正确答案是看 OS logs
+因为如果 RAID 里的盘开始出问题，
+最先、最直接、最常见能提供线索的就是：
+- 系统日志
+- 磁盘 I/O 错误
+- controller / timeout / read/write failure 信息
+- 事件查看器里的 disk / storage / controller 错误
+
+所以题目如果强调：
+### **determine if the drives are failing**
+最合理的第一步就是：
+## **先看 disk-related errors in OS logs**
+
+这比直接去做更深入、更定向的硬件层检查更符合“first troubleshooting step”。
+
+---
+
+## 为什么 SMART 那项没中
+你漏掉的是：
+### **Evaluate the storage devices’ self-monitoring diagnostic data for anomalies**
+
+这个其实也很合理，
+因为它就是：
+## **看 SMART / 自检诊断数据**
+
+但这题标准答案没有选它，
+原因通常是考试会把它看成：
+### **比先查系统日志再深入一步的动作**
+
+也就是说：
+- **先看系统日志** → 最初步、最通用、最快定位
+- **再看 SMART/self-monitoring** → 更深入针对磁盘本体
+
+所以这题不是说 SMART 不重要，
+而是：
+## **题库认为 first step 更偏 OS logs**
+
+---
+
+## 为什么备份不是标准答案
+因为题目不是问：
+- 最安全的动作是什么
+- 风险控制第一步是什么
+
+而是问：
+- **为了判断 drive failing，先做哪一步 troubleshooting**
+
+在考试思路里：
+### **backup 是保护动作，不是诊断动作。**
+
+所以虽然现实里很值得做，
+但不是这道题要的标准答案。
+
+---
+
+## 为什么 firmware update 不是第一步
+因为：
+- firmware compatibility 属于后续排查方向
+- 不是最直接判断“drive failing”的第一线动作
+
+---
+
+## 最简单记忆法
+### RAID / 磁盘故障题如果问：
+## **first troubleshooting step to determine if drives are failing**
+
+优先想：
+## **看 OS logs**
+
+如果再往下一步，
+再想到：
+## **SMART / self-monitoring data**
+
+---
+
+## 一句话口诀
+## **先看日志找报错，再看 SMART 查硬盘；备份很重要，但这题问的是诊断第一步。**
+
+**一句话：**
+你这题不是思路差，而是把“现实中先保护数据”带进了“考试问诊断第一步”的场景里；这道题标准答案更偏：**先查 OS logs 判断有没有 disk-related errors。**
 
