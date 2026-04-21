@@ -12879,4 +12879,104 @@ firmware update 属于：
 
 **一句话：**
 这题的核心是区分“网络卡”和“画面卡”：**latency / lag spikes 更像后台更新和其他应用占带宽，而不是硬件过热导致的 frame drops。**
+---
+
+## VoIP 通话音频断断续续/失真，最常见先想 jitter，不先怪 codec
+![VoIP choppy distorted audio jitter question](images/2026-04-20-voip-choppy-audio-jitter.jpg)
+
+**题干：** What is the most likely cause of choppy or distorted audio during a VoIP call?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Corrupted audio codec |
+| ✅ 正确答案 | Jitter |
+
+### 对，这题也是同一条线
+你说得对，
+它还是在考：
+## **抖动 / jitter**
+
+而且是非常经典的 VoIP 症状题。
+
+---
+
+## 为什么答案是 jitter
+### **Jitter = 网络传输延迟不稳定 / 到包时间忽快忽慢**
+
+VoIP 是实时语音，
+最怕的不是单纯“慢一点”，
+而是：
+## **每个语音包到达的间隔不稳定**
+
+这样就会导致：
+- 声音断断续续
+- 音频忽快忽慢
+- 失真
+- choppy audio
+
+所以题目说：
+### **choppy or distorted audio during a VoIP call**
+最典型答案就是：
+## **jitter**
+
+---
+
+## 为什么你选的 corrupted audio codec 不对
+codec 出问题当然也可能让音频异常，
+所以你会想到它不奇怪。
+
+但题目问的是：
+## **most likely cause**
+
+在 VoIP 场景里，
+最经典、最常考、最标准的网络原因就是：
+### **jitter**
+
+换句话说：
+- **codec 问题** 不是完全不可能
+- 但考试最爱考的、最有代表性的答案是：
+## **jitter**
+
+---
+
+## 另外两个为什么也没中
+### Outdated VoIP software
+可能有兼容性问题，
+但不是“最经典导致 choppy/distorted VoIP audio”的首选答案。
+
+### Faulty microphone hardware
+麦克风坏了更像：
+- 声音录不进去
+- 杂音
+- 输入质量差
+
+但题目更像在说：
+### **通话过程中网络传输品质不稳定**
+
+所以还是 jitter 最符合。
+
+---
+
+## 最简单记忆法
+### 看到这些词：
+- **VoIP**
+- **choppy audio**
+- **distorted audio**
+- **voice breaks up**
+
+优先想到：
+## **jitter**
+
+### 顺手再对比
+- **latency** → 延迟高，反应慢/对话有迟滞
+- **jitter** → 包到达不稳，声音断断续续
+- **packet loss** → 掉包，声音缺字缺段
+
+---
+
+## 一句话口诀
+## **VoIP 声音一卡一卡先想 jitter；对话反应慢才更像 latency。**
+
+**一句话：**
+对，这题和前面你做过的是同一路：**VoIP 中 choppy / distorted audio 最典型先想 jitter，因为它代表语音包到达时间不稳定。**
 
