@@ -11418,4 +11418,100 @@ n- artifact
 
 **一句话：**
 这题的核心就是：**机械硬盘性能下降常和文件碎片有关，所以题库标准答案是先考虑做磁盘碎片整理，而不是先查网卡设置。**
+---
+
+## 硬盘在 BIOS/UEFI 和 Disk Management 都看不到时，第一步先查物理连接，不是 initialize
+![Drive not detected inspect power and data cables first](images/2026-04-20-drive-not-detected-inspect-power-data-cables.jpg)
+
+**题干：** A computer's internal storage drive is not detected in the BIOS/UEFI or within the operating system's Disk Management utility. What is the most likely first troubleshooting step to resolve this issue?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Initialize the drive |
+| ✅ 正确答案 | Inspect the drive's power and data cable connections |
+
+### 对，你这次说得对
+这题的标准答案确实是：
+## **Inspect the drive's power and data cable connections**
+
+也就是：
+### **先检查硬盘的供电线和数据线有没有接好**
+
+---
+
+## 为什么这题第一步一定是查连接
+因为题目给的线索非常关键：
+- **not detected in BIOS/UEFI**
+- **not detected in Disk Management**
+
+这说明问题很可能发生在：
+## **比操作系统更底层的地方**
+
+如果 BIOS/UEFI 都看不到这块盘，
+你就应该先怀疑：
+- 供电没接好
+- SATA / data cable 松了
+- 接口接触不良
+- 盘根本没被系统底层识别到
+
+所以第一步最合理的就是：
+## **先查物理连接**
+
+---
+
+## 为什么 initialize 不对
+你选的：
+### **Initialize the drive**
+这个动作只有在：
+## **系统已经识别到硬盘**
+但它还没被初始化/分区时，
+才有意义。
+
+可这题说的是：
+- BIOS/UEFI 看不到
+- Disk Management 也看不到
+
+那说明：
+### **连“这块盘存在”这件事都还没确认**
+
+既然还没识别到，
+你当然没法先去 initialize。
+
+---
+
+## 为什么 examine system logs 不是第一步
+日志也可能有帮助，
+但如果连 BIOS/UEFI 都看不到，
+比起先翻日志，
+更基础、更直接、更典型的第一步还是：
+## **检查供电和数据连接**
+
+---
+
+## 为什么 format 更不对
+format 更是建立在：
+- 系统识别到盘
+- 分区可见
+- 设备在线
+
+这些前提之上。
+
+这题里盘连识别都没有，
+更不可能先 format。
+
+---
+
+## 最简单记忆法
+### 题目一旦出现：
+- **drive not detected in BIOS/UEFI**
+- **Disk Management 也看不到**
+
+优先想到：
+## **先查 power cable + data cable**
+
+### 一句话口诀
+## **BIOS 都看不到，先查线，不先初始化。**
+
+**一句话：**
+这题的判断关键就在于：**如果 BIOS/UEFI 和系统里都看不到硬盘，问题大概率在物理层或底层识别阶段，所以第一步应先检查供电线和数据线连接。**
 
