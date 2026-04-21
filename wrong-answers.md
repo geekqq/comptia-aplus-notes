@@ -11615,4 +11615,88 @@ format 更是建立在：
 
 **一句话：**
 这题的关键是把“阵列整体 missing”当成控制器/连接层级的问题来想：**先查 RAID 卡和线缆，再确认 BIOS/UEFI 是否识别并启用了 RAID controller。**
+---
+
+## RAID 发出报警声，最典型先想：drive failure 或 array degradation
+![RAID audible alarms drive failure array degradation question](images/2026-04-20-raid-audible-alarms-drive-failure-array-degradation.jpg)
+
+**题干：** If a RAID array is producing audible alarms, what does this typically indicate? (Select 2 answers)
+
+**正确答案：**
+- **Drive failure**
+- **Array degradation**
+
+### 对，你这个总结是对的
+这题最该记的一句话就是：
+## **RAID 报警 = 先想磁盘故障，或者阵列降级。**
+
+也就是：
+- **Drive failure**
+- **Array degradation**
+
+---
+
+## 为什么会这样
+RAID 阵列发出 audible alarms，
+最常见就是在提示：
+- 某块盘掉了 / 坏了
+- 阵列失去冗余
+- 阵列状态变差（degraded）
+- 需要管理员尽快处理
+
+所以这类报警更偏：
+## **存储子系统本身的故障或风险状态**
+
+而不是一般系统层面的别的问题。
+
+---
+
+## 为什么 system overheating 不对
+你选了：
+### **System overheating**
+
+但 RAID 阵列题里的 audible alarms，
+题库更典型地指向：
+- drive failure
+- degraded array
+
+而不是把它当作通用整机过热报警。
+
+也就是说：
+### 过热可以导致别的报警场景，
+但这道题在 RAID 语境里更标准的答案不是它。
+
+---
+
+## 为什么 pending reboot request 不对
+这显然不是 RAID 阵列硬件发声报警的典型原因。
+这更像软件/系统状态提示，
+不是 RAID 控制器或存储阵列的故障警报逻辑。
+
+---
+
+## 为什么 insufficient power supply 不对
+电源不足当然会导致系统异常，
+但如果题目问的是：
+### **RAID array is producing audible alarms**
+
+考试最标准、最直接的联想仍然是：
+## **drive failure / array degradation**
+
+不是优先选 PSU 问题。
+
+---
+
+## 最简单记忆法
+### RAID 一报警，先想两件事：
+## **盘坏了**
+## **阵列降级了**
+
+---
+
+## 一句话口诀
+## **RAID 一叫，先查盘坏，再看阵列是否 degraded。**
+
+**一句话：**
+对，这题你可以直接压成一句话背：**RAID audible alarm 最典型表示 drive failure 或 array degradation。**
 
