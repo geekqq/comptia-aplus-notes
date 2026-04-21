@@ -10874,4 +10874,138 @@ impact printer 的 printhead 如果开始故障，
 
 **一句话：**
 这题关键是抓住 printhead 故障会直接影响“打出来的质量”——**缺线、缺点、深浅不一**；而 **impact printer 本来就很吵**，所以噪音大不是这题该选的核心症状。
+---
+
+## 虚拟化环境里的存储性能先看 IOPS 和 latency，不要跑去选 hypervisor type / file system type
+![Virtualization storage performance IOPS latency question](images/2026-04-20-virtualization-storage-performance-iops-latency.jpg)
+
+**题干：** Which of the following are critical factors for storage performance in a virtualized environment? (Select 2 answers)
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | File system type / Hypervisor type |
+| ✅ 正确答案 | High IOPS / Low latency |
+
+### 对，这题确实错得有点离谱，但好消息是：它很好修正
+因为你这题不是知识不会，
+而是：
+## **题目问“storage performance”，你却选成了“平台/实现细节”**
+
+### 这题最核心的关键词
+题目问的是：
+## **critical factors for storage performance**
+
+只要是“存储性能”，
+你第一反应就该看：
+- **IOPS**
+- **latency**
+- throughput（如果在选项里）
+
+而不是先去看：
+- hypervisor 种类
+- 文件系统名字
+
+---
+
+## 为什么正确答案是 High IOPS + Low latency
+### 1. High IOPS
+## **IOPS = Input/Output Operations Per Second**
+也就是：
+### **每秒能处理多少次读写操作**
+
+虚拟化环境下常常有很多 VM 同时读写存储，
+所以：
+- IOPS 越高
+- 存储能扛住的随机读写负载越强
+
+这当然是核心性能指标。
+
+#### 最短记忆
+## **IOPS 看“忙不忙得过来”。**
+
+---
+
+### 2. Low latency
+## **Latency = 延迟**
+也就是：
+### **一次存储请求从发出到得到响应花多久**
+
+存储延迟高，
+VM 就会感觉：
+- 卡
+- 慢
+- 响应拖沓
+
+所以：
+## **低延迟 = 好的存储性能关键指标**
+
+#### 最短记忆
+## **Latency 看“反应快不快”。**
+
+---
+
+## 为什么 file system type 不对
+**File system type** 当然会影响一些实现方式，
+但这题问的是：
+### **critical factors for storage performance**
+
+更直接、更核心、更通用的性能指标，
+是：
+- IOPS
+- latency
+
+而不是先看你用 NTFS、ext4、ReFS 还是别的。
+
+也就是说：
+### 文件系统可能有影响，但不是这题最直接的“关键性能指标答案”
+
+---
+
+## 为什么 hypervisor type 不对
+**Hypervisor type** 影响整体虚拟化架构，
+但题目问的是：
+### **storage performance**
+
+这时候真正决定“存储快不快”的一线指标，
+仍然是：
+- IOPS
+- latency
+
+所以不能把“平台类别”当成存储性能指标本身。
+
+---
+
+## 为什么 low CPU utilization 也不对
+CPU 负载低当然整体可能更轻松，
+但它不是专门的：
+### **storage performance factor**
+
+题目要你选的是和存储性能直接相关的指标，
+所以还是：
+## **IOPS + latency**
+
+---
+
+## 最简单记忆法
+### 题目一旦问 storage performance
+先找：
+## **IOPS**
+## **latency**
+## **throughput（如果有）**
+
+不要优先选：
+- file system type
+- hypervisor type
+- CPU utilization
+
+---
+
+## 一句话口诀
+## **存储看 IOPS 和 latency，不先看 hypervisor 和文件系统。**
+
+### 再压缩成一句
+## **IOPS 管吞吐忙闲，latency 管响应快慢。**
+
+**一句话：**
+这题最大的修正点就是：**“storage performance” 先想性能指标本身——IOPS 和 latency；不要被 hypervisor type / file system type 这种平台词带跑。**
 
