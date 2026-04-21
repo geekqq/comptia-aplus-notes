@@ -11992,4 +11992,94 @@ dead pixel 通常意味着该像素已经失效，
 
 **一句话：**
 这题的核心不是“该试哪个修复技巧”，而是先识别症状：**一直黑且不变色更像 dead pixel，不是 stuck pixel，所以题目给的那些动作都不合适，标准答案才是 None of the above。**
+---
+
+## 外接显示器没出声，先确认显示器/输入源支不支持音频，再把它设为默认输出设备
+![External display audio output troubleshooting question](images/2026-04-20-external-display-audio-output-troubleshooting.jpg)
+
+**题干：** Which of the following actions would help resolve an issue where audio plays through laptop speakers instead of an intended external display? (Select 2 answers)
+
+**正确答案：**
+- **Verify that the monitor supports audio over the selected input**
+- **Set the external display as the default audio device**
+
+### 这题最关键的两个判断点
+如果声音没有走到外接显示器，
+最先要确认两件事：
+
+## 1. 这台显示器 / 当前输入口到底支不支持音频
+也就是：
+### **Verify that the monitor supports audio over the selected input**
+
+因为不是所有外接显示器都能播声音，
+而且就算显示器本身带扬声器，
+也要看：
+- 当前连接方式（HDMI / DP / USB-C）
+- 当前输入源
+- 当前接口是否承载音频
+
+所以这一步非常关键。
+
+---
+
+## 2. 把外接显示器设为默认音频输出
+也就是：
+### **Set the external display as the default audio device**
+
+这一步你已经做对了。
+
+因为很多时候电脑虽然接上显示器了，
+但系统默认音频输出仍然停留在：
+- laptop speakers
+- internal audio device
+
+所以要手动把外接显示器选成默认播放设备。
+
+---
+
+## 为什么你选的 automatic audio device switching 不对
+你选的是：
+### **Turn off automatic audio device switching in system preferences**
+
+这个不是这题最典型、最直接的标准修复动作。
+
+因为题目更核心的问题是：
+- 显示器有没有音频能力
+- 系统默认输出是不是指到那个显示器
+
+而不是先去改一个泛化的“自动切换”设置。
+
+换句话说，
+这题不是在考系统偏好里的策略微调，
+而是在考：
+## **先确认显示器支持音频 + 正确选输出设备**
+
+---
+
+## 为什么其他两个也不对
+### Adjust the equalizer settings in the audio control panel
+均衡器只会改声音效果，
+不会决定声音到底从哪台设备输出。
+
+### Disable the laptop's internal speakers in the operating system settings
+这个做法太粗暴，
+而且不是最优先的标准排查方法。
+
+如果外接显示器本身不支持音频，
+你把笔记本喇叭禁掉反而更糟。
+
+---
+
+## 最简单记忆法
+### 外接显示器没声音，先查两件事：
+## **显示器/接口支不支持音频**
+## **系统默认输出是不是它**
+
+---
+
+## 一句话口诀
+## **外屏没声先看口，再把外屏设默认。**
+
+**一句话：**
+这题标准思路很直白：**先确认外接显示器和当前输入方式支持音频，再把外接显示器设成默认音频输出设备。**
 
