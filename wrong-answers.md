@@ -12777,4 +12777,106 @@ firmware update 属于：
 
 **一句话：**
 这题你差一点就全对了：**unexpected performance drops 的标准答案更偏后台程序、缓存堆积、恶意软件和系统过旧；battery saver 虽然现实里可能影响性能，但这题不把它算作标准答案。**
+---
+
+## 游戏高延迟/lag spikes，题目问“电脑内部因素”时先想后台进程和其他应用占带宽，不先想过热
+![Gaming latency bandwidth background apps question](images/2026-04-20-gaming-latency-bandwidth-background-apps.jpg)
+
+**题干：** A user notices their online gaming experience suffers from high network latency and lag spikes. What common internal factors on their computer could explain these symptoms, particularly if they have many installed programs? (Select 2 answers)
+
+**正确答案：**
+- **Ongoing background processes or updates are slowing down the network connection**
+- **Other, currently active applications are consuming bandwidth**
+
+### 这题最关键的词
+- **high network latency**
+- **lag spikes**
+- **internal factors on their computer**
+- **many installed programs**
+
+这几个词放一起，
+最该优先想到的就是：
+## **带宽被别的程序抢走了 / 后台程序在占网络资源**
+
+所以标准答案就是：
+- **Ongoing background processes or updates are slowing down the network connection**
+- **Other, currently active applications are consuming bandwidth**
+
+---
+
+## 为什么 overheating 不对
+你选了：
+### **Internal hardware components are overheating, causing frame drops**
+
+这个选项看起来也挺合理，
+因为现实里过热确实会造成：
+- 掉帧
+- 性能下降
+- 卡顿感
+
+但题目这里强调的是：
+## **network latency and lag spikes**
+
+这更偏：
+### **网络层问题**
+不是：
+### **本地渲染性能问题**
+
+也就是说：
+- **过热** 更像 FPS / performance 问题
+- **带宽占用** 更像 network latency / lag spikes 问题
+
+所以这题标准答案不会选 overheating。
+
+---
+
+## 为什么 remote game servers overloaded 也不对
+这个当然有可能让游戏 lag，
+但题目问的是：
+## **common internal factors on their computer**
+
+而远程游戏服务器过载属于：
+### **外部因素**
+不是电脑内部因素。
+
+所以不能选。
+
+---
+
+## 为什么高画质设置也不对
+### **Video graphics options set too high**
+这更像：
+- 本地显卡负担重
+- 帧数低
+- 画面不流畅
+
+但题目核心还是：
+## **network latency / lag spikes**
+
+所以它不是最标准答案。
+
+---
+
+## 最简单记忆法
+### 题目如果写：
+- **latency**
+- **lag spikes**
+- **many installed programs**
+
+优先想到：
+## **后台更新/后台程序占网络**
+## **其他应用在吃带宽**
+
+不要先想到：
+- 过热
+- 高画质
+- 远端服务器
+
+---
+
+## 一句话口诀
+## **高延迟看带宽，高帧率看显卡；后台程序抢网，游戏就会 lag。**
+
+**一句话：**
+这题的核心是区分“网络卡”和“画面卡”：**latency / lag spikes 更像后台更新和其他应用占带宽，而不是硬件过热导致的 frame drops。**
 
