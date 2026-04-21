@@ -12186,4 +12186,99 @@ dynamic contrast 更像显示效果功能，
 
 **一句话：**
 这题的关键就是区分“亮度问题”和“颜色问题”：**dim image 先查 brightness、eco mode、线缆连接；saturation 是颜色浓淡，不是亮度的第一排查项。**
+---
+
+## 投影机间歇性关机最“不像”的原因是视频线没插好；散热/供电问题才更像会关机
+![Projector intermittent shutdown least likely video cable question](images/2026-04-20-projector-intermittent-shutdown-least-likely-video-cable.jpg)
+
+**题干：** Which of the issues listed below is least likely to cause an intermittent shutdown in a projector?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Malfunctioning cooling fan |
+| ✅ 正确答案 | Improperly seated video cable |
+
+### 这题最关键的词是
+## **least likely to cause an intermittent shutdown**
+
+也就是说题目不是问：
+- 哪个会导致投影仪整体异常
+- 哪个会让画面有问题
+
+而是在问：
+### **哪个最不像会让投影机“自己关机”**
+
+---
+
+## 为什么正确答案是 improperly seated video cable
+因为视频线没插好更常导致的是：
+- 没信号
+- 画面闪断
+- 图像丢失
+- source/input 异常
+
+但它：
+## **不太会直接导致 projector 整机间歇性 shutdown**
+
+所以如果问“least likely cause intermittent shutdown”，
+最合理的就是：
+## **Improperly seated video cable**
+
+---
+
+## 为什么你选的 cooling fan 反而不像错项
+### **Malfunctioning cooling fan**
+这个其实很可能会导致投影机：
+- 过热
+- 触发保护机制
+- 自动关机 / 间歇性 shutdown
+
+所以它反而是：
+## **很像会导致 intermittent shutdown 的原因**
+
+也就是说，
+你把“很像原因”的那个选成了“最不像原因”的那个。
+
+---
+
+## 另外两个为什么也都比视频线更可能导致关机
+### Insufficient voltage supply
+供电不足会让设备：
+- 工作不稳
+- 间歇性掉电
+- 自动重启/关机
+
+这当然比视频线更像“shutdown 原因”。
+
+### Dust buildup in air filters
+灰尘堵塞滤网会导致：
+- 散热变差
+- 温度升高
+- 触发过热保护
+- 间歇性关机
+
+这也比视频线更像 shutdown 原因。
+
+---
+
+## 最简单记忆法
+### 投影机“自己关机”先想：
+- **散热**
+- **风扇**
+- **灰尘堵塞**
+- **供电问题**
+
+不要先想：
+- **视频线没插好**
+
+因为视频线更偏：
+## **图像信号问题，不是整机关机问题**
+
+---
+
+## 一句话口诀
+## **会关机先查热和电；视频线更多影响画面，不太会让投影机自己关。**
+
+**一句话：**
+这题的核心是区分“画面问题”和“整机关机问题”：**视频线没插好更像没画面/信号异常，风扇故障、滤网积灰、供电不足才更像 intermittent shutdown 的原因。**
 
