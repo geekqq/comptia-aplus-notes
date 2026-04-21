@@ -11113,4 +11113,100 @@ n- artifact
 
 **一句话：**
 这题的核心不是“新显卡有问题”，而是“新显卡让整机功耗上去后，电源扛不住了”，所以最可能原因是 **Overloaded PSU**。
+---
+
+## 主板电容鼓包/顶部鼓起：默认视为硬件故障，最佳做法是更换主板或受影响部件
+![Bulging capacitor on motherboard](images/2026-04-20-bulging-capacitor-replace-motherboard.jpg)
+
+**题干：** A visual inspection of a motherboard reveals a capacitor with a rounded top. What is the best course of action?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Use a voltage meter to test the capacitor's charge |
+| ✅ 正确答案 | Replace the motherboard or affected component |
+
+### 先回答你
+对，**考试语境里基本就是直接判定为坏件处理。**
+
+因为主板上的电容如果：
+## **顶部鼓起 / rounded top / bulging**
+这通常就是：
+### **电容失效或正在失效的典型肉眼故障征兆**
+
+所以标准处理就是：
+## **Replace the motherboard or affected component**
+
+---
+
+## 为什么这么直接
+正常电容顶部应该是：
+- 平整
+- 没有鼓包
+- 没有泄漏
+
+如果已经看到：
+- 顶部鼓起
+- 鼓包
+- 甚至有漏液
+
+那说明它很可能已经：
+- 老化
+- 受热损坏
+- 电解液异常
+- 电容参数漂移/失效
+
+这时候它不是“再观察一下”的级别，
+而是：
+## **明显硬件故障征兆**
+
+---
+
+## 为什么你选“拿电压表测”不对
+因为这题问的是：
+### **best course of action**
+
+看到鼓包电容，最关键不是先测一测“现在还有没有电”，
+而是：
+### **这颗电容已经有明确物理损坏迹象了**
+
+也就是说：
+- 就算你去量
+- 也改变不了“它已经不可靠”这个事实
+
+考试里这种题更强调：
+## **肉眼可见损坏 = 直接更换**
+
+---
+
+## 为什么其他两个更不对
+### Gently press down on the top of the capacitor
+这当然不对，
+既不安全也不专业。
+
+### Ignore it unless the system starts showing problems
+也不对，
+因为鼓包本身就已经是故障征兆，
+不是“先放着看看”的状态。
+
+---
+
+## 最简单记忆法
+### 主板电容题就记一句：
+## **鼓包 = 坏，换。**
+
+如果看到：
+- bulging capacitor
+- rounded top
+- leaking capacitor
+
+优先想：
+## **replace the board / replace the affected component**
+
+---
+
+## 一句话口诀
+## **电容一鼓包，不测不按，直接换。**
+
+**一句话：**
+这题考试思路很直接：**主板电容顶部鼓起就是明显故障征兆，最佳做法不是继续测、按、等，而是更换主板或受影响部件。**
 
