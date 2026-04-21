@@ -11886,4 +11886,110 @@ RAID 阵列发出 audible alarms，
 
 **一句话：**
 你这题之所以又错，是因为把“显示异常”泛化成了 inverter 问题；但只要看到 **静态 logo 长期停留 + persistent ghost image**，就该直接锁定 **display burn-in**。
+---
+
+## LCD 像素一直黑不变色 = dead pixel；这题所有给的“修复动作”都不靠谱，所以选 None of the above
+![Dead pixel none of the above question](images/2026-04-20-dead-pixel-none-of-the-above.jpg)
+
+**题干：** A technician is diagnosing an LCD panel where one pixel remains black at all times and never changes color. Which troubleshooting step should be attempted first?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Use an app that flashes primary colors or high-contrast patterns |
+| ✅ 正确答案 | None of the above |
+
+### 先回答你
+对，这题的关键就是：
+## **如果所有给定动作都不适合这个症状，那就要敢选 None of the above。**
+
+这题描述的是：
+- **one pixel remains black at all times**
+- **never changes color**
+
+这更像：
+## **dead pixel（坏点）**
+
+而不是：
+## **stuck pixel（卡住的像素）**
+
+---
+
+## 为什么你会被“flashing colors app”带偏
+因为你脑子里记的是：
+### 用快速闪烁颜色的程序，有时能尝试修 stuck pixel
+
+这个记忆本身没错，
+但前提是：
+## **stuck pixel**
+
+比如：
+- 卡在某个颜色
+- 还可能有机会恢复
+- 可能通过颜色切换/像素刺激重新唤醒
+
+### 但这题说的是：
+## **一直黑、从不变色**
+
+这更偏：
+### **dead pixel**
+
+dead pixel 通常意味着该像素已经失效，
+不是靠闪屏 app 就能合理“先尝试修”的那类。
+
+所以这题里，
+你选的那个方法不成立。
+
+---
+
+## 为什么其他几个也都不对
+### 1. Switch the monitor off and unplug it for an extended period
+这不是 dead pixel 的标准优先处理办法。
+
+### 2. Apply light, localized pressure to the affected pixel area
+这类“按压像素”的做法本身就不稳，
+而且题目这里给的是一直黑的 dead pixel，
+更不适合当标准答案。
+
+### 3. Tap the screen around the affected pixel with a soft object
+同样属于不靠谱/高风险/非标准的做法，
+题库这里显然不接受。
+
+所以这题才会变成：
+## **所有给定修复动作都不该选**
+
+于是标准答案就是：
+## **None of the above**
+
+---
+
+## 最关键的考点其实是
+### **stuck pixel ≠ dead pixel**
+
+#### Stuck pixel
+- 常卡在某个颜色
+- 可能还有一定恢复机会
+- 有时才会想到：
+  - flashing colors app
+  - 某些轻度像素恢复方法
+
+#### Dead pixel
+- 一直黑
+- 不变色
+- 更像硬件失效
+- 不要轻易往“软件/轻按/敲击就能修”上想
+
+---
+
+## 最简单记忆法
+- **一直黑、不变色** → **dead pixel**
+- **卡在某个颜色** → **stuck pixel**
+
+### 一句话口诀
+## **黑着不动是 dead，卡着变色才像 stuck。**
+
+### 再压缩一句
+## **stuck 才可能刷颜色试试；dead 往往修不好，这题就选 none of the above。**
+
+**一句话：**
+这题的核心不是“该试哪个修复技巧”，而是先识别症状：**一直黑且不变色更像 dead pixel，不是 stuck pixel，所以题目给的那些动作都不合适，标准答案才是 None of the above。**
 
