@@ -12082,4 +12082,108 @@ dead pixel 通常意味着该像素已经失效，
 
 **一句话：**
 这题标准思路很直白：**先确认外接显示器和当前输入方式支持音频，再把外接显示器设成默认音频输出设备。**
+---
+
+## 显示器画面发暗，先查亮度/省电模式/线缆连接；不要先动 saturation
+![Dim monitor initial troubleshooting question](images/2026-04-20-dim-monitor-initial-troubleshooting.jpg)
+
+**题干：** A user complains that the image displayed on their monitor is dim. What should be the initial troubleshooting steps? (Select 3 answers)
+
+**正确答案：**
+- **Check the brightness and contrast settings on the monitor**
+- **Verify the monitor's power-saving or eco mode is disabled**
+- **Inspect the video and power cable connections**
+
+### 你这题错在哪里
+你前两项已经对了：
+- **Check the brightness and contrast settings on the monitor** ✅
+- **Verify the monitor's power-saving or eco mode is disabled** ✅
+
+你错在把：
+- **Adjust the saturation levels in the display settings**
+选进去了
+
+而漏掉了：
+- **Inspect the video and power cable connections**
+
+---
+
+## 为什么 saturation 不对
+### **Saturation = 饱和度**
+它管的是：
+- 颜色浓不浓
+- 颜色鲜艳程度
+
+它更偏：
+## **颜色表现**
+而不是：
+## **整体亮不亮**
+
+所以屏幕发暗时，
+先去调 saturation 并不是标准的初始排查动作。
+
+---
+
+## 为什么线缆连接是对的
+因为：
+- 电源线松动
+- 视频线接触不良
+- 接口问题
+- 供电异常
+
+都可能造成：
+- 屏幕亮度异常
+- 图像发暗
+- 显示不稳定
+
+而且题目问的是：
+## **initial troubleshooting steps**
+
+这就意味着：
+### **先做最基础、最常见、最直接的检查**
+
+线缆连接当然属于这一层。
+
+---
+
+## 这题最正确的思路
+显示器发暗先想三件事：
+
+### 1. 亮度/对比度
+最直接的显示设置问题。
+
+### 2. Eco / power-saving mode
+很多显示器开了省电模式就会自动压亮度。
+
+### 3. Video / power cable connections
+供电或视频连接不良也可能导致显示异常。
+
+---
+
+## 为什么 dynamic contrast 不是优先项
+dynamic contrast 更像显示效果功能，
+不是最基础的 dim screen 初始排查动作。
+
+题目问的是：
+### **initial troubleshooting**
+所以更偏基础排查而不是功能增强。
+
+---
+
+## 最简单记忆法
+### 画面发暗先查：
+## **亮度/对比度**
+## **省电模式**
+## **电源线和视频线**
+
+不要先调：
+## **saturation**
+
+---
+
+## 一句话口诀
+## **画面发暗先查亮度、省电、线；颜色淡不淡才看 saturation。**
+
+**一句话：**
+这题的关键就是区分“亮度问题”和“颜色问题”：**dim image 先查 brightness、eco mode、线缆连接；saturation 是颜色浓淡，不是亮度的第一排查项。**
 
