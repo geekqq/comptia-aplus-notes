@@ -11773,4 +11773,117 @@ RAID 阵列发出 audible alarms，
 
 **一句话：**
 这题错在把“灯泡老化”当成了“灯泡烧坏”；考试里如果明确写 **burnt-out projector bulb**，更标准的答案通常是：**机器能开机，但没有图像显示。**
+---
+
+## 静态画面长期停留后留下“残影/幽灵 logo”，先想 display burn-in，不是 inverter
+![Display burn-in persistent logo image](images/2026-04-20-display-burn-in-persistent-logo.jpg)
+
+**题干：** A computer monitor used in a retail store's point-of-sale system constantly shows a static application interface with a prominent logo. Over time, a faint ghost of that logo becomes visible even when other applications are open or the display is turned off. What is the most likely cause of this persistent image?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Damaged inverter |
+| ✅ 正确答案 | Display burn-in |
+
+### 对，这个考点你之前确实做过同一路的
+而且你这次又被显示器相关词带偏了。
+
+但这题真正最关键的线索只有两个：
+- **static application interface with a prominent logo**
+- **faint ghost of that logo remains visible**
+
+这几乎就是在直接描述：
+## **display burn-in**
+
+---
+
+## 为什么答案是 display burn-in
+### **Display burn-in**
+就是：
+- 某个固定图像长期停留在屏幕上
+- 久了之后留下持久残影
+- 就算切换到别的画面也还能隐约看到
+
+题目里的：
+- **POS 系统长期显示固定界面**
+- **logo 残影持续可见**
+
+都是 burn-in 的标准描述。
+
+### 最简单理解
+## **同一个画面长期不动 → 屏幕留下残影 = burn-in**
+
+---
+
+## 为什么 damaged inverter 不对
+你这次选的是：
+### **Damaged inverter**
+
+但 inverter 更常关联的是：
+- 背光问题
+- 屏幕发暗
+- 无背光
+- 亮度异常
+
+它不会最典型地造成：
+### **固定 logo 的幽灵残影长期留在屏幕上**
+
+所以这题不能往 inverter 想。
+
+---
+
+## 为什么 backlight bleed 不对
+### **Backlight bleed**
+更像：
+- 屏幕边缘漏光
+- 黑屏时边角不均匀发亮
+- 屏幕边缘泛白/发亮
+
+它不是“某个固定 logo 残留在屏幕里”。
+
+---
+
+## 为什么 afterimage effect 不对
+这个是最容易干扰你的项。
+
+### **Afterimage effect**
+更像短暂残影/视觉暂留
+有时会是临时的、可恢复的图像残留概念。
+
+但这题描述的是：
+- 长期 POS 静态界面
+- prominent logo
+- persistent image
+
+这更典型是：
+## **burn-in**
+
+也就是更持久、更严重、更固定的残留。
+
+---
+
+## 最简单记忆法
+### 题目一旦出现：
+- **static image / static logo**
+- **ghost image remains**
+- **persistent image**
+
+优先想到：
+## **Display burn-in**
+
+不要先选：
+- inverter
+- backlight bleed
+- 一般 afterimage
+
+---
+
+## 一句话口诀
+## **固定画面留残影，先想 burn-in，不想 inverter。**
+
+### 再压一句
+## **Logo 长期不动 → 残影留下 = burn-in。**
+
+**一句话：**
+你这题之所以又错，是因为把“显示异常”泛化成了 inverter 问题；但只要看到 **静态 logo 长期停留 + persistent ghost image**，就该直接锁定 **display burn-in**。
 
