@@ -12495,4 +12495,100 @@ dynamic contrast 更像显示效果功能，
 
 **一句话：**
 这题的关键是把“亮度问题”和“图像渲染异常”分开：**随机 artifacts + 彩色像素闪烁最像显卡过热或故障，不像显示器背光损坏。**
+---
+
+## 显示器画面扭曲/乱码/颜色错位，第一步先重插或更换视频线，不先刷 firmware
+![Distorted garbled image reseat video cable question](images/2026-04-20-distorted-garbled-image-reseat-video-cable.jpg)
+
+**题干：** A monitor intermittently displays a distorted, garbled image with misaligned colors and jagged text. Which step should a technician take first?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Update the monitor's firmware |
+| ✅ 正确答案 | Reseat or replace the video cable |
+
+### 这题为什么答案是视频线
+题目给的症状是：
+- **distorted / garbled image**
+- **misaligned colors**
+- **jagged text**
+- **intermittently**
+
+这种“间歇性图像异常”最先应该想到的是：
+## **视频信号传输问题**
+
+也就是：
+- 视频线松动
+- 视频线损坏
+- 接头接触不良
+- 信号不稳定
+
+所以第一步最合理就是：
+## **Reseat or replace the video cable**
+
+---
+
+## 为什么 firmware update 不对
+firmware update 属于：
+- 更深一层
+- 更少见
+- 没那么像“first step”
+
+而题目问的是：
+## **Which step should a technician take first?**
+
+考试里只要看到：
+- intermittent display corruption
+- 颜色错位
+- 文字锯齿/乱码
+
+一般先排：
+### **线缆 / 接口 / 连接问题**
+而不是上来就刷 firmware。
+
+换句话说：
+### **先查简单常见项，再考虑高级修复。**
+
+---
+
+## 为什么电源线不是首选
+电源线如果有问题，
+更常想到：
+- 断电
+- 亮灭
+- 无法开机
+- 间歇性掉电
+
+但题目重点是：
+### **图像信号异常**
+所以更优先查视频线，
+不是电源线。
+
+---
+
+## 为什么 alternate input port 也没先中
+换输入口也可能是后续排查方向，
+但在“first step”里，
+题库更基础、更直接地要求你先：
+## **重插/更换视频线**
+
+因为那是最简单、最常见、最直接针对信号异常的动作。
+
+---
+
+## 最简单记忆法
+### 看到这些词：
+- **garbled image**
+- **misaligned colors**
+- **jagged text**
+- **intermittent display issue**
+
+优先想到：
+## **视频线 / 连接问题**
+
+### 一句话口诀
+## **画面乱、颜色歪、文字锯齿先查视频线，不先刷 firmware。**
+
+**一句话：**
+这题的核心是：**间歇性画面扭曲/乱码通常先按信号链路问题处理，所以第一步应先重插或更换视频线，而不是直接更新显示器固件。**
 
