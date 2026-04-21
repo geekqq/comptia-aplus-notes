@@ -12385,4 +12385,114 @@ dynamic contrast 更像显示效果功能，
 
 **一句话：**
 这题的核心就是把 projector intermittent shutdown 直接和散热联系起来：**预防最标准的两招就是清理/更换滤网，以及保持通风口不被遮挡。**
+---
+
+## 随机 artifacts + 彩色像素闪烁，最常见硬件原因先想 GPU 过热或故障，不是背光
+![Random artifacts flickering colored pixels GPU issue](images/2026-04-20-random-artifacts-flickering-colored-pixels-gpu.jpg)
+
+**题干：** A user reports that their monitor displays random artifacts and flickering colored pixels. What is a common hardware cause for this type of distortion?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Damaged backlight in the monitor |
+| ✅ 正确答案 | Overheating or failing graphics card |
+
+### 这题最关键的症状词
+- **random artifacts**
+- **flickering colored pixels**
+
+只要看到这两个放在一起，
+最先要联想到的就是：
+## **GPU / graphics card 问题**
+
+尤其是：
+- 显卡过热
+- 显卡显存/GPU 核心异常
+- 显卡即将故障
+
+所以标准答案是：
+## **Overheating or failing graphics card**
+
+---
+
+## 为什么你选的 backlight 不对
+### **Damaged backlight**
+更常见的表现是：
+- 屏幕整体发暗
+- 局部暗
+- 无背光但隐约有图像
+- 亮度异常
+
+它不太会典型地造成：
+### **随机彩色噪点 / 彩色闪烁像素 / artifacts**
+
+也就是说：
+- **backlight 问题** → 更像亮度/照明问题
+- **GPU 问题** → 更像图像渲染异常、彩块、花屏、闪烁像素
+
+所以这题不能往背光想。
+
+---
+
+## 为什么 GPU 更像这类问题
+因为显卡一旦：
+- 过热
+- 显存出错
+- GPU 核心不稳
+- 焊点/硬件老化
+
+常见就会出现：
+- 花屏（artifacts）
+- 彩色方块
+- 异常像素闪烁
+- 图形输出错误
+
+这就是题目描述的典型画风。
+
+---
+
+## 另外两个为什么不是最好答案
+### Faulty monitor power supply
+电源故障更可能让你想到：
+- 显示器忽明忽暗
+- 断电
+- 闪屏
+- 无法稳定开机
+
+但“random artifacts and flickering colored pixels”
+还是更像 GPU 输出问题。
+
+### Outdated or corrupted display driver
+驱动问题当然也可能让画面异常，
+但题目问的是：
+## **common hardware cause**
+
+所以它要的不是软件层，
+而是硬件层原因，
+于是更标准的答案就是：
+## **overheating or failing graphics card**
+
+---
+
+## 最简单记忆法
+### 看到这些词：
+- **artifacts**
+- **colored pixels flickering**
+- **花屏 / 彩块 / 渲染异常**
+
+优先想到：
+## **GPU / VRAM / graphics card fault**
+
+不要先想：
+- backlight
+- 亮度问题
+- 一般显示器照明问题
+
+---
+
+## 一句话口诀
+## **花屏彩点找显卡，发暗无光才想背光。**
+
+**一句话：**
+这题的关键是把“亮度问题”和“图像渲染异常”分开：**随机 artifacts + 彩色像素闪烁最像显卡过热或故障，不像显示器背光损坏。**
 
