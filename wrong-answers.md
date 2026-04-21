@@ -11008,4 +11008,109 @@ CPU 负载低当然整体可能更轻松，
 
 **一句话：**
 这题最大的修正点就是：**“storage performance” 先想性能指标本身——IOPS 和 latency；不要被 hypervisor type / file system type 这种平台词带跑。**
+---
+
+## 升级高性能 GPU 后一高负载就黑屏重启/关机，先想 PSU 扛不住，不要先怪显卡坏
+![PSU overload after GPU upgrade](images/2026-04-20-psu-overload-after-gpu-upgrade.jpg)
+
+**题干：** After upgrading a gaming PC with a high-performance GPU, the user notices sluggish in-game performance, system instability, unexpected shutdowns, and random reboots under heavy load. What is the most likely cause?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Faulty GPU |
+| ✅ 正确答案 | Overloaded PSU |
+
+### 为什么答案是 PSU
+这题最关键的线索是：
+- **upgrading ... with a high-performance GPU**
+- **unexpected shutdowns**
+- **random reboots under heavy load**
+- **system instability**
+
+这几个放在一起，
+最典型就像：
+## **电源带不动 / PSU 功率不够 / PSU 负载过高**
+
+因为高性能 GPU 一上去，
+整机功耗会明显增加。
+如果原来的 PSU 余量不够，
+最常见的症状就是：
+- 游戏高负载时不稳
+- 突然关机
+- 随机重启
+- 压力一上来就出问题
+
+所以最可能答案就是：
+## **Overloaded PSU**
+
+---
+
+## 为什么不是 Faulty GPU
+你选 Faulty GPU 也不算瞎猜，
+因为升级后立刻出问题，
+很容易第一反应就怀疑新显卡。
+
+但如果题目重点是：
+- **heavy load 才出问题**
+- **unexpected shutdowns / reboots**
+
+那它更像是：
+### **供电不稳 / 功率不足**
+
+而不是单纯显卡本体损坏。
+
+因为“显卡坏了”更常让你联想到：
+- 花屏
+n- artifact
+- 驱动崩溃
+- 无法输出视频
+- 特定图形错误
+
+而这题给的是：
+## **整机级别的断电/重启/不稳**
+这更像 PSU。
+
+---
+
+## 其他两个为什么不对
+### Overheating CPU
+如果是 CPU 过热，
+题目通常更容易给你：
+- 温度高
+- 风扇狂转
+- 降频
+- CPU-heavy task 出现问题
+
+这里特地强调“换了高性能 GPU 后、高负载下出事”，
+更偏电源不足。
+
+### Insufficient RAM
+内存不够更常见表现是：
+- 卡顿
+- 程序开太多变慢
+- 游戏加载吃力
+
+但不会那么典型地导致：
+- **unexpected shutdowns**
+- **random reboots under heavy load**
+
+所以 RAM 不是这题最合理答案。
+
+---
+
+## 最简单记忆法
+### 题目一旦出现：
+- **升级了高性能显卡**
+- **高负载下重启/关机/不稳**
+
+优先想到：
+## **PSU 不够 / Overloaded PSU**
+
+---
+
+## 一句话口诀
+## **换大显卡后高负载就重启关机，先查 PSU，不先怪 GPU。**
+
+**一句话：**
+这题的核心不是“新显卡有问题”，而是“新显卡让整机功耗上去后，电源扛不住了”，所以最可能原因是 **Overloaded PSU**。
 
