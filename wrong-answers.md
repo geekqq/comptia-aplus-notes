@@ -12685,4 +12685,96 @@ firmware update 属于：
 
 **一句话：**
 这题关键是分清“线路连通”和“供电输出”不是一回事：**手机充电异常要看 USB 供电的电压/电流，最佳工具是 USB multimeter，不是 cable continuity tester。**
+---
+
+## 手机性能突然变差：先想后台程序、缓存堆积、恶意软件、系统过旧；battery saver 不是这题标准答案
+![Mobile performance drops background cache malware OS question](images/2026-04-20-mobile-performance-drops-background-cache-malware-os.jpg)
+
+**题干：** What factor(s) can contribute to unexpected performance drops on a mobile device? (Select all that apply)
+
+**正确答案：**
+- **Outdated operating system software**
+- **Too many background applications**
+- **Malware consuming system resources**
+- **Excessive app data and cache buildup**
+
+### 这题你其实大部分都做对了
+你已经选对了：
+- **Outdated operating system software** ✅
+- **Too many background applications** ✅
+- **Malware consuming system resources** ✅
+
+你错在：
+- 选了 **Enabled battery saver mode** ❌
+- 漏了 **Excessive app data and cache buildup** ✅
+
+---
+
+## 为什么 cache buildup 是对的
+手机用久了如果：
+- app data 太多
+- cache 堆得很多
+- 临时文件越来越乱
+
+就可能导致：
+- 应用加载变慢
+- 系统响应迟钝
+- 存储压力变大
+- 整体性能下降
+
+所以：
+## **Excessive app data and cache buildup**
+确实会导致 unexpected performance drops。
+
+### 最简单理解
+## **缓存太多、垃圾太多，也会把手机拖慢。**
+
+---
+
+## 为什么 battery saver 这题不选
+你会选它很正常，
+因为现实里 battery saver mode 有时确实会：
+- 降低后台活动
+- 限制性能
+- 压低处理器行为
+
+所以从现实经验说，
+它看起来很像会影响性能。
+
+但这套题的标准答案没有把它算进去，
+题库更偏向把“unexpected performance drops”理解成：
+### **异常或不健康因素导致的性能下降**
+
+也就是像：
+- 后台程序太多
+- 恶意软件
+- 缓存/数据堆积
+- 系统过旧
+
+而 **battery saver mode** 更像：
+## **一种人为启用的节能模式**
+不是题库这题最想考的“异常性能下降成因”。
+
+所以考试里你要按题库标准收敛，
+不要完全按现实经验放大解释。
+
+---
+
+## 最简单记忆法
+### 手机突然变卡先想四件事：
+## **后台太多**
+## **缓存堆积**
+## **恶意软件**
+## **系统过旧**
+
+不要把这题先记成：
+## **battery saver = 标准答案**
+
+---
+
+## 一句话口诀
+## **手机变慢先查后台、缓存、木马、系统旧；省电模式别在这题里乱选。**
+
+**一句话：**
+这题你差一点就全对了：**unexpected performance drops 的标准答案更偏后台程序、缓存堆积、恶意软件和系统过旧；battery saver 虽然现实里可能影响性能，但这题不把它算作标准答案。**
 
