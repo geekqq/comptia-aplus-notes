@@ -12979,4 +12979,119 @@ codec 出问题当然也可能让音频异常，
 
 **一句话：**
 对，这题和前面你做过的是同一路：**VoIP 中 choppy / distorted audio 最典型先想 jitter，因为它代表语音包到达时间不稳定。**
+---
+
+## Port flapping 最常见先想：线有问题，或者 speed/duplex 不匹配；不是拓扑设计
+![Port flapping causes cabling speed duplex question](images/2026-04-20-port-flapping-causes-cabling-speed-duplex.jpg)
+
+**题干：** Which of the following answers refer to the primary causes of port flapping? (Select 2 answers)
+
+**正确答案：**
+- **Mismatched speed and duplex settings**
+- **Loose, faulty, or unsupported network cabling**
+
+### 这题的核心先记一句
+## **port flapping = 端口一会儿 up、一会儿 down，反复抖动。**
+
+所以最常见原因通常是：
+### **链路本身不稳定**
+
+也就是这两类：
+- **speed / duplex 不匹配**
+- **线缆或物理连接问题**
+
+---
+
+## 为什么正确答案是这两个
+### 1. Loose, faulty, or unsupported network cabling
+这个你答对了。
+
+如果网线：
+- 松了
+- 坏了
+- 质量不行
+- 类型不支持
+
+那端口链路就可能：
+- 一下连上
+- 一下断开
+
+这就是非常典型的：
+## **port flapping**
+
+---
+
+### 2. Mismatched speed and duplex settings
+这个是你漏掉的重点。
+
+如果两端协商不一致，
+比如：
+- 一边 speed/duplex 配置不匹配
+- 一边全双工，一边半双工
+- 协商异常
+
+就可能导致：
+- 链路不稳定
+- 错误率上升
+- 端口反复 up/down
+
+所以：
+## **Mismatched speed and duplex settings**
+是非常经典的标准答案。
+
+---
+
+## 为什么 incorrect network topology design 不对
+你选这个不算离谱，
+因为拓扑设计不好确实会引发很多网络问题。
+
+但题目问的是：
+## **primary causes of port flapping**
+
+port flapping 更直接、更典型的是：
+### **物理层/链路层不稳定**
+
+而不是宏观的拓扑设计不好。
+
+也就是说：
+- **拓扑问题** 可能造成环路、拥塞、广播风暴等
+- 但 **port flapping** 最优先还是先查：
+  - 线
+  - 口
+  - duplex/speed
+
+---
+
+## 为什么其他两个也不对
+### Outdated device firmware
+可能导致兼容性问题，
+但不是这题最常见、最基础的 primary cause。
+
+### Excessive traffic on a network device
+流量大可能会造成：
+- 拥塞
+- 丢包
+- 延迟
+
+但不属于 port flapping 的最典型根因。
+
+---
+
+## 最简单记忆法
+### Port flapping 先查两件事：
+## **线缆/物理连接**
+## **speed/duplex 设置**
+
+不要先想：
+- 拓扑设计
+- 流量太大
+- firmware 太旧
+
+---
+
+## 一句话口诀
+## **端口一抖，先查线；再看 speed / duplex 配没配对。**
+
+**一句话：**
+这题的核心就是把 port flapping 当成“链路自己反复掉又起”的问题来看：**最先查线缆物理层和 speed/duplex mismatch，不先怪拓扑设计。**
 
