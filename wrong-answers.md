@@ -13205,4 +13205,115 @@ port flapping 更直接、更典型的是：
 
 **一句话：**
 这题的关键就是别把喷墨和激光打印机混掉：**喷墨打印机出现竖线，最典型先做 printhead cleaning，不是更换 toner cartridge。**
+---
+
+## Inkjet grinding noise 先想进纸滚轮、卡纸异物、carriage 机构；不要选 drum / fuser 那套激光打印机部件
+![Inkjet grinding noise rollers paper carriage question](images/2026-04-20-inkjet-grinding-noise-rollers-paper-carriage.jpg)
+
+**题干：** In an inkjet printer, which issues are commonly associated with a grinding noise? (Select 3 answers)
+
+**正确答案：**
+- **Worn, damaged or misaligned paper feed rollers**
+- **Small paper pieces or foreign objects stuck in the paper path**
+- **Printhead carriage mechanism malfunctions (e.g., misaligned or obstructed carriage)**
+
+### 你这题其实已经抓到一大半了
+你答对了两项：
+- **Worn, damaged or misaligned paper feed rollers** ✅
+- **Small paper pieces or foreign objects stuck in the paper path** ✅
+
+你错在：
+- 漏了 **Printhead carriage mechanism malfunctions** ✅
+- 反而选了 **Faulty or worn fuser rollers and bearings** ❌
+
+---
+
+## 这题最关键的词
+## **inkjet printer**
+
+这就意味着你要优先想到：
+- paper feed rollers
+- paper path obstruction
+- printhead carriage
+
+而不是：
+- drum
+- fuser
+
+因为：
+## **drum / fuser 是 laser printer 那套更典型的部件。**
+
+---
+
+## 为什么 carriage malfunction 是对的
+喷墨打印机里，
+printhead carriage（喷头小车）会左右移动。
+
+如果它：
+- 卡住
+- 偏了
+- 被异物挡住
+- 机构不顺
+
+就很容易出现：
+## **grinding noise（摩擦/咔咔/磨齿声）**
+
+所以：
+### **Printhead carriage mechanism malfunctions**
+是这题很标准的答案。
+
+---
+
+## 为什么你选的 fuser rollers 不对
+### **fuser**
+是激光打印机里负责：
+- 加热
+- 把 toner 熔到纸上
+
+的部件。
+
+但题目明确写的是：
+## **inkjet printer**
+
+喷墨打印机不按 toner / drum / fuser 这套路工作。
+
+所以一旦题目写 inkjet，
+你就应该马上把脑子从：
+- toner
+- imaging drum
+- fuser
+
+切换到：
+- ink
+- printhead
+- carriage
+- rollers
+- paper path
+
+---
+
+## 为什么 drum 那项也不对
+题目里的：
+### **gears and bearings affecting the drum unit**
+也一样更偏 laser printer 语境，
+不是这题最合理的 inkjet grinding noise 选项。
+
+---
+
+## 最简单记忆法
+### Inkjet 出 grinding noise 先查三件事：
+## **滚轮**
+## **卡纸/异物**
+## **喷头 carriage 机构**
+
+不要先选：
+## **drum / fuser**
+
+---
+
+## 一句话口诀
+## **喷墨有异响，先查滚轮、卡纸、carriage；drum 和 fuser 先留给激光机。**
+
+**一句话：**
+这题的本质还是同一个坑：**题目写 inkjet，就别再往 laser printer 的 drum / fuser 那套跑；grinding noise 最常见还是 rollers、paper path 异物、以及 printhead carriage 机构问题。**
 
