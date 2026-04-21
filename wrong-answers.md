@@ -11320,4 +11320,102 @@ n- artifact
 
 **一句话：**
 你这题不是思路差，而是把“现实中先保护数据”带进了“考试问诊断第一步”的场景里；这道题标准答案更偏：**先查 OS logs 判断有没有 disk-related errors。**
+---
+
+## 机械硬盘文件传输变慢，第一反应先想碎片整理；不是查网卡
+![Mechanical HDD slow transfer defragmentation question](images/2026-04-20-mechanical-hdd-slow-transfer-defragmentation.jpg)
+
+**题干：** A technician notices longer than normal file transfer times on a system using a mechanical hard drive. What is the first diagnostic action they should consider?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Check network adapter settings |
+| ✅ 正确答案 | Perform disk defragmentation |
+
+### 先直接回答你
+对，**这题题库标准答案就是：先考虑做磁盘碎片整理（disk defragmentation）。**
+
+不过更准确地说，
+它不是在说“无脑立刻做一切类型磁盘整理”，
+而是在这个题目语境里：
+## **机械硬盘（mechanical hard drive）+ 文件传输变慢**
+最先想到的典型动作是：
+## **disk defragmentation**
+
+---
+
+## 为什么答案是 defragmentation
+因为机械硬盘和 SSD 不一样，
+机械硬盘读写要靠磁头移动。
+
+如果文件碎片很多：
+- 数据被拆散在盘面很多位置
+- 磁头要来回找
+- 读写效率会下降
+- 文件传输可能变慢
+
+所以对：
+## **mechanical HDD**
+来说，
+碎片整理是一个非常经典的性能优化/诊断思路。
+
+### 最简单理解
+## **机械硬盘怕碎片，碎片多了读写慢。**
+
+---
+
+## 为什么你选网卡不对
+你选的是：
+### **Check network adapter settings**
+
+这个思路更像：
+- 网络传输异常
+- 网络共享速度慢
+- 网卡协商有问题
+- 网络链路瓶颈
+
+但题目没有强调：
+- network transfer over LAN/WAN
+- 网络丢包
+- 网络连接异常
+
+它说的是：
+### **system using a mechanical hard drive**
+这明显在把你往本地存储性能问题上引。
+
+所以比起先查网卡，
+题库更希望你想到：
+## **disk defragmentation**
+
+---
+
+## 其他两个为什么不优先
+### Run disk cleanup utility
+清理垃圾文件能腾空间，
+但不一定直接针对“机械盘文件碎片导致的传输慢”。
+
+### Adjust paging file size
+分页文件更偏内存/虚拟内存调优，
+不是这题最直接的磁盘传输慢首选动作。
+
+---
+
+## 最简单记忆法
+### 题目如果出现：
+- **mechanical hard drive**
+- **file transfer slower than normal**
+
+优先想到：
+## **disk defragmentation**
+
+但顺手也要记一个现实补充：
+## **碎片整理是给机械 HDD 的，不是给 SSD 乱做的。**
+
+---
+
+## 一句话口诀
+## **机械盘传输慢，先想碎片整理；SSD 不按这套背。**
+
+**一句话：**
+这题的核心就是：**机械硬盘性能下降常和文件碎片有关，所以题库标准答案是先考虑做磁盘碎片整理，而不是先查网卡设置。**
 
