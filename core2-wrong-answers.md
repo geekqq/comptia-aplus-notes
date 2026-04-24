@@ -150,6 +150,8 @@
 ---
 
 ### 题 2：企业环境里最广泛采用的 workstation OS
+![Windows business workstation question](images/2026-04-24-core2-windows-business-workstation-question.jpg)
+
 **题干：** Which workstation operating system is most widely adopted in business environments due to its strong compatibility with enterprise applications, management tools, and network infrastructure?
 
 ✅ **正确答案：Windows**
