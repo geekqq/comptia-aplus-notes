@@ -833,4 +833,111 @@
 
 **一句话：**
 这题以后直接这样背：**multiboot 最常见用途是让不同操作系统承担不同任务；如果题目说 simultaneously，那通常更像 virtualization，不是 multiboot。**
+---
+
+## Internet-based OS installation 先想“外网/云/厂商下载”，不要和 PXE/LAN 大规模部署混掉
+![Internet-based OS installation vs network deployment question](images/2026-04-24-core2-internet-based-os-installation-vs-network-deployment.jpg)
+
+**题干：** Which of the answers listed below describe characteristics of an internet-based OS installation method? (Select 2 answers)
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Optimized for mass deployment with standardized configuration across multiple systems |
+| ❌ 我的答案 | Commonly deployed via PXE/DHCP/TFTP protocols |
+| ✅ 漏掉的正确答案 | Primarily suited for single users, remote workers, or when local network infrastructure is not available |
+| ✅ 漏掉的正确答案 | Relies on external servers, cloud services, or vendor websites for installation files |
+
+### 这题为什么会错
+因为你把：
+## **internet-based installation**
+和
+## **network/PXE mass deployment**
+混在一起了。
+
+它们都带“network”味道，
+所以特别容易串。
+
+---
+
+## Internet-based installation 真正的特征是什么
+### 1. Relies on external servers, cloud services, or vendor websites for installation files
+这就是最核心定义。
+
+也就是：
+- 安装文件来自外部服务器
+- 来自云端
+- 来自厂商网站
+- 依赖互联网获取镜像/安装资源
+
+所以：
+## **external servers / cloud / vendor websites**
+一定是对的。
+
+### 2. Primarily suited for single users, remote workers, or when local network infrastructure is not available
+因为这种安装方式不依赖企业内网部署体系，
+所以更适合：
+- 单个用户
+- 远程办公用户
+- 没有本地 LAN 部署环境时
+
+所以这项也是标准答案。
+
+---
+
+## 为什么你选的那两项不对
+### 1. Optimized for mass deployment with standardized configuration across multiple systems
+这更像：
+## **企业内网批量部署 / 镜像标准化部署**
+
+也就是：
+- 大规模统一装机
+- 多台机器标准化配置
+- IT 批量部署场景
+
+这不是 internet-based installation 最典型的标签。
+
+### 2. Commonly deployed via PXE/DHCP/TFTP protocols
+这个更是明显在说：
+## **PXE 网络部署 / 内网启动安装**
+
+也就是：
+- 本地网络
+- DHCP
+- TFTP
+- PXE boot
+
+这更像：
+## **network-based / LAN-based deployment**
+
+不是这题的 **internet-based**。
+
+---
+
+## 最简单对照记忆
+### Internet-based installation
+- 外部服务器 / 云端 / 厂商网站
+- 单用户 / 远程用户 / 没有本地部署环境
+
+### PXE / network deployment
+- 内部服务器
+- 本地网络
+- PXE / DHCP / TFTP
+- 批量部署
+
+---
+
+## 最方便记忆的方法
+## **Internet-based = 从外网拿文件**
+## **PXE-based = 从内网开机装系统**
+
+---
+
+## 一句话口诀
+## **外网装系统看 cloud/vendor；内网批量装机看 PXE/DHCP/TFTP。**
+
+### 再压缩一句
+## **单机远程走互联网，批量部署走本地网。**
+
+**一句话：**
+这题以后就这样背：**internet-based OS installation 强调外部服务器/云端/厂商下载，适合单用户和远程用户；PXE/DHCP/TFTP 那套属于本地网络批量部署，不是 internet-based。**
 
