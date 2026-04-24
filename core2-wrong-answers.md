@@ -735,4 +735,102 @@
 
 **一句话：**
 这题以后直接这样背：**无盘工作站每次从网络开机、拉系统镜像，核心技术就是 PXE；SMB/NFS 只是共享协议，不是网启本身。**
+---
+
+## Multiboot 不是“同时运行多个系统”，而是开机时选一个系统；常见用途是不同系统做不同任务
+![Multiboot use case specific tasks question](images/2026-04-24-core2-multiboot-use-case-specific-tasks.jpg)
+
+**题干：** What is the most common use case for a multiboot configuration?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Running multiple operating systems simultaneously |
+| ✅ 正确答案 | Utilizing different operating systems for specific tasks |
+
+### 这题你错的根本原因
+你把：
+## **multiboot**
+和
+## **virtualization / multiple OS simultaneously**
+混了。
+
+这是非常常见的错法。
+
+---
+
+## 为什么正确答案是“for specific tasks”
+### **Multiboot** 的意思是：
+- 一台机器装多个操作系统
+- **开机时选其中一个进去**
+- 不是同时并行运行
+
+所以它的最常见用途就是：
+## **不同系统做不同任务**
+
+比如：
+- Windows 打游戏 / 跑某些办公软件
+- Linux 做开发 / 安全实验 / 学习
+- 老版本系统保留某些特定用途
+
+这就是：
+### **Utilizing different operating systems for specific tasks**
+
+---
+
+## 为什么“simultaneously”不对
+你选的是：
+### **Running multiple operating systems simultaneously**
+
+这个更像：
+## **虚拟化（virtualization）**
+
+也就是：
+- host OS 里再跑 guest OS
+- 多个系统同时在线
+- 同时运行
+
+但 multiboot 不是这样。
+
+### Multiboot 的关键词是：
+## **boot 时选一个，不是一起跑。**
+
+---
+
+## 为什么其他两个不是最常见 use case
+### Keeping legacy software operational in a controlled environment
+这个也可能是用途之一，
+但题目问的是：
+## **most common use case**
+
+更通用、更标准的答案还是：
+### **不同 OS 处理不同任务**
+
+### Isolating potentially harmful software away from the main OS
+这更像：
+- sandbox
+- VM
+- 隔离测试环境
+
+不是 multiboot 最典型的 primary use case。
+
+---
+
+## 最简单记忆法
+### Multiboot 就记一句：
+## **一台机器多个系统，但一次只进一个。**
+
+### 顺手对比
+- **Multiboot** → 开机选一个系统
+- **Virtualization** → 多系统可同时运行
+
+---
+
+## 一句话口诀
+## **多系统同时跑看虚拟化，开机选一个看 multiboot。**
+
+### 再压缩一句
+## **Multiboot 管“切换”，不是管“同时”。**
+
+**一句话：**
+这题以后直接这样背：**multiboot 最常见用途是让不同操作系统承担不同任务；如果题目说 simultaneously，那通常更像 virtualization，不是 multiboot。**
 
