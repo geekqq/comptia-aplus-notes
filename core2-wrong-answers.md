@@ -303,4 +303,111 @@
 
 **一句话：**
 这题以后就这样背：**partition 的好处是整理、multiboot、备份恢复方便；它不会让硬盘容量更大，也不是提速手段。**
+---
+
+## 安装系统时 NVMe 盘检测不到：先想安装程序缺驱动，题库标准答案是加载第三方 NVMe 驱动，不是先刷 BIOS
+![NVMe OS install load third-party drivers question](images/2026-04-24-core2-nvme-os-install-load-third-party-drivers.jpg)
+
+**题干：** A technician is attempting to install a new operating system on a recently assembled custom workstation. During the installation process, the installer fails to detect the installed NVMe solid-state drive, preventing the installation from proceeding. All physical connections to the NVMe drive have been verified as secure. What should the technician do to resolve this problem?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Update the workstation's BIOS/UEFI firmware |
+| ✅ 正确答案 | Load the appropriate third-party NVMe drivers from external media |
+
+### 这题为什么容易错
+因为你看到：
+- **recently assembled custom workstation**
+- **installer fails to detect NVMe SSD**
+
+很容易第一反应就怀疑：
+## **BIOS/UEFI 太旧，不支持 NVMe**
+
+这个现实里不是完全没可能，
+但这题题库更标准的落点是：
+## **安装程序缺少对应 NVMe 驱动**
+
+所以标准答案是：
+### **Load the appropriate third-party NVMe drivers from external media**
+
+---
+
+## 为什么正确答案是“加载驱动”
+题目说的是：
+## **during the installation process, the installer fails to detect the drive**
+
+这类题在考试里常常是在考：
+- 安装程序本身缺少存储控制器/NVMe 驱动
+- 需要手动从外部介质加载驱动
+
+也就是说：
+### **盘可能物理上没问题，BIOS 也未必有问题，只是安装器暂时不认它。**
+
+这时候最标准的动作就是：
+## **load third-party NVMe drivers**
+
+---
+
+## 为什么 BIOS/UEFI firmware 这题没中
+### Update the workstation's BIOS/UEFI firmware
+这在现实故障排查里是一个合理方向，
+但不是题库这里最直接、最优先的标准答案。
+
+因为题目没有明确给你：
+- 主板过旧
+- 固件版本过老
+- NVMe support 缺失
+
+它更像是在考：
+## **安装阶段识别不到存储设备 → 先补驱动**
+
+所以这题先不要把脑子带到“刷 BIOS”上。
+
+---
+
+## 为什么 boot order 不对
+因为现在的问题不是：
+### **从哪块盘启动**
+
+而是：
+### **安装程序压根没看到那块 NVMe 盘**
+
+既然安装器都看不到，
+那先调 boot order 没有解决核心问题。
+
+---
+
+## 为什么选不同 drive 不对
+因为题目没有说：
+- 还有别的可用目标盘
+- 当前盘不适合安装
+
+而是在问：
+### **怎么解决 NVMe 盘检测不到的问题**
+
+所以“换盘选”不是核心处理。
+
+---
+
+## 最简单记忆法
+### 安装系统时遇到：
+- **installer 看不到 NVMe / storage device**
+- **物理连接已确认没问题**
+
+优先想到：
+## **先加载存储/NVMe 驱动**
+
+不要第一反应就：
+## **刷 BIOS**
+
+---
+
+## 一句话口诀
+## **安装器不认盘，先补驱动；能进系统后再谈固件。**
+
+### 再压缩一句
+## **看不到 NVMe 先想驱动，不先想 BIOS。**
+
+**一句话：**
+这题以后直接这样背：**安装系统时如果 installer 检测不到 NVMe，而物理连接已确认正常，题库标准处理优先是加载第三方 NVMe 驱动。**
 
