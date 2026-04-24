@@ -113,4 +113,96 @@
 
 **一句话：**
 这题以后直接这样背：**问最广跨平台兼容，就先想 FAT32 和 exFAT；问 Windows 本地强功能，再想 NTFS。**
+---
+
+## Core 2：跨系统共享数据先看文件系统兼容；企业桌面最广泛采用通常还是 Windows
+![Cross-platform compatibility and Windows business workstation](images/2026-04-24-core2-cross-platform-and-windows-business.jpg)
+
+### 题 1：不同操作系统之间共享数据，最常见兼容问题来源
+**题干：** What is the primary cause of compatibility issues when sharing data between different operating systems?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Variations in hardware requirements |
+| ✅ 正确答案 | Differences in file system formats |
+
+#### 为什么答案是 file system formats
+这题问的是：
+## **sharing data between different operating systems**
+
+最根本、最常见的兼容问题之一就是：
+### **文件系统格式支持不同**
+
+比如：
+- Windows 常见 **NTFS**
+- macOS 常见 **APFS**
+- Linux 常见 **ext4**
+- 跨平台更常见 **FAT32 / exFAT**
+
+所以题目如果在问：
+## **跨系统共享数据的 primary cause of compatibility issues**
+优先想到：
+## **Differences in file system formats**
+
+#### 最短记忆
+## **跨系统先看文件系统，不先看硬件。**
+
+---
+
+### 题 2：企业环境里最广泛采用的 workstation OS
+**题干：** Which workstation operating system is most widely adopted in business environments due to its strong compatibility with enterprise applications, management tools, and network infrastructure?
+
+✅ **正确答案：Windows**
+
+#### 为什么答案是 Windows
+这题不是在问：
+- 哪个系统最自由
+- 哪个系统技术最强
+- 哪个最适合服务器
+
+而是在问：
+## **企业桌面 / workstation 环境里谁最普及**
+
+在这个语境里，
+最标准答案就是：
+## **Windows**
+
+因为它在企业桌面生态里的优势是：
+- 企业软件兼容性广
+- 管理工具成熟
+- 和域控/AD/组策略/办公环境整合强
+
+#### 顺手对比
+- **Windows** → 企业桌面/workstation 最常见
+- **Linux** → 服务器、开发、云、运维更强势
+- **macOS** → 设计、创意、Apple 生态、类 Unix 体验更有优势
+
+#### 最短记忆
+## **桌面企业看 Windows，服务器开发看 Linux。**
+
+---
+
+## 你顺手问的：那 macOS 的优势是什么？
+这个可以这样简短记：
+
+### macOS 常见优势
+#### 1. Apple 生态整合好
+- iPhone / iPad / AirDrop / iCloud / Handoff 配合顺
+
+#### 2. 界面和体验稳定统一
+- 硬件软件一体化
+- 机器和系统配合通常比较顺手
+
+#### 3. 创意/设计类用户很多
+- 设计、视频、音乐、内容创作人群常见
+
+#### 4. 兼顾桌面易用性 + Unix 底子
+- 图形桌面友好
+- 底层又有类 Unix 环境，开发者也喜欢
+
+### 一句话记法
+## **Windows 强企业桌面，Linux 强服务器开发，macOS 强 Apple 生态与创意体验。**
+
+**一句话：**
+这两题你可以一起记：**跨系统共享先看文件系统格式；企业桌面最广泛采用通常是 Windows。与此同时，macOS 的优势更多在 Apple 生态整合、体验统一，以及创意工作和类 Unix 开发环境。**
 
