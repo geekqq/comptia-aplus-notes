@@ -627,4 +627,112 @@
 
 **一句话：**
 这题以后直接这样背：**System Restore 是回滚到还原点，不是恢复出厂；问 built-in factory reset without external media，就选 Recovery Partition。**
+---
+
+## 无盘工作站每次开机都从网络拉系统镜像，先想 PXE；SMB/NFS 是共享协议，不是“网启”本身
+![PXE network boot diskless workstations question](images/2026-04-24-core2-pxe-network-boot-diskless-workstations.jpg)
+
+**题干：** An organization wants to automate the deployment of operating systems on dozens of diskless workstations that do not have any local storage. The workstations must boot directly from the network every time they power on, retrieving the OS image from a central server without any local media involved. Which technology allows this network boot and OS loading process?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | SMB |
+| ✅ 正确答案 | PXE |
+
+### 这题最关键的词
+- **diskless workstations**
+- **boot directly from the network every time**
+- **retrieving the OS image from a central server**
+- **without any local media**
+
+只要看到：
+## **从网络启动 / 网启 / boot directly from the network**
+
+第一反应就该是：
+## **PXE**
+
+---
+
+## 为什么答案是 PXE
+### **PXE = Preboot eXecution Environment**
+它就是用来：
+## **通过网卡启动系统，并从网络获取启动/安装映像**
+
+这题里无盘工作站：
+- 没本地存储
+- 没本地介质
+- 每次都从网络开机
+
+这完全就是 PXE 的经典应用场景。
+
+---
+
+## 为什么你选的 SMB 不对
+### **SMB = Server Message Block**
+它是：
+## **文件共享协议**
+
+也就是说 SMB 更偏：
+- 共享文件夹
+- 访问共享目录
+- 传文件
+
+但它不是：
+## **让机器开机时通过网卡直接启动的技术**
+
+所以这题不能选 SMB。
+
+---
+
+## 为什么 NFS 也不对
+### **NFS = Network File System**
+和 SMB 一样，
+它也是：
+## **网络文件共享协议**
+
+它能共享文件，
+但不是“网络引导启动机制”本身。
+
+---
+
+## 为什么 WDS 这题也没中
+### **WDS = Windows Deployment Services**
+它和网络部署 Windows 确实有关，
+但题目问的是：
+## **哪一种 technology allows this network boot and OS loading process**
+
+更底层、更核心的“网络启动”技术是：
+## **PXE**
+
+你可以这样区分：
+- **PXE** → 网启机制
+- **WDS** → 利用 PXE 等方式进行 Windows 部署的服务
+
+---
+
+## 最简单记忆法
+### 看到这些词：
+- **network boot**
+- **diskless workstation**
+- **boot from network**
+- **no local media**
+
+优先想到：
+## **PXE**
+
+### 顺手区分
+- **PXE** → 网络启动
+- **SMB / NFS** → 文件共享
+- **WDS** → Windows 部署服务
+
+---
+
+## 一句话口诀
+## **网启看 PXE，共享看 SMB/NFS，Windows 批量部署才想 WDS。**
+
+### 再压一句
+## **从网络开机 = PXE，不是共享协议。**
+
+**一句话：**
+这题以后直接这样背：**无盘工作站每次从网络开机、拉系统镜像，核心技术就是 PXE；SMB/NFS 只是共享协议，不是网启本身。**
 
