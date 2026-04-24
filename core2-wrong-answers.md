@@ -410,4 +410,105 @@
 
 **一句话：**
 这题以后直接这样背：**安装系统时如果 installer 检测不到 NVMe，而物理连接已确认正常，题库标准处理优先是加载第三方 NVMe 驱动。**
+---
+
+## 对，这题和 NVMe 那题同一路：安装器看不到 RAID，先加载 RAID 驱动，不先换控制器
+![RAID OS install load third-party drivers question](images/2026-04-24-core2-raid-os-install-load-third-party-drivers.jpg)
+
+**题干：** During the installation of a new operating system on a custom-built PC, the installer fails to detect the RAID array configured on the system. What is the most appropriate action to resolve this issue?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Replace the RAID controller with a compatible model |
+| ✅ 正确答案 | Load the appropriate third-party RAID drivers from external media |
+
+### 对，这题和上一题本质是同一路
+你这个总结是对的：
+## **安装器看不到 RAID / NVMe 这类存储目标时，题库很爱考“先加载驱动”。**
+
+也就是：
+- **看不到 NVMe** → 先补 NVMe 驱动
+- **看不到 RAID array** → 先补 RAID 驱动
+
+---
+
+## 为什么答案是加载 RAID 驱动
+题目最关键的词是：
+- **during the installation of a new operating system**
+- **installer fails to detect the RAID array**
+
+这很像在说：
+## **安装程序本身没有对应 RAID controller / storage driver**
+
+所以最合适的动作就是：
+### **Load the appropriate third-party RAID drivers from external media**
+
+也就是让安装器先“认得出”这个 RAID 阵列。
+
+---
+
+## 为什么不是更换 RAID controller
+你选的是：
+### **Replace the RAID controller with a compatible model**
+
+这个太重了，
+也不是 first / most appropriate action。
+
+因为题目没有说：
+- RAID controller 损坏
+- controller 不兼容
+- 阵列配置错误
+
+它更像是在考：
+## **安装程序缺驱动，暂时识别不到控制器/阵列**
+
+所以直接换控制器属于：
+### **过度处理**
+
+---
+
+## 为什么 BIOS update 也没中
+和上一题 NVMe 很像。
+
+更新 BIOS 当然有时现实里可能有帮助，
+但题库更标准的答案通常是：
+## **先加载存储控制器驱动**
+
+因为题目重点落在：
+### **installer fails to detect**
+不是：
+### **固件完全不支持**
+
+---
+
+## 为什么“选别的盘”不对
+因为题目不是在问：
+- 还有没有别的安装目标
+
+而是在问：
+### **如何解决 installer 看不到 RAID array 的问题**
+
+所以换盘不是根本解决思路。
+
+---
+
+## 最简单记忆法
+### 安装系统时如果：
+- 看不到 **NVMe**
+- 看不到 **RAID array**
+- 物理层/阵列已配置好
+
+优先想到：
+## **加载第三方存储驱动**
+
+---
+
+## 一句话口诀
+## **安装器不认存储目标，先补控制器驱动；别一上来刷 BIOS，更别直接换硬件。**
+
+### 再压缩成一句
+## **OS 安装看不到盘，先加载驱动。**
+
+**一句话：**
+对，这题你可以和上一题绑着背：**安装系统时如果 installer 看不到 RAID 或 NVMe，题库标准答案通常是先从外部介质加载对应第三方驱动。**
 
