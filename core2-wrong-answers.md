@@ -511,4 +511,120 @@
 
 **一句话：**
 对，这题你可以和上一题绑着背：**安装系统时如果 installer 看不到 RAID 或 NVMe，题库标准答案通常是先从外部介质加载对应第三方驱动。**
+---
+
+## 恢复出厂设置且不靠外部介质，先想 recovery partition；system restore 不是重置到 factory settings
+![Recovery partition vs System Restore question](images/2026-04-24-core2-recovery-partition-vs-system-restore.jpg)
+
+**题干：** Which of the following answers refers to a built-in solution for restoring an operating system to its factory settings without the use of external media?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | System restore |
+| ✅ 正确答案 | Recovery partition |
+
+### 这题最容易混的点
+你会选 **System restore** 很正常，
+因为它听起来就像：
+## **恢复系统**
+
+但题目问得更具体：
+### **restoring an operating system to its factory settings**
+而且还强调：
+### **without the use of external media**
+
+这两个关键词一组合，
+标准答案就变成：
+## **Recovery partition**
+
+---
+
+## 为什么答案是 recovery partition
+### **Recovery partition = 恢复分区**
+它通常是机器/系统预先内建在本地磁盘上的恢复环境，
+用来：
+- 恢复出厂设置
+- 重置系统到初始状态
+- 不需要额外 U 盘 / 光盘 / 外部安装介质
+
+所以题目说：
+## **built-in solution**
+## **factory settings**
+## **without external media**
+
+这就是 recovery partition 的经典描述。
+
+---
+
+## 为什么 system restore 不对
+### **System Restore**
+更像是：
+## **把系统状态回滚到之前的一个还原点**
+
+它主要恢复的是：
+- 系统文件
+- 注册表
+- 某些配置状态
+
+它不是：
+## **把系统恢复到出厂设置**
+
+也就是说：
+- **System Restore** → 回到之前某个系统状态
+- **Recovery Partition** → 回到更接近出厂/初始恢复环境
+
+所以这题不能选 System Restore。
+
+---
+
+## 为什么 disk imaging 不对
+### **Disk imaging**
+更像：
+- 做整盘镜像备份
+- 用镜像恢复系统
+
+但题目强调的是：
+## **built-in solution without external media**
+
+它不是在问“备份镜像技术”，
+而是在问机器本机自带的恢复机制。
+
+---
+
+## 为什么 shadow copy 不对
+### **Shadow copy**
+更偏：
+- 文件/卷快照
+- 版本副本
+- 便于恢复某些文件版本
+
+它不是“恢复到 factory settings”的标准答案。
+
+---
+
+## 最简单记忆法
+### 题目如果问：
+- **factory settings**
+- **built-in solution**
+- **no external media**
+
+优先想到：
+## **Recovery partition**
+
+### 顺手区分
+- **System Restore** → 还原点回滚
+- **Recovery Partition** → 出厂恢复/重置系统
+- **Disk Imaging** → 镜像备份恢复
+- **Shadow Copy** → 快照/文件版本
+
+---
+
+## 一句话口诀
+## **还原点选 System Restore，恢复出厂选 Recovery Partition。**
+
+### 再压一句
+## **factory settings 不看 restore point，看 recovery partition。**
+
+**一句话：**
+这题以后直接这样背：**System Restore 是回滚到还原点，不是恢复出厂；问 built-in factory reset without external media，就选 Recovery Partition。**
 
