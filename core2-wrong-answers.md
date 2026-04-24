@@ -207,4 +207,100 @@
 
 **一句话：**
 这两题你可以一起记：**跨系统共享先看文件系统格式；企业桌面最广泛采用通常是 Windows。与此同时，macOS 的优势更多在 Apple 生态整合、体验统一，以及创意工作和类 Unix 开发环境。**
+---
+
+## 分区的好处：整理数据、支持 multiboot、也更方便备份恢复；不会让硬盘“变大”
+![Partitions benefits backup recovery question](images/2026-04-24-core2-partitions-benefits-backup-recovery.jpg)
+
+**题干：** What are the key benefits of dividing a storage drive into multiple partitions? (Select 3 answers)
+
+|  |  |
+| --- | --- |
+| ✅ 我答对的 | Improved data organization |
+| ✅ 我答对的 | Support for multiboot environments |
+| ❌ 我的错误答案 | Larger physical disk capacity utilization |
+| ✅ 漏掉的正确答案 | Simplified backup and recovery |
+
+### 这题最容易错的点
+你前两个其实已经抓得很准：
+- **Improved data organization** ✅
+- **Support for multiboot environments** ✅
+
+你错在把：
+- **Larger physical disk capacity utilization**
+当成了分区的好处。
+
+但分区：
+## **不会让硬盘物理容量变大，也不会凭空提高物理容量利用率。**
+
+---
+
+## 为什么 Simplified backup and recovery 是对的
+因为分区后你可以把：
+- 系统
+- 数据
+- 其他用途
+
+分开存放。
+
+这样带来的一个实际好处就是：
+## **备份和恢复更方便**
+
+比如：
+- 只备份数据分区
+- 系统坏了重装时不一定要动数据分区
+- 恢复系统和恢复资料可以分开处理
+
+所以：
+### **Simplified backup and recovery**
+是合理的分区好处。
+
+---
+
+## 为什么 physical disk capacity 那项不对
+因为分区只是：
+## **把同一块盘切成逻辑区域**
+
+它做的是逻辑划分，
+不是物理扩容。
+
+所以：
+- 500GB 分成 2 个分区，还是 500GB
+- 1TB 分成 4 个分区，也还是 1TB
+
+### 分区能改善组织方式
+### 但不能增加容量本身
+
+---
+
+## 为什么 faster data transfer speeds 也不对
+分区本身不是加速技术。
+它不会天然让：
+- 磁盘变快
+- 传输速率上升
+
+所以这项也不是标准好处。
+
+---
+
+## 最简单记忆法
+### 分区三大好处先记：
+## **好整理**
+## **能多系统启动**
+## **更方便备份恢复**
+
+不要乱加：
+## **容量变大**
+## **速度变快**
+
+---
+
+## 一句话口诀
+## **分区帮你分门别类、双系统启动、备份恢复更轻松；但不加容量，也不直接加速。**
+
+### 再压缩一句
+## **分区管组织，不管扩容。**
+
+**一句话：**
+这题以后就这样背：**partition 的好处是整理、multiboot、备份恢复方便；它不会让硬盘容量更大，也不是提速手段。**
 
