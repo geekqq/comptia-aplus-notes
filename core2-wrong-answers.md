@@ -940,4 +940,89 @@
 
 **一句话：**
 这题以后就这样背：**internet-based OS installation 强调外部服务器/云端/厂商下载，适合单用户和远程用户；PXE/DHCP/TFTP 那套属于本地网络批量部署，不是 internet-based。**
+---
+
+## NetBT = NetBIOS over TCP/IP，这题是 True；看到 NetBT 就想到“让 NetBIOS 跑在 TCP/IP 上”
+![NetBT NetBIOS over TCP/IP question](images/2026-04-24-core2-netbt-netbios-over-tcp-ip-true.jpg)
+
+**题干：** The function of the NetBT protocol is to allow NetBIOS services to be used over TCP/IP networks.
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | False |
+| ✅ 正确答案 | True |
+
+### 这题其实就是缩写题
+你只要把这个缩写拆开，
+题目就几乎等于白送：
+
+## **NetBT = NetBIOS over TCP/IP**
+
+也就是：
+### **让 NetBIOS 服务可以运行在 TCP/IP 网络上。**
+
+所以题干说：
+> allow NetBIOS services to be used over TCP/IP networks
+
+这句话本身就是：
+## **True**
+
+---
+
+## NetBIOS / NetBT 最简单怎么理解
+### NetBIOS
+是比较老的一套网络服务/接口概念，
+常见和：
+- 名称解析
+- 会话服务
+- 局域网共享
+
+这些东西联系在一起。
+
+### NetBT
+就是把：
+## **NetBIOS 这套服务搬到 TCP/IP 上跑**
+
+所以你可以把它直接记成：
+## **NetBIOS over TCP/IP 的桥梁/封装方式**
+
+---
+
+## 为什么这题容易反应不过来
+因为如果你没把：
+### **NetBT**
+和
+### **NetBIOS over TCP/IP**
+直接绑定，
+那它看起来就像一个陌生缩写。
+
+一旦绑定之后，
+这题就会变成：
+## **定义题**
+
+---
+
+## 顺手再和相关端口一起记
+如果题目再延伸到老式 NetBIOS 服务，
+常见会想到：
+- **137** → NetBIOS Name
+- **138** → NetBIOS Datagram
+- **139** → NetBIOS Session
+
+所以你可以把它们顺手串起来：
+## **NetBT = 让 NetBIOS 这些服务跑在 TCP/IP 网络里。**
+
+---
+
+## 最简单记忆法
+## **NetBT 看到 BT，不是蓝牙；它是 NetBIOS over TCP/IP。**
+
+### 一句话口诀
+## **NetBT = NetBIOS 搭 TCP/IP。**
+
+### 再压缩一句
+## **看到 NetBT，就判断：它就是把 NetBIOS 放到 TCP/IP 上跑。**
+
+**一句话：**
+这题以后直接秒杀：**NetBT 的作用就是让 NetBIOS services 能在 TCP/IP 网络上使用，所以题目是 True。**
 
