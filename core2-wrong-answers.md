@@ -2058,4 +2058,104 @@ Windows CLI 里最标准就该想到：
 
 **一句话：**
 这题以后直接这样背：**SFC 就是 System File Checker，负责检查受保护系统文件的完整性，并用正确的 Microsoft 版本替换损坏或错误的系统文件。**
+---
+
+## rmdir 要删整个目录树，关键是“路径要对 + /s”；这题错在选项都没指向 Data，所以答案是 None of the above
+![rmdir delete directory tree correct path and switches question](images/2026-04-24-core2-rmdir-delete-directory-tree-correct-path-and-switches.jpg)
+
+**题干：** A user wants to delete the entire directory named Data located at `C:\Files\Data` along with all its subdirectories and files using the Windows command-line. Which variant of the `rmdir` command should they run?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | `rmdir C:\Files /r` |
+| ✅ 正确答案 | **None of the above** |
+
+### 这题最坑的地方
+你不是完全不会，
+而是被：
+## **“删整个目录树”**
+这个概念带去想 `/r` 了。
+
+但 Windows 这题真正要你同时看两件事：
+1. **参数对不对**
+2. **路径对不对**
+
+只看参数很容易掉坑。
+
+---
+
+## 为什么正确答案是 None of the above
+题目要删的是：
+# **`C:\Files\Data`**
+
+而选项写的是：
+- `rmdir C:\Files /s`
+- `rmdir C:\Files /q`
+- `rmdir C:\Files /r`
+
+它们都在删：
+# **`C:\Files`**
+不是：
+# **`C:\Files\Data`**
+
+所以这几项即使参数里有看起来“接近”的，
+也都不是题目要求的正确命令。
+
+因此标准答案才是：
+# **None of the above**
+
+---
+
+## 真正正确的命令应该长什么样
+如果真要删除：
+- `C:\Files\Data`
+- 连同其子目录和文件
+
+标准写法应该是：
+# **`rmdir C:\Files\Data /s`**
+
+如果还想静默不提示确认，
+常见会再加：
+# **`rmdir C:\Files\Data /s /q`**
+
+---
+
+## 为什么你选的 `/r` 不对
+因为在 Windows 这题语境里，
+## **rmdir 常见考点是 `/s` 和 `/q`**
+
+### `/s`
+- 删除目录本身
+- 连同所有子目录和文件
+
+### `/q`
+- quiet
+- 静默模式
+- 不再确认（通常和 `/s` 搭配）
+
+而你选的：
+### `/r`
+不是这题要考的标准参数。
+
+---
+
+## 最简单记忆法
+### Windows `rmdir` 两个最常考开关：
+- **`/s`** → 连子目录和文件一起删
+- **`/q`** → 静默删除，不确认
+
+### 所以固定背法：
+# **删整个目录树先想 `/s`**
+# **安静删再加 `/q`**
+
+---
+
+## 一句话口诀
+# **删目录树用 `rmdir /s`，静默再加 `/q`。**
+
+### 再压一句
+# **先看路径，再看参数；路径错了整题都错。**
+
+**一句话：**
+这题以后直接这样背：**Windows 里删除整个目录及其子目录/文件要靠 `rmdir <目录> /s`，但这题所有选项都写成了 `C:\Files` 而不是 `C:\Files\Data`，所以只能选 None of the above。**
 
