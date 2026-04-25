@@ -1109,4 +1109,111 @@ Windows 11 跟以前版本一个很明显的区别就是：
 
 **一句话：**
 这题以后就这样背：**Windows 11 最常考的三个最低要求是 TPM 2.0、UEFI Secure Boot、以及受支持的 64-bit 处理器；TPM 2.0 是最容易漏掉的那个。**
+---
+
+## Task Manager 最核心四件事：看运行、看资源、管启动、结束卡死程序；不管计划任务和用户权限
+![Task Manager functions running startup resources end task question](images/2026-04-24-core2-task-manager-functions-running-startup-resources-end-task.jpg)
+
+**题干：** Which of the answers listed below describe(s) the function of Task Manager (taskmgr.exe) in Windows 10 and Windows 11? (Select all that apply)
+
+**正确答案：**
+- **Displays information on programs, processes, and services that are currently running on the computer**
+- **Provides access to startup applications that can be enabled or disabled to launch automatically at sign-in**
+- **Provides real-time reports on how a Windows-based computer is using system resources, such as CPU, RAM, Disk, Network, and GPU**
+- **Allows users to close a non-responsive application in Windows**
+
+### 你这题其实已经会了 75%
+你已经选对了三项：
+- **running programs / processes / services** ✅
+- **startup applications** ✅
+- **real-time resource reports** ✅
+
+你漏掉的是：
+- **Allows users to close a non-responsive application in Windows** ✅
+
+这项其实也是 Task Manager 最经典、最直觉的用途之一。
+
+---
+
+## 为什么这个漏掉最可惜
+因为很多人对 Task Manager 的第一反应就是：
+## **程序卡死了，去 Task Manager 里 End task**
+
+所以：
+### **Allows users to close a non-responsive application in Windows**
+是非常标准、非常基础的 Task Manager 功能。
+
+这题漏它，
+就等于把 Task Manager 最招牌的功能忘掉了。
+
+---
+
+## Task Manager 最核心到底是哪四件事
+你以后就把它固定背成四件事：
+
+### 1. 看当前运行内容
+- 程序
+- 进程
+- 服务
+
+### 2. 看系统资源占用
+- CPU
+- RAM
+- Disk
+- Network
+- GPU
+
+### 3. 管启动项
+- 开机自启程序启用/禁用
+
+### 4. 杀掉卡死程序
+- **End task**
+
+---
+
+## 为什么其他几个不对
+### Provides access to administrative tools for managing network traffic
+这更像：
+- 专门网络管理工具
+- 高级网络监控/管理工具
+
+不是 Task Manager 的标准定义。
+
+### Allows users to schedule the launch of programs or scripts at pre-defined times
+这个是：
+## **Task Scheduler（任务计划程序）**
+不是 Task Manager。
+
+### Allows system administrators to modify user account permissions
+这个更像：
+- 用户管理
+- 本地安全策略
+- 账户权限配置
+
+不是 Task Manager 的功能。
+
+---
+
+## 最简单记忆法
+### Task Manager = 四件事
+## **看运行**
+## **看资源**
+## **管启动**
+## **杀卡死**
+
+不要混到：
+- **Task Scheduler**（定时任务）
+- **User permissions**（用户权限）
+- **高级网络管理**
+
+---
+
+## 一句话口诀
+## **Task Manager 看运行、看资源、管启动、杀卡死；定时任务去 Scheduler。**
+
+### 再压缩一句
+## **程序卡死先开 Task Manager，不是去改权限。**
+
+**一句话：**
+这题以后直接背 Task Manager 的四大功能：**看运行进程、看资源占用、管理启动项、结束无响应程序。**
 
