@@ -1296,4 +1296,101 @@ Windows 11 跟以前版本一个很明显的区别就是：
 
 **一句话：**
 这题以后直接背：**lusrmgr.msc 就是本地用户和组管理器（MMC snap-in），而且 Windows 10/11 Home 版通常不包含它，所以这题是 True。**
+---
+
+## 启动故障排查先想 msconfig.exe，不是 sysdm.cpl；sysdm 偏系统属性，msconfig 偏启动配置
+![msconfig startup troubleshooting question](images/2026-04-24-core2-msconfig-startup-troubleshooting.jpg)
+
+**题干：** Which of the following refers to a Microsoft Windows tool designed for troubleshooting system startup problems?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | sysdm.cpl |
+| ✅ 正确答案 | msconfig.exe |
+
+### 这题最关键的对比
+你这题不是完全不会，
+而是把两个 Windows 工具的用途混了：
+- **sysdm.cpl**
+- **msconfig.exe**
+
+其中真正偏：
+## **启动问题排查**
+的是：
+## **msconfig.exe**
+
+---
+
+## 为什么答案是 msconfig.exe
+### **msconfig.exe = System Configuration**
+它最经典的用途就是：
+- 排查启动问题
+- 调整启动配置
+- 控制启动项/服务的加载方式
+- 进行选择性启动 / diagnostic startup
+
+所以题目问：
+## **tool designed for troubleshooting system startup problems**
+
+最标准答案就是：
+## **msconfig.exe**
+
+---
+
+## 为什么 sysdm.cpl 不对
+### **sysdm.cpl = System Properties**
+它更偏：
+- 计算机名
+- 系统保护
+- 高级系统设置
+- 环境变量
+- 性能设置入口
+- 远程设置
+
+也就是说：
+## **它是系统属性配置工具**
+不是专门拿来做“启动故障排查”的代表答案。
+
+你会选它，
+多半是因为它也长得很“系统底层”，
+但它不是这题最贴的那个。
+
+---
+
+## 为什么另外两个不对
+### eventvwr.msc
+- 事件查看器
+- 可以看日志
+- 对排错有帮助
+- 但题目问的是“designed for troubleshooting startup problems”的工具名
+更标准还是 **msconfig**
+
+### compmgmt.msc
+- 计算机管理
+- 是综合管理控制台
+- 能进很多管理模块
+- 也不是这题最直接的“启动故障排查工具”
+
+---
+
+## 最简单记忆法
+### Windows 启动故障题先记：
+## **msconfig = 启动配置/启动排错**
+
+### 顺手对比
+- **msconfig.exe** → 启动配置、启动排错
+- **sysdm.cpl** → 系统属性
+- **eventvwr.msc** → 事件查看器
+- **compmgmt.msc** → 计算机管理
+
+---
+
+## 一句话口诀
+## **启动排错找 msconfig，系统属性找 sysdm。**
+
+### 再压缩一句
+## **msconfig 管启动，sysdm 管系统属性。**
+
+**一句话：**
+这题以后直接这样背：**Windows 里排查启动问题最典型的工具是 msconfig.exe；sysdm.cpl 是系统属性，不是启动排错工具。**
 
