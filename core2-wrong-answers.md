@@ -1591,4 +1591,94 @@ msconfig 的 Boot 相关高级选项里，
 
 **一句话：**
 这题以后直接秒选：**在 Windows CMD 里，列出当前目录的文件和子目录，标准命令就是 `dir`；`/?` 是帮助，`/all` 不是这题的标准参数。**
+---
+
+## Windows 里的命令行分区工具是 diskpart；sfdisk / gpart / diskutil 都是别的平台味道
+![diskpart Windows CLI partitioning utility question](images/2026-04-24-core2-diskpart-windows-cli-partitioning-utility.jpg)
+
+**题干：** Which of the commands in Windows launches a text-based, command-line partitioning utility?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | gpart |
+| ✅ 正确答案 | diskpart |
+
+### 这题最该先抓的关键词
+## **in Windows**
+
+题目不是单纯问：
+- 哪个命令像分区工具
+
+而是在问：
+## **Windows 里哪个命令能打开文本型命令行分区工具**
+
+标准答案就是：
+## **diskpart**
+
+---
+
+## 为什么答案是 diskpart
+### **diskpart**
+就是 Windows 里的：
+## **命令行磁盘/分区管理工具**
+
+它能做的事包括：
+- 查看磁盘
+- 选择磁盘/分区
+- 创建分区
+- 删除分区
+- 格式化
+- 指派盘符
+
+所以题目说的：
+### **text-based, command-line partitioning utility**
+在 Windows 里最标准就是：
+## **diskpart**
+
+---
+
+## 为什么你选的 gpart 不对
+### **gpart**
+看起来也像分区工具名字，
+所以你会选它完全不奇怪。
+
+但这题的关键不是“名字像不像”，
+而是：
+## **题目限定了 Windows**
+
+Windows 里常考、标准、原生命令就是：
+## **diskpart**
+
+---
+
+## 其他几个为什么不对
+### sfdisk
+- 更像 Linux/Unix 语境的命令
+- 不是 Windows 里这一题的标准答案
+
+### diskutil
+- 更偏 macOS 语境
+- 不是 Windows 命令
+
+### gpart
+- 也不是这题里 Windows 的标准原生命令
+
+---
+
+## 最简单记忆法
+### 平台一对照就好记：
+- **Windows** → **diskpart**
+- **macOS** → **diskutil**
+- **Linux** → 常见 fdisk / sfdisk / parted 这类
+
+---
+
+## 一句话口诀
+## **Windows 分区命令记 diskpart，Mac 记 diskutil，Linux 再看 fdisk/sfdisk。**
+
+### 再压缩一句
+## **看到“in Windows”，先锁 diskpart。**
+
+**一句话：**
+这题以后直接秒选：**Windows 的文本型命令行分区工具就是 diskpart；别被其他平台的命令名字带偏。**
 
