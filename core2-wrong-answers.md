@@ -1393,4 +1393,119 @@ Windows 11 跟以前版本一个很明显的区别就是：
 
 **一句话：**
 这题以后直接这样背：**Windows 里排查启动问题最典型的工具是 msconfig.exe；sysdm.cpl 是系统属性，不是启动排错工具。**
+---
+
+## msconfig 的 Boot tab 不只管 Safe boot，还能管 boot logging、默认启动系统、以及资源限制；startup items 不在 Boot tab
+![msconfig Boot tab settings question](images/2026-04-24-core2-msconfig-boot-tab-safe-boot-boot-logging-multiboot-memory.jpg)
+
+**题干：** Which of the settings listed below can be managed through the Boot tab of the System Configuration utility in Windows? (Select all that apply)
+
+**正确答案：**
+- **Safe boot, including an option to load minimal drivers and services for troubleshooting during system startup**
+- **Boot logging, which collects detailed information about the startup process for diagnostic purposes**
+- **Selecting the default operating system to load in a multiboot environment**
+- **Limits on hardware resources, such as maximum RAM, allocated to the selected OS in a multiboot environment**
+
+**错误选项：**
+- **Startup items, including programs and services set to launch automatically during system boot**
+
+### 这题你其实已经抓对一半以上了
+你答对了：
+- **Safe boot** ✅
+- **Selecting the default operating system in a multiboot environment** ✅
+
+你漏掉了：
+- **Boot logging** ✅
+- **Limits on hardware resources (like max RAM)** ✅
+
+你错选的是：
+- **Startup items** ❌
+
+---
+
+## 这题最关键的思路
+### **Boot tab = 跟“启动方式、启动日志、多系统启动、启动参数限制”有关**
+
+不是：
+### **普通程序自启动管理页**
+
+也就是说，
+Boot tab 关注的是：
+- 怎么启动
+- 启动时记录什么
+- 启哪个系统
+- 启动时给这个系统加什么限制/参数
+
+---
+
+## 为什么 boot logging 是对的
+这个很容易漏。
+
+在 msconfig 的 Boot 相关选项里，
+**boot log / boot logging** 是很典型的排错功能，
+用来：
+## **记录启动过程细节，帮助诊断问题**
+
+所以它属于 Boot tab 管的内容。
+
+---
+
+## 为什么 hardware resource limits 也是对的
+这个更容易被忽略。
+
+msconfig 的 Boot 相关高级选项里，
+可以做一些启动资源限制类设置，
+比如：
+- 最大内存（maximum memory）
+- 处理器数量（number of processors）
+
+所以题目里说：
+### **Limits on hardware resources, such as maximum RAM**
+是成立的。
+
+你可以把它记成：
+## **Boot tab 不只是选系统，也能加启动参数和资源限制。**
+
+---
+
+## 为什么 startup items 不对
+这个是最容易混的。
+
+### **Startup items**
+更像：
+- 开机自启动程序
+- 启动应用
+- 一般应用层自启动项目
+
+它不属于这题说的：
+## **Boot tab**
+
+也就是说：
+- **Boot tab** → 启动方式/日志/系统选择/启动参数
+- **Startup items** → 启动程序管理（不是这题这页的核心）
+
+所以你这项不该选。
+
+---
+
+## 最简单记忆法
+### Boot tab 先记四件事：
+## **Safe boot**
+## **Boot logging**
+## **选默认系统**
+## **资源限制（如 max RAM）**
+
+不要记成：
+## **启动程序管理页**
+
+---
+
+## 一句话口诀
+## **Boot tab 管怎么启动、记不记日志、启哪个系统、限多少资源；不管普通 startup apps。**
+
+### 再压缩一句
+## **msconfig 的 Boot 是“启动参数页”，不是“程序自启动页”。**
+
+**一句话：**
+这题以后就这样背：**Boot tab 主要管 Safe boot、boot logging、默认启动系统、以及启动资源限制；startup items 不属于这里。**
 
