@@ -2347,4 +2347,82 @@ Windows CLI 里最标准就该想到：
 
 **一句话：**
 这题以后直接这样背：**pathping = traceroute 功能 + latency/packet loss 分析，所以答案是“追踪路径”加“测延迟和丢包”，不是“测试指定端口”。**
+---
+
+## robocopy：大批量拷贝、网络中断可续传，优先于 xcopy
+![robocopy resume large volume file transfer](images/2026-04-25-core2-robocopy-resume-large-file-transfer.jpg)
+
+**题干：** A user needs to copy a very large volume of files from one Windows host to another. The task must resume automatically if interrupted due to network issues. Which command-line tool is best suited for this task?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | xcopy |
+| ✅ 正确答案 | robocopy |
+
+### 这题最该抓的关键词
+题目里最关键的是：
+- **very large volume of files**
+- **resume automatically if interrupted**
+
+只要看到这种描述，就优先想到：
+## **robocopy**
+
+---
+
+## 为什么 robocopy 对
+`robocopy` = **Robust File Copy**，名字就已经在提示它的用途：
+### **适合大量文件、网络复制、可重试、可恢复**
+
+它特别适合：
+- 大批量文件迁移
+- 网络共享之间复制
+- 中断后继续
+- 更稳定的复制任务
+
+所以这题说“网络问题中断后还能自动继续”，正确答案就是：
+## **robocopy**
+
+---
+
+## 为什么不是 xcopy
+`xcopy` 比 `copy` 强，能复制目录树，历史上也常用。
+
+但考试里要分清：
+- **xcopy** → 老一点、基础一点
+- **robocopy** → 更强壮、更适合大规模和不稳定网络环境
+
+题目已经明确强调：
+## **大批量 + 中断恢复**
+
+这正是 `robocopy` 的典型场景，不是 `xcopy` 的最佳答案。
+
+---
+
+## 为什么其他两个更不对
+### copy
+- 适合简单文件复制
+- 不适合大规模目录/复杂迁移
+
+### move
+- 是移动，不是强调可靠的大批量复制工具
+- 也不是这题考点
+
+---
+
+## 最短记忆法
+## **大批量传输看 robocopy，简单复制才想 copy/xcopy。**
+
+再压缩成一句：
+## **网络会断、文件很多，就选 robocopy。**
+
+---
+
+## 一句话口诀
+## **robocopy = robust copy，越大越乱越该用它。**
+
+### 考场速记版
+## **copy 复制单个，xcopy 复制目录，robocopy 打大仗。**
+
+**一句话：**
+这题以后直接这样背：**看到“大量文件 + Windows 主机间传输 + 网络中断后自动恢复”，就选 robocopy；xcopy 不如它适合这种企业级/大批量复制场景。**
 
