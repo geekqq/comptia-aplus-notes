@@ -2257,4 +2257,94 @@ Windows CLI 里最标准就该想到：
 
 **一句话：**
 这题以后直接这样背：**`chkdsk /f` 用来自动修复文件系统错误；`chkdsk /r` 才是查找坏扇区并尽量恢复可读数据。**
+---
+
+## pathping：既看路径，也看延迟/丢包；不是测指定端口
+![pathping traces route and measures latency packet loss](images/2026-04-25-core2-pathping-trace-route-latency-packet-loss.jpg)
+
+**题干：** What are the most important functionalities provided by the pathping utility? (Select 2 answers)
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Tests connectivity to a specific port |
+| ✅ 正确答案 | Traces the path to the destination / Measures latency and packet loss |
+
+### 这题最该抓的关键词
+题目问的是：
+## **pathping utility**
+
+这个命令本质上可以把它记成：
+## **ping + tracert 的结合版**
+
+所以它最重要的两个功能就是：
+- **Traces the path to the destination**
+- **Measures latency and packet loss**
+
+---
+
+## 为什么 trace the path 对
+`pathping` 会先像 `tracert/traceroute` 一样：
+### **把数据到目标主机经过的路径跳点列出来**
+
+也就是看：
+- 经过哪些路由器
+- 路径走到哪里
+- 哪一跳可能有问题
+
+所以：
+## **Traces the path to the destination** 一定是对的。
+
+---
+
+## 为什么 latency and packet loss 对
+`pathping` 比 `tracert` 更进一步的地方就在于：
+### **它还会统计每一跳的延迟和丢包情况**
+
+所以它常被用来判断：
+- 哪一段链路慢
+- 哪一跳丢包严重
+
+因此：
+## **Measures latency and packet loss** 也是对的。
+
+---
+
+## 为什么不是 specific port
+### **测指定端口** 更像是：
+- `telnet <host> <port>`
+- `Test-NetConnection -Port`
+- `nc` / `nmap`
+
+`pathping` 不是拿来测某个 TCP/UDP 端口通不通的。
+
+所以：
+## **Tests connectivity to a specific port** 是错的。
+
+---
+
+## 其他选项为什么不对
+### Displays network statistics
+这说法太泛，不是 `pathping` 的核心考试点。
+
+### Sends broadcast messages over the network
+这根本不是 `pathping` 的用途。
+
+---
+
+## 最短记忆法
+## **pathping = 路径 + 延迟/丢包**
+
+再压缩成一句：
+## **先 trace route，再看 loss/latency。**
+
+---
+
+## 一句话口诀
+## **pathping 不是查端口，是查路径和丢包。**
+
+### 再给你一个考场版
+## **端口找 telnet / Test-NetConnection；路径丢包找 pathping。**
+
+**一句话：**
+这题以后直接这样背：**pathping = traceroute 功能 + latency/packet loss 分析，所以答案是“追踪路径”加“测延迟和丢包”，不是“测试指定端口”。**
 
