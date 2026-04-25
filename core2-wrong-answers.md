@@ -1962,4 +1962,100 @@ Windows CLI 里最标准就该想到：
 
 **一句话：**
 这题以后直接秒选：**查看当前用户/计算机应用了哪些组策略，用 `gpresult`；`gpupdate` 是刷新策略，`net view` 是看网络共享。**
+---
+
+## SFC = System File Checker，核心就是“扫系统文件 + 修系统文件”；不是加密，也不是查磁盘坏道
+![SFC System File Checker scan and repair question](images/2026-04-24-core2-sfc-system-file-checker-scan-and-repair.jpg)
+
+**题干：** The sfc command-line utility in Windows: (Select 2 answers)
+
+**正确答案：**
+- **Replaces incorrect system file versions with correct Microsoft versions**
+- **Scans the integrity of all protected system files**
+
+**错误选项：**
+- Scans disk volumes for file system errors
+- Identifies and recovers readable data from bad sectors on a drive
+- Encrypts files to prevent unauthorized access to sensitive data
+
+### 这题你卡住很正常
+因为 **sfc** 如果没实际用过，
+光看缩写很难第一反应知道它干嘛。
+
+你现在只要把它强行绑定成一句话就行：
+# **SFC = System File Checker = 查系统文件、修系统文件**
+
+---
+
+## sfc 到底是干嘛的
+### **sfc = System File Checker**
+它是 Windows 里专门用来：
+- 检查受保护的系统文件是否损坏
+- 发现系统文件版本不对/损坏时进行修复
+- 用正确的 Microsoft 系统文件替换坏掉的版本
+
+所以这题正确两项就是：
+
+### 1. **Scans the integrity of all protected system files**
+也就是：
+## **检查受保护系统文件的完整性**
+
+### 2. **Replaces incorrect system file versions with correct Microsoft versions**
+也就是：
+## **把错误/损坏的系统文件换成正确版本**
+
+---
+
+## 最常见命令长什么样
+你以后看到最常见的就是：
+# **sfc /scannow**
+
+这个命令的味道就是：
+## **现在立刻扫描并尝试修复系统文件**
+
+所以你可以把 sfc 直接记成：
+# **Windows 系统文件体检 + 修复工具**
+
+---
+
+## 为什么其他几个不对
+### 1. Scans disk volumes for file system errors
+这个更像：
+# **chkdsk**
+
+因为 **chkdsk** 才是检查磁盘/文件系统错误的。
+
+### 2. Identifies and recovers readable data from bad sectors on a drive
+这个也更像：
+# **chkdsk /r**
+
+因为坏道、恢复可读数据，这都是磁盘层面的事情，
+不是 sfc。
+
+### 3. Encrypts files to prevent unauthorized access to sensitive data
+这个更像：
+- **EFS**
+- **BitLocker**
+
+总之是加密工具，
+不是 sfc。
+
+---
+
+## 最简单区分
+### Windows 常见命令这样记：
+- **sfc** → 查/修系统文件
+- **chkdsk** → 查磁盘/文件系统/坏道
+- **BitLocker / EFS** → 加密
+
+---
+
+## 一句话口诀
+# **SFC 修系统文件，CHKDSK 修磁盘。**
+
+### 再压缩一句
+# **sfc /scannow = 扫系统文件，不扫坏道。**
+
+**一句话：**
+这题以后直接这样背：**SFC 就是 System File Checker，负责检查受保护系统文件的完整性，并用正确的 Microsoft 版本替换损坏或错误的系统文件。**
 
