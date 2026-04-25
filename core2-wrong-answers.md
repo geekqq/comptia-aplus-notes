@@ -1216,4 +1216,84 @@ Windows 11 跟以前版本一个很明显的区别就是：
 
 **一句话：**
 这题以后直接背 Task Manager 的四大功能：**看运行进程、看资源占用、管理启动项、结束无响应程序。**
+---
+
+## lusrmgr.msc = Local Users and Groups，能管本地用户和组；但 Home 版通常没有，这题是 True
+![Local Users and Groups lusrmgr true not home question](images/2026-04-24-core2-local-users-and-groups-lusrmgr-true-not-home.jpg)
+
+**题干：** In Microsoft Windows, Local Users and Groups (lusrmgr.msc) is an MMC snap-in for adding or removing users and managing group membership for users who have specific rights and permissions on a Windows system. The Local Users and Groups utility is not included in Home editions of Windows 10 and Windows 11.
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | False |
+| ✅ 正确答案 | True |
+
+### 这题最该直接记住的点
+## **lusrmgr.msc = Local Users and Groups**
+它就是 Windows 里的一个：
+### **MMC snap-in**
+
+主要用来：
+- 管理本地用户
+- 管理本地组
+- 调整组成员关系
+
+所以题目前半句本身就是对的。
+
+---
+
+## 为什么后半句也是对的
+题目后半句说：
+### **The Local Users and Groups utility is not included in Home editions of Windows 10 and Windows 11.**
+
+这也是题库常考点：
+## **Home 版通常没有这个本地用户和组管理器。**
+
+也就是说：
+- **Pro / Enterprise / 更高版本** 更常见这个工具
+- **Home 版** 往往没有完整提供这个 MMC 工具
+
+所以整句话判定就是：
+## **True**
+
+---
+
+## 为什么你容易误判成 False
+因为这题前半句很长，
+后半句又补了一个版本差异，
+很容易让人怀疑：
+- “会不会有一句是错的？”
+- “是不是 Home 版也有？”
+
+但这题真正要你记的就是两件事：
+1. **lusrmgr.msc 是管本地用户和组的 MMC snap-in**
+2. **Home 版通常不带它**
+
+这两个都成立，
+所以答案就是：
+## **True**
+
+---
+
+## 最简单记忆法
+### lusrmgr.msc 先拆词
+- **usr** → users
+- **mgr** → manager
+
+你就把它记成：
+## **本地用户和组管理器**
+
+### 再补一句版本差异
+## **Home 没它，Pro 更常见。**
+
+---
+
+## 一句话口诀
+## **lusrmgr 管本地用户组，Home 版通常没有。**
+
+### 再压缩一句
+## **看到 lusrmgr.msc，就想到 Local Users and Groups。**
+
+**一句话：**
+这题以后直接背：**lusrmgr.msc 就是本地用户和组管理器（MMC snap-in），而且 Windows 10/11 Home 版通常不包含它，所以这题是 True。**
 
