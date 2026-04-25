@@ -1508,4 +1508,87 @@ msconfig 的 Boot 相关高级选项里，
 
 **一句话：**
 这题以后就这样背：**Boot tab 主要管 Safe boot、boot logging、默认启动系统、以及启动资源限制；startup items 不属于这里。**
+---
+
+## CMD 里列出当前目录文件和子目录直接用 dir；/all 不是标准参数，/? 是看帮助
+![CMD dir command current directory question](images/2026-04-24-core2-cmd-dir-command-current-directory.jpg)
+
+**题干：** Which of the following Windows command-line commands can be used to list all files and subdirectories in the current directory?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | dir /all |
+| ✅ 正确答案 | dir |
+
+### 这题为什么会错
+因为你是按直觉在想：
+- “all files and subdirectories”
+- 那是不是要加一个 **/all** 才像“全部显示”？
+
+这个直觉很正常，
+但 Windows CMD 的标准命令不是这么设计的。
+
+---
+
+## 为什么答案就是 dir
+### **dir**
+本身就是：
+## **列出当前目录内容**
+
+它默认就会显示：
+- 文件
+- 子目录
+
+所以题目问：
+### **list all files and subdirectories in the current directory**
+直接答案就是：
+## **dir**
+
+不需要额外写 `/all`。
+
+---
+
+## 为什么 dir /all 不对
+因为：
+### **/all 不是 dir 的标准参数写法**
+
+所以它看起来“语义很对”，
+但命令本身不标准。
+
+这类题的坑就在这里：
+## **不是看你英文感觉像不像，而是看 Windows 命令本身认不认。**
+
+---
+
+## 为什么 dir /list 不对
+它不是这题要的标准命令写法，
+题库在这里就是要你记住：
+### **最基础列目录命令就是 dir**
+
+---
+
+## 为什么 dir /? 也不对
+### **/?**
+在 Windows 命令里常表示：
+## **查看帮助**
+
+所以：
+- `dir /?` = 看 dir 命令帮助说明
+- 不是直接列目录内容的标准答案
+
+---
+
+## 最简单记忆法
+### CMD 里：
+- **dir** → 列当前目录
+- **dir /?** → 看 dir 帮助
+
+### 一句话口诀
+## **列目录就用 dir；加 /? 是看帮助，不是看文件。**
+
+### 再压缩一句
+## **Windows CMD 先记：列目录 = dir。**
+
+**一句话：**
+这题以后直接秒选：**在 Windows CMD 里，列出当前目录的文件和子目录，标准命令就是 `dir`；`/?` 是帮助，`/all` 不是这题的标准参数。**
 
