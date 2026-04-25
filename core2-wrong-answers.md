@@ -1025,4 +1025,88 @@
 
 **一句话：**
 这题以后直接秒杀：**NetBT 的作用就是让 NetBIOS services 能在 TCP/IP 网络上使用，所以题目是 True。**
+---
+
+## Windows 11 最容易漏的硬性门槛：TPM 2.0；32GB 存储不是这题标准答案
+![Windows 11 minimum requirements TPM 2.0 Secure Boot 64-bit CPU question](images/2026-04-24-core2-windows11-minimum-requirements-tpm-2-secure-boot-64bit-cpu.jpg)
+
+**题干：** Which of the following are minimum requirements for installing Windows 11? (Select 3 answers)
+
+|  |  |
+| --- | --- |
+| ✅ 我答对的 | UEFI firmware with Secure Boot |
+| ✅ 我答对的 | 64-bit processor listed on Microsoft’s Windows 11 compatibility list |
+| ❌ 漏掉的正确答案 | TPM version 2.0 support |
+| ❌ 我的错误答案 | A minimum of 32 GB of available storage space |
+
+### 这题最该先抓的门槛
+## **Windows 11 = Secure Boot + TPM 2.0 + 合规 64-bit CPU**
+
+你前两个已经抓对了：
+- **UEFI firmware with Secure Boot** ✅
+- **64-bit processor on the compatibility list** ✅
+
+你最容易漏掉的就是：
+## **TPM 2.0 support**
+
+---
+
+## 为什么 TPM 2.0 是对的
+Windows 11 跟以前版本一个很明显的区别就是：
+## **更强调安全硬件门槛**
+
+其中最爱考的就是：
+### **TPM 2.0**
+
+它几乎已经成了 Windows 11 题的“招牌关键词”。
+
+所以以后只要看到：
+## **Windows 11 minimum requirements**
+优先脑内跳出来：
+- **TPM 2.0**
+- **Secure Boot / UEFI**
+- **64-bit supported CPU**
+
+---
+
+## 为什么 32 GB 这题没中
+你选的：
+### **A minimum of 32 GB of available storage space**
+
+它看起来很像“以前 Windows 安装题”的常见选项，
+所以很容易被选进去。
+
+但这题按当前题库标准，
+它没有把这项列进你这道题的正确三项里。
+
+换句话说，
+这题最稳的考法更偏：
+## **Windows 11 的三大硬门槛：TPM 2.0、Secure Boot、受支持 CPU**
+
+所以你记忆时不要让存储容量抢走注意力。
+
+---
+
+## 为什么 2 GB RAM 明显不对
+这个你没选是对的。
+因为 Windows 11 不可能只要 2 GB RAM。
+
+这种选项一般就是拿来当干扰项。
+
+---
+
+## 最简单记忆法
+### Windows 11 三件套直接死记：
+## **TPM 2.0**
+## **UEFI + Secure Boot**
+## **受支持的 64-bit CPU**
+
+### 一句话口诀
+## **Win11 三道门：TPM 2.0、Secure Boot、64-bit 合规 CPU。**
+
+### 再压缩一句
+## **看到 Windows 11 requirements，先锁 TPM 2.0。**
+
+**一句话：**
+这题以后就这样背：**Windows 11 最常考的三个最低要求是 TPM 2.0、UEFI Secure Boot、以及受支持的 64-bit 处理器；TPM 2.0 是最容易漏掉的那个。**
 
