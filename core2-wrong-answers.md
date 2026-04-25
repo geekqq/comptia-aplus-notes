@@ -2158,4 +2158,103 @@ Windows CLI 里最标准就该想到：
 
 **一句话：**
 这题以后直接这样背：**Windows 里删除整个目录及其子目录/文件要靠 `rmdir <目录> /s`，但这题所有选项都写成了 `C:\Files` 而不是 `C:\Files\Data`，所以只能选 None of the above。**
+---
+
+## chkdsk 里 `/f` 是修文件系统错误，`/r` 是找坏扇区并尽量恢复数据；这题问 `/f`，不是 `/r`
+![chkdsk f vs r filesystem errors vs bad sectors question](images/2026-04-24-core2-chkdsk-f-vs-r-filesystem-errors-vs-bad-sectors.jpg)
+
+**题干：** The `/f` switch of the `chkdsk` command-line utility in MS Windows instructs the utility to:
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Identify bad sectors on the disk and attempt to recover any readable data from them |
+| ✅ 正确答案 | Automatically repair detected file system errors on the disk |
+
+### 你这题错得非常典型
+因为你其实记住的是：
+# **`chkdsk /r`**
+
+但题目问的是：
+# **`chkdsk /f`**
+
+这两个经常一起考，
+也最容易混。
+
+---
+
+## `/f` 和 `/r` 到底差在哪
+### **`/f`**
+意思是：
+# **修复磁盘上的文件系统错误**
+
+也就是：
+- 检测 file system errors
+- 自动尝试修复这些错误
+
+所以题目里正确答案：
+### **Automatically repair detected file system errors on the disk**
+就是 `/f`。
+
+---
+
+### **`/r`**
+意思是：
+# **查找坏扇区，并尽量恢复可读数据**
+
+也就是：
+- identify bad sectors
+- recover readable data
+
+这正是你这题选的那句。
+
+所以：
+## **你不是不会 chkdsk，你是把 `/r` 的作用答到了 `/f` 题上。**
+
+---
+
+## 最简单对照记忆
+### **`/f` = fix**
+直接记：
+# **f = fix file system errors**
+
+### **`/r` = recover**
+直接记：
+# **r = recover readable data from bad sectors**
+
+虽然严格说 `/r` 还包含定位坏扇区，
+但考试里这样记最好用。
+
+---
+
+## 你可以这样一口气背下来
+- **chkdsk /f** → 修文件系统错误
+- **chkdsk /r** → 找坏扇区 + 尽量恢复可读数据
+
+而且常见理解里：
+## **`/r` 比 `/f` 更重、更慢**
+因为它做的事情更多。
+
+---
+
+## 为什么其他两个也不对
+### Scan the system for corrupted or missing system files
+这个更像：
+# **sfc /scannow**
+
+### Optimize disk usage by consolidating fragmented file data
+这个更像：
+# **磁盘碎片整理 / defrag**
+
+都不是 chkdsk `/f`。
+
+---
+
+## 一句话口诀
+# **`/f` = fix 错误，`/r` = recover 坏道数据。**
+
+### 再压一句
+# **CHKDSK：修错看 `/f`，查坏道看 `/r`。**
+
+**一句话：**
+这题以后直接这样背：**`chkdsk /f` 用来自动修复文件系统错误；`chkdsk /r` 才是查找坏扇区并尽量恢复可读数据。**
 
