@@ -1681,4 +1681,103 @@ Windows 里常考、标准、原生命令就是：
 
 **一句话：**
 这题以后直接秒选：**Windows 的文本型命令行分区工具就是 diskpart；别被其他平台的命令名字带偏。**
+---
+
+## Windows 命令行里复制功能最强、选项最多的是 robocopy；move 只是移动，xcopy 比较老，copy 更基础
+![robocopy vs xcopy copy move question](images/2026-04-24-core2-robocopy-vs-xcopy-copy-move.jpg)
+
+**题干：** Which copying utility accessible via Windows command line interface offers the widest range of options?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | move |
+| ✅ 正确答案 | robocopy |
+
+### 这题最核心的词
+## **copying utility**
+和
+## **widest range of options**
+
+也就是说题目不是在问：
+- 哪个命令能搬文件
+
+而是在问：
+### **哪个“复制工具”功能最全、选项最多**
+
+所以标准答案就是：
+## **robocopy**
+
+---
+
+## 为什么 robocopy 是对的
+### **robocopy = Robust File Copy**
+它是 Windows 里功能非常强的复制工具，
+常见优势包括：
+- 复制目录树
+- 镜像同步
+- 保留属性/权限
+- 断点/重试
+- 过滤文件
+- 多种高级参数
+
+所以如果题目问：
+## **widest range of options**
+Windows CLI 里最标准就该想到：
+## **robocopy**
+
+---
+
+## 为什么你选的 move 不对
+### **move**
+只是：
+## **移动文件/目录**
+
+它不是“高级复制工具”，
+更不是以“选项最多”著称。
+
+所以这题不能选 move。
+
+---
+
+## 为什么 xcopy 没中
+### **xcopy**
+确实也是复制命令，
+而且比最基础的 `copy` 强得多，
+所以它很容易当干扰项。
+
+但考试里如果问：
+## **最强 / 选项最广 / widest range of options**
+
+那通常是：
+## **robocopy > xcopy > copy**
+
+所以 xcopy 不如 robocopy。
+
+---
+
+## 为什么 copy 也不对
+### **copy**
+是更基础的复制命令，
+功能最简单，
+不是这题要的“选项最多”的那个。
+
+---
+
+## 最简单记忆法
+### Windows CLI 复制命令这样排：
+- **copy** → 最基础
+- **xcopy** → 老一点、比 copy 强
+- **robocopy** → 最强、最全、企业味最重
+- **move** → 不是复制，是移动
+
+---
+
+## 一句话口诀
+## **复制功能最强看 robocopy，移动文件才用 move。**
+
+### 再压缩一句
+## **copy < xcopy < robocopy。**
+
+**一句话：**
+这题以后直接背：**Windows 命令行里复制工具功能最强、选项最多的是 robocopy；move 不是复制工具，xcopy 也没有 robocopy 全。**
 
