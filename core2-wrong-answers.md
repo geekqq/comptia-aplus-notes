@@ -1867,4 +1867,99 @@ Windows CLI 里最标准就该想到：
 
 **一句话：**
 这题以后直接秒选：**Windows 命令行里查看某个命令的帮助/用法，标准写法是 `command /?`；`man` 是 Linux/Unix 那套。**
+---
+
+## 查看当前用户/计算机的 Group Policy 设置，用 gpresult；net view 是看网络共享，不是组策略
+![gpresult group policy command question](images/2026-04-24-core2-gpresult-group-policy-command.jpg)
+
+**题干：** Which of the answers listed below refers to a command-line tool in Windows that can be used to display current Group Policy settings for a user or computer?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | net view |
+| ✅ 正确答案 | gpresult |
+
+### 这题最关键的词
+## **Group Policy settings**
+
+只要题目里出现：
+- Group Policy
+- 当前策略结果
+- 用户/计算机应用了哪些策略
+
+第一反应就该是：
+# **gpresult**
+
+---
+
+## 为什么答案是 gpresult
+### **gpresult = Group Policy Result**
+它本来就是 Windows 里用来：
+## **显示用户或计算机当前应用到的组策略结果**
+
+所以题目问：
+> display current Group Policy settings for a user or computer
+
+标准答案就是：
+# **gpresult**
+
+它名字本身就能帮你记：
+- **gp** = Group Policy
+- **result** = 结果 / 生效结果
+
+---
+
+## 为什么你选的 net view 不对
+### **net view**
+更偏：
+## **查看网络上的共享资源 / 共享计算机**
+
+也就是它和：
+- 共享
+- 网络浏览
+- 远程主机共享资源
+
+更相关，
+而不是组策略。
+
+所以：
+- **net view** ≠ Group Policy
+- **gpresult** = Group Policy result
+
+---
+
+## 另外两个为什么不对
+### verify
+- 是文件/卷校验相关语境的命令
+- 跟组策略无关
+
+### gpupdate
+- 这个很容易混！
+- **gpupdate** 是：
+## **刷新/重新应用 Group Policy**
+
+而不是：
+## **显示当前生效的 Group Policy 结果**
+
+所以这题一定要分清：
+- **gpupdate** → 更新/刷新策略
+- **gpresult** → 查看策略结果
+
+---
+
+## 最简单记忆法
+### Group Policy 两兄弟：
+- **gpupdate** → 更新策略
+- **gpresult** → 看结果
+
+---
+
+## 一句话口诀
+# **要刷新用 gpupdate，要查看用 gpresult。**
+
+### 再压缩一句
+# **Group Policy 看结果就找 gpresult。**
+
+**一句话：**
+这题以后直接秒选：**查看当前用户/计算机应用了哪些组策略，用 `gpresult`；`gpupdate` 是刷新策略，`net view` 是看网络共享。**
 
