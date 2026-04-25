@@ -1780,4 +1780,91 @@ Windows CLI 里最标准就该想到：
 
 **一句话：**
 这题以后直接背：**Windows 命令行里复制工具功能最强、选项最多的是 robocopy；move 不是复制工具，xcopy 也没有 robocopy 全。**
+---
+
+## Windows CMD 看某个命令的帮助语法：直接 `command /?`；`man` 是 Linux 味，不是 Windows 这题答案
+![Windows help syntax command slash question](images/2026-04-24-core2-windows-help-syntax-command-slash-question.jpg)
+
+**题干：** What is the standard syntax in Windows command line for displaying help or usage information related to a specific utility?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | [command name] man |
+| ✅ 正确答案 | [command name] /? |
+
+### 这题最关键的点
+你这次是把：
+## **Windows CMD**
+和
+## **Linux / Unix 命令习惯**
+混了。
+
+在 Windows 里，
+最标准的帮助写法通常是：
+# **command /?**
+
+比如：
+- `dir /?`
+- `ipconfig /?`
+- `robocopy /?`
+
+---
+
+## 为什么 `/?” 是对的
+在 Windows 命令提示符里，
+很多命令都会支持：
+## **`/?` = 查看该命令帮助/用法说明**
+
+所以题目问：
+### **displaying help or usage information related to a specific utility**
+答案就是：
+# **[command name] /?**
+
+---
+
+## 为什么 `man` 不对
+### `man`
+是 Linux / Unix 很经典的：
+## **manual pages**
+
+比如：
+- `man ls`
+- `man grep`
+- `man ps`
+
+但这题问的是：
+## **Windows command line**
+
+所以不能把 Linux 那套直接搬过来。
+
+---
+
+## 为什么 `help` 和 `info` 这题没中
+它们看起来“像英语正确”，
+但题目要的是：
+## **standard syntax**
+
+在 Windows 题库里，
+最标准、最稳定、最常考的固定形式就是：
+# **command /?**
+
+所以不要靠英语感觉猜。
+
+---
+
+## 最简单记忆法
+### 平台一对照就好记：
+- **Windows CMD** → `command /?`
+- **Linux/Unix** → `man command`
+
+---
+
+## 一句话口诀
+# **Windows 看帮助用 `/?`，Linux 看帮助用 `man`。**
+
+### 再压缩一句
+# **CMD 见帮助先想斜杠问号，不想 man。**
+
+**一句话：**
+这题以后直接秒选：**Windows 命令行里查看某个命令的帮助/用法，标准写法是 `command /?`；`man` 是 Linux/Unix 那套。**
 
