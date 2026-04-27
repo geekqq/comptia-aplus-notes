@@ -3135,3 +3135,79 @@ Windows CLI 里最标准就该想到：
 
 **一句话：**
 以后题目一旦明确写 **Windows 10/11**，再问防火墙 applet，优先想 **Windows Defender Firewall**。
+
+---
+
+## Outlook 的控制面板配置入口叫 Mail，不是 User Accounts
+![Mail applet for Outlook configuration](images/2026-04-26-core2-mail-applet-outlook-configuration.jpg)
+
+**题干：** In Windows 10 and Windows 11, the Control Panel applet providing access to Microsoft Outlook configuration options is called:
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | User Accounts |
+| ✅ 正确答案 | Mail |
+
+### 为什么正确答案是 Mail
+这题考的是一个很具体的 Control Panel 名称。
+
+如果要配置 **Microsoft Outlook** 相关内容，比如：
+- Outlook profiles
+- data files
+- email accounts
+- account setup / profile management
+
+常见入口就是：
+## **Mail**
+
+在控制面板里它通常会显示成类似：
+- **Mail**
+- 或 **Mail (Microsoft Outlook)**
+
+所以题目问 Outlook configuration options 对应哪个 applet，
+答案就是：
+## **Mail**
+
+---
+
+## 为什么不是 User Accounts
+**User Accounts** 主要处理的是：
+- Windows 本地账户/微软账户相关设置
+- 用户类型
+- 密码/凭据的部分管理
+- UAC 等账户层面的东西
+
+它不负责 Outlook 配置。
+
+所以这题的混淆点在于：
+## **邮箱账户 ≠ Windows 用户账户**
+
+Outlook 的邮件配置入口是 **Mail**，
+不是 **User Accounts**。
+
+---
+
+## 其他选项为什么不对
+### Programs and Features
+是程序安装/卸载与功能管理，
+不是 Outlook 配置入口。
+
+### Administrative Tools
+是系统管理工具集合，
+也不是 Outlook profile 配置入口。
+
+---
+
+## 最简单记忆法
+## **配 Outlook 看 Mail，配 Windows 账户看 User Accounts。**
+
+再压缩一句：
+## **Outlook → Mail**
+
+---
+
+## 一句话口诀
+## **邮箱配置找 Mail，系统账户找 User Accounts。**
+
+**一句话：**
+以后只要题目问 **Outlook configuration options**，就直接先想 **Mail applet**。
