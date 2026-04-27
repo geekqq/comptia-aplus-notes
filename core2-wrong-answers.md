@@ -2980,3 +2980,84 @@ Windows CLI 里最标准就该想到：
 
 **一句话：**
 以后看到 **Devices and Printers**，先想 **简化视图 + 添加/删除设备 + 故障排除**；看到 **详细硬件/驱动信息**，就别选它，去想 **Device Manager**。
+
+---
+
+## Network and Sharing Center 记三样：Adapter、Advanced sharing、Media streaming；不是 security zones
+![Network and Sharing Center media streaming options](images/2026-04-26-core2-network-and-sharing-center-media-streaming.jpg)
+
+**题干：** The Network and Sharing Center Control Panel applet in Windows provides access to: (Select 3 answers)
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Network adapter settings / Advanced sharing settings / Internet security zone settings |
+| ✅ 正确答案 | Network adapter settings / Advanced sharing settings / Media streaming options |
+
+### 这题错在哪里
+你前两项选对了：
+- **Network adapter settings**
+- **Advanced sharing settings**
+
+漏掉的是：
+- **Media streaming options**
+
+错选的是：
+- **Internet security zone settings**
+
+---
+
+## 为什么 Media streaming options 对
+在 **Network and Sharing Center** 里，常见入口包括：
+- **Change adapter settings**
+- **Change advanced sharing settings**
+- **Media streaming options**
+
+这些都和：
+## **网络发现、共享、连接方式、局域网媒体共享**
+有关，所以属于这个 applet 的范围。
+
+---
+
+## 为什么 Internet security zone settings 不对
+**Internet security zone settings** 属于：
+## **Internet Properties / Internet Options → Security**
+
+它管的是：
+- Internet
+- Local intranet
+- Trusted sites
+- Restricted sites
+- 安全级别和站点区域
+
+这不是 **Network and Sharing Center** 的内容。
+
+所以这题的坑点就是：
+## **Network and Sharing Center = 网络/共享/媒体流**
+## **Security zones = Internet Options 的 Security**
+
+---
+
+## Physical location settings 为什么不对
+这个说法不是 Network and Sharing Center 的标准核心入口。
+考题里真正常考的是：
+- adapter settings
+- advanced sharing settings
+- media streaming options
+
+所以别被“location”这种听起来像网络环境的词带偏。
+
+---
+
+## 最简单记忆法
+## **共享中心先想：网卡、共享、媒体流。**
+
+再压缩一句：
+## **Adapter + Sharing + Streaming**
+
+---
+
+## 一句话口诀
+## **共享中心三件套：网卡、共享、媒体流。**
+
+**一句话：**
+以后看到 **Network and Sharing Center**，优先往 **adapter / advanced sharing / media streaming** 想；看到 **security zones**，马上切换到 **Internet Options → Security**。
