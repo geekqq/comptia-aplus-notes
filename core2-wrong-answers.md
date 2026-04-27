@@ -3211,3 +3211,76 @@ Outlook 的邮件配置入口是 **Mail**，
 
 **一句话：**
 以后只要题目问 **Outlook configuration options**，就直接先想 **Mail applet**。
+
+---
+
+## Windows 10/11 的音频配置控制面板叫 Sound，不是老名字 Sounds and Audio Devices
+![Sound applet Windows 10 and 11](images/2026-04-26-core2-sound-applet-windows10-11.jpg)
+
+**题干：** Which of the answers listed below refers to an audio configuration Control Panel applet in Windows 10 and Windows 11?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Sounds and Audio Devices |
+| ✅ 正确答案 | Sound |
+
+### 为什么正确答案是 Sound
+题目特别限定了：
+## **Windows 10 and Windows 11**
+
+在这两个版本里，音频相关的控制面板 applet 名称是：
+## **Sound**
+
+它对应的就是：
+- 播放设备
+- 录音设备
+- 声音方案
+- 默认音频设备
+- 通信设备等设置
+
+所以如果题目问的是：
+## **现在这代 Windows 里的音频配置 applet 叫什么**
+答案就是：
+## **Sound**
+
+---
+
+## 为什么不是 Sounds and Audio Devices
+**Sounds and Audio Devices** 是更老版本 Windows 的常见叫法，
+比如早期 Windows XP 时代你更容易看到这个名称。
+
+但题目已经明确缩小到：
+## **Windows 10 / Windows 11**
+
+所以这题考的核心就是：
+## **旧名称 vs 新名称**
+
+新版里你要认：
+## **Sound**
+而不是老名称。
+
+---
+
+## 为什么其他选项不对
+### Device Manager
+它可以看/管理声卡设备驱动，
+但它不是“音频配置 Control Panel applet”的名称。
+
+### Computer Management
+更不是音频控制面板入口。
+
+---
+
+## 最简单记忆法
+## **新系统看短名字：Sound。**
+
+再压缩一句：
+## **Win10/11 音频配置 = Sound**
+
+---
+
+## 一句话口诀
+## **老系统名字长，新系统直接 Sound。**
+
+**一句话：**
+以后题目只要写 **Windows 10/11**，再看到音频控制面板名字，优先想 **Sound**，别被老名字 **Sounds and Audio Devices** 带偏。
