@@ -3596,3 +3596,48 @@ Sleep 本质上是：
 
 ### 最短口诀
 ## **睡眠在内存，休眠在硬盘；睡眠醒得快，休眠更省电。**
+
+---
+
+# 2026-04-27 USB selective suspend 设置入口
+
+![USB selective suspend 设置入口](images/2026-04-27-core2-usb-selective-suspend.jpg)
+
+**题目简述：**
+USB selective suspend is a power-saving feature in Windows... The USB selective suspend setting can be accessed via: (Select all that apply)
+
+- 你选对的：
+  - Control Panel (icon view) > Power Options > Change plan settings > Change advanced power settings > USB settings > USB selective suspend setting
+  - Control Panel (category view) > Hardware and Sound > Power Options > Change plan settings > Change advanced power settings > USB settings > USB selective suspend setting
+- 你漏掉的正确答案：
+  - Start > Settings > System > Power & sleep > Additional power settings > Change plan settings > Change advanced power settings > USB settings > USB selective suspend setting
+- 你选错的：
+  - Start > Settings > Devices > Power & sleep ...
+
+### 这题真正考什么
+这题不是考 USB 原理，主要考：
+## **电源相关设置归谁管：System，不是 Devices**
+
+虽然 USB 听起来像设备管理，
+但 **USB selective suspend** 本质上是：
+## **Power Options 里的电源策略设置**
+
+所以从 Settings 走时，要进：
+- **Settings > System > Power & sleep**
+而不是：
+- **Settings > Devices**
+
+### 为什么 Control Panel 两条都对
+因为不管你是：
+- **图标视图** 直接进 Power Options
+还是：
+- **分类视图** 先进 Hardware and Sound 再进 Power Options
+
+最后都会到同一个地方：
+## **Power Options > Change plan settings > Change advanced power settings > USB settings**
+
+### 最短记忆法
+## **USB selective suspend 虽然名字带 USB，本质归电源管理。**
+
+### 一句话口诀
+## **看到 suspend 先想电源；Settings 里走 System，不走 Devices。**
