@@ -3422,3 +3422,75 @@ Which sequence of steps in Windows 10 and Windows 11 Control Panel provides acce
 
 ### 最短口诀
 ## **隐藏项走 View；扩展名走 File Explorer Options。**
+
+---
+
+# 2026-04-27 File name extensions 与 General tab 范围
+
+![File name extensions 与 General tab 范围](images/2026-04-27-core2-file-explorer-extensions-general-tab.jpg)
+
+## 题 1：显示文件扩展名的更直接入口
+
+**题目简述：**
+The File Explorer setting that enables showing or hiding extensions for known file types in Windows 10 and 11 can be accessed via:
+
+- 你的答案：Windows logo key + E > View > Options > Advanced settings > File name extensions
+- 正确答案：Windows logo key + E > View > File name extensions
+
+### 为什么正确答案更直接
+这题和上一组有点像，但它考的是：
+## **File Explorer 里有没有一个更直接的开关**
+
+答案是有：
+## **View > File name extensions**
+
+也就是说，在 Win10/11 里，显示扩展名不一定要绕进 **Options > Advanced settings**，可以直接在 View 菜单里切换。
+
+### 为什么你的答案会错
+你的路径不是完全没道理，
+但题目问的是：
+## **can be accessed via**
+
+它要的是现成、直接的入口，
+不是更绕的高级设置路径。
+
+所以这题本质是：
+- **直接开关** 优先
+- 不要一上来就钻 Advanced settings
+
+### 最短记忆法
+## **扩展名现在也能直接在 View 里切。**
+
+---
+
+## 题 2：General tab 不包含什么
+
+**题目简述：**
+Which of the settings listed below is not part of the General tab of the File Explorer Options Control Panel applet in Windows 10 and Windows 11?
+
+- 你的答案：File Explorer browsing history options (Privacy section)
+- 正确答案：Visibility of hidden files, folders, and drives
+
+### 为什么正确答案是 hidden files visibility
+这题考的是 **General tab** 和 **View tab** 的范围区分。
+
+在 **General tab** 里常见的是：
+- 打开 File Explorer 默认进入哪里
+- 单击/双击打开项目
+- 浏览文件夹是在同一窗口还是新窗口
+- Privacy / history 相关选项
+
+但：
+## **hidden files, folders, and drives 的可见性**
+属于 **View tab > Advanced settings**
+
+所以它**不属于 General tab**。
+
+### 为什么你的答案不对
+因为 **Privacy / browsing history** 恰恰就是 **General tab** 里很典型的一块。
+
+所以这题不是考功能，而是在考：
+## **General 管“基础行为”，View 管“显示规则”**
+
+### 最短口诀
+## **General 管打开方式和历史；View 管隐藏项和扩展名。**
