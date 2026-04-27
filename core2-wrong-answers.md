@@ -4171,3 +4171,57 @@ CompTIA 很喜欢用这种很烦的字面差异卡你。
 
 ### 一句话口诀
 ## **开打印机共享：先到 Devices and Printers，再进 Printer properties 的 Sharing。**
+
+---
+
+# 2026-04-27 Windows 10 Settings 里的打印机共享路径
+
+![Windows 10 Settings 里的打印机共享路径](images/2026-04-27-core2-settings-printer-sharing-path.jpg)
+
+**题目简述：**
+Which path in the Windows 10 Settings app provides access to printer sharing configuration options?
+
+- 你的答案：
+  - Devices and Printers > right-click on a selected printer > Printer properties > Sharing tab
+- 正确答案：
+  - Devices > Printers & scanners > left-click on a selected printer > Manage > Printer properties > Sharing tab
+
+### 为什么你这条不对
+你写的：
+## **Devices and Printers**
+
+这更像：
+- **Control Panel** 里的路径
+- 传统打印机管理入口
+
+但题目明确写的是：
+## **Windows 10 Settings app**
+
+所以要按 **Settings 的一级分类路径** 来答，不是控制面板路径。
+
+### 为什么正确答案是 Devices > Printers & scanners
+在 Windows 10 的 Settings 里，打印机相关入口归到：
+## **Devices > Printers & scanners**
+
+然后选中某台打印机后：
+- **left-click**
+- **Manage**
+- **Printer properties**
+- **Sharing tab**
+
+这才是题目要的 **Settings app 路径**。
+
+### 为什么不是 Bluetooth & devices
+这又是一个版本命名坑：
+- **Windows 10**：**Devices**
+- 更新一点的 Windows：更常见 **Bluetooth & devices**
+
+题目既然限定 Win10，
+就优先按 Win10 名字答：
+## **Devices**
+
+### 最短记忆法
+## **题目写 Win10 Settings，就先想 Devices > Printers & scanners，不要跳回 Control Panel。**
+
+### 一句话口诀
+## **Settings 管打印机：Devices 里找 Printers & scanners；Control Panel 那套别混进来。**
