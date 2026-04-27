@@ -3811,3 +3811,58 @@ Which section of the Settings app in Windows 10 allows users to modify permissio
 
 ### 一句话口诀
 ## **权限问题先想 Privacy，不要被 Apps 这个词带偏。**
+
+---
+
+# 2026-04-27 System vs Hardware and Sound
+
+![System vs Hardware and Sound](images/2026-04-27-core2-system-vs-hardware-and-sound.jpg)
+
+**题目简述：**
+In the Windows Settings app, which section provides access to settings for display, sound, notifications, power management, and storage?
+
+- 你的答案：Hardware and Sound
+- 正确答案：System
+
+### 为什么你会选 Hardware and Sound
+因为 **Hardware and Sound** 确实是：
+## **Control Panel 里的经典分类名**
+
+而且它看起来也很像会包含：
+- 声音
+- 电源
+- 设备
+
+所以直觉上很容易被带过去。
+
+### 但题目问的是 Windows Settings app
+只要题目写的是：
+## **Windows Settings app**
+
+那就要优先想 **Settings 首页的一级分类名**，不是 Control Panel 分类名。
+
+在 Windows 10 Settings 里，这些内容归到：
+## **System**
+
+下面会包含类似：
+- Display
+- Sound
+- Notifications & actions
+- Power & sleep
+- Storage
+
+### 为什么不是 Devices / Device Manager
+因为题目列的这些内容里：
+- 显示
+- 通知
+- 电源管理
+- 存储
+
+明显不是单纯“设备管理”范围，
+而是一整组系统级设置。
+
+### 最短记忆法
+## **Settings 里：显示、声音、电源、存储，都先想到 System。**
+
+### 一句话口诀
+## **题目写 Settings，就别回到控制面板；看见显示声音电源存储，先选 System。**
