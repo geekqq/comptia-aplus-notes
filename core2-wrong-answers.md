@@ -3761,3 +3761,53 @@ In the Windows Settings app, which section hosts desktop customization settings?
 
 ### 最短口诀
 ## **问 Settings 一级分类：升级恢复找 Update & Security；桌面外观找 Personalization。**
+
+---
+
+# 2026-04-27 Privacy 权限设置入口
+
+![Privacy 权限设置入口](images/2026-04-27-core2-privacy-permissions.jpg)
+
+**题目简述：**
+Which section of the Settings app in Windows 10 allows users to modify permissions for the operating system and applications?
+
+- 你的答案：Apps
+- 正确答案：Privacy
+
+### 为什么不是 Apps
+**Apps** 这一栏更多是：
+- 安装的应用
+- 默认应用
+- 可选功能
+- 应用卸载/管理
+
+它偏向的是：
+## **应用本身的安装与管理**
+
+### 为什么正确答案是 Privacy
+题目问的是：
+## **modify permissions for the operating system and applications**
+
+这里说的权限，更多是类似：
+- 位置权限
+- 摄像头权限
+- 麦克风权限
+- 通知/诊断/后台应用权限
+
+这些在 Windows 10 Settings 里归到：
+## **Privacy**
+
+### 为什么不是 Privacy & security
+因为题目明确是：
+## **Windows 10**
+
+在 Windows 10 里，这一栏的标准名称是：
+## **Privacy**
+
+而 **Privacy & security** 更像是后面新版本 Windows 的命名风格。
+
+### 最短记忆法
+## **管应用安装看 Apps；管权限许可看 Privacy。**
+
+### 一句话口诀
+## **权限问题先想 Privacy，不要被 Apps 这个词带偏。**
