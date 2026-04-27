@@ -2568,3 +2568,76 @@ Windows CLI 里最标准就该想到：
 
 **一句话：**
 以后遇到这类题，别被 **cookies** 这个词带跑：**如果题目是在问“删除整套浏览痕迹”的入口，优先选 General。**
+
+---
+
+## Internet Properties 的内建弹窗拦截器在 Privacy，不在 Content
+![Internet Properties pop-up blocker Privacy tab](images/2026-04-26-core2-internet-properties-pop-up-blocker-privacy-tab.jpg)
+
+**题干：** Which of the answers listed below refers to a Windows Internet Properties applet tab that provides settings for a built-in pop-up blocker?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Content |
+| ✅ 正确答案 | Privacy |
+
+### 为什么正确答案是 Privacy
+在 **Internet Properties** 里面，
+**Pop-up Blocker（弹窗阻止程序）** 的设置放在：
+## **Privacy**
+
+这是经典考点：
+- Privacy 里不只是隐私级别
+- 还包含 **Pop-up Blocker** 相关设置
+
+所以题目问：
+## **built-in pop-up blocker 在哪个 tab**
+就应该选：
+## **Privacy**
+
+---
+
+## 为什么 Content 容易选错
+因为很多人会把下面这些混在一起：
+- certificates
+- AutoComplete
+- feeds/web slices
+- content advisor
+- 浏览器内容相关设置
+
+这些更像是 **Content** 在管的范围。
+
+但 **弹窗拦截器** 不是 Content 的主考点，
+它属于：
+## **Privacy**
+
+---
+
+## 考点本质
+这题考的是：
+## **Internet Properties 各 tab 的功能定位**
+
+### 快速对应
+- **General** → 浏览历史 / 主页 / 标签页
+- **Security** → 安全区域
+- **Privacy** → Cookie、隐私级别、Pop-up Blocker
+- **Content** → 证书、AutoComplete、内容相关
+- **Connections** → 拨号 / VPN / 代理
+- **Programs** → 默认程序
+- **Advanced** → 高级设置
+
+---
+
+## 最简单记忆法
+## **弹窗拦截属于隐私控制，所以看 Privacy。**
+
+再压缩一句：
+## **Pop-up → Privacy。**
+
+---
+
+## 一句话口诀
+## **删记录找 General，拦弹窗找 Privacy。**
+
+**一句话：**
+以后看到 **pop-up blocker**，直接先想 **Privacy**；看到 **certificates / AutoComplete** 才更容易联想到 **Content**。
