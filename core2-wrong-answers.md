@@ -2722,3 +2722,87 @@ Windows CLI 里最标准就该想到：
 
 **一句话：**
 以后看到题干里有 **advanced cookie management**，就直接往 **Privacy** 想；如果看到 **trusted sites / security zones**，才是 **Security**。
+
+---
+
+## Internet Properties 里证书、AutoComplete、RSS/Feeds 看 Content，不是 Connections
+![Internet Properties Content tab certificates autocomplete RSS](images/2026-04-26-core2-internet-properties-content-certificates-autocomplete-rss.jpg)
+
+**题干：** Which of the Windows Internet Properties applet tabs enables the management of digital certificates, the AutoComplete functionality, and RSS feeds?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Connections |
+| ✅ 正确答案 | Content |
+
+### 为什么正确答案是 Content
+这题其实是在考 **Internet Properties 各标签页的“招牌功能”**。
+
+看到下面这些关键词时：
+- digital certificates
+- AutoComplete
+- RSS feeds / Feeds and Web Slices
+
+就应该先想到：
+## **Content**
+
+因为 **Content** 选项卡典型包含：
+- **Certificates**
+- **AutoComplete**
+- **Feeds and Web Slices**
+- （老版本里还常见 Content Advisor）
+
+所以这题答案很标准：
+## **Content**
+
+---
+
+## 为什么不是 Connections
+**Connections** 选项卡主要负责的是：
+- 拨号设置
+- VPN / 网络连接相关
+- LAN settings
+- Proxy server
+
+它重点是：
+## **连接方式与网络接入配置**
+
+不是证书、自动完成、RSS 这些“浏览器内容/身份/表单体验”相关内容。
+
+所以如果题干出现：
+- certificate
+- AutoComplete
+- feed
+
+那就别往 Connections 想。
+
+---
+
+## 考点本质
+这题和前面几题一样，都是：
+## **Internet Properties tab 对应关系题**
+
+### 快速对应
+- **General** → 主页、浏览历史删除
+- **Security** → 安全区域
+- **Privacy** → Cookie、弹窗拦截
+- **Content** → 证书、AutoComplete、Feeds
+- **Connections** → 拨号 / VPN / 代理
+- **Programs** → 默认程序
+- **Advanced** → 高级设置
+
+---
+
+## 最简单记忆法
+## **证书和自动完成，先看 Content。**
+
+再压缩一句：
+## **certificate / autocomplete / feed → Content**
+
+---
+
+## 一句话口诀
+## **证书自动填，RSS 也归 Content。**
+
+**一句话：**
+以后看到题干里同时出现 **Certificates + AutoComplete + RSS/Feeds**，基本就是在明示你选 **Content**。
