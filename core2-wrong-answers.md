@@ -3284,3 +3284,67 @@ Outlook 的邮件配置入口是 **Mail**，
 
 **一句话：**
 以后题目只要写 **Windows 10/11**，再看到音频控制面板名字，优先想 **Sound**，别被老名字 **Sounds and Audio Devices** 带偏。
+
+---
+
+# 2026-04-27 Control Panel 本地账户设置入口
+
+![Control Panel 本地账户设置入口](images/2026-04-27-core2-control-panel-user-accounts.jpg)
+
+**题目简述：**
+Which applet in the Windows Control Panel enables the modification of local user account settings?
+
+- 你的答案：Local Users and Groups
+- 正确答案：User Accounts
+
+### 为什么正确答案是 User Accounts
+这题考的是 **Control Panel 里的 applet 名称**。
+
+如果题目问：
+- 修改本地用户账户设置
+- 在 **Control Panel** 里找入口
+
+那对应的是：
+## **User Accounts**
+
+这里可以做的通常包括：
+- 更改账户类型
+- 管理密码/凭据相关设置
+- 修改本地账户的一些基础配置
+
+### 为什么不是 Local Users and Groups
+**Local Users and Groups** 确实也能管理本地用户，
+但它属于：
+## **Computer Management / MMC 管理控制台**
+
+它不是标准的 **Control Panel applet**。
+
+所以这题不是在问：
+- “哪个工具功能更强？”
+而是在问：
+- “Control Panel 里这个入口叫啥？”
+
+### 为什么这种题会考
+说实话，这类题确实有点无聊 😅
+但它在 CompTIA 里的意义通常不是让你死记菜单，而是考你：
+
+- 能不能区分 **Control Panel / Settings / MMC / 管理工具** 这几类入口
+- 用户描述一个问题时，你知不知道大概要去哪个管理界面
+- 看到老题或旧文档时，能不能认出这些 Windows 传统入口
+
+也就是说，它本质考的是：
+## **“你认不认识 Windows 管理入口的分类”**
+而不只是背单词。
+
+### 应试角度怎么记
+你不用把所有入口都当百科全书背。
+重点记这一层：
+
+- **User Accounts** → Control Panel 里的“账户入口”
+- **Local Users and Groups** → MMC 里的“高级本地用户管理”
+
+### 最短记忆法
+## **题目写 Control Panel，就先选面板名字；别选 MMC 工具名。**
+
+### 一句话口诀
+## **面板改账户找 User Accounts；高级管用户才是 Local Users and Groups。**
