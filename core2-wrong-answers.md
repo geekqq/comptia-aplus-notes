@@ -2491,3 +2491,80 @@ Windows CLI 里最标准就该想到：
 
 **一句话：**
 以后看到 Control Panel 题目里写 **Category 会显示全部 applet**，基本就要警觉：**错，真正接近“全部列出”的是 Large icons / Small icons。**
+
+---
+
+## Internet Properties 里删除浏览痕迹先想 General，不是 Privacy
+![Internet Properties General tab delete browsing history](images/2026-04-26-core2-internet-properties-general-delete-browsing-history.jpg)
+
+**题干：** Which tab of the Windows Internet Properties applet provides an option for deleting temporary Internet files, cookies, web browsing and download history, saved passwords, and data typed into web forms?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Privacy |
+| ✅ 正确答案 | General |
+
+### 为什么正确答案是 General
+在 **Internet Properties** 里面，
+和下面这些“浏览数据清理”最直接对应的是：
+
+- temporary Internet files
+- cookies
+- browsing history
+- download history
+- saved passwords
+- form data
+
+这些都属于：
+## **Browsing history / Delete browsing history**
+而这个按钮位置就在：
+## **General 选项卡**
+
+---
+
+## 为什么 Privacy 容易让人选错
+因为看到 **cookies**，很多人会马上联想到 **Privacy**。
+这就是这题最容易掉坑的地方。
+
+但 **Privacy** 选项卡更偏向：
+- cookie 处理策略
+- 弹窗阻止
+- 隐私级别设置
+
+它不是那个“把浏览记录、缓存、密码、表单记录一起清掉”的主要入口。
+
+所以这题问的是：
+## **删除一整组浏览数据的入口在哪个 tab**
+答案就该想到：
+## **General**
+
+---
+
+## 考点本质
+这题考的是：
+## **Internet Properties 各标签页的职责区分**
+
+### 快速对应
+- **General** → 主页、标签页、浏览历史删除
+- **Security** → 安全区域级别
+- **Privacy** → Cookie / 隐私设置 / 弹窗
+- **Content** → 证书、自动完成
+- **Connections** → 拨号/VPN/代理连接
+- **Programs** → 默认程序
+- **Advanced** → 高级 IE/网络选项
+
+---
+
+## 最简单记忆法
+## **删历史去 General；调隐私才去 Privacy。**
+
+再压缩一句：
+## **“Delete browsing history” 看到 delete 就先想 General。**
+
+---
+
+## 一句话口诀
+## **清缓存删记录找 General，控 Cookie 隐私看 Privacy。**
+
+**一句话：**
+以后遇到这类题，别被 **cookies** 这个词带跑：**如果题目是在问“删除整套浏览痕迹”的入口，优先选 General。**
