@@ -2806,3 +2806,89 @@ Windows CLI 里最标准就该想到：
 
 **一句话：**
 以后看到题干里同时出现 **Certificates + AutoComplete + RSS/Feeds**，基本就是在明示你选 **Content**。
+
+---
+
+## Connections 选项卡要记住：VPN、Proxy、LAN；Security zones 不在这里
+![Internet Properties Connections tab LAN VPN Proxy not Security zones](images/2026-04-26-core2-connections-tab-lan-vpn-proxy-not-security-zones.jpg)
+
+**题干：** Which of the following answers refer to network settings accessible through the Connections tab of the Internet Properties applet in Windows? (Select 3 answers)
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Internet security zone settings / Dial-up and VPN settings / Proxy server settings |
+| ✅ 正确答案 | LAN settings / Dial-up and VPN settings / Proxy server settings |
+
+### 为什么你这题会错
+你已经抓对了两项：
+- **Dial-up and VPN settings**
+- **Proxy server settings**
+
+漏掉的是：
+- **LAN settings**
+
+错选的是：
+- **Internet security zone settings**
+
+---
+
+## 为什么 LAN settings 对
+在 **Internet Properties → Connections** 里，经典会出现这些东西：
+- 拨号连接
+- VPN 连接
+- **LAN settings**
+- 代理（Proxy）相关设置
+
+所以题目问 **Connections tab 可访问的网络设置**，
+**LAN settings** 一定要想到。
+
+---
+
+## 为什么 Internet security zone settings 不对
+**Internet security zone settings** 属于：
+## **Security 选项卡**
+
+那边管的是：
+- Internet
+- Local intranet
+- Trusted sites
+- Restricted sites
+- 安全级别 / 区域策略
+
+它不是 **Connections** 的内容。
+
+所以这题的核心混淆点是：
+## **Connections = 连接方式 / 代理 / LAN**
+## **Security = 区域 / 站点信任 / 安全级别**
+
+---
+
+## 考点本质
+这题本质还是在考：
+## **Internet Properties 各选项卡的职责边界**
+
+### Connections 速记
+- **Dial-up / VPN**
+- **LAN settings**
+- **Proxy**
+
+### Security 速记
+- **Security zones**
+- Trusted / Restricted sites
+- 安全级别
+
+---
+
+## 最简单记忆法
+## **Connections 管“怎么连”，Security 管“连哪些站更信任”。**
+
+再压缩一句：
+## **VPN / Proxy / LAN → Connections；Zones → Security**
+
+---
+
+## 一句话口诀
+## **连线走 Connections，分区看 Security。**
+
+**一句话：**
+以后只要题目里出现 **LAN / VPN / Proxy**，优先想 **Connections**；出现 **security zones / trusted sites**，就转去 **Security**。
