@@ -3061,3 +3061,77 @@ Windows CLI 里最标准就该想到：
 
 **一句话：**
 以后看到 **Network and Sharing Center**，优先往 **adapter / advanced sharing / media streaming** 想；看到 **security zones**，马上切换到 **Internet Options → Security**。
+
+---
+
+## Windows 10/11 里防火墙设置对应的是 Windows Defender Firewall
+![Windows Defender Firewall applet question](images/2026-04-26-core2-windows-defender-firewall-applet.jpg)
+
+**题干：** Which of the following Control Panel applets in Windows 10 and Windows 11 provides access to firewall settings?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Security and Maintenance |
+| ✅ 正确答案 | Windows Defender Firewall |
+
+### 为什么正确答案是 Windows Defender Firewall
+题目问的是：
+## **哪个 Control Panel applet 提供 firewall settings**
+
+在 **Windows 10 / Windows 11** 里，对应名称是：
+## **Windows Defender Firewall**
+
+这就是控制：
+- 防火墙开关
+- 允许应用通过防火墙
+- 入站/出站规则（进一步高级配置）
+- 公用/专用网络防火墙状态
+
+所以这题是很直接的“名称识别题”。
+
+---
+
+## 为什么不是 Security and Maintenance
+**Security and Maintenance** 更像是：
+- 查看系统安全状态
+- 查看维护提醒
+- 汇总安全/维护通知
+
+它不是专门进入防火墙详细配置的 applet。
+
+也就是说：
+## **Security and Maintenance 偏状态总览**
+## **Windows Defender Firewall 才是防火墙入口**
+
+---
+
+## 为什么不是 Windows Firewall
+这题有个容易混淆点：
+旧资料或旧版本里你可能见过：
+- **Windows Firewall**
+
+但题目特别说的是：
+## **Windows 10 and Windows 11**
+
+所以新版正式名称更应该对应：
+## **Windows Defender Firewall**
+
+考试遇到这种题，
+如果选项里同时有旧叫法和新叫法，
+优先选**符合当前系统版本命名**的那个。
+
+---
+
+## 最简单记忆法
+## **Win10/11 的防火墙看 Defender Firewall。**
+
+再压缩一句：
+## **防火墙设置 ≠ Security and Maintenance**
+
+---
+
+## 一句话口诀
+## **安全总览看 Maintenance，防火墙本体找 Defender Firewall。**
+
+**一句话：**
+以后题目一旦明确写 **Windows 10/11**，再问防火墙 applet，优先想 **Windows Defender Firewall**。
