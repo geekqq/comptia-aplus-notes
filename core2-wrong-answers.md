@@ -2426,3 +2426,68 @@ Windows CLI 里最标准就该想到：
 **一句话：**
 这题以后直接这样背：**看到“大量文件 + Windows 主机间传输 + 网络中断后自动恢复”，就选 robocopy；xcopy 不如它适合这种企业级/大批量复制场景。**
 
+
+---
+
+## Control Panel 的 Category 视图是分类入口，不是全部 applet 平铺列表
+![Control Panel category vs icons view](images/2026-04-26-core2-control-panel-category-vs-icons-view.jpg)
+
+**题干：** The “View by: Category” option in the Microsoft Windows Control Panel displays the entire contents of the Control Panel in a single window, enabling quick access to each Control Panel applet.
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | True |
+| ✅ 正确答案 | False |
+
+### 为什么这题是错的
+题干把 **Category view** 和 **Large icons / Small icons** 搞混了。
+
+- **Category**：按功能分类显示
+  - System and Security
+  - Network and Internet
+  - Hardware and Sound
+- **Large icons / Small icons**：才是把各个 **Control Panel applet** 直接列出来
+
+所以：
+## **Category 不是“全部项目一页展开”**
+它只是**分类入口页**。
+
+---
+
+## 为什么 False 才对
+题干说：
+> displays the entire contents of the Control Panel in a single window, enabling quick access to each Control Panel applet
+
+这句话描述的其实更像：
+## **Large icons / Small icons 视图**
+因为这两种视图才会把控制面板里的项目直接列出来，方便你直接点到某个 applet。
+
+而 **Category** 视图是先按类别分组，
+你通常还要再点进去下一层，
+所以不算“把整个内容完整平铺出来”。
+
+---
+
+## 考点本质
+这题考的是：
+## **Windows Control Panel 不同查看方式的区别**
+
+### 快速对应
+- **Category** → 分类看
+- **Large icons / Small icons** → 全项目直接看
+
+---
+
+## 最简单记忆法
+## **Category 看大类，Icons 看全表。**
+
+再压缩一句：
+## **想一眼看到全部 applet，不选 Category，选 Icons。**
+
+---
+
+## 一句话口诀
+## **Category 先分组，Icons 才全出。**
+
+**一句话：**
+以后看到 Control Panel 题目里写 **Category 会显示全部 applet**，基本就要警觉：**错，真正接近“全部列出”的是 Large icons / Small icons。**
