@@ -4120,3 +4120,54 @@ Which of the options listed below provides access to shared folders in a Windows
 
 ### 一句话口诀
 ## **共享管理看结果，不只看一路；GUI 能进，命令行也能进。**
+
+---
+
+# 2026-04-27 本地打印机共享入口
+
+![本地打印机共享入口](images/2026-04-27-core2-local-printer-sharing.jpg)
+
+**题目简述：**
+In the Windows Control Panel, local printer sharing can be enabled via: (Select all that apply)
+
+- 你选对的：
+  - Windows Control Panel (category view) > View devices and printers (under Hardware and Sound) > right-click on a selected printer > Printer properties > Sharing tab
+- 你漏掉的正确答案：
+  - Windows Control Panel (icon view) > Devices and Printers > right-click on a selected printer > Printer properties > Sharing tab
+  - Windows Control Panel (category view) > Hardware and Sound > Devices and Printers > right-click on a selected printer > Printer properties > Sharing tab
+- 你选错的：
+  - Windows Control Panel (icon view) > Devices and Printers > right-click on a selected printer > Properties > Sharing tab
+
+### 这题的坑点
+这题不是在卡大路径，
+而是在卡：
+## **Printer properties ≠ Properties**
+
+你走到 **Devices and Printers** 这一步其实已经很接近了，
+真正分生死的是右键后要进：
+## **Printer properties**
+而不是普通的：
+## **Properties**
+
+### 为什么正确答案有 3 条
+因为它们只是进入 **Devices and Printers** 的方式不同：
+- icon view 直接进
+- category view 通过 **Hardware and Sound** 进去
+- category view 通过 **View devices and printers** 进去
+
+但最后真正启用共享的关键动作都一样：
+## **右键打印机 > Printer properties > Sharing tab**
+
+### 为什么你选的那条不对
+因为：
+- **Properties** 不等于 **Printer properties**
+
+CompTIA 很喜欢用这种很烦的字面差异卡你。
+这题本质不是你不会，而是它在考：
+## **精确菜单名**
+
+### 最短记忆法
+## **打印机共享别点普通 Properties，要点 Printer properties。**
+
+### 一句话口诀
+## **开打印机共享：先到 Devices and Printers，再进 Printer properties 的 Sharing。**
