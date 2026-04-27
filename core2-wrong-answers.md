@@ -4225,3 +4225,49 @@ Which path in the Windows 10 Settings app provides access to printer sharing con
 
 ### 一句话口诀
 ## **Settings 管打印机：Devices 里找 Printers & scanners；Control Panel 那套别混进来。**
+
+---
+
+# 2026-04-27 Windows 11 Settings 里的打印机共享路径
+
+![Windows 11 Settings 里的打印机共享路径](images/2026-04-27-core2-win11-settings-printer-sharing-path.jpg)
+
+**题目简述：**
+In the Windows 11 Settings app, printer sharing options can be accessed via:
+
+- 你的答案：
+  - Devices and Printers > right-click on a selected printer > Printer properties > Sharing tab
+- 正确答案：
+  - Bluetooth & devices > Printers & scanners > left-click on a selected printer > Printer properties > Sharing tab
+
+### 为什么你会错
+你选的：
+## **Devices and Printers**
+
+这还是 **Control Panel** 语境下的老入口，
+不是 **Windows 11 Settings app** 的路径。
+
+这题和上一道 Win10 题本质一样，
+只是把新版的一级分类名字换掉了。
+
+### 为什么正确答案是 Bluetooth & devices
+在 **Windows 11 Settings** 里，
+打印机相关内容归到：
+## **Bluetooth & devices > Printers & scanners**
+
+然后选中打印机后进入：
+- **Printer properties**
+- **Sharing tab**
+
+### 和 Windows 10 对照记
+- **Windows 10** → **Devices > Printers & scanners**
+- **Windows 11** → **Bluetooth & devices > Printers & scanners**
+
+所以这题真正考的是：
+## **Win10 / Win11 Settings 一级分类名字差异**
+
+### 最短记忆法
+## **Win10 是 Devices；Win11 升级成 Bluetooth & devices。**
+
+### 一句话口诀
+## **打印机在 Settings 里都走 Printers & scanners；Win10 看 Devices，Win11 看 Bluetooth & devices。**
