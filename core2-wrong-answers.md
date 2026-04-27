@@ -3546,3 +3546,53 @@ Sleep 的特点是：
 
 ### 最短口诀
 ## **睡眠留内存，休眠落硬盘；睡眠醒得快，休眠更省电。**
+
+---
+
+# 2026-04-27 Sleep mode 三个特征
+
+![Sleep mode 三个特征](images/2026-04-27-core2-sleep-mode.jpg)
+
+**题目简述：**
+Which of the statements listed below describe the behavior of sleep mode in Windows? (Select 3 answers)
+
+- 你的答案：
+  - Requires a small amount of power to maintain system memory
+  - Saves the system state to a storage drive
+  - Resumes full system operation more slowly than when recovering from hibernation mode
+- 正确答案：
+  - Requires a small amount of power to maintain system memory
+  - Resumes full system operation faster than it does when recovering from hibernation mode
+  - Keeps the system state (e.g., all open/unsaved files and running applications) in RAM
+
+### 为什么这题会错
+因为你把 **Sleep** 和 **Hibernation** 的特征又混了一下。
+
+你选错的两项：
+- **Saves the system state to a storage drive**
+- **Resumes more slowly than hibernation**
+
+这两条其实都更像：
+## **Hibernation（休眠）**
+
+### Sleep 的核心特征
+Sleep 本质上是：
+## **状态留在 RAM，系统保持低功耗待机**
+
+所以它的三个关键点是：
+
+1. **Requires a small amount of power to maintain system memory**
+   - 需要一点点电维持内存内容
+
+2. **Keeps the system state in RAM**
+   - 当前打开的文件、程序状态还留在内存里
+
+3. **Resumes full system operation faster than recovering from hibernation**
+   - 因为不用从磁盘整包恢复，所以比休眠更快
+
+### 和 Hibernation 再对照一次
+- **Sleep** → RAM / 少量供电 / 恢复快
+- **Hibernation** → 磁盘 / 近乎断电 / 恢复慢
+
+### 最短口诀
+## **睡眠在内存，休眠在硬盘；睡眠醒得快，休眠更省电。**
