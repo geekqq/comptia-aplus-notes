@@ -3494,3 +3494,55 @@ Which of the settings listed below is not part of the General tab of the File Ex
 
 ### 最短口诀
 ## **General 管打开方式和历史；View 管隐藏项和扩展名。**
+
+---
+
+# 2026-04-27 Hibernation mode 三个特征
+
+![Hibernation mode 三个特征](images/2026-04-27-core2-hibernation-mode.jpg)
+
+**题目简述：**
+Which of the following answers refer to hibernation mode in Windows? (Select 3 answers)
+
+- 你的答案：
+  - Requires a small amount of power to maintain system memory
+  - Keeps system state in RAM
+  - Resumes full system operation faster than when waking from sleep mode
+- 正确答案：
+  - Saves the system state to a storage drive
+  - Resumes full system operation more slowly than it does when waking from sleep mode
+  - Turns the computer off after saving the system state to disk
+
+### 为什么你会错
+因为你选到的那三项，基本都在描述：
+## **Sleep（睡眠）**
+
+Sleep 的特点是：
+- 状态保存在 **RAM**
+- 需要一点点电维持内存
+- 唤醒通常比较快
+
+而这题问的是：
+## **Hibernation（休眠）**
+
+### Hibernation 的核心特征
+休眠的关键就是：
+## **把当前系统状态写到磁盘，然后彻底断电**
+
+所以它对应这三条：
+
+1. **Saves the system state to a storage drive**
+   - 状态写到硬盘/SSD，不是只留在 RAM
+
+2. **Turns the computer off after saving the system state to disk**
+   - 写完以后机器相当于关机
+
+3. **Resumes full system operation more slowly than it does when waking from sleep mode**
+   - 因为要从磁盘恢复，所以通常比 Sleep 慢
+
+### 一句话区分 Sleep vs Hibernation
+- **Sleep** = 存 RAM、耗一点电、恢复快
+- **Hibernation** = 存磁盘、几乎不耗电、恢复较慢
+
+### 最短口诀
+## **睡眠留内存，休眠落硬盘；睡眠醒得快，休眠更省电。**
