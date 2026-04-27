@@ -3866,3 +3866,49 @@ In the Windows Settings app, which section provides access to settings for displ
 
 ### 一句话口诀
 ## **题目写 Settings，就别回到控制面板；看见显示声音电源存储，先选 System。**
+
+---
+
+# 2026-04-27 Devices vs Device Manager
+
+![Devices vs Device Manager](images/2026-04-27-core2-devices-bluetooth-printers.jpg)
+
+**题目简述：**
+Which section of the Settings app in Windows 10 includes options for managing Bluetooth devices, printers, and other connected hardware?
+
+- 你的答案：Device Manager
+- 正确答案：Devices
+
+### 为什么不是 Device Manager
+**Device Manager** 是一个具体的管理工具，
+更偏向：
+- 看硬件列表
+- 驱动状态
+- 启用/禁用设备
+- 更新/卸载驱动
+
+它不是 **Windows 10 Settings app 的一级 section 名称**。
+
+### 为什么正确答案是 Devices
+题目问的是：
+## **Settings app in Windows 10**
+
+而在 Win10 的 Settings 首页里，
+蓝牙、打印机、鼠标、已连接硬件这些，归在：
+## **Devices**
+
+### 为什么不是 Bluetooth & devices
+因为这又是一个版本命名坑。
+
+- **Windows 10** 常见一级分类名：**Devices**
+- **更新一点的 Windows / 新语境**：更常见 **Bluetooth & devices**
+
+题目既然明确写 Win10，
+就优先按 Win10 的叫法选：
+## **Devices**
+
+### 最短记忆法
+## **Win10 里蓝牙打印机这些，先想 Devices；Device Manager 是工具，不是 Settings 分类。**
+
+### 一句话口诀
+## **管理连接设备看 Devices；管驱动硬件细节才看 Device Manager。**
