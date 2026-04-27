@@ -4271,3 +4271,56 @@ In the Windows 11 Settings app, printer sharing options can be accessed via:
 
 ### 一句话口诀
 ## **打印机在 Settings 里都走 Printers & scanners；Win10 看 Devices，Win11 看 Bluetooth & devices。**
+
+---
+
+# 2026-04-27 映射网络驱动器
+
+![映射网络驱动器](images/2026-04-27-core2-map-network-drive.jpg)
+
+**题目简述：**
+A technician needs to map a network drive for a user. The shared folder is located at `\\Server1\Documents`, and the user wants it mapped to drive letter X. What should the technician do?
+
+- 你的答案：
+  - Open File Explorer > right-click on the shared folder > select "Pin to Quick access" > choose X from the dropdown list, and enter `\\Server1\Documents`
+- 正确答案：
+  - Open File Explorer > right-click "This PC" > select "Map network drive" > choose X from the dropdown list, and enter `\\Server1\Documents`
+
+### 为什么你的答案不对
+**Pin to Quick access** 只是：
+## **把常用文件夹固定到快速访问**
+
+它不会：
+- 分配盘符
+- 把共享路径映射成 `X:` 这种网络驱动器
+
+所以它和 **map network drive** 不是一回事。
+
+### 为什么正确答案对
+题目明确要求的是：
+- 把共享文件夹 `\\Server1\Documents`
+- 映射成驱动器号 **X:**
+
+Windows 图形界面里的标准做法就是：
+## **This PC > Map network drive**
+
+然后：
+- 选驱动器号 `X:`
+- 填入 UNC 路径 `\\Server1\Documents`
+
+### 这题顺便也考你认不认命令
+题目里另一个迷惑项是假的命令：
+- `map drive X: ...`
+
+真正常见的命令是：
+## **`net map` 不对，`net use` / 图形界面 Map network drive 才靠谱**
+
+至少从这题给的选项里，
+最标准、明显正确的就是：
+## **This PC > Map network drive**
+
+### 最短记忆法
+## **要盘符就用 Map network drive；Quick access 只是收藏夹。**
+
+### 一句话口诀
+## **想把共享变成 X:，就去 This PC 里 Map network drive。**
