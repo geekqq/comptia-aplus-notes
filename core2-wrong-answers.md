@@ -3348,3 +3348,77 @@ Which applet in the Windows Control Panel enables the modification of local user
 
 ### 一句话口诀
 ## **面板改账户找 User Accounts；高级管用户才是 Local Users and Groups。**
+
+---
+
+# 2026-04-27 Hidden items 与 File Explorer Options
+
+![Hidden items 与 File Explorer Options](images/2026-04-27-core2-hidden-items-file-extensions.jpg)
+
+## 题 1：显示隐藏文件/文件夹的入口
+
+**题目简述：**
+Which of the following actions provides access to the Windows 10 and Windows 11 File Explorer setting that toggles the visibility of files and folders marked by default as hidden?
+
+- 你的答案：Windows logo key + F > File > Show hidden files and folders
+- 正确答案：Windows logo key + E > View > Hidden items
+
+### 为什么正确答案是 View > Hidden items
+在 **Windows 10 / 11** 里，要快速切换隐藏文件显示，最直接的是：
+
+## **File Explorer > View > Hidden items**
+
+这就是资源管理器里的可见性开关。
+
+### 为什么你的答案不对
+你的选项写的是：
+- **Windows logo key + F**
+- **File > Show hidden files and folders**
+
+问题有两个：
+1. **Win + F** 不是这里标准的资源管理器入口记法；题目通常会用 **Win + E** 打开 File Explorer
+2. **File > Show hidden files and folders** 这个菜单路径本身也不像 Win10/11 的标准现成选项名称
+
+也就是说，这题考的是：
+## **Win10/11 里“直接显示隐藏项”的新路径**
+
+### 最短记忆法
+## **看隐藏文件：资源管理器打开后，去 View 找 Hidden items。**
+
+---
+
+## 题 2：隐藏/显示已知文件扩展名的入口
+
+**题目简述：**
+Which sequence of steps in Windows 10 and Windows 11 Control Panel provides access to a configuration setting that enables showing or hiding extensions for known file types?
+
+- 你的答案：Folder Options applet > View tab > Hide extensions for known file types
+- 正确答案：File Explorer Options applet > View tab > Advanced settings: > Hide extensions for known file types
+
+### 为什么正确答案是 File Explorer Options
+这题故意卡的是 **名称**。
+
+在 Win10/11 / 新版题库表述里，Control Panel 这里更标准的名字是：
+## **File Explorer Options**
+
+然后路径是：
+- **View tab**
+- **Advanced settings**
+- **Hide extensions for known file types**
+
+### 为什么你的答案会错
+**Folder Options** 其实更像旧名称/旧叫法。
+功能方向没错，但题库要你选的是：
+## **Win10/11 当前标准名称：File Explorer Options**
+
+所以这题和前面那题本质一样，都是：
+## **旧叫法 vs 新叫法 / 精确入口名**
+
+### 应试角度怎么记
+你不用纠结所有按钮位置，记住两层就够：
+
+- **直接显示隐藏文件** → **View > Hidden items**
+- **扩展名等高级显示设置** → **File Explorer Options > View > Advanced settings**
+
+### 最短口诀
+## **隐藏项走 View；扩展名走 File Explorer Options。**
