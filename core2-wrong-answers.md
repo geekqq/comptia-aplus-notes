@@ -3687,3 +3687,77 @@ Which of the following sections of the Settings app in Windows 10 includes confi
 
 ### 一句话口诀
 ## **问 Win10 设置页无障碍，先选 Ease of Access。**
+
+---
+
+# 2026-04-27 Update & Security 与 Personalization
+
+![Update & Security 与 Personalization](images/2026-04-27-core2-update-security-personalization.jpg)
+
+## 题 1：备份、恢复、系统升级属于哪个 Settings section
+
+**题目简述：**
+Which of the sections listed below provides access to backup, recovery, and OS upgrade options within the Windows 10 Settings app?
+
+- 你的答案：Windows Update
+- 正确答案：Update & Security
+
+### 为什么不是 Windows Update
+因为题目问的是：
+## **Settings app 的 section（一级分类）**
+
+而 **Windows Update** 只是 **Update & Security** 下面的一个子项，
+不是 Settings 首页上的一级分类名字。
+
+### 为什么正确答案是 Update & Security
+在 Windows 10 里，这一整组内容——
+- Windows Update
+- Backup
+- Recovery
+- Activation
+- Troubleshoot
+- Delivery Optimization
+
+都归在：
+## **Update & Security**
+
+### 最短记忆法
+## **更新、恢复、备份，别看子页名，往上一级想 Update & Security。**
+
+---
+
+## 题 2：桌面个性化设置属于哪个 section
+
+**题目简述：**
+In the Windows Settings app, which section hosts desktop customization settings?
+
+- 你的答案：Appearance and Personalization
+- 正确答案：Personalization
+
+### 为什么你会选 Appearance and Personalization
+因为这个名字很像：
+- **Control Panel** 时代/传统 Windows 菜单体系里的叫法
+- 或者是你脑子里对“外观 + 个性化”的自然组合
+
+但这题问的是：
+## **Windows Settings app**
+
+在 Settings 里，桌面相关个性化设置归到：
+## **Personalization**
+
+这里通常包括：
+- Background
+- Colors
+- Lock screen
+- Themes
+- Start
+- Taskbar
+
+### 为什么不是 Appearance and Personalization
+因为那更像：
+## **旧控制面板语境/旧命名风格**
+
+而不是 Win10 Settings 首页的标准一级分类名。
+
+### 最短口诀
+## **问 Settings 一级分类：升级恢复找 Update & Security；桌面外观找 Personalization。**
