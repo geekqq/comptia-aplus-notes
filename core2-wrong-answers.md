@@ -3641,3 +3641,49 @@ USB selective suspend is a power-saving feature in Windows... The USB selective 
 
 ### 一句话口诀
 ## **看到 suspend 先想电源；Settings 里走 System，不走 Devices。**
+
+---
+
+# 2026-04-27 Ease of Access vs Accessibility
+
+![Ease of Access vs Accessibility](images/2026-04-27-core2-ease-of-access-vs-accessibility.jpg)
+
+**题目简述：**
+Which of the following sections of the Settings app in Windows 10 includes configuration options aimed at users with disabilities?
+
+- 你的答案：Accessibility
+- 正确答案：Ease of Access
+
+### 为什么你会觉得是 Accessibility
+因为按现在的直觉，
+**Accessibility** 这个词确实更像“无障碍功能”的标准叫法。
+
+而且在较新的 Windows / 现代产品语境里，
+很多地方也确实更常看到 **Accessibility** 这个名称。
+
+### 但这题卡的是 Windows 10 的命名
+题目明确写的是：
+## **Windows 10**
+
+在 Windows 10 的 Settings 里，面向残障用户/辅助功能的这一栏名称是：
+## **Ease of Access**
+
+所以这题不是考你理解错了，
+而是在考：
+## **旧版 Windows 10 里的实际菜单名字**
+
+### 为什么不是 Ease of Access Center
+这也是故意混淆人的地方。
+
+- **Ease of Access** → Settings 里的对应分类名称
+- **Ease of Access Center** → 更像 Control Panel / 传统 Windows 组件里的旧叫法
+
+题目问的是 **Settings app section**，
+所以要选：
+## **Ease of Access**
+
+### 最短记忆法
+## **Win10 叫 Ease of Access；新语境才更像 Accessibility。**
+
+### 一句话口诀
+## **问 Win10 设置页无障碍，先选 Ease of Access。**
