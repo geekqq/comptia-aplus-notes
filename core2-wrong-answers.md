@@ -4072,3 +4072,51 @@ Which character, when appended to the end of the name of a network share in Wind
 
 ### 一句话口诀
 ## **共享想隐藏，尾巴加美元。**
+
+---
+
+# 2026-04-27 Shared Folders 的多个访问方式
+
+![Shared Folders 的多个访问方式](images/2026-04-27-core2-shared-folders-access.jpg)
+
+**题目简述：**
+Which of the options listed below provides access to shared folders in a Windows environment?
+
+- 你的答案：
+  - Control Panel > Windows Tools (Windows 11) > Computer Management > System Tools > Shared Folders > Shares
+- 正确答案：
+  - All of the above
+
+### 为什么是 All of the above
+这题的坑在于：
+## **它不是问“哪个最常用”**
+而是在问：
+## **“下面哪些方式都能提供 access”**
+
+实际上题目里列的几条都成立：
+
+1. **Control Panel / Administrative Tools / Computer Management / Shared Folders / Shares**
+   - 这是图形界面里的标准管理路径之一
+
+2. **Windows command-line interface > `net share`**
+   - 命令行也可以查看/管理共享信息
+
+3. **Windows 11 的 Windows Tools > Computer Management > Shared Folders > Shares**
+   - 只是新版本名称/入口稍有变化，本质还是能到同一个管理位置
+
+所以答案才是：
+## **All of the above**
+
+### 为什么你会选错
+因为你选的那条本身**并不假**，
+它确实能进入共享文件夹管理。
+
+但这题不是单选“唯一正确路径”，
+而是在考你：
+## **图形界面路径和命令行路径都能访问共享管理**
+
+### 最短记忆法
+## **Shared folders 不只一种入口：MMC 能进，`net share` 也能看。**
+
+### 一句话口诀
+## **共享管理看结果，不只看一路；GUI 能进，命令行也能进。**
