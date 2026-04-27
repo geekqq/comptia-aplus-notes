@@ -4324,3 +4324,57 @@ Windows 图形界面里的标准做法就是：
 
 ### 一句话口诀
 ## **想把共享变成 X:，就去 This PC 里 Map network drive。**
+
+---
+
+# 2026-04-27 Allow an app through Windows Defender Firewall
+
+![Allow an app through Windows Defender Firewall](images/2026-04-27-core2-firewall-allow-app-paths.jpg)
+
+**题目简述：**
+Which of the steps listed below provide(s) access to an interface that allows users to modify how apps communicate through Windows Defender Firewall? (Select all that apply)
+
+- 你选对的：
+  - Windows Control Panel (category view) > System and Security > Allow an app through Windows Firewall (under Windows Defender Firewall)
+  - Windows Control Panel (icon view) > Windows Defender Firewall > Allow an app or feature through Windows Defender Firewall
+- 你漏掉的正确答案：
+  - Windows Control Panel (icon view) > Network and Sharing Center > Windows Defender Firewall (bottom left pane) > Allow an app or feature through Windows Defender Firewall
+
+### 为什么你漏掉的那条也对
+这题考的是：
+## **能不能进入同一个目标界面**
+
+不是只考“最短路径”或“最标准路径”。
+
+你漏掉的那条虽然绕一点：
+- 先进 **Network and Sharing Center**
+- 再从左下角跳到 **Windows Defender Firewall**
+- 再点 **Allow an app or feature...**
+
+但它最后确实也能到：
+## **允许应用通过 Windows Defender Firewall 的那个界面**
+
+所以它也算正确。
+
+### 为什么第三条不对
+- `Network and Internet > Windows Defender Firewall > ...`
+
+这条问题在于它给出的分类路径不准确，
+并不是题库认可的标准 Control Panel 导航方式。
+
+也就是说，这题不是所有“看起来差不多”的路径都算，
+而是要选：
+## **真实能到目标界面的路径**
+
+### 这题的核心思路
+只要最后能进入：
+- **Allow an app through Windows Defender Firewall**
+
+而且中间路径在 Windows 控制面板里是合理成立的，
+就可能是正确项。
+
+### 最短记忆法
+## **防火墙允许应用，不只一个入口；Firewall 本页能进，Network and Sharing Center 也可能绕进去。**
+
+### 一句话口诀
+## **多选题别只盯最短路；能到同一防火墙界面的入口，都要留意。**
