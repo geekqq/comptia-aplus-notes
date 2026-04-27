@@ -4028,3 +4028,47 @@ Which of the following statements are true regarding resource sharing in Windows
 
 ### 一句话口诀
 ## **工作组：本地账户、逐台配置、小网络；域环境才是 AD 集中管。**
+
+---
+
+# 2026-04-27 管理共享的隐藏后缀
+
+![管理共享的隐藏后缀](images/2026-04-27-core2-hidden-admin-share-dollar.jpg)
+
+**题目简述：**
+Which character, when appended to the end of the name of a network share in Windows, indicates that the network share is intended for administrative access and not visible to regular users?
+
+- 你的答案：#
+- 正确答案：$
+
+### 为什么正确答案是 $
+在 Windows 里，
+如果共享名后面加上：
+## **$**
+
+这个共享就会变成：
+## **隐藏共享（hidden share）**
+
+普通用户在网络浏览里通常不会直接看到，
+但只要知道准确路径、并且权限够，仍然可以访问。
+
+常见例子：
+- `C$`
+- `ADMIN$`
+- `IPC$`
+
+这些都属于很经典的 Windows 管理共享。
+
+### 为什么不是 #
+`#` 在这里没有这个特殊含义。
+这题就是单纯考你：
+## **Windows 隐藏/管理共享的后缀记号是什么**
+
+答案就是：
+## **$**
+
+### 最短记忆法
+## **Windows 共享名后面加 $ = 隐藏共享 / 管理共享。**
+
+### 一句话口诀
+## **共享想隐藏，尾巴加美元。**
