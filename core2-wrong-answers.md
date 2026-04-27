@@ -2892,3 +2892,91 @@ Windows CLI 里最标准就该想到：
 
 **一句话：**
 以后只要题目里出现 **LAN / VPN / Proxy**，优先想 **Connections**；出现 **security zones / trusted sites**，就转去 **Security**。
+
+---
+
+## Devices and Printers 是简化设备视图，可增删设备也可做故障排除，不是详细驱动管理页
+![Devices and Printers simplified view and troubleshooting](images/2026-04-26-core2-devices-and-printers-simplified-view-troubleshooting.jpg)
+
+**题干：** Which of the answers listed below refer to features of the Windows Devices and Printers Control Panel applet? (Select 3 answers)
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Allows users to add/remove wired and wireless devices / Provides a detailed view of all connected devices / Allows users to troubleshoot a device that is not working properly |
+| ✅ 正确答案 | Allows users to add/remove wired and wireless devices / Provides a simplified view of all connected devices / Allows users to troubleshoot a device that is not working properly |
+
+### 这题错在哪里
+你选对了两项：
+- **Allows users to add/remove wired and wireless devices**
+- **Allows users to troubleshoot a device that is not working properly**
+
+错的是把：
+- **Provides a detailed view of all connected devices**
+
+选进去了。
+
+真正正确的是：
+- **Provides a simplified view of all connected devices**
+
+---
+
+## 为什么是 simplified view
+**Devices and Printers** 的定位更像：
+## **给用户一个比较直观、简化的设备总览界面**
+
+它会把：
+- 打印机
+- 蓝牙设备
+- 外接设备
+- 部分已连接硬件
+
+用比较容易理解的方式展示出来，
+方便普通用户做：
+- 添加设备
+- 删除设备
+- 查看基本状态
+- 运行故障排除
+
+所以它不是那种“详细技术参数/驱动层级/硬件树状结构”的页面。
+
+那种更细、更底层、更技术性的查看，通常更像：
+## **Device Manager 的风格**
+
+---
+
+## 为什么 detailed view 不对
+题目里的 **detailed view of all connected devices** 听起来更像：
+- 设备管理器（Device Manager）
+- 更底层的硬件详情
+- 驱动与资源级别的查看
+
+而不是 **Devices and Printers** 这种偏用户友好的入口。
+
+所以这题的关键就是区分：
+## **Devices and Printers = 简化设备视图**
+## **Device Manager = 详细硬件/驱动视图**
+
+---
+
+## 其他选项为什么不对
+### Does not include troubleshooting features
+错，因为它**确实带 troubleshooting**。
+
+### Allows users to restore a device driver to the previously installed version
+这更像 **Device Manager 里的 driver rollback**，不是 Devices and Printers 的核心功能。
+
+---
+
+## 最简单记忆法
+## **Devices and Printers 给用户看“设备概览”，Device Manager 给技术员看“设备细节”。**
+
+再压缩一句：
+## **Printers 看简图，Manager 看细节。**
+
+---
+
+## 一句话口诀
+## **增删排障去 Devices and Printers，驱动细节去 Device Manager。**
+
+**一句话：**
+以后看到 **Devices and Printers**，先想 **简化视图 + 添加/删除设备 + 故障排除**；看到 **详细硬件/驱动信息**，就别选它，去想 **Device Manager**。
