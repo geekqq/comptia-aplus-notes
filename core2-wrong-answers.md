@@ -3912,3 +3912,63 @@ Which section of the Settings app in Windows 10 includes options for managing Bl
 
 ### 一句话口诀
 ## **管理连接设备看 Devices；管驱动硬件细节才看 Device Manager。**
+
+---
+
+# 2026-04-27 Windows 域环境下的资源共享
+
+![Windows 域环境下的资源共享](images/2026-04-27-core2-domain-resource-sharing.jpg)
+
+**题目简述：**
+Which of the answers listed below best describe how resource sharing is managed in a Windows domain environment? (Select 3 answers)
+
+- 你选对的：
+  - Centralized access control
+  - Active Directory integration
+- 你选错的：
+  - Manual configuration per device
+- 你漏掉的正确答案：
+  - Scalable across many users/devices
+
+### 为什么 Manual configuration per device 不对
+这条更像：
+## **工作组 / 小网络 / 很原始的分散管理**
+
+如果每台机器、每个共享资源都要手动单独配置，
+那就说明它**不够集中，也不够可扩展**。
+
+而题目问的是：
+## **Windows domain environment**
+
+域环境的核心就是：
+- 集中身份认证
+- 集中权限管理
+- 集中管理共享资源
+
+所以它不强调“每台设备手动配”，反而强调统一管理。
+
+### 为什么 Scalable across many users/devices 是正确答案
+域环境最重要的价值之一就是：
+## **规模化管理**
+
+有了：
+- Active Directory
+- 中央账户/组策略/权限控制
+
+你就可以把同一套资源共享和访问规则，
+扩展到很多：
+- 用户
+- 电脑
+- 服务器
+- 打印机/共享文件夹
+
+所以它天然比“本地用户逐台配置”更适合大规模环境。
+
+### 这题的 3 个核心点
+Windows 域环境下的资源共享，关键词就是：
+- **Centralized access control**
+- **Active Directory integration**
+- **Scalable across many users/devices**
+
+### 最短口诀
+## **域 = AD + 集中权限 + 可扩展；不是逐台手工配。**
