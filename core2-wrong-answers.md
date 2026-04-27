@@ -2641,3 +2641,84 @@ Windows CLI 里最标准就该想到：
 
 **一句话：**
 以后看到 **pop-up blocker**，直接先想 **Privacy**；看到 **certificates / AutoComplete** 才更容易联想到 **Content**。
+
+---
+
+## Internet Properties 里的高级 Cookie 管理选项在 Privacy，不在 Security
+![Internet Properties advanced cookie management Privacy tab](images/2026-04-26-core2-internet-properties-advanced-cookie-management-privacy-tab.jpg)
+
+**题干：** Which tab of the Internet Properties applet in Windows provides access to advanced cookie management options?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Security |
+| ✅ 正确答案 | Privacy |
+
+### 为什么这题是 Privacy
+题目问的是：
+## **advanced cookie management options**
+
+只要看到：
+- cookie
+- privacy level
+- site handling / cookie handling
+- pop-up blocker
+
+大概率就要先想到：
+## **Privacy 选项卡**
+
+因为 **Internet Properties → Privacy** 里面本来就负责：
+- Cookie 处理策略
+- 隐私级别
+- 站点例外设置
+- 高级 Cookie 选项
+- Pop-up Blocker
+
+所以这题答案是：
+## **Privacy**
+
+---
+
+## 为什么不是 Security
+**Security** 选项卡主要在管：
+- Internet / Local intranet / Trusted sites / Restricted sites 区域
+- 安全级别
+- 站点信任区域分配
+
+它重点是：
+## **安全区域和安全级别**
+不是 Cookie 的高级管理。
+
+所以这题如果选 Security，
+说明把“安全”这个大词和“隐私/Cookie管理”混在一起了。
+
+---
+
+## 考点本质
+这题其实和前两题是同一组：
+## **Internet Properties 各 tab 的职责区分**
+
+### 快速对应
+- **General** → 浏览历史、主页
+- **Security** → 安全区域
+- **Privacy** → Cookie、隐私级别、弹窗拦截
+- **Content** → 证书、AutoComplete
+- **Connections** → 拨号/VPN/代理
+- **Programs** → 默认程序
+- **Advanced** → 高级系统/浏览器设置
+
+---
+
+## 最简单记忆法
+## **Cookie 管理看 Privacy；站点信任区看 Security。**
+
+再压缩一句：
+## **cookie → Privacy，zone → Security。**
+
+---
+
+## 一句话口诀
+## **隐私管 Cookie，安全管区域。**
+
+**一句话：**
+以后看到题干里有 **advanced cookie management**，就直接往 **Privacy** 想；如果看到 **trusted sites / security zones**，才是 **Security**。
