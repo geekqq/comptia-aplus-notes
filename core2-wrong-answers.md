@@ -3972,3 +3972,59 @@ Windows 域环境下的资源共享，关键词就是：
 
 ### 最短口诀
 ## **域 = AD + 集中权限 + 可扩展；不是逐台手工配。**
+
+---
+
+# 2026-04-27 Windows 工作组下的资源共享
+
+![Windows 工作组下的资源共享](images/2026-04-27-core2-workgroup-resource-sharing.jpg)
+
+**题目简述：**
+Which of the following statements are true regarding resource sharing in Windows workgroups? (Select 3 answers)
+
+- 你选错的：
+  - Scalable across many users/devices
+  - Active Directory integration
+  - Centralized access control
+- 你漏掉的正确答案：
+  - Limited to small networks
+  - Manual configuration per device
+  - Local user-based access control
+
+### 这题为什么容易错
+因为它就是上一题 **domain** 的反面题。
+
+如果你脑子里还停留在“企业网络统一管理”的画面，
+就会把域环境特征误套到 **workgroup** 上。
+
+### 工作组的核心特征
+工作组没有：
+- Active Directory
+- 集中身份认证
+- 集中权限控制
+
+它更像：
+## **每台机器各管各的**
+
+所以对应的 3 个正确点是：
+
+1. **Limited to small networks**
+   - 更适合小规模环境
+
+2. **Manual configuration per device**
+   - 共享、权限、访问很多都得逐台处理
+
+3. **Local user-based access control**
+   - 权限控制更多依赖本机账户，不是域账户统一管
+
+### 为什么你选的三项不对
+- **Scalable across many users/devices** → 这是域环境更擅长
+- **Active Directory integration** → 工作组没有 AD
+- **Centralized access control** → 工作组不是集中式管理
+
+### 最短对照记忆
+- **Domain** = AD + centralized + scalable
+- **Workgroup** = local + manual + small
+
+### 一句话口诀
+## **工作组：本地账户、逐台配置、小网络；域环境才是 AD 集中管。**
