@@ -695,6 +695,52 @@ owner 原来的 `w` 会被清掉。
 
 ---
 
+## su 默认要输入目标用户密码；题里通常就是 root 密码
+![su asks target user password question](images/2026-04-28-core2-su-asks-target-user-password.jpg)
+
+**题干：** A user runs the command su in Linux and is prompted for a password. Which password is requested?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | The current user's password |
+| ✅ 正确答案 | The root user's password |
+
+### 这题为什么是 root 密码
+`su` 的意思是：
+## **switch user**
+默认不带用户名时，通常就是切换到：
+## **root**
+
+所以执行：
+## `su`
+系统一般要求输入的是：
+## **目标用户的密码**
+在这题里，目标用户默认就是 **root**，
+所以答案是：
+## **The root user's password**
+
+### 为什么不是当前用户密码
+因为 `su` 不是拿当前账号密码再次验证自己，
+而是要验证你有没有资格切换到另一个用户。
+
+所以它检查的是：
+## **你要切换过去的那个用户的密码**
+
+### 这题最该记住的本质
+- `su` = switch user
+- 默认目标 = root
+- 所以默认提示输入 = root 密码
+
+### 顺手和 sudo 区分一下
+这是很多人容易混的地方：
+- **su**：通常要输入 **目标用户密码**（默认常是 root 密码）
+- **sudo**：通常输入 **当前用户自己的密码**（前提是你在 sudoers 里）
+
+### 口诀
+**su 看对方；sudo 验自己。**
+
+---
+
 ## 跨 Windows / macOS / Linux 最广兼容先想 FAT32 + exFAT，不是 NTFS
 ![Cross-platform filesystems FAT32 exFAT question](images/2026-04-24-core2-cross-platform-filesystems-fat32-exfat.jpg)
 
