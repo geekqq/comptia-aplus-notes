@@ -166,6 +166,58 @@
 
 ---
 
+## 启动盘整盘加密 = FileVault，不是 Gatekeeper
+![FileVault startup disk encryption question](images/2026-04-28-core2-filevault-startup-disk-encryption.jpg)
+
+**题干：** Which macOS feature encrypts the contents of the startup disk to protect user data from unauthorized access?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Gatekeeper |
+| ✅ 正确答案 | FileVault |
+
+### 这题核心关键词
+题目问的是：
+- **encrypts the contents**
+- **startup disk**
+- **protect user data from unauthorized access**
+
+只要看到：
+## **磁盘加密 / 整盘加密 / 启动盘加密**
+就先想：
+## **FileVault**
+
+### FileVault 是什么
+**FileVault** 是 macOS 的全磁盘加密功能，
+用于给 Mac 的启动盘内容加密。
+
+作用是：
+- 别人拿到你的电脑
+- 即使把硬盘拆下来
+- 没有授权也不能轻易读取里面的数据
+
+所以它保护的是：
+## **存储在磁盘上的数据**
+
+### 为什么不是 Gatekeeper
+**Gatekeeper** 保护的不是硬盘数据，
+而是：
+- 控制应用程序来源
+- 阻止未签名或不受信任的软件运行
+
+也就是说：
+- **Gatekeeper** = 管“能不能装 / 能不能运行这个 App”
+- **FileVault** = 管“磁盘里的数据有没有被加密”
+
+### 其他选项顺手区分
+- **Keychain**：保存密码、证书、密钥等凭据
+- **TrueCrypt**：老的第三方加密工具，不是 macOS 这题的标准内置答案
+
+### 口诀
+**装软件看 Gatekeeper；加密硬盘想 FileVault；密码凭据在 Keychain。**
+
+---
+
 ## 跨 Windows / macOS / Linux 最广兼容先想 FAT32 + exFAT，不是 NTFS
 ![Cross-platform filesystems FAT32 exFAT question](images/2026-04-24-core2-cross-platform-filesystems-fat32-exfat.jpg)
 
