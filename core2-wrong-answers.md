@@ -534,6 +534,66 @@
 
 ---
 
+## chmod a=r 会把所有人权限都改成只读 = 444
+![chmod a equals r permissions question](images/2026-04-28-core2-chmod-a-equals-r-permissions.jpg)
+
+**题干：** If the current permissions for the config.cfg file in Linux are set to -rw-r--r--, what would be the resulting set of permissions after executing chmod a=r config.cfg on that file?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | 644 |
+| ✅ 正确答案 | 444 |
+
+### 这题为什么不是 644
+原权限是：
+- `-rw-r--r--`
+- 也就是 **644**
+
+但题目不是问“原来是多少”，
+而是问执行这条命令之后：
+## `chmod a=r config.cfg`
+
+### 这条命令什么意思
+拆开看：
+- **a** = all（所有人：owner / group / others）
+- **=** = 直接设置成（覆盖原权限）
+- **r** = read（只读）
+
+关键就在这个：
+## `=` 不是“追加”，而是“重设/覆盖”
+
+所以执行后：
+- owner = r--
+- group = r--
+- others = r--
+
+结果就是：
+## **444**
+
+### 为什么不是 644
+如果结果还是 **644**，说明 owner 还有写权限 `w`。
+但 `a=r` 已经把所有人的权限**重设为只读**了，
+owner 原来的 `w` 会被清掉。
+
+### 这题最该抓的考点
+不是数字换算本身，
+而是：
+## `=` 会覆盖原权限
+对比记：
+- `+` = 添加权限
+- `-` = 移除权限
+- `=` = 直接指定成什么，就只剩什么
+
+### 快速记忆
+- `chmod a=r file` → everyone gets read only → **444**
+- `a` = all
+- `=` = overwrite/reset
+
+### 口诀
+**加权限看 +，减权限看 -，等号 = 直接重写；a=r 一刀切，全员只读 444。**
+
+---
+
 ## 跨 Windows / macOS / Linux 最广兼容先想 FAT32 + exFAT，不是 NTFS
 ![Cross-platform filesystems FAT32 exFAT question](images/2026-04-24-core2-cross-platform-filesystems-fat32-exfat.jpg)
 
