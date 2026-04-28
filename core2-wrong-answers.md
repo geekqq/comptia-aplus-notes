@@ -218,6 +218,54 @@
 
 ---
 
+## 现代 Red Hat 系包管理器 = dnf，不是 dpkg
+![DNF Red Hat package manager question](images/2026-04-28-core2-dnf-redhat-package-manager.jpg)
+
+**题干：** Which of the answers listed below refers to the software package manager used in modern Red Hat and Red Hat-based Linux distributions?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | dpkg |
+| ✅ 正确答案 | dnf |
+
+### 这题怎么判断
+关键词是：
+- **modern Red Hat**
+- **Red Hat-based Linux distributions**
+- **software package manager**
+
+只要看到 **现代 Red Hat / RHEL / Fedora 系** 的包管理器，
+优先想：
+## **dnf**
+
+### 为什么是 dnf
+**dnf** 是现代 Red Hat 系发行版常见的包管理器，
+可以理解成是较新的管理工具。
+
+考试里你可以直接记：
+- **Red Hat / Fedora 现代题目** → **dnf**
+
+### 为什么不是 dpkg
+**dpkg** 是：
+- Debian / Ubuntu 这一路体系常见的底层包管理工具
+
+所以：
+- **dpkg** 不属于 Red Hat 阵营
+- 它和 **apt** 更常一起出现在 Debian 系题目里
+
+### 其他选项顺手区分
+- **apt**：Debian / Ubuntu 常见高级包管理工具
+- **pkg**：常见于 BSD 等其他环境，不是这题 Red Hat 标准答案
+
+### 快速分类记忆
+- **Red Hat / Fedora** → **dnf**
+- **Debian / Ubuntu** → **apt / dpkg**
+
+### 口诀
+**红帽现代用 dnf；Debian 阵营想 apt、dpkg。**
+
+---
+
 ## 跨 Windows / macOS / Linux 最广兼容先想 FAT32 + exFAT，不是 NTFS
 ![Cross-platform filesystems FAT32 exFAT question](images/2026-04-24-core2-cross-platform-filesystems-fat32-exfat.jpg)
 
