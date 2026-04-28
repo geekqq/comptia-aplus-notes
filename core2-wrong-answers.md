@@ -741,6 +741,59 @@ owner 原来的 `w` 会被清掉。
 
 ---
 
+## 查看当前路由表和默认网关，用 ip route show，不是 netstat -a
+![ip route show default gateway question](images/2026-04-28-core2-ip-route-show-default-gateway.jpg)
+
+**题干：** A Linux system is experiencing a network outage. The technician suspects an issue with the default gateway. Which command should the technician run to verify the current routing table, including the default gateway?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | netstat -a |
+| ✅ 正确答案 | ip route show |
+
+### 为什么是 `ip route show`
+题目要看的是：
+- **current routing table**
+- **including the default gateway**
+
+这就是：
+## **查看当前路由表**
+标准命令就是：
+## `ip route show`
+
+它会列出：
+- 默认路由（default via ...）
+- 各网段路由
+- 出口接口等信息
+
+所以排查默认网关时非常合适。
+
+### 为什么不是 `netstat -a`
+`netstat -a` 主要看的是：
+- 所有连接
+- 监听端口
+- socket 状态
+
+它**不是专门看当前路由表**的。
+
+所以这题考点不是“网络状态很多信息”，
+而是很明确地要：
+## **routing table**
+
+### 其他选项顺手区分
+- **route print**：更常见于 Windows 语境，不是这题 Linux 标准答案
+- **ip route get**：通常是查询到某个特定目标地址时会走哪条路由，不是直接完整查看当前路由表
+
+### 快速分类记忆
+- **ip route show** = 看整张路由表 / 默认网关
+- **ip route get** = 看到某个目标会怎么走
+- **netstat -a** = 看连接和监听状态
+
+### 口诀
+**查路由表用 route show；查连接端口看 netstat。**
+
+---
+
 ## 跨 Windows / macOS / Linux 最广兼容先想 FAT32 + exFAT，不是 NTFS
 ![Cross-platform filesystems FAT32 exFAT question](images/2026-04-24-core2-cross-platform-filesystems-fat32-exfat.jpg)
 
