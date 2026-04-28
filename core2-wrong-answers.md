@@ -266,6 +266,62 @@
 
 ---
 
+## 多协议数据传输工具 = curl，不是 wget
+![curl multi-protocol transfer question](images/2026-04-28-core2-curl-multi-protocol-transfer.jpg)
+
+**题干：** Which of the following Linux command-line tools is specifically designed for transferring data using a wide range of supported internet protocols such as HTTP, FTP, or SMTP?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | wget |
+| ✅ 正确答案 | curl |
+
+### 这题核心关键词
+看到这些词要警觉：
+- **transferring data**
+- **wide range of supported internet protocols**
+- **HTTP, FTP, SMTP**
+
+只要题目强调：
+## **支持很多协议的数据传输工具**
+就优先想：
+## **curl**
+
+### 为什么是 curl
+**curl** 的特点就是：
+- 支持很多网络协议
+- 常用于命令行发请求、上传/下载数据、和服务交互
+
+考试里它常被考成：
+- 多协议
+- 数据传输
+- HTTP/FTP 等网络请求工具
+
+### 为什么不是 wget
+**wget** 当然也能下载文件，
+但它更常见的记忆点是：
+- **从 Web 下载内容**
+- 偏“抓取/下载”
+
+而这题考点强调的是：
+## **支持广泛协议的数据传输工具**
+所以更标准的答案是 **curl**。
+
+### 其他选项顺手区分
+- **scp**：通过 SSH 在主机之间安全复制文件
+- **rsync**：做文件同步、增量复制、备份
+
+### 快速分类记忆
+- **curl** = 多协议数据传输 / 发请求
+- **wget** = 下载网页或文件
+- **scp** = SSH 安全复制
+- **rsync** = 同步 / 增量复制
+
+### 口诀
+**多协议传数据想 curl；只说下载常想 wget；主机拷贝用 scp；同步备份看 rsync。**
+
+---
+
 ## 跨 Windows / macOS / Linux 最广兼容先想 FAT32 + exFAT，不是 NTFS
 ![Cross-platform filesystems FAT32 exFAT question](images/2026-04-24-core2-cross-platform-filesystems-fat32-exfat.jpg)
 
