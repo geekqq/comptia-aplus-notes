@@ -478,6 +478,62 @@
 
 ---
 
+## Linux 的系统与服务管理器是 systemd，不是 systemctl
+![systemd vs systemctl question](images/2026-04-28-core2-systemd-vs-systemctl.jpg)
+
+**题干：** Which of the answers listed below refers to the standard Linux system and service manager that handles the boot process and manages system resources?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | systemctl |
+| ✅ 正确答案 | systemd |
+
+### 这题为什么选 systemd
+题目问的是：
+- **system and service manager**
+- **handles the boot process**
+- **manages system resources**
+
+这说的是 Linux 里的 **核心管理系统本体**，
+所以答案是：
+## **systemd**
+
+### systemd 是什么
+**systemd** 是现代很多 Linux 发行版使用的：
+- 初始化系统（init system）
+- 服务管理器
+- 启动流程管理者
+
+它负责系统开机后的很多核心管理工作。
+
+### 为什么不是 systemctl
+**systemctl** 不是管理系统本体，
+而是：
+## **用来控制 systemd 的命令行工具**
+
+也就是说：
+- **systemd** = 后台真正干活的管理系统
+- **systemctl** = 你拿来操作它的命令
+
+比如：
+- `systemctl start nginx`
+- `systemctl status sshd`
+
+这些命令是在“控制 systemd 管理的服务”。
+
+### 其他选项顺手区分
+- **bootmgr**：Windows Boot Manager，不是 Linux
+- **init**：老一代初始化系统概念/实现，这题问“standard system and service manager”通常指现代的 **systemd**
+
+### 快速分类记忆
+- **systemd** = 系统/服务管理器本体
+- **systemctl** = 控制 systemd 的命令
+
+### 口诀
+**d 在后台当大脑；ctl 在前台发命令。**
+
+---
+
 ## 跨 Windows / macOS / Linux 最广兼容先想 FAT32 + exFAT，不是 NTFS
 ![Cross-platform filesystems FAT32 exFAT question](images/2026-04-24-core2-cross-platform-filesystems-fat32-exfat.jpg)
 
