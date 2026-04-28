@@ -594,6 +594,62 @@ owner 原来的 `w` 会被清掉。
 
 ---
 
+## 只改文件所属组，用 chown :group filename
+![chown group ownership admins question](images/2026-04-28-core2-chown-group-ownership-admins.jpg)
+
+**题干：** A Linux system admin wants to change the group ownership of backup.tar.gz to admins. Which command should they use?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | chown +g admins backup.tar.gz |
+| ✅ 正确答案 | chown :admins backup.tar.gz |
+
+### 这题为什么是 `chown :admins backup.tar.gz`
+题目要的是：
+## **change the group ownership**
+也就是：
+## **只修改所属组，不改 owner**
+
+在 `chown` 里，格式常见是：
+- `chown owner file`
+- `chown owner:group file`
+- `chown :group file`
+
+所以如果 **只改 group**，正确写法就是：
+## `chown :admins backup.tar.gz`
+
+### 为什么前面要带冒号 `:`
+这个冒号非常关键：
+- 冒号前面是 **owner**
+- 冒号后面是 **group**
+
+写成：
+- `:admins`
+表示：
+- owner 留空，不改
+- group 改成 `admins`
+
+### 为什么不是 `chown +g admins backup.tar.gz`
+这个写法混淆了 `chmod` 和 `chown`：
+- `+g` 这种风格更像权限位/模式修改的思路
+- **chown** 不是这么改 group ownership 的
+
+所以它不是合法的这题标准答案。
+
+### 其他选项为什么不对
+- `chown admins backup.tar.gz` → 会把 **owner** 改成 `admins`，不是改 group
+- `chown backup.tar.gz :admins` → 参数顺序错了，`chown` 不是这么写
+
+### 快速分类记忆
+- **改 owner** → `chown user file`
+- **改 owner 和 group** → `chown user:group file`
+- **只改 group** → `chown :group file`
+
+### 口诀
+**只改组，前面留空加冒号；`:admins` 一看就是只换 group。**
+
+---
+
 ## 跨 Windows / macOS / Linux 最广兼容先想 FAT32 + exFAT，不是 NTFS
 ![Cross-platform filesystems FAT32 exFAT question](images/2026-04-24-core2-cross-platform-filesystems-fat32-exfat.jpg)
 
