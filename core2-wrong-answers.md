@@ -650,6 +650,51 @@ owner 原来的 `w` 会被清掉。
 
 ---
 
+## 按文件名通配查找，用 find -name，不是 -file
+![find name default conf question](images/2026-04-28-core2-find-name-default-conf.jpg)
+
+**题干：** Which command in Linux can be used to search the /etc directory for a file that starts with the string "default" and has a .conf extension?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | find /etc -file "default*.conf" |
+| ✅ 正确答案 | find /etc -name "default*.conf" |
+
+### 这题为什么是 `find /etc -name "default*.conf"`
+题目要的是：
+- 在 `/etc` 里找文件
+- 文件名以 `default` 开头
+- 以 `.conf` 结尾
+
+这就是标准的：
+## **按文件名模式匹配搜索**
+所以 `find` 里应该用：
+## **`-name`**
+
+完整写法就是：
+## `find /etc -name "default*.conf"`
+
+### 为什么不是 `-file`
+因为 `find` 里并没有一个常规这样用的 `-file` 选项来表示“按文件名查找”。
+你这里是把“文件”这个概念，和 `find` 的真实参数混在一起了。
+
+考试里要记住：
+- **按名字匹配** → `-name`
+
+### 其他选项为什么不对
+- `-type "default*.conf"`：`-type` 是用来指定文件类型的，比如 `f`（file）、`d`（directory），不是拿来放文件名模式的
+- `-regex "default*.conf"`：正则方式不是这题最直接标准答案，而且题目明显是在考常用的文件名通配方式
+
+### 快速分类记忆
+- `find /path -name "pattern"` = 按文件名模式找
+- `find /path -type f` = 只找普通文件
+- `find /path -regex "..."` = 用正则匹配
+
+### 口诀
+**找名字先想 -name；找类型才用 -type。**
+
+---
+
 ## 跨 Windows / macOS / Linux 最广兼容先想 FAT32 + exFAT，不是 NTFS
 ![Cross-platform filesystems FAT32 exFAT question](images/2026-04-24-core2-cross-platform-filesystems-fat32-exfat.jpg)
 
