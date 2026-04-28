@@ -4378,3 +4378,57 @@ Which of the steps listed below provide(s) access to an interface that allows us
 
 ### 一句话口诀
 ## **多选题别只盯最短路；能到同一防火墙界面的入口，都要留意。**
+
+---
+
+# 2026-04-27 Set up a new connection or network 的入口
+
+![Set up a new connection or network 的入口](images/2026-04-27-core2-setup-new-connection-or-network.jpg)
+
+**题目简述：**
+Which sequence of steps in Windows provides access to an interface for creating network connections? (Select 2 answers)
+
+- 你选对的：
+  - Windows Control Panel (icon view) > Network and Sharing Center > Set up a new connection or network
+- 你漏掉的正确答案：
+  - Windows Control Panel (category view) > View network status and tasks > Set up a new connection or network
+- 你选错的：
+  - Windows Control Panel (category view) > Network and Internet > Set up a new connection or network
+
+### 为什么你漏掉的那条是对的
+因为 **View network status and tasks** 本质上就是：
+## **进入 Network and Sharing Center 的分类视图入口**
+
+所以这两条其实最后都会到同一个地方：
+- **icon view** 直接进 **Network and Sharing Center**
+- **category view** 先点 **View network status and tasks**，再到同一个中心
+
+然后都能看到：
+## **Set up a new connection or network**
+
+### 为什么你选错的那条不对
+- **Network and Internet > Set up a new connection or network**
+
+这条错在：
+## **少了一层真实入口**
+
+在 category view 下，
+**Network and Internet** 只是更上层的分类，
+它本身不是题目这里要的直接可点击结果项。
+
+真正题库认可的路径会写成：
+## **View network status and tasks**
+因为这是那个页面上的具体入口名称。
+
+### 这题本质在考什么
+它考的是：
+- **icon view 直接名**
+- **category view 里显示给用户的具体链接名**
+
+而不是让你只写一个大类名字就算对。
+
+### 最短记忆法
+## **建网络连接：图标视图看 Network and Sharing Center；分类视图看 View network status and tasks。**
+
+### 一句话口诀
+## **分类题别停在大类名；要点到真正那条可点击入口。**
