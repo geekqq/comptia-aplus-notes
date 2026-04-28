@@ -322,6 +322,48 @@
 
 ---
 
+## Linux 里是 traceroute，不是 tracert
+![Linux tracert false question](images/2026-04-28-core2-tracert-vs-traceroute-linux.jpg)
+
+**题干：** In Linux, tracert is a command-line utility that maps the path packets take from the local system to a remote host, displaying each hop along the route and round-trip times. It is used to diagnose network routing issues, identify bottlenecks, and verify connectivity between hosts.
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | True |
+| ✅ 正确答案 | False |
+
+### 为什么是 False
+题目描述的功能本身没有错：
+- 显示每一跳（hop）
+- 看往返时间
+- 排查路由问题
+
+错在命令名：
+## **Linux 里常用的是 traceroute，不是 tracert**
+
+### 怎么区分
+- **tracert** → Windows 常见命令
+- **traceroute** → Linux / Unix 常见命令
+
+所以题目如果写：
+- “In Linux, **tracert** …”
+那就是错的。
+
+### 这题最容易被绕进去的地方
+它故意把“功能描述”写得很对，
+让你忽略真正考点不是功能，
+而是：
+## **命令属于哪个操作系统**
+
+### 快速记忆
+- **Windows**：`tracert`
+- **Linux**：`traceroute`
+
+### 口诀
+**Windows 少两个字母：tracert；Linux 写全：traceroute。**
+
+---
+
 ## 跨 Windows / macOS / Linux 最广兼容先想 FAT32 + exFAT，不是 NTFS
 ![Cross-platform filesystems FAT32 exFAT question](images/2026-04-24-core2-cross-platform-filesystems-fat32-exfat.jpg)
 
