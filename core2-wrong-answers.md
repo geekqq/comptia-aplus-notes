@@ -364,6 +364,61 @@
 
 ---
 
+## 看文件/目录占了多少空间 = du，不是 df
+![du vs df disk usage question](images/2026-04-28-core2-du-vs-df-disk-usage.jpg)
+
+**题干：** Which of the following Linux commands is used to estimate and display the amount of disk space used by individual files and directories?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | df |
+| ✅ 正确答案 | du |
+
+### 这题核心区别
+这题考的是 **du 和 df 的经典对比**。
+
+看到关键词：
+- **individual files and directories**
+- **disk space used**
+
+就该想到：
+## **du**
+
+### du 是什么
+**du = disk usage**
+用来看：
+- 某个文件用了多少空间
+- 某个目录用了多少空间
+- 哪个文件夹特别大
+
+也就是：
+## **按文件 / 目录去看占用量**
+
+### 为什么不是 df
+**df = disk free**（常理解为看文件系统剩余/使用情况）
+它更偏向：
+- 整个分区 / 文件系统用了多少
+- 还剩多少可用空间
+
+所以：
+- **du** 看“文件和目录占用”
+- **df** 看“磁盘/分区整体空间情况”
+
+### 其他选项顺手区分
+- **fdisk**：磁盘分区工具
+- **parted**：磁盘分区管理工具
+
+它们都不是用来看文件/目录空间占用的。
+
+### 快速分类记忆
+- **du** = file / directory usage
+- **df** = filesystem free / overall disk space
+
+### 口诀
+**查文件夹多大用 du；看磁盘还剩多少用 df。**
+
+---
+
 ## 跨 Windows / macOS / Linux 最广兼容先想 FAT32 + exFAT，不是 NTFS
 ![Cross-platform filesystems FAT32 exFAT question](images/2026-04-24-core2-cross-platform-filesystems-fat32-exfat.jpg)
 
