@@ -3,6 +3,50 @@
 用于记录 Core 2 错题、易混概念、简短中文解释和记忆口诀。
 后续新错题默认追加到这里。
 
+## Apple 的 RSR = Rapid Security Response（快速安全响应）
+![Apple RSR Rapid Security Response question](images/2026-04-28-core2-rsr-rapid-security-response.jpg)
+
+**题干：** Which of the answers listed below refers to an Apple-exclusive mechanism for deploying time-sensitive security patches independently of major OS updates?
+
+|  |  |
+| --- | --- |
+| ✅ 你的答案 | RSR |
+| ✅ 正确答案 | RSR |
+
+### RSR 是什么意思？
+**RSR = Rapid Security Response**
+中文可以记成：
+**快速安全响应**。
+
+这是 Apple 推出的一个机制，
+用来：
+- **不等大版本系统更新**
+- **先快速下发重要安全补丁**
+
+也就是说，
+它是专门给 **iPhone / iPad / Mac** 这类 Apple 生态设备用的“紧急安全补丁快车道”。
+
+### 为什么这题选 RSR
+题目里的关键词是：
+- **Apple-exclusive** → Apple 独有
+- **time-sensitive security patches** → 时间敏感的安全补丁
+- **independently of major OS updates** → 不依赖大版本系统更新
+
+这三个关键词合起来，指的就是：
+## **RSR（Rapid Security Response）**
+
+### 为什么其他选项不对
+- **YUM**：Linux 的包管理工具
+- **APT**：Debian / Ubuntu 常见包管理工具
+- **RPM**：Red Hat 系发行版的软件包格式 / 管理体系
+
+它们都不是 Apple 专属的快速安全补丁机制。
+
+### 口诀
+**Apple 快补丁，先想 RSR；Linux 装软件，再想 YUM / APT / RPM。**
+
+---
+
 ---
 
 ## 使用说明
