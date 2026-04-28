@@ -59,6 +59,61 @@
 ---
 ---
 
+## Apple 设备间无缝接力 = Continuity，不是 iCloud Drive
+![Apple Continuity question](images/2026-04-28-core2-continuity-apple-ecosystem.jpg)
+
+**题干：** A set of features allowing users to seamlessly transition tasks and data between different Apple devices is referred to as:
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | iCloud Drive |
+| ✅ 正确答案 | Continuity |
+
+### 这题核心在什么
+题目关键词是：
+- **seamlessly transition tasks and data**
+- **between different Apple devices**
+
+这不是单纯“存文件到云端”，
+而是指 **Apple 设备之间无缝接力、联动、切换任务** 的整套能力。
+
+所以答案是：
+## **Continuity**
+
+### Continuity 是什么
+**Continuity** 是 Apple 生态里的“设备协同总称”。
+常见例子包括：
+- 在 iPhone 开始写东西，Mac 上继续做
+- iPhone 复制，Mac 上直接粘贴（Universal Clipboard）
+- iPhone 来电话，Mac / iPad 也能接
+- Handoff、AirDrop、Universal Clipboard 等协同体验
+
+也就是说：
+**Continuity = Apple 设备间无缝衔接的一整套功能**。
+
+### 为什么不是 iCloud Drive
+**iCloud Drive** 主要是：
+- 云端文件存储
+- 文件同步
+
+它是 Continuity 生态的一部分相关服务，
+但它本身**不是“设备间任务无缝切换”这个总称**。
+
+所以：
+- **iCloud Drive** 更像“云盘 / 文件同步”
+- **Continuity** 才是“跨 Apple 设备无缝接力”
+
+### 为什么 Universal Clipboard 也不是最佳答案
+**Universal Clipboard** 只是 Continuity 下面的**一个具体功能**。
+题目问的是一整套 features 的名称，
+所以应该选更大的总称：
+## **Continuity**
+
+### 口诀
+**苹果设备接力干活，先想 Continuity；只是云端存文件，才想 iCloud Drive。**
+
+---
+
 ## 跨 Windows / macOS / Linux 最广兼容先想 FAT32 + exFAT，不是 NTFS
 ![Cross-platform filesystems FAT32 exFAT question](images/2026-04-24-core2-cross-platform-filesystems-fat32-exfat.jpg)
 
