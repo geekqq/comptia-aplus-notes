@@ -794,6 +794,55 @@ owner 原来的 `w` 会被清掉。
 
 ---
 
+## traceroute 看 hops / 主机名和 IP / RTT，不看总收发包数
+![traceroute output hops rtt question](images/2026-04-28-core2-traceroute-output-hops-rtt.jpg)
+
+**题干：** Which of the following answers refer(s) to the typical output of the Linux traceroute command? (Select all that apply)
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Total number of packets sent and received |
+| ✅ 正确答案 | Sequence of network devices (hops) from source to destination / Hostname (if resolvable), followed by the IP address, for each hop / Round-trip time measurements (in milliseconds) for each hop |
+
+### 这题在考什么
+这题考的是：
+## **traceroute 的典型输出内容**
+
+traceroute 通常会显示：
+- 从源到目标经过的 **每一跳（hops）**
+- 每一跳的 **主机名 / IP 地址**（如果能解析）
+- 每一跳的 **RTT 往返延迟**，通常是毫秒
+
+所以前 3 个都对。
+
+### 为什么 “Total number of packets sent and received” 不对
+这个更像是：
+- `ping` 的统计信息风格
+- 或其他网络诊断工具的汇总结果
+
+**traceroute** 的重点是：
+## **路径 + 每跳延迟**
+而不是最后给你一个“总共发了多少包、收了多少包”的汇总统计。
+
+### 你要这样记 traceroute
+看到 traceroute，就联想到：
+- hop 1、hop 2、hop 3...
+- 每跳的名字/IP
+- 每跳延迟时间
+
+而不是：
+- 总发送包数
+- 总接收包数
+
+### 快速分类记忆
+- **traceroute** = 路径 / hops / 每跳 RTT
+- **ping** = 连通性 / 往返延迟 / 常见收发包统计
+
+### 口诀
+**traceroute 看一路怎么走；ping 看通不通、丢不丢。**
+
+---
+
 ## 跨 Windows / macOS / Linux 最广兼容先想 FAT32 + exFAT，不是 NTFS
 ![Cross-platform filesystems FAT32 exFAT question](images/2026-04-24-core2-cross-platform-filesystems-fat32-exfat.jpg)
 
