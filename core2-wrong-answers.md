@@ -114,6 +114,58 @@
 
 ---
 
+## 多设备自动同步最新版文件 = iCloud Drive，不是 Continuity
+![iCloud Drive cloud sync question](images/2026-04-28-core2-icloud-drive-cloud-file-sync.jpg)
+
+**题干：** A user works on a MacBook at the office and wants to continue editing the same files later on their iPad at home. They need a solution that stores files in the cloud so the latest version is automatically available on all their Apple devices. Which macOS feature should they use?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Continuity |
+| ✅ 正确答案 | iCloud Drive |
+
+### 这题为什么是 iCloud Drive
+这题关键词不是“接力做任务”本身，
+而是：
+- **stores files in the cloud**
+- **latest version is automatically available**
+- **on all their Apple devices**
+
+这就是标准的：
+## **云端文件存储 + 自动同步最新版**
+所以答案应该是：
+## **iCloud Drive**
+
+### iCloud Drive 是什么
+**iCloud Drive** 是 Apple 的云端文件存储与同步服务。
+它适合：
+- 在 Mac 上保存文件
+- 到 iPad / iPhone / 另一台 Mac 上继续打开
+- 自动同步最新版本
+
+### 为什么不是 Continuity
+**Continuity** 更偏向：
+- 设备之间无缝接力
+- Handoff
+- Universal Clipboard
+- 通话/短信跨设备协同
+
+它是“协同体验总称”，
+不是专门负责“云端保存并同步文件最新版”的功能。
+
+所以这两题要分开记：
+- **任务接力 / 设备联动** → **Continuity**
+- **云端文件同步 / 最新版自动可用** → **iCloud Drive**
+
+### 其他选项为什么不对
+- **AirDrop**：适合临时点对点传文件，不是持续云同步
+- **iDrive**：第三方服务，不是 Apple 原生这个答案
+
+### 口诀
+**要接力，想 Continuity；要云同步最新版，想 iCloud Drive。**
+
+---
+
 ## 跨 Windows / macOS / Linux 最广兼容先想 FAT32 + exFAT，不是 NTFS
 ![Cross-platform filesystems FAT32 exFAT question](images/2026-04-24-core2-cross-platform-filesystems-fat32-exfat.jpg)
 
