@@ -419,6 +419,65 @@
 
 ---
 
+## 本地主机名到 IP 映射看 /etc/hosts，不是 /etc/resolv.conf
+![etc hosts vs resolv conf question](images/2026-04-28-core2-etc-hosts-vs-resolv-conf.jpg)
+
+**题干：** In Linux, the system file used for local hostname to IP address resolution is located in:
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | /etc/resolv.conf |
+| ✅ 正确答案 | /etc/hosts |
+
+### 这题核心怎么分
+这是 Linux 里非常常见的一组混淆：
+- **/etc/hosts**
+- **/etc/resolv.conf**
+
+题目关键词是：
+## **local hostname to IP address resolution**
+也就是：
+## **本地手工定义的主机名 ↔ IP 对应关系**
+
+这个要看：
+## **/etc/hosts**
+
+### /etc/hosts 是干什么的
+`/etc/hosts` 用来保存：
+- 主机名和 IP 地址的本地静态映射
+
+比如：
+- `127.0.0.1 localhost`
+- 某个内网服务器名字对应某个固定 IP
+
+所以它负责的是：
+## **本地名称解析表**
+
+### 为什么不是 /etc/resolv.conf
+`/etc/resolv.conf` 不是放主机名-IP 映射的，
+它主要是配置：
+- DNS 服务器地址
+- 域名解析相关设置
+
+也就是说：
+- **/etc/hosts** = 直接写“名字对应哪个 IP”
+- **/etc/resolv.conf** = 告诉系统“去问哪个 DNS 服务器”
+
+### 其他选项顺手区分
+- **/etc/sysconfig/network**：老式网络相关配置（不同发行版可能不同）
+- **/etc/network/interfaces**：网络接口配置，常见于 Debian 系
+
+它们都不是本地主机名解析文件。
+
+### 快速分类记忆
+- **/etc/hosts** = 本地 hostname → IP 映射
+- **/etc/resolv.conf** = DNS 服务器配置
+
+### 口诀
+**本地名字找 IP 看 hosts；要问 DNS 去哪问，看 resolv.conf。**
+
+---
+
 ## 跨 Windows / macOS / Linux 最广兼容先想 FAT32 + exFAT，不是 NTFS
 ![Cross-platform filesystems FAT32 exFAT question](images/2026-04-24-core2-cross-platform-filesystems-fat32-exfat.jpg)
 
