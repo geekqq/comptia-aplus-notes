@@ -1107,6 +1107,61 @@ traceroute 通常会显示：
 
 ---
 
+## 只让云盘里指定文件夹下载到本地，选 Selective sync，不是 Offline access
+![selective sync cloud folder question](images/2026-04-28-core2-selective-sync-cloud-folder.jpg)
+
+**题干：** A user wants only a specific folder from their cloud storage to be available locally on a laptop. What feature controls individual folders that are downloaded for local access?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Offline access |
+| ✅ 正确答案 | Selective sync |
+
+### 为什么是 Selective sync
+题目关键词是：
+- **only a specific folder**
+- **available locally**
+- **controls individual folders that are downloaded**
+
+这说明重点不是“能不能离线访问”，
+而是：
+## **决定哪些具体文件夹要同步/下载到本地**
+
+这个功能就是：
+## **Selective sync**
+
+### Selective sync 是什么
+**Selective sync** 的作用是：
+- 让用户挑选某些文件夹同步到本机
+- 不需要把整个云盘内容都占满本地硬盘
+- 只下载自己需要的那部分
+
+### 为什么不是 Offline access
+**Offline access** 更偏向：
+- 文件已经可在本地使用
+- 没网络时也能打开
+
+但它不一定强调：
+## **由你来精确控制哪些文件夹被下载到本地**
+
+也就是说：
+- **Selective sync** = 选哪些文件夹要落地
+- **Offline access** = 已落地或已缓存内容能否离线打开
+
+### 其他选项顺手区分
+- **Folder mirroring**：更偏整套镜像同步概念，不是这题“挑单个文件夹是否同步”的标准考点
+- **Local caching**：偏性能/缓存机制，不是用户手动选择特定文件夹同步的核心术语
+
+### 快速分类记忆
+- **Selective sync** = 选择哪些文件夹同步到本地
+- **Offline access** = 没网时还能打开本地可用内容
+- **Local caching** = 临时缓存/性能优化
+
+### 口诀
+**要挑文件夹落地，先想 Selective sync；要没网也能看，才想 Offline access。**
+
+---
+
 ## 跨 Windows / macOS / Linux 最广兼容先想 FAT32 + exFAT，不是 NTFS
 ![Cross-platform filesystems FAT32 exFAT question](images/2026-04-24-core2-cross-platform-filesystems-fat32-exfat.jpg)
 
