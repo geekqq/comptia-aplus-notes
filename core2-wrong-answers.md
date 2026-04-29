@@ -933,6 +933,52 @@ traceroute 通常会显示：
 
 ---
 
+## top 里按 M 按内存排序，不是 R
+![top sort memory m key question](images/2026-04-28-core2-top-sort-memory-m-key.jpg)
+
+**题干：** A Linux technician is viewing processes in top and needs to sort them by RAM usage. In the top interface, which key reorders processes based on memory consumption?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | R |
+| ✅ 正确答案 | M |
+
+### 为什么是 M
+在 `top` 里：
+## **`M` = sort by memory usage**
+
+也就是按 RAM / 内存占用来重新排序进程列表。
+
+所以题目说：
+- **sort them by RAM usage**
+- **based on memory consumption**
+
+答案就是：
+## **M**
+
+### 为什么不是 R
+`R` 不是“按内存排序”的快捷键。
+你可能把它和别的交互键混了。
+
+这题本质还是在考：
+## **top 常见快捷键记忆**
+
+### 顺手把 top 高频键一起记
+- **M** = 按内存排序
+- **P** = 按 CPU 排序
+- **k** = kill 进程
+- **r** = renice，改优先级
+- **q** = 退出
+
+### 快速对比
+- **M** → Memory
+- **P** → Processor / CPU
+
+### 口诀
+**M 看内存，P 看 CPU；k 杀进程，q 退出。**
+
+---
+
 ## 跨 Windows / macOS / Linux 最广兼容先想 FAT32 + exFAT，不是 NTFS
 ![Cross-platform filesystems FAT32 exFAT question](images/2026-04-24-core2-cross-platform-filesystems-fat32-exfat.jpg)
 
