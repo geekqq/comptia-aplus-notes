@@ -1035,6 +1035,78 @@ traceroute 通常会显示：
 
 ---
 
+## 跨不同操作系统架构本地运行程序，选 Virtualization + Emulator，不是 Sandboxing
+![virtualization vs emulation cross OS question](images/2026-04-28-core2-virtualization-vs-emulation-cross-os.jpg)
+
+**题干：** Which of the following solutions allows an application designed for a specific operating system to run locally on a device within a different operating system architecture? (Select 2 answers)
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Application sandboxing |
+| ✅ 正确答案 | Virtualization / Emulator software |
+
+### 这题在考什么
+题目关键词是：
+- **application designed for a specific operating system**
+- **run locally on a device**
+- **within a different operating system architecture**
+
+本质是在问：
+## **怎么让为别的系统/架构设计的软件，在当前机器本地运行**
+
+正确答案是：
+## **Virtualization**
+## **Emulator software**
+
+### 为什么 Virtualization 对
+**Virtualization（虚拟化）** 可以：
+- 在当前机器上创建虚拟机
+- 运行另一个操作系统环境
+- 让该系统里的应用在本机上跑起来
+
+它是跨 OS 运行环境最常见的标准答案之一。
+
+### 为什么 Emulator software 对
+**Emulator（模拟器）** 的重点是：
+- 模拟另一种系统或硬件/平台环境
+- 让原本不是给当前平台设计的软件也能运行
+
+如果题目提到：
+- 不同操作系统架构
+- 不同平台
+- 本地运行
+
+**emulator** 通常就是强提示答案。
+
+### 为什么不是 Application sandboxing
+**Application sandboxing** 的作用是：
+- 限制应用权限
+- 隔离应用行为
+- 提高安全性
+
+它不是用来解决：
+## **跨操作系统架构运行应用**
+
+所以 sandboxing 关注的是：
+- 安全隔离
+不是：
+- 兼容不同系统/架构
+
+### 其他选项为什么不对
+- **Multiboot environment**：是开机时选不同系统，不是“在当前系统里本地运行另一个系统的软件”
+- **Compatibility mode**：适合同一大平台内的旧软件兼容，比如旧版 Windows 程序在新版 Windows 上运行；但题目强调的是 **different operating system architecture**，更强指向 virtualization / emulation
+
+### 快速分类记忆
+- **Virtualization** = 建虚拟 OS 环境来跑别的系统应用
+- **Emulator** = 模拟别的平台/架构
+- **Sandboxing** = 隔离应用权限
+- **Compatibility mode** = 同平台旧软件兼容
+
+### 口诀
+**跨系统先想虚拟化；跨架构再想模拟器；Sandbox 只管隔离，不管跨平台。**
+
+---
+
 ## 跨 Windows / macOS / Linux 最广兼容先想 FAT32 + exFAT，不是 NTFS
 ![Cross-platform filesystems FAT32 exFAT question](images/2026-04-24-core2-cross-platform-filesystems-fat32-exfat.jpg)
 
