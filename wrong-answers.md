@@ -1,5 +1,46 @@
 # CompTIA A+ 错题笔记
 
+## 64-bit CPU 的理论寻址上限远大于 128 GB
+![64-bit CPU theoretical RAM limit question](images/2026-04-28-core1-64bit-cpu-theoretical-ram-limit.jpg)
+
+**题干：** What is the theoretical limit of addressable RAM for a 64-bit CPU?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | 128 GB |
+| ✅ 正确答案 | None of the above |
+
+**说明：**
+这题考的是 **理论寻址上限**，不是主板、操作系统或民用机器的常见实际上限。
+
+64-bit CPU 的理论地址空间是：
+- **2^64 bytes**
+- 约等于 **16 EB（Exabytes，艾字节）**
+
+所以：
+- 64 GB ❌
+- 128 GB ❌
+- 256 GB ❌
+都太小了，
+因此正确答案只能是：
+## **None of the above**
+
+**易错点：**
+很多题会把：
+- **理论上限**
+- **操作系统支持上限**
+- **主板/芯片组支持上限**
+混在一起。
+
+这题明确问的是：
+## **theoretical limit**
+所以一定往 **2^64** 去想，而不是家用电脑常见的 64GB / 128GB / 256GB。
+
+**口诀：**
+**64-bit 看理论上限，先想 2^64，不要被 128GB 这种现实容量带跑。**
+
+---
+
 ## Telnet 核心特性
 **题干：** “Which of the following statements describe an important feature or service provided by Telnet? (Select three.)”
 
