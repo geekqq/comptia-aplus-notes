@@ -891,6 +891,48 @@ traceroute 通常会显示：
 
 ---
 
+## top 里终止进程按 K，不是 X
+![top k kill process question](images/2026-04-28-core2-top-k-kill-process.jpg)
+
+**题干：** A system administrator is using the top command in Linux and wants to terminate a process with PID 4567. Which key should be pressed within top to initiate this action?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | X |
+| ✅ 正确答案 | K |
+
+### 为什么是 K
+在 `top` 交互界面里：
+## **`k` = kill a process**
+
+按下 `k` 之后，
+通常会提示你输入：
+- 要终止的 PID
+- 以及发送什么 signal（默认常见是 15）
+
+所以题目问“within top 要按哪个键来终止进程”，
+答案就是：
+## **K**
+
+### 为什么不是 X
+`X` 不是 `top` 里标准的“终止进程”按键。
+这题本质考的是：
+## **top 的常用交互快捷键**
+
+### 顺手记几个常见 top 键位
+- **k** = kill 进程
+- **r** = renice，修改优先级
+- **q** = quit，退出 top
+
+所以选项里的：
+- **R** 更像 renice 相关
+- **T** 也不是这里的 kill 进程标准答案
+
+### 口诀
+**top 里要杀进程，先按 k；要退出，按 q。**
+
+---
+
 ## 跨 Windows / macOS / Linux 最广兼容先想 FAT32 + exFAT，不是 NTFS
 ![Cross-platform filesystems FAT32 exFAT question](images/2026-04-24-core2-cross-platform-filesystems-fat32-exfat.jpg)
 
