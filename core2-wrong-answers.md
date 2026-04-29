@@ -843,6 +843,54 @@ traceroute 通常会显示：
 
 ---
 
+## 查看系统范围全部进程，用 ps -e，不是裸 ps
+![ps e all processes systemwide question](images/2026-04-28-core2-ps-e-all-processes-systemwide.jpg)
+
+**题干：** A Linux admin suspects a process running under a system account is causing issues. The administrator needs to see a list of all running processes system-wide, including those not associated with a specific terminal session. What is the most appropriate command to get a complete static list of all processes?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | ps |
+| ✅ 正确答案 | ps -e |
+
+### 为什么是 `ps -e`
+题目关键词很明确：
+- **all running processes system-wide**
+- **including those not associated with a specific terminal session**
+- **complete static list**
+
+这说明要看的是：
+## **整个系统里的所有进程**
+所以要用：
+## `ps -e`
+
+### 为什么不是裸 `ps`
+直接输入 `ps` 时，
+通常只显示：
+- 当前终端会话相关的进程
+
+它不会自动把系统范围内所有后台进程、其他会话进程、系统账户进程全列出来。
+
+所以题目既然强调：
+- system-wide
+- not associated with a specific terminal
+
+那裸 `ps` 就不够了。
+
+### 其他选项顺手区分
+- `ps -f`：更偏完整格式显示（full format），但不是这题核心“显示全部系统进程”的点
+- `ps -s`：不是这题要考的“列出所有系统进程”标准答案
+
+### 快速分类记忆
+- **ps** = 当前终端相关进程
+- **ps -e** = 全系统所有进程
+- **ps -f** = 更详细格式
+
+### 口诀
+**裸 ps 看当前；ps -e 看全场。**
+
+---
+
 ## 跨 Windows / macOS / Linux 最广兼容先想 FAT32 + exFAT，不是 NTFS
 ![Cross-platform filesystems FAT32 exFAT question](images/2026-04-24-core2-cross-platform-filesystems-fat32-exfat.jpg)
 
