@@ -1215,6 +1215,60 @@ traceroute 通常会显示：
 
 ---
 
+## 整个受限周界同时拦人和车，先想 Fencing，不是 guards
+![fencing perimeter physical security question](images/2026-04-28-core2-fencing-perimeter-physical-security.jpg)
+
+**题干：** A business wants to reduce the likelihood of both unauthorized pedestrian and vehicle access across its entire restricted perimeter. Which physical security control would best serve this purpose?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Security guards |
+| ✅ 正确答案 | Fencing |
+
+### 为什么是 Fencing
+题目关键词特别重要：
+- **both unauthorized pedestrian and vehicle access**
+- **across its entire restricted perimeter**
+
+这题强调的是：
+## **整个周界 perimeter 的持续物理阻挡**
+
+最符合这个需求的就是：
+## **Fencing**
+
+因为围栏/围网可以：
+- 沿整个边界连续部署
+- 阻止或显著降低行人随意进入
+- 也对车辆越界进入形成外围障碍
+
+所以它最符合“全周界防护”的意思。
+
+### 为什么不是 Security guards
+**Security guards** 当然能巡逻、威慑、响应，
+但它们不是一个：
+## **覆盖 entire perimeter 的固定物理屏障**
+
+题目问的是 **physical security control**，而且强调整个 perimeter，
+所以应该优先想那种：
+- 连续、固定、边界型的物理设施
+
+而不是主要靠人力巡逻。
+
+### 其他选项顺手区分
+- **Bollards**：主要防车辆冲撞，不适合整个 perimeter，也不能有效拦住行人
+- **Turnstiles**：主要控制行人通过单个入口点，不适合整条外围边界
+
+### 快速分类记忆
+- **Fencing** = 整体外围周界防护
+- **Bollards** = 防车辆冲撞/限制车道
+- **Turnstiles** = 控制单点行人入口
+- **Guards** = 巡逻/监控/响应
+
+### 口诀
+**问整个 perimeter，先想 fencing；问单点入口，才想 turnstile；问防车冲撞，再想 bollards。**
+
+---
+
 ## 跨 Windows / macOS / Linux 最广兼容先想 FAT32 + exFAT，不是 NTFS
 ![Cross-platform filesystems FAT32 exFAT question](images/2026-04-24-core2-cross-platform-filesystems-fat32-exfat.jpg)
 
