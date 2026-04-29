@@ -5686,3 +5686,96 @@ Which sequence of steps in Windows provides access to an interface for creating 
 
 ### 一句话口诀
 ## **分类题别停在大类名；要点到真正那条可点击入口。**
+
+
+# 2026-04-29 物理安全与访问控制错题（5 题）
+
+## 锁柜 + 签出日志 = Physical keys
+![锁柜 + 签出日志 = Physical keys](images/2026-04-29-core2-physical-keys-signout-log.jpg)
+
+**题干：** A locked cabinet with a corresponding sign-out log is a standard procedure to maintain accountability and tracking for:
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Access badges |
+| ✅ 正确答案 | Physical keys |
+
+### 简析
+题目关键词是 **locked cabinet** 和 **sign-out log**。这是一种典型的实体钥匙管理方式：钥匙放在锁柜里，谁拿走、何时归还都要登记，所以对应的是 **Physical keys**。像 access badges、smart cards、key fobs 这类电子门禁凭证，通常会有系统自动记录，不是这道题强调的“手工签出实体保管”场景。
+
+### 口诀
+**锁柜配登记，先想实体钥匙，不是电子门禁卡。**
+
+---
+
+## 高安全、难伪造 = Palm print scanner
+![高安全、难伪造 = Palm print scanner](images/2026-04-29-core2-palm-print-hard-to-spoof.jpg)
+
+**题干：** A large corporation needs a biometric solution for a restricted server farm. The solution must provide strong security and be difficult to spoof. Which physical access control method would be best?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Fingerprint scanner |
+| ✅ 正确答案 | Palm print scanner |
+
+### 简析
+题目强调 **restricted server farm**、**strong security**、**difficult to spoof**。在这些选项里，**Palm print scanner** 比普通指纹更难伪造、采集特征更多，更符合“高安全区域最佳选择”的思路。
+
+### 口诀
+**一般生物识别想指纹；高安全、难 spoof，就升级到 palm print。**
+
+---
+
+## Lighting 的主要作用 = Deterrence
+![Lighting 的主要作用 = Deterrence](images/2026-04-29-core2-lighting-deterrence.jpg)
+
+**题干：** What is the primary role of lighting as a physical access security measure?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Surveillance |
+| ✅ 正确答案 | Deterrence |
+
+### 简析
+照明本身不是摄像头，不负责直接监控；也不是门锁那种主动阻止。它的主要作用是让潜在入侵者觉得自己更容易被发现，从而**不敢行动**，所以属于 **Deterrence（威慑）**。
+
+### 口诀
+**灯光不是抓贼，是吓贼。**
+
+---
+
+## 超出职责范围不能访问 = Least privilege
+![超出职责范围不能访问 = Least privilege](images/2026-04-29-core2-least-privilege-vs-separation-of-duties.jpg)
+
+**题干：** A security rule that prevents users from accessing information and resources that lie beyond the scope of their responsibilities is referred to as:
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Separation of duties |
+| ✅ 正确答案 | Principle of least privilege |
+
+### 简析
+题目在说：用户不能访问超出自己职责范围的信息和资源。这正是 **Principle of least privilege（最小权限原则）**：只给完成工作所需的最少权限。**Separation of duties** 则是把高风险流程拆给不同的人，重点是职责分离，不是访问范围控制。
+
+### 口诀
+**能看多少看 least privilege；谁来分工看 separation of duties。**
+
+---
+
+## associated inbox = Email MFA
+![associated inbox = Email MFA](images/2026-04-29-core2-email-mfa-associated-inbox.jpg)
+
+**题干：** After typing in a password, a login system prompts the user to enter a one-time verification code sent to the account's associated inbox. Which MFA method is being used?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | TOTP |
+| ✅ 正确答案 | Email |
+
+### 简析
+关键词是 **associated inbox**，这里的 inbox 指的是电子邮箱收件箱，所以这是 **Email** 验证码。**TOTP** 是认证器 app 基于时间生成的一次性密码，不需要“发到收件箱”。
+
+### 口诀
+**发到邮箱看 Email；认证器动态码才是 TOTP。**
+
+---
