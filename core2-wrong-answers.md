@@ -1162,6 +1162,59 @@ traceroute 通常会显示：
 
 ---
 
+## 查云应用 license 分配和余量，先看 Admin dashboard / portal，不是 credential manager
+![cloud license admin portal question](images/2026-04-28-core2-cloud-license-admin-portal.jpg)
+
+**题干：** A technician is auditing license usage for a cloud-based application. What tool is typically used to view license assignments and availability?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Credential manager software |
+| ✅ 正确答案 | Admin dashboard or portal |
+
+### 为什么是 Admin dashboard / portal
+题目关键词是：
+- **auditing license usage**
+- **cloud-based application**
+- **view license assignments and availability**
+
+这说明要看的内容是：
+- 谁被分配了 license
+- 还剩多少 license 可用
+- 整体订阅/授权状态
+
+这类信息通常都在：
+## **Admin dashboard / admin portal**
+
+也就是云服务的管理员控制台里查看。
+
+### 为什么不是 Credential manager software
+**Credential manager** 管的是：
+- 账号密码
+- 登录凭据
+- 认证信息存储
+
+它不是用来看：
+## **license 分配和可用数量**
+
+也就是说：
+- **Credential manager** 关注“登录凭证”
+- **Admin portal** 关注“租户、用户、license、订阅、管理”
+
+### 其他选项顺手区分
+- **Local user account settings**：本地设备账户设置，不是云应用 license 审计中心
+- **Domain controller**：管理域身份/认证资源，不是典型云应用 license 管理界面
+
+### 快速分类记忆
+- **Admin portal / dashboard** = 看云服务 license / 用户分配 / 订阅
+- **Credential manager** = 管密码和凭据
+- **Domain controller** = 域身份管理
+
+### 口诀
+**看 license 去管理后台；看密码才找 credential manager。**
+
+---
+
 ## 跨 Windows / macOS / Linux 最广兼容先想 FAT32 + exFAT，不是 NTFS
 ![Cross-platform filesystems FAT32 exFAT question](images/2026-04-24-core2-cross-platform-filesystems-fat32-exfat.jpg)
 
