@@ -979,6 +979,62 @@ traceroute 通常会显示：
 
 ---
 
+## 旧版 Windows 程序在新系统运行，先想 Compatibility Mode，不是 Sandbox
+![Windows compatibility mode legacy app question](images/2026-04-28-core2-windows-compatibility-mode-legacy-app.jpg)
+
+**题干：** A user needs to run a legacy accounting application designed for Windows 7 on a Windows 11 PC. Which operating system feature should allow the software to execute on Windows 11?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Windows Sandbox |
+| ✅ 正确答案 | Windows Compatibility Mode |
+
+### 为什么是 Compatibility Mode
+题目关键词是：
+- **legacy application**
+- **designed for Windows 7**
+- **run on Windows 11**
+
+这就是经典的：
+## **旧程序在新版本 Windows 上兼容运行**
+对应功能就是：
+## **Windows Compatibility Mode**
+
+它的作用是让旧软件用更早版本 Windows 的兼容设置来运行，
+从而提高在新系统上的可执行性。
+
+### 为什么不是 Windows Sandbox
+**Windows Sandbox** 是：
+- 一个隔离出来的临时沙盒环境
+- 用来安全测试程序
+- 关闭后环境会重置
+
+它的重点是：
+## **隔离和安全测试**
+不是解决“旧程序兼容新系统”的首选功能。
+
+所以题目问的是：
+- **让旧软件能执行**
+而不是：
+- **把软件放进隔离测试环境**
+
+### 其他选项顺手区分
+- **Windows AppLocker**：控制哪些应用允许/禁止运行
+- **Windows PowerShell**：命令行和自动化工具
+
+它们都不是解决旧版程序兼容性的标准答案。
+
+### 快速分类记忆
+- **Compatibility Mode** = 旧软件兼容运行
+- **Sandbox** = 隔离测试
+- **AppLocker** = 应用控制
+- **PowerShell** = 管理/脚本
+
+### 口诀
+**旧程序跑不动，先开 Compatibility Mode；要安全试毒，再想 Sandbox。**
+
+---
+
 ## 跨 Windows / macOS / Linux 最广兼容先想 FAT32 + exFAT，不是 NTFS
 ![Cross-platform filesystems FAT32 exFAT question](images/2026-04-24-core2-cross-platform-filesystems-fat32-exfat.jpg)
 
