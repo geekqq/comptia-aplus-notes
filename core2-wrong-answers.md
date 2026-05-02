@@ -5909,3 +5909,23 @@ NTFS 权限判断先看 **显式（Explicit）** 还是 **继承（Inherited）*
 **先显式，后继承；先拒绝，后允许。**
 
 ---
+
+## NTFS 同卷移动/复制 = move 保留，copy 继承
+![NTFS 同卷移动/复制 = move 保留，copy 继承](images/2026-05-02-core2-ntfs-move-copy-same-volume-permissions.jpg)
+
+**题干：** In NTFS, a folder or file moved from one location to another on the same volume inherits the permissions of its new parent folder. / In NTFS, a folder or file copied from one location to another on the same volume retains its original permissions.
+
+|  |  |
+| --- | --- |
+| ❌ 你的答案 | 两题都选 True |
+| ✅ 正确答案 | 两题都选 False |
+
+### 简析
+在 **同一个 NTFS volume** 内：
+- **Move（移动）**：通常**保留原来的 NTFS 权限**，不会自动继承新父文件夹权限，所以第一题是 **False**。
+- **Copy（复制）**：会被当成新对象创建，通常**继承目标父文件夹权限**，不会保留原权限，所以第二题也是 **False**。
+
+### 口诀
+**同卷移动留原权，同卷复制跟新爹。**
+
+---
