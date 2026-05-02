@@ -5947,3 +5947,21 @@ NTFS 权限判断先看 **显式（Explicit）** 还是 **继承（Inherited）*
 **移动盘别乱 guess，微软专名 To Go。**
 
 ---
+
+## 加 AD 安全组成员 = Active Directory Users and Computers
+![加 AD 安全组成员 = Active Directory Users and Computers](images/2026-05-02-core2-ad-users-and-computers-security-group.jpg)
+
+**题干：** Which tool is used to add a user to a security group in Active Directory?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Group Policy Object Editor |
+| ✅ 正确答案 | Active Directory Users and Computers |
+
+### 简析
+要把用户加入 **Active Directory 的安全组**，用的是 **Active Directory Users and Computers (ADUC)**，因为它就是管理域用户、计算机和组对象的工具。**Group Policy Object Editor** 是改组策略，不是拿来直接管理用户组成员的。
+
+### 口诀
+**加人进组找 ADUC；改策略才找 GPO。**
+
+---
