@@ -5965,3 +5965,21 @@ NTFS 权限判断先看 **显式（Explicit）** 还是 **继承（Inherited）*
 **加人进组找 ADUC；改策略才找 GPO。**
 
 ---
+
+## 用户文件夹放到网络共享 = Folder redirection
+![用户文件夹放到网络共享 = Folder redirection](images/2026-05-02-core2-folder-redirection-centralized-profile-folders.jpg)
+
+**题干：** Which feature of the Windows Active Directory's Group Policy Management Console is used to ensure a user's profile folders are stored on a centralized network share rather than on their local computer?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Home folders |
+| ✅ 正确答案 | Folder redirection |
+
+### 简析
+题目说的是把用户的 **profile folders**（像 Documents、Desktop 这类用户文件夹）存到 **centralized network share**，这正是 **Folder Redirection** 的用途。**Home folders** 更像是给用户指定一个网络主目录，不等于把这些常用配置文件夹统一重定向过去。
+
+### 口诀
+**文档桌面改去向，用 Folder Redirection；Home folder 只是家目录。**
+
+---
