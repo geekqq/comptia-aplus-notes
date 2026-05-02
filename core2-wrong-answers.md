@@ -5834,3 +5834,22 @@ Which sequence of steps in Windows provides access to an interface for creating 
 **Hello 三件套：PIN、指纹、脸；声音不算。**
 
 ---
+
+## Share permissions = 仅网络用户 + 仅文件夹层级
+![Share permissions = 仅网络用户 + 仅文件夹层级](images/2026-05-02-core2-share-permissions-network-users-folder-level.jpg)
+
+**题干：** Which of the following statements describing share permissions in Microsoft Windows are true? (Select 2 answers)
+
+|  |  |
+| --- | --- |
+| ❌ 我的错误答案 | Apply to both network and local users |
+| ✅ 正确答案 | Apply exclusively to network users / Can be set only at the folder level |
+| ✅ 你选对了 | Can be set only at the folder level |
+
+### 简析
+**Share permissions（共享权限）** 只在用户通过网络访问共享资源时生效，**不管本机本地登录用户**，所以是 **apply exclusively to network users**。另外，共享权限是加在“共享文件夹”上的，**不是单独设在文件级别**，所以是 **can be set only at the folder level**。
+
+### 口诀
+**共享只管网络，权限只挂文件夹。**
+
+---
