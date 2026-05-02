@@ -5872,3 +5872,22 @@ Which sequence of steps in Windows provides access to an interface for creating 
 **远程看双份取最严，本地只看 NTFS。**
 
 ---
+
+## Share Full + NTFS Read = 远程 Read，本地也 Read
+![Share Full + NTFS Read = 远程 Read，本地也 Read](images/2026-05-02-core2-share-vs-ntfs-full-control-read.jpg)
+
+**题干：** The share permissions on a Windows folder grant the user Full Control access, while the NTFS permissions grant Read access. Which of the answers listed below represent the user's effective permission levels? (Select 2 answers)
+
+|  |  |
+| --- | --- |
+| ❌ 我的错误答案 | Full Control when accessing the folder locally |
+| ✅ 正确答案 | Read when accessing the share remotely / Read when accessing the folder locally |
+| ✅ 你选对了 | Read when accessing the share remotely |
+
+### 简析
+远程通过共享访问时，要同时看 **Share permissions** 和 **NTFS permissions**，结果取 **更严格的权限**。虽然 Share 给了 **Full Control**，但 NTFS 只有 **Read**，所以远程最终还是 **Read**。本地访问时不看 Share，只看 **NTFS**，因此本地也是 **Read**。
+
+### 口诀
+**NTFS 若只读，远程本地都别冲动。**
+
+---
