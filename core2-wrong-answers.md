@@ -5929,3 +5929,21 @@ NTFS 权限判断先看 **显式（Explicit）** 还是 **继承（Inherited）*
 **同卷移动留原权，同卷复制跟新爹。**
 
 ---
+
+## 可移动盘加密 = BitLocker To Go
+![可移动盘加密 = BitLocker To Go](images/2026-05-02-core2-bitlocker-to-go-removable-drives.jpg)
+
+**题干：** Which of the following answers refers to a Microsoft Windows feature specifically designed to encrypt removable drives?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | DriveCrypt |
+| ✅ 正确答案 | BitLocker To Go |
+
+### 简析
+普通 **BitLocker** 常说的是系统盘或固定磁盘加密；题目特别强调 **removable drives（可移动驱动器）**，对应的 Windows 功能名就是 **BitLocker To Go**。**TrueCrypt** 和 **DriveCrypt** 都不是微软 Windows 里这个专用内置功能的标准答案。
+
+### 口诀
+**移动盘别乱 guess，微软专名 To Go。**
+
+---
