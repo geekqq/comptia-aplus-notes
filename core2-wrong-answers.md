@@ -5891,3 +5891,21 @@ Which sequence of steps in Windows provides access to an interface for creating 
 **NTFS 若只读，远程本地都别冲动。**
 
 ---
+
+## NTFS 权限优先级 = 显式拒绝 > 显式允许 > 继承拒绝 > 继承允许
+![NTFS 权限优先级 = 显式拒绝 > 显式允许 > 继承拒绝 > 继承允许](images/2026-05-02-core2-ntfs-permission-precedence-hierarchy.jpg)
+
+**题干：** What is the correct hierarchy of precedence for permission settings in NTFS?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Explicit Allow > Inherited Allow > Explicit Deny > Inherited Deny |
+| ✅ 正确答案 | Explicit Deny > Explicit Allow > Inherited Deny > Inherited Allow |
+
+### 简析
+NTFS 权限判断先看 **显式（Explicit）** 还是 **继承（Inherited）**，显式优先于继承；在同一层里，**Deny** 又压过 **Allow**。所以完整顺序就是：**Explicit Deny > Explicit Allow > Inherited Deny > Inherited Allow**。
+
+### 口诀
+**先显式，后继承；先拒绝，后允许。**
+
+---
