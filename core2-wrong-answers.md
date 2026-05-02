@@ -5797,3 +5797,21 @@ Which sequence of steps in Windows provides access to an interface for creating 
 **杀毒去 Virus；防火墙看 Firewall。**
 
 ---
+
+## 本机专属登录码 = PIN
+![本机专属登录码 = PIN](images/2026-05-02-core2-windows-pin-local-device-code.jpg)
+
+**题干：** Which Windows sign-in method uses a device-specific code that is stored locally and not transmitted over the network?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Security key |
+| ✅ 正确答案 | PIN |
+
+### 简析
+题目关键词是 **device-specific**、**stored locally**、**not transmitted over the network**。这正是 **Windows Hello PIN** 的特点：PIN 只绑定当前设备，本地保存验证，不会像传统密码那样在网络上传输。**Security key** 是外部硬件认证设备，不是题目描述的“本机本地码”。
+
+### 口诀
+**本机四位想 PIN；外接钥匙才 key。**
+
+---
