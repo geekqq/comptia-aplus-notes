@@ -5815,3 +5815,22 @@ Which sequence of steps in Windows provides access to an interface for creating 
 **本机四位想 PIN；外接钥匙才 key。**
 
 ---
+
+## Windows Hello 多选 = PIN + 指纹 + 人脸
+![Windows Hello 多选 = PIN + 指纹 + 人脸](images/2026-05-02-core2-windows-hello-passwordless-options.jpg)
+
+**题干：** Windows Hello is a built-in authentication system in Windows 10 and Windows 11 that lets users sign in to devices, apps, and online services without relying solely on a traditional password. Instead, it provides passwordless sign-in options such as: (Select all that apply)
+
+|  |  |
+| --- | --- |
+| ❌ 漏选 | PIN-based sign-in / Fingerprint scan |
+| ✅ 选对了 | Facial recognition |
+| ✅ 正确答案 | PIN-based sign-in / Fingerprint scan / Facial recognition |
+
+### 简析
+**Windows Hello** 常见的无密码登录方式就是 **PIN、Fingerprint、Facial recognition**。题里 **Voice recognition** 不属于 Windows Hello 的标准登录方式，所以不能选。
+
+### 口诀
+**Hello 三件套：PIN、指纹、脸；声音不算。**
+
+---
