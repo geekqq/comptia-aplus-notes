@@ -5853,3 +5853,22 @@ Which sequence of steps in Windows provides access to an interface for creating 
 **共享只管网络，权限只挂文件夹。**
 
 ---
+
+## Share + NTFS 叠加 = 远程取最严，本地看 NTFS
+![Share + NTFS 叠加 = 远程取最严，本地看 NTFS](images/2026-05-02-core2-share-vs-ntfs-effective-permissions.jpg)
+
+**题干：** The share permissions on a Windows folder grant Read access, while the NTFS permissions grant Modify access. What are the user's effective permission levels? (Select 2 answers)
+
+|  |  |
+| --- | --- |
+| ❌ 我的错误答案 | Read when accessing the folder locally |
+| ✅ 正确答案 | Read when accessing the share remotely / Modify when accessing the folder locally |
+| ✅ 你选对了 | Read when accessing the share remotely |
+
+### 简析
+通过**网络远程访问共享**时，要同时看 **Share permissions** 和 **NTFS permissions**，最后取 **更严格的那个**，所以远程只有 **Read**。但如果是**本机本地访问文件夹**，共享权限不参与，只看 **NTFS permissions**，因此本地是 **Modify**。
+
+### 口诀
+**远程看双份取最严，本地只看 NTFS。**
+
+---
