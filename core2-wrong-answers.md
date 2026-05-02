@@ -5779,3 +5779,21 @@ Which sequence of steps in Windows provides access to an interface for creating 
 **发到邮箱看 Email；认证器动态码才是 TOTP。**
 
 ---
+
+## 开关 Defender = Virus & threat protection
+![开关 Defender = Virus & threat protection](images/2026-05-02-core2-defender-virus-and-threat-protection.jpg)
+
+**题干：** In Windows 10 and 11, which section of the Windows Security app is used to turn Microsoft Defender Antivirus on or off?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Firewall & network protection |
+| ✅ 正确答案 | Virus & threat protection |
+
+### 简析
+题目问的是 **Microsoft Defender Antivirus** 的开关位置，这属于 **病毒与威胁防护（Virus & threat protection）**。**Firewall & network protection** 管的是防火墙和网络配置，不是杀毒引擎开关。
+
+### 口诀
+**杀毒去 Virus；防火墙看 Firewall。**
+
+---
