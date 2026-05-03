@@ -3,6 +3,69 @@
 用于记录 Core 2 错题、易混概念、简短中文解释和记忆口诀。
 后续新错题默认追加到这里。
 
+## 保护单个终端设备，先想 Software firewall
+![Software firewall single device question](images/2026-05-03-core2-software-firewall-single-end-user-device.jpg)
+
+**题干：** Which of the following firewall types is specifically designed to protect a single physical end-user device?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Hardware firewall |
+| ✅ 正确答案 | Software firewall |
+
+### 这题核心在什么
+题目关键不是问“哪种防火墙更强”，
+而是问：
+**哪一种是专门给单个物理终端用户设备使用的。**
+
+关键词：
+- **single physical end-user device**
+
+这就对应：
+## **Software firewall**
+
+### 为什么答案是 Software firewall
+**Software firewall（软件防火墙）**
+通常直接安装在单台设备上，比如：
+- 一台 Windows 笔记本
+- 一台台式机
+- 单个终端
+
+它是 **host-based firewall** 的典型形式，
+作用对象就是某一台具体设备。
+
+### 为什么不是 Hardware firewall
+**Hardware firewall（硬件防火墙）**
+一般部署在：
+- 网络边界
+- 路由器/安全设备
+- 企业或家庭网络入口
+
+它保护的通常是：
+- 一个网络
+- 一批设备
+- 整个网段
+
+所以它不是“专门为单个 end-user device 设计”的最佳答案。
+
+### 为什么其他选项也不对
+- **Application-layer firewall**
+  - 是按工作层次/过滤方式分类
+  - 不强调“单设备专用”
+
+- **Next-generation firewall**
+  - 是高级功能型防火墙
+  - 更偏企业级、网络级安全设备概念
+  - 题目问的不是“高级不高级”，而是“保护对象是谁”
+
+### 口诀
+**单机装软件，整网上硬件。**
+
+再短一点：
+**一台机器 → software firewall；一片网络 → hardware firewall。**
+
+---
+
 ## 连续监控 + 威胁检测 + 事件响应 = MDR，不是 MSP
 ![MDR vs MSP monitoring response question](images/2026-05-03-core2-mdr-vs-msp-monitoring-response.jpg)
 
