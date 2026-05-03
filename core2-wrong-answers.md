@@ -3,6 +3,71 @@
 用于记录 Core 2 错题、易混概念、简短中文解释和记忆口诀。
 后续新错题默认追加到这里。
 
+## 恶意占用算力挖矿 = Cryptominer，不是 Fileless malware
+![Cryptominer resource exploitation question](images/2026-05-03-core2-cryptominer-resource-exploitation.jpg)
+
+**题干：** Which of the following answers refers to a malware type designed to exploit computing resources without the owner's consent?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Fileless malware |
+| ✅ 正确答案 | Cryptominer |
+
+### 这题核心在什么
+这题问的是：
+**哪种恶意软件的设计目的，是未经用户同意就占用设备计算资源。**
+
+关键词是：
+- **exploit computing resources**
+- **without the owner's consent**
+
+这正是在说：
+## **Cryptominer**
+
+### 为什么正确答案是 Cryptominer
+**Cryptominer（加密货币挖矿恶意软件）**
+会偷偷使用受害者的：
+- CPU
+- GPU
+- 电力
+- 系统性能
+
+去帮攻击者挖加密货币。
+
+所以它最符合：
+**“未经机主同意，利用计算资源获利”**。
+
+### 为什么 Fileless malware 不对
+**Fileless malware** 说的是一种**攻击/执行方式**：
+- 尽量不落地成传统文件
+- 常驻内存
+- 借助 PowerShell、WMI、脚本、系统工具运行
+
+它描述的是：
+**恶意软件怎么运行、怎么隐藏自己**。
+
+但题目问的不是“运行方式”，
+而是“它的主要用途/目标是什么”。
+
+所以：
+- **Fileless** = 方式 / 技术路线
+- **Cryptominer** = 目的 / 恶意用途
+
+### 为什么其他选项不对
+- **Adware**
+  - 主要目的是弹广告、导流、广告变现
+  - 不是专门占用算力挖矿
+
+- **PUP**
+  - Potentially Unwanted Program
+  - 是“可能不受欢迎程序”的大类，不够精确
+  - 不特指偷偷吃计算资源
+
+### 口诀
+**偷你算力去赚钱，先想 Cryptominer；Fileless 只是“怎么藏”，不是“干什么”。**
+
+---
+
 ## Virus 要依附宿主；独立传播的是 Worm
 ![Virus definition select 2 question](images/2026-05-03-core2-virus-attaches-to-host-select-2.jpg)
 
