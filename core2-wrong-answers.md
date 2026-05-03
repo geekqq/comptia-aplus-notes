@@ -3,6 +3,73 @@
 用于记录 Core 2 错题、易混概念、简短中文解释和记忆口诀。
 后续新错题默认追加到这里。
 
+## 针对公司高管的定向钓鱼 = Whaling，不只是普通 Spear phishing
+![Whaling executive target question](images/2026-05-03-core2-whaling-executive-target.jpg)
+
+**题干：** A senior company executive receives a personalized email, appearing to be from an external law firm, demanding urgent settlement of a fictitious legal matter. This type of phishing attack is an example of:
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Business email compromise |
+| ✅ 正确答案 | Whaling |
+
+### 这题核心在什么
+题目里最关键的词是：
+- **senior company executive**
+- **personalized email**
+
+也就是：
+**攻击对象是公司高层/高价值目标。**
+
+这时候最佳答案就是：
+## **Whaling**
+
+### 为什么答案是 Whaling
+**Whaling（捕鲸式钓鱼）**
+本质上是 **spear phishing 的高管版**，
+专门针对：
+- CEO
+- CFO
+- senior executives
+- 其他高价值管理层目标
+
+因为“鲸鱼”代表大目标、值钱目标，
+所以 whaling = **专钓大人物**。
+
+### 为什么不是 Business Email Compromise
+**BEC (Business Email Compromise)**
+更强调的是：
+- 伪装成可信商务身份
+- 诱导转账、改付款信息、发送敏感数据
+- 常见于企业财务欺诈场景
+
+这题虽然有商务欺诈味道，
+但题目问的是 **phishing attack 的类型**，
+而且明确点出了 **高级主管是目标**。
+
+所以最佳分类是：
+**Whaling**
+
+### 为什么不是 Spear phishing
+**Spear phishing** 是更大的总类，
+表示“针对特定对象的定向钓鱼”。
+
+而 **Whaling** 是其中更具体的子类：
+**专门针对高管/大人物的 spear phishing**。
+
+题目既然明确写了 **senior executive**，
+就应该选更精确的那个：
+## **Whaling**
+
+### 为什么 Impersonation attack 也不是最佳答案
+它只是描述“冒充别人”的攻击方式，
+不如 **whaling** 这个分类精准。
+
+### 口诀
+**定向钓普通目标叫 Spear phishing；定向钓老板高管叫 Whaling。**
+
+---
+
 ## 针对特定个人或群体的钓鱼 = Spear phishing，不是 Watering hole
 ![Spear phishing specific individuals groups question](images/2026-05-03-core2-spear-phishing-specific-individuals-groups.jpg)
 
