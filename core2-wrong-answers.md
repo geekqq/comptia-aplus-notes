@@ -3,6 +3,69 @@
 用于记录 Core 2 错题、易混概念、简短中文解释和记忆口诀。
 后续新错题默认追加到这里。
 
+## 伪造 email/IP/MAC/caller ID/网站身份 = Spoofing，不只是泛泛的 impersonation
+![Spoofing falsified identifier question](images/2026-05-03-core2-spoofing-falsified-identifier.jpg)
+
+**题干：** Which term best describes a situation where an attacker falsifies an identifier (email address, IP address, MAC address, caller ID, or website) to appear as a trusted source, with the intent to deceive targets, bypass filters, or redirect traffic for malicious purposes?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Impersonation |
+| ✅ 正确答案 | Spoofing |
+
+### 这题核心在什么
+题目不是泛泛地说“冒充别人”，
+而是非常具体地点出了：
+- falsifies an identifier
+- email / IP / MAC / caller ID / website
+
+只要看到“**伪造标识符/地址/来源信息**”，
+标准术语优先想：
+## **Spoofing**
+
+### 为什么答案是 Spoofing
+**Spoofing（欺骗/伪装）**
+就是攻击者伪造某种身份标识，
+让自己看起来像可信来源。
+
+常见例子：
+- **email spoofing**：伪造发件人地址
+- **IP spoofing**：伪造源 IP
+- **MAC spoofing**：伪造 MAC 地址
+- **caller ID spoofing**：伪造来电显示
+- **website spoofing**：伪造网站外观/来源
+
+所以这题描述得非常标准，
+就是 **spoofing**。
+
+### 为什么不是 Impersonation
+**Impersonation** 更像广义上的“冒充他人身份/角色”。
+它不一定强调技术上去**伪造地址、号码、来源标识**。
+
+而题目列出的这些对象：
+- email address
+- IP address
+- MAC address
+- caller ID
+- website
+
+都在提示更精确的术语：
+## **Spoofing**
+
+### 为什么其他选项也不对
+- **Phishing**
+  - 强调诱骗用户上当、交出信息、点链接
+  - 虽然 phishing 可能会用 spoofing，但两者不是同一个概念
+
+- **Pretexting**
+  - 强调编造一个情境/借口去套信息
+  - 重点是“故事脚本”，不是伪造技术标识符
+
+### 口诀
+**伪造地址和来源，先想 Spoofing；编故事套信息，再想 Pretexting。**
+
+---
+
 ## 利用开发者还没修补的未知漏洞 = Zero-day attack
 ![Zero-day unknown unpatched vulnerability question](images/2026-05-03-core2-zero-day-unknown-unpatched-vulnerability.jpg)
 
