@@ -3,6 +3,63 @@
 用于记录 Core 2 错题、易混概念、简短中文解释和记忆口诀。
 后续新错题默认追加到这里。
 
+## 利用开发者还没修补的未知漏洞 = Zero-day attack
+![Zero-day unknown unpatched vulnerability question](images/2026-05-03-core2-zero-day-unknown-unpatched-vulnerability.jpg)
+
+**题干：** An attack that takes advantage of a previously unknown software vulnerability that the developer has not yet patched is known as:
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Backdoor exploit |
+| ✅ 正确答案 | Zero-day attack |
+
+### 这题核心在什么
+题目关键词非常直接：
+- **previously unknown vulnerability**
+- **developer has not yet patched**
+
+也就是：
+**漏洞刚被利用时，厂商还不知道，或者还来不及修补。**
+
+这就叫：
+## **Zero-day attack**
+
+### 为什么答案是 Zero-day attack
+**Zero-day** 的“zero day”意思可以理解成：
+厂商从知道这个漏洞开始，
+**可用于防守和打补丁的时间几乎是 0 天。**
+
+所以它指的是：
+- 漏洞此前未知
+- 还没有补丁
+- 攻击者已经开始利用
+
+### 为什么不是 Backdoor exploit
+**Backdoor** 指的是：
+- 绕过正常认证
+- 留后门入口
+- 方便以后再次进入系统
+
+它强调的是 **进入系统的隐藏通道**，
+不是“利用未知且未修补漏洞”这个概念。
+
+### 为什么其他选项也不对
+- **Trojan horse**
+  - 伪装成正常程序诱骗用户运行
+  - 重点是伪装，不是未知漏洞
+
+- **Logic bomb**
+  - 满足某个条件后触发恶意行为
+  - 重点是触发条件，不是未修补漏洞
+
+### 口诀
+**未知漏洞、补丁还没有，先想 Zero-day。**
+
+再短一点：
+**未知 + 未补丁 = Zero-day。**
+
+---
+
 ## 针对公司高管的定向钓鱼 = Whaling，不只是普通 Spear phishing
 ![Whaling executive target question](images/2026-05-03-core2-whaling-executive-target.jpg)
 
