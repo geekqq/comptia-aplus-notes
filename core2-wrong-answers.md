@@ -3,6 +3,60 @@
 用于记录 Core 2 错题、易混概念、简短中文解释和记忆口诀。
 后续新错题默认追加到这里。
 
+## MFA 要不同因子：Password + Biometric 才算，不是两个生物特征
+![MFA password and biometric scan question](images/2026-05-03-core2-mfa-password-and-biometric-scan.jpg)
+
+**题干：** Which of the following examples meets the requirement of multifactor authentication?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Retina scan and voice recognition |
+| ✅ 正确答案 | Password and biometric scan |
+
+### 这题核心在什么
+这题考的是 **MFA = 多因素认证**，
+不是“用了两个验证方式就算”，
+而是要看它们是不是来自 **不同类型的认证因子**。
+
+常见三类因子：
+- **Something you know**：你知道的东西（password、PIN）
+- **Something you have**：你拥有的东西（smart card、token、phone key）
+- **Something you are**：你的生物特征（fingerprint、retina、voice、face）
+
+### 为什么正确答案是 Password and biometric scan
+因为它组合了两种不同因子：
+- **Password** = something you know
+- **Biometric scan** = something you are
+
+所以这是标准的 **multifactor authentication**。
+
+### 为什么 Retina scan and voice recognition 不对
+虽然看起来用了两种方式，
+但：
+- **Retina scan** = 生物特征
+- **Voice recognition** = 生物特征
+
+它们都属于 **something you are**，
+只是同一类因子的两种形式。
+
+**同类两次验证 ≠ MFA。**
+这叫加强验证，但不满足“多因素”的要求。
+
+### 为什么其他选项也不对
+- **Smart card and mobile digital key**
+  - 都偏向 **something you have**
+  - 还是同一类，不算 MFA
+
+- **Username and pattern lock**
+  - **Username** 通常只是标识身份，不算真正认证因子
+  - **Pattern lock** 更接近 **something you know**
+  - 也不满足多因素
+
+### 口诀
+**MFA 看“类别”不看“数量”：Know + Have / Know + Are / Have + Are 才算；Are + Are 不算。**
+
+---
+
 ## Apple 的 RSR = Rapid Security Response（快速安全响应）
 ![Apple RSR Rapid Security Response question](images/2026-04-28-core2-rsr-rapid-security-response.jpg)
 
