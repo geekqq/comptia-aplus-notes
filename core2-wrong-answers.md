@@ -3,6 +3,74 @@
 用于记录 Core 2 错题、易混概念、简短中文解释和记忆口诀。
 后续新错题默认追加到这里。
 
+## XSS = 恶意脚本注入网站并在用户浏览器执行；别和 CSRF 混（Select 3）
+![XSS vs CSRF select 3 question](images/2026-05-03-core2-xss-vs-csrf-select-3.jpg)
+
+**题干：** Which of the following answers can be used to describe the characteristics of an XSS attack? (Select 3 answers)
+
+|  |  |
+| --- | --- |
+| ✅ 我选对了 | An attacker injects a malicious script into a trusted website |
+| ✅ 我选对了 | The attacker's script is executed in the user's browser |
+| ❌ 我的错误答案 | The trusted website executes an action on behalf of the user without their consent |
+| ✅ 漏选正确答案 | An attack that exploits the trust a user's web browser has in a website |
+
+### 这题核心在什么
+这题最容易和 **CSRF** 混。
+
+先记一句：
+- **XSS** = **脚本注入 + 在用户浏览器执行**
+- **CSRF** = **借用户身份，强迫网站替用户发请求/执行操作**
+
+### XSS 为什么这 3 个是对的
+#### 1) An attacker injects a malicious script into a trusted website
+对。
+XSS 的核心起点就是：
+**攻击者把恶意脚本注入到可信网站页面里。**
+
+#### 2) The attacker’s script is executed in the user’s browser
+对。
+XSS 的恶意代码最终是在：
+## **受害者的浏览器里执行**
+而不是在服务器端执行。
+
+#### 3) An attack that exploits the trust a user's web browser has in a website
+对。
+XSS 的本质就是：
+**浏览器信任这个网站，所以也信了这个页面里夹带的恶意脚本。**
+
+### 为什么你选的那个不对
+#### The trusted website executes an action on behalf of the user without their consent
+这更像：
+## **CSRF (Cross-Site Request Forgery)**
+
+CSRF 的重点是：
+- 用户已经登录可信网站
+- 攻击者诱导用户发起一个伪造请求
+- 网站误以为是用户本人要操作
+- 最终 **网站替用户执行动作**
+
+比如：
+- 自动改密码
+- 自动转账
+- 自动发帖
+
+这不是 XSS 的核心描述。
+
+### 顺手把另外一句也一起区分
+如果你看到：
+**A user unknowingly submits a forged request to a trusted website**
+这也是 **CSRF** 风格，不是 XSS。
+
+### 一句话对比
+- **XSS**：我把坏脚本塞进网站，让你浏览器执行
+- **CSRF**：我借你的登录状态，让网站替你办事
+
+### 口诀
+**XSS 是“脚本进页面，浏览器执行”；CSRF 是“用户已登录，网站替他做事”。**
+
+---
+
 ## On-path attack = 插到通信路径中间，可拦截/篡改/冒充（Select 3）
 ![On-path attack select 3 question](images/2026-05-03-core2-on-path-attack-select-3.jpg)
 
