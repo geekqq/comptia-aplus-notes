@@ -3,6 +3,62 @@
 用于记录 Core 2 错题、易混概念、简短中文解释和记忆口诀。
 后续新错题默认追加到这里。
 
+## Virus 要依附宿主；独立传播的是 Worm
+![Virus definition select 2 question](images/2026-05-03-core2-virus-attaches-to-host-select-2.jpg)
+
+**题干：** Which of the following statements apply to the definition of a computer virus? (Select 2 answers)
+
+|  |  |
+| --- | --- |
+| ❌ 我的错误答案 | A standalone malicious program that replicates itself over a network |
+| ✅ 正确答案 1 | A self-replicating computer program that contains a malicious segment |
+| ✅ 正确答案 2 | Malicious code that typically attaches itself to an application or executable component |
+
+### 这题核心在什么
+这题的关键不是只看 **self-replicating**，
+而是分清：
+- **Virus（病毒）**：通常要**附着在宿主文件/程序**上
+- **Worm（蠕虫）**：通常是**独立存在**，并且会通过网络自己传播
+
+### 为什么正确答案是这两个
+#### 1) A self-replicating computer program that contains a malicious segment
+这是在描述病毒的基本特征之一：
+- 会复制自己
+- 带有恶意代码
+
+#### 2) Malicious code that typically attaches itself to an application or executable component
+这句更关键，
+因为它点出了 **virus 最典型的定义**：
+**依附在应用程序、可执行文件或宿主代码上。**
+
+### 为什么你选的那个不对
+#### A standalone malicious program that replicates itself over a network
+这更像：
+## **Worm（蠕虫）**
+因为关键词是：
+- **standalone** = 独立存在
+- **replicates itself over a network** = 通过网络自行复制传播
+
+这正是 worm 的典型特征，
+不是 virus。
+
+### 为什么其他选项也不对
+- **Malware that can operate independently without any interaction**
+  - 也是偏向独立运行型恶意软件
+  - 不符合 virus 必须依附宿主的典型定义
+
+- **A self-contained malicious program that does not require a host to propagate**
+  - **does not require a host** 这句话几乎就在提示 **worm**
+  - virus 通常需要 host
+
+### 口诀
+**Virus 贴宿主，Worm 走网络。**
+
+再短一点：
+**要 host 是 virus；不要 host 多半是 worm。**
+
+---
+
 ## MFA 要不同因子：Password + Biometric 才算，不是两个生物特征
 ![MFA password and biometric scan question](images/2026-05-03-core2-mfa-password-and-biometric-scan.jpg)
 
