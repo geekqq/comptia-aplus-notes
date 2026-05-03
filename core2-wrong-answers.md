@@ -3,6 +3,65 @@
 用于记录 Core 2 错题、易混概念、简短中文解释和记忆口诀。
 后续新错题默认追加到这里。
 
+## 针对特定个人或群体的钓鱼 = Spear phishing，不是 Watering hole
+![Spear phishing specific individuals groups question](images/2026-05-03-core2-spear-phishing-specific-individuals-groups.jpg)
+
+**题干：** Which of the following answers refers to a phishing attack aimed at specific individuals or groups?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Watering hole attack |
+| ✅ 正确答案 | Spear phishing |
+
+### 这题核心在什么
+题目关键词是：
+- **phishing attack**
+- **aimed at specific individuals or groups**
+
+只要看到“**特定目标、定向攻击**”，
+优先想：
+## **Spear phishing**
+
+### 为什么答案是 Spear phishing
+**Spear phishing（鱼叉式网络钓鱼）**
+就是专门针对：
+- 某个个人
+- 某个部门
+- 某类特定人群
+
+攻击者通常会提前做信息收集，
+让邮件/消息内容看起来更真实、更有针对性。
+
+所以它本质上是：
+**定向钓鱼**。
+
+### 为什么不是 Watering hole attack
+**Watering hole attack（水坑攻击）**
+不是“直接给某个人发定制钓鱼消息”，
+而是：
+- 先找到目标群体常访问的网站
+- 再去污染/入侵这个网站
+- 等目标自己来访问时中招
+
+所以它更像：
+**在目标常去的地方埋伏**，
+而不是“定向发 phishing 消息”。
+
+### 为什么其他选项不对
+- **Email spoofing**
+  - 是伪造发件人身份/邮件来源
+  - 是一种手法，不等于“针对特定人群的 phishing 类型”
+
+- **Whaling**
+  - 是 spear phishing 的一个更具体子类
+  - 主要针对高层、老板、关键高管
+  - 如果题目只说“specific individuals or groups”，最佳泛化答案还是 **spear phishing**
+
+### 口诀
+**定向发钓鱼，叫 Spear phishing；埋伏常去网站，叫 Watering hole。**
+
+---
+
 ## 保护单个终端设备，先想 Software firewall
 ![Software firewall single device question](images/2026-05-03-core2-software-firewall-single-end-user-device.jpg)
 
