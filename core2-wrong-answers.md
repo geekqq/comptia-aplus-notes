@@ -3,6 +3,67 @@
 用于记录 Core 2 错题、易混概念、简短中文解释和记忆口诀。
 后续新错题默认追加到这里。
 
+## 连续监控 + 威胁检测 + 事件响应 = MDR，不是 MSP
+![MDR vs MSP monitoring response question](images/2026-05-03-core2-mdr-vs-msp-monitoring-response.jpg)
+
+**题干：** Which dedicated cybersecurity service offers continuous monitoring, threat detection, and incident response typically delivered by an external provider?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | MSP |
+| ✅ 正确答案 | MDR |
+
+### 这题核心在什么
+题目问的是一种 **专门的网络安全服务**，而且关键词非常明显：
+- **continuous monitoring**
+- **threat detection**
+- **incident response**
+- **delivered by an external provider**
+
+这几个词组合起来，最匹配的就是：
+## **MDR (Managed Detection and Response)**
+
+### 为什么答案是 MDR
+**MDR** 的核心就是：
+- 持续安全监控
+- 检测威胁
+- 分析异常
+- 协助或直接进行事件响应
+
+它通常由外部安全服务商提供，
+相当于“托管式安全检测与响应”。
+
+### 为什么不是 MSP
+**MSP (Managed Service Provider)**
+是更广义的 **托管服务提供商**，
+通常负责：
+- IT 运维
+- 网络设备管理
+- 备份
+- 账户/系统维护
+- Help desk
+
+MSP 可以管很多 IT 事情，
+但它**不是专门指安全监控与事件响应**。
+
+也就是说：
+- **MSP** = 泛 IT 外包/托管
+- **MDR** = 专门安全监控 + 检测 + 响应
+
+### 为什么其他选项不对
+- **SIEM**
+  - 是安全信息与事件管理平台/系统
+  - 更偏工具或平台，不是题目说的那种“由外部提供的专门服务”最佳答案
+
+- **SaaS**
+  - 是软件交付模式
+  - 太泛，不是专门安全响应服务
+
+### 口诀
+**外包管 IT，先想 MSP；外包盯威胁、帮你打安全仗，才是 MDR。**
+
+---
+
 ## WinRE 是现代恢复环境，替代的是 Recovery Console
 ![WinRE replaces Recovery Console question](images/2026-05-03-core2-winre-replaces-recovery-console.jpg)
 
