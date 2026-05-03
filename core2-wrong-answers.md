@@ -3,6 +3,62 @@
 用于记录 Core 2 错题、易混概念、简短中文解释和记忆口诀。
 后续新错题默认追加到这里。
 
+## WinRE 是现代恢复环境，替代的是 Recovery Console
+![WinRE replaces Recovery Console question](images/2026-05-03-core2-winre-replaces-recovery-console.jpg)
+
+**题干：** In Windows 10 and 11, Windows Recovery Environment (WinRE) is the modern recovery and troubleshooting environment that replaces the legacy:
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | System Restore |
+| ✅ 正确答案 | Recovery Console |
+
+### 这题核心在什么
+这题考的是：
+**WinRE 是“恢复环境”本身，替代的是旧时代的恢复环境。**
+
+所以对应的旧东西不是某一个具体修复功能，
+而是早期 Windows 的命令行恢复平台：
+## **Recovery Console**
+
+### 为什么答案是 Recovery Console
+**Recovery Console** 是早期 Windows（尤其 XP 时代）常见的恢复/修复环境，
+主要用来：
+- 修复启动问题
+- 访问磁盘和系统文件
+- 执行一些恢复命令
+
+后来 Windows 发展出更完整的恢复体系，
+就变成了现在的：
+## **WinRE (Windows Recovery Environment)**
+
+所以题目问“WinRE replaces the legacy what”，
+答案就是 **Recovery Console**。
+
+### 为什么不是 System Restore
+**System Restore（系统还原）** 只是 WinRE 里面可能提供的一个**功能选项**，
+不是 WinRE 所替代的“上一代恢复环境”。
+
+也就是说：
+- **WinRE** = 一个恢复平台 / 恢复环境
+- **System Restore** = 平台里的一个工具功能
+
+两者不是同一级概念。
+
+### 为什么另外两个也不对
+- **Startup Repair**
+  - 这是恢复工具之一
+  - 不是旧版恢复环境名称
+
+- **Windows Boot Manager**
+  - 这是启动管理组件
+  - 不是恢复环境
+
+### 口诀
+**WinRE 对老前辈，替代的是 Recovery Console；System Restore 只是里面的一个工具。**
+
+---
+
 ## 恶意占用算力挖矿 = Cryptominer，不是 Fileless malware
 ![Cryptominer resource exploitation question](images/2026-05-03-core2-cryptominer-resource-exploitation.jpg)
 
