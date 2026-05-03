@@ -3,6 +3,74 @@
 用于记录 Core 2 错题、易混概念、简短中文解释和记忆口诀。
 后续新错题默认追加到这里。
 
+## On-path attack = 插到通信路径中间，可拦截/篡改/冒充（Select 3）
+![On-path attack select 3 question](images/2026-05-03-core2-on-path-attack-select-3.jpg)
+
+**题干：** Which of the statements listed below describe an on-path attack? (Select 3 answers)
+
+|  |  |
+| --- | --- |
+| ✅ 我选对了 | Attackers intercept and modify the packets sent between two communicating devices |
+| ✅ 我选对了 | Attackers can impersonate one of the communicating parties to alter the communication |
+| ❌ 我的错误答案 | An on-path attack may succeed only if at least one of the communicating devices has been compromised |
+| ✅ 漏选正确答案 | Attackers place themselves on the communication route between two devices |
+
+### 这题核心在什么
+**On-path attack**（以前也常叫 **man-in-the-middle**）
+核心就一句话：
+## **攻击者把自己插进两台设备的通信路径中间。**
+
+一旦插进去了，就可能：
+- **监听** 通信
+- **拦截** 数据
+- **篡改** 数据包
+- **冒充** 通信一方
+
+### 正确的 3 个为什么对
+#### 1) Attackers intercept and modify the packets sent between two communicating devices
+对。
+这正是 on-path attack 的典型行为：
+**拦截并修改数据包。**
+
+#### 2) Attackers can impersonate one of the communicating parties to alter the communication
+对。
+攻击者常常会冒充其中一方，
+让另一方以为自己还在和可信对象通信。
+
+#### 3) Attackers place themselves on the communication route between two devices
+对。
+这是最本质、最定义级别的一句：
+**把自己放到两者通信路径上。**
+
+### 为什么你选错的那个不对
+#### An on-path attack may succeed only if at least one of the communicating devices has been compromised
+不对，关键错在 **only if**。
+
+On-path attack **不一定非要先攻陷某台设备** 才能成立。
+攻击者也可能通过：
+- ARP spoofing
+- rogue Wi‑Fi / evil twin
+- session hijacking
+- 路由劫持等方式
+
+把自己插入通信路径。
+
+也就是说：
+**“设备必须先被攻陷”不是必要条件。**
+
+### 为什么“必须有物理访问权限”也不对
+题目里另一个错误点是：
+**不一定需要 physical access**。
+很多 on-path 攻击可以远程或通过同网段/伪造网络环境实现。
+
+### 口诀
+**On-path 三件套：插中间、能冒充、可改包。**
+
+再短一点：
+**在路上截、在中间骗、顺手改。**
+
+---
+
 ## 伪造 email/IP/MAC/caller ID/网站身份 = Spoofing，不只是泛泛的 impersonation
 ![Spoofing falsified identifier question](images/2026-05-03-core2-spoofing-falsified-identifier.jpg)
 
