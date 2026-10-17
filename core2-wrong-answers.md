@@ -6720,3 +6720,24 @@ NTFS 权限判断先看 **显式（Explicit）** 还是 **继承（Inherited）*
 **文档桌面改去向，用 Folder Redirection；Home folder 只是家目录。**
 
 ---
+
+## detect and record restricted access = Badge readers
+![detect and record restricted access = Badge readers](images/2026-10-17-core2-badge-readers-restricted-area-access-log.jpg)
+
+**题干：** Which of the following is used to detect and record access to restricted areas?
+
+|  |  |
+| --- | --- |
+| ✅ 你最初判断 | Badge readers |
+| ❌ 容易误选 | Video surveillance |
+
+### 简析
+这题你一开始想的 **C. Badge readers** 是对的。关键词是 **detect and record access**，也就是不只是“看见有人进去”，而是要能**识别谁刷了证件、谁被拒绝、什么时候进出**，这种带门禁日志的控制最符合 **badge readers**。
+
+**Video surveillance** 虽然能拍到画面，但更偏向**看见/回看现场**，默认不等于精确记录“是谁通过了门禁”。  
+**Bollards** 是防车辆冲撞的，**Fence** 是围挡边界的，这两个都不会帮你记录具体进出人员。
+
+### 口诀
+**要日志、要身份、要进出记录，先想 badge reader；只有画面监控，才是 video surveillance。**
+
+---
