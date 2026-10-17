@@ -6782,3 +6782,43 @@ NTFS 权限判断先看 **显式（Explicit）** 还是 **继承（Inherited）*
 **单个 SaaS 异常，先排浏览器会话。**
 
 ---
+
+## 钓鱼中招已隔离已重装 = 下一步做用户安全教育
+![钓鱼中招已隔离已重装 = 下一步做用户安全教育](images/2026-10-17-core2-phishing-edr-user-security-hygiene-next-step.jpg)
+
+**题干：** A small office reported a phishing attack that resulted in a malware infection. A technician is investigating the incident and has verified the following: all endpoints are updated and have the newest EDR signatures, logs confirm the malware was quarantined by EDR on one system, and the potentially infected machine was reimaged. Which of the following actions should the technician take next?
+
+|  |  |
+| --- | --- |
+| ✅ 正确答案 | Discuss the cause of the issue and educate the end user about security hygiene |
+| ❌ 容易想偏 | Install more tools / Upgrade security software / Flash router firmware |
+
+### 简析
+题目已经把关键技术处置都先讲完了：
+- **终端已更新到最新 EDR 签名**
+- **恶意软件已被隔离**
+- **可能受感染主机已重装**
+
+说明这次事件的**隔离、清除、恢复**基本已经完成了。接下来最合理的下一步，不是再乱加一层工具，而是做 **lessons learned / user awareness**，也就是和用户说明这次是怎么中招的，并加强 **security hygiene**，减少再次点开 phishing 邮件的机会。
+
+### 为什么不是别的
+- **A. Install network security tools**
+  - 题干没说现有防护缺失，反而明确说 **EDR 已经有而且生效了**
+  - 现在补装工具不是这道题里最直接的 **next step**
+
+- **C. Flash the firmware of the router**
+  - 这题是 **phishing -> endpoint malware**，不是在暗示路由器固件被攻破
+  - 动到路由器太跳了
+
+- **D. Suggest alternate preventative controls / more advanced security software**
+  - 这和 A 一样，容易让人觉得“安全事件后就继续买更强软件”
+  - 但题干已经说明现有 **EDR 成功发现并隔离**，根因更像**用户被 phishing 骗到**
+  - 所以考试更想要你选 **教育用户、改行为**
+
+### 口诀
+**毒已隔离、机已重装，下一步先补人，不先补软件。**
+
+再短一点：
+**钓鱼题收尾，先做用户教育。**
+
+---
