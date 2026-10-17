@@ -6741,3 +6741,44 @@ NTFS 权限判断先看 **显式（Explicit）** 还是 **继承（Inherited）*
 **要日志、要身份、要进出记录，先想 badge reader；只有画面监控，才是 video surveillance。**
 
 ---
+
+## 单个 SaaS 登录异常但门户可进 = 先开 private browsing 排除本地 session 冲突
+![单个 SaaS 登录异常但门户可进 = 先开 private browsing 排除本地 session 冲突](images/2026-10-17-core2-private-browsing-sso-session-conflict.jpg)
+
+**题干：** A user reports some single sign-on errors to a help desk technician. Currently, the user is able to sign in to the company's application portal but cannot access a specific SaaS-based tool. Which of the following would the technician most likely suggest as a next step?
+
+|  |  |
+| --- | --- |
+| ✅ 正确答案 | Use a private browsing window to avoid local session conflicts |
+| ❌ 容易想偏 | Reenroll MFA token / Bypass SSO / Factory reset device |
+
+### 简析
+题目已经先告诉你：用户**能登录公司的 application portal**，说明大方向上的 **SSO 账号、主认证流程、甚至 MFA** 大概率都已经过了。现在偏偏只是**某一个 SaaS 工具进不去**，最像的是本地浏览器里的 **cookie / cached session / token** 跟这个应用的会话打架。
+
+所以技术支持最可能先建议的下一步是：
+## **开 private browsing / incognito window 重新试**
+
+因为无痕窗口会：
+- 带一个新的浏览器会话
+- 不继承原来的大部分 cookie / session 状态
+- 很适合快速判断是不是本地会话冲突
+
+### 为什么不是其他选项
+- **Reenroll MFA**
+  - 如果 MFA 真有问题，通常连前面的门户登录都会更容易出问题
+  - 这题是“只卡某个 SaaS”，不优先怀疑 MFA 重新注册
+
+- **Bypass single sign-on**
+  - 这通常不是标准 help desk 的首选排错步骤
+  - 很多企业 SaaS 就是强依赖 SSO，也未必允许你绕过
+
+- **Factory reset**
+  - 这太重了，明显不是“next step”
+
+### 口诀
+**门户能进、单点卡壳，先开无痕查 session。**
+
+再短一点：
+**单个 SaaS 异常，先排浏览器会话。**
+
+---
