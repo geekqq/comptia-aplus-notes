@@ -6822,3 +6822,46 @@ NTFS 权限判断先看 **显式（Explicit）** 还是 **继承（Inherited）*
 **钓鱼题收尾，先做用户教育。**
 
 ---
+
+## 补丁还没出就先被利用 = Zero-day，不是 spoofing / brute-force / DoS
+![补丁还没出就先被利用 = Zero-day，不是 spoofing / brute-force / DoS](images/2026-10-17-core2-zero-day-before-patch-remediation.jpg)
+
+**题干：** Which of the following describes a vulnerability that has been exploited before a patch or remediation is available?
+
+|  |  |
+| --- | --- |
+| ✅ 正确答案 | Zero-day |
+| ❌ 容易混淆 | Spoofing / Brute-force / DoS |
+
+### 简析
+这题关键就盯住一句：
+**before a patch or remediation is available**
+
+也就是：
+**厂商还没来得及出补丁或修复方案，这个漏洞就已经被攻击者利用了。**
+
+这正是 **Zero-day** 的定义。
+
+### 为什么不是别的
+- **Spoofing**
+  - 是**冒充/伪装身份或来源**
+  - 比如伪造邮箱地址、IP、MAC、来电显示
+  - 它强调“装成别人”，不是“未知漏洞未修补就被利用”
+
+- **Brute-force**
+  - 是**暴力破解**
+  - 靠不断试密码或组合硬猜进去
+  - 它强调“反复猜”，不是漏洞是否来得及打补丁
+
+- **DoS**
+  - 是**拒绝服务攻击**
+  - 目标是把服务打瘫，让正常用户没法使用
+  - 它强调“压垮服务”，不是漏洞的披露和补丁时间差
+
+### 口诀
+**补丁未出先被打，先想 Zero-day。**
+
+再短一点：
+**未修补 + 已利用 = Zero-day。**
+
+---
