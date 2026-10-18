@@ -6944,3 +6944,42 @@ NTFS 权限判断先看 **显式（Explicit）** 还是 **继承（Inherited）*
 **假热点给外网，真内网进不去。**
 
 ---
+
+## 跨平台文件系统再考一次：FAT32 + exFAT，不是 NTFS
+![跨平台文件系统再考一次：FAT32 + exFAT，不是 NTFS](images/2026-10-17-core2-cross-platform-filesystems-fat32-exfat-review.jpg)
+
+**题干：** Which file systems offer the broadest cross-platform compatibility across Windows, macOS, and Linux systems? (Select 2 answers)
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | NTFS / exFAT |
+| ✅ 正确答案 | FAT32 / exFAT |
+
+### 简析
+题眼是：
+- **broadest cross-platform compatibility**
+- **Windows + macOS + Linux**
+
+只要题目在问**三大系统里最广泛、最自然的通用兼容**，优先想 **FAT 家族**，也就是 **FAT32** 和 **exFAT**。
+
+### 为什么对的是 FAT32 + exFAT
+- **FAT32**
+  - 老牌通用格式
+  - Windows / macOS / Linux 基本都认识
+  - 老设备、U 盘、相机卡这类场景也常见
+
+- **exFAT**
+  - 也是跨平台里很常见的通用格式
+  - 比 FAT32 更适合现代移动存储和大文件
+  - 没有 FAT32 那个经典的 **4GB 单文件限制**
+
+### 为什么 NTFS 这题不对
+- **NTFS** 是 Windows 很强、很常见的文件系统
+- 但题目问的不是“Windows 下功能强不强”，而是“**跨 Windows / macOS / Linux 最广兼容**”
+- 在这个维度上，**NTFS 没有 FAT32 / exFAT 那么通用自然**
+
+### 口诀
+**老通用选 FAT32，大文件跨平台选 exFAT；NTFS 强在 Windows，不是最广兼容。**
+
+再短一点：
+**跨平台先想 FAT32 + exFAT，Windows 本位再想 NTFS。**
