@@ -7028,3 +7028,48 @@ NTFS 权限判断先看 **显式（Explicit）** 还是 **继承（Inherited）*
 
 再短一点：
 **微软看 ReFS，Linux 那几位别抢答。**
+
+---
+
+## 恢复出厂设置且不靠外部介质，先想 recovery partition；system restore 不是 factory reset
+![Recovery partition vs System Restore question](images/2026-10-18-core2-recovery-partition-vs-system-restore-factory-settings.jpg)
+
+**题干：** Which of the following answers refers to a built-in solution for restoring an operating system to its factory settings without the use of external media?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | System restore |
+| ✅ 正确答案 | Recovery partition |
+
+### 简析
+这题的题眼不是单看 **restore**，而是整句：
+- **built-in solution**
+- **restoring an operating system to its factory settings**
+- **without the use of external media**
+
+只要题目在问**把系统恢复到出厂状态**，而且强调**不用外部启动盘/恢复盘**，考试里优先想 **Recovery partition**。
+
+### 为什么答案是 Recovery partition
+- **Recovery partition** 是硬盘里预置的恢复分区
+- 里面通常放着厂商或系统自带的恢复环境
+- 可以在**不依赖外部介质**的情况下，把系统恢复到接近出厂默认状态
+
+### 为什么 System Restore 不对
+- **System Restore** 主要是把系统回滚到某个 **restore point**
+- 它更像“撤销最近的系统改动”
+- 它**不是**把整台机器恢复到 **factory settings**
+
+### 为什么另外两个也不对
+- **Disk imaging**
+  - 更像镜像备份/还原方案
+  - 不一定是题目说的内建出厂恢复机制
+
+- **Shadow copy**
+  - 主要用于文件版本/卷影副本
+  - 不是拿来把操作系统恢复到出厂设置
+
+### 口诀
+**题目问 built-in factory reset without external media，就选 Recovery partition。**
+
+再短一点：
+**factory settings 不看 restore point，看 recovery partition。**
