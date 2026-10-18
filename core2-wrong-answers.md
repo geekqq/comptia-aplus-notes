@@ -6905,3 +6905,42 @@ NTFS 权限判断先看 **显式（Explicit）** 还是 **继承（Inherited）*
 **升级后崩 app，先更新，不先换客户端。**
 
 ---
+
+## 同名不安全 Wi-Fi 能上网但进不了文件共享，多半是 Rogue AP
+![同名不安全 Wi-Fi 能上网但进不了文件共享，多半是 Rogue AP](images/2026-10-17-core2-rogue-wireless-access-point-same-ssid.jpg)
+
+**题干：** Users are reporting that an unsecured network is broadcasting with the same name as the normal wireless network. They are able to access the internet but cannot connect to the file share servers. Which of the following best describes this issue?
+
+|  |  |
+| --- | --- |
+| ✅ 正确答案 | Rogue wireless access point |
+| ❌ 容易想偏 | Unreachable DNS server / Virtual local area network misconfiguration / Incorrect IP address |
+
+### 简析
+题干最关键的线索有两个：
+- **an unsecured network is broadcasting with the same name**
+- **能上互联网，但进不了文件共享服务器**
+
+这很像有人放了一个**同名假 Wi-Fi / 非授权无线接入点**，把用户骗连过去。因为它能把用户带上互联网，所以看起来“网络是通的”；但它并不在公司正常内网里，所以碰不到内部的 **file share servers**。
+
+### 为什么不是别的
+- **A. Unreachable DNS server**
+  - `DNS` 主要影响的是**域名解析**
+  - 题干重点不是“名字解析失败”，而是出现了一个**同名但不安全的无线网络**
+
+- **B. Virtual local area network misconfiguration**
+  - `VLAN` 配错会导致网段/访问范围异常
+  - 但它解释不了“**有人在广播一个和正常 Wi-Fi 同名的不安全网络**”这个强提示
+
+- **C. Incorrect IP address**
+  - IP 不对会造成连通性异常
+  - 但题干已经明确说用户**可以访问 internet**
+  - 而且同名不安全 SSID 这个线索明显更像接入了错误的 AP
+
+### 口诀
+**同名假 Wi-Fi，能上外网进不了内网，先想 Rogue AP。**
+
+再短一点：
+**假热点给外网，真内网进不去。**
+
+---
