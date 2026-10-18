@@ -6865,3 +6865,43 @@ NTFS 权限判断先看 **显式（Explicit）** 还是 **继承（Inherited）*
 **未修补 + 已利用 = Zero-day。**
 
 ---
+
+## 手机 OS 升级后公司邮箱 app 打不开，先更新 app，不是先做 MDM
+![手机 OS 升级后公司邮箱 app 打不开，先更新 app，不是先做 MDM](images/2026-10-17-core2-mobile-os-upgrade-email-app-not-open.jpg)
+
+**题干：** After a recent mobile OS upgrade to a smartphone, a user attempts to access their corporate email, but the application does not open. A technician restarts the smartphone, but the issue persists. Which of the following is the most likely way to resolve the issue?
+
+|  |  |
+| --- | --- |
+| ✅ 正确答案 | Updating the failed software |
+| ❌ 容易想偏 | Registering the smartphone with an MDM solution / Installing a third-party client / Clearing the cache partition |
+
+### 简析
+这题优先抓住两个词：
+- **recent mobile OS upgrade**
+- **application does not open**
+
+这更像是 **OS 升级后，原来的邮件 app 和新系统兼容性出了问题**。既然已经重启过还是不行，最直接、最合理的处理就是先把这个出问题的 app 更新到支持新系统的版本。
+
+### 为什么不是别的
+- **B. Registering the smartphone with an MDM solution**
+  - `MDM` 主要是企业对手机做**注册、管理、策略下发**
+  - 它更像“让设备受管”，不是“修一个升级后打不开的 app”
+  - 如果题干说的是公司资源访问被策略拦住，才更可能往 MDM 想
+
+- **C. Installing a third-party client**
+  - 这是绕路，不是优先排错
+  - 考试里通常先修现有官方/原有应用，而不是马上换客户端
+
+- **D. Clearing the cache partition**
+  - 有时能解决一些升级后的系统残留问题
+  - 但题干更直接暗示的是 **app 在 OS 升级后失去兼容性**
+  - 所以最优先仍然是 **更新这个失败的软件**
+
+### 口诀
+**系统刚升级，app 打不开，先更 app。**
+
+再短一点：
+**升级后崩 app，先更新，不先换客户端。**
+
+---
