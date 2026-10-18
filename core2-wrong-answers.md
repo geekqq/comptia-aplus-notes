@@ -6983,3 +6983,48 @@ NTFS 权限判断先看 **显式（Explicit）** 还是 **继承（Inherited）*
 
 再短一点：
 **跨平台先想 FAT32 + exFAT，Windows 本位再想 NTFS。**
+
+---
+
+## 微软文件系统考 resilience / integrity / enterprise storage，就选 ReFS
+![微软文件系统考 resilience / integrity / enterprise storage，就选 ReFS](images/2026-10-18-core2-refs-microsoft-resilience-integrity-enterprise-storage.jpg)
+
+**题干：** Which Microsoft file system was specifically designed for maximum resilience, data integrity, and large-scale storage deployments in enterprise environments?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | XFS |
+| ✅ 正确答案 | ReFS |
+
+### 简析
+这题其实不绕，题眼全在这几个词：
+- **Microsoft**
+- **maximum resilience**
+- **data integrity**
+- **large-scale storage deployments in enterprise environments**
+
+只要题目把这几个关键词绑在一起，基本就是在点名 **ReFS**，也就是 **Resilient File System**。
+
+### 为什么答案是 ReFS
+- **ReFS** 是微软家的文件系统
+- 名字里就直接带 **Resilient**
+- 设计目标就是更好的 **数据完整性**、**容错性**，以及更偏企业级的大规模存储场景
+
+### 为什么不是别的
+- **XFS**
+  - 常见于 Linux
+  - 不是 Microsoft 文件系统
+
+- **Btrfs**
+  - 也是 Linux 阵营常见文件系统
+  - 强调现代特性，但不是微软家的
+
+- **ZFS**
+  - 更常和 Sun / Oracle 体系关联
+  - 也不是 Microsoft 文件系统
+
+### 口诀
+**题目只要写 Microsoft + resilience，就优先选 ReFS。**
+
+再短一点：
+**微软看 ReFS，Linux 那几位别抢答。**
