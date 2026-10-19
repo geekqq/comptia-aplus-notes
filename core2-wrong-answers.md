@@ -7123,3 +7123,43 @@ NTFS 权限判断先看 **显式（Explicit）** 还是 **继承（Inherited）*
 
 再短一点：
 **看到 Windows 11 requirements，先排掉 2 GB 和 32 GB。**
+
+---
+
+## Windows 10 Pro for Workstations 物理内存上限：6 TB，别和普通 Pro 的 2 TB 混掉
+![Windows 10 Pro for Workstations physical memory limit 6 TB question](images/2026-10-19-core2-windows10-pro-for-workstations-physical-memory-limit-6tb.jpg)
+
+**题干：** Which of the answers listed below refers to the physical memory limit for Windows 10 Pro for Workstations?
+
+|  |  |
+| --- | --- |
+| ✅ 正确答案 | 6 TB |
+| ❌ 我选错的 | 4 TB |
+| 易混对比 | Windows 10 Pro = 2 TB |
+
+### 简析
+这题考的是 **Windows 10 不同版本的物理内存上限死数字**。
+
+看到 **Pro for Workstations**，就要往 **更高内存上限** 想；这题正确答案是 **6 TB**。  
+如果题目只是普通 **Windows 10 Pro**，那物理内存上限是 **2 TB**。
+
+### 为什么答案是 6 TB
+- **Windows 10 Pro for Workstations**
+  - 面向更高性能和更大内存的工作站场景
+  - 物理内存上限比普通 **Pro** 更高
+  - 这题要直接记成 **6 TB**
+
+### 为什么 4 TB 不对
+- **4 TB** 是很容易被拿来混淆的干扰项
+- 但这题问的是 **Pro for Workstations**
+- 不是普通 **Pro**，也不是别的 Windows 版本
+
+### 对比记忆
+- **Windows 10 Pro** = **2 TB**
+- **Windows 10 Pro for Workstations** = **6 TB**
+
+### 口诀
+**普通 Pro 记 2 TB，Workstations 直接翻到 6 TB。**
+
+再短一点：
+**看到 Pro for Workstations，就别停在 2 TB。**
