@@ -7073,3 +7073,53 @@ NTFS 权限判断先看 **显式（Explicit）** 还是 **继承（Inherited）*
 
 再短一点：
 **factory settings 不看 restore point，看 recovery partition。**
+
+---
+
+## Windows 11 安装最低要求别被旧数字带偏：TPM 2.0、Secure Boot、受支持 64-bit CPU
+![Windows 11 minimum requirements TPM 2.0 Secure Boot 64-bit CPU question](images/2026-10-19-core2-windows11-minimum-requirements-tpm-secureboot-cpu.jpg)
+
+**题干：** Which of the following are minimum requirements for installing Windows 11? (Select 3 answers)
+
+|  |  |
+| --- | --- |
+| ✅ 我答对的 | UEFI firmware with Secure Boot |
+| ❌ 我漏掉的 | TPM version 2.0 support |
+| ❌ 我漏掉的 | 64-bit processor listed on Microsoft’s Windows 11 compatibility list |
+| ❌ 我选错的 | At least 2 GB of system memory |
+| ❌ 我选错的 | A minimum of 32 GB of available storage space |
+
+### 简析
+这题考的是 **Windows 11 的硬性门槛**，不是 Windows 10 时代那种偏低配置。
+
+只要看到题目在问 **minimum requirements for installing Windows 11**，先锁这三个：
+- **TPM 2.0**
+- **UEFI firmware with Secure Boot**
+- **受支持的 64-bit CPU**
+
+### 为什么这三个是对的
+- **UEFI firmware with Secure Boot**
+  - Windows 11 要求设备使用 **UEFI**，并且具备 **Secure Boot** 能力
+
+- **TPM version 2.0 support**
+  - 这是 Windows 11 很爱考的硬门槛
+  - 一看到 **Win11 requirements**，就要先想到 **TPM 2.0**
+
+- **64-bit processor listed on Microsoft's compatibility list**
+  - 不是随便一个 64-bit CPU 都行
+  - 还要是微软支持列表里的处理器
+
+### 为什么另外两个不对
+- **At least 2 GB of system memory**
+  - 太低了
+  - Windows 11 最低内存要求不是 2 GB，而是更高
+
+- **A minimum of 32 GB of available storage space**
+  - 这也是容易被旧印象带偏的干扰项
+  - Windows 11 对存储要求比 32 GB 更高
+
+### 口诀
+**Win11 三道门：TPM 2.0、UEFI Secure Boot、受支持的 64-bit CPU。**
+
+再短一点：
+**看到 Windows 11 requirements，先排掉 2 GB 和 32 GB。**
