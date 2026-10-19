@@ -7163,3 +7163,106 @@ NTFS 权限判断先看 **显式（Explicit）** 还是 **继承（Inherited）*
 
 再短一点：
 **看到 Pro for Workstations，就别停在 2 TB。**
+
+---
+
+## Windows domain 的 3 个核心特征：单一凭据、集中管理、client-server
+![Windows domain centralized credentials client server question](images/2026-10-19-core2-windows-domain-centralized-credentials-client-server.jpg)
+
+**题干：** Which of the statements listed below apply to Windows domains? (Select 3 answers)
+
+|  |  |
+| --- | --- |
+| ✅ 你答对的 | Security policies and permissions on a Windows domain are administered centrally |
+| ❌ 你漏掉的 | Logging into any computer on a Windows domain requires a single set of credentials |
+| ❌ 你漏掉的 | Windows domains are based on client-server networking architecture |
+| ❌ 你选错的 | Each computer on a Windows domain is governed by its own security policy |
+| ❌ 你选错的 | All members of a Windows domain must be on the same local network or subnet |
+
+### 简析
+这题考的是 **Windows domain 和 workgroup / 小网络的根本区别**。
+
+Windows domain 的脑图要先锁住这 3 个关键词：
+- **single set of credentials**
+- **centrally administered**
+- **client-server architecture**
+
+### 为什么这三个是对的
+- **Logging into any computer on a Windows domain requires a single set of credentials**
+  - 域账号本质上是统一身份认证
+  - 只要这台电脑加入域，并且账号有权限，用户可以用同一套域凭据登录
+
+- **Security policies and permissions on a Windows domain are administered centrally**
+  - 域环境强调统一管理
+  - 典型就是 **Active Directory + Group Policy**
+  - 权限和策略不是每台电脑各管各的
+
+- **Windows domains are based on client-server networking architecture**
+  - 域依赖 **domain controller**
+  - 这就是典型的 **client-server**
+  - 不是对等网络
+
+### 为什么另外两个不对
+- **Each computer on a Windows domain is governed by its own security policy**
+  - 这更像本地机器各自管理，偏 **workgroup** 思路
+  - 域环境反而是集中策略下发
+
+- **All members of a Windows domain must be on the same local network or subnet**
+  - 域成员不要求必须在同一个 subnet
+  - 企业里跨楼层、跨网段、甚至跨地点都很常见
+
+### 口诀
+**域 = 单一账号 + 集中策略 + client-server；不是各管各的，也不是必须同网段。**
+
+再短一点：
+**看到 Windows domain，先排掉 P2P、逐台安全策略、必须同 subnet。**
+
+---
+
+## Windows workgroup 的 3 个核心特征：小网络、本地账号、本地安全策略
+![Windows workgroup local account local policy question](images/2026-10-19-core2-windows-workgroup-local-account-local-policy.jpg)
+
+**题干：** Which of the following answers apply to Windows workgroups? (Select 3 answers)
+
+|  |  |
+| --- | --- |
+| ✅ 你答对的 | Workgroups are typically recommended for small networks of fewer than twenty computers |
+| ✅ 你答对的 | Logging into any computer in a workgroup requires an account on that computer |
+| ❌ 你漏掉的 | Each computer in a workgroup has its own security policy |
+| ❌ 你选错的 | Logging into any computer on a workgroup requires a single account (single sign-on feature) |
+
+### 简析
+这题就是上一题 **Windows domain** 的反面版本。
+
+看到 **workgroup**，脑子里先切到这 3 个关键词：
+- **small networks**
+- **local account**
+- **own security policy**
+
+### 为什么这三个是对的
+- **Workgroups are typically recommended for small networks of fewer than twenty computers**
+  - workgroup 适合小规模环境
+  - 电脑一多，逐台管理就会变得很麻烦
+
+- **Logging into any computer in a workgroup requires an account on that computer**
+  - workgroup 没有域账号统一认证
+  - 想登录哪台机器，就得在那台机器上有本地账户
+
+- **Each computer in a workgroup has its own security policy**
+  - 这是 workgroup 的核心特征之一
+  - 每台电脑各管各的，不是集中策略下发
+
+### 为什么 single account 不对
+- **single sign-on** 更像域环境
+- workgroup 没有统一身份认证中心
+- 所以不能靠一套账号到处登录
+
+### 对比记忆
+- **Domain** = 单一凭据 + 集中策略 + client-server
+- **Workgroup** = 本地账号 + 本地策略 + 小网络
+
+### 口诀
+**工作组 = 小网络、本地号、各管各。**
+
+再短一点：
+**看到 workgroup，就别想单点登录和集中管理。**
