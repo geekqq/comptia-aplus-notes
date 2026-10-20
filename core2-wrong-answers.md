@@ -7266,3 +7266,50 @@ Windows domain 的脑图要先锁住这 3 个关键词：
 
 再短一点：
 **看到 workgroup，就别想单点登录和集中管理。**
+
+---
+
+## 配置 Windows 系统和用户策略，用 gpedit.msc；msconfig 是启动配置，不是组策略
+![Group Policy Editor gpedit vs msconfig question](images/2026-10-20-core2-group-policy-editor.jpg)
+
+**题干：** Which of the tools listed below allows administrators to configure policies that control system and user settings on a Windows computer?
+
+|  |  |
+| --- | --- |
+| ❌ 你选的 | msconfig.exe |
+| ✅ 正确答案 | gpedit.msc |
+
+### 简析
+这题抓关键词就够了：**configure policies**、**control system and user settings**。
+
+只要题目在问 **Windows 组策略 / 本地策略配置**，优先就想 **gpedit.msc**。
+
+### 为什么答案是 gpedit.msc
+- **gpedit.msc** = **Local Group Policy Editor**
+- 它就是用来配置本地计算机策略和用户策略的
+- 能管很多系统行为，例如安全选项、管理模板、脚本、控制面板限制等
+
+### 为什么另外三个不对
+- **msconfig.exe**
+  - 这是 **System Configuration**
+  - 主要管启动方式、引导选项、诊断启动
+  - 更偏 **启动排错**，不是策略编辑
+
+- **lusrmgr.msc**
+  - 这是 **Local Users and Groups**
+  - 主要管本地用户和组
+  - 是账号/组成员管理，不是组策略配置
+
+- **compmgmt.msc**
+  - 这是 **Computer Management**
+  - 是一个综合管理控制台，里面有设备管理、磁盘管理、事件查看等
+  - 不是专门拿来编辑组策略的首选工具
+
+### 对比记忆
+- **gpedit.msc** = 改策略
+- **msconfig.exe** = 管启动
+- **lusrmgr.msc** = 管本地用户和组
+- **compmgmt.msc** = 综合管理台
+
+### 口诀
+**题目问“改策略”，先想 gpedit；问“启动排错”，再想 msconfig。**
