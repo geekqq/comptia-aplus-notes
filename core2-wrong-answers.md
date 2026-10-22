@@ -7313,3 +7313,50 @@ Windows domain 的脑图要先锁住这 3 个关键词：
 
 ### 口诀
 **题目问“改策略”，先想 gpedit；问“启动排错”，再想 msconfig。**
+
+---
+
+## 启动故障排查先想 msconfig.exe，不是 eventvwr.msc；eventvwr 是看日志，不是启动配置
+![msconfig vs eventvwr startup troubleshooting question](images/2026-10-21-core2-msconfig-vs-eventvwr-startup-troubleshooting.jpg)
+
+**题干：** Which of the following refers to a Microsoft Windows tool designed for troubleshooting system startup problems?
+
+|  |  |
+| --- | --- |
+| ❌ 你选的 | eventvwr.msc |
+| ✅ 正确答案 | msconfig.exe |
+
+### 简析
+这题抓关键词就够了：**tool designed for troubleshooting system startup problems**。
+
+只要题目在问 **Windows 启动排错 / 启动配置**，优先就想 **msconfig.exe**。
+
+### 为什么答案是 msconfig.exe
+- **msconfig.exe** = **System Configuration**
+- 它就是专门用来做启动相关排错的经典工具
+- 能管正常启动、诊断启动、选择性启动、Boot 相关选项等
+
+### 为什么 eventvwr.msc 不对
+- **eventvwr.msc** = **Event Viewer**
+- 它主要是看系统、应用程序、安全日志
+- 可以辅助事后排查错误，但不是题目说的那种“专门设计来处理启动问题”的工具
+
+### 为什么另外两个不对
+- **sysdm.cpl**
+  - 这是 **System Properties**
+  - 主要管计算机名、远程设置、系统保护、性能设置
+  - 不是启动排错工具
+
+- **compmgmt.msc**
+  - 这是 **Computer Management**
+  - 是综合管理台，里面包含事件查看器、设备管理等
+  - 也不是专门拿来做启动配置排错的首选
+
+### 对比记忆
+- **msconfig.exe** = 启动配置 / 启动排错
+- **eventvwr.msc** = 查日志
+- **sysdm.cpl** = 系统属性
+- **compmgmt.msc** = 综合管理台
+
+### 口诀
+**启动排错找 msconfig，查错误日志找 eventvwr。**
