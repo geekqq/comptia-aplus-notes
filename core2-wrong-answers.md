@@ -7360,3 +7360,57 @@ Windows domain 的脑图要先锁住这 3 个关键词：
 
 ### 口诀
 **启动排错找 msconfig，查错误日志找 eventvwr。**
+
+---
+
+## msconfig 里 normal / diagnostic / selective startup 都在 General，不在 Startup
+![msconfig General tab startup modes question](images/2026-10-21-core2-msconfig-general-tab-startup-modes.jpg)
+
+**题干：** Which tab of the System Configuration utility in MS Windows includes the option for normal, diagnostic, and selective system startup modes?
+
+|  |  |
+| --- | --- |
+| ❌ 你选的 | Startup |
+| ✅ 正确答案 | General |
+
+### 简析
+这题考的是 **msconfig 各标签页分工**。
+
+只要看到 **normal startup / diagnostic startup / selective startup** 这三个启动模式，就先想 **General tab**。
+
+### 为什么答案是 General
+- **General** 是 `msconfig` 的总启动模式页
+- 这里会让你选：
+  - **Normal startup**
+  - **Diagnostic startup**
+  - **Selective startup**
+- 这是最基础的“系统以什么方式启动”的入口
+
+### 为什么 Startup 不对
+- 现在很多人一看到 `Startup` 就会直觉选它
+- 但这个标签页不是拿来选 `normal / diagnostic / selective` 这三种系统启动模式的
+- 这题就是在考你别把“启动模式”和“启动项”混在一起
+
+### 为什么另外两个不对
+- **Boot**
+  - 主要是引导相关设置
+  - 比如安全模式、无 GUI 启动、启动日志、默认操作系统等
+  - 不是三种启动模式所在页
+
+- **Services**
+  - 是服务管理页
+  - 可以启停服务、隐藏 Microsoft 服务
+  - 不是系统启动模式选择页
+
+- **Tools**
+  - 只是放一些系统工具快捷入口
+  - 也不是选启动模式的地方
+
+### 对比记忆
+- **General** = 正常 / 诊断 / 选择性启动
+- **Boot** = 安全模式 / 启动参数
+- **Services** = 服务开关
+- **Startup** = 启动项相关概念，别和启动模式混
+
+### 口诀
+**三种 startup mode 看 General；Safe boot 才去看 Boot。**
