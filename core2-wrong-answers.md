@@ -7464,3 +7464,53 @@ Windows domain 的脑图要先锁住这 3 个关键词：
 
 ### 口诀
 **先 ping 自己 `127.0.0.1`，再 ping 网关，最后再看外网。**
+
+---
+
+## `chkdsk /r` = 找坏扇区 + 尽量恢复可读数据，不是修系统文件
+![chkdsk r bad sectors and recover readable data question](images/2026-10-21-core2-chkdsk-r-bad-sectors-recover-data.jpg)
+
+**题干：** The `chkdsk /r` command in Windows: (Select 2 answers)
+
+|  |  |
+| --- | --- |
+| ❌ 你选的 | Attempts to recover any readable data from bad sectors; Scans for and repairs corrupted system files |
+| ✅ 正确答案 | Attempts to recover any readable data from bad sectors; Identifies bad sectors on the disk |
+
+### 简析
+这题考的是 **`chkdsk /r` 到底管“磁盘坏扇区”还是“系统文件损坏”**。
+
+只要看到 `/r`，就先想到两件事：
+- **找坏扇区**
+- **尽量把还能读的数据救回来**
+
+### 为什么答案是这两个
+- `Identifies bad sectors on the disk`
+  - `/r` 会扫描磁盘，定位 **bad sectors**
+  - 这是它最核心的识别动作
+
+- `Attempts to recover any readable data from bad sectors`
+  - `/r` 不只是发现坏扇区
+  - 还会尝试把坏扇区里 **还能读出来的数据** 转移/恢复
+
+### 为什么 `Scans for and repairs corrupted system files` 不对
+- 这句话对应的是 **`sfc /scannow`** 那一类题
+- `sfc` 管的是 **Windows 受保护系统文件**
+- `chkdsk /r` 管的是 **磁盘、文件系统、坏扇区**
+- 你这次其实是把 **`sfc` 的功能串到 `chkdsk /r`** 上了
+
+### 为什么另外两个不对
+- `Compresses files on the disk to save space`
+  - 这是压缩概念，不是 `chkdsk /r`
+
+- `Optimizes disk usage by consolidating fragmented file data`
+  - 这是偏 **磁盘碎片整理 / defrag** 的概念
+  - 不是 `chkdsk /r`
+
+### 对比记忆
+- `sfc /scannow` = 扫/修系统文件
+- `chkdsk /f` = 修文件系统错误
+- `chkdsk /r` = 找坏扇区 + 尽量恢复可读数据
+
+### 口诀
+**`/r` = bad sectors + recover readable data；系统文件损坏去想 `sfc`。**
