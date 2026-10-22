@@ -7514,3 +7514,55 @@ Windows domain 的脑图要先锁住这 3 个关键词：
 
 ### 口诀
 **`/r` = bad sectors + recover readable data；系统文件损坏去想 `sfc`。**
+
+---
+
+## `gpresult /r` = 输出已应用的组策略摘要；`/u` `/p` `/s` 是连接参数
+![gpresult r summary parameter question](images/2026-10-21-core2-gpresult-r-summary.jpg)
+
+**题干：** During a routine audit, an IT technician needs a concise report of all Group Policy settings that have been applied to a specific host. Which `gpresult` parameter in Windows command line instructs the utility to provide this summary?
+
+|  |  |
+| --- | --- |
+| ❌ 你选的 | `/u` |
+| ✅ 正确答案 | `/r` |
+
+### 简析
+这题考的是 **`gpresult` 各参数里，哪个是“直接把已应用组策略结果摘要列出来”**。
+
+看到关键词：
+- **concise report**
+- **all Group Policy settings that have been applied**
+- **provide this summary**
+
+就要优先想到 **`/r` = result / report summary**。
+
+### 为什么答案是 `/r`
+- `gpresult /r`
+  - 用来显示 **当前计算机和用户已应用的 Group Policy 结果摘要**
+  - 非常符合题干里说的 **concise report / summary**
+  - 审计场景下很常见
+
+### 为什么你选的 `/u` 不对
+- `/u`
+  - 是 **指定要用哪个用户身份执行查询**
+  - 它本身不是“输出摘要”的开关
+  - 所以你这次是把 **身份参数** 看成了 **报告参数**
+
+### 为什么另外两个不对
+- `/s`
+  - 指定 **远程系统 / remote host**
+  - 是“查哪台机器”，不是“怎么显示摘要”
+
+- `/p`
+  - 指定 **密码**
+  - 也是连接/认证参数，不是报告内容参数
+
+### 对比记忆
+- `/r` = **result/report summary**
+- `/s` = **system**
+- `/u` = **user**
+- `/p` = **password**
+
+### 口诀
+**要组策略结果摘要就用 `gpresult /r`；`/s /u /p` 都是在补“查谁、用谁、密码是什么”。**
