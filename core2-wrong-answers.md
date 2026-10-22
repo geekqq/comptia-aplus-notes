@@ -7414,3 +7414,53 @@ Windows domain 的脑图要先锁住这 3 个关键词：
 
 ### 口诀
 **三种 startup mode 看 General；Safe boot 才去看 Boot。**
+
+---
+
+## 验证本机 TCP/IP stack 先 ping 127.0.0.1，不是先 ping 网关
+![loopback ping TCP/IP stack troubleshooting question](images/2026-10-21-core2-loopback-ping-tcpip-stack.jpg)
+
+**题干：** A user reports an inability to access any websites or network shares. As the first troubleshooting step, a technician needs to verify whether the TCP/IP stack on the local Windows machine is functioning correctly. Which ping command should they use for this initial test?
+
+|  |  |
+| --- | --- |
+| ❌ 你选的 | `ping 192.168.1.1` |
+| ✅ 正确答案 | `ping 127.0.0.1` |
+
+### 简析
+这题考的是 **排网络故障时，先分清“本机 TCP/IP 栈有没有活着”还是“网络通不通”**。
+
+只要题干写的是先验证 **local Windows machine 的 TCP/IP stack**，第一反应就该是 **loopback address `127.0.0.1`**。
+
+### 为什么答案是 ping 127.0.0.1
+- `127.0.0.1` 是 **loopback / localhost**
+- 它只测试 **本机自己的 TCP/IP 协议栈**
+- 不依赖网卡、交换机、路由器、DNS、互联网
+- 所以它最适合当 **第一步**，先确认是不是连“自己这一层”都坏了
+
+### 为什么 ping 192.168.1.1 不对
+- `192.168.1.1` 通常是 **默认网关 / 路由器**
+- 这已经是在测：
+  - 本机网卡
+  - 本地链路
+  - 到网关的连通性
+- 它不是单纯测 **本机 TCP/IP stack**
+- 如果第一步就 ping 网关，排查层级跳太快了
+
+### 为什么另外两个不对
+- `ping 8.8.8.8`
+  - 这是公网 DNS 服务器
+  - 会同时牵涉本地网络、网关、外网路由、互联网连通性
+  - 不是“只测本机”的初始测试
+
+- `ping 1.1.1.1`
+  - 也是公网地址
+  - 同样是在测外网，不是只测本机 TCP/IP 栈
+
+### 对比记忆
+- `127.0.0.1` = 先测自己
+- `192.168.1.1` = 再测网关
+- `8.8.8.8 / 1.1.1.1` = 再测外网
+
+### 口诀
+**先 ping 自己 `127.0.0.1`，再 ping 网关，最后再看外网。**
