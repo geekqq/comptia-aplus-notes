@@ -962,7 +962,7 @@ MSP 可以管很多 IT 事情，
 
 |  |  |
 | --- | --- |
-| ❌ 我的答案 | dpkg |
+| ❌ 我的答案 | dpkg（另一次作答错选 pkg） |
 | ✅ 正确答案 | dnf |
 
 ### 这题怎么判断
@@ -976,8 +976,8 @@ MSP 可以管很多 IT 事情，
 ## **dnf**
 
 ### 为什么是 dnf
-**dnf** 是现代 Red Hat 系发行版常见的包管理器，
-可以理解成是较新的管理工具。
+**dnf** （Dandified YUM）是现代 Red Hat 系（RHEL 8+、现代 Fedora）的默认包管理器，
+题干关键词 modern 是关键：现代系统选 dnf，不选旧的 YUM；rpm 只是 Red Hat 系软件包格式 / 底层工具。
 
 考试里你可以直接记：
 - **Red Hat / Fedora 现代题目** → **dnf**
@@ -992,14 +992,14 @@ MSP 可以管很多 IT 事情，
 
 ### 其他选项顺手区分
 - **apt**：Debian / Ubuntu 常见高级包管理工具
-- **pkg**：常见于 BSD 等其他环境，不是这题 Red Hat 标准答案
+- **pkg**：FreeBSD 的包管理器，不是这题 Red Hat 标准答案
 
 ### 快速分类记忆
-- **Red Hat / Fedora** → **dnf**
-- **Debian / Ubuntu** → **apt / dpkg**
+- **Red Hat / Fedora** → **rpm（底层） / dnf、yum（高层），现代默认 dnf**
+- **Debian / Ubuntu** → **dpkg（底层） / apt（高层）**
 
 ### 口诀
-**红帽现代用 dnf；Debian 阵营想 apt、dpkg。**
+**红帽现代用 dnf；Debian 阵营想 apt、dpkg。底层 / 高层配对：Debian 系 dpkg ↔ apt；Red Hat 系 rpm ↔ dnf / yum。**
 
 ---
 
