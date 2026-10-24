@@ -7566,3 +7566,95 @@ Windows domain 的脑图要先锁住这 3 个关键词：
 
 ### 口诀
 **要组策略结果摘要就用 `gpresult /r`；`/s /u /p` 都是在补“查谁、用谁、密码是什么”。**
+
+---
+
+## Apple 独有时间敏感安全补丁 = RSR，不是 APT
+
+**题干：** Which of the answers listed below refers to an Apple-exclusive mechanism for deploying time-sensitive security patches independently of major OS updates?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | APT |
+| ✅ 正确答案 | RSR |
+
+### 这题核心在什么
+
+题目关键词是 **Apple-exclusive**、**time-sensitive security patches**、**independently of major OS updates**，也就是 Apple 独有的、不等大版本更新的紧急安全补丁机制。
+
+### 为什么答案是 RSR
+
+- **RSR = Rapid Security Response（快速安全响应）**
+- Apple 独有，从 iOS 16 / macOS Ventura 起使用
+- 可以单独推送紧急安全补丁，不用等大版本更新
+
+### 为什么不是 APT
+
+- **APT** 是 Debian / Ubuntu 的包管理器
+- **YUM / RPM** 是 Red Hat 系的包管理
+- 它们都是 Linux 装软件的工具，不是 Apple 的快速安全补丁机制
+
+### 口诀
+
+**Apple 补丁 → RSR；Linux 装软件 → Debian 系 APT、Red Hat 系 YUM/RPM。**
+
+---
+
+## macOS 内置启动盘加密 = FileVault，不是 Gatekeeper
+
+**题干：** Which of the built-in macOS features encrypts the content of the startup disk on a Mac computer?
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | Gatekeeper |
+| ✅ 正确答案 | FileVault |
+
+### 这题核心在什么
+
+题目关键词是 **built-in macOS features**、**encrypts the content of the startup disk**，也就是 macOS 内置的启动盘加密功能。
+
+### 为什么答案是 FileVault
+
+- **FileVault** 是 macOS 的全盘加密功能
+- 用于给 Mac 的启动盘内容加密，保护用户数据不被未授权访问
+
+### 为什么不是 Gatekeeper
+
+- **Gatekeeper** 只管应用来源与签名验证，也就是拦应用，不加密磁盘
+- **Keychain（钥匙串）** 是存密码 / 证书的
+- **TrueCrypt** 是已停更的第三方工具（继任者 VeraCrypt），不是 macOS 内置答案
+
+### 口诀
+
+**磁盘加密三兄弟：Windows BitLocker ↔ macOS FileVault ↔ Linux LUKS。**
+
+---
+
+## Linux 里 tracert 是 False：tracert 是 Windows 命令，不是 Linux 命令（判断题）
+
+**题干：** In Linux, tracert is a command-line utility that maps the path packets take from the local system to a remote host, displaying each hop along the route and round-trip times. It is used to diagnose network routing issues, identify bottlenecks, and verify connectivity between hosts.（True/False）
+
+|  |  |
+| --- | --- |
+| ❌ 我的答案 | True |
+| ✅ 正确答案 | False |
+
+### 为什么是 False
+
+功能描述全对：显示每一跳（hop）、往返时间、排查路由问题、定位瓶颈、验证连通性。错在命令名与系统配错了。
+
+### 怎么区分
+
+- **tracert** → Windows 命令
+- **traceroute** → Linux / macOS 常用命令（部分发行版有 tracepath）
+
+所以题目如果写 “In Linux, tracert …”，那就是错的。
+
+### 顺手记同类配对
+
+- Windows **ipconfig** ↔ Linux **ip addr / ifconfig**
+- **ping** 两边同名
+
+### 口诀
+
+**Windows 少两个字母：tracert；Linux 写全：traceroute。**
