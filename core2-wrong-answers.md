@@ -7567,3 +7567,17 @@ Windows domain 的脑图要先锁住这 3 个关键词：
 
 ### 口诀
 **要组策略结果摘要就用 `gpresult /r`；`/s /u /p` 都是在补“查谁、用谁、密码是什么”。**
+---
+## 眼后血管 = Retina scanner，不是 Iris scanner
+
+**题干：**A security system uses infrared light to scan the unique pattern of blood vessels at the back of a user's eye to grant access. This is an example of what type of biometric technology?
+| |
+| --- | --- |
+| ❌ 我的答案 | Iris scanner |
+| ✅ 正确答案 | Retina scanner |
+
+###简析
+题眼是 **back of the eye** + **blood vessels**：视网膜在眼球后部，扫的是视网膜血管纹路，用红外光，所以是 **Retina scanner**。Iris（虹膜）是眼球前面那圈有颜色的环，扫的是虹膜纹理/颜色图案，不涉及眼底血管；Eye-tracking 是追踪视线移动的，不是血管识别。
+
+###口诀
+**眼后血管 → retina；眼前色环 → iris。**
