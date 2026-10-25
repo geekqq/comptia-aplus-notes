@@ -6453,10 +6453,11 @@ Which sequence of steps in Windows provides access to an interface for creating 
 |  |  |
 | --- | --- |
 | ❌ 我的答案 | Fingerprint scanner |
+| ❌ 我的答案 | Facial recognition terminal |
 | ✅ 正确答案 | Palm print scanner |
 
 ### 简析
-题目强调 **restricted server farm**、**strong security**、**difficult to spoof**。在这些选项里，**Palm print scanner** 比普通指纹更难伪造、采集特征更多，更符合“高安全区域最佳选择”的思路。
+题目强调 **restricted server farm**、**strong security**、**difficult to spoof**。在这些选项里，**Palm print scanner** 比普通指纹更难伪造、采集特征更多，更符合“高安全区域最佳选择”的思路。掌纹（尤其掌静脉）识别面积大、信息点多，且掌静脉是皮下活体特征，难以复制伪造；指纹可被残留指纹膜复制，人脸可被照片/视频/3D面具欺骗，声纹可被录音重放。生物识别强度大致排序：视网膜/虹膜 > 掌静脉/掌纹 > 指纹 > 人脸/声纹。
 
 ### 口诀
 **一般生物识别想指纹；高安全、难 spoof，就升级到 palm print。**
