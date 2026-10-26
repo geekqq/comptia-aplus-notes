@@ -6514,7 +6514,7 @@ Which sequence of steps in Windows provides access to an interface for creating 
 关键词是 **associated inbox**，这里的 inbox 指的是电子邮箱收件箱，所以这是 **Email** 验证码。**TOTP** 是认证器 app 基于时间生成的一次性密码，不需要“发到收件箱”。
 
 ### 口诀
-**发到邮箱看 Email；认证器动态码才是 TOTP。**
+**发到邮箱看 Email；认证器动态码才是 TOTP。 **Repeat miss (2026-10-26): again chose TOTP; correct answer Email.****
 
 ---
 
