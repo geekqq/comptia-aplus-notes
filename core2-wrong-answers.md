@@ -6496,7 +6496,7 @@ Which sequence of steps in Windows provides access to an interface for creating 
 题目在说：用户不能访问超出自己职责范围的信息和资源。这正是 **Principle of least privilege（最小权限原则）**：只给完成工作所需的最少权限。**Separation of duties** 则是把高风险流程拆给不同的人，重点是职责分离，不是访问范围控制。
 
 ### 口诀
-**能看多少看 least privilege；谁来分工看 separation of duties。**
+**能看多少看 least privilege；谁来分工看 separation of duties。** **Repeat miss (2026-10-26): again chose Separation of duties; correct answer Principle of least privilege.**
 
 ---
 
