@@ -7617,3 +7617,21 @@ Windows domain 的脑图要先锁住这 3 个关键词：
 **解析：** 题眼是 cryptographic key（密码学密钥）：这种插 USB 的设备（如 YubiKey 这类安全密钥）里面存的是私钥，登录时做挑战-响应签名，它是硬件令牌（hardware token），属于“所有物”因素。它不是 USB flash drive——U 盘是存文件的存储设备，接口一样、本质完全不同，别被 USB 三个字带偏。顺带区分：Software token 是手机/电脑 App 里生成的码（如验证器应用）；OTP display key fob 是带小屏幕的钥匙扣，屏幕上滚动显示一次性密码，它显示码，但不插 USB 做签名。
 
 **口诀：** 看本质不看接口：签名密钥 → 硬件令牌；存文件 → U 盘；带屏显码 → OTP key fob；App 生成 → 软件令牌。
+
+
+---
+
+## SAML（安全断言标记语言）
+
+**题目：** Which of the following is a markup language used for exchanging authentication and authorization data?
+
+| 选项 | 结果 |
+| --- | --- |
+| OAuth | ❌ 干扰项 |
+| XML | ❌ 我的答案（2026-10-26 错选） |
+| SAML | ✅ 正确答案 |
+| XHTML | ❌ 干扰项 |
+
+**解析：** SAML 全称 Security Assertion Markup Language（安全断言标记语言），名字里就带 Markup Language，它的职责就是在身份提供方（IdP）和服务提供方（SP）之间交换认证与授权断言，是企业 SSO/联合身份的老牌标准。陷阱在 XML：SAML 的消息确实是用 XML 写的，但 XML 只是通用标记语言，本身不专管认证数据交换——题目问的是“用于交换认证和授权数据的标记语言”，指向的是 SAML 这个具体标准，而不是它的底层格式。顺带区分：OAuth 是授权框架/协议（不是标记语言，常配 JSON 和令牌）；XHTML 是更严格的 HTML 变体，用来写网页的。
+
+**口诀：** 交换认证找 SAML——全称自带 Markup Language，干的是断言交换；XML 只是它穿的衣服。问“哪种标准干这活”选 SAML，问“底层什么格式”才选 XML。
