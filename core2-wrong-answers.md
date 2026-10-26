@@ -7635,3 +7635,21 @@ Windows domain 的脑图要先锁住这 3 个关键词：
 **解析：** SAML 全称 Security Assertion Markup Language（安全断言标记语言），名字里就带 Markup Language，它的职责就是在身份提供方（IdP）和服务提供方（SP）之间交换认证与授权断言，是企业 SSO/联合身份的老牌标准。陷阱在 XML：SAML 的消息确实是用 XML 写的，但 XML 只是通用标记语言，本身不专管认证数据交换——题目问的是“用于交换认证和授权数据的标记语言”，指向的是 SAML 这个具体标准，而不是它的底层格式。顺带区分：OAuth 是授权框架/协议（不是标记语言，常配 JSON 和令牌）；XHTML 是更严格的 HTML 变体，用来写网页的。
 
 **口诀：** 交换认证找 SAML——全称自带 Markup Language，干的是断言交换；XML 只是它穿的衣服。问“哪种标准干这活”选 SAML，问“底层什么格式”才选 XML。
+
+
+---
+
+## DLP（数据防泄漏）
+
+**题目：** Which of the acronyms listed below refers to a dedicated software or hardware-based security solution designed to detect and prevent unauthorized use and transmission of confidential information?
+
+| 选项 | 结果 |
+| --- | --- |
+| DEP | ❌ 干扰项 |
+| IPS | ❌ 干扰项 |
+| DLP | ✅ 正确答案 |
+| UTM | ❌ 我的答案（2026-10-26 错选） |
+
+**解析：** 题干是 DLP 的标准定义：detect and prevent unauthorized use and transmission of confidential information——监控并阻止机密数据被违规使用和外传（外发邮件、拷 U 盘、传网盘等）。DLP 全称 Data Loss Prevention（数据防泄漏），认住 Loss 这个词。UTM（Unified Threat Management，统一威胁管理）是把防火墙、IPS、防病毒、网页过滤打包成一台的综合网关，管得宽但不专管数据外泄，是本题最大的干扰项。顺带区分方向：IPS（入侵防御）防的是攻击往里打，DLP 防的是数据往外泄，正好相反；DEP（Data Execution Prevention，数据执行保护）是 Windows 的内存保护功能，跟防泄漏无关，与 DLP 是纯字母陷阱。
+
+**口诀：** 防泄漏 → DLP（有 Loss）；大杂烩网关 → UTM；攻进来 → IPS 挡；泄出去 → DLP 管；内存防执行 → DEP。
