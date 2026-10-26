@@ -7581,3 +7581,21 @@ Windows domain 的脑图要先锁住这 3 个关键词：
 
 ###口诀
 **眼后血管 → retina；眼前色环 → iris。**
+
+
+---
+
+## 零信任模型（Zero Trust Model）
+
+**题目：** Which of the following answers refers to a security approach that eliminates implicit trust from networks requiring all users and devices to be continuously verified before being granted access to resources?
+
+| 选项 | 结果 |
+| --- | --- |
+| Least privilege access | ❌ 我的答案（2026-10-26 错选） |
+| AAA framework | ❌ 干扰项 |
+| Zero Trust model | ✅ 正确答案 |
+| Policy-driven access control | ❌ 干扰项 |
+
+**解析：** 题干两个信号词直指零信任：eliminates implicit trust（消除隐式信任）和 continuously verified（持续验证）——零信任的核心就是“从不信任、始终验证”，不因为用户或设备在内网就默认放行，每次访问资源前都要验证。最小权限只是零信任里会用到的一条原则（管“给多少权限”），不是这个“方法/模型”本身；题干问 security approach 时选 Zero Trust model。顺带区分：AAA framework 指 Authentication、Authorization、Accounting（认证、授权、审计），是 RADIUS/TACACS+ 那一套；Policy-driven access control 只是泛称，不是这道题要的命名模型。
+
+**口诀：** 不信任、总验证 → 零信任；给最少 → 最小权限；认证授权审计 → AAA。题干出现 implicit trust / continuously verified，直接选 Zero Trust。
