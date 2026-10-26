@@ -7599,3 +7599,21 @@ Windows domain 的脑图要先锁住这 3 个关键词：
 **解析：** 题干两个信号词直指零信任：eliminates implicit trust（消除隐式信任）和 continuously verified（持续验证）——零信任的核心就是“从不信任、始终验证”，不因为用户或设备在内网就默认放行，每次访问资源前都要验证。最小权限只是零信任里会用到的一条原则（管“给多少权限”），不是这个“方法/模型”本身；题干问 security approach 时选 Zero Trust model。顺带区分：AAA framework 指 Authentication、Authorization、Accounting（认证、授权、审计），是 RADIUS/TACACS+ 那一套；Policy-driven access control 只是泛称，不是这道题要的命名模型。
 
 **口诀：** 不信任、总验证 → 零信任；给最少 → 最小权限；认证授权审计 → AAA。题干出现 implicit trust / continuously verified，直接选 Zero Trust。
+
+
+---
+
+## MFA 硬件令牌（Hardware Token）
+
+**题目：** A technician begins the login process by entering a password. The system detects that the account is configured for multifactor authentication and prompts the technician for a USB-based cryptographic key. What type of MFA device is the technician using?
+
+| 选项 | 结果 |
+| --- | --- |
+| Software token | ❌ 干扰项 |
+| OTP display key fob | ❌ 干扰项 |
+| Hardware token | ✅ 正确答案 |
+| USB flash drive | ❌ 我的答案（2026-10-26 错选） |
+
+**解析：** 题眼是 cryptographic key（密码学密钥）：这种插 USB 的设备（如 YubiKey 这类安全密钥）里面存的是私钥，登录时做挑战-响应签名，它是硬件令牌（hardware token），属于“所有物”因素。它不是 USB flash drive——U 盘是存文件的存储设备，接口一样、本质完全不同，别被 USB 三个字带偏。顺带区分：Software token 是手机/电脑 App 里生成的码（如验证器应用）；OTP display key fob 是带小屏幕的钥匙扣，屏幕上滚动显示一次性密码，它显示码，但不插 USB 做签名。
+
+**口诀：** 看本质不看接口：签名密钥 → 硬件令牌；存文件 → U 盘；带屏显码 → OTP key fob；App 生成 → 软件令牌。
