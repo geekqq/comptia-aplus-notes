@@ -7653,3 +7653,22 @@ Windows domain 的脑图要先锁住这 3 个关键词：
 **解析：** 题干是 DLP 的标准定义：detect and prevent unauthorized use and transmission of confidential information——监控并阻止机密数据被违规使用和外传（外发邮件、拷 U 盘、传网盘等）。DLP 全称 Data Loss Prevention（数据防泄漏），认住 Loss 这个词。UTM（Unified Threat Management，统一威胁管理）是把防火墙、IPS、防病毒、网页过滤打包成一台的综合网关，管得宽但不专管数据外泄，是本题最大的干扰项。顺带区分方向：IPS（入侵防御）防的是攻击往里打，DLP 防的是数据往外泄，正好相反；DEP（Data Execution Prevention，数据执行保护）是 Windows 的内存保护功能，跟防泄漏无关，与 DLP 是纯字母陷阱。
 
 **口诀：** 防泄漏 → DLP（有 Loss）；大杂烩网关 → UTM；攻进来 → IPS 挡；泄出去 → DLP 管；内存防执行 → DEP。
+
+---
+
+## UAC（用户账户控制）
+
+**题目：** Windows Vista and newer releases of the Microsoft operating system offer a security feature that limits the privileges of software applications and access to administrative tasks. When a program makes a change that requires administrator-level permissions or a user attempts to modify system settings that require administrative access, it triggers an on-screen prompt requiring an administrator password to proceed. This functionality is known as:
+
+| 选项 | 结果 |
+| --- | --- |
+| ACL | ❌ 干扰项 |
+| UAC | ✅ 正确答案 |
+| AppLocker | ❌ 我的答案（2026-10-27 错选） |
+| SmartScreen Filter | ❌ 干扰项 |
+
+**解析：** 题眼是 on-screen prompt requiring an administrator password——需要管理员权限的操作会弹框要求批准或输入管理员密码，这就是 UAC（User Account Control，用户账户控制），Vista 时代引入，目的就是让程序默认以标准权限运行、提权必须过用户这一关。AppLocker 是组策略里的应用管控工具，决定哪些程序允许或禁止运行（白名单/黑名单），它管“能不能跑”，不弹提权框。顺带区分：ACL（访问控制列表）是文件/文件夹的权限清单，管谁能读、写、改，不弹窗；SmartScreen 是下载和浏览场景的信誉过滤，拦截恶意文件和网站，跟提权无关。
+
+**口诀：** 提权弹窗要密码 → UAC；程序能不能跑 → AppLocker；文件谁能碰 → ACL；下载安不安全 → SmartScreen。
+
+---
