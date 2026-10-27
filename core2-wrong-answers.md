@@ -6532,7 +6532,7 @@ Which sequence of steps in Windows provides access to an interface for creating 
 题目问的是 **Microsoft Defender Antivirus** 的开关位置，这属于 **病毒与威胁防护（Virus & threat protection）**。**Firewall & network protection** 管的是防火墙和网络配置，不是杀毒引擎开关。
 
 ### 口诀
-**杀毒去 Virus；防火墙看 Firewall。**
+**杀毒去 Virus；防火墙看 Firewall。** **Repeat miss (2026-10-27): again chose Firewall & network protection; correct answer Virus & threat protection.**
 
 ---
 
