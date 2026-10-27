@@ -7672,3 +7672,20 @@ Windows domain 的脑图要先锁住这 3 个关键词：
 **口诀：** 提权弹窗要密码 → UAC；程序能不能跑 → AppLocker；文件谁能碰 → ACL；下载安不安全 → SmartScreen。
 
 ---
+
+## Power Users（高级用户组，遗留组）
+
+**题目：** Which user group in Windows 10 and Windows 11 is largely a legacy local group with limited administrative rights retained for backward compatibility with older applications and Windows versions?
+
+| 选项 | 结果 |
+| --- | --- |
+| Standard Users | ❌ 干扰项 |
+| Replicators | ❌ 我的答案（2026-10-27 错选） |
+| Account Operators | ❌ 干扰项 |
+| Power Users | ✅ 正确答案 |
+
+**解析：** 题眼是三个词连用：legacy（遗留）+ limited administrative rights（有限的管理权限）+ backward compatibility（为向后兼容而保留）——这就是 Power Users 的标准描述。它是 XP 时代介于 Standard Users 和 Administrators 之间的组，能装部分程序、改部分系统设置；Vista 引入 UAC 后它的实权被基本掏空，Win10/11 里还保留这个组，主要是为了让检查组成员身份的老程序不报错。Replicators 是给域目录复制服务用的特殊组，管域控之间复制文件，跟用户权限高低无关；Account Operators 是域里能建、管用户账户的组，权限是真的，不是遗留组；Standard Users 是默认的普通用户组，没有管理权限。
+
+**口诀：** 看到 legacy + 有限管理权 + 向后兼容 → Power Users（老兵半权）；Replicators 只管复制，不管权限。
+
+---
