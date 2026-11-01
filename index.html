@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CompTIA A+ Core 2 (220-1102) 错题特训系统</title>
+  <title>CompTIA A+ Core 2 (220-1102) Drill System</title>
   <style>
     :root {
       --bg: #f8fafc;
@@ -24,12 +24,13 @@
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 20px 16px; line-height: 1.5; }
     .container { max-width: 860px; margin: 0 auto; }
 
-    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px; }
+    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px; }
     h1 { font-size: 1.35rem; font-weight: 700; color: #0f172a; }
-    .stats-summary { font-size: 0.95rem; font-weight: 600; color: var(--primary); }
+    .header-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .stats-summary { font-size: 0.92rem; font-weight: 600; color: var(--primary); margin-left: 4px; }
 
     /* 题号答题卡网格 */
-    .nav-grid { display: flex; flex-wrap: wrap; gap: 6px; background: #fff; padding: 14px; border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 20px; }
+    .nav-grid { display: flex; flex-wrap: wrap; gap: 6px; background: #fff; padding: 14px; border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 20px; max-height: 140px; overflow-y: auto; }
     .nav-btn { width: 34px; height: 34px; border-radius: 6px; border: 1px solid var(--border); background: #fff; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: 0.15s; }
     .nav-btn:hover { border-color: var(--primary); }
     .nav-btn.current { border-color: var(--primary); background: #eff6ff; color: var(--primary); }
@@ -67,10 +68,11 @@
     .option-item.user-wrong { background: #fee2e2 !important; border-color: var(--danger) !important; color: #7f1d1d; }
 
     .action-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
-    .btn { padding: 10px 20px; border-radius: 8px; border: 1px solid transparent; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: 0.15s; }
-    .btn-primary { background: var(--primary); color: #fff; }
+    .btn { padding: 8px 16px; border-radius: 8px; border: 1px solid var(--border); font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: 0.15s; background: #fff; }
+    .btn-primary { background: var(--primary); color: #fff; border-color: var(--primary); }
     .btn-primary:hover { background: var(--primary-hover); }
-    .btn-outline { background: #fff; border-color: var(--border); color: var(--text); }
+    .btn-lang { background: #eff6ff; color: var(--primary); border-color: #bfdbfe; }
+    .btn-lang:hover { background: #dbeafe; }
     .btn-outline:hover { background: #f1f5f9; }
     .btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
@@ -83,6 +85,14 @@
     .fb-title.wrong { color: var(--danger); }
     .exp-content { margin-top: 12px; font-size: 0.94rem; color: #334155; white-space: pre-wrap; }
     .mnemonic-box { margin-top: 14px; padding: 10px 14px; background: #fff; border-radius: 8px; border: 1px dashed #cbd5e1; font-size: 0.9rem; color: #0284c7; }
+
+    /* 模态框 */
+    .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); display: none; justify-content: center; align-items: center; z-index: 100; padding: 20px; }
+    .modal-box { background: #fff; border-radius: var(--radius); max-width: 600px; width: 100%; padding: 24px; max-height: 90vh; overflow-y: auto; }
+    .modal-box h2 { font-size: 1.2rem; margin-bottom: 16px; }
+    .form-group { margin-bottom: 14px; }
+    .form-group label { display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; }
+    .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 0.9rem; font-family: inherit; }
   </style>
 </head>
 <body>
@@ -90,10 +100,14 @@
 <div class="container">
   <header>
     <div>
-      <h1>CompTIA A+ Core 2 (220-1102) 错题演练</h1>
-      <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">题目源自你的 GitHub 错题本，已全量结构化为标准化考题</p>
+      <h1 id="appTitle">CompTIA A+ Core 2 错题演练</h1>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;" id="appSubtitle">全量收录自你的 GitHub 错题本 | 支持中英双语</p>
     </div>
-    <div class="stats-summary" id="statsSummary">已答: 0 / 0 | 正确率: 0%</div>
+    <div class="header-actions">
+      <button class="btn btn-lang" id="langToggleBtn" onclick="toggleLanguage()">🌐 English</button>
+      <button class="btn btn-outline" id="addBtnLabel" onclick="openAddModal()">➕ 添加新错题</button>
+      <div class="stats-summary" id="statsSummary">已答: 0 / 41</div>
+    </div>
   </header>
 
   <!-- 题号答题卡 -->
@@ -124,21 +138,103 @@
     <!-- 答案解析 -->
     <div class="feedback-box" id="feedbackBox">
       <div class="fb-title" id="fbTitle"></div>
-      <div><strong>标准正确答案：<span id="correctKey"></span></strong></div>
+      <div><strong id="correctLabelPrefix">标准正确答案：</strong><span id="correctKey"></span></div>
       <div class="exp-content" id="expContent"></div>
       <div class="mnemonic-box" id="mnemonicBox"></div>
     </div>
   </div>
 </div>
 
+<!-- 添加题目模态框 -->
+<div class="modal-overlay" id="addModal">
+  <div class="modal-box">
+    <h2 id="modalTitle">➕ 添加新错题</h2>
+    <div class="form-group">
+      <label id="lblType">题型</label>
+      <select id="newType">
+        <option value="single">单选题 / Single</option>
+        <option value="multiple">多选题 / Multiple</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label id="lblStem">题干 (Question Stem)</label>
+      <textarea id="newStem" rows="3" placeholder="输入题目内容..."></textarea>
+    </div>
+    <div class="form-group">
+      <label id="lblOpts">选项 (每行一个，例如 A. 选项内容)</label>
+      <textarea id="newOptions" rows="4" placeholder="A. Option 1&#10;B. Option 2&#10;C. Option 3&#10;D. Option 4"></textarea>
+    </div>
+    <div class="form-group">
+      <label id="lblAns">正确答案 (如 B 或 A,C)</label>
+      <input type="text" id="newAnswer" placeholder="B 或 A,B,C">
+    </div>
+    <div class="form-group">
+      <label id="lblExp">解析</label>
+      <textarea id="newExp" rows="3" placeholder="解析内容..."></textarea>
+    </div>
+    <div class="form-group">
+      <label id="lblMnemonic">记忆口诀 / Exam Tip</label>
+      <input type="text" id="newMnemonic" placeholder="记忆口诀...">
+    </div>
+    <div style="display:flex; justify-content:flex-end; gap:8px; margin-top:16px;">
+      <button class="btn btn-outline" onclick="closeAddModal()" id="btnCancel">取消</button>
+      <button class="btn btn-primary" onclick="saveNewQuestion()" id="btnSave">保存</button>
+    </div>
+  </div>
+</div>
+
 <script>
-  // 从你的 core2-wrong-answers.md 精确提炼的真实考题
-  const questions = [
+  let currentLang = localStorage.getItem('a_plus_lang') || 'zh';
+
+  const i18n = {
+    zh: {
+      appTitle: "CompTIA A+ Core 2 错题演练",
+      appSubtitle: "全量收录自你的 GitHub 错题本 | 支持中英双语",
+      langBtn: "🌐 English",
+      addBtn: "➕ 添加新错题",
+      single: "单选题",
+      multi: "多选题（选 {n} 项）",
+      qOf: "第 {curr} 题 / 共 {total} 题",
+      prev: "上一题",
+      next: "下一题",
+      submit: "提交选择",
+      submitted: "已提交评估",
+      correctTitle: "🎉 回答完全正确！",
+      wrongTitle: "❌ 回答错误！请复盘解析",
+      correctAns: "标准正确答案：",
+      tipPrefix: "💡 核心考点与记忆口诀：",
+      alertSelect: "请先勾选你的选项！",
+      statAnswered: "已答: {ans} / {total} | 正确数: {cor} | 正确率: {acc}%"
+    },
+    en: {
+      appTitle: "CompTIA A+ Core 2 Exam Drill",
+      appSubtitle: "Full Question Bank from Your GitHub Notes | Bilingual",
+      langBtn: "🌐 中文版",
+      addBtn: "➕ Add Question",
+      single: "Single Choice",
+      multi: "Multiple Choice (Select {n})",
+      qOf: "Question {curr} of {total}",
+      prev: "Previous",
+      next: "Next",
+      submit: "Submit Selection",
+      submitted: "Submitted",
+      correctTitle: "🎉 Correct! Well done.",
+      wrongTitle: "❌ Incorrect. Review explanation below.",
+      correctAns: "Correct Answer: ",
+      tipPrefix: "💡 Exam Tip & Mnemonic: ",
+      alertSelect: "Please select an answer before submitting!",
+      statAnswered: "Answered: {ans} / {total} | Correct: {cor} | Accuracy: {acc}%"
+    }
+  };
+
+  // 41 道完整双语题库
+  const baseQuestions = [
     {
-      id: 1,
-      type: "multiple",
-      selectLimit: 3,
-      stem: "关于跨站脚本攻击（XSS, Cross-Site Scripting），以下哪三项描述是正确的？（Select THREE）",
+      id: 1, type: "multiple", selectLimit: 3,
+      stem: {
+        zh: "关于跨站脚本攻击（XSS, Cross-Site Scripting），以下哪三项描述是正确的？（Select THREE）",
+        en: "Which of the following statements regarding Cross-Site Scripting (XSS) are accurate? (Select THREE)"
+      },
       options: [
         { key: "A", text: "An attacker injects a malicious script into a trusted website" },
         { key: "B", text: "The attacker’s script is executed in the user’s browser" },
@@ -147,14 +243,18 @@
         { key: "E", text: "An attacker captures passwords transmitted across an unencrypted network segment" }
       ],
       answer: ["A", "B", "C"],
-      explanation: "【考点核心：XSS vs CSRF 的信任方向】\n- A、B、C 属于典型的 XSS：攻击者把恶意脚本注入受信任的网站，受害者访问该网站时，浏览器执行了恶意脚本。本质利用的是用户浏览器对该网站的信任。\n- 选项 D 属于 CSRF（跨站请求伪造）：利用网站对用户登录状态（Cookie/Session）的信任，在未经用户同意的情况下冒充用户执行操作。",
-      mnemonic: "口诀：XSS 是“脚本当场跑在浏览器”；CSRF 是“冒充你在网站发请求”。"
+      explanation: {
+        zh: "【XSS vs CSRF 信任方向】\n- A、B、C 属于典型的 XSS：恶意脚本注入受信任网站并在用户浏览器中执行，利用的是用户对网站的信任。\n- 选项 D 属于 CSRF（跨站请求伪造）：利用网站对已登录用户的信任，伪造请求让网站代为执行操作。",
+        en: "XSS involves injecting malicious scripts into trusted websites that execute inside the victim's browser. Exploits the trust a user has in a website. Option D describes CSRF (Cross-Site Request Forgery)."
+      },
+      mnemonic: "口诀：XSS 脚本浏览器里当场跑；CSRF 冒充你在网站发请求。"
     },
     {
-      id: 2,
-      type: "multiple",
-      selectLimit: 3,
-      stem: "在网络安全中，关于路径上攻击（On-path attack，前称 MitM），以下哪三项描述符合其攻击特征？（Select THREE）",
+      id: 2, type: "multiple", selectLimit: 3,
+      stem: {
+        zh: "在网络安全中，关于路径上攻击（On-path attack，曾称中间人攻击 MitM），以下哪三项描述符合其攻击特征？（Select THREE）",
+        en: "Which of the following characteristics accurately describe an On-Path Attack (formerly known as Man-in-the-Middle)? (Select THREE)"
+      },
       options: [
         { key: "A", text: "Attackers intercept and modify the packets sent between two communicating devices" },
         { key: "B", text: "Attackers can impersonate one of the communicating parties to alter the communication" },
@@ -163,13 +263,18 @@
         { key: "E", text: "Attackers must gain physical access to the target host to execute the attack" }
       ],
       answer: ["A", "B", "C"],
-      explanation: "【考点核心：On-path attack 路径拦截与冒充】\n- A、B、C 均为正确描述：攻击者将自己置于两台通信设备的路径之间，能够窃听、篡改数据包并冒充通信任一方。\n- 选项 D 错误：发起 On-path 攻击可以通过 ARP 欺骗、DNS 劫持或虚假 AP 达成，不需要任何一台端设备被完全入侵或攻破。\n- 选项 E 错误：On-path 攻击绝大多数通过逻辑网络手段实施，不需要物理接触目标设备。",
-      mnemonic: "口诀：On-path 插中间，偷听篡改加冒充；不用两端被攻破，网络劫持就能做。"
+      explanation: {
+        zh: "【On-path 特性】攻击者置于通信链路中间，拦截、篡改数据并可冒充双方。不需要任何一台终端被攻破（可通过 ARP 欺骗或虚假 AP 达成），也不需要物理接触物理机。",
+        en: "Attackers place themselves between endpoints to intercept, modify, or impersonate traffic. It does NOT require either endpoint to be compromised or physically accessed."
+      },
+      mnemonic: "口诀：On-path 插中间，偷听篡改加冒充；不用端设备被黑，网络劫持就能做。"
     },
     {
-      id: 3,
-      type: "single",
-      stem: "攻击者通过伪造发件人电子邮件地址、伪造源 IP 地址或伪造网络接口的 MAC 地址，冒充受信任来源诱骗受害者或防火墙，该技术最准确的术语是：",
+      id: 3, type: "single",
+      stem: {
+        zh: "攻击者通过伪造发件人电子邮件地址、伪造源 IP 地址或伪造网卡的 MAC 地址，冒充受信任来源，该技术最准确的术语是：",
+        en: "An attacker alters headers to forge an email address, IP address, or MAC address to appear as a trusted entity. What is this technique called?"
+      },
       options: [
         { key: "A", text: "Impersonation" },
         { key: "B", text: "Spoofing" },
@@ -177,13 +282,18 @@
         { key: "D", text: "Phishing" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：Spoofing（欺骗/伪造）的具体定义】\n- 题目强调伪造具体的技术标识（Email header、IP、MAC、Caller ID），CompTIA 官方精准术语是 Spoofing（欺骗）。\n- Impersonation（假冒）范围更宽泛，偏向社工学冒充真人身份（如假装 IT 支持人员），伪造具体网络元数据必须选 Spoofing。",
-      mnemonic: "口诀：伪造 IP、MAC、Email 标识全叫 Spoofing；假装是同事打工人叫 Impersonation。"
+      explanation: {
+        zh: "【Spoofing 欺骗/伪造】伪造具体的网络或系统技术标识（IP/MAC/Email/Caller ID）的标准术语是 Spoofing。Impersonation 偏向人际社工冒充。",
+        en: "Spoofing is the specific technical act of falsifying data (such as IP, MAC, or email addresses) to disguise identities. Impersonation refers broadly to mimicking someone socially."
+      },
+      mnemonic: "口诀：伪造 IP/MAC/Email 标识全叫 Spoofing；假装是同事打工人叫 Impersonation。"
     },
     {
-      id: 4,
-      type: "single",
-      stem: "安全研究人员发现了一个针对操作系统内核的攻击代码，而该软件开发商尚未意识到该漏洞的存在，也没有发布任何补丁。这种攻击形式被称为：",
+      id: 4, type: "single",
+      stem: {
+        zh: "安全人员发现了一个针对操作系统内核的攻击代码，而该软件开发商尚未意识到该漏洞的存在，也没有发布任何补丁。这种攻击形式被称为：",
+        en: "A newly discovered vulnerability in an OS kernel is being actively exploited before the vendor is even aware or has created a patch. What type of attack is this?"
+      },
       options: [
         { key: "A", text: "Backdoor exploit" },
         { key: "B", text: "Zero-day attack" },
@@ -191,13 +301,18 @@
         { key: "D", text: "Ransomware injection" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：Zero-day（零日攻击）】\n厂商未知、没有已知补丁存在的未知漏洞被利用，即为零日攻击（Zero-day）。开发人员修复它的时间是“0 天”。Backdoor 是攻击者预留的后门通道，不是未知漏洞的称呼。",
+      explanation: {
+        zh: "【Zero-day 零日攻击】软件厂商未知、且无已知官方补丁的漏洞利用，被称为零日攻击（Zero-day）。",
+        en: "A Zero-Day vulnerability is an unpatched flaw unknown to the software developer, leaving 0 days of defense before exploitation occurs."
+      },
       mnemonic: "口诀：厂商未知、补丁未出，就是 Zero-day。"
     },
     {
-      id: 5,
-      type: "single",
-      stem: "网络犯罪分子专门针对一家大型企业的高级管理人员（如首席执行官 CEO、首席财务官 CFO）发送高度定制化邮件，试图诱导其授权巨额汇款。该定向攻击最准确的术语是：",
+      id: 5, type: "single",
+      stem: {
+        zh: "网络犯罪分子专门针对一家大型企业的高级管理人员（如首席执行官 CEO、首席财务官 CFO）发送高度定制化钓鱼邮件。该定向攻击最准确的术语是：",
+        en: "A tailored phishing email campaign specifically targets C-level executives (e.g., CEO, CFO) to authorize a high-value wire transfer. What is this attack called?"
+      },
       options: [
         { key: "A", text: "Spear phishing" },
         { key: "B", text: "Whaling" },
@@ -205,13 +320,18 @@
         { key: "D", text: "Vishing" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：Whaling（捕鲸）】\n- 针对高管/关键决策者（High-profile targets, Executives）的定向钓鱼，CompTIA 标准答案是 Whaling。\n- Spear phishing 是一般性的针对个人或特定群体的定向钓鱼，当题目明确指明是“高管（C-level / Executives）”时，Whaling 是更精确的最佳答案。",
-      mnemonic: "口诀：钓普通人是 Phishing，特定小团队是 Spear，专钓高管大鱼是 Whaling。"
+      explanation: {
+        zh: "【Whaling 捕鲸】针对公司高级管理人员（High-profile executives / VIPs）的特定钓鱼，CompTIA 考题标准答案为 Whaling。",
+        en: "Whaling is a specialized form of spear phishing directed specifically at high-profile individuals such as CEOs, CFOs, or board members."
+      },
+      mnemonic: "口诀：钓普通人是 Phishing，普通团队是 Spear，专钓高管大鱼是 Whaling。"
     },
     {
-      id: 6,
-      type: "single",
-      stem: "某攻击者收集了财务部门具体员工的姓名和业务背景信息，随后给这几名员工发送了极其逼真的专属发票查询邮件诱导其输入凭据。这属于以下哪种攻击？",
+      id: 6, type: "single",
+      stem: {
+        zh: "某攻击者收集了财务部门具体员工的姓名和业务信息，随后给他们发送了个性化定制的发票查询邮件诱导其输入凭据。这属于以下哪种攻击？",
+        en: "An attacker gathers intelligence on employees in the accounting department and sends customized emails containing their names and vendor references to steal credentials. What is this?"
+      },
       options: [
         { key: "A", text: "Watering hole attack" },
         { key: "B", text: "Spear phishing" },
@@ -219,13 +339,18 @@
         { key: "D", text: "Smishing" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：Spear phishing（矛钓）】\n针对特定个人、特定部门定制信息的钓鱼属于 Spear phishing。Watering hole（水坑攻击）是攻击目标群体经常访问的第三方合法网站并在该网站下毒。",
-      mnemonic: "口诀：针对特定人发定制邮件 = Spear phishing；蹲守他们常去的网站下毒 = 水坑攻击。"
+      explanation: {
+        zh: "【Spear phishing 矛钓】针对特定个人或特定群体的定向定制钓鱼属于 Spear phishing。Watering hole（水坑攻击）是在目标经常访问的网站下毒。",
+        en: "Spear phishing targets specific individuals or organizations with customized information rather than random mass emails."
+      },
+      mnemonic: "口诀：特定目标发定制邮件 = Spear phishing；常去网站下毒 = 水坑攻击。"
     },
     {
-      id: 7,
-      type: "single",
-      stem: "公司需要为经常携带笔记本电脑在机场、咖啡厅等外部公共 Wi-Fi 网络办公的员工提供单机维度的安全保护，防止其终端受到外部未授权入站连接的威胁。应优先配置：",
+      id: 7, type: "single",
+      stem: {
+        zh: "公司需要为经常携带笔记本电脑在机场、咖啡厅等外部公共网络办公的员工提供单机维度的安全保护，防止其受到外部入站未授权访问。应优先配置：",
+        en: "A remote technician travels frequently and connects to public Wi-Fi at coffee shops. What security control should be implemented on the laptop to block unauthorized inbound connections?"
+      },
       options: [
         { key: "A", text: "Hardware firewall" },
         { key: "B", text: "Software firewall (Host-based firewall)" },
@@ -233,27 +358,37 @@
         { key: "D", text: "Proxy server" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：主机型防火墙保护单机】\n移动办公、单机防护、出差员工等情境下，无法依赖企业网络边界的硬件防火墙，必须使用运行在操作系统内部的主机防火墙（Software/Host-based firewall，如 Windows Defender Firewall）。",
-      mnemonic: "口诀：出差移动单机保安全，就找 Software firewall（主机防火墙）。"
+      explanation: {
+        zh: "【主机型防火墙】移动设备离开企业网络后，边界硬件防火墙无法提供保护，必须依赖运行在单机操作系统上的 Software firewall（如 Windows Defender 防火墙）。",
+        en: "Host-based (software) firewalls protect individual endpoint devices regardless of which external, untrusted network they connect to."
+      },
+      mnemonic: "口诀：移动单机出门在外保安全，就靠 Software firewall（主机防火墙）。"
     },
     {
-      id: 8,
-      type: "single",
-      stem: "企业希望外包安全运营，要求第三方服务商提供 7x24 小时全天候的主动网络威胁监控、快速检测并直接采取实际行动协助遏制和消除安全事件。该服务属于：",
+      id: 8, type: "single",
+      stem: {
+        zh: "企业希望外包安全运营，要求第三方服务商提供 7x24 小时网络威胁监控、主动检测并直接采取实际行动协助遏制和消除安全事件。该服务属于：",
+        en: "An organization seeks an outsourced service that provides 24/7 continuous threat monitoring, incident detection, and active hands-on remediation response. What service fits this best?"
+      },
       options: [
         { key: "A", text: "MSP (Managed Service Provider)" },
         { key: "B", text: "MDR (Managed Detection and Response)" },
-        { key: "C", text: "SIEM (Security Information and Event Management)" },
-        { key: "D", text: "IAM (Identity and Access Management)" }
+        { key: "C", text: "SIEM" },
+        { key: "D", text: "IAM" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：MDR vs MSP】\n- MDR（托管检测与响应）的核心是安全监控 + 威胁检测 + 事件响应行动（Response）。\n- MSP 是常规 IT 基础设施运维托管（修打印机、管网络、配电脑），不是专注深度安全检测与即时响应的专门安全服务。",
-      mnemonic: "口诀：管日常 IT 叫 MSP；专门盯威胁、做检测和安全响应叫 MDR。"
+      explanation: {
+        zh: "【MDR vs MSP】MDR 专注安全监控、威胁检测和实际响应（Response）。MSP 是常规 IT 基础设施外包运维，不做深度威胁猎捕和安全事件响应。",
+        en: "MDR (Managed Detection and Response) provides 24/7 continuous threat hunting, proactive monitoring, and active remediation response."
+      },
+      mnemonic: "口诀：日常 IT 找 MSP；主动防威胁、做响应找 MDR。"
     },
     {
-      id: 9,
-      type: "single",
-      stem: "在较新版本的 Windows 操作系统中，微软用来替代旧版 Windows XP/2000 中基于文本命令行的“故障恢复控制台（Recovery Console）”的现代高级图形化恢复环境是：",
+      id: 9, type: "single",
+      stem: {
+        zh: "在现代 Windows 系统中，微软用来替代旧版 Windows XP/2000 中基于文本命令行的“故障恢复控制台（Recovery Console）”的高级恢复环境是：",
+        en: "Which graphical diagnostic and troubleshooting environment replaced the legacy Recovery Console found in Windows XP/2000?"
+      },
       options: [
         { key: "A", text: "System Restore" },
         { key: "B", text: "WinRE (Windows Recovery Environment)" },
@@ -261,13 +396,18 @@
         { key: "D", text: "Device Manager Recovery" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：WinRE 的历史演进】\nWinRE（Windows 恢复环境）是基于 Windows PE 构建的现代恢复平台，直接替代了早期的 Recovery Console。它内置了自动启动修复、系统还原入口、命令行以及重置电脑等工具。",
+      explanation: {
+        zh: "【WinRE 历史】WinRE（Windows 恢复环境）是 Windows PE 基础上的现代恢复平台，直接取代了旧版的 Recovery Console。",
+        en: "WinRE (Windows Recovery Environment) is the modern graphical recovery platform based on Windows PE that succeeded the text-based Recovery Console."
+      },
       mnemonic: "口诀：老系统叫 Recovery Console，现代 Windows 叫 WinRE。"
     },
     {
-      id: 10,
-      type: "single",
-      stem: "某员工电脑风扇持续高速运转，任务管理器显示 CPU 和 GPU 长期占用高达 100%，排查发现一个后台未知进程正在利用系统硬件算力计算哈希以获取数字货币。该恶意程序属于：",
+      id: 10, type: "single",
+      stem: {
+        zh: "某员工电脑风扇持续高速运转，任务管理器显示 CPU 和 GPU 长期占用高达 100%，排查发现一个后台未知进程正在利用系统硬件算力计算哈希以获取数字货币。该恶意程序属于：",
+        en: "A user's workstation fan is running continuously at full speed. Task Manager reveals 100% CPU and GPU utilization caused by a hidden background process computing hashes for cryptocurrency. What is this?"
+      },
       options: [
         { key: "A", text: "Fileless malware" },
         { key: "B", text: "Cryptominer" },
@@ -275,14 +415,18 @@
         { key: "D", text: "Ransomware" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：Cryptominer（挖矿木马）】\n未经用户允许窃取计算资源（CPU/GPU）用于挖掘加密货币的恶意程序就是 Cryptominer。它最典型的症状是系统极度卡顿、硬件过热、满载运转。",
+      explanation: {
+        zh: "【Cryptominer 挖矿木马】未经授权非法窃取计算机 CPU/GPU 算力挖掘加密货币的恶意程序，特征是极端占用算力导致系统卡顿发热。",
+        en: "Cryptominers hijack victim processing power (CPU/GPU) to mine cryptocurrencies without permission, causing overheating and massive resource drain."
+      },
       mnemonic: "口诀：偷占算力挖数字货币，标准答案 Cryptominer。"
     },
     {
-      id: 11,
-      type: "multiple",
-      selectLimit: 2,
-      stem: "在计算机恶意软件分类中，关于计算机病毒（Virus）的核心定义，以下哪两项描述是正确的？（Select TWO）",
+      id: 11, type: "multiple", selectLimit: 2,
+      stem: {
+        zh: "在恶意软件分类中，关于计算机病毒（Virus）的核心定义，以下哪两项描述是正确的？（Select TWO）",
+        en: "Which TWO of the following statements correctly describe the characteristics of a computer virus? (Select TWO)"
+      },
       options: [
         { key: "A", text: "A self-replicating computer program that contains a malicious segment" },
         { key: "B", text: "Malicious code that typically attaches itself to an application or executable component" },
@@ -290,13 +434,18 @@
         { key: "D", text: "Hardware designed to log keystrokes silently" }
       ],
       answer: ["A", "B"],
-      explanation: "【考点核心：Virus vs Worm 的本质区别】\n- Virus（病毒）：必须依赖宿主（寄生在可执行文件或文档中），且具有自我复制并包含恶意代码段的特性（A、B）。\n- 选项 C 是典型的 Worm（蠕虫）：能够独立在网络中自我复制传播，不需要宿主程序，也不需要用户交互触发。",
-      mnemonic: "口诀：病毒（Virus）寄生找宿主；独立网络爬行叫蠕虫（Worm）。"
+      explanation: {
+        zh: "【Virus vs Worm】病毒（Virus）必须依附于宿主文件/程序，且包含自我复制的恶意代码段（A、B）。独立在网络中不依赖用户而自主传播的是蠕虫（Worm, C）。",
+        en: "A virus attaches itself to an executable host file or program and replicates when the host is executed. Worms are standalone programs that replicate without a host."
+      },
+      mnemonic: "口诀：病毒（Virus）依附宿主；独立网络爬行叫蠕虫（Worm）。"
     },
     {
-      id: 12,
-      type: "single",
-      stem: "多因素身份验证（MFA）要求提供两个或以上属于【不同认证类别】的凭据。以下哪种组合真正构成了合法的 MFA？",
+      id: 12, type: "single",
+      stem: {
+        zh: "多因素身份验证（MFA）要求提供两个或以上属于【不同认证类别】的因子。以下哪种组合真正构成了合规的 MFA？",
+        en: "Multi-Factor Authentication (MFA) requires two or more independent authentication factors. Which of the following satisfies true MFA requirements?"
+      },
       options: [
         { key: "A", text: "Retina scan and voice recognition" },
         { key: "B", text: "Password and PIN" },
@@ -304,13 +453,18 @@
         { key: "D", text: "Smart card and Hardware token" }
       ],
       answer: ["C"],
-      explanation: "【考点核心：MFA 三大传统因子】\n1. Something you know（知识：密码、PIN）\n2. Something you have（所有：手机令牌、智能卡）\n3. Something you are（生物：指纹、视网膜、面容）\n- A 全是生物特征（同一个类别）；\n- B 全是你知道的内容（同一个类别）；\n- C 包含“你知道的（密码）”+“你本身的生物特征（Biometric）”，属于跨因子的合规 MFA！",
+      explanation: {
+        zh: "【MFA 因子】Something you know（密码）+ Something you are（生物特征）属于不同类型，构成双因子。两个密码或两个生物特征仍属于单因子。",
+        en: "MFA requires factors from different categories: Something you know (Password) + Something you are (Biometric). Two items from the same category do NOT constitute MFA."
+      },
       mnemonic: "口诀：MFA 必须跨类型：密码（知道）+ 指纹（自身）才算双因子。"
     },
     {
-      id: 13,
-      type: "single",
-      stem: "Apple 设备在遇到高危紧急安全漏洞时，能够在两次完整的重大系统软件更新之间，快速静默向 iOS/macOS 部署小型安全修复程序，这项机制被称为：",
+      id: 13, type: "single",
+      stem: {
+        zh: "Apple 设备在遇到高危紧急安全漏洞时，能够在两次完整的重大系统软件更新之间，快速静默向 iOS/macOS 部署小型安全修复程序，这项机制被称为：",
+        en: "Which Apple security feature delivers rapid security fixes between standard major iOS and macOS software updates to patch zero-day vulnerabilities?"
+      },
       options: [
         { key: "A", text: "Gatekeeper" },
         { key: "B", text: "RSR (Rapid Security Response)" },
@@ -318,27 +472,56 @@
         { key: "D", text: "Time Machine" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：Apple RSR】\nRapid Security Response（快速安全响应）是苹果专门在日常系统大更新之间推送的关键安全补丁机制，无需等待下一次大版本更新即可快速修复安全隐患。",
+      explanation: {
+        zh: "【Apple RSR】Rapid Security Response（快速安全响应）允许苹果在完整系统版本更新之间快速向设备分发紧急安全修补程序。",
+        en: "Rapid Security Response (RSR) allows Apple to quickly deploy critical security patches without waiting for a full OS update."
+      },
       mnemonic: "口诀：苹果紧急小补丁，就叫 RSR（快速安全响应）。"
     },
     {
-      id: 14,
-      type: "single",
-      stem: "用户可以在 Mac 上开始撰写邮件，随后拿起旁边的 iPhone 无缝接着输入，或者在 iPad 与 Mac 之间共用剪贴板。实现 Apple 生态内跨设备操作无缝接力的功能是：",
+      id: 14, type: "single",
+      stem: {
+        zh: "用户可以在 Mac 上撰写邮件，随后拿起 iPhone 接着继续输入，或在 iPad 与 Mac 间共用剪贴板。实现跨设备操作无缝接力的功能是：",
+        en: "A user starts composing an email on a Mac and seamlessly finishes it on an iPhone, while also sharing clipboard data between devices. What Apple feature provides this?"
+      },
       options: [
         { key: "A", text: "iCloud Drive" },
-        { key: "B", text: "Continuity (连踢 / 连续互通)" },
+        { key: "B", text: "Continuity" },
         { key: "C", text: "AirPlay" },
         { key: "D", text: "FileVault" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：Continuity vs iCloud Drive】\n- Continuity（连续互通，包括 Handoff、通用剪贴板）用于跨设备的即时操作状态无缝流转。\n- iCloud Drive 是云端文件存储与多设备同步服务，不负责动态应用状态的接力流转。",
+      explanation: {
+        zh: "【Continuity 连续互通】Continuity（包含 Handoff、Universal Clipboard 等）负责 Apple 生态跨设备任务接力。iCloud Drive 负责云盘文件持久化存储。",
+        en: "Continuity (including Handoff and Universal Clipboard) enables seamless task switching and workflow continuity between Apple devices."
+      },
       mnemonic: "口诀：设备间活儿接着干叫 Continuity；多设备同步存文件找 iCloud Drive。"
     },
     {
-      id: 15,
-      type: "single",
-      stem: "在 macOS 上，用于提供整盘全卷加密（Full-disk encryption）、在关机或睡眠状态下保护启动盘物理存储数据不被窃取的内置安全工具是：",
+      id: 15, type: "single",
+      stem: {
+        zh: "用户在多个 Apple 设备上编辑同一份工作文档，希望任何一处修改都能在云端自动保存，并实时将最新版本同步到所有登录相同 Apple ID 的设备上。应启用的服务是：",
+        en: "A user wants files edited on any Apple device to automatically save and sync the latest versions across all devices linked to the same Apple ID. What service is designed for this?"
+      },
+      options: [
+        { key: "A", text: "Continuity" },
+        { key: "B", text: "iCloud Drive" },
+        { key: "C", text: "AirDrop" },
+        { key: "D", text: "Universal Control" }
+      ],
+      answer: ["B"],
+      explanation: {
+        zh: "【iCloud Drive】负责云端存储与跨设备文件自动同步服务。Continuity 则是应用运行状态的即时流转。",
+        en: "iCloud Drive is Apple's cloud storage service responsible for file synchronization across devices."
+      },
+      mnemonic: "口诀：同步存储看 iCloud Drive，无缝接力看 Continuity。"
+    },
+    {
+      id: 16, type: "single",
+      stem: {
+        zh: "在 macOS 上，用于提供整盘全卷加密（Full-disk encryption）、在关机或睡眠状态下保护启动盘物理存储数据不被窃取的内置安全工具是：",
+        en: "Which built-in macOS security feature provides full-disk encryption (FDE) to protect data at rest on the primary startup volume?"
+      },
       options: [
         { key: "A", text: "Gatekeeper" },
         { key: "B", text: "FileVault" },
@@ -346,13 +529,18 @@
         { key: "D", text: "Keychain" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：macOS 磁盘加密】\nFileVault 是 macOS 对应的 BitLocker，专用于启动盘全盘加密。Gatekeeper 负责阻止未知或未签名的软件运行；Keychain 负责存密码凭据。",
+      explanation: {
+        zh: "【macOS FileVault】FileVault 是 macOS 平台的全盘加密工具（对应 Windows 的 BitLocker）。Gatekeeper 负责阻止未知来源软件运行。",
+        en: "FileVault is macOS's native full-disk encryption tool, equivalent to BitLocker on Windows."
+      },
       mnemonic: "口诀：Mac 磁盘加密叫 FileVault；Windows 磁盘加密叫 BitLocker。"
     },
     {
-      id: 16,
-      type: "single",
-      stem: "在现代 Red Hat 系列企业级 Linux 发行版（如 RHEL、CentOS Stream、Fedora）中，推荐使用的基于 RPM 的下一代默认包管理命令是：",
+      id: 17, type: "single",
+      stem: {
+        zh: "在现代 Red Hat 系列企业级 Linux 发行版（如 RHEL、CentOS Stream、Fedora）中，推荐使用的基于 RPM 的下一代默认包管理命令是：",
+        en: "Which next-generation RPM-based package manager is the standard default utility for modern Red Hat enterprise distributions (RHEL, Fedora)?"
+      },
       options: [
         { key: "A", text: "dpkg" },
         { key: "B", text: "apt-get" },
@@ -360,13 +548,18 @@
         { key: "D", text: "pacman" }
       ],
       answer: ["C"],
-      explanation: "【考点核心：Linux 发行版包管理器】\n- Red Hat / Fedora 系：rpm -> yum -> 现代推荐使用 dnf。\n- Debian / Ubuntu 系：底层 dpkg，前端命令使用 apt / apt-get。",
+      explanation: {
+        zh: "【Linux 包管理器】Red Hat / Fedora 系现代默认包管理器为 `dnf`（替代了旧版 yum）。Debian / Ubuntu 系使用底层 dpkg 与前端 apt。",
+        en: "dnf (Dandified YUM) is the next-generation package manager for RPM-based Red Hat distributions."
+      },
       mnemonic: "口诀：红帽新包管叫 dnf；Ubuntu 系列用 apt。"
     },
     {
-      id: 17,
-      type: "single",
-      stem: "在 Linux 终端中，如果你需要一款支持极其广泛网络协议（包括 HTTP/HTTPS、FTP、FTPS、SCP、SFTP、DICT 等）进行数据发送、下载及 API 测试的命令行工具，优先选择：",
+      id: 18, type: "single",
+      stem: {
+        zh: "在 Linux 终端中，如果你需要一款支持极其广泛网络协议（包括 HTTP/HTTPS、FTP、FTPS、SCP、SFTP 等）进行数据发送、下载及 API 测试的命令行工具，优先选择：",
+        en: "Which versatile Linux command-line tool supports data transfer across dozens of network protocols (HTTP/S, FTP, SCP, SFTP) and is ideal for API testing?"
+      },
       options: [
         { key: "A", text: "wget" },
         { key: "B", text: "curl" },
@@ -374,25 +567,35 @@
         { key: "D", text: "netstat" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：curl vs wget】\n- curl 专为跨广泛协议传输数据而生，支持 20 多种主流网络协议，支持详细的请求构建与双向传输。\n- wget 主要是简单直观的递归网页下载器（主要支持 HTTP/HTTPS/FTP）。",
+      explanation: {
+        zh: "【curl vs wget】curl 支持极其丰富的应用层协议与双向数据传输及 API 测试；wget 主要专注于通过 HTTP/FTP 递归下载网页和文件。",
+        en: "curl supports numerous protocols and advanced transfer options; wget is primarily a simple recursive file downloader."
+      },
       mnemonic: "口诀：广泛协议大杂烩选 curl；递归纯下载网页选 wget。"
     },
     {
-      id: 18,
-      type: "single",
-      stem: "判断题：在 Linux 终端中，用于跟踪数据包到达目标主机所经历路由路径的标准内置网络诊断命令拼写是 `tracert`。",
+      id: 19, type: "single",
+      stem: {
+        zh: "判断题：在 Linux 终端中，用于跟踪数据包到达目标主机所经历路由路径的标准内置网络诊断命令拼写是 `tracert`。",
+        en: "True or False: In a Linux terminal, the standard command used to trace network packets along the route to a remote host is spelled `tracert`."
+      },
       options: [
-        { key: "A", text: "True（正确）" },
-        { key: "B", text: "False（错误）" }
+        { key: "A", text: "True" },
+        { key: "B", text: "False" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：不同 OS 的路由跟踪命令拼写】\n- Windows 命令行里缩写为：`tracert`\n- Linux / macOS 终端里完整拼写为：`traceroute`\n题目声称 Linux 里是 tracert，所以必然是 False！",
+      explanation: {
+        zh: "【路由跟踪命令拼写】Windows 下缩写为 `tracert`；Linux / macOS 下完整拼写为 `traceroute`。题干为 False！",
+        en: "False. `tracert` is the Windows command. In Linux and macOS, the command is spelled `traceroute`."
+      },
       mnemonic: "口诀：Windows 阉割叫 tracert；Linux 完整拼写 traceroute。"
     },
     {
-      id: 19,
-      type: "single",
-      stem: "在 Linux 命令行中，管理员想要查看某一个特定目录及其内部子文件各自占用了多少磁盘空间，应该使用哪个命令？",
+      id: 20, type: "single",
+      stem: {
+        zh: "在 Linux 命令行中，管理员想要查看某一个特定目录及其内部子文件各自占用了多少磁盘空间，应该使用哪个命令？",
+        en: "Which command in Linux displays the amount of disk space used by a specific directory and its subdirectories?"
+      },
       options: [
         { key: "A", text: "df -h" },
         { key: "B", text: "du -sh" },
@@ -400,13 +603,18 @@
         { key: "D", text: "free -m" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：du vs df】\n- `du` (Disk Usage)：统计具体文件和目录树的占用量大小。\n- `df` (Disk Free / Filesystem)：查看整个挂载文件系统的剩余空间与总容量。",
+      explanation: {
+        zh: "【du vs df】`du` (Disk Usage) 查看特定目录和文件的空间消耗；`df` (Disk Free) 查看整块已挂载文件系统的剩余空间总量。",
+        en: "`du` (Disk Usage) calculates the space used by specific files/folders. `df` (Disk Free) shows overall filesystem capacity."
+      },
       mnemonic: "口诀：查文件目录占用看 du（Disk Usage）；看整块盘剩多少看 df（Disk Free）。"
     },
     {
-      id: 20,
-      type: "single",
-      stem: "在 Linux 系统中，如果管理员需要手工定义本地的主机名与 IP 地址之间的静态解析映射关系（不依赖 DNS 服务器），应编辑的文件是：",
+      id: 21, type: "single",
+      stem: {
+        zh: "在 Linux 系统中，如果管理员需要手工定义本地的主机名与 IP 地址之间的静态解析映射关系（不依赖 DNS 服务器），应编辑的文件是：",
+        en: "An administrator needs to configure static local hostname-to-IP address mappings on a Linux host without querying DNS. Which configuration file should be edited?"
+      },
       options: [
         { key: "A", text: "/etc/resolv.conf" },
         { key: "B", text: "/etc/hosts" },
@@ -414,13 +622,18 @@
         { key: "D", text: "/etc/nsswitch.conf" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：Linux 核心网络配置文件】\n- `/etc/hosts`：用于存放本地静态主机名与 IP 映射表。\n- `/etc/resolv.conf`：用于配置上游 DNS 递归解析服务器的 IP（nameserver 8.8.8.8）。",
+      explanation: {
+        zh: "【/etc/hosts】保存本地静态的主机名到 IP 映射。`/etc/resolv.conf` 则是用于配置 DNS 递归解析服务器的 IP（nameserver）。",
+        en: "`/etc/hosts` contains static local IP-to-hostname mappings. `/etc/resolv.conf` designates upstream DNS nameservers."
+      },
       mnemonic: "口诀：本地写死域名映射找 /etc/hosts；配 DNS 服务器地址找 /etc/resolv.conf。"
     },
     {
-      id: 21,
-      type: "single",
-      stem: "现代 Linux 发行版采用的核心“系统与服务初始化管理器（System and Service Manager）”软件套件本身是什么？（注意：不是指具体的控制命令）",
+      id: 22, type: "single",
+      stem: {
+        zh: "现代 Linux 发行版采用的核心“系统与服务初始化管理器（System and Service Manager）”软件套件本身是什么？（注意：不是指具体的控制命令）",
+        en: "What is the name of the core system and service manager suite that initializes components and manages background daemons in modern Linux distributions?"
+      },
       options: [
         { key: "A", text: "systemctl" },
         { key: "B", text: "systemd" },
@@ -428,13 +641,18 @@
         { key: "D", text: "cron" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：systemd vs systemctl】\n- systemd 是后台整个“系统与服务管理器”的套件架构本身。\n- systemctl 是管理员在终端用来控制 systemd（启动、停止、重载服务）的命令行管理工具。",
+      explanation: {
+        zh: "【systemd vs systemctl】systemd 是服务管理框架本身；systemctl 是管理员在终端执行操作的具体命令行管理工具。",
+        en: "`systemd` is the init system and service manager itself. `systemctl` is the command-line utility used to manage it."
+      },
       mnemonic: "口诀：大管家系统叫 systemd；手里拿的遥控器命令叫 systemctl。"
     },
     {
-      id: 22,
-      type: "single",
-      stem: "管理员在 Linux 中执行了命令 `chmod a=r config.cfg`。执行完毕后，该文件对应的八进制三位权限数值是多少？",
+      id: 23, type: "single",
+      stem: {
+        zh: "管理员在 Linux 中执行了命令 `chmod a=r config.cfg`。执行完毕后，该文件对应的八进制三位权限数值是多少？",
+        en: "A Linux user executes `chmod a=r config.cfg`. What is the resulting numerical (octal) permission code for this file?"
+      },
       options: [
         { key: "A", text: "644" },
         { key: "B", text: "444" },
@@ -442,13 +660,18 @@
         { key: "D", text: "666" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：chmod 的 = 号覆盖赋值】\n`a=r` 表示所有身份（User, Group, Others）的权限直接强制重设为“只读（r--）”。只读 r 对应的权值是 4，因此三段全部为 4，结果是 444。注意 `=` 会抹除原来的执行和写入权限，而不是追加。",
+      explanation: {
+        zh: "【chmod 覆盖赋值】`a=r` 将所有身份（User, Group, Others）强制设置为只读 `r--`（对应权值为 4），因此三段均为 4，八进制权限为 444。",
+        en: "`a=r` explicitly sets read-only permissions for all categories (User, Group, Others). Read (r) equals 4, resulting in 444."
+      },
       mnemonic: "口诀：= 是全量重置赋值；所有人（a）只读（r），就是 444。"
     },
     {
-      id: 23,
-      type: "single",
-      stem: "在 Linux 系统中，如果只想要把 `backup.tar.gz` 文件的所属组（Group）修改为 `admins`，而保持文件的原有所有者（Owner）不变，标准命令格式是：",
+      id: 24, type: "single",
+      stem: {
+        zh: "在 Linux 系统中，如果只想要把 `backup.tar.gz` 文件的所属组（Group）修改为 `admins`，而保持文件的原有所有者（Owner）不变，标准命令格式是：",
+        en: "Which command changes only the group ownership of `backup.tar.gz` to `admins` while leaving the original file owner unchanged?"
+      },
       options: [
         { key: "A", text: "chown :admins backup.tar.gz" },
         { key: "B", text: "chown +g admins backup.tar.gz" },
@@ -456,13 +679,18 @@
         { key: "D", text: "chgrp -o admins backup.tar.gz" }
       ],
       answer: ["A"],
-      explanation: "【考点核心：chown 变更属组的语法】\n`chown [owner]:[group] filename`。当冒号 `:` 前面留空，只跟组名时（`:admins`），表示只修改所属组，不改变所有者。也可以直接使用 `chgrp admins filename`。",
+      explanation: {
+        zh: "【chown 语法】`chown [owner]:[group]`。冒号前留空只跟 `:admins` 表示仅变更所属组，保留原所有者不变。",
+        en: "In `chown :admins file`, omitting the user before the colon changes only the group ownership."
+      },
       mnemonic: "口诀：chown 冒号前管所有者，冒号后管所属组；留空冒号只改组。"
     },
     {
-      id: 24,
-      type: "single",
-      stem: "Linux 管理员要在 `/etc` 目录及其所有子目录下，基于通配符查找所有以 `default` 开头并以 `.conf` 结尾的配置文件，正确的命令是：",
+      id: 25, type: "single",
+      stem: {
+        zh: "Linux 管理员要在 `/etc` 目录及其所有子目录下，基于通配符查找所有以 `default` 开头并以 `.conf` 结尾的配置文件，正确的命令是：",
+        en: "Which Linux command searches `/etc` and all subdirectories for configuration files starting with `default` and ending in `.conf`?"
+      },
       options: [
         { key: "A", text: "find /etc -file \"default*.conf\"" },
         { key: "B", text: "find /etc -name \"default*.conf\"" },
@@ -470,27 +698,37 @@
         { key: "D", text: "grep /etc \"default*.conf\"" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：find 命令的名称参数】\nfind 按照文件名匹配的标准参数是 `-name`（大小写敏感）或 `-iname`（忽略大小写）。find 没有 `-file` 参数。",
+      explanation: {
+        zh: "【find 参数】find 按照文件名通配匹配的标准参数是 `-name`。find 没有 `-file` 参数。",
+        en: "The `find` utility uses the `-name` option (or `-iname` for case-insensitive) to match file names."
+      },
       mnemonic: "口诀：按文件名找用 find 配合 -name，别写 -file。"
     },
     {
-      id: 25,
-      type: "single",
-      stem: "普通用户在终端中直接输入 `su` 命令并回车（不带用户名），系统默认要求输入的是谁的密码？",
+      id: 26, type: "single",
+      stem: {
+        zh: "普通用户在终端中直接输入 `su` 命令并回车（不带用户名），系统默认要求输入的是谁的密码？",
+        en: "A standard user enters `su` without any parameters into a Linux terminal. Whose password must be provided to authenticate?"
+      },
       options: [
-        { key: "A", text: "当前登录的普通用户自己的密码" },
-        { key: "B", text: "root（超级管理员）用户的密码" },
-        { key: "C", text: "Wheel 组组长的密码" },
-        { key: "D", text: "系统不需要密码直接提权" }
+        { key: "A", text: "The logged-in standard user's own password" },
+        { key: "B", text: "The root (superuser) account password" },
+        { key: "C", text: "The Wheel group administrator password" },
+        { key: "D", text: "No password is required" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：su vs sudo 的密码验证区别】\n- `su` (Switch User) 不带参数默认切换为 root，要求输入目标用户（即 root）的密码。\n- `sudo` (SuperUser DO) 默认要求输入的是当前执行者自己的密码进行授权。",
+      explanation: {
+        zh: "【su vs sudo】`su` 默认切换至超级管理员 root，必须输入 root 密码；`sudo` 是以自身身份临时提权，输入的是当前用户自己的密码。",
+        en: "`su` (Switch User) defaults to root and requires the target (root) password. In contrast, `sudo` asks for the executing user's password."
+      },
       mnemonic: "口诀：su 输入对方（目标 root）的密码；sudo 输入你自己（当前用户）的密码。"
     },
     {
-      id: 26,
-      type: "single",
-      stem: "在现代 Linux 系统中，如果需要查看当前系统的完整路由表（Routing Table）以及默认网关（Default Gateway），应该使用的现代命令是：",
+      id: 27, type: "single",
+      stem: {
+        zh: "在现代 Linux 系统中，如果需要查看当前系统的完整路由表（Routing Table）以及默认网关（Default Gateway），应该使用的现代命令是：",
+        en: "Which modern iproute2 command displays the kernel routing table and default gateway on Linux?"
+      },
       options: [
         { key: "A", text: "netstat -a" },
         { key: "B", text: "ip route show" },
@@ -498,27 +736,37 @@
         { key: "D", text: "ping -gateway" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：现代 iproute2 工具集】\n`ip route show`（或 `ip r`）用于打印当前内核路由表与网关。`netstat -a` 是显示所有的网络连接与侦听端口，而不是专门展示路由表（查看路由需用 `netstat -r`）。",
+      explanation: {
+        zh: "【ip route show】`ip route show`（或 `ip r`）用于打印内核路由表与默认网关。`netstat -a` 显示所有端口和连接状态。",
+        en: "`ip route show` is the modern command to view kernel routes and gateways. `netstat -a` displays all active network sockets."
+      },
       mnemonic: "口诀：现代查路由看网关，首选用 ip route show。"
     },
     {
-      id: 27,
-      type: "single",
-      stem: "使用 traceroute 命令对远端目标主机进行路径追踪时，其终端输出的结果中【通常不会】包含以下哪一项信息？",
+      id: 28, type: "single",
+      stem: {
+        zh: "使用 traceroute 命令对远端目标主机进行路径追踪时，其终端输出的结果中【通常不会】包含以下哪一项信息？",
+        en: "When analyzing output from a `traceroute` execution to a remote destination, which metric is NOT typically provided?"
+      },
       options: [
-        { key: "A", text: "每一跳路由器的跳数（Hop number）" },
-        { key: "B", text: "每跳对应的主机名或 IP 地址" },
-        { key: "C", text: "数据包往返时间（RTT）" },
-        { key: "D", text: "整个通信会话期间累计传输的总数据包数（Total packet count）" }
+        { key: "A", text: "Hop number for each intermediate router" },
+        { key: "B", text: "IP address or hostname of each gateway" },
+        { key: "C", text: "Round-trip time (RTT) latency per probe" },
+        { key: "D", text: "Total packet count transferred during the entire session" }
       ],
       answer: ["D"],
-      explanation: "【考点核心：traceroute 的标准输出】\ntraceroute 输出每一跳的跳数、IP/域名解析以及 3 次探测的往返时延（RTT）。它不是流量监控软件，不统计会话发送的总数据包数。",
+      explanation: {
+        zh: "【traceroute 输出】traceroute 输出跳数（Hop）、网关 IP/域名以及往返延迟（RTT）。它不统计整个会话的数据包总流量数。",
+        en: "`traceroute` shows hops, gateway IPs, and round-trip latency, but does NOT count cumulative session traffic or total packet counts."
+      },
       mnemonic: "口诀：traceroute 看路线、看跳数、看延迟，不看流量总包数。"
     },
     {
-      id: 28,
-      type: "single",
-      stem: "在 Linux 中，如果只运行不带任何参数的裸 `ps` 命令，默认只显示当前终端会话中的进程。如果需要查看操作系统全局范围内的所有进程，标准参数是：",
+      id: 29, type: "single",
+      stem: {
+        zh: "在 Linux 中，裸运行不带参数的 `ps` 命令仅显示当前终端会话中的进程。如果需要查看操作系统全局范围内的所有进程，标准参数是：",
+        en: "Running `ps` alone only lists processes attached to the current terminal. Which option displays all active system-wide processes across all users?"
+      },
       options: [
         { key: "A", text: "ps -e" },
         { key: "B", text: "ps -m" },
@@ -526,13 +774,18 @@
         { key: "D", text: "ps -kill" }
       ],
       answer: ["A"],
-      explanation: "【考点核心：ps 命令参数】\n`ps -e`（或者 `ps aux`）用于显示整个操作系统范围内的所有进程。裸 `ps` 只会列出当前 shell 下启动的极少数进程。",
+      explanation: {
+        zh: "【ps 参数】`ps -e`（或 `ps aux`）列出全局系统范围内的所有活动进程。",
+        en: "`ps -e` (or `ps aux`) instructs the utility to report on every active process across the entire operating system."
+      },
       mnemonic: "口诀：看全局所有进程，加 -e（everyone/everything）或者 aux。"
     },
     {
-      id: 29,
-      type: "single",
-      stem: "在 Linux 的 `top` 动态交互式系统监视器中，想要向某个特定进程发送终止信号（Kill a process），应该按下的快捷键是：",
+      id: 30, type: "single",
+      stem: {
+        zh: "在 Linux 的 `top` 动态交互式系统监视器中，想要向某个特定进程发送终止信号（Kill a process），应该按下的快捷键是：",
+        en: "While viewing active processes in the interactive Linux `top` monitor, which keystroke allows the user to send a kill termination signal to a PID?"
+      },
       options: [
         { key: "A", text: "X" },
         { key: "B", text: "K" },
@@ -540,13 +793,18 @@
         { key: "D", text: "Ctrl + C" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：top 交互快捷键】\n在 top 运行界面中：按 `k` 键输入对应 PID 可以结束进程（Kill）；按 `q` 退出；按 `h` 帮助。",
+      explanation: {
+        zh: "【top 快捷键】在 `top` 运行界面中按下 `k` 键输入进程 PID 即可终止（Kill）该进程。",
+        en: "Pressing `k` in `top` prompts for a PID and sends a signal to kill or terminate that process."
+      },
       mnemonic: "口诀：top 里杀进程，首字母就是 K（Kill）。"
     },
     {
-      id: 30,
-      type: "single",
-      stem: "在 Linux 的 `top` 监视器界面中，如果想要将当前进程列表按【内存占用百分比（Memory usage）】从大到小排序，应按下的快捷键是：",
+      id: 31, type: "single",
+      stem: {
+        zh: "在 Linux 的 `top` 监视器界面中，如果想要将当前进程列表按【内存占用百分比（Memory usage）】从大到小排序，应按下的快捷键是：",
+        en: "Inside the Linux `top` utility, which key sorts the running processes by memory utilization in descending order?"
+      },
       options: [
         { key: "A", text: "R" },
         { key: "B", text: "M (Shift + m)" },
@@ -554,41 +812,75 @@
         { key: "D", text: "T" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：top 排序快捷键】\n- 按 `M`：按内存占用排序（Memory）。\n- 按 `P`：按 CPU 占用排序（默认）。\n- 按 `T`：按运行总时间排序（Time）。",
+      explanation: {
+        zh: "【top 内存排序】按 `M` 按内存排序；按 `P` 按 CPU 排序；按 `T` 按运行时间排序。",
+        en: "Pressing `M` (Shift+m) in `top` sorts by memory usage. Pressing `P` sorts by CPU utilization."
+      },
       mnemonic: "口诀：内存排大头按 M（Memory），CPU 占用按 P（Processor）。"
     },
     {
-      id: 31,
-      type: "single",
-      stem: "用户在 Windows 11 上尝试运行一款专为 Windows 7 设计的旧版企业定制财务软件，双击启动时报错崩溃。技术人员应优先建议用户尝试哪项功能？",
+      id: 32, type: "single",
+      stem: {
+        zh: "用户在 Windows 11 上尝试运行一款专为 Windows 7 设计的旧版定制软件时报错崩溃。技术人员应优先建议用户尝试哪项功能？",
+        en: "A legacy business application built for Windows 7 crashes when launched on Windows 11. What built-in OS capability should be configured first?"
+      },
       options: [
         { key: "A", text: "Windows Sandbox" },
-        { key: "B", text: "Windows Compatibility Mode（兼容模式）" },
+        { key: "B", text: "Windows Compatibility Mode" },
         { key: "C", text: "Hyper-V Quick Create" },
         { key: "D", text: "Safe Mode with Networking" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：兼容模式解决老软件运行】\n右键程序属性 -> 兼容性（Compatibility Mode），可以模拟旧版 Windows 环境及 API 响应，专为旧软件跨版本运行设计。Windows Sandbox 是临时隔离测试环境，不能解决旧版 API 兼容问题。",
+      explanation: {
+        zh: "【Compatibility Mode 兼容模式】右键属性中的 Compatibility Mode 允许 Windows 11 模拟旧版 Windows API 运行老程序。",
+        en: "Compatibility Mode allows older legacy applications to run by emulating earlier versions of the Windows operating system."
+      },
       mnemonic: "口诀：旧系统老程序新机跑，优先右键“兼容模式（Compatibility Mode）”。"
     },
     {
-      id: 32,
-      type: "single",
-      stem: "用户使用云盘同步软件（如 OneDrive/Dropbox）时，本地硬盘空间严重不足。为了只让工作必需的指定文件夹下载到本地，而让其余文件仅保存在云端，应启用的功能是：",
+      id: 33, type: "multiple", selectLimit: 2,
+      stem: {
+        zh: "当需要在当前的物理主机上，本地运行为【完全不同的操作系统架构】或硬件平台所编译的软件时，通常需要结合使用哪两项技术？（Select TWO）",
+        en: "A developer needs to run software compiled for a completely different OS architecture locally on their current workstation. Which TWO technologies are required? (Select TWO)"
+      },
+      options: [
+        { key: "A", text: "Virtualization" },
+        { key: "B", text: "Emulator software" },
+        { key: "C", text: "Application sandboxing" },
+        { key: "D", text: "Disk defragmentation" }
+      ],
+      answer: ["A", "B"],
+      explanation: {
+        zh: "【跨架构运行】跨架构（如在 x86 上跑 ARM 程序）必须借助 Virtualization 和 Emulator（模拟器）转译底层硬件指令。",
+        en: "Running software designed for a different hardware architecture requires both Virtualization and an Emulator to translate underlying instructions."
+      },
+      mnemonic: "口诀：不同架构本地跑，虚拟化加模拟器（Virtualization + Emulator）。"
+    },
+    {
+      id: 34, type: "single",
+      stem: {
+        zh: "用户使用云盘同步软件（如 OneDrive/Dropbox）时本地硬盘空间不足。为了只让工作必需的指定文件夹下载到本地，其余仅保存在云端，应启用的功能是：",
+        en: "A workstation's local SSD is nearly full. Which cloud storage client feature allows users to choose specific folders to keep locally while leaving the rest online-only?"
+      },
       options: [
         { key: "A", text: "Offline access" },
-        { key: "B", text: "Selective sync（选择性同步）" },
+        { key: "B", text: "Selective sync" },
         { key: "C", text: "Bandwidth throttling" },
         { key: "D", text: "File Vault" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：选择性同步（Selective Sync）】\nSelective sync 允许用户明确勾选哪些文件夹需要本地同步，取消勾选的文件夹仅存放在云端不占本地空间。",
+      explanation: {
+        zh: "【Selective sync 选择性同步】允许用户精准选择哪些目录同步保存到本地硬盘，其余保持云端占位以节省空间。",
+        en: "Selective sync lets users specify which cloud directories download to local storage, keeping other files in the cloud to save disk space."
+      },
       mnemonic: "口诀：本地盘满选文件夹下，功能就叫 Selective sync。"
     },
     {
-      id: 33,
-      type: "single",
-      stem: "企业 IT 管理员需要审计某 SaaS 办公软件在全公司范围内的许可授权（License）总数、当前分配状态以及剩余可用席位，应该首先登录哪种控制台查看？",
+      id: 35, type: "single",
+      stem: {
+        zh: "企业 IT 管理员需要审计某 SaaS 办公软件全公司的许可授权（License）总数、分配状态以及剩余可用席位，应该首先登录哪种控制台查看？",
+        en: "An administrator needs to review the allocation, usage, and available seat count of SaaS licenses across the organization. Where should they look?"
+      },
       options: [
         { key: "A", text: "Credential manager software" },
         { key: "B", text: "SaaS Admin dashboard / Admin portal" },
@@ -596,28 +888,37 @@
         { key: "D", text: "Local Security Policy" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：SaaS 许可授权审计】\n云服务的许可证集中管理全部由该云平台的管理员控制台（Admin dashboard / portal，如 Microsoft 365 Admin Center）统一分配和监控。",
+      explanation: {
+        zh: "【SaaS Admin Portal】SaaS 服务的集中授权与席位分配统一在供应商的管理员门户（Admin portal / dashboard）中管理。",
+        en: "SaaS application licenses and seat allocations are managed globally through the service's centralized Admin Dashboard/Portal."
+      },
       mnemonic: "口诀：查云软件 License 数量和余量，直奔 Admin portal 管理后台。"
     },
     {
-      id: 34,
-      type: "single",
-      stem: "一家受监管的公司需要对其整个园区设施的受限物理周界（Entire perimeter）建立连续的物理屏障，以同时有效阻止未经授权的人员翻越以及车辆非法闯入。首选的物理安全措施是：",
+      id: 36, type: "single",
+      stem: {
+        zh: "一家公司需要对其整个园区设施的受限物理周界（Entire perimeter）建立连续的物理屏障，以同时阻止人员翻越以及车辆非法闯入。首选的物理安全措施是：",
+        en: "A facility needs a continuous physical barrier around its entire perimeter to restrict both unauthorized pedestrians and vehicles from entering. What is the best solution?"
+      },
       options: [
         { key: "A", text: "Security guards" },
-        { key: "B", text: "Fencing (围栏/防护栅栏)" },
+        { key: "B", text: "Fencing" },
         { key: "C", text: "Biometric locks" },
         { key: "D", text: "Door mantrap" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：周界物理安全措施】\n题目强调“覆盖整个周界（Entire perimeter）”、“拦截人和车”，标准的固定连续物理屏障是 Fencing（围栏/栅栏，通常结合防撞护栏）。保安（Guards）通常守卫出入口或巡逻，无法单凭人力覆盖整个连续周界。",
+      explanation: {
+        zh: "【Fencing 围栏】覆盖整个周界（Entire perimeter）且同时防人和防车的固定连续物理屏障首选 Fencing（防攀爬围栏结合防撞护栏）。",
+        en: "Fencing provides continuous perimeter boundary demarcation to deter and restrict both pedestrian trespassers and vehicular entry."
+      },
       mnemonic: "口诀：全周界物理防人和车，首选大范围 Fencing（围栏）。"
     },
     {
-      id: 35,
-      type: "multiple",
-      selectLimit: 2,
-      stem: "技术人员需要为移动闪存盘选择文件系统格式，要求该格式在 Windows、macOS 和 Linux 之间具有最广泛的原生读写兼容性（Broadest cross-platform compatibility）。以下哪两个是最佳选择？（Select TWO）",
+      id: 37, type: "multiple", selectLimit: 2,
+      stem: {
+        zh: "技术人员需要为移动闪存盘选择文件系统格式，要求在 Windows、macOS 和 Linux 之间具有最广泛的原生读写兼容性。以下哪两个是最佳选择？（Select TWO）",
+        en: "A technician needs to format a USB thumb drive to provide the broadest native read/write compatibility across Windows, macOS, and Linux. Which TWO should be chosen? (Select TWO)"
+      },
       options: [
         { key: "A", text: "FAT32" },
         { key: "B", text: "exFAT" },
@@ -626,14 +927,56 @@
         { key: "E", text: "APFS" }
       ],
       answer: ["A", "B"],
-      explanation: "【考点核心：跨平台文件系统兼容性】\n- FAT32：最老最通用，几乎所有设备都原生兼容，缺点是单文件最大 4GB。\n- exFAT：专为闪存优化的现代跨平台格式，打破 4GB 限制，Windows/macOS/Linux 均原生支持读写。\n- NTFS 在 macOS 上默认只读不可写；ext4 为 Linux 专精；APFS 为 Apple 独占。",
+      explanation: {
+        zh: "【跨系统文件格式】FAT32 与 exFAT 在 Windows、macOS 和 Linux 三大系统上均享有原生读写支持。NTFS 在 macOS 默认只读不可写。",
+        en: "FAT32 and exFAT offer native read and write support out of the box across Windows, macOS, and Linux platforms."
+      },
       mnemonic: "口诀：老通用 FAT32，大文件跨平台选 exFAT；跨三大系统首选 FAT 家族。"
     },
     {
-      id: 36,
-      type: "multiple",
-      selectLimit: 3,
-      stem: "在对物理硬盘进行分区（Partitioning）时，以下哪三项是分区所能带来的真正技术优势？（Select THREE）",
+      id: 38, type: "single",
+      stem: {
+        zh: "在不同操作系统之间通过移动介质共享数据时，技术人员遇到的最主要的兼容性问题来源（Primary cause of compatibility issues）通常是：",
+        en: "When sharing data across different operating systems using removable storage media, what is the primary cause of compatibility issues?"
+      },
+      options: [
+        { key: "A", text: "Differences in file system formats" },
+        { key: "B", text: "Differences in CPU architectures" },
+        { key: "C", text: "Differences in USB controller firmware" },
+        { key: "D", text: "Differences in screen resolutions" }
+      ],
+      answer: ["A"],
+      explanation: {
+        zh: "【跨系统数据共享根本原因】操作系统对不同文件系统（NTFS, APFS, ext4 等）的支持程度不同，是跨系统移动盘无法读写的最核心原因。",
+        en: "Incompatibilities between operating systems when reading removable drives stem directly from differences in supported file system formats."
+      },
+      mnemonic: "口诀：跨系统共享先看文件系统，不看底层硬件。"
+    },
+    {
+      id: 39, type: "single",
+      stem: {
+        zh: "在现代企业桌面与工作站（Enterprise workstation）日常办公计算环境中，迄今为止被最广泛采用的客户端操作系统是：",
+        en: "Which client operating system is by far the most widely adopted across modern corporate enterprise desktop and workstation environments?"
+      },
+      options: [
+        { key: "A", text: "Windows" },
+        { key: "B", text: "Linux" },
+        { key: "C", text: "macOS" },
+        { key: "D", text: "ChromeOS" }
+      ],
+      answer: ["A"],
+      explanation: {
+        zh: "【企业工作站操作系统】凭借 Active Directory 域环境管理、Group Policy 组策略与企业级软件支持，Windows 在企业桌面端占据绝对主流。",
+        en: "Windows remains the dominant enterprise workstation OS due to comprehensive Active Directory integration and software compatibility."
+      },
+      mnemonic: "口诀：桌面企业看 Windows，服务器端看 Linux。"
+    },
+    {
+      id: 40, type: "multiple", selectLimit: 3,
+      stem: {
+        zh: "在对物理硬盘进行分区（Partitioning）时，以下哪三项是分区所能带来的真正技术优势？（Select THREE）",
+        en: "Which THREE of the following are actual benefits of partitioning a physical storage drive? (Select THREE)"
+      },
       options: [
         { key: "A", text: "Separating user data from operating system files for better organization" },
         { key: "B", text: "Supporting multiboot configurations with different operating systems" },
@@ -642,13 +985,18 @@
         { key: "E", text: "Increasing raw sequential read and write transfer speeds" }
       ],
       answer: ["A", "B", "C"],
-      explanation: "【考点核心：分区的实际作用与干扰项】\n- 正确作用：逻辑组织数据（系统盘和数据盘分开）、支持多操作系统引导（Multiboot）、便于针对特定分区进行镜像备份与重装恢复（A、B、C）。\n- 干扰项 D/E：分区绝不会凭空增加物理磁盘的容量，也不会提高磁盘本身的读写性能！",
+      explanation: {
+        zh: "【分区优势】组织数据隔离、多系统引导（Multiboot）、针对特定分区备份恢复（A、B、C）。分区绝不能增加物理容量或改变读写速度。",
+        en: "Partitioning isolates OS and user data, enables multi-boot setups, and simplifies backups. It does NOT increase drive capacity or hardware speed."
+      },
       mnemonic: "口诀：分区管组织、双系统和备多分；不加硬盘总容量，也不给硬件提速。"
     },
     {
-      id: 37,
-      type: "single",
-      stem: "技术人员正在全新组装的台式机上通过 USB 安装 Windows 11，但在进入安装程序选择安装目标磁盘的界面时，列表完全空白，无法检测到主板上的 NVMe M.2 固态硬盘。技术人员此时应该采取的最标准优先措施是：",
+      id: 41, type: "single",
+      stem: {
+        zh: "技术人员正在全新组装的台式机上通过 USB 安装 Windows 11，但在进入安装目标磁盘选择界面时列表完全空白，无法检测到 NVMe 固态硬盘。此时应采取的最标准优先措施是：",
+        en: "A technician is installing Windows 11 on a newly built PC, but the storage drive selection screen is blank and fails to detect the NVMe SSD. What is the best immediate step?"
+      },
       options: [
         { key: "A", text: "Update the motherboard BIOS/UEFI firmware immediately" },
         { key: "B", text: "Load the appropriate third-party NVMe drivers from external media" },
@@ -656,15 +1004,27 @@
         { key: "D", text: "Replace the NVMe drive with a SATA mechanical drive" }
       ],
       answer: ["B"],
-      explanation: "【考点核心：Windows 安装过程缺少存储驱动】\n在 Windows 安装向导界面中识别不到硬盘（但在 UEFI 硬件里能看到），最常见原因是微软通用安装介质中缺少该主板芯片组或 NVMe 控制器的专用驱动。界面下方明确提供“加载驱动（Load Driver）”按钮，允许从 U 盘加载第三方驱动。刷 BIOS 风险较高不是首选标准排错步骤。",
+      explanation: {
+        zh: "【加载驱动】Windows 通用安装介质缺少该芯片组或 NVMe 控制器的驱动，标准做法是在安装界面点击“Load driver”从外部 U 盘加载专用驱动。",
+        en: "If the Windows installer cannot see the NVMe drive, the standard resolution is to click 'Load driver' and supply the proprietary storage controller drivers."
+      },
       mnemonic: "口诀：装系统找不到 NVMe 盘，先按 Load Driver 加载驱动。"
     }
   ];
+
+  let customQuestions = JSON.parse(localStorage.getItem('a_plus_custom_questions') || '[]');
+  let questions = [...baseQuestions, ...customQuestions];
 
   let currentIdx = 0;
   let userSelections = {}; 
   let submittedStatus = {};
   let starredSet = new Set(JSON.parse(localStorage.getItem('a_plus_stars') || '[]'));
+
+  function toggleLanguage() {
+    currentLang = currentLang === 'zh' ? 'en' : 'zh';
+    localStorage.setItem('a_plus_lang', currentLang);
+    renderUI();
+  }
 
   function initNavGrid() {
     const grid = document.getElementById('navGrid');
@@ -688,20 +1048,50 @@
       if (isEqual(sel, q.answer)) correctCount++;
     });
     const acc = answered === 0 ? 0 : Math.round((correctCount / answered) * 100);
-    document.getElementById('statsSummary').innerText = `已做: ${answered} / ${questions.length} | 正确数: ${correctCount} | 正确率: ${acc}%`;
+    const text = i18n[currentLang].statAnswered
+      .replace('{ans}', answered)
+      .replace('{total}', questions.length)
+      .replace('{cor}', correctCount)
+      .replace('{acc}', acc);
+    document.getElementById('statsSummary').innerText = text;
+  }
+
+  function renderUI() {
+    const t = i18n[currentLang];
+    document.getElementById('appTitle').innerText = t.appTitle;
+    document.getElementById('appSubtitle').innerText = t.appSubtitle;
+    document.getElementById('langToggleBtn').innerText = t.langBtn;
+    document.getElementById('addBtnLabel').innerText = t.addBtn;
+    document.getElementById('prevBtn').innerText = t.prev;
+    document.getElementById('nextBtn').innerText = t.next;
+    document.getElementById('correctLabelPrefix').innerText = t.correctAns;
+    renderQuiz();
   }
 
   function renderQuiz() {
     const q = questions[currentIdx];
-    document.getElementById('qIndexLabel').innerText = `Question ${currentIdx + 1} of ${questions.length}`;
-    document.getElementById('qTag').innerText = q.type === 'multiple' ? `多选（选 ${q.selectLimit || q.answer.length} 项）` : '单选题';
-    document.getElementById('qTag').className = `q-tag ${q.type === 'multiple' ? 'multi' : ''}`;
-    document.getElementById('qTitle').innerText = q.stem;
+    const t = i18n[currentLang];
+
+    document.getElementById('qIndexLabel').innerText = t.qOf
+      .replace('{curr}', currentIdx + 1)
+      .replace('{total}', questions.length);
+
+    if (q.type === 'multiple') {
+      const count = q.selectLimit || q.answer.length;
+      document.getElementById('qTag').innerText = t.multi.replace('{n}', count);
+      document.getElementById('qTag').className = 'q-tag multi';
+    } else {
+      document.getElementById('qTag').innerText = t.single;
+      document.getElementById('qTag').className = 'q-tag';
+    }
+
+    // 动态提取语言题干
+    const stemText = (typeof q.stem === 'object') ? (q.stem[currentLang] || q.stem.zh || q.stem.en) : q.stem;
+    document.getElementById('qTitle').innerText = stemText;
 
     const starBtn = document.getElementById('starBtn');
     starBtn.className = `star-btn ${starredSet.has(q.id) ? 'starred' : ''}`;
 
-    // 选项渲染
     const container = document.getElementById('optionsContainer');
     container.innerHTML = '';
 
@@ -738,12 +1128,12 @@
 
       label.appendChild(input);
       const span = document.createElement('span');
-      span.innerText = opt.text;
+      const optText = (typeof opt.text === 'object') ? (opt.text[currentLang] || opt.text.zh || opt.text.en) : opt.text;
+      span.innerText = `${opt.key}. ${optText.replace(/^[A-E]\.\s*/i, '')}`;
       label.appendChild(span);
       container.appendChild(label);
     });
 
-    // 翻页与提交按钮控制
     document.getElementById('prevBtn').disabled = currentIdx === 0;
     document.getElementById('nextBtn').disabled = currentIdx === questions.length - 1;
 
@@ -753,23 +1143,32 @@
 
     if (isSubmitted) {
       submitBtn.disabled = true;
-      submitBtn.innerText = '已提交评估';
+      submitBtn.innerText = t.submitted;
 
       const isCorrect = isEqual(currentSelected, q.answer);
       feedbackBox.className = `feedback-box ${isCorrect ? 'correct' : 'wrong'}`;
       fbTitle.className = `fb-title ${isCorrect ? 'correct' : 'wrong'}`;
-      fbTitle.innerText = isCorrect ? '🎉 回答完全正确！' : '❌ 回答错误！请复盘解析';
+      fbTitle.innerText = isCorrect ? t.correctTitle : t.wrongTitle;
       document.getElementById('correctKey').innerText = q.answer.join(', ');
-      document.getElementById('expContent').innerText = q.explanation;
-      document.getElementById('mnemonicBox').innerText = q.mnemonic || '无记忆口诀';
+
+      const expText = (typeof q.explanation === 'object') ? (q.explanation[currentLang] || q.explanation.zh || q.explanation.en) : q.explanation;
+      document.getElementById('expContent').innerText = expText;
+
+      const mnemonicEl = document.getElementById('mnemonicBox');
+      if (q.mnemonic) {
+        mnemonicEl.innerText = `${t.tipPrefix} ${q.mnemonic}`;
+        mnemonicEl.style.display = 'block';
+      } else {
+        mnemonicEl.style.display = 'none';
+      }
+
       feedbackBox.style.display = 'block';
     } else {
       submitBtn.disabled = false;
-      submitBtn.innerText = '提交选择';
+      submitBtn.innerText = t.submit;
       feedbackBox.style.display = 'none';
     }
 
-    // 更新答题卡高亮
     document.querySelectorAll('.nav-btn').forEach((btn, i) => {
       btn.classList.remove('current');
       if (i === currentIdx) btn.classList.add('current');
@@ -787,7 +1186,7 @@
     const q = questions[currentIdx];
     const selected = userSelections[currentIdx];
     if (!selected || selected.length === 0) {
-      alert('请先勾选你的选项！');
+      alert(i18n[currentLang].alertSelect);
       return;
     }
 
@@ -825,9 +1224,57 @@
     renderQuiz();
   }
 
-  // 页面初始化
+  function openAddModal() {
+    document.getElementById('addModal').style.display = 'flex';
+  }
+  function closeAddModal() {
+    document.getElementById('addModal').style.display = 'none';
+  }
+
+  function saveNewQuestion() {
+    const stem = document.getElementById('newStem').value.trim();
+    const type = document.getElementById('newType').value;
+    const optText = document.getElementById('newOptions').value.trim();
+    const ansText = document.getElementById('newAnswer').value.trim().toUpperCase();
+    const exp = document.getElementById('newExp').value.trim();
+    const mnemonic = document.getElementById('newMnemonic').value.trim();
+
+    if (!stem || !optText || !ansText) {
+      alert('请完整填写题干、选项和正确答案！');
+      return;
+    }
+
+    const lines = optText.split('\n').filter(l => l.trim().length > 0);
+    const options = lines.map((l, i) => {
+      const match = l.match(/^([A-Ea-e])[\.\:\、\s]/);
+      const key = match ? match[1].toUpperCase() : String.fromCharCode(65 + i);
+      return { key, text: l.trim() };
+    });
+
+    const ansArray = ansText.replace(/[^A-E]/g, '').split('');
+
+    const newQ = {
+      id: Date.now(),
+      type,
+      stem: { zh: stem, en: stem },
+      options,
+      answer: ansArray,
+      explanation: { zh: exp || '无详细解析', en: exp || 'No detailed explanation' },
+      mnemonic: mnemonic
+    };
+
+    customQuestions.push(newQ);
+    localStorage.setItem('a_plus_custom_questions', JSON.stringify(customQuestions));
+    questions = [...baseQuestions, ...customQuestions];
+
+    closeAddModal();
+    initNavGrid();
+    jumpTo(questions.length - 1);
+    alert('新题目添加成功！');
+  }
+
   initNavGrid();
-  renderQuiz();
+  renderUI();
 </script>
 
 </body>
