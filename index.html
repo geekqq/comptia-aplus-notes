@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CompTIA A+ Core 2 错题强化特训</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --primary: #2563eb;
+      --success: #16a34a;
+      --danger: #dc2626;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); padding: 20px; line-height: 1.5; }
+    .container { max-width: 800px; margin: 0 auto; }
+    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 12px; }
+    h1 { font-size: 1.4rem; font-weight: 700; }
+    .stats { font-size: 0.9rem; color: var(--muted); }
+    
+    .toolbar { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+    button { padding: 8px 16px; border-radius: var(--radius); border: 1px solid var(--border); background: var(--card); cursor: pointer; font-size: 0.9rem; font-weight: 500; transition: all 0.2s; }
+    button.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+    button:hover:not(.active) { background: #f1f5f9; }
+
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .q-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; }
+    .q-title { font-size: 1.05rem; font-weight: 600; white-space: pre-wrap; flex: 1; }
+    .star-btn { background: none; border: none; font-size: 1.25rem; cursor: pointer; color: #cbd5e1; padding: 0 0 0 8px; }
+    .star-btn.starred { color: #f59e0b; }
+
+    .options { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+    .opt-item { display: flex; align-items: center; padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px; cursor: pointer; transition: 0.15s; }
+    .opt-item:hover { background: #f8fafc; border-color: #cbd5e1; }
+    .opt-item input { margin-right: 12px; }
+    
+    .opt-item.correct { background: #dcfce7; border-color: var(--success); color: #14532d; font-weight: 600; }
+    .opt-item.wrong { background: #fee2e2; border-color: var(--danger); color: #7f1d1d; }
+
+    .explanation { margin-top: 16px; padding: 14px; background: #eff6ff; border-left: 4px solid var(--primary); border-radius: 4px; font-size: 0.92rem; display: none; }
+    .explanation.show { display: block; }
+    .actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }
+
+    .raw-paste-box { width: 100%; height: 160px; padding: 10px; border-radius: 8px; border: 1px solid var(--border); font-family: monospace; font-size: 0.85rem; margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div>
+      <h1>CompTIA A+ Core 2 强化错题本</h1>
+      <div class="stats" id="stats">正在加载题目...</div>
+    </div>
+    <button onclick="togglePasteArea()">手动粘贴/导入 Markdown</button>
+  </header>
+
+  <div id="pasteArea" style="display: none; margin-bottom: 20px;" class="card">
+    <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 8px;">如果通过本地直接双击打开（受限于跨域），可把 GitHub 里的 markdown 内容直接粘贴在此并点击解析：</p>
+    <textarea id="markdownInput" class="raw-paste-box" placeholder="粘贴你的 markdown 内容..."></textarea>
+    <button class="active" onclick="parseRawInput()">解析题目</button>
+  </div>
+
+  <div class="toolbar">
+    <button class="active" onclick="setFilter('all', this)">全部题目</button>
+    <button onclick="setFilter('wrong', this)">本次做错 (<span id="wrongCount">0</span>)</button>
+    <button onclick="setFilter('starred', this)">⭐ 重点标记 (<span id="starCount">0</span>)</button>
+    <button onclick="shuffleQuestions()">🔀 乱序重排</button>
+  </div>
+
+  <div id="quizContainer"></div>
+</div>
+
+<script>
+  let questions = [];
+  let filter = 'all';
+  let wrongSet = new Set();
+  let starredSet = new Set(JSON.parse(localStorage.getItem('a_plus_starred') || '[]'));
+
+  // 默认尝试自动加载同级或远程文件
+  window.addEventListener('DOMContentLoaded', () => {
+    fetch('./core2-wrong-answers.md')
+      .then(res => {
+        if (!res.ok) throw new Error();
+        return res.text();
+      })
+      .then(text => renderParsedMarkdown(text))
+      .catch(() => {
+        // 如果跨域阻断则展示手动粘贴区
+        document.getElementById('pasteArea').style.display = 'block';
+        document.getElementById('stats').innerText = '未检测到在线文件，请手动粘贴 Markdown。';
+      });
+  });
+
+  function togglePasteArea() {
+    const area = document.getElementById('pasteArea');
+    area.style.display = area.style.display === 'none' ? 'block' : 'none';
+  }
+
+  function parseRawInput() {
+    const text = document.getElementById('markdownInput').value;
+    if (text.trim()) renderParsedMarkdown(text);
+  }
+
+  // 通用 Markdown 试题解析器（兼容 ## 题号、选项 A/B/C/D、Answer/答案、解析/Explanation）
+  function parseMarkdown(md) {
+    const blocks = md.split(/(?=###?\s+|(?:\n|^)\d+[\.、]\s+)/g);
+    const parsed = [];
+
+    blocks.forEach((block, idx) => {
+      if (!block.trim()) return;
+
+      const lines = block.trim().split('\n');
+      let title = lines[0].replace(/^###?\s*|\d+[\.、]\s*/, '').trim();
+      let options = [];
+      let answer = '';
+      let explanation = '';
+      let isReadingExp = false;
+
+      lines.slice(1).forEach(line => {
+        const l = line.trim();
+        // 匹配选项 A. B. C. D.
+        if (/^[A-Ea-e][\.\:\、\s]/i.test(l)) {
+          options.push(l);
+          isReadingExp = false;
+        } 
+        // 匹配答案
+        else if (/(?:answer|答案|correct)[\s\:\：\*]*([A-Ea-e,\s]+)/i.test(l)) {
+          const match = l.match(/(?:answer|答案|correct)[\s\:\：\*]*([A-Ea-e,\s]+)/i);
+          if (match) answer = match[1].replace(/[\*\s]/g, '').toUpperCase();
+          isReadingExp = false;
+        } 
+        // 匹配解析
+        else if (/(?:explanation|解析|理由)[\s\:\：\*]/i.test(l)) {
+          explanation += l.replace(/^.*?(?:explanation|解析|理由)[\s\:\：\*]*/i, '') + '\n';
+          isReadingExp = true;
+        } 
+        else if (isReadingExp) {
+          explanation += l + '\n';
+        } else if (options.length === 0 && !answer) {
+          title += '\n' + l;
+        }
+      });
+
+      if (options.length > 0 || answer) {
+        parsed.push({
+          id: idx + 1,
+          title: title.trim(),
+          options,
+          answer,
+          explanation: explanation.trim() || '暂无详细解析'
+        });
+      }
+    });
+
+    return parsed;
+  }
+
+  function renderParsedMarkdown(text) {
+    questions = parseMarkdown(text);
+    document.getElementById('pasteArea').style.display = 'none';
+    renderQuiz();
+  }
+
+  function renderQuiz() {
+    const container = document.getElementById('quizContainer');
+    container.innerHTML = '';
+
+    const filtered = questions.filter(q => {
+      if (filter === 'wrong') return wrongSet.has(q.id);
+      if (filter === 'starred') return starredSet.has(q.id);
+      return true;
+    });
+
+    document.getElementById('stats').innerText = `共加载 ${questions.length} 道错题，当前展示 ${filtered.length} 道`;
+    document.getElementById('wrongCount').innerText = wrongSet.size;
+    document.getElementById('starCount').innerText = starredSet.size;
+
+    filtered.forEach(q => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.id = `q-${q.id}`;
+
+      const isStarred = starredSet.has(q.id);
+      const isMulti = q.answer.length > 1;
+
+      let optionsHtml = q.options.map((opt, i) => {
+        const letterMatch = opt.match(/^([A-Ea-e])/);
+        const letter = letterMatch ? letterMatch[1].toUpperCase() : String.fromCharCode(65 + i);
+        return `
+          <label class="opt-item" data-letter="${letter}">
+            <input type="${isMulti ? 'checkbox' : 'radio'}" name="opt-${q.id}" value="${letter}" onchange="checkAnswer(${q.id})">
+            <span>${opt}</span>
+          </label>
+        `;
+      }).join('');
+
+      card.innerHTML = `
+        <div class="q-header">
+          <div class="q-title">Q${q.id}. ${q.title}</div>
+          <button class="star-btn ${isStarred ? 'starred' : ''}" onclick="toggleStar(${q.id}, this)">★</button>
+        </div>
+        <div class="options">${optionsHtml}</div>
+        <div class="actions">
+          <button onclick="revealExplanation(${q.id})">查看答案 & 解析</button>
+        </div>
+        <div class="explanation" id="exp-${q.id}">
+          <strong>正确答案：${q.answer}</strong>
+          <p style="margin-top: 6px;">${q.explanation}</p>
+        </div>
+      `;
+
+      container.appendChild(card);
+    });
+  }
+
+  function checkAnswer(qid) {
+    const q = questions.find(item => item.id === qid);
+    const card = document.getElementById(`q-${qid}`);
+    const selected = Array.from(card.querySelectorAll(`input[name="opt-${qid}"]:checked`)).map(el => el.value);
+    
+    // 如果还没选够多选数量，暂不强制判定
+    if (selected.length === 0) return;
+
+    const correctLetters = q.answer.split('');
+    const isCorrect = selected.sort().join('') === correctLetters.sort().join('');
+
+    card.querySelectorAll('.opt-item').forEach(el => {
+      const letter = el.getAttribute('data-letter');
+      el.classList.remove('correct', 'wrong');
+      if (selected.includes(letter)) {
+        el.classList.add(correctLetters.includes(letter) ? 'correct' : 'wrong');
+      } else if (correctLetters.includes(letter) && selected.length >= correctLetters.length) {
+        el.classList.add('correct');
+      }
+    });
+
+    if (!isCorrect && selected.length >= correctLetters.length) {
+      wrongSet.add(qid);
+      document.getElementById(`exp-${qid}`).classList.add('show');
+    } else if (isCorrect) {
+      wrongSet.delete(qid);
+    }
+
+    document.getElementById('wrongCount').innerText = wrongSet.size;
+  }
+
+  function revealExplanation(qid) {
+    document.getElementById(`exp-${qid}`).classList.toggle('show');
+  }
+
+  function toggleStar(qid, btn) {
+    if (starredSet.has(qid)) {
+      starredSet.delete(qid);
+      btn.classList.remove('starred');
+    } else {
+      starredSet.add(qid);
+      btn.classList.add('starred');
+    }
+    localStorage.setItem('a_plus_starred', JSON.stringify([...starredSet]));
+    document.getElementById('starCount').innerText = starredSet.size;
+  }
+
+  function setFilter(type, btn) {
+    filter = type;
+    document.querySelectorAll('.toolbar button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderQuiz();
+  }
+
+  function shuffleQuestions() {
+    questions.sort(() => Math.random() - 0.5);
+    renderQuiz();
+  }
+</script>
+</body>
+</html>
