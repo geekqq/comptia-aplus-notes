@@ -1,0 +1,951 @@
+[
+  {
+    "id": 1,
+    "type": "multiple",
+    "selectLimit": 3,
+    "stem": {
+      "zh": "关于跨站脚本攻击（XSS, Cross-Site Scripting），以下哪三项描述是正确的？（Select THREE）",
+      "en": "Which of the following statements regarding Cross-Site Scripting (XSS) are accurate? (Select THREE)"
+    },
+    "options": [
+      { "key": "A", "text": "An attacker injects a malicious script into a trusted website" },
+      { "key": "B", "text": "The attacker’s script is executed in the user’s browser" },
+      { "key": "C", "text": "An attack that exploits the trust a user's web browser has in a website" },
+      { "key": "D", "text": "The trusted website executes an action on behalf of the user without their consent" },
+      { "key": "E", "text": "An attacker captures passwords transmitted across an unencrypted network segment" }
+    ],
+    "answer": ["A", "B", "C"],
+    "explanation": {
+      "zh": "【XSS vs CSRF 信任方向】\n- A、B、C 属于典型的 XSS：恶意脚本注入受信任网站并在用户浏览器中执行，利用的是用户对网站的信任。\n- 选项 D 属于 CSRF（跨站请求伪造）：利用网站对已登录用户的信任，伪造请求让网站代为执行操作。",
+      "en": "XSS involves injecting malicious scripts into trusted websites that execute inside the victim's browser. Exploits the trust a user has in a website. Option D describes CSRF (Cross-Site Request Forgery)."
+    },
+    "mnemonic": "口诀：XSS 脚本浏览器里当场跑；CSRF 冒充你在网站发请求。"
+  },
+  {
+    "id": 2,
+    "type": "multiple",
+    "selectLimit": 3,
+    "stem": {
+      "zh": "在网络安全中，关于路径上攻击（On-path attack，曾称中间人攻击 MitM），以下哪三项描述符合其攻击特征？（Select THREE）",
+      "en": "Which of the following characteristics accurately describe an On-Path Attack (formerly known as Man-in-the-Middle)? (Select THREE)"
+    },
+    "options": [
+      { "key": "A", "text": "Attackers intercept and modify the packets sent between two communicating devices" },
+      { "key": "B", "text": "Attackers can impersonate one of the communicating parties to alter the communication" },
+      { "key": "C", "text": "Attackers place themselves on the communication route between two devices" },
+      { "key": "D", "text": "An on-path attack may succeed only if at least one of the communicating devices has been compromised" },
+      { "key": "E", "text": "Attackers must gain physical access to the target host to execute the attack" }
+    ],
+    "answer": ["A", "B", "C"],
+    "explanation": {
+      "zh": "【On-path 特性】攻击者置于通信链路中间，拦截、篡改数据并可冒充双方。不需要任何一台终端被攻破，也不需要物理接触主机。",
+      "en": "Attackers place themselves between endpoints to intercept, modify, or impersonate traffic. It does NOT require either endpoint to be compromised or physically accessed."
+    },
+    "mnemonic": "口诀：On-path 插中间，偷听篡改加冒充；不用端设备被黑，网络劫持就能做。"
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "stem": {
+      "zh": "攻击者通过伪造发件人电子邮件地址、伪造源 IP 地址或伪造网卡的 MAC 地址，冒充受信任来源，该技术最准确的术语是：",
+      "en": "An attacker alters headers to forge an email address, IP address, or MAC address to appear as a trusted entity. What is this technique called?"
+    },
+    "options": [
+      { "key": "A", "text": "Impersonation" },
+      { "key": "B", "text": "Spoofing" },
+      { "key": "C", "text": "Privilege Escalation" },
+      { "key": "D", "text": "Phishing" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【Spoofing 欺骗/伪造】伪造具体的网络技术标识（IP/MAC/Email）的标准术语是 Spoofing。Impersonation 偏向人际社工冒充。",
+      "en": "Spoofing is the technical falsification of identifying data (IP, MAC, email). Impersonation refers to social mimicry."
+    },
+    "mnemonic": "口诀：伪造 IP/MAC/Email 标识全叫 Spoofing；假装是同事打工人叫 Impersonation。"
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "stem": {
+      "zh": "安全人员发现了一个针对操作系统内核的攻击代码，而该软件开发商尚未意识到该漏洞的存在，也没有发布任何补丁。这种攻击形式被称为：",
+      "en": "A newly discovered vulnerability in an OS kernel is being actively exploited before the vendor is even aware or has created a patch. What type of attack is this?"
+    },
+    "options": [
+      { "key": "A", "text": "Backdoor exploit" },
+      { "key": "B", "text": "Zero-day attack" },
+      { "key": "C", "text": "Rootkit deployment" },
+      { "key": "D", "text": "Ransomware injection" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【Zero-day 零日攻击】软件厂商未知、且无已知官方补丁的漏洞利用，被称为零日攻击（Zero-day）。",
+      "en": "A Zero-Day vulnerability is an unpatched flaw unknown to the software developer, leaving 0 days of defense before exploitation occurs."
+    },
+    "mnemonic": "口诀：厂商未知、补丁未出，就是 Zero-day。"
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "stem": {
+      "zh": "网络犯罪分子专门针对一家大型企业的高级管理人员（如首席执行官 CEO、首席财务官 CFO）发送高度定制化钓鱼邮件。该定向攻击最准确的术语是：",
+      "en": "A tailored phishing email campaign specifically targets C-level executives (e.g., CEO, CFO) to authorize a high-value wire transfer. What is this attack called?"
+    },
+    "options": [
+      { "key": "A", "text": "Spear phishing" },
+      { "key": "B", "text": "Whaling" },
+      { "key": "C", "text": "Watering hole attack" },
+      { "key": "D", "text": "Vishing" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【Whaling 捕鲸】针对公司高级管理人员（High-profile executives / VIPs）的特定钓鱼，CompTIA 考题标准答案为 Whaling。",
+      "en": "Whaling is a specialized form of spear phishing directed specifically at high-profile individuals such as CEOs or board members."
+    },
+    "mnemonic": "口诀：钓普通人是 Phishing，普通团队是 Spear，专钓高管大鱼是 Whaling。"
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "stem": {
+      "zh": "某攻击者收集了财务部门具体员工的姓名和业务信息，随后给他们发送了个性化定制的发票查询邮件诱导其输入凭据。这属于以下哪种攻击？",
+      "en": "An attacker gathers intelligence on employees in the accounting department and sends customized emails containing their names and vendor references to steal credentials. What is this?"
+    },
+    "options": [
+      { "key": "A", "text": "Watering hole attack" },
+      { "key": "B", "text": "Spear phishing" },
+      { "key": "C", "text": "Pharming" },
+      { "key": "D", "text": "Smishing" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【Spear phishing 矛钓】针对特定个人或特定群体的定向定制钓鱼属于 Spear phishing。Watering hole 是在目标常去网站下毒。",
+      "en": "Spear phishing targets specific individuals or organizations with customized information rather than random mass emails."
+    },
+    "mnemonic": "口诀：特定目标发定制邮件 = Spear phishing；常去网站下毒 = 水坑攻击。"
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "stem": {
+      "zh": "公司需要为经常携带笔记本电脑在机场、咖啡厅等外部公共网络办公的员工提供单机维度的安全保护，防止其受到外部入站未授权访问。应优先配置：",
+      "en": "A remote technician travels frequently and connects to public Wi-Fi at coffee shops. What security control should be implemented on the laptop to block unauthorized inbound connections?"
+    },
+    "options": [
+      { "key": "A", "text": "Hardware firewall" },
+      { "key": "B", "text": "Software firewall (Host-based firewall)" },
+      { "key": "C", "text": "UTM appliance" },
+      { "key": "D", "text": "Proxy server" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【主机型防火墙】移动设备离开企业网络后，边界硬件防火墙无法提供保护，必须依赖运行在单机操作系统上的 Software firewall（如 Windows Defender 防火墙）。",
+      "en": "Host-based (software) firewalls protect individual endpoint devices regardless of which untrusted external network they join."
+    },
+    "mnemonic": "口诀：移动单机出门在外保安全，就靠 Software firewall（主机防火墙）。"
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "stem": {
+      "zh": "企业希望外包安全运营，要求第三方服务商提供 7x24 小时网络威胁监控、主动检测并直接采取实际行动协助遏制和消除安全事件。该服务属于：",
+      "en": "An organization seeks an outsourced service that provides 24/7 continuous threat monitoring, incident detection, and active hands-on remediation response. What service fits this best?"
+    },
+    "options": [
+      { "key": "A", "text": "MSP (Managed Service Provider)" },
+      { "key": "B", "text": "MDR (Managed Detection and Response)" },
+      { "key": "C", "text": "SIEM" },
+      { "key": "D", "text": "IAM" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【MDR vs MSP】MDR 专注安全监控、威胁检测和实际响应（Response）。MSP 是常规 IT 基础设施外包运维。",
+      "en": "MDR (Managed Detection and Response) provides 24/7 continuous threat hunting, monitoring, and active remediation response."
+    },
+    "mnemonic": "口诀：日常 IT 找 MSP；主动防威胁、做响应找 MDR。"
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "stem": {
+      "zh": "在现代 Windows 系统中，微软用来替代旧版 Windows XP/2000 中基于文本命令行的“故障恢复控制台（Recovery Console）”的高级恢复环境是：",
+      "en": "Which graphical diagnostic and troubleshooting environment replaced the legacy Recovery Console found in Windows XP/2000?"
+    },
+    "options": [
+      { "key": "A", "text": "System Restore" },
+      { "key": "B", "text": "WinRE (Windows Recovery Environment)" },
+      { "key": "C", "text": "Safe Mode with Command Prompt" },
+      { "key": "D", "text": "Device Manager Recovery" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【WinRE 历史】WinRE（Windows 恢复环境）是 Windows PE 基础上的现代恢复平台，直接取代了旧版的 Recovery Console。",
+      "en": "WinRE (Windows Recovery Environment) is the modern graphical recovery platform based on Windows PE that succeeded the text-based Recovery Console."
+    },
+    "mnemonic": "口诀：老系统叫 Recovery Console，现代 Windows 叫 WinRE。"
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "stem": {
+      "zh": "某员工电脑风扇持续高速运转，任务管理器显示 CPU 和 GPU 长期占用高达 100%，排查发现一个后台未知进程正在利用系统硬件算力计算哈希以获取数字货币。该恶意程序属于：",
+      "en": "A user's workstation fan is running continuously at full speed. Task Manager reveals 100% CPU and GPU utilization caused by a hidden background process computing hashes for cryptocurrency. What is this?"
+    },
+    "options": [
+      { "key": "A", "text": "Fileless malware" },
+      { "key": "B", "text": "Cryptominer" },
+      { "key": "C", "text": "Keylogger" },
+      { "key": "D", "text": "Ransomware" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【Cryptominer 挖矿木马】未经授权非法窃取计算机 CPU/GPU 算力挖掘加密货币的恶意程序，特征是极端占用算力导致系统卡顿发热。",
+      "en": "Cryptominers hijack victim processing power (CPU/GPU) to mine cryptocurrencies without permission."
+    },
+    "mnemonic": "口诀：偷占算力挖数字货币，标准答案 Cryptominer。"
+  },
+  {
+    "id": 11,
+    "type": "multiple",
+    "selectLimit": 2,
+    "stem": {
+      "zh": "在恶意软件分类中，关于计算机病毒（Virus）的核心定义，以下哪两项描述是正确的？（Select TWO）",
+      "en": "Which TWO of the following statements correctly describe the characteristics of a computer virus? (Select TWO)"
+    },
+    "options": [
+      { "key": "A", "text": "A self-replicating computer program that contains a malicious segment" },
+      { "key": "B", "text": "Malicious code that typically attaches itself to an application or executable component" },
+      { "key": "C", "text": "A standalone malicious program that replicates itself over a network without user action" },
+      { "key": "D", "text": "Hardware designed to log keystrokes silently" }
+    ],
+    "answer": ["A", "B"],
+    "explanation": {
+      "zh": "【Virus vs Worm】病毒（Virus）必须依附于宿主文件/程序（A、B）。独立在网络中不依赖用户自主传播的是蠕虫（Worm）。",
+      "en": "A virus attaches itself to an executable host file. Worms are standalone programs that replicate without a host."
+    },
+    "mnemonic": "口诀：病毒（Virus）依附宿主；独立网络爬行叫蠕虫（Worm）。"
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "stem": {
+      "zh": "多因素身份验证（MFA）要求提供两个或以上属于【不同认证类别】的因子。以下哪种组合真正构成了合规的 MFA？",
+      "en": "Multi-Factor Authentication (MFA) requires two or more independent authentication factors. Which of the following satisfies true MFA requirements?"
+    },
+    "options": [
+      { "key": "A", "text": "Retina scan and voice recognition" },
+      { "key": "B", "text": "Password and PIN" },
+      { "key": "C", "text": "Password and biometric scan" },
+      { "key": "D", "text": "Smart card and Hardware token" }
+    ],
+    "answer": ["C"],
+    "explanation": {
+      "zh": "【MFA 因子】Something you know（密码）+ Something you are（生物特征）属于不同类型，构成双因子。",
+      "en": "MFA requires factors from different categories: Something you know (Password) + Something you are (Biometric)."
+    },
+    "mnemonic": "口诀：MFA 必须跨类型：密码（知道）+ 指纹（自身）才算双因子。"
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "stem": {
+      "zh": "Apple 设备在遇到高危紧急安全漏洞时，能够在两次完整的重大系统软件更新之间，快速静默向 iOS/macOS 部署小型安全修复程序，这项机制被称为：",
+      "en": "Which Apple security feature delivers rapid security fixes between standard major iOS and macOS software updates to patch zero-day vulnerabilities?"
+    },
+    "options": [
+      { "key": "A", "text": "Gatekeeper" },
+      { "key": "B", "text": "RSR (Rapid Security Response)" },
+      { "key": "C", "text": "FileVault" },
+      { "key": "D", "text": "Time Machine" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【Apple RSR】Rapid Security Response（快速安全响应）允许苹果在完整系统版本更新之间快速向设备分发紧急安全修补程序。",
+      "en": "Rapid Security Response (RSR) allows Apple to quickly deploy critical security patches without a full OS update."
+    },
+    "mnemonic": "口诀：苹果紧急小补丁，就叫 RSR（快速安全响应）。"
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "stem": {
+      "zh": "用户可以在 Mac 上撰写邮件，随后拿起 iPhone 接着继续输入，或在 iPad 与 Mac 间共用剪贴板。实现跨设备操作无缝接力的功能是：",
+      "en": "A user starts composing an email on a Mac and seamlessly finishes it on an iPhone, while also sharing clipboard data between devices. What Apple feature provides this?"
+    },
+    "options": [
+      { "key": "A", "text": "iCloud Drive" },
+      { "key": "B", "text": "Continuity" },
+      { "key": "C", "text": "AirPlay" },
+      { "key": "D", "text": "FileVault" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【Continuity 连续互通】Continuity 负责 Apple 生态跨设备任务接力。iCloud Drive 负责云盘文件持久化存储。",
+      "en": "Continuity enables seamless workflow and task switching between Apple devices."
+    },
+    "mnemonic": "口诀：设备间活儿接着干叫 Continuity；多设备同步存文件找 iCloud Drive。"
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "stem": {
+      "zh": "用户在多个 Apple 设备上编辑同一份工作文档，希望任何一处修改都能在云端自动保存，并实时将最新版本同步到所有登录相同 Apple ID 的设备上。应启用的服务是：",
+      "en": "A user wants files edited on any Apple device to automatically save and sync the latest versions across all devices linked to the same Apple ID. What service is designed for this?"
+    },
+    "options": [
+      { "key": "A", "text": "Continuity" },
+      { "key": "B", "text": "iCloud Drive" },
+      { "key": "C", "text": "AirDrop" },
+      { "key": "D", "text": "Universal Control" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【iCloud Drive】负责云端存储与跨设备文件自动同步服务。",
+      "en": "iCloud Drive is Apple's cloud storage service responsible for file synchronization across devices."
+    },
+    "mnemonic": "口诀：同步存储看 iCloud Drive，无缝接力看 Continuity。"
+  },
+  {
+    "id": 16,
+    "type": "single",
+    "stem": {
+      "zh": "在 macOS 上，用于提供整盘全卷加密（Full-disk encryption）、在关机或睡眠状态下保护启动盘物理存储数据不被窃取的内置安全工具是：",
+      "en": "Which built-in macOS security feature provides full-disk encryption (FDE) to protect data at rest on the primary startup volume?"
+    },
+    "options": [
+      { "key": "A", "text": "Gatekeeper" },
+      { "key": "B", "text": "FileVault" },
+      { "key": "C", "text": "XProtect" },
+      { "key": "D", "text": "Keychain" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【macOS FileVault】FileVault 是 macOS 平台的全盘加密工具（对应 Windows 的 BitLocker）。",
+      "en": "FileVault is macOS's native full-disk encryption tool, equivalent to BitLocker on Windows."
+    },
+    "mnemonic": "口诀：Mac 磁盘加密叫 FileVault；Windows 磁盘加密叫 BitLocker。"
+  },
+  {
+    "id": 17,
+    "type": "single",
+    "stem": {
+      "zh": "在现代 Red Hat 系列企业级 Linux 发行版（如 RHEL、CentOS Stream、Fedora）中，推荐使用的基于 RPM 的下一代默认包管理命令是：",
+      "en": "Which next-generation RPM-based package manager is the standard default utility for modern Red Hat enterprise distributions (RHEL, Fedora)?"
+    },
+    "options": [
+      { "key": "A", "text": "dpkg" },
+      { "key": "B", "text": "apt-get" },
+      { "key": "C", "text": "dnf" },
+      { "key": "D", "text": "pacman" }
+    ],
+    "answer": ["C"],
+    "explanation": {
+      "zh": "【Linux 包管理器】Red Hat / Fedora 系现代默认包管理器为 dnf（替代旧版 yum）。",
+      "en": "dnf is the next-generation package manager for RPM-based Red Hat distributions."
+    },
+    "mnemonic": "口诀：红帽新包管叫 dnf；Ubuntu 系列用 apt。"
+  },
+  {
+    "id": 18,
+    "type": "single",
+    "stem": {
+      "zh": "在 Linux 终端中，如果你需要一款支持极其广泛网络协议（包括 HTTP/HTTPS、FTP、FTPS、SCP、SFTP 等）进行数据发送、下载及 API 测试的命令行工具，优先选择：",
+      "en": "Which versatile Linux command-line tool supports data transfer across dozens of network protocols (HTTP/S, FTP, SCP, SFTP) and is ideal for API testing?"
+    },
+    "options": [
+      { "key": "A", "text": "wget" },
+      { "key": "B", "text": "curl" },
+      { "key": "C", "text": "nslookup" },
+      { "key": "D", "text": "netstat" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【curl vs wget】curl 支持极其丰富的应用层协议与双向数据传输；wget 专注于递归下载网页和文件。",
+      "en": "curl supports numerous protocols and advanced transfer options; wget is primarily a file downloader."
+    },
+    "mnemonic": "口诀：广泛协议大杂烩选 curl；递归纯下载网页选 wget。"
+  },
+  {
+    "id": 19,
+    "type": "single",
+    "stem": {
+      "zh": "判断题：在 Linux 终端中，用于跟踪数据包到达目标主机所经历路由路径的标准内置网络诊断命令拼写是 `tracert`。",
+      "en": "True or False: In a Linux terminal, the standard command used to trace network packets along the route to a remote host is spelled `tracert`."
+    },
+    "options": [
+      { "key": "A", "text": "True" },
+      { "key": "B", "text": "False" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【路由跟踪命令拼写】Windows 下缩写为 tracert；Linux / macOS 下完整拼写为 traceroute。题干为 False！",
+      "en": "False. tracert is Windows. In Linux and macOS, it is spelled traceroute."
+    },
+    "mnemonic": "口诀：Windows 阉割叫 tracert；Linux 完整拼写 traceroute。"
+  },
+  {
+    "id": 20,
+    "type": "single",
+    "stem": {
+      "zh": "在 Linux 命令行中，管理员想要查看某一个特定目录及其内部子文件各自占用了多少磁盘空间，应该使用哪个命令？",
+      "en": "Which command in Linux displays the amount of disk space used by a specific directory and its subdirectories?"
+    },
+    "options": [
+      { "key": "A", "text": "df -h" },
+      { "key": "B", "text": "du -sh" },
+      { "key": "C", "text": "ls -a" },
+      { "key": "D", "text": "free -m" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【du vs df】du (Disk Usage) 查看特定目录占用；df (Disk Free) 查看整块文件系统的容量情况。",
+      "en": "du (Disk Usage) measures directory/file size. df (Disk Free) shows overall filesystem capacity."
+    },
+    "mnemonic": "口诀：查文件目录占用看 du（Disk Usage）；看整块盘剩多少看 df（Disk Free）。"
+  },
+  {
+    "id": 21,
+    "type": "single",
+    "stem": {
+      "zh": "在 Linux 系统中，如果管理员需要手工定义本地的主机名与 IP 地址之间的静态解析映射关系（不依赖 DNS 服务器），应编辑的文件是：",
+      "en": "An administrator needs to configure static local hostname-to-IP address mappings on a Linux host without querying DNS. Which configuration file should be edited?"
+    },
+    "options": [
+      { "key": "A", "text": "/etc/resolv.conf" },
+      { "key": "B", "text": "/etc/hosts" },
+      { "key": "C", "text": "/etc/network/interfaces" },
+      { "key": "D", "text": "/etc/nsswitch.conf" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【/etc/hosts】保存本地静态的主机名到 IP 映射。/etc/resolv.conf 配置 DNS 递归服务器。",
+      "en": "/etc/hosts contains static local IP mappings. /etc/resolv.conf specifies upstream DNS nameservers."
+    },
+    "mnemonic": "口诀：本地写死域名映射找 /etc/hosts；配 DNS 服务器地址找 /etc/resolv.conf。"
+  },
+  {
+    "id": 22,
+    "type": "single",
+    "stem": {
+      "zh": "现代 Linux 发行版采用的核心“系统与服务初始化管理器（System and Service Manager）”软件套件本身是什么？（注意：不是指具体的控制命令）",
+      "en": "What is the name of the core system and service manager suite that initializes components and manages background daemons in modern Linux distributions?"
+    },
+    "options": [
+      { "key": "A", "text": "systemctl" },
+      { "key": "B", "text": "systemd" },
+      { "key": "C", "text": "SysVinit" },
+      { "key": "D", "text": "cron" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【systemd vs systemctl】systemd 是服务管理框架本身；systemctl 是控制它的命令行工具。",
+      "en": "systemd is the init system and manager. systemctl is the utility used to control it."
+    },
+    "mnemonic": "口诀：大管家系统叫 systemd；手里拿的遥控器命令叫 systemctl。"
+  },
+  {
+    "id": 23,
+    "type": "single",
+    "stem": {
+      "zh": "管理员在 Linux 中执行了命令 `chmod a=r config.cfg`。执行完毕后，该文件对应的八进制三位权限数值是多少？",
+      "en": "A Linux user executes `chmod a=r config.cfg`. What is the resulting numerical (octal) permission code for this file?"
+    },
+    "options": [
+      { "key": "A", "text": "644" },
+      { "key": "B", "text": "444" },
+      { "key": "C", "text": "755" },
+      { "key": "D", "text": "666" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【chmod 覆盖赋值】a=r 将所有人强制设为只读 r--（权值为 4），因此三段均为 4，八进制权限为 444。",
+      "en": "a=r sets read-only permissions (4) for all categories, resulting in 444."
+    },
+    "mnemonic": "口诀：= 是全量重置赋值；所有人（a）只读（r），就是 444。"
+  },
+  {
+    "id": 24,
+    "type": "single",
+    "stem": {
+      "zh": "在 Linux 系统中，如果只想要把 `backup.tar.gz` 文件的所属组（Group）修改为 `admins`，而保持文件的原有所有者（Owner）不变，标准命令格式是：",
+      "en": "Which command changes only the group ownership of `backup.tar.gz` to `admins` while leaving the original file owner unchanged?"
+    },
+    "options": [
+      { "key": "A", "text": "chown :admins backup.tar.gz" },
+      { "key": "B", "text": "chown +g admins backup.tar.gz" },
+      { "key": "C", "text": "chmod admins backup.tar.gz" },
+      { "key": "D", "text": "chgrp -o admins backup.tar.gz" }
+    ],
+    "answer": ["A"],
+    "explanation": {
+      "zh": "【chown 语法】chown [owner]:[group]。冒号前留空只跟 :admins 表示仅变更所属组。",
+      "en": "In `chown :admins file`, omitting the user before the colon changes only the group."
+    },
+    "mnemonic": "口诀：chown 冒号前管所有者，冒号后管所属组；留空冒号只改组。"
+  },
+  {
+    "id": 25,
+    "type": "single",
+    "stem": {
+      "zh": "Linux 管理员要在 `/etc` 目录及其所有子目录下，基于通配符查找所有以 `default` 开头并以 `.conf` 结尾的配置文件，正确的命令是：",
+      "en": "Which Linux command searches `/etc` and all subdirectories for configuration files starting with `default` and ending in `.conf`?"
+    },
+    "options": [
+      { "key": "A", "text": "find /etc -file \"default*.conf\"" },
+      { "key": "B", "text": "find /etc -name \"default*.conf\"" },
+      { "key": "C", "text": "search /etc -pattern \"default*.conf\"" },
+      { "key": "D", "text": "grep /etc \"default*.conf\"" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【find 参数】find 按照文件名通配匹配的标准参数是 -name。find 没有 -file 参数。",
+      "en": "The `find` utility uses the `-name` option to match file names."
+    },
+    "mnemonic": "口诀：按文件名找用 find 配合 -name，别写 -file。"
+  },
+  {
+    "id": 26,
+    "type": "single",
+    "stem": {
+      "zh": "普通用户在终端中直接输入 `su` 命令并回车（不带用户名），系统默认要求输入的是谁的密码？",
+      "en": "A standard user enters `su` without any parameters into a Linux terminal. Whose password must be provided to authenticate?"
+    },
+    "options": [
+      { "key": "A", "text": "The logged-in standard user's own password" },
+      { "key": "B", "text": "The root (superuser) account password" },
+      { "key": "C", "text": "The Wheel group administrator password" },
+      { "key": "D", "text": "No password is required" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【su vs sudo】su 默认切换至超级管理员 root，必须输入 root 密码；sudo 输入的是当前用户自己的密码。",
+      "en": "su defaults to root and requires root password. sudo asks for the current user's password."
+    },
+    "mnemonic": "口诀：su 输入对方（目标 root）的密码；sudo 输入你自己（当前用户）的密码。"
+  },
+  {
+    "id": 27,
+    "type": "single",
+    "stem": {
+      "zh": "在现代 Linux 系统中，如果需要查看当前系统的完整路由表（Routing Table）以及默认网关（Default Gateway），应该使用的现代命令是：",
+      "en": "Which modern iproute2 command displays the kernel routing table and default gateway on Linux?"
+    },
+    "options": [
+      { "key": "A", "text": "netstat -a" },
+      { "key": "B", "text": "ip route show" },
+      { "key": "C", "text": "ifconfig -r" },
+      { "key": "D", "text": "ping -gateway" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【ip route show】ip route show（或 ip r）用于打印内核路由表与默认网关。",
+      "en": "`ip route show` is the modern command to view kernel routes and gateways."
+    },
+    "mnemonic": "口诀：现代查路由看网关，首选用 ip route show。"
+  },
+  {
+    "id": 28,
+    "type": "single",
+    "stem": {
+      "zh": "使用 traceroute 命令对远端目标主机进行路径追踪时，其终端输出的结果中【通常不会】包含以下哪一项信息？",
+      "en": "When analyzing output from a `traceroute` execution to a remote destination, which metric is NOT typically provided?"
+    },
+    "options": [
+      { "key": "A", "text": "Hop number for each intermediate router" },
+      { "key": "B", "text": "IP address or hostname of each gateway" },
+      { "key": "C", "text": "Round-trip time (RTT) latency per probe" },
+      { "key": "D", "text": "Total packet count transferred during the entire session" }
+    ],
+    "answer": ["D"],
+    "explanation": {
+      "zh": "【traceroute 输出】traceroute 输出跳数、网关 IP 以及往返延迟（RTT）。它不统计整个会话的数据包总数。",
+      "en": "traceroute shows hops, gateway IPs, and latency, but not cumulative packet count."
+    },
+    "mnemonic": "口诀：traceroute 看路线、看跳数、看延迟，不看流量总包数。"
+  },
+  {
+    "id": 29,
+    "type": "single",
+    "stem": {
+      "zh": "在 Linux 中，裸运行不带参数的 `ps` 命令仅显示当前终端会话中的进程。如果需要查看操作系统全局范围内的所有进程，标准参数是：",
+      "en": "Running `ps` alone only lists processes attached to the current terminal. Which option displays all active system-wide processes across all users?"
+    },
+    "options": [
+      { "key": "A", "text": "ps -e" },
+      { "key": "B", "text": "ps -m" },
+      { "key": "C", "text": "ps --top" },
+      { "key": "D", "text": "ps -kill" }
+    ],
+    "answer": ["A"],
+    "explanation": {
+      "zh": "【ps 参数】ps -e（或 ps aux）列出全局系统范围内的所有活动进程。",
+      "en": "`ps -e` (or `ps aux`) reports on every active process across the entire operating system."
+    },
+    "mnemonic": "口诀：看全局所有进程，加 -e（everyone/everything）或者 aux。"
+  },
+  {
+    "id": 30,
+    "type": "single",
+    "stem": {
+      "zh": "在 Linux 的 `top` 动态交互式系统监视器中，想要向某个特定进程发送终止信号（Kill a process），应该按下的快捷键是：",
+      "en": "While viewing active processes in the interactive Linux `top` monitor, which keystroke allows the user to send a kill termination signal to a PID?"
+    },
+    "options": [
+      { "key": "A", "text": "X" },
+      { "key": "B", "text": "K" },
+      { "key": "C", "text": "D" },
+      { "key": "D", "text": "Ctrl + C" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【top 快捷键】在 top 界面中按 k 键输入进程 PID 即可终止（Kill）该进程。",
+      "en": "Pressing `k` in top prompts for a PID and sends a signal to kill that process."
+    },
+    "mnemonic": "口诀：top 里杀进程，首字母就是 K（Kill）。"
+  },
+  {
+    "id": 31,
+    "type": "single",
+    "stem": {
+      "zh": "在 Linux 的 `top` 监视器界面中，如果想要将当前进程列表按【内存占用百分比（Memory usage）】从大到小排序，应按下的快捷键是：",
+      "en": "Inside the Linux `top` utility, which key sorts the running processes by memory utilization in descending order?"
+    },
+    "options": [
+      { "key": "A", "text": "R" },
+      { "key": "B", "text": "M (Shift + m)" },
+      { "key": "C", "text": "P" },
+      { "key": "D", "text": "T" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【top 内存排序】按 M 按内存排序；按 P 按 CPU 排序；按 T 按运行时间排序。",
+      "en": "Pressing `M` in top sorts by memory usage. Pressing `P` sorts by CPU usage."
+    },
+    "mnemonic": "口诀：内存排大头按 M（Memory），CPU 占用按 P（Processor）。"
+  },
+  {
+    "id": 32,
+    "type": "single",
+    "stem": {
+      "zh": "用户在 Windows 11 上尝试运行一款专为 Windows 7 设计的旧版定制软件时报错崩溃。技术人员应优先建议用户尝试哪项功能？",
+      "en": "A legacy business application built for Windows 7 crashes when launched on Windows 11. What built-in OS capability should be configured first?"
+    },
+    "options": [
+      { "key": "A", "text": "Windows Sandbox" },
+      { "key": "B", "text": "Windows Compatibility Mode" },
+      { "key": "C", "text": "Hyper-V Quick Create" },
+      { "key": "D", "text": "Safe Mode with Networking" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【Compatibility Mode 兼容模式】右键属性中的 Compatibility Mode 允许 Windows 11 模拟旧版 Windows API 运行老程序。",
+      "en": "Compatibility Mode allows older legacy applications to run by emulating earlier OS versions."
+    },
+    "mnemonic": "口诀：旧系统老程序新机跑，优先右键“兼容模式（Compatibility Mode）”。"
+  },
+  {
+    "id": 33,
+    "type": "multiple",
+    "selectLimit": 2,
+    "stem": {
+      "zh": "当需要在当前的物理主机上，本地运行为【完全不同的操作系统架构】或硬件平台所编译的软件时，通常需要结合使用哪两项技术？（Select TWO）",
+      "en": "A developer needs to run software compiled for a completely different OS architecture locally on their current workstation. Which TWO technologies are required? (Select TWO)"
+    },
+    "options": [
+      { "key": "A", "text": "Virtualization" },
+      { "key": "B", "text": "Emulator software" },
+      { "key": "C", "text": "Application sandboxing" },
+      { "key": "D", "text": "Disk defragmentation" }
+    ],
+    "answer": ["A", "B"],
+    "explanation": {
+      "zh": "【跨架构运行】跨架构（如在 x86 上跑 ARM 程序）必须借助 Virtualization 和 Emulator（模拟器）转译底层硬件指令。",
+      "en": "Running software for a different architecture requires both Virtualization and an Emulator."
+    },
+    "mnemonic": "口诀：不同架构本地跑，虚拟化加模拟器（Virtualization + Emulator）。"
+  },
+  {
+    "id": 34,
+    "type": "single",
+    "stem": {
+      "zh": "用户使用云盘同步软件（如 OneDrive/Dropbox）时本地硬盘空间不足。为了只让工作必需的指定文件夹下载到本地，其余仅保存在云端，应启用的功能是：",
+      "en": "A workstation's local SSD is nearly full. Which cloud storage client feature allows users to choose specific folders to keep locally while leaving the rest online-only?"
+    },
+    "options": [
+      { "key": "A", "text": "Offline access" },
+      { "key": "B", "text": "Selective sync" },
+      { "key": "C", "text": "Bandwidth throttling" },
+      { "key": "D", "text": "File Vault" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【Selective sync 选择性同步】允许用户精准选择哪些目录同步保存到本地硬盘，其余保持云端占位以节省空间。",
+      "en": "Selective sync lets users specify which folders download locally to save disk space."
+    },
+    "mnemonic": "口诀：本地盘满选文件夹下，功能就叫 Selective sync。"
+  },
+  {
+    "id": 35,
+    "type": "single",
+    "stem": {
+      "zh": "企业 IT 管理员需要审计某 SaaS 办公软件全公司的许可授权（License）总数、分配状态以及剩余可用席位，应该首先登录哪种控制台查看？",
+      "en": "An administrator needs to review the allocation, usage, and available seat count of SaaS licenses across the organization. Where should they look?"
+    },
+    "options": [
+      { "key": "A", "text": "Credential manager software" },
+      { "key": "B", "text": "SaaS Admin dashboard / Admin portal" },
+      { "key": "C", "text": "Local Certificate Store" },
+      { "key": "D", "text": "Local Security Policy" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【SaaS Admin Portal】SaaS 服务的集中授权与席位分配统一在供应商的管理员门户（Admin portal）中管理。",
+      "en": "SaaS application licenses are managed globally through the Admin Dashboard/Portal."
+    },
+    "mnemonic": "口诀：查云软件 License 数量和余量，直奔 Admin portal 管理后台。"
+  },
+  {
+    "id": 36,
+    "type": "single",
+    "stem": {
+      "zh": "一家公司需要对其整个园区设施的受限物理周界（Entire perimeter）建立连续的物理屏障，以同时阻止人员翻越以及车辆非法闯入。首选的物理安全措施是：",
+      "en": "A facility needs a continuous physical barrier around its entire perimeter to restrict both unauthorized pedestrians and vehicles from entering. What is the best solution?"
+    },
+    "options": [
+      { "key": "A", "text": "Security guards" },
+      { "key": "B", "text": "Fencing" },
+      { "key": "C", "text": "Biometric locks" },
+      { "key": "D", "text": "Door mantrap" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【Fencing 围栏】覆盖整个周界且同时防人和防车的固定连续物理屏障首选 Fencing（防攀爬围栏结合防撞护栏）。",
+      "en": "Fencing provides continuous perimeter boundary deterrence against both pedestrians and vehicles."
+    },
+    "mnemonic": "口诀：全周界物理防人和车，首选大范围 Fencing（围栏）。"
+  },
+  {
+    "id": 37,
+    "type": "multiple",
+    "selectLimit": 2,
+    "stem": {
+      "zh": "技术人员需要为移动闪存盘选择文件系统格式，要求在 Windows、macOS 和 Linux 之间具有最广泛的原生读写兼容性。以下哪两个是最佳选择？（Select TWO）",
+      "en": "A technician needs to format a USB thumb drive to provide the broadest native read/write compatibility across Windows, macOS, and Linux. Which TWO should be chosen? (Select TWO)"
+    },
+    "options": [
+      { "key": "A", "text": "FAT32" },
+      { "key": "B", "text": "exFAT" },
+      { "key": "C", "text": "NTFS" },
+      { "key": "D", "text": "ext4" },
+      { "key": "E", "text": "APFS" }
+    ],
+    "answer": ["A", "B"],
+    "explanation": {
+      "zh": "【跨系统文件格式】FAT32 与 exFAT 在 Windows、macOS 和 Linux 三大系统上均享有原生读写支持。NTFS 在 macOS 默认只读不可写。",
+      "en": "FAT32 and exFAT offer native read and write support out of the box across Windows, macOS, and Linux platforms."
+    },
+    "mnemonic": "口诀：老通用 FAT32，大文件跨平台选 exFAT；跨三大系统首选 FAT 家族。"
+  },
+  {
+    "id": 38,
+    "type": "single",
+    "stem": {
+      "zh": "在不同操作系统之间通过移动介质共享数据时，技术人员遇到的最主要的兼容性问题来源（Primary cause of compatibility issues）通常是：",
+      "en": "When sharing data across different operating systems using removable storage media, what is the primary cause of compatibility issues?"
+    },
+    "options": [
+      { "key": "A", "text": "Differences in file system formats" },
+      { "key": "B", "text": "Differences in CPU architectures" },
+      { "key": "C", "text": "Differences in USB controller firmware" },
+      { "key": "D", "text": "Differences in screen resolutions" }
+    ],
+    "answer": ["A"],
+    "explanation": {
+      "zh": "【跨系统数据共享根本原因】操作系统对不同文件系统的支持程度不同，是跨系统移动盘无法读写的最核心原因。",
+      "en": "Incompatibilities when sharing storage across OSs stem from differences in file system formats."
+    },
+    "mnemonic": "口诀：跨系统共享先看文件系统，不看底层硬件。"
+  },
+  {
+    "id": 39,
+    "type": "single",
+    "stem": {
+      "zh": "在现代企业桌面与工作站（Enterprise workstation）日常办公计算环境中，迄今为止被最广泛采用的客户端操作系统是：",
+      "en": "Which client operating system is by far the most widely adopted across modern corporate enterprise desktop and workstation environments?"
+    },
+    "options": [
+      { "key": "A", "text": "Windows" },
+      { "key": "B", "text": "Linux" },
+      { "key": "C", "text": "macOS" },
+      { "key": "D", "text": "ChromeOS" }
+    ],
+    "answer": ["A"],
+    "explanation": {
+      "zh": "【企业工作站操作系统】凭借 Active Directory 域环境管理与企业级软件支持，Windows 在企业桌面端占据绝对主流。",
+      "en": "Windows remains the dominant enterprise workstation OS due to Active Directory and software support."
+    },
+    "mnemonic": "口诀：桌面企业看 Windows，服务器端看 Linux。"
+  },
+  {
+    "id": 40,
+    "type": "multiple",
+    "selectLimit": 3,
+    "stem": {
+      "zh": "在对物理硬盘进行分区（Partitioning）时，以下哪三项是分区所能带来的真正技术优势？（Select THREE）",
+      "en": "Which THREE of the following are actual benefits of partitioning a physical storage drive? (Select THREE)"
+    },
+    "options": [
+      { "key": "A", "text": "Separating user data from operating system files for better organization" },
+      { "key": "B", "text": "Supporting multiboot configurations with different operating systems" },
+      { "key": "C", "text": "Simplified backup and recovery processes" },
+      { "key": "D", "text": "Increasing the physical storage capacity of the disk drive" },
+      { "key": "E", "text": "Increasing raw sequential read and write transfer speeds" }
+    ],
+    "answer": ["A", "B", "C"],
+    "explanation": {
+      "zh": "【分区优势】组织数据隔离、多系统引导、针对特定分区备份恢复。分区绝不能增加物理容量或改变读写速度。",
+      "en": "Partitioning isolates data, enables multi-boot setups, and simplifies backups. It does NOT increase drive capacity or hardware speed."
+    },
+    "mnemonic": "口诀：分区管组织、双系统和备多分；不加硬盘总容量，也不给硬件提速。"
+  },
+  {
+    "id": 41,
+    "type": "single",
+    "stem": {
+      "zh": "技术人员正在全新组装的台式机上通过 USB 安装 Windows 11，但在进入安装目标磁盘选择界面时列表完全空白，无法检测到 NVMe 固态硬盘。此时应采取的最标准优先措施是：",
+      "en": "A technician is installing Windows 11 on a newly built PC, but the storage drive selection screen is blank and fails to detect the NVMe SSD. What is the best immediate step?"
+    },
+    "options": [
+      { "key": "A", "text": "Update the motherboard BIOS/UEFI firmware immediately" },
+      { "key": "B", "text": "Load the appropriate third-party NVMe drivers from external media" },
+      { "key": "C", "text": "Change the boot order in UEFI to place the NVMe drive first" },
+      { "key": "D", "text": "Replace the NVMe drive with a SATA mechanical drive" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【加载驱动】Windows 通用安装介质缺少该芯片组驱动，标准做法是在安装界面点击“Load driver”从外部 U 盘加载专用驱动。",
+      "en": "If the installer cannot see the NVMe drive, click 'Load driver' and supply the proprietary storage drivers."
+    },
+    "mnemonic": "口诀：装系统找不到 NVMe 盘，先按 Load Driver 加载驱动。"
+  },
+  {
+    "id": 42,
+    "type": "multiple",
+    "selectLimit": 2,
+    "stem": {
+      "zh": "关于 Microsoft Windows 中的共享权限（Share Permissions），以下哪两项描述是正确的？（Select TWO）",
+      "en": "Which of the following statements describing share permissions in Microsoft Windows are true? (Select 2 answers)"
+    },
+    "options": [
+      { "key": "A", "text": "Apply exclusively to network users" },
+      { "key": "B", "text": "Can be set only at the file level" },
+      { "key": "C", "text": "Apply to both network and local users" },
+      { "key": "D", "text": "Can be set only at the folder level" }
+    ],
+    "answer": ["A", "D"],
+    "explanation": {
+      "zh": "【Share vs NTFS】共享权限仅在网络访问时生效（Apply exclusively to network users），且只能在文件夹级别配置（Folder level only）。",
+      "en": "Share permissions apply ONLY over the network and can only be set at the folder/volume level."
+    },
+    "mnemonic": "口诀：共享权限两唯一 —— 唯一管网络（不限本地），唯一在目录（不设文件）。"
+  },
+  {
+    "id": 43,
+    "type": "multiple",
+    "selectLimit": 2,
+    "stem": {
+      "zh": "某 Windows 文件夹的共享权限设置为 Read，而该文件夹的 NTFS 权限设置为 Modify。当用户分别在本地和远程网络访问时，其实际有效权限是什么？（Select TWO）",
+      "en": "The share permissions on a Windows folder grant Read access, while the NTFS permissions grant Modify access. What are the user’s effective permission levels? (Select 2 answers)"
+    },
+    "options": [
+      { "key": "A", "text": "Read when accessing the share remotely" },
+      { "key": "B", "text": "Modify when accessing the folder locally" },
+      { "key": "C", "text": "Read when accessing the folder locally" },
+      { "key": "D", "text": "Modify when accessing the share remotely" }
+    ],
+    "answer": ["A", "B"],
+    "explanation": {
+      "zh": "【Effective Permissions】1. 本地访问：共享权限不生效，只看 NTFS（Modify）。2. 远程网络访问：Share(Read)与 NTFS(Modify)取最严交集（Read）。",
+      "en": "Locally: governed solely by NTFS (Modify). Remotely: Most Restrictive wins between Read and Modify (Read)."
+    },
+    "mnemonic": "口诀：本地登录只看 NTFS；远程网络两边看，哪个更严取哪个（Most Restrictive）。"
+  },
+  {
+    "id": 44,
+    "type": "multiple",
+    "selectLimit": 2,
+    "stem": {
+      "zh": "某 Windows 文件夹的共享权限设置为 Full Control，而其 NTFS 权限设置为 Read。以下哪两项正确代表了用户在远程和本地访问时的有效权限？（Select TWO）",
+      "en": "The share permissions on a Windows folder grant Full Control access, while the NTFS permissions grant Read access. Which represent the effective permission levels? (Select 2 answers)"
+    },
+    "options": [
+      { "key": "A", "text": "Read when accessing the share remotely" },
+      { "key": "B", "text": "Full Control when accessing the folder locally" },
+      { "key": "C", "text": "Read when accessing the folder locally" },
+      { "key": "D", "text": "Full Control when accessing the share remotely" }
+    ],
+    "answer": ["A", "C"],
+    "explanation": {
+      "zh": "【Effective Permissions】远程受两者最严限制为 Read；本地登录只看 NTFS，NTFS 给的是 Read，因此本地也是 Read！",
+      "en": "Remotely: Most restrictive of Full Control and Read is Read. Locally: Share doesn't apply, NTFS grants Read, so locally it is Read."
+    },
+    "mnemonic": "口诀：问本地，眼睛只找“NTFS grant 什么”；题干里 Share 就算给天王老子也别看！"
+  },
+  {
+    "id": 45,
+    "type": "single",
+    "stem": {
+      "zh": "在 Windows NTFS 文件系统中，权限判定的正确优先级顺位（Hierarchy of Precedence）是以下哪一项？",
+      "en": "What is the correct hierarchy of precedence for permissions settings in NTFS?"
+    },
+    "options": [
+      { "key": "A", "text": "Explicit Allow > Inherited Allow > Explicit Deny > Inherited Deny" },
+      { "key": "B", "text": "Explicit Deny > Explicit Allow > Inherited Deny > Inherited Allow" },
+      { "key": "C", "text": "Explicit Allow > Explicit Deny > Inherited Allow > Inherited Deny" },
+      { "key": "D", "text": "Explicit Deny > Inherited Deny > Explicit Allow > Inherited Allow" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【NTFS 权限继承与拒绝优先级】显式（Explicit）永远优先于继承（Inherited）；同级内部 Deny 优先于 Allow。因此：显式拒绝 > 显式允许 > 继承拒绝 > 继承允许。",
+      "en": "Explicit beats Inherited; within the same tier Deny beats Allow: Explicit Deny > Explicit Allow > Inherited Deny > Inherited Allow."
+    },
+    "mnemonic": "口诀：显式两兄弟永远在前，继承两兄弟排在后面；内部比都是 Deny 大于 Allow（显拒 > 显允 > 继拒 > 继允）。"
+  },
+  {
+    "id": 46,
+    "type": "single",
+    "stem": {
+      "zh": "在 Windows 命令提示符（CLI）中，为指定文件添加“只读（Read-only）”属性的标准正确语法是以下哪一项？",
+      "en": "What is the correct syntax for applying the read-only attribute to a file in Windows?"
+    },
+    "options": [
+      { "key": "A", "text": "attrib +R [drive:][path][filename]" },
+      { "key": "B", "text": "attrib [drive:][path][filename] /R" },
+      { "key": "C", "text": "attrib /R [drive:][path][filename]" },
+      { "key": "D", "text": "attrib [drive:][path][filename] +R" }
+    ],
+    "answer": ["A"],
+    "explanation": {
+      "zh": "【Windows attrib 命令语法】attrib 设置属性用加减号（+ 增加，- 清除），不能用斜杠 /，且开关位于文件路径前：attrib +R filename。",
+      "en": "attrib uses plus (+) to set and minus (-) to clear attributes. Syntax: attrib +R [drive:][path][filename]."
+    },
+    "mnemonic": "口诀：attrib 设属性不用斜杠用加减！加属性用 +，减属性用 -；RASH 放在文件前。"
+  },
+  {
+    "id": 47,
+    "type": "single",
+    "stem": {
+      "zh": "判断题：在 Windows NTFS 文件系统中，当一个文件或文件夹在【同一个卷内（Same volume）】从一个位置【移动（Moved）】到另一个位置时，它会自动继承新父文件夹的权限。",
+      "en": "True or False: In NTFS, a folder or file moved from one location to another on the same volume inherits the permissions of its new parent folder."
+    },
+    "options": [
+      { "key": "A", "text": "True" },
+      { "key": "B", "text": "False" }
+    ],
+    "answer": ["B"],
+    "explanation": {
+      "zh": "【NTFS 移动 vs 复制】同卷移动（Same volume move）只更新指针，【保留原权限（Retains original permissions）】，绝不继承新父级！复制以及跨卷移动才会继承新权限。",
+      "en": "False. Moving a file within the same NTFS volume retains its original permissions. It does NOT inherit the new parent's permissions."
+    },
+    "mnemonic": "口诀：复制全继承、跨卷全继承；天底下唯独【同卷移动】保留原有权限（所以题干说继承必定是 False）！"
+  }
+]
