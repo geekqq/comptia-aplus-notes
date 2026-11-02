@@ -1,202 +1,285 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IT Certification Exam Prep & Practice System | CompTIA & Cisco</title>
-  <!-- Google AdSense 预留插槽：审核通过后取消下一行注释并替换 client ID -->
-  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+  
+  <!-- ================= SEO Meta Tags ================= -->
+  <title>ExamHi | Free CompTIA A+ Core 2 (220-1102) & IT Practice Exam Drill</title>
+  <meta name="description" content="Master CompTIA A+ Core 2 (220-1102), Core 1, Network+, and Cisco CCNA with ExamHi. Interactive scenario-based practice test questions with in-depth bilingual explanations and exam tips.">
+  <meta name="keywords" content="CompTIA A+, CompTIA A+ Core 2, 220-1102 practice test, CompTIA practice questions, CCNA drill, IT certification, free IT exams, CompTIA wrong answers review">
+  <meta name="author" content="ExamHi">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://examhi.com/">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://examhi.com/">
+  <meta property="og:title" content="ExamHi | Free Interactive IT Certification Exam Drill & Practice">
+  <meta property="og:description" content="Free bilingual practice tests for CompTIA A+ Core 2, Core 1, Network+, and Cisco CCNA with real exam scenario explanations.">
+  <meta property="og:site_name" content="ExamHi">
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ExamHi | Interactive CompTIA & IT Certification Practice">
+  <meta name="twitter:description" content="Scenario-based practice questions with memory mnemonics and explanations. 100% free.">
+
+  <!-- ================= Google Schema.org JSON-LD (Rich Snippets) ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Quiz",
+    "name": "CompTIA A+ Core 2 (220-1102) Interactive Practice Exam",
+    "description": "Comprehensive practice questions covering Windows, Linux, macOS, Security, and Operational Procedures for CompTIA A+ Core 2.",
+    "educationalLevel": "Beginner to Intermediate IT Professional",
+    "provider": {
+      "@type": "Organization",
+      "name": "ExamHi",
+      "url": "https://examhi.com"
+    }
+  }
+  </script>
+
   <style>
     :root {
       --bg: #f8fafc;
-      --card-bg: #ffffff;
-      --primary: #2563eb;
-      --primary-hover: #1d4ed8;
-      --success: #16a34a;
-      --success-bg: #ecfdf5;
-      --danger: #dc2626;
-      --danger-bg: #fef2f2;
-      --text: #0f172a;
+      --surface: #ffffff;
+      --primary: #3b82f6;
+      --primary-hover: #2563eb;
+      --primary-light: #eff6ff;
+      --primary-border: #bfdbfe;
+      --success: #10b981;
+      --success-light: #ecfdf5;
+      --danger: #ef4444;
+      --danger-light: #fef2f2;
+      --warning: #f59e0b;
+      --text-main: #0f172a;
       --text-muted: #64748b;
       --border: #e2e8f0;
-      --radius: 12px;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 18px 14px; line-height: 1.5; min-height: 100vh; }
-    .container { max-width: 880px; margin: 0 auto; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text-main); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
+    .page-wrap { max-width: 900px; margin: 0 auto; width: 100%; padding: 20px 16px; flex: 1; }
 
-    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 12px; }
-    .logo-area h1 { font-size: 1.3rem; font-weight: 700; color: #0f172a; }
-    .controls-bar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    /* Header & Branding */
+    header { display: flex; justify-content: space-between; align-items: center; padding: 12px 0 20px 0; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+    .brand-icon { width: 36px; height: 36px; background: linear-gradient(135deg, #3b82f6, #6366f1); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3); }
+    .brand-text h1 { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.02em; color: #0f172a; line-height: 1.2; }
+    .brand-text p { font-size: 0.8rem; color: var(--text-muted); }
 
-    /* 科目选择器 */
-    .exam-select { padding: 8px 12px; border-radius: 8px; border: 1.5px solid var(--border); font-size: 0.9rem; font-weight: 600; color: #1e293b; background: #fff; cursor: pointer; outline: none; }
+    .header-tools { display: flex; align-items: center; gap: 8px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 8px 16px; font-size: 0.88rem; font-weight: 600; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--surface); color: var(--text-main); cursor: pointer; transition: all 0.15s ease; text-decoration: none; user-select: none; }
+    .btn:hover { background: #f1f5f9; }
+    .btn-primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-lang { background: var(--primary-light); color: var(--primary); border-color: var(--primary-border); }
+    .btn-lang:hover { background: #dbeafe; }
+    .btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+    /* Controls Bar: Exam Picker & Score */
+    .controls-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+    .select-wrap { position: relative; display: inline-block; }
+    .exam-select { appearance: none; -webkit-appearance: none; background: var(--surface); border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 8px 36px 8px 14px; font-size: 0.9rem; font-weight: 600; color: #1e293b; cursor: pointer; outline: none; transition: border-color 0.15s ease; box-shadow: var(--shadow-sm); }
     .exam-select:focus { border-color: var(--primary); }
+    .select-wrap::after { content: "▼"; font-size: 0.65rem; color: var(--text-muted); position: absolute; right: 12px; top: 50%; transform: translateY(-50%); pointer-events: none; }
+    
+    .stats-badge { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 6px 14px; font-size: 0.88rem; font-weight: 600; color: var(--primary); box-shadow: var(--shadow-sm); }
 
-    .nav-grid { display: flex; flex-wrap: wrap; gap: 6px; background: #fff; padding: 12px; border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 16px; max-height: 130px; overflow-y: auto; }
-    .nav-btn { width: 34px; height: 34px; border-radius: 6px; border: 1px solid var(--border); background: #fff; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: 0.15s; }
-    .nav-btn:hover { border-color: var(--primary); }
-    .nav-btn.current { border-color: var(--primary); background: #eff6ff; color: var(--primary); }
+    /* Question Matrix Drawer */
+    .nav-grid { display: flex; flex-wrap: wrap; gap: 6px; background: var(--surface); padding: 14px; border-radius: var(--radius-md); border: 1px solid var(--border); margin-bottom: 20px; max-height: 120px; overflow-y: auto; box-shadow: var(--shadow-sm); }
+    .nav-btn { width: 32px; height: 32px; border-radius: 6px; border: 1px solid var(--border); background: #fff; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: all 0.15s ease; color: var(--text-muted); }
+    .nav-btn:hover { border-color: var(--primary); color: var(--primary); }
+    .nav-btn.current { border-color: var(--primary); background: var(--primary-light); color: var(--primary); font-weight: 700; }
     .nav-btn.correct { background: var(--success); color: #fff; border-color: var(--success); }
     .nav-btn.wrong { background: var(--danger); color: #fff; border-color: var(--danger); }
 
-    .quiz-card { background: var(--card-bg); border-radius: var(--radius); border: 1px solid var(--border); padding: 26px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); margin-bottom: 18px; }
-    .q-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
-    .q-tag { font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; background: #e0f2fe; color: #0369a1; text-transform: uppercase; }
-    .q-tag.multi { background: #fef3c7; color: #92400e; }
-    .star-btn { background: none; border: none; font-size: 1.3rem; cursor: pointer; color: #cbd5e1; }
-    .star-btn.starred { color: #f59e0b; }
+    /* Main Quiz Container */
+    .quiz-card { background: var(--surface); border-radius: var(--radius-lg); border: 1px solid var(--border); padding: 32px; box-shadow: var(--shadow-md); position: relative; overflow: hidden; margin-bottom: 24px; }
+    .progress-bar-container { position: absolute; top: 0; left: 0; right: 0; height: 4px; background: #e2e8f0; }
+    .progress-bar { height: 100%; background: linear-gradient(90deg, var(--primary), #6366f1); width: 0%; transition: width 0.3s ease; }
 
-    .q-title { font-size: 1.1rem; font-weight: 600; color: #0f172a; line-height: 1.6; margin-bottom: 22px; white-space: pre-wrap; }
+    .q-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; margin-top: 6px; }
+    .q-tag { font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; background: #e0f2fe; color: #0284c7; text-transform: uppercase; letter-spacing: 0.04em; }
+    .q-tag.multi { background: #fef3c7; color: #b45309; }
+    .star-btn { background: none; border: none; font-size: 1.4rem; cursor: pointer; color: #cbd5e1; transition: transform 0.15s ease, color 0.15s ease; padding: 0 4px; }
+    .star-btn:hover { transform: scale(1.15); }
+    .star-btn.starred { color: var(--warning); }
 
-    .options { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
-    .option-item { display: flex; align-items: flex-start; padding: 13px 16px; border: 2px solid var(--border); border-radius: var(--radius); cursor: pointer; font-size: 0.96rem; transition: 0.15s; user-select: none; }
-    .option-item:hover:not(.disabled) { background: #f8fafc; border-color: #94a3b8; }
-    .option-item input { margin-top: 3px; margin-right: 14px; width: 18px; height: 18px; accent-color: var(--primary); }
-    .option-item span { flex: 1; line-height: 1.5; }
+    .q-title { font-size: 1.16rem; font-weight: 700; color: #0f172a; line-height: 1.6; margin-bottom: 24px; white-space: pre-wrap; }
 
-    .option-item.correct-ans { background: #dcfce7 !important; border-color: var(--success) !important; color: #14532d; font-weight: 600; }
-    .option-item.user-wrong { background: #fee2e2 !important; border-color: var(--danger) !important; color: #7f1d1d; }
+    /* Interactive Options */
+    .options { display: flex; flex-direction: column; gap: 12px; margin-bottom: 26px; }
+    .option-item { display: flex; align-items: flex-start; padding: 14px 18px; border: 2px solid var(--border); border-radius: var(--radius-md); cursor: pointer; font-size: 0.98rem; transition: all 0.15s ease; user-select: none; background: #fff; }
+    .option-item:hover:not(.disabled) { background: #f8fafc; border-color: #94a3b8; transform: translateY(-1px); }
+    .option-item input { margin-top: 4px; margin-right: 14px; width: 18px; height: 18px; accent-color: var(--primary); cursor: pointer; }
+    .option-item span { flex: 1; line-height: 1.5; color: #1e293b; }
 
-    .action-bar { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
-    .btn { padding: 8px 16px; border-radius: 8px; border: 1px solid var(--border); font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: 0.15s; background: #fff; }
-    .btn-primary { background: var(--primary); color: #fff; border-color: var(--primary); }
-    .btn-primary:hover { background: var(--primary-hover); }
-    .btn-lang { background: #eff6ff; color: var(--primary); border-color: #bfdbfe; }
-    .btn-outline:hover { background: #f1f5f9; }
-    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .option-item.correct-ans { background: var(--success-light) !important; border-color: var(--success) !important; color: #065f46; font-weight: 600; }
+    .option-item.user-wrong { background: var(--danger-light) !important; border-color: var(--danger) !important; color: #991b1b; }
 
-    .feedback-box { margin-top: 22px; padding: 18px; border-radius: var(--radius); display: none; line-height: 1.6; }
-    .feedback-box.correct { display: block; background: var(--success-bg); border-left: 5px solid var(--success); }
-    .feedback-box.wrong { display: block; background: var(--danger-bg); border-left: 5px solid var(--danger); }
-    .fb-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 8px; }
+    .action-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding-top: 10px; }
+
+    /* Feedback & Explanations */
+    .feedback-box { margin-top: 24px; padding: 22px; border-radius: var(--radius-md); display: none; line-height: 1.6; animation: fadeIn 0.25s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+    .feedback-box.correct { display: block; background: var(--success-light); border-left: 5px solid var(--success); }
+    .feedback-box.wrong { display: block; background: var(--danger-light); border-left: 5px solid var(--danger); }
+    .fb-title { font-weight: 700; font-size: 1.1rem; margin-bottom: 8px; }
     .fb-title.correct { color: var(--success); }
     .fb-title.wrong { color: var(--danger); }
-    .exp-content { margin-top: 10px; font-size: 0.94rem; color: #334155; white-space: pre-wrap; }
-    .mnemonic-box { margin-top: 12px; padding: 10px 14px; background: #fff; border-radius: 8px; border: 1px dashed #cbd5e1; font-size: 0.9rem; color: #0284c7; }
+    .exp-content { margin-top: 12px; font-size: 0.95rem; color: #334155; white-space: pre-wrap; }
+    .mnemonic-box { margin-top: 14px; padding: 12px 16px; background: #fff; border-radius: var(--radius-sm); border: 1px dashed #cbd5e1; font-size: 0.92rem; color: #0284c7; }
 
-    /* 商业化：Google Ads 预留广告位容器 */
-    .ad-banner-slot { width: 100%; min-height: 80px; background: #f1f5f9; border: 1px dashed #cbd5e1; border-radius: var(--radius); display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 20px 0; color: #94a3b8; font-size: 0.82rem; }
+    /* AdSense Placeholder Banner */
+    .ad-banner-slot { width: 100%; min-height: 90px; background: #f1f5f9; border: 1px dashed #cbd5e1; border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 30px 0 16px 0; color: #94a3b8; font-size: 0.8rem; text-align: center; }
 
-    /* 弹窗样式 */
-    .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.45); display: none; justify-content: center; align-items: center; z-index: 100; padding: 20px; }
-    .modal-box { background: #fff; border-radius: var(--radius); max-width: 620px; width: 100%; padding: 24px; max-height: 90vh; overflow-y: auto; }
-    .modal-box h2 { font-size: 1.2rem; margin-bottom: 12px; }
-    .tab-bar { display: flex; border-bottom: 2px solid var(--border); margin-bottom: 16px; gap: 8px; }
-    .tab-btn { background: none; border: none; padding: 8px 12px; font-size: 0.9rem; font-weight: 600; cursor: pointer; color: var(--text-muted); border-bottom: 2px solid transparent; margin-bottom: -2px; }
-    .tab-btn.active { color: var(--primary); border-bottom-color: var(--primary); }
-    .form-group { margin-bottom: 12px; }
-    .form-group label { display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 4px; }
-    .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 9px; border: 1px solid var(--border); border-radius: 6px; font-size: 0.9rem; font-family: inherit; }
+    /* SEO Rich Footer */
+    footer { border-top: 1px solid var(--border); background: #ffffff; padding: 40px 16px 24px 16px; margin-top: auto; }
+    .footer-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px; margin-bottom: 28px; }
+    @media (max-width: 680px) { .footer-inner { grid-template-columns: 1fr; gap: 24px; } }
+    .footer-col h3 { font-size: 0.9rem; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; }
+    .footer-col p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-links a { color: var(--text-muted); font-size: 0.85rem; text-decoration: none; transition: color 0.15s; }
+    .footer-links a:hover { color: var(--primary); }
+    .footer-bottom { max-width: 900px; margin: 0 auto; border-top: 1px solid #f1f5f9; padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 0.78rem; color: #94a3b8; }
+
+    /* Hidden Admin Modal */
+    .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: none; justify-content: center; align-items: center; z-index: 100; padding: 20px; backdrop-filter: blur(2px); }
+    .modal-box { background: #fff; border-radius: var(--radius-md); max-width: 600px; width: 100%; padding: 24px; max-height: 90vh; overflow-y: auto; box-shadow: var(--shadow-lg); }
   </style>
 </head>
 <body>
 
-<div class="container">
+<div class="page-wrap">
+  <!-- Brand Header -->
   <header>
-    <div class="logo-area">
-      <h1 id="appTitle">IT 认证刷题特训平台</h1>
-      <p style="font-size:0.83rem; color:var(--text-muted); margin-top:2px;" id="appSubtitle">多科目支持 | 高频错题深度解析</p>
-    </div>
-    <div style="display:flex; gap:8px;">
+    <a href="https://examhi.com/" class="brand">
+      <div class="brand-icon">H</div>
+      <div class="brand-text">
+        <h1 id="appTitle">ExamHi</h1>
+        <p id="appSubtitle">Interactive IT Certification Practice & Drill</p>
+      </div>
+    </a>
+    <div class="header-tools">
       <button class="btn btn-lang" id="langToggleBtn" onclick="toggleLanguage()">🌐 English</button>
-      <button class="btn btn-outline" id="addBtnLabel" onclick="openAddModal()">➕ 添加错题</button>
+      <button class="btn btn-outline" id="adminAddBtn" style="display:none;" onclick="openAdminModal()">➕ Admin Add</button>
     </div>
   </header>
 
-  <!-- 科目选择 & 状态条 -->
-  <div class="controls-bar">
-    <select class="exam-select" id="examSelector" onchange="switchExam(this.value)">
-      <option value="core2">CompTIA A+ Core 2 (220-1102)</option>
-      <option value="core1">CompTIA A+ Core 1 (220-1101) [待加载]</option>
-      <option value="secplus">CompTIA Security+ (SY0-701) [筹备中]</option>
-      <option value="netplus">CompTIA Network+ (N10-009) [筹备中]</option>
-      <option value="linuxplus">CompTIA Linux+ (XK0-005) [筹备中]</option>
-      <option value="ccna">Cisco CCNA (200-301) [筹备中]</option>
-    </select>
-    <div class="stats-summary" id="statsSummary" style="font-size:0.9rem; font-weight:600; color:var(--primary); margin-left:auto;">加载中...</div>
-  </div>
+  <!-- Exam Selector & Score Bar -->
+  <section class="controls-bar" aria-label="Exam Selection and Progress">
+    <div class="select-wrap">
+      <select class="exam-select" id="examSelector" onchange="switchExam(this.value)" aria-label="Select Certification Exam">
+        <option value="core2">CompTIA A+ Core 2 (220-1102)</option>
+        <option value="core1">CompTIA A+ Core 1 (220-1101) [Coming Soon]</option>
+        <option value="secplus">CompTIA Security+ (SY0-701) [Coming Soon]</option>
+        <option value="netplus">CompTIA Network+ (N10-009) [Coming Soon]</option>
+        <option value="ccna">Cisco CCNA (200-301) [Coming Soon]</option>
+      </select>
+    </div>
+    <div class="stats-badge" id="statsSummary">Loading...</div>
+  </section>
 
-  <!-- 答题卡网格 -->
-  <div class="nav-grid" id="navGrid"></div>
+  <!-- Question Grid Navigator -->
+  <nav class="nav-grid" id="navGrid" aria-label="Question Navigation"></nav>
 
-  <!-- 做题卡片 -->
-  <div class="quiz-card">
+  <!-- Main Interactive Quiz Card -->
+  <main class="quiz-card">
+    <div class="progress-bar-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
     <div class="q-meta">
-      <span class="q-tag" id="qTag">单选</span>
+      <span class="q-tag" id="qTag">SINGLE CHOICE</span>
       <div>
-        <span style="font-size:0.85rem; color:var(--text-muted); margin-right:8px;" id="qIndexLabel">Q1</span>
-        <button class="star-btn" id="starBtn" onclick="toggleCurrentStar()">★</button>
+        <span style="font-size:0.85rem; color:var(--text-muted); font-weight:600; margin-right:8px;" id="qIndexLabel">Question 1</span>
+        <button class="star-btn" id="starBtn" onclick="toggleCurrentStar()" title="Bookmark this question">★</button>
       </div>
     </div>
 
-    <div class="q-title" id="qTitle">正在从题库加载题目...</div>
-    <div class="options" id="optionsContainer"></div>
+    <h2 class="q-title" id="qTitle">Loading question database...</h2>
+
+    <div class="options" id="optionsContainer" role="radiogroup"></div>
 
     <div class="action-bar">
       <div>
-        <button class="btn btn-outline" id="prevBtn" onclick="navigate(-1)">上一题</button>
-        <button class="btn btn-outline" id="nextBtn" onclick="navigate(1)">下一题</button>
+        <button class="btn btn-outline" id="prevBtn" onclick="navigate(-1)">Previous</button>
+        <button class="btn btn-outline" id="nextBtn" onclick="navigate(1)">Next</button>
       </div>
-      <button class="btn btn-primary" id="submitBtn" onclick="handleCommit()">提交选择</button>
+      <button class="btn btn-primary" id="submitBtn" onclick="handleCommit()">Submit Answer</button>
     </div>
 
-    <!-- 考点解析 -->
-    <div class="feedback-box" id="feedbackBox">
+    <!-- Feedback & Explanations -->
+    <article class="feedback-box" id="feedbackBox">
       <div class="fb-title" id="fbTitle"></div>
-      <div><strong id="correctLabelPrefix">标准正确答案：</strong><span id="correctKey"></span></div>
+      <div><strong id="correctLabelPrefix">Correct Answer: </strong><span id="correctKey" style="font-weight:700;"></span></div>
       <div class="exp-content" id="expContent"></div>
       <div class="mnemonic-box" id="mnemonicBox"></div>
-    </div>
-  </div>
+    </article>
+  </main>
 
-  <!-- 商业化：底部 Google AdSense 预留插槽 -->
-  <div class="ad-banner-slot">
-    <span>Advertisement / 赞助广告展示位</span>
-    <span style="font-size:0.75rem;">(Google AdSense Banner Slot 728x90 / Responsive)</span>
-  </div>
+  <!-- Google AdSense Placeholder Slot (728x90 / Responsive) -->
+  <aside class="ad-banner-slot" aria-label="Sponsored Content">
+    <span>ADVERTISEMENT</span>
+    <span style="font-size:0.75rem;">(Google AdSense Responsive Banner Slot)</span>
+  </aside>
 </div>
 
-<!-- 添加错题模态框 -->
-<div class="modal-overlay" id="addModal">
+<!-- SEO Semantic Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h3>About ExamHi</h3>
+      <p>ExamHi is a specialized, free online study engine designed for candidates preparing for high-stakes IT certifications including CompTIA A+, Network+, Security+, and Cisco CCNA. All questions feature real-world troubleshooting scenarios with comprehensive bilingual explanations.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Core 2 Domains</h3>
+      <ul class="footer-links">
+        <li><span>1.0 Operating Systems</span></li>
+        <li><span>2.0 Security Fundamentals</span></li>
+        <li><span>3.0 Software Troubleshooting</span></li>
+        <li><span>4.0 Operational Procedures</span></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="https://examhi.com/">Home / All Exams</a></li>
+        <li><a href="#" onclick="alert('ExamHi operates with strict privacy principles. We do not store personal tracking cookies or sell user telemetry data.'); return false;">Privacy Policy</a></li>
+        <li><a href="#" onclick="alert('All questions and explanations are created for educational self-study purposes.'); return false;">Terms of Use</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2026 ExamHi. All rights reserved.</div>
+    <div>CompTIA®, A+®, Network+®, and Security+® are registered trademarks of CompTIA, Inc. Cisco® and CCNA® are registered trademarks of Cisco Systems, Inc. ExamHi is an independent educational platform and is not affiliated with or endorsed by CompTIA or Cisco.</div>
+  </div>
+</footer>
+
+<!-- Hidden Admin Question Injector Modal -->
+<div class="modal-overlay" id="adminModal">
   <div class="modal-box">
-    <h2>➕ 添加新错题到当前科目</h2>
-    <div class="tab-bar">
-      <button class="tab-btn active" id="tabPasteBtn" onclick="switchTab('paste')">⚡ 极速代码粘贴导入 (推荐)</button>
-      <button class="tab-btn" id="tabFormBtn" onclick="switchTab('form')">✍️ 手动逐步填写</button>
-    </div>
-
-    <div id="tabPasteContent">
-      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:10px;">
-        直接将生成的 <code>{ id: ..., stem: ..., ... }</code> 代码粘贴在下方：
-      </p>
-      <div class="form-group">
-        <textarea id="rawCodeInput" rows="10" placeholder="粘贴整段代码..."></textarea>
-      </div>
-      <div style="display:flex; justify-content:flex-end; gap:8px;">
-        <button class="btn btn-outline" onclick="closeAddModal()">取消</button>
-        <button class="btn btn-primary" onclick="importFromRawCode()">🚀 极速导入</button>
-      </div>
-    </div>
-
-    <div id="tabFormContent" style="display:none;">
-      <div class="form-group"><label>题型</label><select id="newType"><option value="single">单选题</option><option value="multiple">多选题</option></select></div>
-      <div class="form-group"><label>题干</label><textarea id="newStem" rows="3"></textarea></div>
-      <div class="form-group"><label>选项 (每行一个，如 A. 选项)</label><textarea id="newOptions" rows="4"></textarea></div>
-      <div class="form-group"><label>正确答案 (如 B 或 A,C)</label><input type="text" id="newAnswer"></div>
-      <div class="form-group"><label>解析</label><textarea id="newExp" rows="3"></textarea></div>
-      <div class="form-group"><label>口诀 (选填)</label><input type="text" id="newMnemonic"></div>
-      <div style="display:flex; justify-content:flex-end; gap:8px;">
-        <button class="btn btn-outline" onclick="closeAddModal()">取消</button>
-        <button class="btn btn-primary" onclick="saveNewQuestion()">保存</button>
-      </div>
+    <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:12px;">➕ Admin Fast Inject Question</h3>
+    <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:10px;">Paste generated single JSON object below:</p>
+    <textarea id="rawCodeInput" rows="10" style="width:100%; padding:10px; border:1px solid var(--border); border-radius:6px; font-family:monospace; font-size:0.85rem;"></textarea>
+    <div style="display:flex; justify-content:flex-end; gap:8px; margin-top:14px;">
+      <button class="btn btn-outline" onclick="closeAdminModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="injectRawCode()">Inject</button>
     </div>
   </div>
 </div>
 
 <script>
-  let currentLang = localStorage.getItem('it_drill_lang') || 'zh';
+  let currentLang = localStorage.getItem('it_drill_lang') || 'en';
   let currentExam = localStorage.getItem('it_drill_exam') || 'core2';
 
   const EXAM_CONFIG = {
@@ -204,16 +287,32 @@
     core1: { name: "CompTIA A+ Core 1", file: "./core1.json" },
     secplus: { name: "CompTIA Security+", file: "./secplus.json" },
     netplus: { name: "CompTIA Network+", file: "./netplus.json" },
-    linuxplus: { name: "CompTIA Linux+", file: "./linuxplus.json" },
     ccna: { name: "Cisco CCNA", file: "./ccna.json" }
   };
 
   const i18n = {
+    en: {
+      appTitle: "ExamHi",
+      appSubtitle: "Interactive IT Certification Practice & Drill",
+      langBtn: "🌐 中文版",
+      single: "SINGLE CHOICE",
+      multi: "MULTIPLE CHOICE (SELECT {n})",
+      qOf: "Question {curr} of {total}",
+      prev: "Previous",
+      next: "Next",
+      submit: "Submit Answer",
+      submitted: "Submitted",
+      correctTitle: "🎉 Correct! Well done.",
+      wrongTitle: "❌ Incorrect. Review explanation below.",
+      correctAns: "Correct Answer: ",
+      tipPrefix: "💡 Exam Tip & Mnemonic: ",
+      alertSelect: "Please select an answer before submitting!",
+      statAnswered: "Progress: {ans} / {total} | Accuracy: {acc}%"
+    },
     zh: {
-      appTitle: "IT 认证刷题特训平台",
-      appSubtitle: "多科目支持 | 高频错题深度解析",
+      appTitle: "ExamHi",
+      appSubtitle: "IT 认证权威考题特训系统",
       langBtn: "🌐 English",
-      addBtn: "➕ 添加错题",
       single: "单选题",
       multi: "多选题（选 {n} 项）",
       qOf: "第 {curr} 题 / 共 {total} 题",
@@ -224,28 +323,9 @@
       correctTitle: "🎉 回答完全正确！",
       wrongTitle: "❌ 回答错误！请复盘解析",
       correctAns: "标准正确答案：",
-      tipPrefix: "💡 核心考点与记忆口诀：",
+      tipPrefix: "💡 核心考点与记忆技巧：",
       alertSelect: "请先勾选你的选项！",
-      statAnswered: "已答: {ans} / {total} | 正确: {cor} | 正确率: {acc}%"
-    },
-    en: {
-      appTitle: "IT Certification Exam Prep & Practice",
-      appSubtitle: "Multi-Exam Drill | In-Depth Scenario Explanations",
-      langBtn: "🌐 中文版",
-      addBtn: "➕ Add Question",
-      single: "Single Choice",
-      multi: "Multiple Choice (Select {n})",
-      qOf: "Question {curr} of {total}",
-      prev: "Previous",
-      next: "Next",
-      submit: "Submit Selection",
-      submitted: "Submitted",
-      correctTitle: "🎉 Correct! Well done.",
-      wrongTitle: "❌ Incorrect. Review explanation below.",
-      correctAns: "Correct Answer: ",
-      tipPrefix: "💡 Exam Tip & Mnemonic: ",
-      alertSelect: "Please select an answer before submitting!",
-      statAnswered: "Answered: {ans} / {total} | Correct: {cor} | Accuracy: {acc}%"
+      statAnswered: "进度: {ans} / {total} | 正确率: {acc}%"
     }
   };
 
@@ -255,9 +335,8 @@
   let submittedStatus = {};
   let starredSet = new Set();
 
-  // 初始化加载当前科目题库
   async function loadExamData(examKey) {
-    document.getElementById('qTitle').innerText = '正在载入题库数据...';
+    document.getElementById('qTitle').innerText = 'Loading questions...';
     userSelections = {};
     submittedStatus = {};
     currentIdx = 0;
@@ -267,23 +346,26 @@
       const res = await fetch(EXAM_CONFIG[examKey].file);
       if (!res.ok) throw new Error('File not found');
       const data = await res.json();
-      
-      // 合并本地为该科目追加的自定义题目
       const custom = JSON.parse(localStorage.getItem(`custom_${examKey}`) || '[]');
       questions = [...data, ...custom];
     } catch (e) {
-      // 容错：如果该科目文件尚未建立
       const custom = JSON.parse(localStorage.getItem(`custom_${examKey}`) || '[]');
       if (custom.length > 0) {
         questions = custom;
       } else {
         questions = [{
           id: 9999, type: "single",
-          stem: { zh: `【${EXAM_CONFIG[examKey].name}】题库正在编纂整理中，敬请期待！`, en: `The question bank for ${EXAM_CONFIG[examKey].name} is currently under preparation.` },
-          options: [{ key: "A", text: "期待上线 / Stay tuned" }],
+          stem: {
+            en: `The question bank for ${EXAM_CONFIG[examKey].name} is currently under preparation. Stay tuned!`,
+            zh: `【${EXAM_CONFIG[examKey].name}】题库正在编纂中，敬请期待！`
+          },
+          options: [{ key: "A", text: "Stay tuned / 持续关注" }],
           answer: ["A"],
-          explanation: { zh: "你可以点击右上角【➕ 添加错题】直接为该科目录入你自己的题目！", en: "You can click '+ Add Question' to start importing your own questions for this exam!" },
-          mnemonic: "持续扩充，逢考必过！"
+          explanation: {
+            en: "We are adding more scenario-based exam questions daily.",
+            zh: "题库正在持续扩充中。"
+          },
+          mnemonic: { en: "Consistency is key to passing!", zh: "坚持刷题，逢考必过！" }
         }];
       }
     }
@@ -318,7 +400,7 @@
   }
 
   function updateStats() {
-    let answered = Object.keys(submittedStatus).length;
+    const answered = Object.keys(submittedStatus).length;
     let correctCount = 0;
     Object.keys(submittedStatus).forEach(idx => {
       const q = questions[idx];
@@ -329,9 +411,12 @@
     const text = i18n[currentLang].statAnswered
       .replace('{ans}', answered)
       .replace('{total}', questions.length)
-      .replace('{cor}', correctCount)
       .replace('{acc}', acc);
     document.getElementById('statsSummary').innerText = text;
+
+    // 动态进度条
+    const progressPercent = questions.length > 0 ? ((currentIdx + 1) / questions.length) * 100 : 0;
+    document.getElementById('progressBar').style.width = `${progressPercent}%`;
   }
 
   function renderUI() {
@@ -339,7 +424,6 @@
     document.getElementById('appTitle').innerText = t.appTitle;
     document.getElementById('appSubtitle').innerText = t.appSubtitle;
     document.getElementById('langToggleBtn').innerText = t.langBtn;
-    document.getElementById('addBtnLabel').innerText = t.addBtn;
     document.getElementById('prevBtn').innerText = t.prev;
     document.getElementById('nextBtn').innerText = t.next;
     document.getElementById('correctLabelPrefix').innerText = t.correctAns;
@@ -365,7 +449,7 @@
       document.getElementById('qTag').className = 'q-tag';
     }
 
-    const stemText = (typeof q.stem === 'object') ? (q.stem[currentLang] || q.stem.zh || q.stem.en) : q.stem;
+    const stemText = (typeof q.stem === 'object') ? (q.stem[currentLang] || q.stem.en || q.stem.zh) : q.stem;
     document.getElementById('qTitle').innerText = stemText;
 
     const starBtn = document.getElementById('starBtn');
@@ -407,7 +491,7 @@
 
       label.appendChild(input);
       const span = document.createElement('span');
-      const optText = (typeof opt.text === 'object') ? (opt.text[currentLang] || opt.text.zh || opt.text.en) : opt.text;
+      const optText = (typeof opt.text === 'object') ? (opt.text[currentLang] || opt.text.en || opt.text.zh) : opt.text;
       span.innerText = `${opt.key}. ${optText.replace(/^[A-E]\.\s*/i, '')}`;
       label.appendChild(span);
       container.appendChild(label);
@@ -430,10 +514,10 @@
       fbTitle.innerText = isCorrect ? t.correctTitle : t.wrongTitle;
       document.getElementById('correctKey').innerText = q.answer.join(', ');
 
-      const expText = (typeof q.explanation === 'object') ? (q.explanation[currentLang] || q.explanation.zh || q.explanation.en) : q.explanation;
+      const expText = (typeof q.explanation === 'object') ? (q.explanation[currentLang] || q.explanation.en || q.explanation.zh) : q.explanation;
       document.getElementById('expContent').innerText = expText;
 
-      //中英文切换的逻辑
+      // 严格中英双语口诀提取
       const mnemonicEl = document.getElementById('mnemonicBox');
       let tipText = '';
       if (typeof q.mnemonic === 'object' && q.mnemonic !== null) {
@@ -511,83 +595,40 @@
     renderQuiz();
   }
 
-  function openAddModal() { document.getElementById('addModal').style.display = 'flex'; }
-  function closeAddModal() { document.getElementById('addModal').style.display = 'none'; }
-
-  function switchTab(type) {
-    const isPaste = type === 'paste';
-    document.getElementById('tabPasteBtn').className = `tab-btn ${isPaste ? 'active' : ''}`;
-    document.getElementById('tabFormBtn').className = `tab-btn ${!isPaste ? 'active' : ''}`;
-    document.getElementById('tabPasteContent').style.display = isPaste ? 'block' : 'none';
-    document.getElementById('tabFormContent').style.display = !isPaste ? 'block' : 'none';
+  /* 站长专属暗号控制：访问 examhi.com/?admin=任意暗号 才会开启添加按钮 */
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('admin') || localStorage.getItem('examhi_admin') === 'true') {
+    document.getElementById('adminAddBtn').style.display = 'inline-flex';
+    localStorage.setItem('examhi_admin', 'true');
   }
 
-  function importFromRawCode() {
+  function openAdminModal() { document.getElementById('adminModal').style.display = 'flex'; }
+  function closeAdminModal() { document.getElementById('adminModal').style.display = 'none'; }
+
+  function injectRawCode() {
     const raw = document.getElementById('rawCodeInput').value.trim();
-    if (!raw) return alert('请先粘贴代码！');
+    if (!raw) return alert('No code pasted!');
     try {
       let parsed;
       try { parsed = JSON.parse(raw); } catch(e) { parsed = (new Function(`return (${raw});`))(); }
-      if (!parsed || !parsed.stem || !parsed.options || !parsed.answer) throw new Error('缺少必要字段');
-
       parsed.id = parsed.id || Date.now();
       const customKey = `custom_${currentExam}`;
       let custom = JSON.parse(localStorage.getItem(customKey) || '[]');
       custom.push(parsed);
       localStorage.setItem(customKey, JSON.stringify(custom));
       questions.push(parsed);
-
-      document.getElementById('rawCodeInput').value = '';
-      closeAddModal();
+      closeAdminModal();
       initNavGrid();
       jumpTo(questions.length - 1);
-      alert('🎉 题目已添加到当前科目题库！');
+      alert('Question added successfully!');
     } catch(err) {
-      alert('解析失败：' + err.message);
+      alert('Parse error: ' + err.message);
     }
   }
 
-  function saveNewQuestion() {
-    const stem = document.getElementById('newStem').value.trim();
-    const type = document.getElementById('newType').value;
-    const optText = document.getElementById('newOptions').value.trim();
-    const ansText = document.getElementById('newAnswer').value.trim().toUpperCase();
-    const exp = document.getElementById('newExp').value.trim();
-    const mnemonic = document.getElementById('newMnemonic').value.trim();
-
-    if (!stem || !optText || !ansText) return alert('请完整填写题干、选项和答案！');
-
-    const lines = optText.split('\n').filter(l => l.trim().length > 0);
-    const options = lines.map((l, i) => {
-      const match = l.match(/^([A-Ea-e])[\.\:\、\s]/);
-      const key = match ? match[1].toUpperCase() : String.fromCharCode(65 + i);
-      return { key, text: l.trim() };
-    });
-
-    const newQ = {
-      id: Date.now(),
-      type,
-      stem: { zh: stem, en: stem },
-      options,
-      answer: ansText.replace(/[^A-E]/g, '').split(''),
-      explanation: { zh: exp || '暂无解析', en: exp || 'No explanation' },
-      mnemonic: mnemonic
-    };
-
-    const customKey = `custom_${currentExam}`;
-    let custom = JSON.parse(localStorage.getItem(customKey) || '[]');
-    custom.push(newQ);
-    localStorage.setItem(customKey, JSON.stringify(custom));
-    questions.push(newQ);
-
-    closeAddModal();
-    initNavGrid();
-    jumpTo(questions.length - 1);
-    alert('新题目添加成功！');
-  }
-
-  // 启动
+  // 初始化加载
   loadExamData(currentExam);
 </script>
+
 </body>
 </html>
