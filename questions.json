@@ -1111,5 +1111,28 @@
         "zh": "口诀：查改机器名和域成员归属，直奔系统属性（System Properties / sysdm.cpl）。",
         "en": "Exam Tip: Domain membership and computer rename are always located under System Properties."
       }
-    }
+    },
+    {
+  "id": 49,
+  "type": "single",
+  "stem": {
+    "zh": "一位 Active Directory 域管理员希望阻止特定组织单位（OU）中的用户运行某个特定应用程序。管理员应该使用哪个工具来实施并强制执行此项设置？",
+    "en": "An Active Directory domain admin wants to prevent users in a specific Organizational Unit (OU) from running a particular application. Which tool should the administrator use to enforce this setting?"
+  },
+  "options": [
+    { "key": "A", "text": "System Configuration" },
+    { "key": "B", "text": "Group Policy Management Console" },
+    { "key": "C", "text": "Active Directory Users and Computers" },
+    { "key": "D", "text": "Local Security Policy" }
+  ],
+  "answer": ["B"],
+  "explanation": {
+    "zh": "【考点：GPMC 策略下发 vs ADUC 对象管理】\n要限制特定 OU 内的用户运行特定程序，必须创建并链接组策略对象（GPO，例如配置 AppLocker 或软件限制策略），这一管理工作必须在“组策略管理控制台（Group Policy Management Console / GPMC / gpmc.msc）”中完成。\n- Active Directory Users and Computers（ADUC / dsa.msc）仅用于管理目录对象（如新建用户、重命名计算机、划分 OU），无法直接配置或强制执行软件限制规则。\n- Local Security Policy（secpol.msc）只对本地单机生效，无法作用于整个域的特定 OU。",
+    "en": "To restrict applications for users within a specific OU, the administrator must create and link a Group Policy Object (GPO) enforcing AppLocker or Software Restriction Policies. This is executed using the Group Policy Management Console (GPMC / gpmc.msc). Active Directory Users and Computers (ADUC) is strictly used for managing directory objects (users, computers, groups), not configuring policy enforcements."
+  },
+  "mnemonic": {
+    "zh": "口诀：管人管机建 OU 找 ADUC；定规矩、禁软件、绑 OU 找 GPMC（组策略管理控制台）！",
+    "en": "Exam Tip: ADUC manages objects (users, computers); GPMC creates and links restriction policies (GPOs) to specific OUs."
+  }
+}
   ]
