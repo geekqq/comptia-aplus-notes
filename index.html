@@ -74,7 +74,7 @@
     /* Header & Branding */
     header { display: flex; justify-content: space-between; align-items: center; padding: 12px 0 20px 0; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
     .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
-    .brand-icon { width: 36px; height: 36px; background: linear-gradient(135deg, #3b82f6, #6366f1); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3); }
+    .brand-icon { width: 36px; height: 36px; background: linear-gradient(135deg, #3b82f6, #6366f1); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3); cursor: pointer; }
     .brand-text h1 { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.02em; color: #0f172a; line-height: 1.2; }
     .brand-text p { font-size: 0.8rem; color: var(--text-muted); }
 
@@ -166,7 +166,7 @@
   <!-- Brand Header -->
   <header>
     <a href="https://examhi.com/" class="brand">
-      <div class="brand-icon">H</div>
+      <div class="brand-icon" title="ExamHi">H</div>
       <div class="brand-text">
         <h1 id="appTitle">ExamHi</h1>
         <p id="appSubtitle">Interactive IT Certification Practice & Drill</p>
@@ -180,14 +180,17 @@
 
   <!-- Exam Selector & Score Bar -->
   <section class="controls-bar" aria-label="Exam Selection and Progress">
-    <div class="select-wrap">
-      <select class="exam-select" id="examSelector" onchange="switchExam(this.value)" aria-label="Select Certification Exam">
-        <option value="core2">CompTIA A+ Core 2 (220-1102)</option>
-        <option value="core1">CompTIA A+ Core 1 (220-1101) [Coming Soon]</option>
-        <option value="secplus">CompTIA Security+ (SY0-701) [Coming Soon]</option>
-        <option value="netplus">CompTIA Network+ (N10-009) [Coming Soon]</option>
-        <option value="ccna">Cisco CCNA (200-301) [Coming Soon]</option>
-      </select>
+    <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+      <div class="select-wrap">
+        <select class="exam-select" id="examSelector" onchange="switchExam(this.value)" aria-label="Select Certification Exam">
+          <option value="core2">CompTIA A+ Core 2 (220-1102)</option>
+          <option value="core1">CompTIA A+ Core 1 (220-1101) [Coming Soon]</option>
+          <option value="secplus">CompTIA Security+ (SY0-701) [Coming Soon]</option>
+          <option value="netplus">CompTIA Network+ (N10-009) [Coming Soon]</option>
+          <option value="ccna">Cisco CCNA (200-301) [Coming Soon]</option>
+        </select>
+      </div>
+      <button class="btn btn-outline" onclick="reshuffleCurrentExam()" title="Reshuffle Question Order">🔀 Reshuffle</button>
     </div>
     <div class="stats-badge" id="statsSummary">Loading...</div>
   </section>
@@ -332,6 +335,16 @@
     }
   };
 
+  /* ================= 经典 Fisher-Yates 随机乱序算法 (正确全局位置) ================= */
+  function shuffleArray(array) {
+    const arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
   let questions = [];
   let currentIdx = 0;
   let userSelections = {}; 
@@ -352,6 +365,7 @@
       const custom = JSON.parse(localStorage.getItem(`custom_${examKey}`) || '[]');
       questions = shuffleArray([...data, ...custom]);
     } catch (e) {
+      console.error(e);
       const custom = JSON.parse(localStorage.getItem(`custom_${examKey}`) || '[]');
       if (custom.length > 0) {
         questions = custom;
@@ -375,6 +389,17 @@
 
     initNavGrid();
     renderUI();
+  }
+
+  function reshuffleCurrentExam() {
+    if (!questions || questions.length === 0) return;
+    questions = shuffleArray(questions);
+    userSelections = {};
+    submittedStatus = {};
+    currentIdx = 0;
+    initNavGrid();
+    renderQuiz();
+    updateStats();
   }
 
   function switchExam(examKey) {
@@ -416,16 +441,6 @@
       .replace('{total}', questions.length)
       .replace('{acc}', acc);
     document.getElementById('statsSummary').innerText = text;
-
-    /* ================= 经典 Fisher-Yates 随机乱序算法 ================= */
-  function shuffleArray(array) {
-    const arr = [...array];
-    for (let i = arr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
-    return arr;
-  }
 
     // 动态进度条
     const progressPercent = questions.length > 0 ? ((currentIdx + 1) / questions.length) * 100 : 0;
@@ -608,12 +623,9 @@
     renderQuiz();
   }
 
-  /* 站长专属暗号控制：访问 examhi.com/?admin=任意暗号 才会开启添加按钮 */
-/* ================= 密码学安全验证 (SHA-256) ================= */
-  // 这是密码 "" 的 SHA-256 哈希值（源码里绝不出现明文密码）
+  /* ================= 密码学安全验证 (SHA-256) ================= */
   const TARGET_HASH = "28a3be9554193092cec44f1bfca823b923dc40a506c8541fff1c69ea1469e1eb";
 
-  // SHA-256 快速计算工具函数
   async function sha256(message) {
     const msgBuffer = new TextEncoder().encode(message);
     const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
@@ -621,12 +633,11 @@
     return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
   }
 
-  // 如果本地已经通过验证，直接显示
   if (localStorage.getItem('examhi_admin') === 'true') {
     document.getElementById('adminAddBtn').style.display = 'inline-flex';
   }
 
-  // 连点 Logo 5 次触发密码输入
+  // 连点 Logo 5 次触发密码输入（带自动去空格与大小写兼容）
   let clickCount = 0;
   let clickTimer = null;
   const brandIcon = document.querySelector('.brand-icon');
@@ -642,7 +653,7 @@
         const inputPass = prompt("请输入站长管理密钥 (Master Key):");
         if (inputPass) {
           const inputHash = await sha256(inputPass.trim());
-          if (inputHash === TARGET_HASH) {
+          if (inputHash.toLowerCase() === TARGET_HASH.trim().toLowerCase()) {
             document.getElementById('adminAddBtn').style.display = 'inline-flex';
             localStorage.setItem('examhi_admin', 'true');
             alert("🎉 身份验证通过，管理模式已解锁！");
