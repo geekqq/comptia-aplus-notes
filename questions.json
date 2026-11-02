@@ -1084,9 +1084,32 @@
       "zh": "【NTFS 移动 vs 复制】同卷移动（Same volume move）只更新指针，【保留原权限（Retains original permissions）】，绝不继承新父级！复制以及跨卷移动才会继承新权限。",
       "en": "False. Moving a file within the SAME NTFS volume updates the MFT pointer and retains original permissions. Copying or cross-volume moving inherits the new parent folder's permissions."
     },
-    "mnemonic": {
-      "zh": "口诀：复制全继承、跨卷全继承；天底下唯独【同卷移动】保留原有权限（所以题干说继承必定是 False）！",
-      "en": "Exam Tip: Moving on the same volume RETAINS permissions. All copies and cross-volume moves INHERIT."
+   "mnemonic": {
+        "zh": "口诀：复制全继承、跨卷全继承；天底下唯独【同卷移动】保留原有权限（所以题干说继承必定是 False）！",
+        "en": "Exam Tip: Moving on the same volume RETAINS permissions. All copies and cross-volume moves INHERIT."
+      }
+    },
+    {
+      "id": 48,
+      "type": "single",
+      "stem": {
+        "zh": "以下哪个 Windows 工具允许管理员快速验证某台计算机是否已成功加入到域（Domain）中？",
+        "en": "Which Windows tool allows administrators to verify that a computer is successfully joined to a domain?"
+      },
+      "options": [
+        { "key": "A", "text": "Group Policy Editor" },
+        { "key": "B", "text": "Windows Security app" },
+        { "key": "C", "text": "Computer Management" },
+        { "key": "D", "text": "System Properties" }
+      ],
+      "answer": ["D"],
+      "explanation": {
+        "zh": "【考点：Windows 系统属性与加域验证】\n在 Windows 中，验证计算机是否加入域的标准图形化工具是“系统属性（System Properties，快捷命令 sysdm.cpl）”。在其“Computer Name（计算机名）”选项卡中，会明确显示当前机器的完整计算机名以及所属的 Domain（域）或 Workgroup（工作组）。Group Policy Editor（gpedit.msc）用于定义策略配置，不用于查看或配置计算机的域成员资格。",
+        "en": "System Properties (specifically the Computer Name tab, accessible via sysdm.cpl) displays the Full Computer Name and verifies whether the machine belongs to a Workgroup or an Active Directory Domain. Group Policy Editor (gpedit.msc) is used for configuring security and user policies, not for verifying domain membership."
+      },
+      "mnemonic": {
+        "zh": "口诀：查改机器名和域成员归属，直奔系统属性（System Properties / sysdm.cpl）。",
+        "en": "Exam Tip: Domain membership and computer rename are always located under System Properties."
+      }
     }
-  }
-]
+  ]
