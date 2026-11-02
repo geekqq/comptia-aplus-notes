@@ -350,7 +350,7 @@
       if (!res.ok) throw new Error('File not found');
       const data = await res.json();
       const custom = JSON.parse(localStorage.getItem(`custom_${examKey}`) || '[]');
-      questions = [...data, ...custom];
+      questions = shuffleArray([...data, ...custom]);
     } catch (e) {
       const custom = JSON.parse(localStorage.getItem(`custom_${examKey}`) || '[]');
       if (custom.length > 0) {
@@ -416,6 +416,16 @@
       .replace('{total}', questions.length)
       .replace('{acc}', acc);
     document.getElementById('statsSummary').innerText = text;
+
+    /* ================= 经典 Fisher-Yates 随机乱序算法 ================= */
+  function shuffleArray(array) {
+    const arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
 
     // 动态进度条
     const progressPercent = questions.length > 0 ? ((currentIdx + 1) / questions.length) * 100 : 0;
