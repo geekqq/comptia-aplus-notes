@@ -87,9 +87,15 @@
     .mnemonic-box { margin-top: 14px; padding: 10px 14px; background: #fff; border-radius: 8px; border: 1px dashed #cbd5e1; font-size: 0.9rem; color: #0284c7; }
 
     /* 模态框 */
-    .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); display: none; justify-content: center; align-items: center; z-index: 100; padding: 20px; }
-    .modal-box { background: #fff; border-radius: var(--radius); max-width: 600px; width: 100%; padding: 24px; max-height: 90vh; overflow-y: auto; }
-    .modal-box h2 { font-size: 1.2rem; margin-bottom: 16px; }
+    .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.45); display: none; justify-content: center; align-items: center; z-index: 100; padding: 20px; }
+    .modal-box { background: #fff; border-radius: var(--radius); max-width: 620px; width: 100%; padding: 24px; max-height: 90vh; overflow-y: auto; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); }
+    .modal-box h2 { font-size: 1.2rem; margin-bottom: 14px; }
+    
+    /* 弹窗内的标签页切换 */
+    .tab-bar { display: flex; border-bottom: 2px solid var(--border); margin-bottom: 18px; gap: 8px; }
+    .tab-btn { background: none; border: none; padding: 8px 14px; font-size: 0.92rem; font-weight: 600; cursor: pointer; color: var(--text-muted); border-bottom: 2px solid transparent; margin-bottom: -2px; }
+    .tab-btn.active { color: var(--primary); border-bottom-color: var(--primary); }
+
     .form-group { margin-bottom: 14px; }
     .form-group label { display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; }
     .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 0.9rem; font-family: inherit; }
@@ -106,7 +112,7 @@
     <div class="header-actions">
       <button class="btn btn-lang" id="langToggleBtn" onclick="toggleLanguage()">🌐 English</button>
       <button class="btn btn-outline" id="addBtnLabel" onclick="openAddModal()">➕ 添加新错题</button>
-      <div class="stats-summary" id="statsSummary">已答: 0 / 41</div>
+      <div class="stats-summary" id="statsSummary">已答: 0 / 44</div>
     </div>
   </header>
 
@@ -145,40 +151,63 @@
   </div>
 </div>
 
-<!-- 添加题目模态框 -->
+<!-- 升级版添加题目模态框 -->
 <div class="modal-overlay" id="addModal">
   <div class="modal-box">
     <h2 id="modalTitle">➕ 添加新错题</h2>
-    <div class="form-group">
-      <label id="lblType">题型</label>
-      <select id="newType">
-        <option value="single">单选题 / Single</option>
-        <option value="multiple">多选题 / Multiple</option>
-      </select>
+
+    <div class="tab-bar">
+      <button class="tab-btn active" id="tabPasteBtn" onclick="switchTab('paste')">⚡ 极速代码粘贴导入 (推荐)</button>
+      <button class="tab-btn" id="tabFormBtn" onclick="switchTab('form')">✍️ 手动逐步填写</button>
     </div>
-    <div class="form-group">
-      <label id="lblStem">题干 (Question Stem)</label>
-      <textarea id="newStem" rows="3" placeholder="输入题目内容..."></textarea>
+
+    <!-- 方式一：代码粘贴导入 -->
+    <div id="tabPasteContent">
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:10px;">
+        将 AI 为你生成的 <code>{ id: ..., stem: ..., ... }</code> 整段代码直接粘贴在下方：
+      </p>
+      <div class="form-group">
+        <textarea id="rawCodeInput" rows="11" placeholder="直接粘贴整段代码到这里..."></textarea>
+      </div>
+      <div style="display:flex; justify-content:flex-end; gap:8px;">
+        <button class="btn btn-outline" onclick="closeAddModal()">取消</button>
+        <button class="btn btn-primary" onclick="importFromRawCode()">🚀 一键解析并添加到题库</button>
+      </div>
     </div>
-    <div class="form-group">
-      <label id="lblOpts">选项 (每行一个，例如 A. 选项内容)</label>
-      <textarea id="newOptions" rows="4" placeholder="A. Option 1&#10;B. Option 2&#10;C. Option 3&#10;D. Option 4"></textarea>
-    </div>
-    <div class="form-group">
-      <label id="lblAns">正确答案 (如 B 或 A,C)</label>
-      <input type="text" id="newAnswer" placeholder="B 或 A,B,C">
-    </div>
-    <div class="form-group">
-      <label id="lblExp">解析</label>
-      <textarea id="newExp" rows="3" placeholder="解析内容..."></textarea>
-    </div>
-    <div class="form-group">
-      <label id="lblMnemonic">记忆口诀 / Exam Tip</label>
-      <input type="text" id="newMnemonic" placeholder="记忆口诀...">
-    </div>
-    <div style="display:flex; justify-content:flex-end; gap:8px; margin-top:16px;">
-      <button class="btn btn-outline" onclick="closeAddModal()" id="btnCancel">取消</button>
-      <button class="btn btn-primary" onclick="saveNewQuestion()" id="btnSave">保存</button>
+
+    <!-- 方式二：手动表单录入 -->
+    <div id="tabFormContent" style="display:none;">
+      <div class="form-group">
+        <label id="lblType">题型</label>
+        <select id="newType">
+          <option value="single">单选题 / Single</option>
+          <option value="multiple">多选题 / Multiple</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label id="lblStem">题干 (Question Stem)</label>
+        <textarea id="newStem" rows="3" placeholder="输入题目内容..."></textarea>
+      </div>
+      <div class="form-group">
+        <label id="lblOpts">选项 (每行一个，例如 A. 选项内容)</label>
+        <textarea id="newOptions" rows="4" placeholder="A. Option 1&#10;B. Option 2&#10;C. Option 3&#10;D. Option 4"></textarea>
+      </div>
+      <div class="form-group">
+        <label id="lblAns">正确答案 (如 B 或 A,C)</label>
+        <input type="text" id="newAnswer" placeholder="B 或 A,B,C">
+      </div>
+      <div class="form-group">
+        <label id="lblExp">解析</label>
+        <textarea id="newExp" rows="3" placeholder="解析内容..."></textarea>
+      </div>
+      <div class="form-group">
+        <label id="lblMnemonic">记忆口诀 / Exam Tip</label>
+        <input type="text" id="newMnemonic" placeholder="记忆口诀...">
+      </div>
+      <div style="display:flex; justify-content:flex-end; gap:8px; margin-top:16px;">
+        <button class="btn btn-outline" onclick="closeAddModal()">取消</button>
+        <button class="btn btn-primary" onclick="saveNewQuestion()">保存</button>
+      </div>
     </div>
   </div>
 </div>
@@ -227,7 +256,7 @@
     }
   };
 
-  // 41 道完整双语题库
+  // 基础题库：已全量整合 Q1 ~ Q44（包含你刚发的那 3 道题）
   const baseQuestions = [
     {
       id: 1, type: "multiple", selectLimit: 3,
@@ -984,7 +1013,7 @@
         { key: "D", text: "Increasing the physical storage capacity of the disk drive" },
         { key: "E", text: "Increasing raw sequential read and write transfer speeds" }
       ],
-      answer: ["A", "B", "C"],
+      answer: ["A", "B"],
       explanation: {
         zh: "【分区优势】组织数据隔离、多系统引导（Multiboot）、针对特定分区备份恢复（A、B、C）。分区绝不能增加物理容量或改变读写速度。",
         en: "Partitioning isolates OS and user data, enables multi-boot setups, and simplifies backups. It does NOT increase drive capacity or hardware speed."
@@ -1009,6 +1038,69 @@
         en: "If the Windows installer cannot see the NVMe drive, the standard resolution is to click 'Load driver' and supply the proprietary storage controller drivers."
       },
       mnemonic: "口诀：装系统找不到 NVMe 盘，先按 Load Driver 加载驱动。"
+    },
+    {
+      id: 42,
+      type: "multiple",
+      selectLimit: 2,
+      stem: {
+        zh: "关于 Microsoft Windows 中的共享权限（Share Permissions），以下哪两项描述是正确的？（Select TWO）",
+        en: "Which of the following statements describing share permissions in Microsoft Windows are true? (Select 2 answers)"
+      },
+      options: [
+        { key: "A", text: "Apply exclusively to network users" },
+        { key: "B", text: "Can be set only at the file level" },
+        { key: "C", text: "Apply to both network and local users" },
+        { key: "D", text: "Can be set only at the folder level" }
+      ],
+      answer: ["A", "D"],
+      explanation: {
+        zh: "【考点：Share Permissions vs NTFS Permissions】\n- 共享权限（Share Permissions）仅在网络访问时生效（Apply exclusively to network users），且只能在文件夹或驱动器级别配置（Folder level only）。\n- 选项 C 是 NTFS 权限的特征（本地与网络均受限）；选项 B 错误，单个文件无法独立配置共享。",
+        en: "Share permissions apply ONLY to users accessing the resource over the network, and they can only be configured at the folder/volume level (not on individual files). NTFS permissions apply to both local and network users and can be set at both file and folder levels."
+      },
+      mnemonic: "口诀：共享权限两唯一 —— 唯一管网络（不限本地），唯一在目录（不设文件）。"
+    },
+    {
+      id: 43,
+      type: "multiple",
+      selectLimit: 2,
+      stem: {
+        zh: "某 Windows 文件夹的共享权限（Share permissions）设置为 Read，而该文件夹的 NTFS 权限设置为 Modify。当用户分别在本地和远程网络访问该文件夹时，其实际有效权限是什么？（Select TWO）",
+        en: "The share permissions on a Windows folder grant Read access, while the NTFS permissions grant Modify access. What are the user’s effective permission levels? (Select 2 answers)"
+      },
+      options: [
+        { key: "A", text: "Read when accessing the share remotely" },
+        { key: "B", text: "Modify when accessing the folder locally" },
+        { key: "C", text: "Read when accessing the folder locally" },
+        { key: "D", text: "Modify when accessing the share remotely" }
+      ],
+      answer: ["A", "B"],
+      explanation: {
+        zh: "【考点：Effective Permissions 最终有效权限计算】\n1. 本地访问（Locally）：共享权限完全不生效，仅看 NTFS 权限，因此本地权限为 Modify。\n2. 远程网络访问（Remotely）：共享权限（Read）与 NTFS 权限（Modify）同时生效，取两者中最严格、权限最小的限制（Most Restrictive），因此远程最终权限为 Read。",
+        en: "Local access is ONLY governed by NTFS permissions (share permissions do not apply to local console logins), so local access is Modify. Remote share access is subject to both Share and NTFS permissions, with the MOST RESTRICTIVE taking precedence (Read is more restrictive than Modify, so remote access is Read)."
+      },
+      mnemonic: "口诀：本地登录只看 NTFS；远程网络两边看，哪个更严取哪个（Most Restrictive）。"
+    },
+    {
+      id: 44,
+      type: "multiple",
+      selectLimit: 2,
+      stem: {
+        zh: "某 Windows 文件夹的共享权限（Share permissions）设置为 Full Control，而其 NTFS 权限设置为 Read。以下哪两项正确代表了用户在远程和本地访问时的最终有效权限？（Select TWO）",
+        en: "The share permissions on a Windows folder grant the user Full Control access, while the NTFS permissions grant Read access. Which of the answers listed below represent the user’s effective permission levels? (Select 2 answers)"
+      },
+      options: [
+        { key: "A", text: "Read when accessing the share remotely" },
+        { key: "B", text: "Full Control when accessing the folder locally" },
+        { key: "C", text: "Read when accessing the folder locally" },
+        { key: "D", text: "Full Control when accessing the share remotely" }
+      ],
+      answer: ["A", "C"],
+      explanation: {
+        zh: "【考点：Effective Permissions 最终有效权限判定】\n1. 远程网络访问：同时受 Share（Full Control）与 NTFS（Read）限制，两者取最严格、权限最小的限制（Most Restrictive），因此远程访问权限为 Read。\n2. 本地登录访问：共享权限对本地控制台登录完全不生效，只受 NTFS 权限约束。题干中明确说明 NTFS 权限为 Read，因此本地访问有效权限同样为 Read。",
+        en: "Remotely: The most restrictive permission applies between Share (Full Control) and NTFS (Read), resulting in Read. Locally: Share permissions do not apply at all; the user is governed solely by NTFS permissions, which grant Read. Therefore, the effective permission in both scenarios is Read."
+      },
+      mnemonic: "口诀：问本地，眼睛只找“NTFS grant 什么”；题干里 Share 就算给天王老子也别看！"
     }
   ];
 
@@ -1085,7 +1177,6 @@
       document.getElementById('qTag').className = 'q-tag';
     }
 
-    // 动态提取语言题干
     const stemText = (typeof q.stem === 'object') ? (q.stem[currentLang] || q.stem.zh || q.stem.en) : q.stem;
     document.getElementById('qTitle').innerText = stemText;
 
@@ -1224,6 +1315,7 @@
     renderQuiz();
   }
 
+  /* 模态框逻辑与切换 */
   function openAddModal() {
     document.getElementById('addModal').style.display = 'flex';
   }
@@ -1231,6 +1323,51 @@
     document.getElementById('addModal').style.display = 'none';
   }
 
+  function switchTab(type) {
+    const isPaste = type === 'paste';
+    document.getElementById('tabPasteBtn').className = `tab-btn ${isPaste ? 'active' : ''}`;
+    document.getElementById('tabFormBtn').className = `tab-btn ${!isPaste ? 'active' : ''}`;
+    document.getElementById('tabPasteContent').style.display = isPaste ? 'block' : 'none';
+    document.getElementById('tabFormContent').style.display = !isPaste ? 'block' : 'none';
+  }
+
+  /* 核心：直接粘贴整段 JS/JSON 代码导入 */
+  function importFromRawCode() {
+    const raw = document.getElementById('rawCodeInput').value.trim();
+    if (!raw) {
+      alert('请先粘贴代码！');
+      return;
+    }
+
+    try {
+      // 容错解析：支持直接粘贴包含未加引号键名或单引号的 JS 对象代码
+      let parsed;
+      try {
+        parsed = JSON.parse(raw);
+      } catch (e) {
+        parsed = (new Function(`return (${raw});`))();
+      }
+
+      if (!parsed || !parsed.stem || !parsed.options || !parsed.answer) {
+        throw new Error('缺少必要字段（stem, options, answer）');
+      }
+
+      parsed.id = parsed.id || Date.now();
+      customQuestions.push(parsed);
+      localStorage.setItem('a_plus_custom_questions', JSON.stringify(customQuestions));
+      questions = [...baseQuestions, ...customQuestions];
+
+      document.getElementById('rawCodeInput').value = '';
+      closeAddModal();
+      initNavGrid();
+      jumpTo(questions.length - 1);
+      alert('🎉 题目已极速导入成功！已自动跳转到该题。');
+    } catch (err) {
+      alert('解析失败，请检查粘贴的代码格式是否正确：\n' + err.message);
+    }
+  }
+
+  /* 手动表单录入 */
   function saveNewQuestion() {
     const stem = document.getElementById('newStem').value.trim();
     const type = document.getElementById('newType').value;
