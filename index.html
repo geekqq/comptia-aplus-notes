@@ -433,9 +433,17 @@
       const expText = (typeof q.explanation === 'object') ? (q.explanation[currentLang] || q.explanation.zh || q.explanation.en) : q.explanation;
       document.getElementById('expContent').innerText = expText;
 
+      //中英文切换的逻辑
       const mnemonicEl = document.getElementById('mnemonicBox');
-      if (q.mnemonic) {
-        mnemonicEl.innerText = `${t.tipPrefix} ${q.mnemonic}`;
+      let tipText = '';
+      if (typeof q.mnemonic === 'object' && q.mnemonic !== null) {
+        tipText = q.mnemonic[currentLang] || q.mnemonic.en || q.mnemonic.zh || '';
+      } else if (typeof q.mnemonic === 'string') {
+        tipText = currentLang === 'zh' ? q.mnemonic : '';
+      }
+
+      if (tipText) {
+        mnemonicEl.innerText = `${t.tipPrefix} ${tipText}`;
         mnemonicEl.style.display = 'block';
       } else {
         mnemonicEl.style.display = 'none';
