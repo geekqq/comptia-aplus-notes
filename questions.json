@@ -17,9 +17,12 @@
     "answer": ["A", "B", "C"],
     "explanation": {
       "zh": "【XSS vs CSRF 信任方向】\n- A、B、C 属于典型的 XSS：恶意脚本注入受信任网站并在用户浏览器中执行，利用的是用户对网站的信任。\n- 选项 D 属于 CSRF（跨站请求伪造）：利用网站对已登录用户的信任，伪造请求让网站代为执行操作。",
-      "en": "XSS involves injecting malicious scripts into trusted websites that execute inside the victim's browser. Exploits the trust a user has in a website. Option D describes CSRF (Cross-Site Request Forgery)."
+      "en": "XSS occurs when malicious scripts are injected into benign and trusted websites (A). These scripts run directly within the user's web browser (B) by exploiting the trust a user has for that site (C). Option D describes CSRF (Cross-Site Request Forgery), where a website executes actions on behalf of an authenticated user."
     },
-    "mnemonic": "口诀：XSS 脚本浏览器里当场跑；CSRF 冒充你在网站发请求。"
+    "mnemonic": {
+      "zh": "口诀：XSS 脚本浏览器里当场跑；CSRF 冒充你在网站发请求。",
+      "en": "Exam Tip: XSS executes malicious code directly inside the client's browser; CSRF hijacks the authenticated user's session to transmit unauthorized commands."
+    }
   },
   {
     "id": 2,
@@ -39,9 +42,12 @@
     "answer": ["A", "B", "C"],
     "explanation": {
       "zh": "【On-path 特性】攻击者置于通信链路中间，拦截、篡改数据并可冒充双方。不需要任何一台终端被攻破，也不需要物理接触主机。",
-      "en": "Attackers place themselves between endpoints to intercept, modify, or impersonate traffic. It does NOT require either endpoint to be compromised or physically accessed."
+      "en": "In an on-path attack, the adversary intercepts, reads, and alters transmission packets (A), impersonates communicating endpoints (B), and positions themselves directly along the network path (C). It does NOT require endpoint compromise (ARP poisoning or rogue APs work) or physical host access."
     },
-    "mnemonic": "口诀：On-path 插中间，偷听篡改加冒充；不用端设备被黑，网络劫持就能做。"
+    "mnemonic": {
+      "zh": "口诀：On-path 插中间，偷听篡改加冒充；不用端设备被黑，网络劫持就能做。",
+      "en": "Exam Tip: On-path attacks intercept, modify, and impersonate in transit. Neither endpoint needs to be compromised or physically touched."
+    }
   },
   {
     "id": 3,
@@ -59,9 +65,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【Spoofing 欺骗/伪造】伪造具体的网络技术标识（IP/MAC/Email）的标准术语是 Spoofing。Impersonation 偏向人际社工冒充。",
-      "en": "Spoofing is the technical falsification of identifying data (IP, MAC, email). Impersonation refers to social mimicry."
+      "en": "Spoofing is the technical falsification of identifying network data such as IP addresses, MAC addresses, caller IDs, or email headers. Impersonation is a broader social engineering term involving mimicking human roles."
     },
-    "mnemonic": "口诀：伪造 IP/MAC/Email 标识全叫 Spoofing；假装是同事打工人叫 Impersonation。"
+    "mnemonic": {
+      "zh": "口诀：伪造 IP/MAC/Email 标识全叫 Spoofing；假装是同事打工人叫 Impersonation。",
+      "en": "Exam Tip: Falsifying network metadata (IP/MAC/Email headers) is explicitly 'Spoofing'."
+    }
   },
   {
     "id": 4,
@@ -79,9 +88,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【Zero-day 零日攻击】软件厂商未知、且无已知官方补丁的漏洞利用，被称为零日攻击（Zero-day）。",
-      "en": "A Zero-Day vulnerability is an unpatched flaw unknown to the software developer, leaving 0 days of defense before exploitation occurs."
+      "en": "A Zero-Day vulnerability is an unpatched software flaw unknown to the original vendor, leaving zero days between discovery and exploitation."
     },
-    "mnemonic": "口诀：厂商未知、补丁未出，就是 Zero-day。"
+    "mnemonic": {
+      "zh": "口诀：厂商未知、补丁未出，就是 Zero-day。",
+      "en": "Exam Tip: Unknown to the vendor with zero patches available = Zero-day."
+    }
   },
   {
     "id": 5,
@@ -99,9 +111,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【Whaling 捕鲸】针对公司高级管理人员（High-profile executives / VIPs）的特定钓鱼，CompTIA 考题标准答案为 Whaling。",
-      "en": "Whaling is a specialized form of spear phishing directed specifically at high-profile individuals such as CEOs or board members."
+      "en": "Whaling is a specialized spear phishing attack directed strictly against high-profile executives such as CEOs, CFOs, and board members."
     },
-    "mnemonic": "口诀：钓普通人是 Phishing，普通团队是 Spear，专钓高管大鱼是 Whaling。"
+    "mnemonic": {
+      "zh": "口诀：钓普通人是 Phishing，普通团队是 Spear，专钓高管大鱼是 Whaling。",
+      "en": "Exam Tip: Spear phishing targeting high-level corporate executives (big fish) is always Whaling."
+    }
   },
   {
     "id": 6,
@@ -119,9 +134,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【Spear phishing 矛钓】针对特定个人或特定群体的定向定制钓鱼属于 Spear phishing。Watering hole 是在目标常去网站下毒。",
-      "en": "Spear phishing targets specific individuals or organizations with customized information rather than random mass emails."
+      "en": "Spear phishing focuses on specific individuals or small groups using researched personal and contextual details to establish credibility."
     },
-    "mnemonic": "口诀：特定目标发定制邮件 = Spear phishing；常去网站下毒 = 水坑攻击。"
+    "mnemonic": {
+      "zh": "口诀：特定目标发定制邮件 = Spear phishing；常去网站下毒 = 水坑攻击。",
+      "en": "Exam Tip: Targeted, customized phishing against specific staff members = Spear Phishing."
+    }
   },
   {
     "id": 7,
@@ -139,9 +157,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【主机型防火墙】移动设备离开企业网络后，边界硬件防火墙无法提供保护，必须依赖运行在单机操作系统上的 Software firewall（如 Windows Defender 防火墙）。",
-      "en": "Host-based (software) firewalls protect individual endpoint devices regardless of which untrusted external network they join."
+      "en": "Host-based (software) firewalls run on individual endpoint devices and protect them when connected to untrusted public networks outside enterprise perimeters."
     },
-    "mnemonic": "口诀：移动单机出门在外保安全，就靠 Software firewall（主机防火墙）。"
+    "mnemonic": {
+      "zh": "口诀：移动单机出门在外保安全，就靠 Software firewall（主机防火墙）。",
+      "en": "Exam Tip: For protecting individual roaming mobile laptops on public Wi-Fi, choose Host-based/Software Firewall."
+    }
   },
   {
     "id": 8,
@@ -159,9 +180,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【MDR vs MSP】MDR 专注安全监控、威胁检测和实际响应（Response）。MSP 是常规 IT 基础设施外包运维。",
-      "en": "MDR (Managed Detection and Response) provides 24/7 continuous threat hunting, monitoring, and active remediation response."
+      "en": "MDR (Managed Detection and Response) provides around-the-clock proactive threat hunting, detection, and real-time containment and remediation response."
     },
-    "mnemonic": "口诀：日常 IT 找 MSP；主动防威胁、做响应找 MDR。"
+    "mnemonic": {
+      "zh": "口诀：日常 IT 找 MSP；主动防威胁、做响应找 MDR。",
+      "en": "Exam Tip: MSP handles general IT administration; MDR handles 24/7 security monitoring with proactive Response."
+    }
   },
   {
     "id": 9,
@@ -179,9 +203,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【WinRE 历史】WinRE（Windows 恢复环境）是 Windows PE 基础上的现代恢复平台，直接取代了旧版的 Recovery Console。",
-      "en": "WinRE (Windows Recovery Environment) is the modern graphical recovery platform based on Windows PE that succeeded the text-based Recovery Console."
+      "en": "WinRE (Windows Recovery Environment) is built on Windows PE and replaced the legacy text-based Recovery Console used in XP and 2000."
     },
-    "mnemonic": "口诀：老系统叫 Recovery Console，现代 Windows 叫 WinRE。"
+    "mnemonic": {
+      "zh": "口诀：老系统叫 Recovery Console，现代 Windows 叫 WinRE。",
+      "en": "Exam Tip: Modern graphical successor to the legacy Recovery Console is WinRE."
+    }
   },
   {
     "id": 10,
@@ -199,9 +226,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【Cryptominer 挖矿木马】未经授权非法窃取计算机 CPU/GPU 算力挖掘加密货币的恶意程序，特征是极端占用算力导致系统卡顿发热。",
-      "en": "Cryptominers hijack victim processing power (CPU/GPU) to mine cryptocurrencies without permission."
+      "en": "Cryptominers secretly hijack host computing resources (CPU/GPU) to solve cryptographic puzzles and mine virtual currencies without user consent."
     },
-    "mnemonic": "口诀：偷占算力挖数字货币，标准答案 Cryptominer。"
+    "mnemonic": {
+      "zh": "口诀：偷占算力挖数字货币，标准答案 Cryptominer。",
+      "en": "Exam Tip: Unexplained 100% CPU/GPU spikes mining digital coins = Cryptominer."
+    }
   },
   {
     "id": 11,
@@ -220,9 +250,12 @@
     "answer": ["A", "B"],
     "explanation": {
       "zh": "【Virus vs Worm】病毒（Virus）必须依附于宿主文件/程序（A、B）。独立在网络中不依赖用户自主传播的是蠕虫（Worm）。",
-      "en": "A virus attaches itself to an executable host file. Worms are standalone programs that replicate without a host."
+      "en": "A virus attaches itself to an executable program or document (B) and replicates when the host file is executed (A). Standalone replication over a network describes a Worm (C)."
     },
-    "mnemonic": "口诀：病毒（Virus）依附宿主；独立网络爬行叫蠕虫（Worm）。"
+    "mnemonic": {
+      "zh": "口诀：病毒（Virus）依附宿主；独立网络爬行叫蠕虫（Worm）。",
+      "en": "Exam Tip: Viruses need a host to attach and replicate; Worms are standalone network propagators."
+    }
   },
   {
     "id": 12,
@@ -240,9 +273,12 @@
     "answer": ["C"],
     "explanation": {
       "zh": "【MFA 因子】Something you know（密码）+ Something you are（生物特征）属于不同类型，构成双因子。",
-      "en": "MFA requires factors from different categories: Something you know (Password) + Something you are (Biometric)."
+      "en": "True MFA requires distinct factor categories: Something you know (Password) combined with Something you are (Biometric). Two items from the same category do not qualify."
     },
-    "mnemonic": "口诀：MFA 必须跨类型：密码（知道）+ 指纹（自身）才算双因子。"
+    "mnemonic": {
+      "zh": "口诀：MFA 必须跨类型：密码（知道）+ 指纹（自身）才算双因子。",
+      "en": "Exam Tip: MFA must span different categories (Know + Have or Know + Are), never two of the same."
+    }
   },
   {
     "id": 13,
@@ -260,9 +296,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【Apple RSR】Rapid Security Response（快速安全响应）允许苹果在完整系统版本更新之间快速向设备分发紧急安全修补程序。",
-      "en": "Rapid Security Response (RSR) allows Apple to quickly deploy critical security patches without a full OS update."
+      "en": "Rapid Security Response (RSR) enables Apple to deliver critical security enhancements quickly without requiring full macOS or iOS firmware upgrades."
     },
-    "mnemonic": "口诀：苹果紧急小补丁，就叫 RSR（快速安全响应）。"
+    "mnemonic": {
+      "zh": "口诀：苹果紧急小补丁，就叫 RSR（快速安全响应）。",
+      "en": "Exam Tip: Apple's standalone mini-security patches = Rapid Security Response (RSR)."
+    }
   },
   {
     "id": 14,
@@ -280,9 +319,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【Continuity 连续互通】Continuity 负责 Apple 生态跨设备任务接力。iCloud Drive 负责云盘文件持久化存储。",
-      "en": "Continuity enables seamless workflow and task switching between Apple devices."
+      "en": "Continuity (encompassing Handoff and Universal Clipboard) allows users to seamlessly switch work in progress between Apple devices in real time."
     },
-    "mnemonic": "口诀：设备间活儿接着干叫 Continuity；多设备同步存文件找 iCloud Drive。"
+    "mnemonic": {
+      "zh": "口诀：设备间活儿接着干叫 Continuity；多设备同步存文件找 iCloud Drive。",
+      "en": "Exam Tip: Active session handoff across Apple devices = Continuity; file storage sync = iCloud Drive."
+    }
   },
   {
     "id": 15,
@@ -300,9 +342,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【iCloud Drive】负责云端存储与跨设备文件自动同步服务。",
-      "en": "iCloud Drive is Apple's cloud storage service responsible for file synchronization across devices."
+      "en": "iCloud Drive is Apple's cloud storage service responsible for storing files in the cloud and keeping them synchronized across client hardware."
     },
-    "mnemonic": "口诀：同步存储看 iCloud Drive，无缝接力看 Continuity。"
+    "mnemonic": {
+      "zh": "口诀：同步存储看 iCloud Drive，无缝接力看 Continuity。",
+      "en": "Exam Tip: Cross-device document and folder synchronization = iCloud Drive."
+    }
   },
   {
     "id": 16,
@@ -320,9 +365,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【macOS FileVault】FileVault 是 macOS 平台的全盘加密工具（对应 Windows 的 BitLocker）。",
-      "en": "FileVault is macOS's native full-disk encryption tool, equivalent to BitLocker on Windows."
+      "en": "FileVault provides full-disk encryption on macOS volumes to protect data from physical extraction if a laptop is lost or stolen."
     },
-    "mnemonic": "口诀：Mac 磁盘加密叫 FileVault；Windows 磁盘加密叫 BitLocker。"
+    "mnemonic": {
+      "zh": "口诀：Mac 磁盘加密叫 FileVault；Windows 磁盘加密叫 BitLocker。",
+      "en": "Exam Tip: macOS Full Disk Encryption = FileVault; Windows Full Disk Encryption = BitLocker."
+    }
   },
   {
     "id": 17,
@@ -340,9 +388,12 @@
     "answer": ["C"],
     "explanation": {
       "zh": "【Linux 包管理器】Red Hat / Fedora 系现代默认包管理器为 dnf（替代旧版 yum）。",
-      "en": "dnf is the next-generation package manager for RPM-based Red Hat distributions."
+      "en": "dnf (Dandified YUM) is the next-generation package management utility replacing yum on modern RPM-based Red Hat distributions."
     },
-    "mnemonic": "口诀：红帽新包管叫 dnf；Ubuntu 系列用 apt。"
+    "mnemonic": {
+      "zh": "口诀：红帽新包管叫 dnf；Ubuntu 系列用 apt。",
+      "en": "Exam Tip: Modern Red Hat / Fedora package management = dnf; Debian / Ubuntu = apt."
+    }
   },
   {
     "id": 18,
@@ -360,9 +411,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【curl vs wget】curl 支持极其丰富的应用层协议与双向数据传输；wget 专注于递归下载网页和文件。",
-      "en": "curl supports numerous protocols and advanced transfer options; wget is primarily a file downloader."
+      "en": "curl is designed for data transfers across a wide variety of protocols and bidirectional payload interaction. wget focuses primarily on recursive HTTP/FTP downloads."
     },
-    "mnemonic": "口诀：广泛协议大杂烩选 curl；递归纯下载网页选 wget。"
+    "mnemonic": {
+      "zh": "口诀：广泛协议大杂烩选 curl；递归纯下载网页选 wget。",
+      "en": "Exam Tip: Multi-protocol transfer and API client tool = curl; recursive downloader = wget."
+    }
   },
   {
     "id": 19,
@@ -378,9 +432,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【路由跟踪命令拼写】Windows 下缩写为 tracert；Linux / macOS 下完整拼写为 traceroute。题干为 False！",
-      "en": "False. tracert is Windows. In Linux and macOS, it is spelled traceroute."
+      "en": "False. `tracert` is the command in Windows. In Linux and macOS environments, the full name `traceroute` is used."
     },
-    "mnemonic": "口诀：Windows 阉割叫 tracert；Linux 完整拼写 traceroute。"
+    "mnemonic": {
+      "zh": "口诀：Windows 阉割叫 tracert；Linux 完整拼写 traceroute。",
+      "en": "Exam Tip: Windows truncates it to `tracert`; Linux keeps the full word `traceroute`."
+    }
   },
   {
     "id": 20,
@@ -398,9 +455,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【du vs df】du (Disk Usage) 查看特定目录占用；df (Disk Free) 查看整块文件系统的容量情况。",
-      "en": "du (Disk Usage) measures directory/file size. df (Disk Free) shows overall filesystem capacity."
+      "en": "`du` (Disk Usage) calculates directory tree and file size footprints. `df` (Disk Free) reports available filesystem blocks."
     },
-    "mnemonic": "口诀：查文件目录占用看 du（Disk Usage）；看整块盘剩多少看 df（Disk Free）。"
+    "mnemonic": {
+      "zh": "口诀：查文件目录占用看 du（Disk Usage）；看整块盘剩多少看 df（Disk Free）。",
+      "en": "Exam Tip: Directory consumption = du (Disk Usage); overall disk free space = df (Disk Free)."
+    }
   },
   {
     "id": 21,
@@ -418,9 +478,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【/etc/hosts】保存本地静态的主机名到 IP 映射。/etc/resolv.conf 配置 DNS 递归服务器。",
-      "en": "/etc/hosts contains static local IP mappings. /etc/resolv.conf specifies upstream DNS nameservers."
+      "en": "`/etc/hosts` contains static local host-to-IP resolution tables. `/etc/resolv.conf` defines upstream recursive DNS servers."
     },
-    "mnemonic": "口诀：本地写死域名映射找 /etc/hosts；配 DNS 服务器地址找 /etc/resolv.conf。"
+    "mnemonic": {
+      "zh": "口诀：本地写死域名映射找 /etc/hosts；配 DNS 服务器地址找 /etc/resolv.conf。",
+      "en": "Exam Tip: Static local host mapping = `/etc/hosts`; DNS nameserver assignment = `/etc/resolv.conf`."
+    }
   },
   {
     "id": 22,
@@ -438,9 +501,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【systemd vs systemctl】systemd 是服务管理框架本身；systemctl 是控制它的命令行工具。",
-      "en": "systemd is the init system and manager. systemctl is the utility used to control it."
+      "en": "`systemd` is the actual service and init management architecture. `systemctl` is the command-line interface tool used to control it."
     },
-    "mnemonic": "口诀：大管家系统叫 systemd；手里拿的遥控器命令叫 systemctl。"
+    "mnemonic": {
+      "zh": "口诀：大管家系统叫 systemd；手里拿的遥控器命令叫 systemctl。",
+      "en": "Exam Tip: The management framework is `systemd`; the CLI control utility is `systemctl`."
+    }
   },
   {
     "id": 23,
@@ -458,9 +524,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【chmod 覆盖赋值】a=r 将所有人强制设为只读 r--（权值为 4），因此三段均为 4，八进制权限为 444。",
-      "en": "a=r sets read-only permissions (4) for all categories, resulting in 444."
+      "en": "`a=r` explicitly overwrites permissions for all entities (user, group, others) with read-only (`r--`). Read is 4, producing 444."
     },
-    "mnemonic": "口诀：= 是全量重置赋值；所有人（a）只读（r），就是 444。"
+    "mnemonic": {
+      "zh": "口诀：= 是全量重置赋值；所有人（a）只读（r），就是 444。",
+      "en": "Exam Tip: `=` completely replaces permissions. Everyone (a) read (4) = 444."
+    }
   },
   {
     "id": 24,
@@ -478,9 +547,12 @@
     "answer": ["A"],
     "explanation": {
       "zh": "【chown 语法】chown [owner]:[group]。冒号前留空只跟 :admins 表示仅变更所属组。",
-      "en": "In `chown :admins file`, omitting the user before the colon changes only the group."
+      "en": "The format is `chown [user]:[group]`. Leaving the user field blank before the colon (`:admins`) changes the group while preserving current ownership."
     },
-    "mnemonic": "口诀：chown 冒号前管所有者，冒号后管所属组；留空冒号只改组。"
+    "mnemonic": {
+      "zh": "口诀：chown 冒号前管所有者，冒号后管所属组；留空冒号只改组。",
+      "en": "Exam Tip: In `chown :group file`, the leading colon leaves the owner untouched."
+    }
   },
   {
     "id": 25,
@@ -498,9 +570,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【find 参数】find 按照文件名通配匹配的标准参数是 -name。find 没有 -file 参数。",
-      "en": "The `find` utility uses the `-name` option to match file names."
+      "en": "`find` requires the `-name` argument to perform wildcard filename matching. `-file` does not exist."
     },
-    "mnemonic": "口诀：按文件名找用 find 配合 -name，别写 -file。"
+    "mnemonic": {
+      "zh": "口诀：按文件名找用 find 配合 -name，别写 -file。",
+      "en": "Exam Tip: Use `find /path -name \"pattern*\"` to locate files by name."
+    }
   },
   {
     "id": 26,
@@ -518,9 +593,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【su vs sudo】su 默认切换至超级管理员 root，必须输入 root 密码；sudo 输入的是当前用户自己的密码。",
-      "en": "su defaults to root and requires root password. sudo asks for the current user's password."
+      "en": "`su` switches user accounts and defaults to root, requiring the target root password. `sudo` executes commands as root using the user's own password."
     },
-    "mnemonic": "口诀：su 输入对方（目标 root）的密码；sudo 输入你自己（当前用户）的密码。"
+    "mnemonic": {
+      "zh": "口诀：su 输入对方（目标 root）的密码；sudo 输入你自己（当前用户）的密码。",
+      "en": "Exam Tip: `su` prompts for the target root password; `sudo` prompts for your own credentials."
+    }
   },
   {
     "id": 27,
@@ -538,9 +616,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【ip route show】ip route show（或 ip r）用于打印内核路由表与默认网关。",
-      "en": "`ip route show` is the modern command to view kernel routes and gateways."
+      "en": "`ip route show` (or `ip r`) is the modern replacement utility displaying kernel routing tables and gateway definitions."
     },
-    "mnemonic": "口诀：现代查路由看网关，首选用 ip route show。"
+    "mnemonic": {
+      "zh": "口诀：现代查路由看网关，首选用 ip route show。",
+      "en": "Exam Tip: Check default gateway and routing paths with `ip route show`."
+    }
   },
   {
     "id": 28,
@@ -558,9 +639,12 @@
     "answer": ["D"],
     "explanation": {
       "zh": "【traceroute 输出】traceroute 输出跳数、网关 IP 以及往返延迟（RTT）。它不统计整个会话的数据包总数。",
-      "en": "traceroute shows hops, gateway IPs, and latency, but not cumulative packet count."
+      "en": "`traceroute` records intermediate hop numbers, router hostnames/IPs, and latency metrics, but does not calculate cumulative session packet counts."
     },
-    "mnemonic": "口诀：traceroute 看路线、看跳数、看延迟，不看流量总包数。"
+    "mnemonic": {
+      "zh": "口诀：traceroute 看路线、看跳数、看延迟，不看流量总包数。",
+      "en": "Exam Tip: Traceroute reports hops, IPs, and RTT latency, not total transmission volume."
+    }
   },
   {
     "id": 29,
@@ -578,9 +662,12 @@
     "answer": ["A"],
     "explanation": {
       "zh": "【ps 参数】ps -e（或 ps aux）列出全局系统范围内的所有活动进程。",
-      "en": "`ps -e` (or `ps aux`) reports on every active process across the entire operating system."
+      "en": "`ps -e` (or `ps aux`) instructs the process status tool to output all active processes across the entire OS."
     },
-    "mnemonic": "口诀：看全局所有进程，加 -e（everyone/everything）或者 aux。"
+    "mnemonic": {
+      "zh": "口诀：看全局所有进程，加 -e（everyone/everything）或者 aux。",
+      "en": "Exam Tip: To list every process across all sessions, use `ps -e`."
+    }
   },
   {
     "id": 30,
@@ -598,9 +685,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【top 快捷键】在 top 界面中按 k 键输入进程 PID 即可终止（Kill）该进程。",
-      "en": "Pressing `k` in top prompts for a PID and sends a signal to kill that process."
+      "en": "Pressing the `k` key inside `top` prompts for a process identifier (PID) to send a kill termination signal."
     },
-    "mnemonic": "口诀：top 里杀进程，首字母就是 K（Kill）。"
+    "mnemonic": {
+      "zh": "口诀：top 里杀进程，首字母就是 K（Kill）。",
+      "en": "Exam Tip: Press 'k' for Kill inside interactive `top`."
+    }
   },
   {
     "id": 31,
@@ -618,9 +708,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【top 内存排序】按 M 按内存排序；按 P 按 CPU 排序；按 T 按运行时间排序。",
-      "en": "Pressing `M` in top sorts by memory usage. Pressing `P` sorts by CPU usage."
+      "en": "Pressing `M` (Shift+m) sorts active processes by memory consumption. Pressing `P` sorts by CPU usage."
     },
-    "mnemonic": "口诀：内存排大头按 M（Memory），CPU 占用按 P（Processor）。"
+    "mnemonic": {
+      "zh": "口诀：内存排大头按 M（Memory），CPU 占用按 P（Processor）。",
+      "en": "Exam Tip: Memory sort = 'M'; Processor sort = 'P'."
+    }
   },
   {
     "id": 32,
@@ -638,9 +731,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【Compatibility Mode 兼容模式】右键属性中的 Compatibility Mode 允许 Windows 11 模拟旧版 Windows API 运行老程序。",
-      "en": "Compatibility Mode allows older legacy applications to run by emulating earlier OS versions."
+      "en": "Compatibility Mode emulates earlier Windows system APIs and display modes to enable older applications to run on modern platforms."
     },
-    "mnemonic": "口诀：旧系统老程序新机跑，优先右键“兼容模式（Compatibility Mode）”。"
+    "mnemonic": {
+      "zh": "口诀：旧系统老程序新机跑，优先右键“兼容模式（Compatibility Mode）”。",
+      "en": "Exam Tip: Legacy software crashing on new OS = Compatibility Mode."
+    }
   },
   {
     "id": 33,
@@ -659,9 +755,12 @@
     "answer": ["A", "B"],
     "explanation": {
       "zh": "【跨架构运行】跨架构（如在 x86 上跑 ARM 程序）必须借助 Virtualization 和 Emulator（模拟器）转译底层硬件指令。",
-      "en": "Running software for a different architecture requires both Virtualization and an Emulator."
+      "en": "Running software compiled for foreign hardware architectures requires Virtualization paired with an Emulator to dynamically translate low-level instructions."
     },
-    "mnemonic": "口诀：不同架构本地跑，虚拟化加模拟器（Virtualization + Emulator）。"
+    "mnemonic": {
+      "zh": "口诀：不同架构本地跑，虚拟化加模拟器（Virtualization + Emulator）。",
+      "en": "Exam Tip: Cross-architecture execution demands Virtualization + Emulator."
+    }
   },
   {
     "id": 34,
@@ -679,9 +778,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【Selective sync 选择性同步】允许用户精准选择哪些目录同步保存到本地硬盘，其余保持云端占位以节省空间。",
-      "en": "Selective sync lets users specify which folders download locally to save disk space."
+      "en": "Selective sync allows clients to designate specific folders to store offline locally, keeping unselected cloud assets online-only to conserve drive capacity."
     },
-    "mnemonic": "口诀：本地盘满选文件夹下，功能就叫 Selective sync。"
+    "mnemonic": {
+      "zh": "口诀：本地盘满选文件夹下，功能就叫 Selective sync。",
+      "en": "Exam Tip: Downloading only required folders from cloud drives = Selective Sync."
+    }
   },
   {
     "id": 35,
@@ -699,9 +801,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【SaaS Admin Portal】SaaS 服务的集中授权与席位分配统一在供应商的管理员门户（Admin portal）中管理。",
-      "en": "SaaS application licenses are managed globally through the Admin Dashboard/Portal."
+      "en": "Subscription licenses, user seat assignments, and quota headroom for SaaS suites are centrally audited via the provider's web-based Admin Dashboard or Portal."
     },
-    "mnemonic": "口诀：查云软件 License 数量和余量，直奔 Admin portal 管理后台。"
+    "mnemonic": {
+      "zh": "口诀：查云软件 License 数量和余量，直奔 Admin portal 管理后台。",
+      "en": "Exam Tip: To manage subscription license quotas, open the SaaS Admin Dashboard/Portal."
+    }
   },
   {
     "id": 36,
@@ -719,9 +824,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【Fencing 围栏】覆盖整个周界且同时防人和防车的固定连续物理屏障首选 Fencing（防攀爬围栏结合防撞护栏）。",
-      "en": "Fencing provides continuous perimeter boundary deterrence against both pedestrians and vehicles."
+      "en": "Fencing establishes an unbroken boundary demarcation around an entire campus boundary, acting as a scalable physical impediment to both vehicles and trespassers."
     },
-    "mnemonic": "口诀：全周界物理防人和车，首选大范围 Fencing（围栏）。"
+    "mnemonic": {
+      "zh": "口诀：全周界物理防人和车，首选大范围 Fencing（围栏）。",
+      "en": "Exam Tip: Continuous boundary barrier stopping both humans and vehicles = Fencing."
+    }
   },
   {
     "id": 37,
@@ -741,9 +849,12 @@
     "answer": ["A", "B"],
     "explanation": {
       "zh": "【跨系统文件格式】FAT32 与 exFAT 在 Windows、macOS 和 Linux 三大系统上均享有原生读写支持。NTFS 在 macOS 默认只读不可写。",
-      "en": "FAT32 and exFAT offer native read and write support out of the box across Windows, macOS, and Linux platforms."
+      "en": "FAT32 and exFAT offer native out-of-the-box read and write capabilities across Windows, macOS, and Linux kernels. NTFS is read-only on macOS without third-party drivers."
     },
-    "mnemonic": "口诀：老通用 FAT32，大文件跨平台选 exFAT；跨三大系统首选 FAT 家族。"
+    "mnemonic": {
+      "zh": "口诀：老通用 FAT32，大文件跨平台选 exFAT；跨三大系统首选 FAT 家族。",
+      "en": "Exam Tip: Broadest cross-platform file systems = FAT32 (legacy) & exFAT (modern)."
+    }
   },
   {
     "id": 38,
@@ -761,9 +872,12 @@
     "answer": ["A"],
     "explanation": {
       "zh": "【跨系统数据共享根本原因】操作系统对不同文件系统的支持程度不同，是跨系统移动盘无法读写的最核心原因。",
-      "en": "Incompatibilities when sharing storage across OSs stem from differences in file system formats."
+      "en": "Removable media transfer failures across divergent operating systems are almost universally caused by mismatched file system format support (e.g., ext4, APFS, NTFS)."
     },
-    "mnemonic": "口诀：跨系统共享先看文件系统，不看底层硬件。"
+    "mnemonic": {
+      "zh": "口诀：跨系统共享先看文件系统，不看底层硬件。",
+      "en": "Exam Tip: Cross-OS drive access issues stem from file system format differences."
+    }
   },
   {
     "id": 39,
@@ -781,9 +895,12 @@
     "answer": ["A"],
     "explanation": {
       "zh": "【企业工作站操作系统】凭借 Active Directory 域环境管理与企业级软件支持，Windows 在企业桌面端占据绝对主流。",
-      "en": "Windows remains the dominant enterprise workstation OS due to Active Directory and software support."
+      "en": "Microsoft Windows dominates corporate business workstations due to widespread active directory integration, group policy management, and legacy application support."
     },
-    "mnemonic": "口诀：桌面企业看 Windows，服务器端看 Linux。"
+    "mnemonic": {
+      "zh": "口诀：桌面企业看 Windows，服务器端看 Linux。",
+      "en": "Exam Tip: Most adopted corporate workstation OS = Windows."
+    }
   },
   {
     "id": 40,
@@ -803,9 +920,12 @@
     "answer": ["A", "B", "C"],
     "explanation": {
       "zh": "【分区优势】组织数据隔离、多系统引导、针对特定分区备份恢复。分区绝不能增加物理容量或改变读写速度。",
-      "en": "Partitioning isolates data, enables multi-boot setups, and simplifies backups. It does NOT increase drive capacity or hardware speed."
+      "en": "Partitioning isolates data from OS system files (A), supports multi-boot configurations (B), and streamlines targeted backup operations (C). It does NOT boost drive capacity or sequential speeds."
     },
-    "mnemonic": "口诀：分区管组织、双系统和备多分；不加硬盘总容量，也不给硬件提速。"
+    "mnemonic": {
+      "zh": "口诀：分区管组织、双系统和备多分；不加硬盘总容量，也不给硬件提速。",
+      "en": "Exam Tip: Partitioning aids organisation, multiboot, and backups; it cannot alter physical capacity or throughput."
+    }
   },
   {
     "id": 41,
@@ -823,9 +943,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【加载驱动】Windows 通用安装介质缺少该芯片组驱动，标准做法是在安装界面点击“Load driver”从外部 U 盘加载专用驱动。",
-      "en": "If the installer cannot see the NVMe drive, click 'Load driver' and supply the proprietary storage drivers."
+      "en": "When Windows setup cannot locate modern NVMe storage, the standard CompTIA troubleshooting step is clicking 'Load Driver' to supply external storage controller drivers."
     },
-    "mnemonic": "口诀：装系统找不到 NVMe 盘，先按 Load Driver 加载驱动。"
+    "mnemonic": {
+      "zh": "口诀：装系统找不到 NVMe 盘，先按 Load Driver 加载驱动。",
+      "en": "Exam Tip: Storage drive missing in Windows Installer = Load Third-Party Drivers."
+    }
   },
   {
     "id": 42,
@@ -844,9 +967,12 @@
     "answer": ["A", "D"],
     "explanation": {
       "zh": "【Share vs NTFS】共享权限仅在网络访问时生效（Apply exclusively to network users），且只能在文件夹级别配置（Folder level only）。",
-      "en": "Share permissions apply ONLY over the network and can only be set at the folder/volume level."
+      "en": "Share permissions apply exclusively to network traffic accessing the resource over SMB (A) and can only be assigned to entire folders or volumes (D), never individual files."
     },
-    "mnemonic": "口诀：共享权限两唯一 —— 唯一管网络（不限本地），唯一在目录（不设文件）。"
+    "mnemonic": {
+      "zh": "口诀：共享权限两唯一 —— 唯一管网络（不限本地），唯一在目录（不设文件）。",
+      "en": "Exam Tip: Share permissions apply ONLY over the network and ONLY at the folder level."
+    }
   },
   {
     "id": 43,
@@ -865,9 +991,12 @@
     "answer": ["A", "B"],
     "explanation": {
       "zh": "【Effective Permissions】1. 本地访问：共享权限不生效，只看 NTFS（Modify）。2. 远程网络访问：Share(Read)与 NTFS(Modify)取最严交集（Read）。",
-      "en": "Locally: governed solely by NTFS (Modify). Remotely: Most Restrictive wins between Read and Modify (Read)."
+      "en": "Local logins ignore Share settings completely, so NTFS takes sole effect (Modify). Remote access evaluates both Share and NTFS, enforcing the Most Restrictive outcome (Read)."
     },
-    "mnemonic": "口诀：本地登录只看 NTFS；远程网络两边看，哪个更严取哪个（Most Restrictive）。"
+    "mnemonic": {
+      "zh": "口诀：本地登录只看 NTFS；远程网络两边看，哪个更严取哪个（Most Restrictive）。",
+      "en": "Exam Tip: Local = NTFS only. Remote = Most Restrictive wins between Share and NTFS."
+    }
   },
   {
     "id": 44,
@@ -875,7 +1004,7 @@
     "selectLimit": 2,
     "stem": {
       "zh": "某 Windows 文件夹的共享权限设置为 Full Control，而其 NTFS 权限设置为 Read。以下哪两项正确代表了用户在远程和本地访问时的有效权限？（Select TWO）",
-      "en": "The share permissions on a Windows folder grant Full Control access, while the NTFS permissions grant Read access. Which represent the effective permission levels? (Select 2 answers)"
+      "en": "The share permissions on a Windows folder grant the user Full Control access, while the NTFS permissions grant Read access. Which of the answers listed below represent the user’s effective permission levels? (Select 2 answers)"
     },
     "options": [
       { "key": "A", "text": "Read when accessing the share remotely" },
@@ -886,9 +1015,12 @@
     "answer": ["A", "C"],
     "explanation": {
       "zh": "【Effective Permissions】远程受两者最严限制为 Read；本地登录只看 NTFS，NTFS 给的是 Read，因此本地也是 Read！",
-      "en": "Remotely: Most restrictive of Full Control and Read is Read. Locally: Share doesn't apply, NTFS grants Read, so locally it is Read."
+      "en": "Remotely: The most restrictive permission between Full Control and Read is Read. Locally: Share permissions do not apply, leaving NTFS (Read) as the sole active policy. Both are Read."
     },
-    "mnemonic": "口诀：问本地，眼睛只找“NTFS grant 什么”；题干里 Share 就算给天王老子也别看！"
+    "mnemonic": {
+      "zh": "口诀：问本地，眼睛只找“NTFS grant 什么”；题干里 Share 就算给天王老子也别看！",
+      "en": "Exam Tip: For local access, completely ignore the Share permission and inspect only NTFS."
+    }
   },
   {
     "id": 45,
@@ -906,9 +1038,12 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【NTFS 权限继承与拒绝优先级】显式（Explicit）永远优先于继承（Inherited）；同级内部 Deny 优先于 Allow。因此：显式拒绝 > 显式允许 > 继承拒绝 > 继承允许。",
-      "en": "Explicit beats Inherited; within the same tier Deny beats Allow: Explicit Deny > Explicit Allow > Inherited Deny > Inherited Allow."
+      "en": "Direct explicit assignments always supersede inherited traits. Within each tier, Deny beats Allow. Thus: Explicit Deny > Explicit Allow > Inherited Deny > Inherited Allow."
     },
-    "mnemonic": "口诀：显式两兄弟永远在前，继承两兄弟排在后面；内部比都是 Deny 大于 Allow（显拒 > 显允 > 继拒 > 继允）。"
+    "mnemonic": {
+      "zh": "口诀：显式两兄弟永远在前，继承两兄弟排在后面；内部比都是 Deny 大于 Allow（显拒 > 显允 > 继拒 > 继允）。",
+      "en": "Exam Tip: Explicit beats Inherited; Deny beats Allow within each tier (Explicit Deny > Explicit Allow > Inherited Deny > Inherited Allow)."
+    }
   },
   {
     "id": 46,
@@ -926,9 +1061,12 @@
     "answer": ["A"],
     "explanation": {
       "zh": "【Windows attrib 命令语法】attrib 设置属性用加减号（+ 增加，- 清除），不能用斜杠 /，且开关位于文件路径前：attrib +R filename。",
-      "en": "attrib uses plus (+) to set and minus (-) to clear attributes. Syntax: attrib +R [drive:][path][filename]."
+      "en": "`attrib` assigns attributes via plus signs (`+`) and clears them with minus signs (`-`), placed before the path target: `attrib +R [path][filename]`."
     },
-    "mnemonic": "口诀：attrib 设属性不用斜杠用加减！加属性用 +，减属性用 -；RASH 放在文件前。"
+    "mnemonic": {
+      "zh": "口诀：attrib 设属性不用斜杠用加减！加属性用 +，减属性用 -；RASH 放在文件前。",
+      "en": "Exam Tip: `attrib` uses `+` and `-` (not `/`) for attributes, placed before the file name."
+    }
   },
   {
     "id": 47,
@@ -944,8 +1082,11 @@
     "answer": ["B"],
     "explanation": {
       "zh": "【NTFS 移动 vs 复制】同卷移动（Same volume move）只更新指针，【保留原权限（Retains original permissions）】，绝不继承新父级！复制以及跨卷移动才会继承新权限。",
-      "en": "False. Moving a file within the same NTFS volume retains its original permissions. It does NOT inherit the new parent's permissions."
+      "en": "False. Moving a file within the SAME NTFS volume updates the MFT pointer and retains original permissions. Copying or cross-volume moving inherits the new parent folder's permissions."
     },
-    "mnemonic": "口诀：复制全继承、跨卷全继承；天底下唯独【同卷移动】保留原有权限（所以题干说继承必定是 False）！"
+    "mnemonic": {
+      "zh": "口诀：复制全继承、跨卷全继承；天底下唯独【同卷移动】保留原有权限（所以题干说继承必定是 False）！",
+      "en": "Exam Tip: Moving on the same volume RETAINS permissions. All copies and cross-volume moves INHERIT."
+    }
   }
 ]
