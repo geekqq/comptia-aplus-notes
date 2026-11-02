@@ -596,10 +596,49 @@
   }
 
   /* 站长专属暗号控制：访问 examhi.com/?admin=任意暗号 才会开启添加按钮 */
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('admin') || localStorage.getItem('examhi_admin') === 'true') {
+/* ================= 密码学安全验证 (SHA-256) ================= */
+  // 这是密码 "" 的 SHA-256 哈希值（源码里绝不出现明文密码）
+  const TARGET_HASH = "e709adcf0ceba99b85e738ed62e45f598cb181398d09737e5b4ab426d1d473f1";
+
+  // SHA-256 快速计算工具函数
+  async function sha256(message) {
+    const msgBuffer = new TextEncoder().encode(message);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+  }
+
+  // 如果本地已经通过验证，直接显示
+  if (localStorage.getItem('examhi_admin') === 'true') {
     document.getElementById('adminAddBtn').style.display = 'inline-flex';
-    localStorage.setItem('examhi_admin', 'true');
+  }
+
+  // 连点 Logo 5 次触发密码输入
+  let clickCount = 0;
+  let clickTimer = null;
+  const brandIcon = document.querySelector('.brand-icon');
+  if (brandIcon) {
+    brandIcon.addEventListener('click', async (e) => {
+      e.preventDefault();
+      clickCount++;
+      clearTimeout(clickTimer);
+      clickTimer = setTimeout(() => { clickCount = 0; }, 3000);
+
+      if (clickCount >= 5) {
+        clickCount = 0;
+        const inputPass = prompt("请输入站长管理密钥 (Master Key):");
+        if (inputPass) {
+          const inputHash = await sha256(inputPass.trim());
+          if (inputHash === TARGET_HASH) {
+            document.getElementById('adminAddBtn').style.display = 'inline-flex';
+            localStorage.setItem('examhi_admin', 'true');
+            alert("🎉 身份验证通过，管理模式已解锁！");
+          } else {
+            alert("❌ 密钥错误，访问被拒绝！");
+          }
+        }
+      }
+    });
   }
 
   function openAdminModal() { document.getElementById('adminModal').style.display = 'flex'; }
