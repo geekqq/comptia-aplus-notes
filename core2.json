@@ -1240,5 +1240,51 @@
     "zh": "口诀：对称加密谁最强，全球公认选【AES】！DES 密钥太短随便秒，3DES 碰撞遭淘汰，RC4 漏洞被禁用！",
     "en": "Exam Tip: Least vulnerable / Strongest symmetric cipher = AES. Obsolete & crackable = DES, 3DES, RC4."
   }
+},
+{
+  "id": 54,
+  "type": "single",
+  "stem": {
+    "zh": "以下哪种 AAA 解决方案依赖 TCP 协议，将身份验证（Authentication）、授权（Authorization）和记账（Accounting）严格分离，并且常用于企业网络中的网络设备（如路由器、交换机）管理员权限管理？",
+    "en": "Which of the following AAA solutions relies on TCP, separates authentication, authorization, and accounting, and is commonly used for device administration in enterprise networks?"
+  },
+  "options": [
+    { "key": "A", "text": "OAuth" },
+    { "key": "B", "text": "TACACS+" },
+    { "key": "C", "text": "SAML" },
+    { "key": "D", "text": "RADIUS" }
+  ],
+  "answer": ["B"],
+  "explanation": {
+    "zh": "【考点：AAA 协议对比之 TACACS+ 特性】\n正确答案是 B（TACACS+ / 终端访问控制器访问控制系统增强版）。\n\n• 传输层协议：TACACS+ 使用可靠的 TCP（端口 49），确保管理命令交互的稳定传输。\n• AAA 三权分立：TACACS+ 将认证（Authentication）、授权（Authorization）和记账（Accounting）三者作为完全独立的服务分别处理。例如，网络管理员可以通过 TACACS+ 精细控制某工程师“能执行 show 命令但不能执行 config 更改”。\n• 全报文加密：TACACS+ 对除固定报头外的整个数据包载荷全部加密（安全性高于仅加密密码的 RADIUS）。\n• 适用场景：主要用于网络基础设施的管理员设备管理（Device Administration）。\n\n• RADIUS：使用 UDP，将认证与授权合并为一个过程，主要用于网络准入（VPN、企业 Wi-Fi）。\n• OAuth / SAML：属于现代 Web 应用程序和云服务的授权与身份联合单点登录（SSO）协议，不用于底层网络设备管理。",
+    "en": "TACACS+ uses TCP (port 49), separates AAA into three distinct modular services (allowing granular per-command authorization), encrypts the entire packet payload, and is the industry standard for device administration (routers, switches, firewalls).\n\n• RADIUS relies on UDP and combines authentication and authorization.\n• OAuth and SAML are Web-based identity and authorization federation protocols, not AAA network device management solutions."
+  },
+  "mnemonic": {
+    "zh": "口诀：【TACACS+】三步走（AAA 分离）、TCP 49 稳当走、全包加密管设备！【RADIUS】UDP 跑得快、认证授权揉一块！",
+    "en": "Exam Tip: TACACS+ = TCP (port 49) + Separates AAA + Encrypts Entire Body + Device Administration."
+  }
+},
+{
+  "id": 55,
+  "type": "single",
+  "stem": {
+    "zh": "以下哪项是指 Windows Active Directory（活动目录）域环境中，用于实现单点登录（SSO, Single Sign-On）的主要且默认的身份验证协议？",
+    "en": "Which of the answers listed below refers to the primary and default authentication protocol used in Windows Active Directory environments to enable SSO?"
+  },
+  "options": [
+    { "key": "A", "text": "RADIUS" },
+    { "key": "B", "text": "NTLM" },
+    { "key": "C", "text": "Kerberos" },
+    { "key": "D", "text": "MS-CHAP" }
+  ],
+  "answer": ["C"],
+  "explanation": {
+    "zh": "【考点：Windows 域核心身份验证协议 Kerberos】\n正确答案是 C（Kerberos）。\n\n• 默认核心协议：自 Windows 2000 引入 Active Directory 以来，Kerberos（端口 88 TCP/UDP）一直都是 Windows 域内默认且最核心的身份认证协议。\n• 票据与 SSO 机制：Kerberos 基于密钥分发中心（KDC，运行在域控制器 DC 上），通过发放票据许可票据（TGT）和服务票据（Service Ticket），允许用户在初次登录域后，访问网络中的文件共享、打印机和服务器等资源时无需重复输入密码，直接实现透明的单点登录（SSO）。\n• 双向认证：Kerberos 支持客户端与服务器的双向相互身份验证（Mutual Authentication），防止中间人伪造服务器。\n\n• NTLM：Windows 早期的旧质询/响应身份验证协议，仅在 Kerberos 无法工作（如跨非受信任网络、使用纯 IP 地址访问、或工作组环境）时作为降级后备方案，已不推荐使用。\n• RADIUS：网络接入控制 AAA 协议（常用于 Wi-Fi/VPN 拨入），非 Windows 域内置的登录认证机制。\n• MS-CHAP：微软点对点通道质询握手身份验证协议，常用于 PPTP VPN 拨号，安全性弱且已过时。",
+    "en": "Kerberos is the primary and default authentication protocol in Windows Active Directory domain environments. It relies on a Key Distribution Center (KDC, running on Domain Controllers) issuing tickets (TGT and service tickets) over port 88 to provide seamless Single Sign-On (SSO) and mutual authentication without retransmitting user credentials.\n\n• NTLM is the legacy fallback protocol used only when Kerberos cannot be negotiated.\n• RADIUS is an AAA solution for remote and wireless access.\n• MS-CHAP is a legacy challenge-handshake protocol used in VPN/PPP connections."
+  },
+  "mnemonic": {
+    "zh": "口诀：Windows 域登录 SSO 必选【Kerberos】（三头犬拿票据）；旧版备用退选【NTLM】！",
+    "en": "Exam Tip: Windows AD default & primary SSO protocol = Kerberos (Ticket-based, port 88). Legacy fallback = NTLM."
+  }
 }
   ]
