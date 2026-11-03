@@ -209,9 +209,9 @@
     <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
       <div class="select-wrap">
         <select class="exam-select" id="examSelector" onchange="switchExam(this.value)" aria-label="Select Certification Exam">
+          <option value="core1">CompTIA A+ Core 1 (220-1201)</option>
           <option value="core2">CompTIA A+ Core 2 (220-1102)</option>
           <!-- Ready to uncomment when question banks are populated:
-          <option value="core1">CompTIA A+ Core 1 (220-1101)</option>
           <option value="secplus">CompTIA Security+ (SY0-701)</option>
           <option value="netplus">CompTIA Network+ (N10-009)</option>
           <option value="ccna">Cisco CCNA (200-301)</option>
@@ -309,12 +309,13 @@
       <p id="footerAboutDesc">ExamHi is a specialized, free online study engine designed for candidates preparing for high-stakes IT certifications including CompTIA A+, Network+, Security+, and Cisco CCNA. All questions feature real-world troubleshooting scenarios with comprehensive bilingual explanations.</p>
     </div>
     <div class="footer-col">
-      <h3 id="footerDomainsTitle">Core 2 Domains</h3>
+      <h3 id="footerDomainsTitle">Exam Domains</h3>
       <ul class="footer-links">
-        <li><span id="footerDom1">1.0 Operating Systems</span></li>
-        <li><span id="footerDom2">2.0 Security Fundamentals</span></li>
-        <li><span id="footerDom3">3.0 Software Troubleshooting</span></li>
-        <li><span id="footerDom4">4.0 Operational Procedures</span></li>
+        <li><span id="footerDom1">1.0 Mobile Devices</span></li>
+        <li><span id="footerDom2">2.0 Networking</span></li>
+        <li><span id="footerDom3">3.0 Hardware</span></li>
+        <li><span id="footerDom4">4.0 Virtualization & Cloud Computing</span></li>
+        <li id="footerDom5Wrap"><span id="footerDom5">5.0 Hardware & Network Troubleshooting</span></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -435,7 +436,13 @@
       emptyUnansweredDesc: "You have answered every question in this bank. You can review your mistakes or reset progress to drill again.",
       footerAboutTitle: "About ExamHi",
       footerAboutDesc: "ExamHi is a specialized, free online study engine designed for candidates preparing for high-stakes IT certifications including CompTIA A+, Network+, Security+, and Cisco CCNA. All questions feature real-world troubleshooting scenarios with comprehensive bilingual explanations.",
-      footerDomainsTitle: "Core 2 Domains",
+      footerDomainsTitleCore1: "Core 1 (220-1201) Domains",
+      footerCore1Dom1: "1.0 Mobile Devices",
+      footerCore1Dom2: "2.0 Networking",
+      footerCore1Dom3: "3.0 Hardware",
+      footerCore1Dom4: "4.0 Virtualization & Cloud Computing",
+      footerCore1Dom5: "5.0 Hardware & Network Troubleshooting",
+      footerDomainsTitle: "Core 2 (220-1102) Domains",
       footerDom1: "1.0 Operating Systems",
       footerDom2: "2.0 Security Fundamentals",
       footerDom3: "3.0 Software Troubleshooting",
@@ -499,7 +506,13 @@
       emptyUnansweredDesc: "恭喜你完成了题库中的所有题目！你可以切换到“错题本”复盘，或点击“重置进度”二刷。",
       footerAboutTitle: "关于 ExamHi",
       footerAboutDesc: "ExamHi 是专为备考 CompTIA A+、Network+、Security+ 及 Cisco CCNA 等高含金量 IT 认证考生打造的免费在线刷题特训引擎。所有考题均结合真实排障场景，配备深度中英双语解析与秒杀记忆口诀。",
-      footerDomainsTitle: "Core 2 核心考纲域",
+      footerDomainsTitleCore1: "Core 1 (220-1201) 核心考纲域",
+      footerCore1Dom1: "1.0 移动设备 (Mobile Devices)",
+      footerCore1Dom2: "2.0 网络技术 (Networking)",
+      footerCore1Dom3: "3.0 硬件系统 (Hardware)",
+      footerCore1Dom4: "4.0 虚拟化与云计算 (Virtualization & Cloud)",
+      footerCore1Dom5: "5.0 硬件与网络排障 (Troubleshooting)",
+      footerDomainsTitle: "Core 2 (220-1102) 核心考纲域",
       footerDom1: "1.0 操作系统 (Operating Systems)",
       footerDom2: "2.0 安全基础 (Security Fundamentals)",
       footerDom3: "3.0 软件故障排查 (Software Troubleshooting)",
@@ -821,11 +834,22 @@
 
     document.getElementById('footerAboutTitle').innerText = t.footerAboutTitle;
     document.getElementById('footerAboutDesc').innerText = t.footerAboutDesc;
-    document.getElementById('footerDomainsTitle').innerText = t.footerDomainsTitle;
-    document.getElementById('footerDom1').innerText = t.footerDom1;
-    document.getElementById('footerDom2').innerText = t.footerDom2;
-    document.getElementById('footerDom3').innerText = t.footerDom3;
-    document.getElementById('footerDom4').innerText = t.footerDom4;
+    if (currentExam === 'core1') {
+      document.getElementById('footerDomainsTitle').innerText = t.footerDomainsTitleCore1;
+      document.getElementById('footerDom1').innerText = t.footerCore1Dom1;
+      document.getElementById('footerDom2').innerText = t.footerCore1Dom2;
+      document.getElementById('footerDom3').innerText = t.footerCore1Dom3;
+      document.getElementById('footerDom4').innerText = t.footerCore1Dom4;
+      document.getElementById('footerDom5').innerText = t.footerCore1Dom5;
+      document.getElementById('footerDom5Wrap').style.display = 'list-item';
+    } else {
+      document.getElementById('footerDomainsTitle').innerText = t.footerDomainsTitle;
+      document.getElementById('footerDom1').innerText = t.footerDom1;
+      document.getElementById('footerDom2').innerText = t.footerDom2;
+      document.getElementById('footerDom3').innerText = t.footerDom3;
+      document.getElementById('footerDom4').innerText = t.footerDom4;
+      document.getElementById('footerDom5Wrap').style.display = 'none';
+    }
     document.getElementById('footerLinksTitle').innerText = t.footerLinksTitle;
     document.getElementById('footerLinkHome').innerText = t.footerLinkHome;
     document.getElementById('footerLinkPrivacy').innerText = t.footerLinkPrivacy;
@@ -929,7 +953,7 @@
       label.appendChild(input);
       const span = document.createElement('span');
       const optText = (typeof opt.text === 'object') ? (opt.text[currentLang] || opt.text.en || opt.text.zh) : opt.text;
-      span.innerText = `${opt.key}. ${optText.replace(/^[A-E]\.\s*/i, '')}`;
+      span.innerText = `${opt.key}. ${optText.replace(/^[A-H]\.\s*/i, '')}`;
       label.appendChild(span);
       container.appendChild(label);
     });
@@ -1041,8 +1065,8 @@
 
     const q = filteredQuestions[currentIdx];
     const key = e.key.toUpperCase();
-    if (['A', 'B', 'C', 'D', 'E'].includes(key) || ['1', '2', '3', '4', '5'].includes(key)) {
-      const map = { '1': 'A', '2': 'B', '3': 'C', '4': 'D', '5': 'E' };
+    if (['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'].includes(key) || ['1', '2', '3', '4', '5', '6', '7', '8'].includes(key)) {
+      const map = { '1': 'A', '2': 'B', '3': 'C', '4': 'D', '5': 'E', '6': 'F', '7': 'G', '8': 'H' };
       const targetLetter = map[key] || key;
       const input = document.querySelector(`input[value="${targetLetter}"]`);
       if (input && !input.disabled) {
