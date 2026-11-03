@@ -1134,5 +1134,42 @@
     "zh": "口诀：管人管机建 OU 找 ADUC；定规矩、禁软件、绑 OU 找 GPMC（组策略管理控制台）！",
     "en": "Exam Tip: ADUC manages objects (users, computers); GPMC creates and links restriction policies (GPOs) to specific OUs."
   }
+}，
+  {
+  "id": 50,
+  "type": "single",
+  "stem": {
+    "zh": "Windows Active Directory 组策略管理控制台（GPMC）中的哪项功能用于确保用户的个人资料文件夹（如“文档”、“桌面”等）存储在集中式网络共享中，而不是保存在其本地计算机上？",
+    "en": "Which feature of the Windows Active Directory's Group Policy Management Console is used to ensure a user's profile folders are stored on a centralized network share rather than on their local computer?"
+  },
+  "options": [
+    {
+      "key": "A",
+      "text": "Home folders"
+    },
+    {
+      "key": "B",
+      "text": "Roaming profiles"
+    },
+    {
+      "key": "C",
+      "text": "Folder redirection"
+    },
+    {
+      "key": "D",
+      "text": "Drive quotas"
+    }
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": {
+    "zh": "【考点：Folder Redirection vs. Roaming Profiles 核心区别】\n正确答案是 C（Folder redirection / 文件夹重定向）。\n\n• 文件夹重定向（Folder Redirection）：组策略（GPO）中的一项核心功能，用于将用户配置文件中的特定文件夹（例如“文档 Documents”、“桌面 Desktop”等）重定向并固定存储在中央网络共享（UNC 路径）上。用户在任何域内电脑登录时都能实时访问这些文件夹，且不会占用本地存储空间。\n\n• 漫游配置文件（Roaming Profiles）：在用户登录时将整个用户资料夹（Profile，包含 AppData、注册表等）从服务器完整下载到本地机器，注销时再整体回传同步。它不是直接把特定文件夹常驻在网络共享上，且文件过大时会导致严重的登录/注销卡顿。\n\n• 主文件夹（Home Folders）：在 ADUC（Active Directory 用户和计算机）中为用户分配的专用网络驱动器（如映射为 H: 盘），但不会自动接管和重定向桌面或文档等 Windows 默认配置文件夹。\n\n• 磁盘配额（Drive Quotas）：用于限制磁盘分区中单个用户或全局占用的最大存储空间配额，不具备重定向功能。",
+    "en": "Folder Redirection is a Group Policy setting that redirects the path of specific user profile folders (such as Documents and Desktop) directly to a centralized network share. This ensures that user data is stored centrally rather than on the local hard drive, saving local storage and allowing seamless access from any domain computer without prolonged logon synchronization delays.\n\n• Roaming Profiles copies the entire profile down to the local client at logon and uploads it back at logoff, which can cause significant logon delays if large files are present.\n• Home folders are dedicated network storage folders mapped to a drive letter (via ADUC), but they do not automatically redirect standard profile folders.\n• Drive quotas set storage capacity limits on disk volumes."
+  },
+  "mnemonic": {
+    "zh": "口诀：指定文件夹（桌面/文档）直接指向网络共享叫【文件夹重定向 (Folder Redirection)】；整套配置登录下载、注销回传叫【漫游配置文件 (Roaming Profiles)】！",
+    "en": "Exam Tip: Pinning specific profile folders directly to a network share = Folder Redirection; Copying the entire profile down at logon & up at logoff = Roaming Profiles."
+  }
 }
   ]
