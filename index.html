@@ -75,7 +75,7 @@
     /* Header & Branding */
     header { display: flex; justify-content: space-between; align-items: center; padding: 12px 0 20px 0; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
     .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
-    .brand-icon { width: 36px; height: 36px; background: linear-gradient(135deg, #3b82f6, #6366f1); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3); }
+    .brand-icon { width: 36px; height: 36px; background: linear-gradient(135deg, #3b82f6, #6366f1); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3); cursor: pointer; }
     .brand-text h1 { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.02em; color: #0f172a; line-height: 1.2; }
     .brand-text p { font-size: 0.8rem; color: var(--text-muted); }
 
@@ -199,6 +199,7 @@
     </a>
     <div class="header-tools">
       <button class="btn btn-lang" id="langToggleBtn" onclick="toggleLanguage()">🌐 中文版</button>
+      <button class="btn" id="adminAddBtn" style="display:none;" onclick="openAdminModal()">➕ Admin Add</button>
       <button class="btn" onclick="openContactModal()" id="headerContactBtn">📬 Contact</button>
     </div>
   </header>
@@ -349,6 +350,19 @@
   </div>
 </div>
 
+<!-- Hidden Admin Question Injector Modal -->
+<div class="modal-overlay" id="adminModal">
+  <div class="modal-box" style="max-width:600px;">
+    <h3 id="adminModalTitle" style="font-size:1.15rem; font-weight:700; margin-bottom:12px;">➕ Admin Fast Inject Question</h3>
+    <p id="adminModalSub" style="font-size:0.85rem; color:var(--text-muted); margin-bottom:10px;">Paste generated single JSON object below:</p>
+    <textarea id="rawCodeInput" rows="10" style="width:100%; padding:10px; border:1px solid var(--border); border-radius:6px; font-family:monospace; font-size:0.85rem;"></textarea>
+    <div style="display:flex; justify-content:flex-end; gap:8px; margin-top:14px;">
+      <button class="btn" id="adminCancelBtn" onclick="closeAdminModal()">Cancel</button>
+      <button class="btn btn-primary" id="adminInjectBtn" onclick="injectRawCode()">Inject</button>
+    </div>
+  </div>
+</div>
+
 <script>
   let currentLang = localStorage.getItem('it_drill_lang') || 'en';
   let currentExam = localStorage.getItem('it_drill_exam') || 'core2';
@@ -373,6 +387,11 @@
       appTitle: "ExamHi",
       appSubtitle: "Interactive IT Certification Practice & Drill",
       langBtn: "🌐 中文版",
+      adminAddBtn: "➕ Admin Add",
+      adminModalTitle: "➕ Admin Fast Inject Question",
+      adminModalSub: "Paste generated single JSON object below:",
+      adminCancelBtn: "Cancel",
+      adminInjectBtn: "Inject",
       contactBtn: "📬 Contact",
       modeSeq: "🔢 Sequential",
       modeRand: "🔀 Random",
@@ -432,6 +451,11 @@
       appTitle: "ExamHi",
       appSubtitle: "IT 认证权威考题特训系统",
       langBtn: "🌐 English",
+      adminAddBtn: "➕ 管理加题",
+      adminModalTitle: "➕ 站长快速注入考题",
+      adminModalSub: "请在下方粘贴生成的单道题目 JSON 代码：",
+      adminCancelBtn: "取消",
+      adminInjectBtn: "注入题库",
       contactBtn: "📬 联系反馈",
       modeSeq: "🔢 顺序模式",
       modeRand: "🔀 随机乱序",
@@ -549,20 +573,28 @@
       const res = await fetch(EXAM_CONFIG[examKey].file);
       if (!res.ok) throw new Error('File not found');
       const data = await res.json();
-      allQuestions = [...data].sort((a, b) => a.id - b.id);
+      const custom = JSON.parse(localStorage.getItem(`custom_${examKey}`) || '[]');
+      const dataIds = new Set(data.map(q => q.id));
+      const uniqueCustom = custom.filter(q => !dataIds.has(q.id));
+      allQuestions = [...data, ...uniqueCustom].sort((a, b) => a.id - b.id);
     } catch (e) {
       console.error(e);
-      allQuestions = [{
-        id: 1, type: "single",
-        stem: {
-          en: `The question bank for ${EXAM_CONFIG[examKey].name} is currently under preparation. Stay tuned!`,
-          zh: `【${EXAM_CONFIG[examKey].name}】题库正在编纂中，敬请期待！`
-        },
-        options: [{ key: "A", text: "Stay tuned / 持续关注" }],
-        answer: ["A"],
-        explanation: { en: "We are adding more scenario-based exam questions daily.", zh: "题库正在持续扩充中。" },
-        mnemonic: { en: "Consistency is key to passing!", zh: "坚持刷题，逢考必过！" }
-      }];
+      const custom = JSON.parse(localStorage.getItem(`custom_${examKey}`) || '[]');
+      if (custom.length > 0) {
+        allQuestions = [...custom].sort((a, b) => a.id - b.id);
+      } else {
+        allQuestions = [{
+          id: 1, type: "single",
+          stem: {
+            en: `The question bank for ${EXAM_CONFIG[examKey].name} is currently under preparation. Stay tuned!`,
+            zh: `【${EXAM_CONFIG[examKey].name}】题库正在编纂中，敬请期待！`
+          },
+          options: [{ key: "A", text: "Stay tuned / 持续关注" }],
+          answer: ["A"],
+          explanation: { en: "We are adding more scenario-based exam questions daily.", zh: "题库正在持续扩充中。" },
+          mnemonic: { en: "Consistency is key to passing!", zh: "坚持刷题，逢考必过！" }
+        }];
+      }
     }
 
     buildOrderedQuestions(false);
@@ -745,6 +777,11 @@
     document.getElementById('appTitle').innerText = t.appTitle;
     document.getElementById('appSubtitle').innerText = t.appSubtitle;
     document.getElementById('langToggleBtn').innerText = t.langBtn;
+    document.getElementById('adminAddBtn').innerText = t.adminAddBtn;
+    document.getElementById('adminModalTitle').innerText = t.adminModalTitle;
+    document.getElementById('adminModalSub').innerText = t.adminModalSub;
+    document.getElementById('adminCancelBtn').innerText = t.adminCancelBtn;
+    document.getElementById('adminInjectBtn').innerText = t.adminInjectBtn;
     document.getElementById('headerContactBtn').innerText = t.contactBtn;
 
     const orderModeBtn = document.getElementById('orderModeBtn');
@@ -998,6 +1035,8 @@
   /* 沉浸式全键盘快捷键支持 (A/B/C/D/E, Enter, 左右箭头, S收藏) */
   window.addEventListener('keydown', (e) => {
     if (document.getElementById('contactModal').style.display === 'flex') return;
+    if (document.getElementById('adminModal').style.display === 'flex') return;
+    if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName) && document.activeElement?.type !== 'radio' && document.activeElement?.type !== 'checkbox') return;
     if (!filteredQuestions || filteredQuestions.length === 0) return;
 
     const q = filteredQuestions[currentIdx];
@@ -1039,6 +1078,99 @@
     const subject = encodeURIComponent(`[ExamHi Question Feedback] Question ID: #${q.id} (${EXAM_CONFIG[currentExam].name})`);
     const body = encodeURIComponent(`Hi ExamHi Team,\n\nI have a question / found an issue with Question #${q.id}:\n\nQuestion Stem:\n${typeof q.stem === 'object' ? q.stem.en : q.stem}\n\nMy Feedback / Correction:\n`);
     window.location.href = `mailto:support@examhi.com?subject=${subject}&body=${body}`;
+  }
+
+  /* ================= 管理员彩蛋与密码学安全验证 (SHA-256) ================= */
+  const TARGET_HASH = "28a3be9554193092cec44f1bfca823b923dc40a506c8541fff1c69ea1469e1eb";
+
+  async function sha256(message) {
+    const msgBuffer = new TextEncoder().encode(message);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+  }
+
+  if (localStorage.getItem('examhi_admin') === 'true') {
+    document.getElementById('adminAddBtn').style.display = 'inline-flex';
+  }
+
+  // 连点 Logo 5 次触发密码输入（带自动去空格与大小写兼容）
+  let clickCount = 0;
+  let clickTimer = null;
+  const brandIcon = document.querySelector('.brand-icon');
+  if (brandIcon) {
+    brandIcon.addEventListener('click', async (e) => {
+      e.preventDefault();
+      clickCount++;
+      clearTimeout(clickTimer);
+      clickTimer = setTimeout(() => { clickCount = 0; }, 3000);
+
+      if (clickCount >= 5) {
+        clickCount = 0;
+        const promptMsg = currentLang === 'zh' ? "请输入站长管理密钥 (Master Key):" : "Enter Admin Master Key:";
+        const inputPass = prompt(promptMsg);
+        if (inputPass) {
+          const inputHash = await sha256(inputPass.trim());
+          if (inputHash.toLowerCase() === TARGET_HASH.trim().toLowerCase()) {
+            document.getElementById('adminAddBtn').style.display = 'inline-flex';
+            localStorage.setItem('examhi_admin', 'true');
+            alert(currentLang === 'zh' ? "🎉 身份验证通过，管理模式已解锁！" : "🎉 Authentication succeeded! Admin mode unlocked.");
+          } else {
+            alert(currentLang === 'zh' ? "❌ 密钥错误，访问被拒绝！" : "❌ Invalid key. Access denied!");
+          }
+        }
+      }
+    });
+  }
+
+  function openAdminModal() {
+    document.getElementById('adminModal').style.display = 'flex';
+  }
+  function closeAdminModal() {
+    document.getElementById('adminModal').style.display = 'none';
+  }
+
+  function injectRawCode() {
+    const raw = document.getElementById('rawCodeInput').value.trim();
+    if (!raw) return alert(currentLang === 'zh' ? '请先粘贴 JSON 代码！' : 'No code pasted!');
+    try {
+      let parsed;
+      try {
+        parsed = JSON.parse(raw);
+      } catch (e) {
+        parsed = (new Function(`return (${raw});`))();
+      }
+      const items = Array.isArray(parsed) ? parsed : [parsed];
+      const customKey = `custom_${currentExam}`;
+      let custom = JSON.parse(localStorage.getItem(customKey) || '[]');
+      let lastAddedId = null;
+
+      items.forEach(item => {
+        const maxId = allQuestions.reduce((m, q) => Math.max(m, Number(q.id) || 0), 0);
+        item.id = item.id || (maxId + 1);
+        lastAddedId = item.id;
+        custom = custom.filter(q => q.id !== item.id);
+        custom.push(item);
+        allQuestions = allQuestions.filter(q => q.id !== item.id);
+        allQuestions.push(item);
+        if (orderMode === 'random' && !savedRandomOrder.includes(item.id)) {
+          savedRandomOrder.push(item.id);
+        }
+      });
+
+      allQuestions.sort((a, b) => a.id - b.id);
+      localStorage.setItem(customKey, JSON.stringify(custom));
+      document.getElementById('rawCodeInput').value = '';
+      closeAdminModal();
+      filterMode = 'all';
+      buildOrderedQuestions(false);
+      applyFilter(lastAddedId);
+      saveProgress();
+      renderUI();
+      alert(currentLang === 'zh' ? '🎉 题目注入成功！' : '🎉 Question injected successfully!');
+    } catch (err) {
+      alert((currentLang === 'zh' ? '解析错误: ' : 'Parse error: ') + err.message);
+    }
   }
 
   loadExamData(currentExam);
