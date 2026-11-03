@@ -218,7 +218,7 @@
         </select>
       </div>
       <button class="btn" id="orderModeBtn" onclick="toggleOrderMode()" title="Switch between sequential and random order">🔢 Sequential</button>
-      <button class="btn" id="reshuffleBtn" onclick="reshuffleCurrentExam()" style="display:none;" title="Reshuffle Question Order">🔄 Reshuffle</button>
+      <button class="btn" id="reshuffleBtn" onclick="reshuffleCurrentExam()" title="Shuffle Question Order">🔀 Shuffle</button>
       <button class="btn btn-danger-ghost" id="resetProgressBtn" onclick="resetCurrentExamProgress()" title="Clear saved answers and restart">🗑️ Reset</button>
     </div>
     <div class="stats-badge" id="statsSummary">Loading...</div>
@@ -304,30 +304,30 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-col">
-      <h3>About ExamHi</h3>
-      <p>ExamHi is a specialized, free online study engine designed for candidates preparing for high-stakes IT certifications including CompTIA A+, Network+, Security+, and Cisco CCNA. All questions feature real-world troubleshooting scenarios with comprehensive bilingual explanations.</p>
+      <h3 id="footerAboutTitle">About ExamHi</h3>
+      <p id="footerAboutDesc">ExamHi is a specialized, free online study engine designed for candidates preparing for high-stakes IT certifications including CompTIA A+, Network+, Security+, and Cisco CCNA. All questions feature real-world troubleshooting scenarios with comprehensive bilingual explanations.</p>
     </div>
     <div class="footer-col">
-      <h3>Core 2 Domains</h3>
+      <h3 id="footerDomainsTitle">Core 2 Domains</h3>
       <ul class="footer-links">
-        <li><span>1.0 Operating Systems</span></li>
-        <li><span>2.0 Security Fundamentals</span></li>
-        <li><span>3.0 Software Troubleshooting</span></li>
-        <li><span>4.0 Operational Procedures</span></li>
+        <li><span id="footerDom1">1.0 Operating Systems</span></li>
+        <li><span id="footerDom2">2.0 Security Fundamentals</span></li>
+        <li><span id="footerDom3">3.0 Software Troubleshooting</span></li>
+        <li><span id="footerDom4">4.0 Operational Procedures</span></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h3>Quick Links</h3>
+      <h3 id="footerLinksTitle">Quick Links</h3>
       <ul class="footer-links">
-        <li><a href="https://examhi.com/">Home / Practice Tests</a></li>
-        <li><a href="https://examhi.com/privacy.html">Privacy Policy</a></li>
-        <li><a onclick="openContactModal()">Contact Us & Feedback</a></li>
+        <li><a href="https://examhi.com/" id="footerLinkHome">Home / Practice Tests</a></li>
+        <li><a href="https://examhi.com/privacy.html" id="footerLinkPrivacy">Privacy Policy</a></li>
+        <li><a onclick="openContactModal()" id="footerLinkContact">Contact Us & Feedback</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <div>&copy; 2026 ExamHi. All rights reserved.</div>
-    <div>CompTIA®, A+®, Network+®, and Security+® are registered trademarks of CompTIA, Inc. Cisco® and CCNA® are registered trademarks of Cisco Systems, Inc. ExamHi is an independent educational platform and is not affiliated with or endorsed by CompTIA or Cisco.</div>
+    <div id="footerCopyright">&copy; 2026 ExamHi. All rights reserved.</div>
+    <div id="footerDisclaimer">CompTIA®, A+®, Network+®, and Security+® are registered trademarks of CompTIA, Inc. Cisco® and CCNA® are registered trademarks of Cisco Systems, Inc. ExamHi is an independent educational platform and is not affiliated with or endorsed by CompTIA or Cisco.</div>
   </div>
 </footer>
 
@@ -338,13 +338,13 @@
     <p id="contactModalSub">Have questions, found a typo, or want to suggest new features? We would love to hear from you!</p>
     
     <div class="contact-card-box">
-      <strong>Official Email Support:</strong>
+      <strong id="contactEmailLabel">Official Email Support:</strong>
       <a href="mailto:support@examhi.com" id="contactMailLink" style="color:var(--primary); font-size:1rem; font-weight:600; text-decoration:none;">support@examhi.com</a>
-      <p style="font-size:0.8rem; color:var(--text-muted); margin-top:4px;">(Click above to send email directly via your mail client)</p>
+      <p id="contactEmailHint" style="font-size:0.8rem; color:var(--text-muted); margin-top:4px;">(Click above to send email directly via your mail client)</p>
     </div>
 
     <div style="display:flex; justify-content:flex-end; gap:8px; margin-top:20px;">
-      <button class="btn btn-primary" onclick="closeContactModal()">Close</button>
+      <button class="btn btn-primary" id="contactCloseBtn" onclick="closeContactModal()">Close</button>
     </div>
   </div>
 </div>
@@ -376,8 +376,12 @@
       contactBtn: "📬 Contact",
       modeSeq: "🔢 Sequential",
       modeRand: "🔀 Random",
+      modeBtnTitle: "Click to switch between sequential and random order",
       reshuffleBtn: "🔄 Reshuffle",
+      reshuffleBtnTitle: "Reshuffle question order",
       resetBtn: "🗑️ Reset",
+      resetBtnTitle: "Clear saved answers and restart",
+      starBtnTitle: "Bookmark this question (Shortcut: S)",
       resetConfirm: "Reset all saved progress and answers for this exam? (Your starred bookmarks will be kept.)",
       filterAll: "All",
       filterUnanswered: "🆕 Unanswered",
@@ -399,6 +403,9 @@
       statAnswered: "Answered: {ans} / {total} | Accuracy: {acc}%",
       contactTitle: "📬 Contact Us & Feedback",
       contactSub: "Have questions, found a typo, or want to suggest new features? Reach out directly to our team!",
+      contactEmailLabel: "Official Email Support:",
+      contactEmailHint: "(Click above to send email directly via your mail client)",
+      contactCloseBtn: "Close",
       reportText: "🚩 Report an issue with this question",
       emptyBack: "Show All Questions",
       emptyWrongTitle: "Zero Mistakes!",
@@ -406,7 +413,20 @@
       emptyStarredTitle: "No Starred Questions",
       emptyStarredDesc: "Click the ★ icon on any question (or press 'S') to bookmark it for later review.",
       emptyUnansweredTitle: "All Questions Completed!",
-      emptyUnansweredDesc: "You have answered every question in this bank. You can review your mistakes or reset progress to drill again."
+      emptyUnansweredDesc: "You have answered every question in this bank. You can review your mistakes or reset progress to drill again.",
+      footerAboutTitle: "About ExamHi",
+      footerAboutDesc: "ExamHi is a specialized, free online study engine designed for candidates preparing for high-stakes IT certifications including CompTIA A+, Network+, Security+, and Cisco CCNA. All questions feature real-world troubleshooting scenarios with comprehensive bilingual explanations.",
+      footerDomainsTitle: "Core 2 Domains",
+      footerDom1: "1.0 Operating Systems",
+      footerDom2: "2.0 Security Fundamentals",
+      footerDom3: "3.0 Software Troubleshooting",
+      footerDom4: "4.0 Operational Procedures",
+      footerLinksTitle: "Quick Links",
+      footerLinkHome: "Home / Practice Tests",
+      footerLinkPrivacy: "Privacy Policy",
+      footerLinkContact: "Contact Us & Feedback",
+      footerCopyright: "© 2026 ExamHi. All rights reserved.",
+      footerDisclaimer: "CompTIA®, A+®, Network+®, and Security+® are registered trademarks of CompTIA, Inc. Cisco® and CCNA® are registered trademarks of Cisco Systems, Inc. ExamHi is an independent educational platform and is not affiliated with or endorsed by CompTIA or Cisco."
     },
     zh: {
       appTitle: "ExamHi",
@@ -415,8 +435,12 @@
       contactBtn: "📬 联系反馈",
       modeSeq: "🔢 顺序模式",
       modeRand: "🔀 随机乱序",
+      modeBtnTitle: "点击切换“顺序刷题”与“随机乱序”模式",
       reshuffleBtn: "🔄 重新洗牌",
+      reshuffleBtnTitle: "重新随机打乱题目顺序",
       resetBtn: "🗑️ 重置进度",
+      resetBtnTitle: "清空当前已答记录并重新开始",
+      starBtnTitle: "收藏/取消收藏此题（快捷键：S）",
       resetConfirm: "确定要清空当前科目的所有做题进度和答题记录吗？（星标收藏的题目会为您保留）",
       filterAll: "全部题目",
       filterUnanswered: "🆕 未做题目",
@@ -438,6 +462,9 @@
       statAnswered: "已答: {ans} / {total} | 正确率: {acc}%",
       contactTitle: "📬 联系我们与意见反馈",
       contactSub: "对题目有疑问、发现了笔误、或者有任何改进建议？随时联系站长团队！",
+      contactEmailLabel: "官方反馈邮箱：",
+      contactEmailHint: "（点击上方链接即可直接唤醒邮件客户端发送邮件）",
+      contactCloseBtn: "关闭",
       reportText: "🚩 对此题有疑问 / 纠错反馈",
       emptyBack: "返回全部题目",
       emptyWrongTitle: "错题本为空！",
@@ -445,7 +472,20 @@
       emptyStarredTitle: "暂无收藏题目",
       emptyStarredDesc: "做题时点击右上角的 ★ 星标按钮（或按键盘 S 键），即可将重点题目加入收藏夹。",
       emptyUnansweredTitle: "全部题目已刷完！",
-      emptyUnansweredDesc: "恭喜你完成了题库中的所有题目！你可以切换到“错题本”复盘，或点击“重置进度”二刷。"
+      emptyUnansweredDesc: "恭喜你完成了题库中的所有题目！你可以切换到“错题本”复盘，或点击“重置进度”二刷。",
+      footerAboutTitle: "关于 ExamHi",
+      footerAboutDesc: "ExamHi 是专为备考 CompTIA A+、Network+、Security+ 及 Cisco CCNA 等高含金量 IT 认证考生打造的免费在线刷题特训引擎。所有考题均结合真实排障场景，配备深度中英双语解析与秒杀记忆口诀。",
+      footerDomainsTitle: "Core 2 核心考纲域",
+      footerDom1: "1.0 操作系统 (Operating Systems)",
+      footerDom2: "2.0 安全基础 (Security Fundamentals)",
+      footerDom3: "3.0 软件故障排查 (Software Troubleshooting)",
+      footerDom4: "4.0 运维规范与流程 (Operational Procedures)",
+      footerLinksTitle: "快捷导航",
+      footerLinkHome: "首页 / 题库特训",
+      footerLinkPrivacy: "隐私政策 (Privacy Policy)",
+      footerLinkContact: "联系我们与纠错反馈",
+      footerCopyright: "© 2026 ExamHi. 保留所有权利。",
+      footerDisclaimer: "CompTIA®、A+®、Network+® 和 Security+® 是 CompTIA, Inc. 的注册商标；Cisco® 和 CCNA® 是 Cisco Systems, Inc. 的注册商标。ExamHi 是独立的教育学习平台，不隶属于 CompTIA 或 Cisco，亦未受其官方背书。"
     }
   };
 
@@ -673,7 +713,7 @@
       btn.className = classes.join(' ');
       btn.id = `nav-${i}`;
       btn.innerText = orderMode === 'sequential' ? q.id : (i + 1);
-      btn.title = `Question #${q.id}`;
+      btn.title = currentLang === 'zh' ? `第 #${q.id} 题` : `Question #${q.id}`;
       btn.onclick = () => jumpTo(i);
       grid.appendChild(btn);
     });
@@ -706,10 +746,20 @@
     document.getElementById('appSubtitle').innerText = t.appSubtitle;
     document.getElementById('langToggleBtn').innerText = t.langBtn;
     document.getElementById('headerContactBtn').innerText = t.contactBtn;
-    document.getElementById('orderModeBtn').innerText = orderMode === 'sequential' ? t.modeSeq : t.modeRand;
-    document.getElementById('reshuffleBtn').innerText = t.reshuffleBtn;
-    document.getElementById('reshuffleBtn').style.display = orderMode === 'random' ? 'inline-flex' : 'none';
-    document.getElementById('resetProgressBtn').innerText = t.resetBtn;
+
+    const orderModeBtn = document.getElementById('orderModeBtn');
+    orderModeBtn.innerText = orderMode === 'sequential' ? t.modeSeq : t.modeRand;
+    orderModeBtn.title = t.modeBtnTitle;
+
+    const reshuffleBtn = document.getElementById('reshuffleBtn');
+    reshuffleBtn.innerText = t.reshuffleBtn;
+    reshuffleBtn.title = t.reshuffleBtnTitle;
+
+    const resetProgressBtn = document.getElementById('resetProgressBtn');
+    resetProgressBtn.innerText = t.resetBtn;
+    resetProgressBtn.title = t.resetBtnTitle;
+
+    document.getElementById('starBtn').title = t.starBtnTitle;
 
     document.getElementById('filterLabelAll').innerText = t.filterAll;
     document.getElementById('filterLabelUnanswered').innerText = t.filterUnanswered;
@@ -728,6 +778,24 @@
 
     document.getElementById('contactModalTitle').innerText = t.contactTitle;
     document.getElementById('contactModalSub').innerText = t.contactSub;
+    document.getElementById('contactEmailLabel').innerText = t.contactEmailLabel;
+    document.getElementById('contactEmailHint').innerText = t.contactEmailHint;
+    document.getElementById('contactCloseBtn').innerText = t.contactCloseBtn;
+
+    document.getElementById('footerAboutTitle').innerText = t.footerAboutTitle;
+    document.getElementById('footerAboutDesc').innerText = t.footerAboutDesc;
+    document.getElementById('footerDomainsTitle').innerText = t.footerDomainsTitle;
+    document.getElementById('footerDom1').innerText = t.footerDom1;
+    document.getElementById('footerDom2').innerText = t.footerDom2;
+    document.getElementById('footerDom3').innerText = t.footerDom3;
+    document.getElementById('footerDom4').innerText = t.footerDom4;
+    document.getElementById('footerLinksTitle').innerText = t.footerLinksTitle;
+    document.getElementById('footerLinkHome').innerText = t.footerLinkHome;
+    document.getElementById('footerLinkPrivacy').innerText = t.footerLinkPrivacy;
+    document.getElementById('footerLinkContact').innerText = t.footerLinkContact;
+    document.getElementById('footerCopyright').innerText = t.footerCopyright;
+    document.getElementById('footerDisclaimer').innerText = t.footerDisclaimer;
+
     renderQuiz();
   }
 
