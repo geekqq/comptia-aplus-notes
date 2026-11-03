@@ -1134,7 +1134,7 @@
     "zh": "口诀：管人管机建 OU 找 ADUC；定规矩、禁软件、绑 OU 找 GPMC（组策略管理控制台）！",
     "en": "Exam Tip: ADUC manages objects (users, computers); GPMC creates and links restriction policies (GPOs) to specific OUs."
   }
-}，
+},
   {
   "id": 50,
   "type": "single",
