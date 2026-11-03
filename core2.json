@@ -1171,5 +1171,74 @@
     "zh": "口诀：指定文件夹（桌面/文档）直接指向网络共享叫【文件夹重定向 (Folder Redirection)】；整套配置登录下载、注销回传叫【漫游配置文件 (Roaming Profiles)】！",
     "en": "Exam Tip: Pinning specific profile folders directly to a network share = Folder Redirection; Copying the entire profile down at logon & up at logoff = Roaming Profiles."
   }
+},
+{
+  "id": 51,
+  "type": "single",
+  "stem": {
+    "zh": "哪种 AAA 解决方案使用 UDP 作为其传输层协议，将身份验证（Authentication）与授权（Authorization）结合在一起，并且常用于 VPN 和 Wi-Fi（如 802.1X 企业级无线）等网络访问控制场景？",
+    "en": "Which AAA solution uses UDP as its transport protocol, combines authentication and authorization, and is commonly deployed for network access control such as VPNs and Wi-Fi authentication?"
+  },
+  "options": [
+    { "key": "A", "text": "RADIUS" },
+    { "key": "B", "text": "LDAP" },
+    { "key": "C", "text": "TACACS+" },
+    { "key": "D", "text": "Kerberos" }
+  ],
+  "answer": ["A"],
+  "explanation": {
+    "zh": "【考点：AAA 协议核心对比：RADIUS vs. TACACS+】\n正确答案是 A（RADIUS / 远程用户拨号认证系统）。\n\n• 传输层协议：RADIUS 使用 UDP（端口 1812 用于认证/授权，1813 用于计费 Accounting）；而 TACACS+ 使用 TCP（端口 49）。\n• 功能架构：RADIUS 将“认证与授权”合并为一个过程（Access-Request / Access-Accept），计费独立；而 TACACS+ 将 Authentication、Authorization、Accounting 三者严格分离。\n• 加密范围：RADIUS 仅加密 Access-Request 数据包中的密码字段；TACACS+ 加密除报头外的全部载荷。\n• 典型应用：RADIUS 广泛应用于网络准入与接入控制（802.1X 企业级 Wi-Fi、VPN、802.1Q 网络接入）；TACACS+ 主要用于网络管理员登录管理路由器、交换机等设备命令行（设备管理）。\n\n• LDAP：轻量目录访问协议（TCP 389/636），属于目录查询协议，不是标准的网络访问 AAA 协议。\n• Kerberos：基于票据（Ticket）的单点登录协议（TCP/UDP 88），不属于传统的网络设备 AAA 接入方案。",
+    "en": "RADIUS (Remote Authentication Dial-In User Service) uses UDP (ports 1812/1813) as its transport protocol, combines authentication and authorization into a single transaction, and encrypts only the password packet. It is standard for network access control such as 802.1X wireless (WPA2/WPA3 Enterprise) and VPN authentication.\n\n• TACACS+ uses TCP (port 49), separates AAA into three distinct functions, encrypts the entire packet payload, and is typically used for router/switch administrative management.\n• LDAP is a directory querying protocol, not an AAA access protocol.\n• Kerberos is a ticket-granting SSO protocol."
+  },
+  "mnemonic": {
+    "zh": "口诀：【RADIUS】用 UDP、认证授权绑一起、专管无线与 VPN；【TACACS+】用 TCP、AAA 三权分立、全包加密管路由！",
+    "en": "Exam Tip: RADIUS = UDP + Combines Auth/Authz + Wi-Fi/VPN Access; TACACS+ = TCP + Separates AAA + Device Admin."
+  }
+},
+{
+  "id": 52,
+  "type": "single",
+  "stem": {
+    "zh": "以下哪项是指随 WPA（Wi-Fi Protected Access）标准引入，用于紧急替代存在严重安全缺陷的 WEP 的过渡性（stopgap）安全协议？",
+    "en": "Which of the following answers refers to a stopgap protocol introduced with WPA to replace WEP?"
+  },
+  "options": [
+    { "key": "A", "text": "AES" },
+    { "key": "B", "text": "TKIP" },
+    { "key": "C", "text": "CCMP" },
+    { "key": "D", "text": "RC4" }
+  ],
+  "answer": ["B"],
+  "explanation": {
+    "zh": "【考点：无线加密协议演进史与过渡技术】\n正确答案是 B（TKIP / 临时密钥完整性协议）。\n\n• 过渡性协议（Stopgap）：当 1999 年的 WEP 被证实存在弱 IV 严重缺陷可被秒破后，Wi-Fi 联盟在 2003 年紧急推出了第一代 WPA。为了让老旧的 WEP 无线网卡和路由器无需更换硬件即可通过固件升级获得保护，WPA 引入了 TKIP 作为“过渡性方案（Stopgap）”。\n• 实现原理：TKIP 仍然封装使用原有的 RC4 流加密芯片，但增加了针对每个数据包动态混合密钥（Per-packet Key Mixing）、48 位扩充 IV 以及消息完整性检查（MIC/Michael），成功修补了 WEP 的漏洞，直到采用新硬件芯片的 WPA2（AES-CCMP）成熟普及。\n\n• AES：高级加密标准，是极其健壮的分组密码，由于需要专用的硬件加速芯片，不能在旧版 WEP 硬件上直接平滑过渡，它是 WPA2 和 WPA3 的基石，并非“stopgap”。\n• CCMP：WPA2 时代基于 AES 建立的完整加密模式，用于彻底替代 TKIP。\n• RC4：是一种对称流密码算法，是 WEP 和 TKIP 底层依赖的加密算法，不是 WPA 引入的协议名称。",
+    "en": "TKIP (Temporal Key Integrity Protocol) was specifically introduced as an interim \"stopgap\" protocol in WPA to quickly replace the severely vulnerable WEP without forcing organizations to replace existing wireless hardware. It wrapped the legacy RC4 algorithm with dynamic per-packet key hashing and Message Integrity Checks (MIC).\n\n• AES is a robust block cipher algorithm requiring hardware acceleration; it forms the foundation of WPA2 and WPA3, not a temporary stopgap.\n• CCMP is the AES-based encryption protocol implemented in WPA2.\n• RC4 is the underlying stream cipher algorithm, not the protocol itself."
+  },
+  "mnemonic": {
+    "zh": "口诀：WEP 漏洞大爆发，WPA 用【TKIP】做临时替补（过渡 stopgap）；到了 WPA2 才换真主力【AES-CCMP】！",
+    "en": "Exam Tip: Stopgap replacement for WEP in WPA = TKIP (uses RC4). Permanent standard in WPA2 = AES-CCMP."
+  }
+},
+{
+  "id": 53,
+  "type": "single",
+  "stem": {
+    "zh": "在下列列出的加密算法中，哪一种面对攻击时的脆弱性最低（即安全性最强、最不易被破解）？",
+    "en": "Which of the cryptographic algorithms listed below is the least vulnerable to attacks?"
+  },
+  "options": [
+    { "key": "A", "text": "AES" },
+    { "key": "B", "text": "DES" },
+    { "key": "C", "text": "RC4" },
+    { "key": "D", "text": "3DES" }
+  ],
+  "answer": ["A"],
+  "explanation": {
+    "zh": "【考点：对称加密算法安全性强度与演进】\n正确答案是 A（AES / 高级加密标准）。\n题目问的是“least vulnerable to attacks”（受攻击脆弱性最低 = 安全性最高）。\n\n• AES（Advanced Encryption Standard）：现代主流的对称分组加密算法（Rijndael），支持 128、192 和 256 位密钥长度，是美国联邦政府及全球工业界目前的最高黄金标准。至今没有任何实用的数学或算力攻击手段能够破解全轮 AES，安全性极高。\n\n• DES（数据加密标准，您之前错选的项）：密钥仅 56 位，早在 1990 年代末期就被分布式暴力破解（在数小时内即可暴力穷举破解），在现代密码学中属于已被彻底淘汰的极不安全算法。\n\n• 3DES（三重 DES）：通过对每个数据块应用三次 DES（有效密钥 112 或 168 位）来提升抗穷举能力，但由于分组长度依然是旧的 64 位，容易遭受生日碰撞攻击（如 Sweet32 攻击），且计算开销大，已被 NIST 官方正式弃用。\n\n• RC4：流密码算法，曾在 WEP 和 TLS 早期广泛使用，但存在严重的密钥流偏差漏洞，已被 IETF 和各大标准组织全面禁用。",
+    "en": "AES (Advanced Encryption Standard) is the worldwide gold standard for symmetric block cipher encryption (128, 192, 256-bit keys). It has no known practical cryptographic weaknesses and is universally recognized as the least vulnerable (strongest) among the choices.\n\n• DES has a tiny 56-bit key length and can be brute-forced in hours; it is completely obsolete.\n• 3DES uses 64-bit blocks susceptible to Sweet32 collision attacks and is deprecated by NIST.\n• RC4 is a legacy stream cipher with severe statistical biases, prohibited in modern TLS/Wi-Fi."
+  },
+  "mnemonic": {
+    "zh": "口诀：对称加密谁最强，全球公认选【AES】！DES 密钥太短随便秒，3DES 碰撞遭淘汰，RC4 漏洞被禁用！",
+    "en": "Exam Tip: Least vulnerable / Strongest symmetric cipher = AES. Obsolete & crackable = DES, 3DES, RC4."
+  }
 }
   ]
