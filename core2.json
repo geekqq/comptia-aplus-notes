@@ -1405,5 +1405,53 @@
     "zh": "口诀：终端机上装软件实时防御（Active Defenses）有两尊门神：【主机防火墙】挡黑客端口探路，【杀毒软件】查杀恶意程序！做培训是【管理制度】，不是软件防御！",
     "en": "Exam Tip: Active endpoint technical defenses = Host-based firewall (blocks suspicious traffic) + Antivirus (blocks malware). Training is an administrative control."
   }
+},
+{
+  "id": 61,
+  "type": "multiple",
+  "selectLimit": 3,
+  "stem": {
+    "zh": "在 CompTIA 恶意软件标准清除流程中，以下哪三项步骤属于“修复感染系统阶段”（Remediation phase）的具体内容？（Select 3 answers）",
+    "en": "Which of the steps listed below are part of the remediation phase in the malware removal process? (Select 3 answers)"
+  },
+  "options": [
+    { "key": "A", "text": "Quarantining the infected system" },
+    { "key": "B", "text": "Malware scanning and removal" },
+    { "key": "C", "text": "Updating the anti-malware software" },
+    { "key": "D", "text": "Disabling system restore points" },
+    { "key": "E", "text": "Reimaging/reinstalling the system" }
+  ],
+  "answer": ["B", "C", "E"],
+  "explanation": {
+    "zh": "【考点：CompTIA 恶意软件清除 7 大流程之第 4 步修复阶段（Remediate）】\n正确答案是 B、C、E。\nCompTIA 官方标准的恶意软件清除 7 个步骤依次为：\n1. 识别症状（Identify）\n2. 隔离受感染系统（Quarantine）\n3. 禁用系统还原（Disable System Restore）\n4. ★ 修复感染系统（Remediate infected systems）：\n   - a. 升级杀毒软件特征库（Updating anti-malware software）\n   - b. 扫描与查杀病毒（Malware scanning and removal，使用安全模式/WinPE）\n   - c. 若病毒严重损坏系统或顽固无法清除，则重装/重新部署镜像（Reimaging/reinstalling the system）\n5. 配置计划扫描并保持更新（Schedule scans and run updates）\n6. 启用系统还原并创建干净还原点（Enable System Restore & create restore point）\n7. 培训最终用户（Educate end user）\n\n• 选项 A（隔离系统，您错选的项）：是独立的第 2 步（Quarantine），发生在修复阶段之前。\n• 选项 D（禁用系统还原，您错选的项）：是独立的第 3 步（Disable System Restore），也发生在修复阶段之前。",
+    "en": "CompTIA's official 7-step malware removal procedure designates Step 4 specifically as \"Remediate the infected systems\". This phase consists of: updating the anti-malware signature engine (C), performing in-depth scanning and removal techniques (B), and reimaging or reinstalling the OS if the system is compromised beyond repair (E).\n\n• Step 2 is Quarantine the infected system (A), which precedes remediation.\n• Step 3 is Disable System Restore (D), which also precedes remediation."
+  },
+  "mnemonic": {
+    "zh": "口诀：7 步口诀【认、隔、禁、修、计、还、培】！第 4 步【修 (Remediate)】三部曲：先升级特征库（Update）、再查杀扫描（Scan/Remove）、不行就重装重做镜像（Reimage）！",
+    "en": "Exam Tip: Step 4 Remediate = Update definitions -> Scan and remove -> Reimage/reinstall if needed."
+  }
+},
+{
+  "id": 62,
+  "type": "single",
+  "stem": {
+    "zh": "在成功从客户的 Windows 电脑上清除恶意软件（第 4 步完成）之后，技术人员接下来（Next）应该立即执行哪一步骤以确保持续的系统保护？",
+    "en": "After successfully removing malware from a client's Windows PC, which step should a technician perform next to maintain ongoing system protection?"
+  },
+  "options": [
+    { "key": "A", "text": "Reimage the system" },
+    { "key": "B", "text": "Create a restore point" },
+    { "key": "C", "text": "Schedule scans and run updates" },
+    { "key": "D", "text": "Educate the user" }
+  ],
+  "answer": ["C"],
+  "explanation": {
+    "zh": "【考点：CompTIA 恶意软件清除 7 大流程的时序衔接】\n正确答案是 C（配置计划定期扫描并运行系统更新 / Schedule scans and run updates）。\n题目核心关键词是：“After successfully removing malware... which step should a technician perform NEXT to maintain ongoing system protection”。\n\n• 第 4 步（Remediate / 修复清除）完成后的紧接着下一步就是【第 5 步：Schedule scans and run updates（配置计划定期扫描并执行操作系统与软件补丁更新）】，目的是确保持续的主动防护（maintain ongoing protection），防止再次复发。\n\n• 选项 D（培训用户，您错选的项）：是整个流程的【最后一步（第 7 步：Educate the end user）】，不是刚清完病毒紧接着的下一步。\n• 选项 B（创建还原点）：属于【第 6 步：Enable System Restore and create a restore point】，必须在第 5 步配置好更新和扫描之后再创建干净还原点。\n• 选项 A（重做镜像）：属于第 4 步中的极端修复手段，既然题干说明已经“successfully removing malware”，就无需再重装镜像。",
+    "en": "Following Step 4 (Remediate/remove malware), CompTIA's 7-step best practice dictates that Step 5 is immediately performed: \"Schedule scans and run updates\" to establish continuous system protection and prevent re-infection.\n\n• Educating the end user (D) is the final step (Step 7).\n• Creating a restore point (B) is Step 6 (Enable System Restore and create a clean restore point).\n• Reimaging (A) is an alternative within Step 4, unneeded once malware is successfully removed."
+  },
+  "mnemonic": {
+    "zh": "口诀：病毒杀完不能算完（第 4 步），紧接第 5 步【定计划勤扫描、打齐补丁防复发（Schedule scans & updates）】；最后第 7 步才叫来用户【做思想安全教育（Educate）】！",
+    "en": "Exam Tip: Step 4 = Remove malware -> Step 5 = Schedule scans & updates -> Step 6 = Enable System Restore & create restore point -> Step 7 = Educate user."
+  }
 }
   ]
