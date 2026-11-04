@@ -1380,5 +1380,30 @@
     "zh": "口诀：看到【Senior company executive / CEO / CFO】受骗，直接秒选【Whaling（捕鲸）】！",
     "en": "Exam Tip: Senior company executive / C-suite target = Whaling."
   }
+},
+{
+  "id": 60,
+  "type": "multiple",
+  "selectLimit": 2,
+  "stem": {
+    "zh": "以下哪两项安全控制措施被视为降低终端（Endpoint）常见漏洞风险的“基础第一道主动防御技术”（Basic first-line, active defenses）？（Select 2 answers）",
+    "en": "Which of the following controls are considered basic first-line, active defenses that reduce risk from common vulnerabilities on endpoints? (Select 2 answers)"
+  },
+  "options": [
+    { "key": "A", "text": "Strong passwords" },
+    { "key": "B", "text": "Host-based firewall" },
+    { "key": "C", "text": "Security awareness training" },
+    { "key": "D", "text": "Encryption" },
+    { "key": "E", "text": "Antivirus software" }
+  ],
+  "answer": ["B", "E"],
+  "explanation": {
+    "zh": "【考点：端点安全核心防御控制措施分类】\n正确答案是 B（主机防火墙）与 E（防病毒软件）。\n题目核心关键词是：“active defenses that reduce risk from common vulnerabilities on endpoints”（在终端设备上实时生效的主动技术防御措施）。\n\n• B. 主机防火墙（Host-based firewall，如 Windows Defender 防火墙）：作为终端网络层的第一道防线，实时监控并过滤流入和流出本地主机的流量，主动封锁可疑端口扫描、未授权外连和网络漏洞探测攻击。\n• E. 防病毒软件（Antivirus software）：在本地系统提供实时监控与常驻内存防护，主动拦截恶意程序、木马病毒落地执行并隔离感染文件。\n\n• 选项 C（安全意识培训，您错选的项）：属于“管理性/人员控制（Administrative control）”，旨在提高员工识别钓鱼的认知，并非运行在终端硬件系统上的“自动化技术性主动防御”。\n• 选项 A（强密码）：属于“身份凭证与认证控制（Authentication control）”，防范暴力破解，但不防御端点软件漏洞利用。\n• 选项 D（加密）：属于“数据机密性保护控制（Data protection control）”，防范数据被盗后读取，不属于主动拦截攻击的防御措施。",
+    "en": "Host-based firewalls (B) and Antivirus software (E) represent the fundamental, active technical defenses deployed directly on endpoint workstations to dynamically detect, block, and mitigate exploits and malicious activity in real time.\n\n• Security awareness training (C) is an administrative control aimed at educating personnel, not an active technical countermeasure running on endpoints.\n• Strong passwords (A) enforce access control and authentication resilience.\n• Encryption (D) protects data confidentiality at rest or in transit rather than preventing active vulnerability exploitation."
+  },
+  "mnemonic": {
+    "zh": "口诀：终端机上装软件实时防御（Active Defenses）有两尊门神：【主机防火墙】挡黑客端口探路，【杀毒软件】查杀恶意程序！做培训是【管理制度】，不是软件防御！",
+    "en": "Exam Tip: Active endpoint technical defenses = Host-based firewall (blocks suspicious traffic) + Antivirus (blocks malware). Training is an administrative control."
+  }
 }
   ]
