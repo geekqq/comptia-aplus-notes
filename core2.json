@@ -1286,5 +1286,99 @@
     "zh": "口诀：Windows 域登录 SSO 必选【Kerberos】（三头犬拿票据）；旧版备用退选【NTLM】！",
     "en": "Exam Tip: Windows AD default & primary SSO protocol = Kerberos (Ticket-based, port 88). Legacy fallback = NTLM."
   }
+},
+{
+  "id": 56,
+  "type": "single",
+  "stem": {
+    "zh": "以下哪项最佳描述了跟踪软件（Stalkerware / 跟踪窥探软件）的核心特征？（Select best answer）",
+    "en": "Which of the answers listed below describes the key characteristics of stalkerware? (Select best answer)"
+  },
+  "options": [
+    { "key": "A", "text": "Provides hidden remote access while transmitting user activity to an external party" },
+    { "key": "B", "text": "Captures on-screen output and periodic screenshots to reveal user activity" },
+    { "key": "C", "text": "Installs tracking cookies and monitors user activity across websites for profiling" },
+    { "key": "D", "text": "Collects location data, call logs, messages, and app usage for continuous monitoring" }
+  ],
+  "answer": ["D"],
+  "explanation": {
+    "zh": "【考点：移动恶意软件分类之 Stalkerware（跟踪软件）】\n正确答案是 D（收集实时位置、通话记录、短信信息及应用使用情况进行持续监控）。\n\n• Stalkerware（跟踪软件 / 配偶监控软件）：通常由具备物理接触受害者设备条件的人（如同住者、施暴者或追踪者）秘密安装在移动设备（手机/平板）上。其核心特征是在受害者毫不知情的情况下，持续且全方位监控个人私密行踪与通讯，包括 GPS 实时定位轨迹、电话通话记录、即时通讯聊天记录（短信、社交软件）、通话录音及各类应用的使用记录，并将数据回传给监控者。\n\n• 选项 C（安装跟踪 Cookie 并跨网站画像，您错选的项）：属于广告跟踪软件（Adware / Tracking Cookies / Profiling），用于商业广告精准推送，不属于专门窥探个人私密生活的 Stalkerware。\n• 选项 A：描述的是传统的远控木马（RAT, Remote Access Trojan）。\n• 选项 B：描述的是间谍软件中的屏幕截图记录器（Screen Recorder / Spyware）。",
+    "en": "Stalkerware (also known as spouseware) is surveillance software secretly installed on a mobile device (usually via physical access) to continuously monitor a victim's private activities without consent. Its hallmark features include tracking real-time GPS location, intercepting phone calls and SMS/instant messages, and monitoring application usage.\n\n• Option C describes tracking cookies/adware used for commercial behavioral profiling, not stalkerware.\n• Option A describes a Remote Access Trojan (RAT).\n• Option B describes a screen scraper or keylogger."
+  },
+  "mnemonic": {
+    "zh": "口诀：【Stalkerware（跟踪软件）】紧盯手机人身自由：查 GPS 定位、翻聊天记录、查通话清单！查网页 Cookie 是【广告跟踪器】！",
+    "en": "Exam Tip: Stalkerware = Secret mobile surveillance tracking GPS location, texts, call logs, and app activity without consent."
+  }
+},
+{
+  "id": 57,
+  "type": "multiple",
+  "selectLimit": 3,
+  "stem": {
+    "zh": "关于无文件恶意软件（Fileless Malware），以下哪三项描述是正确的？（Select 3 answers）",
+    "en": "Fileless malware: (Select 3 answers)"
+  },
+  "options": [
+    { "key": "A", "text": "Modifies the boot sector of the storage drive for persistence" },
+    { "key": "B", "text": "Requires a rootkit to hide its presence on a drive" },
+    { "key": "C", "text": "Abuses legitimate operating system tools to execute code" },
+    { "key": "D", "text": "Operates entirely in RAM without writing its payload to storage" },
+    { "key": "E", "text": "Evades traditional signature-based antivirus detection" }
+  ],
+  "answer": ["C", "D", "E"],
+  "explanation": {
+    "zh": "【考点：无文件恶意软件（Fileless Malware）核心特征】\n正确答案是 C、D、E。\n\n• D. 完全在内存（RAM）中运行，不在硬盘存储中写入恶意载荷文件：这是无文件恶意软件的本质特征。它通常通过恶意脚本注入内存运行，硬盘上找不到恶意的 .exe 实体文件。\n• C. 滥用合法的操作系统内置工具执行代码（以战养战 / Living off the Land, LotL）：利用 Windows 原生信任的合法工具（如 PowerShell、WMI、mshta.exe、certutil、rundll32）来下载并执行指令，因此不容易引起告警。\n• E. 躲避传统的基于签名的防病毒软件检测：传统杀毒软件主要通过静态扫描硬盘上的文件哈希（Hash）特征码来查杀病毒，由于硬盘上没有落地可疑文件，传统签名扫描完全失效，必须依赖行为分析或 EDR（端点检测与响应）。\n\n• 选项 A（修改硬盘引导区驻留，您错选的项）：这是引导区病毒（Boot Sector Virus / Rootkit）的典型特征，需要向物理磁盘 MBR/VBR 写入数据，与“无文件（Fileless）”理念完全相反。\n• 选项 B：无需 Rootkit 隐藏磁盘文件，因为磁盘上根本没有落地文件。",
+    "en": "Fileless malware executes in volatile memory (RAM) without writing executable files to storage media (D). It employs \"Living off the Land\" (LotL) tactics by hijacking legitimate, signed system tools like PowerShell and WMI (C). Because conventional antivirus scanners look for static file signatures on the hard disk, fileless attacks easily evade traditional signature-based detection (E).\n\n• Option A modifies MBR/VBR on disk, which is the exact opposite of fileless operation.\n• Option B is incorrect because there are no files on disk to hide."
+  },
+  "mnemonic": {
+    "zh": "口诀：【无文件恶意软件】三大招：只活在内存（RAM）、利用系统合法工具（如 PowerShell）、传统杀毒查特征码（Signature）抓不到！",
+    "en": "Exam Tip: Fileless Malware = RAM-only execution + Abuses trusted OS tools (PowerShell/LotL) + Bypasses signature AV."
+  }
+},
+{
+  "id": 58,
+  "type": "single",
+  "stem": {
+    "zh": "以下哪项是指专门针对“特定个人或特定群体”（Specific individuals or groups）定制的钓鱼攻击？",
+    "en": "Which of the following answers refers to a phishing attack aimed at specific individuals or groups?"
+  },
+  "options": [
+    { "key": "A", "text": "Email spoofing" },
+    { "key": "B", "text": "Whaling" },
+    { "key": "C", "text": "Spear phishing" },
+    { "key": "D", "text": "Watering hole attack" }
+  ],
+  "answer": ["C"],
+  "explanation": {
+    "zh": "【考点：网络钓鱼分类之 Spear Phishing（鱼叉式钓鱼）】\n正确答案是 C（Spear phishing / 鱼叉式网络钓鱼）。\n\n• 鱼叉式钓鱼（Spear Phishing）：与普通钓鱼的大面积“撒网群发”不同，它是针对“特定个人、特定部门或特定组织（Specific individuals or groups）”量身定制的攻击。攻击者通常会预先收集目标的姓名、职位、工作项目等背景信息，伪造高度可信的钓鱼内容。\n\n• 捕鲸攻击（Whaling，您错选的项）：属于鱼叉式钓鱼的一个高阶特例，它有且仅有一个极窄的目标群体——“高级管理人员（Senior executives, CEO, CFO, 董事会成员等大人物/鲸鱼）”。当题干只表述为“特定个人或群体”（泛指一般员工或团队）时，正确答案是涵盖面更准的 Spear phishing。\n\n• 水坑攻击（Watering hole attack）：攻击者事先黑掉目标群体经常访问的合法第三方网站（如行业论坛、供应商网站），等待目标浏览时感染恶意软件。\n• 电子邮件伪造（Email spoofing）：伪造邮件的发件人地址（From 字段），是钓鱼攻击使用的一种技术手段，不是钓鱼攻击分类名称。",
+    "en": "Spear phishing is a highly targeted form of phishing tailored specifically to identifiable individuals or defined groups within an organization, using personalized details gathered through reconnaissance.\n\n• Whaling is a specific subset of spear phishing exclusively aimed at high-profile individuals (CEOs, CFOs, senior executives). Because the question specifies \"specific individuals or groups\" generally, Spear phishing is the definitive answer.\n• Watering hole attacks compromise legitimate third-party websites commonly visited by target organizations.\n• Email spoofing is a forgery technique, not an attack category."
+  },
+  "mnemonic": {
+    "zh": "口诀：广撒网是【普通 Phishing】；挑特定人/团队精准插矛是【鱼叉 Spear Phishing】；专瞄 CEO/大老板开火是【捕鲸 Whaling】！",
+    "en": "Exam Tip: Broad spray = Phishing; Targeted at specific group/person = Spear Phishing; Targeted at C-level / Senior Executives = Whaling."
+  }
+},
+{
+  "id": 59,
+  "type": "single",
+  "stem": {
+    "zh": "公司的一位高级管理人员（Senior company executive）收到一封看似来自外部知名律师事务所的个性化定制电子邮件，紧急要求结清一项虚构的法律纠纷款项。此类钓鱼攻击属于下列哪种典型范例？",
+    "en": "A senior company executive receives a personalized email, appearing to be from an external law firm, demanding urgent settlement of a fictitious legal matter. This type of phishing attack is an example of:"
+  },
+  "options": [
+    { "key": "A", "text": "Spear phishing" },
+    { "key": "B", "text": "Business email compromise" },
+    { "key": "C", "text": "Impersonation attack" },
+    { "key": "D", "text": "Whaling" }
+  ],
+  "answer": ["D"],
+  "explanation": {
+    "zh": "【考点：网络钓鱼分类之 Whaling（捕鲸攻击）】\n正确答案是 D（Whaling / 捕鲸式钓鱼）。\n\n• 捕鲸攻击（Whaling）：专门瞄准企业中的“大鱼/巨头”——即高级管理人员（Senior company executive、CEO、CFO 等董事会成员），利用虚假的紧急法律诉讼、传票、税务审计或重组通报，诱使高管点击恶意链接或汇出巨款。题干核心触发词为“A senior company executive”。\n\n• 商务电子邮件泄露（BEC, Business email compromise，您错选的项）：通常是指攻击者黑入或深度伪造高管/供应商的邮箱后，以此身份“向下属财务人员或合作商发送假发票/转账指令”，骗取汇款；而本题是高管本人作为“受害者”收到了诈骗邮件。\n\n• 鱼叉式钓鱼（Spear phishing）：虽然捕鲸属于鱼叉钓鱼的一种，但 CompTIA 考试原则是：当题干明确指定目标为 Senior executive 时，必须选择更精确、更具体的“Whaling”。",
+    "en": "Whaling is a specialized spear phishing attack directed explicitly at high-ranking company executives (C-level, senior management) or individuals with significant wealth or authority. The trigger phrase \"A senior company executive\" directly pinpoints Whaling.\n\n• Business Email Compromise (BEC) typically involves impersonating an executive to deceive finance staff or vendors into transferring funds, rather than deceiving the executive directly via an external fake law firm notice.\n• Spear phishing is the broader category; on CompTIA exams, when a senior executive is specified, Whaling is always the expected best answer."
+  },
+  "mnemonic": {
+    "zh": "口诀：看到【Senior company executive / CEO / CFO】受骗，直接秒选【Whaling（捕鲸）】！",
+    "en": "Exam Tip: Senior company executive / C-suite target = Whaling."
+  }
 }
   ]
