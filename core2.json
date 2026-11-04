@@ -1453,5 +1453,164 @@
     "zh": "口诀：病毒杀完不能算完（第 4 步），紧接第 5 步【定计划勤扫描、打齐补丁防复发（Schedule scans & updates）】；最后第 7 步才叫来用户【做思想安全教育（Educate）】！",
     "en": "Exam Tip: Step 4 = Remove malware -> Step 5 = Schedule scans & updates -> Step 6 = Enable System Restore & create restore point -> Step 7 = Educate user."
   }
+},
+{
+  "id": 63,
+  "type": "multiple",
+  "selectLimit": 3,
+  "stem": {
+    "zh": "以下哪些属于微软 Windows 操作系统内置的静态数据加密（Data-at-rest encryption）功能？（Select all that apply）",
+    "en": "Which Microsoft Windows feature(s) provide(s) data-at-rest encryption? (Select all that apply)"
+  },
+  "options": [
+    { "key": "A", "text": "FDE" },
+    { "key": "B", "text": "BitLocker" },
+    { "key": "C", "text": "SED" },
+    { "key": "D", "text": "BitLocker-To-Go" },
+    { "key": "E", "text": "EFS" }
+  ],
+  "answer": ["B", "D", "E"],
+  "explanation": {
+    "zh": "【考点：Windows 静态数据加密技术分类】\n正确答案是 B、D、E。\n\n• BitLocker：Windows 内置的整盘卷加密功能，配合 TPM 芯片保护本地系统盘与固定数据盘。\n• BitLocker-To-Go：BitLocker 的扩展功能，专门为可移动外部存储设备（如 USB 闪存盘、移动硬盘）提供加密。\n• EFS（Encrypting File System / 加密文件系统）：Windows NTFS 文件系统内置的单文件/文件夹级别加密功能，与用户证书绑定。\n\n• FDE（Full Disk Encryption / 全盘加密）：是安全概念总称，不是 Windows 的专属功能名称。\n• SED（Self-Encrypting Drive / 自加密驱动器）：是硬件级别由硬盘控制器自身芯片完成加密的物理驱动器，不是 Windows 软件功能。",
+    "en": "Windows provides three native data-at-rest encryption features: BitLocker (full volume encryption for internal disks), BitLocker-To-Go (encryption for removable USB media), and EFS (Encrypting File System, for file/folder level encryption on NTFS volumes).\n\n• FDE is an industry concept/category, not a proprietary Windows feature.\n• SED represents hardware-level self-encrypting physical hard drives."
+  },
+  "mnemonic": {
+    "zh": "口诀：Windows 自带加密三剑客：卷加密找【BitLocker】，U盘加密找【BitLocker-To-Go】，单个文件加密找【EFS】！",
+    "en": "Exam Tip: Windows native data-at-rest encryption = BitLocker + BitLocker-To-Go + EFS."
+  }
+},
+{
+  "id": 64,
+  "type": "single",
+  "stem": {
+    "zh": "【判断题】最短密码使用期限（Minimum password age）策略设置用于确定密码在系统强制要求用户更改之前可以使用的最长时间。（True / False）",
+    "en": "The minimum password age policy setting determines the period of time that a password can be used before the system requires the user to change it."
+  },
+  "options": [
+    { "key": "A", "text": "True" },
+    { "key": "B", "text": "False" }
+  ],
+  "answer": ["B"],
+  "explanation": {
+    "zh": "【考点：密码策略之 Minimum vs. Maximum Password Age】\n正确答案是 B（False / 错误）。\n\n• 题干描述的其实是“最长密码使用期限（Maximum password age）”！最长期限才是指“密码用满多少天后，系统强制要求修改（例如 60 或 90 天到期强制更换）”。\n• 最短密码使用期限（Minimum password age）：指的是用户必须使用某个密码达到多长时间（例如至少 1 天），才“允许”用户去更改密码。其核心目的是防止用户在改密后，立即连续修改密码 5~10 次把历史密码刷掉，从而绕过“密码历史记录（Password history）”限制再次用回自己喜欢的旧密码！",
+    "en": "False. The statement defines Maximum password age. Minimum password age defines how long a user MUST keep a password before they are ALLOWED to change it (used to prevent users from rapidly cycling through password history to reuse old passwords)."
+  },
+  "mnemonic": {
+    "zh": "口诀：【最短 Minimum】是防刷历史，必须用满几天才准改；【最长 Maximum】是到期强制换，用满几天逼你改！",
+    "en": "Exam Tip: Minimum age = must keep before allowed to change; Maximum age = system forces user to change."
+  }
+},
+{
+  "id": 65,
+  "type": "single",
+  "stem": {
+    "zh": "【判断题】最长密码使用期限（Maximum password age）策略设置用于确定密码在用户被允许更改之前必须使用的最短时间。（True / False）",
+    "en": "The maximum password age policy setting determines the period of time that a password must be used before the user can change it."
+  },
+  "options": [
+    { "key": "A", "text": "True" },
+    { "key": "B", "text": "False" }
+  ],
+  "answer": ["B"],
+  "explanation": {
+    "zh": "【考点：密码策略之 Minimum vs. Maximum Password Age】\n正确答案是 B（False / 错误）。\n\n• 题干把“最长（Maximum）”和“最短（Minimum）”的概念张冠李戴颠倒了！\n• “密码在被允许更改之前必须使用的最短时间（Period of time that a password must be used before the user can change it）”正是“最短密码使用期限（Minimum password age）”的定义。\n• 最长密码使用期限（Maximum password age）是指密码的最长有效天数，超出后密码过期失效。",
+    "en": "False. The question describes Minimum password age. Maximum password age specifies how long a password remains valid before it expires and must be renewed."
+  },
+  "mnemonic": {
+    "zh": "口诀：看到 Max 却说“必须用满才能改”直接打假！那是 Min（最短期限）！",
+    "en": "Exam Tip: This statement inverts the definition of Minimum password age."
+  }
+},
+{
+  "id": 66,
+  "type": "single",
+  "stem": {
+    "zh": "员工在办公室隔间或显示器旁贴着写有密码的便利贴（Sticky note），这种行为违反了下列哪项企业安全策略？",
+    "en": "A sticky note with a password kept on sight in user's cubicle would be a violation of:"
+  },
+  "options": [
+    { "key": "A", "text": "Data labeling policy" },
+    { "key": "B", "text": "Physical security policy" },
+    { "key": "C", "text": "Clean desk policy" },
+    { "key": "D", "text": "Acceptable use policy" }
+  ],
+  "answer": ["C"],
+  "explanation": {
+    "zh": "【考点：安全操作规范之 Clean Desk Policy（桌面整洁策略）】\n正确答案是 C（Clean desk policy / 桌面整洁政策）。\n\n• 桌面整洁政策（Clean desk policy）：企业安全管理中严格规定，员工在离开办公桌或工作区时，严禁在桌面上、隔板上、键盘下或屏幕边框上放置任何包含敏感信息的文件、印有口令的便签纸（Sticky notes）、未锁定的 U 盘或机密文档，必须随手锁入抽屉或销毁。\n\n• 物理安全策略（Physical security policy，您错选的项）：是更宽泛的顶层建筑（涵盖门禁刷卡、摄像头监控、访客登记、机房上锁等），但 CompTIA 考试中，“在工位乱贴纸条写密码/桌面留敏感文件”有专属的标准考点名词——即精准考核 Clean desk policy！\n• 数据标记策略（Data labeling policy）：规定文档属于 Confidential/Public/Internal 等密级标签分类。\n• 可接受使用策略（AUP / Acceptable use policy）：规定企业电脑禁止用于玩游戏、上非法网站等规章制度。",
+    "en": "A Clean Desk Policy requires employees to clear sensitive information—including sticky notes with passwords, printouts, and removable media—from desks and workstations when leaving their workspace to prevent shoulder surfing and unauthorized access.\n\n• Physical security policy is a broader umbrella covering facility access control, but CompTIA specifically tests \"Clean desk policy\" for sticky note/desk security issues.\n• Acceptable use policy (AUP) specifies proper usage rules for company IT assets."
+  },
+  "mnemonic": {
+    "zh": "口诀：办公桌上乱贴便利贴写密码、桌上乱放机密纸质文件，必选【Clean desk policy（桌面整洁策略）】！",
+    "en": "Exam Tip: Passwords on sticky notes / papers left on desks = Clean desk policy violation."
+  }
+},
+{
+  "id": 67,
+  "type": "single",
+  "stem": {
+    "zh": "以下哪项账户管理安全措施用于将用户的计算机登录和访问权限限制在指定的时间段内（如仅限工作日 9:00 至 18:00）？",
+    "en": "Which of the answers listed below refers to an account management security measure that narrows down a user's computer access to specified hours?"
+  },
+  "options": [
+    { "key": "A", "text": "Account lockout policy" },
+    { "key": "B", "text": "Session timeout configuration" },
+    { "key": "C", "text": "Login time restrictions" },
+    { "key": "D", "text": "Just-in-time permissions" }
+  ],
+  "answer": ["C"],
+  "explanation": {
+    "zh": "【考点：账户访问控制之 Logon Hours（登录时间限制）】\n正确答案是 C（Login time restrictions / 登录时间限制，在 Windows Active Directory 中称为 Logon Hours）。\n\n• 登录时间限制（Login time restrictions）：域管理员在用户账户属性中精确勾选允许登录的时间矩阵（如只允许周一至周五白天登录，禁止周末或深夜登录），将用户的登录访问权限限制在规定的工作小时内。\n\n• 会话超时配置（Session timeout configuration，您错选的项）：是指用户在一段时间没有任何操作（闲置无动作）后，系统自动锁屏或登出会话，用于防止离开工位被他人偷看，不能规定哪几个小时允许登录。\n• 账户锁定策略（Account lockout policy）：输错多次密码后锁定账户。\n• 即时权限（Just-in-time permissions）：临时申请并短期授予特权提升。",
+    "en": "Login time restrictions (configured via Logon Hours in Active Directory) limit a user account's ability to log on only during approved working days and hours, preventing unauthorized after-hours access.\n\n• Session timeout automatically terminates or locks an inactive session after an idle timer.\n• Account lockout disables an account after consecutive failed login attempts."
+  },
+  "mnemonic": {
+    "zh": "口诀：规定几点到几点能上机叫【登录时间限制 (Login time restrictions / Logon Hours)】；闲置没人动自动锁屏叫【会话超时 (Session timeout)】！",
+    "en": "Exam Tip: Restricting access to specified working hours = Login time restrictions (Logon Hours)."
+  }
+},
+{
+  "id": 68,
+  "type": "single",
+  "stem": {
+    "zh": "账户锁定策略（Account lockout policy）在用户连续输入可配置次数的错误身份凭证后自动禁用该账户，该安全策略主要用于降低下列哪种攻击的风险？",
+    "en": "An account lockout policy, which disables a user account after a configurable number of consecutive failed authentication attempts, is primarily applied to reduce the risk of:"
+  },
+  "options": [
+    { "key": "A", "text": "Credential stuffing" },
+    { "key": "B", "text": "Password reuse" },
+    { "key": "C", "text": "Unauthorized physical access" },
+    { "key": "D", "text": "Brute-force attacks" }
+  ],
+  "answer": ["D"],
+  "explanation": {
+    "zh": "【考点：账户锁定策略之防御目标】\n正确答案是 D（Brute-force attacks / 暴力破解攻击与字典攻击）。\n\n• 暴力破解防范原理：攻击者使用黑客字典或密码生成器，通过自动化脚本在登录窗口疯狂尝试输入常见密码。通过设置账户锁定策略（例如：5 次失败尝试即锁定账户 30 分钟），攻击者试错几次后就会被系统锁死拦截，从而直接粉碎了自动化穷举暴力破解的可行性。\n\n• 未授权物理访问（Unauthorized physical access，您错选的项）：防止别人走进办公室碰电脑需要靠门禁、锁屏、机房门锁等物理与环境安全控制，账户输错锁定防不住别人直接把整台电脑搬走。\n• 凭证填充（Credential stuffing）：指攻击者拿着从其他被黑网站泄露的“用户名+密码”库直接来登录，通常一次就试对了，防范凭证填充主要靠 MFA 双因素认证。\n• 密码复用（Password reuse）：靠密码历史记录（Password history）和长度复杂度策略来解决。",
+    "en": "Account lockout thresholds strictly protect against brute-force attacks and automated dictionary attacks by cutting off authentication attempts after a preset threshold of failed attempts.\n\n• Unauthorized physical access must be addressed by physical security (guards, badge readers, door locks).\n• Credential stuffing and password reuse require MFA and password history policies."
+  },
+  "mnemonic": {
+    "zh": "口诀：连续输错密码就锁定（Account Lockout），专门制裁黑客写脚本挨个试密码的【暴力破解 (Brute-force attacks)】！",
+    "en": "Exam Tip: Account lockout = Defense against Brute-force / Dictionary attacks."
+  }
+},
+{
+  "id": 69,
+  "type": "single",
+  "stem": {
+    "zh": "为用户账户设置“账户到期日期”（Account expiration dates）主要用于下列哪类账户的安全控制？",
+    "en": "Setting account expiration dates is a security control primarily used for:"
+  },
+  "options": [
+    { "key": "A", "text": "Guest accounts" },
+    { "key": "B", "text": "Shared user accounts" },
+    { "key": "C", "text": "Temporary accounts" },
+    { "key": "D", "text": "Service accounts" }
+  ],
+  "answer": ["C"],
+  "explanation": {
+    "zh": "【考点：账户生命周期管理与临时账户过期设置】\n正确答案是 C（Temporary accounts / 临时账户，如合同工、外包顾问、实习生账户）。\n\n• 账户到期控制（Account Expiration）：企业经常需要为外部短期承包商（Contractors）、实习生或临时审计人员开通内网账号。最佳安全实践要求在建账号的第一天就预先设定账户到期时间（例如合同截止日 6 月 30 日）。到达日期后系统自动失效该账户，能彻底杜绝因管理员忘记手动删除账号而产生的“幽灵僵尸账户（Stale/orphan accounts）”。\n\n• 来宾账户（Guest accounts，您错选的项）：是 Windows 内置的默认系统账户，没有时间期限属性，企业最佳实践通常是【直接禁用（Disabled）】来宾账户，而不是为其设置到期日。\n• 共享账户（Shared accounts）：违反不可否认性原则，企业应严格禁止共享账号。\n• 服务账户（Service accounts）：运行后台系统守护进程使用，除非服务下线，通常永不过期。",
+    "en": "Account expiration dates are primarily configured for temporary accounts (such as contractors, seasonal temps, interns, and external consultants) to automatically disable access when their assignment ends, preventing active orphaned/stale accounts from remaining in Active Directory.\n\n• Guest accounts should be disabled entirely by default, not set with expiration dates.\n• Shared accounts violate accountability.\n• Service accounts run perpetual background services."
+  },
+  "mnemonic": {
+    "zh": "口诀：外包合同工、临时实习生开【临时账户 (Temporary accounts)】，入职当天必配【到期日 (Account Expiration)】防遗忘！来宾账户直接禁用！",
+    "en": "Exam Tip: Account expiration dates = Temporary accounts (contractors, temps, interns)."
+  }
 }
   ]
