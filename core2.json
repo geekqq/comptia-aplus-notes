@@ -1681,5 +1681,53 @@
     "zh": "口诀：手机永久丢失要恢复数据（Restored），必须依靠平时有【远程备份 (Remote backup)】！配置部署（Provisioning）只负责装系统和下发规则，不存个人业务数据！",
     "en": "Exam Tip: Restoring data to a replacement device after permanent loss = Remote backup applications."
   }
+},
+{
+  "id": 73,
+  "type": "single",
+  "stem": {
+    "zh": "安全管理员使用 MDM（移动设备管理）软件在公司配发的智能手机上限制摄像头的使用，并阻止通过 USB 进行文件传输。此处应用的是哪种类型的安全控制？",
+    "en": "A security administrator uses MDM software to restrict camera use and prevent file transfers over USB on company-issued smartphones. What type of control is being applied?"
+  },
+  "options": [
+    { "key": "A", "text": "Hardware access control" },
+    { "key": "B", "text": "Device policy enforcement" },
+    { "key": "C", "text": "Configuration profile deployment" },
+    { "key": "D", "text": "Device provisioning" }
+  ],
+  "answer": ["B"],
+  "explanation": {
+    "zh": "【考点：移动设备管理 MDM 策略执行（Device Policy Enforcement）】\n正确答案是 B（Device policy enforcement / 设备策略强制执行）。\n\n• 设备策略强制执行（Device policy enforcement）：安全管理员通过 MDM 服务端制定合规基准规则（如禁用摄像头防止商业窃密、封锁 USB 传输防止数据外泄、强制强密码与存储加密），并通过 MDM 客户端代理在操作系统底层强制生效。当检测到违规行为时，设备会自动拒绝执行。\n\n• 选项 A（硬件访问控制）：通常指物理机房门禁、机箱锁、锁孔线缆或物理断开接口，不是通过 MDM 软件下发的逻辑策略控制。\n• 选项 C（配置文件部署）：是分发设置（如导入 Wi-Fi 连接参数、VPN 证书）的技术途径，但“禁止某些功能、限制外设使用”本质上属于策略强制执行。\n• 选项 D（设备配置部署）：是指新设备出厂入网的初始化装机流程。",
+    "en": "Device policy enforcement occurs when MDM software actively mandates and restricts device capabilities (such as disabling cameras, restricting USB data transfer, and enforcing PIN requirements) to comply with corporate security standards.\n\n• Hardware access control typically refers to physical locks and barriers.\n• Configuration profile deployment delivers settings (Wi-Fi, email, certificates) rather than enforcing prohibitive security restrictions.\n• Device provisioning is the initial enrollment and staging process."
+  },
+  "mnemonic": {
+    "zh": "口诀：MDM 软件立规矩、禁摄像头、封 USB 端口传输，统称【设备策略强制执行 (Device policy enforcement)】！",
+    "en": "Exam Tip: Disabling mobile cameras/USB via MDM = Device policy enforcement."
+  }
+},
+{
+  "id": 74,
+  "type": "multiple",
+  "selectLimit": 3,
+  "stem": {
+    "zh": "相较于 BYOD（员工自带设备）模式，企业拥有模式（Corporate-Owned，公司统一配发移动设备）在组织和管理层面具备哪三项显著优势？（Select 3 answers）",
+    "en": "What are the organizational and administrative advantages of a corporate-owned mobile device deployment model over a BYOD policy? (Select 3 answers)"
+  },
+  "options": [
+    { "key": "A", "text": "Full administrative control over the entire device" },
+    { "key": "B", "text": "Separation of personal and corporate data via containerization" },
+    { "key": "C", "text": "Less restrictive usage policies for non-work activities" },
+    { "key": "D", "text": "Standardization of hardware, software, and configuration" },
+    { "key": "E", "text": "Centralized device policy enforcement through MDM" }
+  ],
+  "answer": ["A", "D", "E"],
+  "explanation": {
+    "zh": "【考点：企业配发设备（Corporate-Owned）vs. BYOD 部署模型对比】\n正确答案是 A、D、E。\n\n• A. 对整台设备拥有完全的管理控制权（Full administrative control）：公司是设备的物理与法律所有者，因此可以执行完全远程擦除、强制全盘监控、限制任何应用，完全不需要担心侵犯员工个人隐私诉讼。\n• D. 硬件、软件及配置的高度标准化（Standardization）：统一品牌、型号、操作系统版本与补丁基线，极大降低 IT 部门排障维护成本，消除了碎片化兼容难题。\n• E. 通过 MDM 实现集中化设备策略强制执行（Centralized enforcement）：从设备激活之日起即可强制纳管，策略下发无死角。\n\n• 选项 B（通过容器化分离个人与企业数据）：这是 BYOD 模式下的妥协折中方案（为了兼顾员工个人隐私和企业数据安全才不得已采用容器化），并非企业配发设备的核心优势。\n• 选项 C（对非工作活动采用较宽松的使用政策）：相反，企业资产设备的使用政策（AUP）通常极其严格，甚至禁止安装非工作应用。",
+    "en": "Corporate-owned device models offer organizations complete administrative control (A), hardware/software baseline standardization (D), and seamless centralized policy enforcement via MDM (E) without personal privacy friction.\n\n• Containerization (B) is primarily implemented in BYOD environments to separate corporate and personal spaces.\n• Corporate devices enforce stricter, not less restrictive (C), usage policies."
+  },
+  "mnemonic": {
+    "zh": "口诀：公家发的手机（Corporate-Owned）三大好：全盘管得住（Full control）、硬件型号齐（Standardization）、MDM 策略统一推（Centralized enforcement）！容器化（Containerization）是私机公用（BYOD）才需要的！",
+    "en": "Exam Tip: Corporate-Owned benefits = Full administrative control + Hardware/software standardization + Centralized MDM enforcement."
+  }
 }
   ]
