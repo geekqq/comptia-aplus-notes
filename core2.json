@@ -1612,5 +1612,74 @@
     "zh": "口诀：外包合同工、临时实习生开【临时账户 (Temporary accounts)】，入职当天必配【到期日 (Account Expiration)】防遗忘！来宾账户直接禁用！",
     "en": "Exam Tip: Account expiration dates = Temporary accounts (contractors, temps, interns)."
   }
+},
+{
+  "id": 70,
+  "type": "single",
+  "stem": {
+    "zh": "保护移动设备的哪种安全方法能够确保设备上的所有数据在未经适当身份验证的情况下，全部处于不可读取（密文乱码）的状态？",
+    "en": "Which method of protecting mobile devices ensures that all data on the device is rendered unreadable without proper authentication?"
+  },
+  "options": [
+    { "key": "A", "text": "Password protection" },
+    { "key": "B", "text": "Data hashing" },
+    { "key": "C", "text": "Remote wipe" },
+    { "key": "D", "text": "Device encryption" }
+  ],
+  "answer": ["D"],
+  "explanation": {
+    "zh": "【考点：移动设备全盘加密（Device Encryption）核心定义】\n正确答案是 D（Device encryption / 设备加密）。\n\n• 设备加密（Device encryption / 全盘加密）：通过底层加密算法（如 AES-256）对移动设备存储芯片上的所有操作系统文件、用户数据、照片和聊天记录进行实时硬件/软件级加密。只有当用户通过正确的身份验证（密码、PIN、指纹或面容）解锁后，解密密钥才会释放并读取数据。在未经正确认证时，即使攻击者物理拆下闪存芯片，读出来的也全部是不可读的乱码密文（Rendered unreadable）。\n\n• 数据哈希（Data hashing，您错选的项）：哈希（如 SHA-256）是一种不可逆的单向数学摘要算法，主要用于“校验数据完整性（Integrity）”或比对密码指纹，根本无法用来加密和恢复手机上的照片、文件等可读数据。\n• 密码保护（Password protection）：仅是在操作系统入口设立门禁屏障；如果存储未加密，黑客把手机连上电脑进刷机模式或拆闪存就能直接读取明文文件。\n• 远程擦除（Remote wipe）：是在设备丢失后下发指令将存储数据全部格式化清空，并非让存着的数据保持加密不可读状态。",
+    "en": "Device encryption (Full Device Encryption) ensures that all data at rest on the storage medium is cryptographically encrypted and rendered completely unreadable (ciphertext) without proper authentication (passcode, PIN, or biometric key release).\n\n• Data hashing is a one-way mathematical function used strictly for integrity verification, not reversible data confidentiality.\n• Password protection only restricts GUI lock-screen access; raw unencrypted storage can still be accessed via recovery mode.\n• Remote wipe permanently purges data rather than encrypting it."
+  },
+  "mnemonic": {
+    "zh": "口诀：数据变成乱码不可读（Rendered unreadable），永远选【加密 (Encryption)】！哈希（Hashing）只能测真伪不能做保密，密码（Password）只是门上锁！",
+    "en": "Exam Tip: Data rendered unreadable without authentication = Device Encryption. Integrity check = Hashing."
+  }
+},
+{
+  "id": 71,
+  "type": "single",
+  "stem": {
+    "zh": "以下哪项是指利用位置遥测技术（Positional telemetry）来实现地理围栏（Geofencing）和远程找回丢失设备的专用软件类型？",
+    "en": "Which of the answers listed below refers to a dedicated software type that uses positional telemetry for geofencing and remote device recovery?"
+  },
+  "options": [
+    { "key": "A", "text": "Asset inventory software" },
+    { "key": "B", "text": "Stalkerware" },
+    { "key": "C", "text": "Locator application" },
+    { "key": "D", "text": "Mobile telemetry app" }
+  ],
+  "answer": ["C"],
+  "explanation": {
+    "zh": "【考点：移动设备定位与地理围栏管理（Locator Application）】\n正确答案是 C（Locator application / 定位追踪应用程序，如 Apple Find My、Google Find My Device、MDM 追踪定位套件）。\n\n• 定位追踪应用（Locator application）：利用设备的 GPS、蜂窝基站、Wi-Fi 接入点等位置遥测信息（Positional telemetry），实时跟踪设备物理地理位置。企业管理员可借助其配置“地理围栏（Geofencing）”——当受控手机或平板离开公司允许的地理区域时触发告警或自动锁定，并在设备丢失/被盗时协助追回（Device recovery）。\n\n• 资产盘点软件（Asset inventory software，您错选的项）：用于 IT 仓库台账管理（记录设备序列号、采购批次、型号、折旧年限、归属员工等静态资产属性），没有实时 GPS 追踪、地理围栏和失窃找回功能。\n• 跟踪窥探软件（Stalkerware）：属于非法的恶意个人监视间谍软件。\n• 移动遥测应用（Mobile telemetry app）：泛指收集性能、崩溃日志等技术指标的监控，不是专属防盗定位术语。",
+    "en": "Locator applications (e.g., Apple Find My, Android Find My Device, or enterprise MDM location services) leverage GPS and cellular positional telemetry to track lost/stolen hardware, establish geofencing boundaries, and facilitate remote physical recovery.\n\n• Asset inventory software manages hardware records, serial numbers, and licensing information, lacking real-time GPS tracking and geofencing.\n• Stalkerware is illicit surveillance malware."
+  },
+  "mnemonic": {
+    "zh": "口诀：GPS 定位找手机、画圈划定边界（Geofencing），就叫【定位应用 (Locator application)】！资产盘点软件（Asset inventory）只管登账查型号！",
+    "en": "Exam Tip: Positional telemetry + Geofencing + Stolen device recovery = Locator application."
+  }
+},
+{
+  "id": 72,
+  "type": "single",
+  "stem": {
+    "zh": "移动设备安全管理员需要确保在员工原设备永久丢失后，能够将该用户的企业数据完整恢复（Restored）到置换的新设备上。以下哪种技术方案提供了该项能力？",
+    "en": "A mobile device security administrator needs to ensure that a user's corporate data can be restored to a replacement device after the original device is permanently lost. Which solution provides this capability?"
+  },
+  "options": [
+    { "key": "A", "text": "Configuration profiles" },
+    { "key": "B", "text": "Device provisioning" },
+    { "key": "C", "text": "Containerization" },
+    { "key": "D", "text": "Remote backup applications" }
+  ],
+  "answer": ["D"],
+  "explanation": {
+    "zh": "【考点：移动设备数据持续保护与灾难恢复（Remote Backup Applications）】\n正确答案是 D（Remote backup applications / 远程云备份应用程序，如企业级云备份、MDM 企业数据云同步服务）。\n\n• 远程备份应用（Remote backup applications）：在移动设备上后台自动运行，定期将用户的企业数据（文档、通讯录、邮件归档、应用数据等）安全加密同步上传至中央云端服务器。当原始物理手机发生永久丢失、损坏或被偷后，管理员给员工发放一台全新的置换机（Replacement device），只需登录企业账号并从云端执行远程恢复（Restored），即可将历史业务数据完整还原。\n\n• 设备配置部署（Device provisioning，您错选的项）：是指将一台新出厂的空机进行初始标准化配置的过程（如刷系统、安装基本预置应用、加入 MDM 域），它本身负责“设备出厂安装与激活”，不负责保存或还原特定用户丢失的数据文件。\n• 配置文件（Configuration profiles）：用于给设备下发策略规则（如强制锁屏密码、下发 Wi-Fi 证书、配置 VPN 连接参数），里面不装用户的具体业务数据。\n• 容器化（Containerization）：在员工自带手机（BYOD）上隔离出一个独立的加密企业工作区，防止个人与企业数据混用，但单凭容器化自身若没有配合远程备份，手机丢了容器里的数据也会随之丢失。",
+    "en": "Remote backup applications continuously or periodically sync critical user and corporate data to the cloud or enterprise repository. When an original phone is permanently lost or destroyed, administrators can seamlessly restore all saved corporate data to a replacement device.\n\n• Device provisioning sets up and enrolls a new device with operating system baselines and configurations; it does not back up or restore user data files.\n• Configuration profiles enforce settings and policies (Wi-Fi, VPN, passcodes).\n• Containerization isolates enterprise apps from personal apps but does not restore data on a lost phone without remote backups."
+  },
+  "mnemonic": {
+    "zh": "口诀：手机永久丢失要恢复数据（Restored），必须依靠平时有【远程备份 (Remote backup)】！配置部署（Provisioning）只负责装系统和下发规则，不存个人业务数据！",
+    "en": "Exam Tip: Restoring data to a replacement device after permanent loss = Remote backup applications."
+  }
 }
   ]
