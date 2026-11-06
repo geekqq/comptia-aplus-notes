@@ -1729,5 +1729,74 @@
     "zh": "口诀：公家发的手机（Corporate-Owned）三大好：全盘管得住（Full control）、硬件型号齐（Standardization）、MDM 策略统一推（Centralized enforcement）！容器化（Containerization）是私机公用（BYOD）才需要的！",
     "en": "Exam Tip: Corporate-Owned benefits = Full administrative control + Hardware/software standardization + Centralized MDM enforcement."
   }
+},
+{
+  "id": 75,
+  "type": "single",
+  "stem": {
+    "zh": "哪种数据净化（Data sanitization）方法可以安全地清除存储设备上所有可恢复的信息，同时保持设备完好无损、可供后续正常重新使用？",
+    "en": "Which data sanitization method securely removes all recoverable information from a storage device while keeping the device operational for future use?"
+  },
+  "options": [
+    { "key": "A", "text": "Standard format" },
+    { "key": "B", "text": "Degaussing" },
+    { "key": "C", "text": "Low-level format" },
+    { "key": "D", "text": "Erasing/wiping" }
+  ],
+  "answer": ["D"],
+  "explanation": {
+    "zh": "【考点：存储介质安全擦除与数据销毁（Sanitization & Wiping）】\n正确答案是 D（Erasing/wiping / 安全擦除与数据覆写，如 DBAN、NIST 800-88 Clear/Purge）。\n\n• 安全擦除（Erasing/wiping）：通过软件工具使用 0、1 或伪随机数据多次对硬盘的所有物理扇区进行全盘覆写（Overwriting）。该方法可以彻底抹去原本的数据残留，使任何专业恢复软件或取证工具都无法还原数据，同时【完全不损坏硬盘硬件】，设备可以继续正常分区格式化并二次利用或转售。\n\n• 消磁（Degaussing）：利用强磁场破坏磁带或机械硬盘上的磁畴。消磁会导致现代硬盘出厂伺服磁道（Servo tracks）彻底损毁，硬盘物理报废无法再使用（Rendered inoperable）。\n• 低级格式化（Low-level format，您错选的项）：重新划分物理磁道与扇区，主要由厂商完成，并非现代通用的标准安全防恢复数据擦除手段。\n• 标准格式化（Standard format）：仅仅是重写文件系统目录表，原始数据依然留在扇区里，使用普通数据恢复软件就能轻松找回。",
+    "en": "Secure erasing/wiping (overwriting with zeroes, ones, or random patterns) reliably destroys all data remnants so they cannot be retrieved forensically, while keeping the physical storage hardware operational for repurposing.\n\n• Degaussing destroys magnetic platters and servo tracks, rendering the hard drive permanently unusable.\n• Low-level format reinitializes physical tracks and sectors, not a standard secure wipe process.\n• Standard format only clears directory tables, leaving data easily recoverable."
+  },
+  "mnemonic": {
+    "zh": "口诀：既要数据彻底防恢复，又要硬盘留着还能用（Operational for future use），必须选【安全擦除 (Erasing/wiping)】！消磁（Degaussing）硬盘直接报废！",
+    "en": "Exam Tip: Secure sanitization + Keeps hardware usable = Erasing/Wiping. Destroys drive = Degaussing/Shredding."
+  }
+},
+{
+  "id": 76,
+  "type": "single",
+  "stem": {
+    "zh": "以下哪项是指重新初始化驱动器的物理扇区结构，将设备恢复到类似出厂时的原始物理状态，以便进行重新安装或重新利用的过程？",
+    "en": "Which of the answers listed below refers to a process that reinitializes the physical sector structure of a drive and returns the device to a factory-like state, preparing it for reinstallation or repurposing?"
+  },
+  "options": [
+    { "key": "A", "text": "Low-level format" },
+    { "key": "B", "text": "Erasing/wiping" },
+    { "key": "C", "text": "Full format" },
+    { "key": "D", "text": "Standard format" }
+  ],
+  "answer": ["A"],
+  "explanation": {
+    "zh": "【考点：驱动器物理扇区初始化之低级格式化（Low-level format）】\n正确答案是 A（Low-level format / 低级格式化，简称低格 LLF）。\n\n• 低级格式化（Low-level format）：直接作用于驱动器的最底层物理层，其核心任务是【重新初始化物理扇区结构（Reinitializes physical sector structure）】，在磁介质上重新标记磁道、扇区边界、扇区 ID 标记以及错误校验码（ECC）。它将整块驱动器彻底重置回出厂初始状态（Factory-like state）。\n\n• 安全擦除（Erasing/wiping，您错选的项）：其侧重点是用数据覆写磁区以防止敏感信息泄漏，并不负责重建或重新划分磁盘的“物理扇区结构”。\n• 完整格式化（Full format）与标准格式化（Standard format）：均属于高级格式化（High-level format），仅针对逻辑卷创建文件系统（NTFS/FAT32），根本无法触及底层的物理扇区结构。",
+    "en": "Low-level formatting physically creates or reinitializes the sector markers, tracks, and physical geometry on a drive, returning it to a pristine factory baseline state.\n\n• Erasing/wiping overwrites sector data blocks for privacy, not restructuring physical sectors.\n• Full format and Standard format operate logically at the high-level file system layer."
+  },
+  "mnemonic": {
+    "zh": "口诀：看到“重新初始化物理扇区结构 (Reinitializes physical sector structure)”、“恢复出厂初始状态 (Factory-like state)”，直接秒选【低级格式化 (Low-level format)】！",
+    "en": "Exam Tip: Reinitializes physical sector structure / factory-like state = Low-level format."
+  }
+},
+{
+  "id": 77,
+  "type": "single",
+  "stem": {
+    "zh": "哪种格式化类型仅在存储设备上应用新的文件系统结构，而将原有的底层数据完整保留在扇区中，从而可以被数据恢复工具轻易找回？",
+    "en": "Which formatting type applies a new file system structure to a storage device, leaving the existing data intact and easily recoverable by data recovery tools?"
+  },
+  "options": [
+    { "key": "A", "text": "Standard format" },
+    { "key": "B", "text": "Full format" },
+    { "key": "C", "text": "Erasing/wiping" },
+    { "key": "D", "text": "Low-level format" }
+  ],
+  "answer": ["A"],
+  "explanation": {
+    "zh": "【考点：高级快速格式化 vs. 底层数据可恢复性（Standard Format）】\n正确答案是 A（Standard format / 标准高级格式化，即日常在 Windows 中快速格式化 Quick format）。\n\n• 标准格式化（Standard format）：仅仅在磁盘分区上创建一份崭新的文件系统元数据结构（如分配全新的文件分配表 FAT 或 NTFS 的主文件表 MFT），并清除根目录索引。它【根本不对数据扇区做任何覆写操作】。所有原本的照片、文档、视频依然原封不动停留在扇区里。只要使用常见的数据恢复软件（如 Recuva、DiskGenius）进行深层扫描，就能轻易且完整地恢复出全部数据！\n\n• 完整格式化（Full format，您错选的项）：在现代操作系统（如 Windows 7/10/11）中，Full format 除了检查坏道外，还会自动在所有扇区上写入一轮全“0”（Zero out），直接摧毁原数据扇区，导致常规数据恢复工具无法找回。\n• 安全擦除（Erasing/wiping）与低级格式化（Low-level format）：均会彻底抹去或重构扇区，数据绝对无法被轻易找回。",
+    "en": "A standard format (high-level / quick format) only writes a fresh file system directory structure (such as NTFS MFT or FAT tables). It leaves existing data blocks untouched on the sectors, making files trivially recoverable by data recovery software.\n\n• Full format in modern Windows writes zeroes across the volume, preventing easy recovery.\n• Erasing/wiping and low-level format actively overwrite or restructure sectors to prevent recovery."
+  },
+  "mnemonic": {
+    "zh": "口诀：只建目录不洗地、底层数据全都在、恢复软件一扫全出来的，是【标准/高级格式化 (Standard format)】！",
+    "en": "Exam Tip: Applies new file system + leaves data intact & recoverable = Standard format (High-level format)."
+  }
 }
   ]
