@@ -1920,5 +1920,97 @@
     "zh": "口诀：SOHO 家用小办公，最强无线选【WPA3-SAE】（蜻蜓握手防破密）；【Enterprise】需要 RADIUS 服务器，家庭办公用不上！",
     "en": "Exam Tip: Strongest wireless for SOHO = WPA3-SAE (Dragonfly handshake)."
   }
+},
+{
+  "id": 83,
+  "type": "single",
+  "stem": {
+    "zh": "技术人员正在检查网页浏览器的安全配置。应该修改哪项设置以启用“安全密码存储”（Secure password storage）功能？",
+    "en": "A technician is reviewing web browser security configuration. Which setting should be modified to enable secure password storage?"
+  },
+  "options": [
+    { "key": "A", "text": "Disable saving form data" },
+    { "key": "B", "text": "Enable password manager" },
+    { "key": "C", "text": "Disable autofill" },
+    { "key": "D", "text": "Clear saved credentials on exit" }
+  ],
+  "answer": ["B"],
+  "explanation": {
+    "zh": "【考点：浏览器密码管理与安全存储机制】\n正确答案是 B（Enable password manager / 启用密码管理器）。\n\n• 启用密码管理器（Enable password manager）：现代主流浏览器（如 Chrome、Edge、Firefox）内置了专用的安全密码管理器，可将用户的网站登录凭据进行强加密存储（在 Windows 上与 DPAPI / 凭据管理器绑定，在 macOS 上与钥匙串 Keychain 联动），并支持设置主密码或生物识别授权保护，从而提供安全的密码存储机制。\n\n• 退出时清除保存的凭证（Clear saved credentials on exit，您错选的项）：该选项的作用是在关闭浏览器时【彻底删除并丢弃】所有本地记录的密码，它属于一种清除动作，其本质是“不保存密码”，而不是“启用安全密码存储”。\n• 禁用保存表单数据（Disable saving form data）与禁用自动填充（Disable autofill）：仅控制文本输入框的历史建议，与加密保存网站密码无关。",
+    "en": "Enabling the browser's built-in password manager allows credentials to be encrypted and securely stored using operating-system-level credential vaults (e.g., Windows DPAPI or macOS Keychain) protected by primary passwords or biometrics.\n\n• Clearing credentials on exit (D) deletes saved passwords rather than enabling secure storage.\n• Form data and autofill controls manage generic text field history, not secure credential vaults."
+  },
+  "mnemonic": {
+    "zh": "口诀：要想【安全存密码 (Secure password storage)】，必须【开启密码管理器 (Enable password manager)】！退出时清除（Clear on exit）是删光密码，不是安全存储！",
+    "en": "Exam Tip: Secure password storage = Enable password manager. Clear on exit deletes credentials."
+  }
+},
+{
+  "id": 84,
+  "type": "single",
+  "stem": {
+    "zh": "用户报告称在公用/共享工作站（Shared workstation）上打开某网站时，会自动登录到前一位用户的账户中。执行哪项浏览器维护任务可以防止该问题再次发生？",
+    "en": "A user reports that a website automatically signs in under a previous user's account on a shared workstation. Which browser maintenance task will prevent this issue from recurring?"
+  },
+  "options": [
+    { "key": "A", "text": "Clear autofill form data" },
+    { "key": "B", "text": "Clear browsing data" },
+    { "key": "C", "text": "Clear saved passwords" },
+    { "key": "D", "text": "Clear the browser cache" }
+  ],
+  "answer": ["B"],
+  "explanation": {
+    "zh": "【考点：共享电脑会话保持 Cookie 与清除浏览数据】\n正确答案是 B（Clear browsing data / 清除浏览数据，尤其是清除 Cookies 和网站数据）。\n\n• 为什么自动登录：网站识别登录状态依靠的是保存在浏览器中的“会话 Cookie（Session Cookies / Auth Tokens）”。在共享电脑上，上一位用户使用完网站后如果未手动点击 Log Out，其身份认证 Cookie 会一直留在本地，导致下一位用户打开网页时直接免密登录进入上一位用户的账户。\n• 解决方案：定期或在用户下机时【清除浏览数据（Clear browsing data）】，彻底清除 Cookie、站点凭据和本地会话存储，即可强制网站重新登录。\n\n• 清除浏览器缓存（Clear browser cache，您错选的项）：浏览器缓存（Cache / 临时文件）只存放网页的 HTML、CSS 样式表、JS 脚本和图片等静态素材，用于加速页面渲染，【完全不包含身份验证的 Session Cookie】！仅仅清理缓存，Cookie 依然存在，网站依然会自动登录！\n• 清除自动填充（Clear autofill）：只清空表单里记住的名字或电话。",
+    "en": "Automatic sign-in relies on persistent session cookies and authentication tokens stored in the browser's site data. \"Clear browsing data\" purges cookies and local storage, invalidating previous session tokens and forcing re-authentication.\n\n• Clearing the browser cache (D) only deletes downloaded static web assets (images, stylesheets, scripts) to free space, leaving session cookies completely intact."
+  },
+  "mnemonic": {
+    "zh": "口诀：自动登录前人账号是【Cookie】在作怪！清缓存（Cache）只删图片不删 Cookie，必须【清除浏览数据（Clear browsing data）】扫平 Cookie！",
+    "en": "Exam Tip: Shared workstation auto-login = Stored session cookies. Fix = Clear browsing data (Cookies). Cache only stores static media."
+  }
+},
+{
+  "id": 85,
+  "type": "single",
+  "stem": {
+    "zh": "技术人员需要配置用户的网页浏览器（Web Browser），将其所有网页流量路由经过企业内容过滤器（Corporate content filter）。应该使用哪项浏览器功能来实现该任务？",
+    "en": "A technician needs to configure a user's web browser to route traffic through a corporate content filter. Which feature should be used to accomplish this task?"
+  },
+  "options": [
+    { "key": "A", "text": "VPN connection" },
+    { "key": "B", "text": "Proxy server" },
+    { "key": "C", "text": "Web content filter extension" },
+    { "key": "D", "text": "Firewall rule" }
+  ],
+  "answer": ["B"],
+  "explanation": {
+    "zh": "【考点：浏览器代理服务器配置（Proxy Server）】\n正确答案是 B（Proxy server / 代理服务器设置）。\n题目核心关键词：“configure a user's web browser to route traffic through a corporate content filter”（在浏览器内部配置网络转发至内容过滤器）。\n\n• 代理服务器（Proxy server）：在网页浏览器的网络连接设置中（或通过 PAC 自动代理脚本），管理员可以专门配置 HTTP/HTTPS 代理服务器的 IP 地址和端口号。配置后，浏览器发送的每一个网页请求都会先发给中继代理，由企业代理服务器执行 URL 分类审查、内容过滤与威胁拦截，完全符合在“浏览器内部配置”的考题要求。\n\n• 防火墙规则（Firewall rule，您错选的项）：防火墙运行在操作系统底层或企业路由器网络层，拦截 IP 和端口，无法作为“浏览器端自身的功能设置（Browser feature）”来配置。\n• VPN 连接（VPN connection）：属于操作系统级的虚拟专用网接口，将整机全部网络流量加密打包封装到远程子网，不是专门给单个浏览器配置内容过滤的标准做法。",
+    "en": "Configuring a Proxy Server within browser network settings directs all HTTP/HTTPS web requests through an intermediary corporate proxy server that inspects URLs, filters content, and blocks malicious web traffic.\n\n• Firewall rules (D) operate at the OS or network layer, not inside browser configuration menus.\n• VPN connections establish a full network tunnel, which is not a browser-specific setting."
+  },
+  "mnemonic": {
+    "zh": "口诀：要在【浏览器设置里】把网页流量指引给过滤服务器，必选【代理服务器 (Proxy server)】！防火墙是系统和路由器的功能！",
+    "en": "Exam Tip: Browser feature to route traffic through content filter = Proxy server."
+  }
+},
+{
+  "id": 86,
+  "type": "single",
+  "stem": {
+    "zh": "哪项网页浏览器功能有助于防止互联网服务提供商（ISP / 网络运营商）和其他网络中间人窥探用户正在访问哪些网站？",
+    "en": "Which web browser feature helps prevent ISPs and other intermediaries from viewing which websites are being accessed?"
+  },
+  "options": [
+    { "key": "A", "text": "Proxy settings" },
+    { "key": "B", "text": "Private-browsing mode" },
+    { "key": "C", "text": "Do Not Track setting" },
+    { "key": "D", "text": "Secure DNS" }
+  ],
+  "answer": ["D"],
+  "explanation": {
+    "zh": "【考点：安全加密 DNS（Secure DNS / DoH / DoT）防 ISP 窃听】\n正确答案是 D（Secure DNS / 安全加密 DNS，如基于 HTTPS 的 DNS / DoH）。\n\n• 为什么选 Secure DNS：\n  - 在传统网络访问中，即使网站启用了 HTTPS 加密，浏览器在向 DNS 服务器发起域名解析请求（如查询 www.bank.com 的 IP）时使用的是明文 UDP 53 端口。您的 ISP 运营商（中国电信/联通/Comcast/AT&T）和中间路由器可以轻而易举地监听所有 DNS 解析请求，从而一清二楚地知道你访问了什么网站！\n  - 开启浏览器的【Secure DNS（安全 DNS / DoH）】后，DNS 查询会被打包在 HTTPS（443 端口）TLS 隧道中加密传输给可信解析器（如 Cloudflare 1.1.1.1、Google 8.8.8.8）。ISP 只能看到一串加密乱码，彻底无法知晓你查询和访问的具体域名！\n\n• 隐私浏览模式（Private-browsing mode / 隐身模式，您错选的项）：极其高频的常识误区！所有浏览器的隐身模式在打开时都会白字黑字明确提示：“您的活动仍可能对您的雇主、学校或互联网服务提供商（ISP）可见”。隐身模式仅仅是【不在本地电脑留下历史记录和 Cookie】，根本没有对发送出去的网络数据包进行任何加密，ISP 和路由管理员看得一清二楚！\n• 不跟踪设置（Do Not Track）：只是一个口头协议式的 HTTP 头，要求商业网站别画用户画像，ISP 根本不理睬它。",
+    "en": "Standard DNS queries (port 53) are sent across the network in unencrypted cleartext, enabling ISPs to monitor every domain the user accesses. Secure DNS (DNS over HTTPS / DoH) encrypts domain lookups within standard HTTPS traffic, preventing ISPs and network eavesdroppers from tracking accessed domains.\n\n• Private-browsing mode (B) only prevents storing history, cookies, and cache LOCALLY on the machine; it offers zero network-level encryption, and ISPs can still see all traffic.\n• Do Not Track (C) is an ignored optional HTTP header."
+  },
+  "mnemonic": {
+    "zh": "口诀：防【ISP 网络运营商】偷看你上什么网，靠【加密 DNS (Secure DNS / DoH)】！【隐身无痕模式】只防身边人查电脑，根本防不住运营商！",
+    "en": "Exam Tip: Prevent ISP from viewing accessed websites = Secure DNS (DoH). Private browsing only prevents local history storage."
+  }
 }
   ]
