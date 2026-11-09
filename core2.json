@@ -2012,5 +2012,355 @@
     "zh": "口诀：防【ISP 网络运营商】偷看你上什么网，靠【加密 DNS (Secure DNS / DoH)】！【隐身无痕模式】只防身边人查电脑，根本防不住运营商！",
     "en": "Exam Tip: Prevent ISP from viewing accessed websites = Secure DNS (DoH). Private browsing only prevents local history storage."
   }
-}
+},
+  {
+    "id": 87,
+    "type": "single",
+    "stem": {
+      "zh": "下列哪项 Windows 恢复环境 (WinRE) 工具专门用于自动检测并修复操作系统引导失败问题？",
+      "en": "Which of the following Windows Recovery Environment (WinRE) tools is specifically designed to automatically recover from operating system boot failures?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "System Restore"
+      },
+      {
+        "key": "B",
+        "text": "Safe Mode"
+      },
+      {
+        "key": "C",
+        "text": "System Image Recovery"
+      },
+      {
+        "key": "D",
+        "text": "Startup Repair"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：WinRE 自动修复引导失败 —— Startup Repair（启动修复）】\n正确答案是 D（Startup Repair / 启动修复）。\n\n• 为什么选 Startup Repair（启动修复）：\n  - WinRE（Windows 恢复环境）中的【Startup Repair（启动修复，旧称 Automatic Repair）】是专门设计用于【自动扫描系统并修复阻止 Windows 正常启动的常见故障】的专用自动化工具（例如缺失或损坏的系统引导文件、BCD 引导配置损坏、驱动引导冲突、文件系统元数据错误等）。它无需用户手动挑选时间点，会自动分析启动日志（SrtTrail.txt）并尝试自动修复。\n\n• 为什么不选 System Restore（系统还原，您错选的项）：\n  - 系统还原用于将操作系统还原到之前的某个还原点（Restore Point），主要用于回退系统更新、误装有问题的软件或驱动程序。它并不是专门用来“自动修复引导失败故障”的工具，而且前提是系统之前启用了系统保护且创建过有效还原点。\n• 为什么不选 Safe Mode（安全模式）：\n  - 安全模式是一种仅加载最基础驱动和服务运行的轻量诊断启动环境，它本身不会“自动恢复”或修复引导故障。\n• 为什么不选 System Image Recovery（系统映像恢复）：\n  - 系统映像恢复会用之前备份的完整磁盘映像完全覆盖当前硬盘，属于灾难重建手段，不是自动检测修复工具。",
+      "en": "Startup Repair (formerly Automatic Repair) in the Windows Recovery Environment (WinRE) is specifically designed to automatically scan, detect, and resolve common bootloader, BCD, file system, and startup configuration issues that prevent Windows from booting.\n\n• System Restore (A) rolls system files and registry back to a previous restore point; it is not an automated boot repair tool.\n• Safe Mode (B) is a diagnostic startup environment, not an automatic repair utility.\n• System Image Recovery (C) overwrites partitions from a full disk backup image."
+    },
+    "mnemonic": {
+      "zh": "口诀：引导开机失败求【自动修复】选【Startup Repair（启动修复）】！回退整机配置才用【System Restore（系统还原）】！",
+      "en": "Exam Tip: Automatically recover from boot failure = Startup Repair."
+    }
+  },
+  {
+    "id": 88,
+    "type": "single",
+    "stem": {
+      "zh": "在系统启动过程中，用户收到错误提示“Windows Boot Configuration Data file is missing some required information”（Windows 引导配置数据文件缺少某些必需信息）。技术人员应使用哪个命令行命令来排查并解决此错误？",
+      "en": "During system boot, a user receives \"Windows Boot Configuration Data file is missing some required information\" error message. Which command-line command should a technician use to troubleshoot this error?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "bootrec /scanos"
+      },
+      {
+        "key": "B",
+        "text": "bootrec /rebuildbcd"
+      },
+      {
+        "key": "C",
+        "text": "bootrec /fixmbr"
+      },
+      {
+        "key": "D",
+        "text": "bootrec /fixboot"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": {
+      "zh": "【考点：WinRE 命令行引导修复 —— bootrec /rebuildbcd】\n正确答案是 B（bootrec /rebuildbcd）。（恭喜您答对了！）\n\n• 命令功能横向对比（CompTIA A+ 必考四大参数）：\n  1. bootrec /rebuildbcd：扫描所有硬盘上与 Windows 兼容的操作系统安装，并允许用户手动选择将其添加到 BCD（引导配置数据）存储中。题目错误信息直接指明“Boot Configuration Data file is missing...”，因此必须使用 /rebuildbcd 重建 BCD！\n  2. bootrec /fixmbr：向系统分区写入与 Windows 兼容的主引导记录 (MBR)。用于解决 MBR 损坏或非标准代码问题，不修改引导扇区或 BCD。\n  3. bootrec /fixboot：向系统分区写入新的引导扇区（Boot Sector）。\n  4. bootrec /scanos：扫描磁盘并列出所有未包含在 BCD 中的 Windows 安装，但【不会自动将其添加修复到 BCD】中。",
+      "en": "bootrec /rebuildbcd scans all storage drives for Windows installations compatible with the current version and prompts the user to add missing or corrupted installations into the Boot Configuration Data (BCD) store.\n\n• bootrec /fixmbr writes a compatible MBR to the system partition.\n• bootrec /fixboot writes a new boot sector.\n• bootrec /scanos lists installations not registered in the BCD, but does not rebuild the database."
+    },
+    "mnemonic": {
+      "zh": "口诀：BCD 缺失或损坏，对号入座用【bootrec /rebuildbcd】！MBR 坏了用 /fixmbr，引导扇区坏了用 /fixboot！",
+      "en": "Exam Tip: BCD file is missing or corrupted -> bootrec /rebuildbcd."
+    }
+  },
+  {
+    "id": 89,
+    "type": "single",
+    "stem": {
+      "zh": "技术人员正在排查一台在 GPU 显卡驱动更新后频繁发生意外关机的 Windows 电脑。技术人员应使用哪个 Windows 实用程序手动回滚该特定驱动程序？",
+      "en": "A technician is troubleshooting a Windows system that powers off unexpectedly after a GPU driver update. Which Windows utility should the technician use to manually roll back the specific driver?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "System Restore"
+      },
+      {
+        "key": "B",
+        "text": "Windows Update"
+      },
+      {
+        "key": "C",
+        "text": "Control Panel"
+      },
+      {
+        "key": "D",
+        "text": "Device Manager"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：硬件驱动单独回滚 —— Device Manager（设备管理器）】\n正确答案是 D（Device Manager / 设备管理器）。\n\n• 为什么选 Device Manager：\n  - 题目明确要求【manually roll back the specific driver（手动回滚该特定驱动程序）】。\n  - 在【设备管理器（Device Manager / devmgmt.msc）】中，展开“显示适配器（Display Adapters）”-> 右键点击该 GPU 显卡 -> 选择“属性（Properties）”-> 进入“驱动程序（Driver）”选项卡，里面有专门的【回滚驱动程序（Roll Back Driver）】按钮！该功能只会精准将该 GPU 驱动恢复为更新前的上一版本，完全不影响系统其它驱动和软件。\n\n• 为什么不选 System Restore（系统还原，您错选的项）：\n  - 系统还原（System Restore）是一个整机级别的回滚工具，它会把注册表、系统文件、以及最近安装的其它软件全部倒退回某个还原点，无法针对单一特定驱动进行精准隔离回滚；同时题干指明是“manually roll back the specific driver”，设备管理器的 Roll Back Driver 是业界标准且最轻量直接的手段。\n• 为什么不选 Windows Update：\n  - Windows Update 用于下载并安装补丁更新，不提供针对单一显卡驱动的专用回滚按钮。",
+      "en": "Device Manager (devmgmt.msc) provides a dedicated \"Roll Back Driver\" button under the Driver tab of any hardware device properties dialog. This surgically reverts only that specific hardware driver to its previously installed version without altering other system files or applications.\n\n• System Restore (A) restores the entire system state and registry to a previous restore point, affecting multiple components rather than rolling back a single driver."
+    },
+    "mnemonic": {
+      "zh": "口诀：单一驱动出问题，进【设备管理器 (Device Manager)】点【Roll Back Driver】；整机大范围异常才上【系统还原】！",
+      "en": "Exam Tip: Manually roll back a specific driver = Device Manager -> Driver tab -> Roll Back Driver."
+    }
+  },
+  {
+    "id": 90,
+    "type": "single",
+    "stem": {
+      "zh": "一台 Windows 台式机仅在加载非微软（第三方）服务时会随机异常关机，而在安全模式下则完全正常。应采取以下哪个步骤来排查并隔离出具体故障原因？",
+      "en": "A Windows desktop powers off randomly only when non-Microsoft services are loaded. The issue does not occur in Safe Mode. Which step should be taken to isolate the cause?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Run a full antivirus scan"
+      },
+      {
+        "key": "B",
+        "text": "End background processes in Task Manager"
+      },
+      {
+        "key": "C",
+        "text": "Roll back the latest Windows update"
+      },
+      {
+        "key": "D",
+        "text": "Perform a clean boot"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：排查第三方服务/启动项冲突 —— Clean Boot（干净启动）】\n正确答案是 D（Perform a clean boot / 执行干净启动）。\n\n• 为什么选 Perform a clean boot（干净启动）：\n  - 题目给出两个核心线索：① 在安全模式（Safe Mode）下不会随机关机，证明 Windows 核心系统文件和基础硬件工作正常；② 只有加载【非微软服务（non-Microsoft services）】时才会触发关机，说明是某个第三方软件/后台驱动服务导致的冲突。\n  - 微软排查此类问题的标准隔离步骤是【执行干净启动（Clean Boot）】：通过运行 msconfig（系统配置），切换到“服务（Services）”标签页，勾选【“隐藏所有 Microsoft 服务”（Hide all Microsoft services）】，然后禁用所有剩余的第三方服务及启动项。随后采用【二分法（Binary Search）】每次启用一半服务并重启，便能迅速精准定位是哪一个具体第三方服务导致了崩溃！\n\n• 为什么不选 Run a full antivirus scan（杀毒扫描，您错选的项）：\n  - 题目已经给出了明确特征：问题与非微软服务加载直接相关。杀毒扫描无法有效诊断合法但存在冲突崩溃的第三方驱动或实用程序。\n• 为什么不选 End background processes in Task Manager：\n  - 任务管理器只能临时结束正在运行的进程，重启后服务依然会自动拉起，无法系统性隔离启动服务依赖。",
+      "en": "A Clean Boot starts Windows with a minimal set of drivers and startup programs. Using System Configuration (msconfig), technicians check \"Hide all Microsoft services\" on the Services tab and disable third-party services, then re-enable them systematically (e.g., half at a time) to isolate the exact rogue service causing unexpected shutdowns.\n\n• Antivirus scan (A) does not isolate misbehaving or conflicting third-party driver services.\n• Task Manager (B) only kills runtime processes temporarily without configuring startup states."
+    },
+    "mnemonic": {
+      "zh": "口诀：安全模式正常、第三方服务捣鬼，用【msconfig 干净启动 (Clean Boot)】，勾选“隐藏所有微软服务”逐个揪出元凶！",
+      "en": "Exam Tip: Non-Microsoft service conflicts / isolate startup issues = Perform a clean boot (msconfig)."
+    }
+  },
+  {
+    "id": 91,
+    "type": "single",
+    "stem": {
+      "zh": "哪个 Windows 诊断工具提供系统事件、崩溃和故障（包括意外关机）的可视化时间线图表？",
+      "en": "Which Windows diagnostic tool provides a timeline of system events and failures, including unexpected shutdowns?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Reliability Monitor"
+      },
+      {
+        "key": "B",
+        "text": "Event Viewer"
+      },
+      {
+        "key": "C",
+        "text": "Performance Monitor"
+      },
+      {
+        "key": "D",
+        "text": "Resource Monitor"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": {
+      "zh": "【考点：带时间线图表的系统稳定性诊断工具 —— Reliability Monitor（可靠性监视器）】\n正确答案是 A（Reliability Monitor / 可靠性监视器）。\n\n• 为什么选 Reliability Monitor（可靠性监视器）：\n  - 题干的核心关键词是【timeline（时间线图表）】！\n  - Windows 的【可靠性监视器（Reliability Monitor，可通过运行 perfmon /rel 打开）】专门提供了一条直观的【时间线趋势图】，以 1 到 10 分的稳定性指数（Stability Index）展示计算机每天/每周的健康状况。图表中用醒目的红叉（严重故障/意外关机）、黄色感叹号（警告）和蓝色圆圈（信息）标记出应用程序崩溃、Windows 故障、硬件故障和更新记录，让排障人员一目了然地看到系统何时开始变慢或频繁死机！\n\n• 为什么不选 Event Viewer（事件查看器，您错选的项）：\n  - 事件查看器（eventvwr.msc）以表格日志列表形式存储系统、安全、应用程序事件，里面确实有意外关机日志（如 Event ID 41 Kernel-Power），但它【不提供可视化时间线趋势图表（timeline）】。CompTIA 题库中凡是出现“timeline of system events / stability index”，考点 100% 对应 Reliability Monitor！\n• 为什么不选 Performance Monitor / Resource Monitor：\n  - 性能监视器和资源监视器用于实时监视 CPU、内存、磁盘和网络活动，不提供系统故障历史时间线。",
+      "en": "Reliability Monitor (perfmon /rel) generates a graphical timeline displaying system events, software installations, application crashes, Windows updates, and critical failures (like unexpected shutdowns) with an overall System Stability Index rated from 1 to 10.\n\n• Event Viewer (B) provides comprehensive tabular event logs, but lacks a chronological visual timeline graph.\n• Performance Monitor (C) and Resource Monitor (D) monitor real-time hardware utilization."
+    },
+    "mnemonic": {
+      "zh": "口诀：看到【Timeline（时间线图表）】或【Stability Index（稳定性指数）】，必选【Reliability Monitor（可靠性监视器）】！列表日志才选【事件查看器】！",
+      "en": "Exam Tip: Timeline of system events and failures = Reliability Monitor (perfmon /rel)."
+    }
+  },
+  {
+    "id": 92,
+    "type": "single",
+    "stem": {
+      "zh": "在 Microsoft Windows 中，当物理内存 (RAM) 空间不足时，在存储驱动器（硬盘/SSD）上预留用于存放多余数据的专用部分称为什么？",
+      "en": "In Microsoft Windows, a reserved portion of the storage drive used for data that cannot be stored in RAM due to insufficient memory space is called:"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Memory buffer"
+      },
+      {
+        "key": "B",
+        "text": "System cache"
+      },
+      {
+        "key": "C",
+        "text": "Paging file"
+      },
+      {
+        "key": "D",
+        "text": "Swap partition"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：Windows 虚拟内存文件 —— Paging file（分页文件）】\n正确答案是 C（Paging file / 分页文件）。\n\n• 为什么选 Paging file（分页文件）：\n  - 在 Microsoft Windows 操作系统中，虚拟内存（Virtual Memory）在硬盘或 SSD 上保留的文件名为 pagefile.sys，官方标准术语称为【Paging file（分页文件）】。当物理 RAM 不足时，Windows 内存管理器会将暂时不活跃的内存页（Pages）从 RAM 换出（page out）写入该文件，从而释放物理内存给前台程序使用。\n\n• 为什么不选 Swap partition（交换分区，您错选的项）：\n  - 【Swap partition（交换分区）】是【Linux / UNIX 系统】中的术语！Linux 在安装分区时通常会划分一个专用的 Swap 磁盘分区来充当交换空间；而题目第一句明确限定了【In Microsoft Windows】！Windows 采用的是文件系统中的隐藏系统文件（Paging file / pagefile.sys），而不是专用分区！\n• 选项 A 与 B（Memory buffer / System cache）：属于常规内存数据结构或高速缓存，并非存储驱动器上预留的虚拟内存空间。",
+      "en": "In Microsoft Windows, the disk-backed virtual memory file is called the Paging file (stored on the root drive as pagefile.sys). When physical RAM is exhausted, Windows pages out inactive memory blocks to this file.\n\n• Swap partition (D) performs a similar virtual memory role in Linux/UNIX environments as a dedicated disk partition, but is NOT the Windows term."
+    },
+    "mnemonic": {
+      "zh": "口诀：Windows 叫【Paging file（分页文件 pagefile.sys）】；Linux 才叫【Swap partition（交换分区）】！看清题目开头操作系统！",
+      "en": "Exam Tip: In Windows = Paging file (pagefile.sys); In Linux = Swap partition."
+    }
+  },
+  {
+    "id": 93,
+    "type": "multiple",
+    "stem": {
+      "zh": "解决或预防基于 Windows 系统的“内存不足 (Low Memory)”警告的推荐方法包括哪些？（选择所有适用项）",
+      "en": "Recommended methods for resolving or preventing low memory warnings on a Windows-based system include: (Select all that apply)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Increasing the storage drive's cache size"
+      },
+      {
+        "key": "B",
+        "text": "Upgrading system memory"
+      },
+      {
+        "key": "C",
+        "text": "Defragmenting the main system drive"
+      },
+      {
+        "key": "D",
+        "text": "Closing unnecessary background applications"
+      },
+      {
+        "key": "E",
+        "text": "Increasing the size of the paging file"
+      }
+    ],
+    "answer": [
+      "B",
+      "D",
+      "E"
+    ],
+    "explanation": {
+      "zh": "【考点：Windows 内存不足（Low Memory Warning）排错三部曲】\n正确答案是 B、D、E（升级系统内存、关闭不必要的后台程序、增加分页文件大小）。\n\n• 为什么选 B、D、E：\n  - Windows 的“计算机内存不足（Your computer is low on memory）”警告是在系统的【提交限制（Commit Limit = 物理 RAM 容量 + 分页文件大小）】接近耗尽时触发的。解决措施分为治标与治本：\n  1. 【Upgrading system memory（升级物理内存，选 B）】：最根本的硬件升级方案，直接扩充物理 RAM。\n  2. 【Closing unnecessary background applications（关闭无用后台程序，选 D）】：立刻释放当前被占用的物理和虚拟内存，迅速解除报警。\n  3. 【Increasing the size of the paging file（增加分页文件大小，选 E）】：在系统属性高级设置中调大虚拟内存 pagefile.sys 的上限，或者由系统自动管理，增加虚拟内存池总容量，避免触发内存不足报警。\n\n• 为什么不选 A 和 C：\n  - 驱动器缓存大小（A）是硬盘控制器自带的硬件缓冲区，用户无法在系统内随意调大，且与系统 RAM 无关；磁盘碎片整理（C）只提升机械硬盘顺序读写性能，丝毫不会增加系统的可用内存容量。",
+      "en": "Windows triggers low memory warnings when the commit limit (Physical RAM + Paging File) is nearly exhausted. Recommended remedies include:\n1. Upgrading physical RAM (B) for increased hardware capacity.\n2. Closing memory-hungry background applications (D) to immediately free active memory.\n3. Increasing the paging file size (E) via System Properties -> Performance -> Virtual Memory to expand total virtual memory commit space.\n\n• Storage drive cache (A) and disk defragmentation (C) do not increase system memory."
+    },
+    "mnemonic": {
+      "zh": "口诀：内存不足有三招：关程序（立刻见效）、调大虚拟内存 Paging File（临时救急）、加真内存条 RAM（根本解决）！",
+      "en": "Exam Tip: Low memory warning fixes = Close apps + Increase paging file + Upgrade RAM."
+    }
+  },
+  {
+    "id": 94,
+    "type": "multiple",
+    "stem": {
+      "zh": "USB 控制器资源警告的常见原因包括 USB 设备占用的端点（endpoints，即数据缓冲区）超出可用数量或耗电过多。在 Microsoft Windows 中，可用于解决此类问题的故障排除方案包括：（选择 2 项）",
+      "en": "The common causes of USB controller resource warnings include USB devices exceeding the number of available endpoints (a.k.a. data buffers) or drawing too much power. In Microsoft Windows, troubleshooting solutions that can be applied to resolve such problems include: (Select 2 answers)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Enabling hardware virtualization in the BIOS/UEFI firmware"
+      },
+      {
+        "key": "B",
+        "text": "Unplugging USB devices that are not in use"
+      },
+      {
+        "key": "C",
+        "text": "Setting the affected USB device to a lower process priority in Task Manager"
+      },
+      {
+        "key": "D",
+        "text": "Moving devices to ports linked to a different USB controller"
+      },
+      {
+        "key": "E",
+        "text": "Changing the Windows power plan to High Performance"
+      }
+    ],
+    "answer": [
+      "B",
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：USB 控制器资源耗尽（Not Enough USB Controller Resources）排错】\n正确答案是 B 和 D（拔下未使用的 USB 设备、将设备移至连接到不同 USB 控制器的端口）。\n\n• 为什么选 B 和 D：\n  - 背景原理：每个 USB 主控制器（Host Controller，尤其是 USB 3.0 xHCI）在硬件层面上支持的【端点数（Endpoints，用于传输控制、音频流、视频流的数据缓冲通道）】是有上限的（通常为 64 或 96 个端点）。像 USB 摄像头、高保真外置声卡、VR 头显等复杂设备，单个设备就会占用数十个端点！即使插在带供电的拓展坞上，主控的端点限制依然会爆满，导致 Windows 弹出“Not enough USB controller resources”警告。\n  - 官方标准解决方法：\n    1. 【Unplugging USB devices that are not in use（拔掉不用的 USB 设备，选 B）】：直接释放其占用的硬件端点和供电功率。\n    2. 【Moving devices to ports linked to a different USB controller（换到另一控制器端口，选 D）】：台式机或主板通常包含多个独立的 USB 控制器（例如后置主板原生端口、前置面板芯片、Type-C 专用控制器，或加装 PCIe USB 扩展卡）。将高带宽/多端点设备分流到不同控制器上，就能利用另一个控制器全新的端点配额！\n\n• 为什么不选 A、C、E：\n  - BIOS 硬件虚拟化（VT-x/AMD-V）是给虚拟机用的，与 USB 端点无关；任务管理器无法给硬件 USB 设备调进程优先级（那是针对软件进程的）；电源计划调为高性能也改变不了 USB 芯片的硬性端点硬件限制。",
+      "en": "USB 3.0/xHCI controllers have fixed hardware endpoint limits (data buffers). When bandwidth-heavy or composite USB devices (e.g., DACs, webcams, VR gear) exceed these limits, Windows displays \"Not enough USB controller resources\".\n\n• Unplugging unused USB devices (B) immediately frees hardware endpoints.\n• Moving devices to ports connected to a different physical USB controller or dedicated PCIe USB card (D) utilizes a separate endpoint pool.\n• Hardware virtualization (A), Task Manager process priority (C), and High Performance power plan (E) have no effect on hardware endpoint limitations."
+    },
+    "mnemonic": {
+      "zh": "口诀：USB 资源不足两步走：拔掉不用的（断舍离），插到别的控制器接口上（分流分摊）！",
+      "en": "Exam Tip: USB controller resource limits = Unplug unused devices OR Move to a different USB controller port."
+    }
+  },
+  {
+    "id": 95,
+    "type": "multiple",
+    "stem": {
+      "zh": "以下哪几项是导致 Windows 电脑发生时钟漂移（Time drift，时间走慢或走快）的有效原因？（选择 3 项）",
+      "en": "Which of the following are valid causes of time drift in Windows? (Select 3 answers)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Incorrect system time zone settings"
+      },
+      {
+        "key": "B",
+        "text": "Disabled Windows Time (W32Time) service"
+      },
+      {
+        "key": "C",
+        "text": "CMOS battery failure"
+      },
+      {
+        "key": "D",
+        "text": "Unreachable or misconfigured NTP server"
+      },
+      {
+        "key": "E",
+        "text": "Disabled Task Scheduler service"
+      }
+    ],
+    "answer": [
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：Windows 时钟漂移（Time Drift）的三大根源】\n正确答案是 B、C、D（已禁用的 W32Time 服务、CMOS 纽扣电池耗尽、NTP 服务器无法访问或配置错误）。\n\n• 什么是 Time drift（时钟漂移）：\n  - 时钟漂移是指主板硬件实时时钟（RTC 晶振）随着时间流逝逐渐变慢或变快（每天累计产生几秒到几分钟的误差）。计算机依赖网络时间协议（NTP）定期校准来纠正这个硬件固有漂移。\n• 为什么选 B、C、D：\n  1. 【CMOS battery failure（CMOS 电池故障/没电，选 C）】：主板纽扣电池（CR2032）负责在关机断电时维持主板 RTC 实时时钟芯片走时和 CMOS 设置。电池电量不足会导致 RTC 走时严重变慢、停滞或断电后时钟重置。\n  2. 【Disabled Windows Time (W32Time) service（W32Time 服务被禁用，选 B）】：Windows 系统负责与网络时间服务器同步时间的后台系统服务是 W32Time。如果它被停用，Windows 就再也不会自动校准硬件时钟，硬件漂移就会不断累积！\n  3. 【Unreachable or misconfigured NTP server（NTP 服务器连不上或配错，选 D）】：配置的授时服务器（如 time.windows.com）地址拼写错误、端口 123 被防火墙拦截或服务器离线，系统无法同步时间，导致时间逐渐偏移。\n\n• 易错陷阱分析（为什么不选 A - 时区设置错误）：\n  - 时区错误（Incorrect time zone，您错选的项）会导致系统时间显示为【固定的整小时偏差】（例如慢了整整 8 小时或快了 5 小时），但时钟本身依然在以恒定 1 秒 1 秒的标准速率走动，这叫“时区偏差（Time zone offset）”，绝不是“时钟漂移（Time drift / 走时变慢变快）”！",
+      "en": "Time drift refers to the progressive deviation of the system clock caused by natural inaccuracies in hardware crystal oscillators (RTC). In Windows, time drift accumulates when:\n1. CMOS battery fails (C), leading to RTC oscillator slowdown or loss of state when powered off.\n2. Windows Time (W32Time) service is disabled (B), stopping periodic background syncs.\n3. The configured NTP server is unreachable or misconfigured (D), causing time synchronization packets to fail.\n\n• Incorrect time zone (A) causes a constant offset (e.g. ±8 hours), not progressive drift."
+    },
+    "mnemonic": {
+      "zh": "口诀：时钟漂移走不准，硬件看【CMOS 纽扣电池】，软件看【W32Time 服务】与【NTP 时间服务器】！【时区错】是固定差几小时，不是漂移！",
+      "en": "Exam Tip: Time drift causes = CMOS battery failure, Disabled W32Time service, Misconfigured/unreachable NTP server."
+    }
+  }
   ]
