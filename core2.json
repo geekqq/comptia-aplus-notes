@@ -1798,5 +1798,127 @@
     "zh": "口诀：只建目录不洗地、底层数据全都在、恢复软件一扫全出来的，是【标准/高级格式化 (Standard format)】！",
     "en": "Exam Tip: Applies new file system + leaves data intact & recoverable = Standard format (High-level format)."
   }
+},
+{
+  "id": 78,
+  "type": "multiple",
+  "selectLimit": 2,
+  "stem": {
+    "zh": "在 SOHO（小型办公/家庭办公）路由器上，以下哪两项属于“IP 过滤”（IP Filtering / 基于网络层 IP 地址过滤）的直接应用场景？（Select 2 answers）",
+    "en": "Which of the following are direct use cases for IP filtering on a SOHO router? (Select 2 answers)"
+  },
+  "options": [
+    { "key": "A", "text": "Blocking websites containing inappropriate content" },
+    { "key": "B", "text": "Allowing only specific internal devices to access the internet" },
+    { "key": "C", "text": "Preventing users from downloading and installing unauthorized applications" },
+    { "key": "D", "text": "Allowing external hosts to connect to a specific internal service" },
+    { "key": "E", "text": "Blocking traffic from specific external IP addresses" }
+  ],
+  "answer": ["B", "E"],
+  "explanation": {
+    "zh": "【考点：网络层 IP 过滤 vs. 应用层内容过滤】\n正确答案是 B 与 E。\n\n• IP 过滤（IP filtering）：工作在网络层（OSI 第 3 层），根据数据包的源 IP 地址（Source IP）或目的 IP 地址（Destination IP）决定放行或丢弃。\n  - 场景 B：仅允许特定的内部局域网主机 IP 访问外网互联网（白名单放行）；\n  - 场景 E：阻断来自特定外部恶意公网 IP 地址的流量（黑名单拦截）。\n\n• 选项 A（阻止包含不当内容的网站，您错选的项）：属于应用层（第 7 层）的“内容过滤（Content filtering / URL filtering）”或 DNS 过滤。因为多个网站常共享同一个 CDN/云服务器 IP，单靠 Layer 3 IP 过滤无法识别网页内容或精准区分域名。\n• 选项 C：属于本地组策略或终端管控，网络设备无法直接阻止单机安装软件。\n• 选项 D：属于端口转发（Port Forwarding / DNAT）。",
+    "en": "IP filtering strictly operates at OSI Layer 3 based on source and destination IP addresses. It allows administrators to restrict internet access to authorized internal IP addresses (B) and block inbound/outbound packets associated with known hostile external IP addresses (E).\n\n• Blocking inappropriate website content (A) requires Layer 7 URL/Content filtering or DNS filtering, not basic IP filtering.\n• Application installation prevention (C) requires endpoint application control.\n• Connecting external hosts to internal services (D) describes port forwarding."
+  },
+  "mnemonic": {
+    "zh": "口诀：【IP 过滤】只看 IP 地址（网络层 Layer 3），管谁能上网、封哪个外部 IP；查违规网址是【内容过滤 (Content filtering)】！",
+    "en": "Exam Tip: IP filtering = Layer 3 Source/Destination IP control. Website categories = Content filtering."
+  }
+},
+{
+  "id": 79,
+  "type": "multiple",
+  "selectLimit": 2,
+  "stem": {
+    "zh": "一台 SOHO 无线路由器被直接贴墙放置，而该墙壁正好隔开了办公室与外部公共走廊（Public hallway）。这种物理摆放位置主要会增加哪两项安全风险？（Select 2 answers）",
+    "en": "A SOHO router is positioned directly against a wall that separates the office from a public hallway. This placement primarily increases the risk of: (Select 2 answers)"
+  },
+  "options": [
+    { "key": "A", "text": "Excessive signal reflection" },
+    { "key": "B", "text": "SSID broadcast suppression" },
+    { "key": "C", "text": "Wireless signal leakage" },
+    { "key": "D", "text": "Reduced signal range within the office" },
+    { "key": "E", "text": "Unauthorized wireless access" }
+  ],
+  "answer": ["C", "E"],
+  "explanation": {
+    "zh": "【考点：无线接入点物理摆放与信号外泄风险（Signal Leakage）】\n正确答案是 C（无线信号外泄）与 E（未授权无线接入）。\n\n• 无线信号外泄（Wireless signal leakage）：全向天线（Omnidirectional antenna）是以 360 度向四周球形辐射射频电波的。若将 AP/路由器贴近公共走廊的外墙摆放，大量高强度的无线信号将穿透墙体扩散到不受企业控制的公共走廊区域。\n• 未授权无线接入（Unauthorized wireless access）：路过走廊的人员、黑客或蹭网者（War-drivers）甚至无需进入办公室，只需在走廊长椅上使用笔记本电脑就能接收到极强的 Wi-Fi 信号，进而进行抓包嗅探或破解接入内网。\n\n• 选项 D（降低办公室内部的信号覆盖范围，您错选的项）：虽然偏心摆放可能让办公室远端信号稍弱，但在 CompTIA 安全大纲中，贴外墙摆放的核心高危问题永远是“安全合规风险（Security risk: 信号泄露 + 走廊黑客非法蹭网接入）”，而非信号减弱。",
+    "en": "Placing a wireless access point directly on an exterior or public-facing wall causes radio waves to bleed into public areas (Wireless signal leakage, C), directly exposing the corporate Wi-Fi to passersby and attackers outside the physical perimeter (Unauthorized wireless access, E).\n\n• Reduced internal range (D) may be a minor coverage issue, but CompTIA specifically targets security vulnerabilities (signal footprint bleed)."
+  },
+  "mnemonic": {
+    "zh": "口诀：路由器贴走廊墙放，信号漏出门【信号外泄 (Signal leakage)】，走廊路人坐着黑【未授权接入 (Unauthorized access)】！",
+    "en": "Exam Tip: AP against public wall = Signal leakage + Unauthorized wireless access risk."
+  }
+},
+{
+  "id": 80,
+  "type": "multiple",
+  "selectLimit": 2,
+  "stem": {
+    "zh": "在 SOHO 路由器上保持禁用 UPnP（通用即插即用）功能，以下哪两项是充分且合理的安全理由？（Select 2 answers）",
+    "en": "Which of the following are valid reasons to leave UPnP disabled on a SOHO router? (Select 2 answers)"
+  },
+  "options": [
+    { "key": "A", "text": "To reduce the risk of external access to internal devices" },
+    { "key": "B", "text": "To minimize the chance of a successful port scanning attack" },
+    { "key": "C", "text": "To prevent the router from broadcasting its external WAN IP address" },
+    { "key": "D", "text": "To reduce the number of connected clients on the network" },
+    { "key": "E", "text": "To prevent automatic port forwarding by unknown applications" }
+  ],
+  "answer": ["A", "E"],
+  "explanation": {
+    "zh": "【考点：UPnP 通用即插即用安全漏洞与威胁】\n正确答案是 A 与 E。\n\n• 自动端口映射风险（E. Prevent automatic port forwarding）：UPnP 协议允许局域网内的任何软件在没有管理员授权、无需输入密码的情况下，自行命令路由器打开防火墙端口并创建端口映射规则。内网一旦感染特洛伊木马或流氓软件，木马可利用 UPnP 自动开后门。\n• 外部直接访问内网风险（A. Reduce risk of external access）：木马或设备被 UPnP 映射到公网后，互联网上的黑客可以直接穿透 NAT 访问内网中原本受防火墙保护的摄像头、NAS 或工作站。\n\n• 选项 B（减少端口扫描成功的几率，您错选的项）：端口扫描主要探测的是公网已有开放端口的状态，禁用 UPnP 的根本目的是杜绝“内网未知程序私自开端口”，而不是防止外网的通用端口扫描。",
+    "en": "UPnP lacks authentication mechanisms, allowing any local device or malware to automatically configure inbound port forwarding rules without admin consent (E), potentially exposing private internal devices directly to the public internet (A).\n\n• Port scanning (B) targets whatever ports are open regardless of protocol."
+  },
+  "mnemonic": {
+    "zh": "口诀：【UPnP】是大后门：内网流氓软件【私自开端口转发 (Automatic port forwarding)】，引外网黑客【直连内网设备 (External access)】，必须坚决关掉！",
+    "en": "Exam Tip: UPnP risks = Unauthorized automatic port forwarding + Exposing internal devices to external attackers."
+  }
+},
+{
+  "id": 81,
+  "type": "single",
+  "stem": {
+    "zh": "以下哪项操作【不属于】SOHO 路由器访问管理（Access Management / 管理员后台安全）的最佳安全实践？",
+    "en": "Which of the actions listed below is not considered a security best practice for access management on a SOHO router?"
+  },
+  "options": [
+    { "key": "A", "text": "Disabling remote access when not needed" },
+    { "key": "B", "text": "Enforcing strong authentication for administrative access" },
+    { "key": "C", "text": "Using encrypted protocols (e.g., HTTPS or SSH)" },
+    { "key": "D", "text": "Limiting access to trusted IP ranges" },
+    { "key": "E", "text": "Changing the default SSID to hide network identity" }
+  ],
+  "answer": ["E"],
+  "explanation": {
+    "zh": "【考点：路由器管理后台访问控制（Access Management）最佳实践】\n正确答案是 E（Changing the default SSID to hide network identity / 更改默认 SSID 伪装隐藏网络身份）。\n注意反向提问：“is NOT considered a security best practice for ACCESS MANAGEMENT”（不属于管理后台访问控制的最佳实践）。\n\n• 为什么 E 不属于：\n  1. SSID 是无线网络名称，属于无线射频广播（Wi-Fi Broadcast），与“路由器管理员配置后台（Access Management）”完全不是一个维度；\n  2. 哪怕单纯在无线安全领域，隐藏 SSID 或改名也属于无效的“隐蔽式安全（Security through obscurity）”，黑客使用抓包工具（如 Wireshark、Airodump-ng）分秒即可检测到网络。\n\n• A、B、C、D 都是正统的访问管理最佳实践：\n  - A. 不需要时关闭远程外网 WAN 访问管理；\n  - B. 强制使用强管理员密码；\n  - C. 使用加密协议（HTTPS / SSH）登录管理界面，防止密码明文被内网抓包（您错选的项，它是极其重要的最佳实践）；\n  - D. 限制仅允许特定受信任管理 IP 登录后台。",
+    "en": "SSID settings belong to wireless beacon broadcasting, not administrator access management. Furthermore, changing or hiding an SSID is \"security through obscurity\" and provides no real access protection.\n\n• Disabling remote WAN management (A), strong admin credentials (B), HTTPS/SSH encrypted access (C), and IP allowlisting (D) are all verified industry best practices for securing router admin consoles."
+  },
+  "mnemonic": {
+    "zh": "口诀：问【后台访问管理】，改 SSID（无线名字）是风马牛不相及！后台必须用【HTTPS/SSH】、关远程、设强密！",
+    "en": "Exam Tip: SSID hiding/renaming does NOT secure router access management. HTTPS/SSH/ACLs do."
+  }
+},
+{
+  "id": 82,
+  "type": "single",
+  "stem": {
+    "zh": "技术人员正在一台全新的 SOHO 无线路由器上配置加密设置，并希望确保无线通信具备最高可能的安全级别（Strongest possible security levels）。技术人员应该选择下列哪个选项？",
+    "en": "A technician is configuring encryption settings on a new SOHO wireless router and wants to ensure the strongest possible security levels for wireless communications. Which option should be selected?"
+  },
+  "options": [
+    { "key": "A", "text": "WPA-TKIP" },
+    { "key": "B", "text": "WPA2-AES" },
+    { "key": "C", "text": "WPA3-SAE" },
+    { "key": "D", "text": "WPA3-Enterprise" }
+  ],
+  "answer": ["C"],
+  "explanation": {
+    "zh": "【考点：最新无线加密协议之 WPA3-SAE（对等实体同时验证）】\n正确答案是 C（WPA3-SAE / WPA3 个人版）。\n题目两个核心关键词：\n1. “SOHO wireless router”：小型办公/家庭办公路由器，没有大型企业专用的 RADIUS/802.1X 认证服务器，因此无法部署 Enterprise 模式。\n2. “Strongest possible security levels”：最高可能的安全级别。\n\n• WPA3-SAE（Simultaneous Authentication of Equals / 对等实体同时验证，蜻蜓握手协议 Dragonfly）：取代了老旧的 WPA2-PSK 预共享密钥机制，具备极强的前向保密性（Forward Secrecy），彻底免疫离线字典暴力破解攻击，是目前 SOHO 无线环境下安全级别最高、最先进的选择。\n\n• 选项 B（WPA2-AES，您错选的项）：虽然普遍使用，但属于上一代旧标准，在四次握手阶段容易遭受字典暴力破解与 KRACK 攻击，安全性低于 WPA3。\n• 选项 D（WPA3-Enterprise）：需要配合后端的 802.1X RADIUS 认证服务器，SOHO 路由器通常不支持且不具备该企业基础设施。",
+    "en": "WPA3-SAE (Simultaneous Authentication of Equals) provides the strongest possible wireless security for SOHO environments, introducing robust protection against offline dictionary attacks and forward secrecy without requiring a RADIUS infrastructure.\n\n• WPA2-AES is legacy and weaker than WPA3.\n• WPA3-Enterprise requires external 802.1X/RADIUS servers, which are not present in standard SOHO deployments."
+  },
+  "mnemonic": {
+    "zh": "口诀：SOHO 家用小办公，最强无线选【WPA3-SAE】（蜻蜓握手防破密）；【Enterprise】需要 RADIUS 服务器，家庭办公用不上！",
+    "en": "Exam Tip: Strongest wireless for SOHO = WPA3-SAE (Dragonfly handshake)."
+  }
 }
   ]
