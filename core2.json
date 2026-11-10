@@ -2365,18 +2365,38 @@
   },
   {
     "id": 96,
-    "question_zh": "用户报告称其智能手机上的某个移动应用无法正常启动。在下列选项中，解决此问题的最佳初始故障排除步骤是：",
-    "question_en": "A user reports that a mobile app fails to launch on their smartphone. Which of the options listed below is the best initial troubleshooting step to resolve this issue?",
+    "type": "single",
+    "stem": {
+      "zh": "用户报告智能手机上的某款移动应用程序（App）无法启动。下列哪项是解决此问题的最佳初始故障排除步骤？",
+      "en": "A user reports that a mobile app fails to launch on their smartphone. Which of the options listed below is the best initial troubleshooting step to resolve this issue?"
+    },
     "options": [
-      "A. Free up storage space",
-      "B. Clear the app cache/data",
-      "C. Restart the device",
-      "D. Verify app permissions"
+      {
+        "key": "A",
+        "text": "Free up storage space"
+      },
+      {
+        "key": "B",
+        "text": "Clear the app cache/data"
+      },
+      {
+        "key": "C",
+        "text": "Restart the device"
+      },
+      {
+        "key": "D",
+        "text": "Verify app permissions"
+      }
     ],
-    "correct_answer": "C",
-    "explanation_zh": "【考点：移动设备应用程序故障排查机制】\n正确答案是 C（Restart the device / 重启设备）。\n\n• 为什么选 Restart the device：\n  - 当移动 App 突然无法启动、崩溃或无响应时，最具性价比且最省时的最佳初始故障排除步骤（best initial troubleshooting step）是重启设备。重启可以清除内存（RAM）中的临时软故障、释放被挂起的进程锁，并重新加载系统基础服务。\n• 为什么不选其它选项：\n  - 清理缓存/数据（Clear the app cache/data）或检查权限（Verify app permissions）属于后续步骤；如果重启后仍无法启动，才需要清理缓存或重装 App。",
-    "explanation_en": "Restarting the device (C) is the best initial troubleshooting step when a mobile application fails to launch. It clears temporary soft glitches in system RAM, releases hung processes, and reinitializes system services without altering user data or settings. If restarting fails to resolve the issue, secondary steps like clearing app cache/data or checking app permissions can be performed.",
-    "exam_tip_zh": "口诀：移动 App 启动失败或卡死闪退，第一步永远首选“Restart the device（重启设备）”！",
-    "exam_tip_en": "Exam Tip: App fails to launch or freezes -> Best initial step is always Restart the device."
+    "answer": [
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：移动端 App 无法启动/闪退的标准排错顺位（Mobile App Troubleshooting Order）】\n正确答案是 C（Restart the device / 重启设备）。\n\n• 为什么选 Restart the device（重启设备）：\n  - 题干的核心关键词是【best initial troubleshooting step（最佳初始/首选故障排除步骤）】。\n  - 在移动设备（iOS / Android）排错流程中，当应用完全无法启动、启动即死锁或崩溃时，通常是由于系统底层临时内存冲突、挂起的孤儿进程或操作系统后台服务死锁导致。此时最快速、最有效、无破坏性的第一步就是【重启设备（Restart the device / Soft reset）】！重启能够清空 RAM、终止异常后台残留进程并重新初始化手机操作系统驱动和服务，往往能瞬间解决绝大多数由于临时资源争用导致的启动故障。\n\n• CompTIA 官方标准移动 App 排错金字塔顺位：\n  1. 初始排错首选：强制关闭 App 并重开；若仍无法启动，立即【重启设备（Restart device）】。\n  2. 进阶排错（若重启无效）：更新 App 版本、检查系统更新；对于 Android，【清除 App 缓存/数据（Clear cache/data）】。\n  3. 终极手段：卸载并重新安装 App（Uninstall & Reinstall）。\n\n• 为什么不选 Verify app permissions（检查应用权限，您错选的项）：\n  - 应用权限（如相机、麦克风、定位、通讯录访问权限）通常是在应用运行过程中，调用具体功能时才会触发弹窗限制或功能不可用（例如无法拍照、无法定位），【权限缺失绝不会导致整个 App 连开都打不开（fails to launch）】。因此权限设置不是 App 启动崩溃的诊断方向。\n• 选项 A（清理存储空间）和选项 B（清除应用缓存/数据）：属于后续排错步骤（清除数据还会导致用户本地登录状态和离线数据丢失），绝非“初始排错最佳第一步”。",
+      "en": "In CompTIA mobile OS troubleshooting guidelines, when an application fails to launch or becomes unresponsive, the best initial, least intrusive troubleshooting step is to restart the mobile device (soft reset). Rebooting reinitializes mobile OS services, releases locked RAM, and clears transient orphaned background processes.\n\n• Verify app permissions (D) is incorrect because missing permissions only restrict access to specific hardware/data (e.g., camera, location, contacts), but do not prevent the app itself from launching.\n• Clear cache/data (B) and freeing storage space (A) are secondary troubleshooting steps."
+    },
+    "mnemonic": {
+      "zh": "口诀：手机 App 打不开，【最佳初始第一步】先【重启手机 (Restart the device)】！权限不够只会功能受限，绝不会导致软件无法启动！",
+      "en": "Exam Tip: Best initial troubleshooting step for mobile app fails to launch = Restart the device."
+    }
   }
-  ]
