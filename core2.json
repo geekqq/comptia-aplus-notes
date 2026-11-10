@@ -2362,5 +2362,22 @@
       "zh": "口诀：时钟漂移走不准，硬件看【CMOS 纽扣电池】，软件看【W32Time 服务】与【NTP 时间服务器】！【时区错】是固定差几小时，不是漂移！",
       "en": "Exam Tip: Time drift causes = CMOS battery failure, Disabled W32Time service, Misconfigured/unreachable NTP server."
     }
+  }[
+  {
+    "id": 96,
+    "question_zh": "用户报告称其智能手机上的某个移动应用无法正常启动。在下列选项中，解决此问题的最佳初始故障排除步骤是：",
+    "question_en": "A user reports that a mobile app fails to launch on their smartphone. Which of the options listed below is the best initial troubleshooting step to resolve this issue?",
+    "options": [
+      "A. Free up storage space",
+      "B. Clear the app cache/data",
+      "C. Restart the device",
+      "D. Verify app permissions"
+    ],
+    "correct_answer": "C",
+    "explanation_zh": "【考点：移动设备应用程序故障排查机制】\n正确答案是 C（Restart the device / 重启设备）。\n\n• 为什么选 Restart the device：\n  - 当移动 App 突然无法启动、崩溃或无响应时，最具性价比且最省时的最佳初始故障排除步骤（best initial troubleshooting step）是重启设备。重启可以清除内存（RAM）中的临时软故障、释放被挂起的进程锁，并重新加载系统基础服务。\n• 为什么不选其它选项：\n  - 清理缓存/数据（Clear the app cache/data）或检查权限（Verify app permissions）属于后续步骤；如果重启后仍无法启动，才需要清理缓存或重装 App。",
+    "explanation_en": "Restarting the device (C) is the best initial troubleshooting step when a mobile application fails to launch. It clears temporary soft glitches in system RAM, releases hung processes, and reinitializes system services without altering user data or settings. If restarting fails to resolve the issue, secondary steps like clearing app cache/data or checking app permissions can be performed.",
+    "exam_tip_zh": "口诀：移动 App 启动失败或卡死闪退，第一步永远首选“Restart the device（重启设备）”！",
+    "exam_tip_en": "Exam Tip: App fails to launch or freezes -> Best initial step is always Restart the device."
   }
+]
   ]
