@@ -2362,7 +2362,7 @@
       "zh": "口诀：时钟漂移走不准，硬件看【CMOS 纽扣电池】，软件看【W32Time 服务】与【NTP 时间服务器】！【时区错】是固定差几小时，不是漂移！",
       "en": "Exam Tip: Time drift causes = CMOS battery failure, Disabled W32Time service, Misconfigured/unreachable NTP server."
     }
-  }[
+  },
   {
     "id": 96,
     "question_zh": "用户报告称其智能手机上的某个移动应用无法正常启动。在下列选项中，解决此问题的最佳初始故障排除步骤是：",
