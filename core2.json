@@ -2436,5 +2436,42 @@
     "zh": "口诀：空间够、网速快，更新【固定进度 (75%) 卡住并回滚】，必选【更新包损坏 (Corrupted update package)】！重新下载安装包就能解决！",
     "en": "Exam Tip: OS update fails and rolls back at a fixed percentage with ample space/fast network = Corrupted update package."
   }
+},
+{
+  "id": 97,
+  "type": "single",
+  "stem": {
+    "zh": "移动设备上启动系统更新（OS update）安装后，每次都在进度达到 75% 时终止并自动回滚恢复。设备拥有充足的剩余存储空间且连接着高速网络。这种现象最强烈地表明了什么？",
+    "en": "An OS update installation begins on a mobile device but consistently stops and reverses the process at 75% complete. The device has plenty of free space and is on a fast network. What does this behavior most strongly suggest?"
+  },
+  "options": [
+    {
+      "key": "A",
+      "text": "Corrupted update package"
+    },
+    {
+      "key": "B",
+      "text": "Insufficient amount of RAM"
+    },
+    {
+      "key": "C",
+      "text": "Battery charge below threshold"
+    },
+    {
+      "key": "D",
+      "text": "Exceeded data usage limit"
+    }
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": {
+    "zh": "【考点：移动设备系统更新失败与回滚诊断（OS Update Failure & Rollback）】\n正确答案是 A（Corrupted update package / 更新包损坏）。\n\n• 为什么选 Corrupted update package（更新包损坏）：\n  - 题干给出了三个核心已知条件：① 更新安装在固定百分比（75%）处【一致性终止并回滚（consistently stops and reverses）】；② 设备【空间充足（plenty of free space）】；③ 处于【高速网络（fast network）】中。\n  - 当系统更新包在下载或校验过程中损坏（如哈希校验和不匹配或文件解包损坏），更新引擎在尝试写入受损数据块时就会校验失败，从而触发系统的自我保护回滚机制（Rollback）。解决该问题的标准操作是删除本地缓存的更新安装包并重新下载完整副本。\n\n• 为什么不选 Insufficient amount of RAM（RAM 内存不足，您错选的项）：\n  - 操作系统更新在开始安装前就会完成硬件环境与 RAM 最小门槛校验；即使运行中发生内存不足，通常会直接造成系统死机崩溃，而不会每次都精准停在 75% 处并执行干净优雅的系统回滚机制。\n\n• 为什么不选其它选项：\n  - 选项 C（电量低于阈值）：移动 OS 在检测到电量低于要求且未接通电源时，【根本不会允许启动更新】，而不是运行到 75% 才报错。\n  - 选项 D（超出数据流量限制）：题干已限定为“高速网络”，且安装已经进入本地解包写入阶段，流量限制不会影响已下载文件在本地的解包安装过程。",
+    "en": "When an OS update installation consistently fails and rolls back at a specific percentage (such as 75%) despite having sufficient storage and a fast network, it indicates that the installer encountered a hash verification or file corruption error due to a corrupted update package. Deleting the cached update and redownloading a fresh package will resolve the issue.\n\n• Insufficient RAM (B) would fail hardware pre-checks or crash the OS, rather than triggering a clean, repeated rollback at a fixed percentage.\n• Battery charge below threshold (C) blocks the update from initiating in the first place until connected to power.\n• Data usage limits (D) affect network downloads, not local file extraction."
+  },
+  "mnemonic": {
+    "zh": "口诀：空间够、网速快，更新【固定进度 (75%) 卡住并回滚】，必选【更新包损坏 (Corrupted update package)】！重新下载安装包就能解决！",
+    "en": "Exam Tip: OS update fails and rolls back at a fixed percentage with ample space/fast network = Corrupted update package."
+  }
 }
 ]
