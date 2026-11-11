@@ -2438,40 +2438,40 @@
   }
 },
 {
-  "id": 97,
+  "id": 98,
   "type": "single",
   "stem": {
-    "zh": "移动设备上启动系统更新（OS update）安装后，每次都在进度达到 75% 时终止并自动回滚恢复。设备拥有充足的剩余存储空间且连接着高速网络。这种现象最强烈地表明了什么？",
-    "en": "An OS update installation begins on a mobile device but consistently stops and reverses the process at 75% complete. The device has plenty of free space and is on a fast network. What does this behavior most strongly suggest?"
+    "zh": "用户正在对一台反复无法发起操作系统更新的个人移动设备进行故障排除。该设备目前已连接到已知良好的居家办公 Wi-Fi 网络，插上了充电器，且已确认更新包可供下载。以下哪项最可能是导致更新失败的原因？",
+    "en": "A user is troubleshooting a personally-owned mobile device that repeatedly fails to initiate an operating system update. The device is currently connected to a known good home office Wi-Fi network, plugged into a charger, and the update package is confirmed to be available for download. Which of the following is the most likely cause of the update failure?"
   },
   "options": [
     {
       "key": "A",
-      "text": "Corrupted update package"
+      "text": "Operating system incompatibility"
     },
     {
       "key": "B",
-      "text": "Insufficient amount of RAM"
+      "text": "Corrupted installation files"
     },
     {
       "key": "C",
-      "text": "Battery charge below threshold"
+      "text": "MDM policy restrictions"
     },
     {
       "key": "D",
-      "text": "Exceeded data usage limit"
+      "text": "Insufficient free storage space"
     }
   ],
   "answer": [
-    "A"
+    "D"
   ],
   "explanation": {
-    "zh": "【考点：移动设备系统更新失败与回滚诊断（OS Update Failure & Rollback）】\n正确答案是 A（Corrupted update package / 更新包损坏）。\n\n• 为什么选 Corrupted update package（更新包损坏）：\n  - 题干给出了三个核心已知条件：① 更新安装在固定百分比（75%）处【一致性终止并回滚（consistently stops and reverses）】；② 设备【空间充足（plenty of free space）】；③ 处于【高速网络（fast network）】中。\n  - 当系统更新包在下载或校验过程中损坏（如哈希校验和不匹配或文件解包损坏），更新引擎在尝试写入受损数据块时就会校验失败，从而触发系统的自我保护回滚机制（Rollback）。解决该问题的标准操作是删除本地缓存的更新安装包并重新下载完整副本。\n\n• 为什么不选 Insufficient amount of RAM（RAM 内存不足，您错选的项）：\n  - 操作系统更新在开始安装前就会完成硬件环境与 RAM 最小门槛校验；即使运行中发生内存不足，通常会直接造成系统死机崩溃，而不会每次都精准停在 75% 处并执行干净优雅的系统回滚机制。\n\n• 为什么不选其它选项：\n  - 选项 C（电量低于阈值）：移动 OS 在检测到电量低于要求且未接通电源时，【根本不会允许启动更新】，而不是运行到 75% 才报错。\n  - 选项 D（超出数据流量限制）：题干已限定为“高速网络”，且安装已经进入本地解包写入阶段，流量限制不会影响已下载文件在本地的解包安装过程。",
-    "en": "When an OS update installation consistently fails and rolls back at a specific percentage (such as 75%) despite having sufficient storage and a fast network, it indicates that the installer encountered a hash verification or file corruption error due to a corrupted update package. Deleting the cached update and redownloading a fresh package will resolve the issue.\n\n• Insufficient RAM (B) would fail hardware pre-checks or crash the OS, rather than triggering a clean, repeated rollback at a fixed percentage.\n• Battery charge below threshold (C) blocks the update from initiating in the first place until connected to power.\n• Data usage limits (D) affect network downloads, not local file extraction."
+    "zh": "【考点：移动设备系统更新发起条件（OS Update Initiating Prerequisites）】\n正确答案是 D（Insufficient free storage space / 剩余存储空间不足）。\n\n• 为什么选 Insufficient free storage space（剩余存储空间不足）：\n  - 题干通过排除法给出了极为清晰的条件：① 已连接良好的 Wi-Fi（排除网络连接问题）；② 已插上充电器（排除电量不足门槛）；③ 更新包已确认可用（排除更新文件不存在/不兼容）；④ 属于个人设备（personally-owned，排除企业 MDM 策略拦截）。\n  - 移动操作系统在【发起更新（initiate an update）】之前，必须进行存储空间前置校验。系统更新包除了自身的下载体积外，解压、安装及写入临时备份通常需要 2~3 倍于更新包大小的临时空间。如果手机剩余空间不足，系统会在准备阶段直接阻止更新的启动。\n\n• 为什么不选 Corrupted installation files（安装文件损坏，您错选的项）：\n  - 题干的核心现象是【反复无法发起更新（fails to initiate）】，即更新流程在最开始就被系统拦截了。如果安装文件损坏，通常是下载完成后在解压校验或安装中途（如进度条走动到某个百分比时）报错回滚，而不是在发起阶段就受阻。\n\n• 为什么不选 MDM policy restrictions（MDM 策略限制）：\n  - 题干明确指定设备为【personally-owned（个人自购设备）】，未加入企业 MDM 集中管控，因此排除 MDM 策略阻止因素。",
+    "en": "The correct answer is D (Insufficient free storage space). In mobile OS troubleshooting, initiating an OS update requires three primary preconditions: connection to power, network connectivity, and sufficient free storage space for downloading, extracting, and installing the OS payload. Because power, network, and availability are explicitly confirmed, the remaining impediment preventing the system from initiating the update is insufficient local disk space.\n\n• Corrupted installation files (B) would cause errors during the installation/extraction phase or progress bar rollback, rather than preventing the update from initiating entirely.\n• MDM policy restrictions (C) is ruled out because the device is specified as personally-owned.\n• OS incompatibility (A) would prevent the system from showing the update as available for download in the first place."
   },
   "mnemonic": {
-    "zh": "口诀：空间够、网速快，更新【固定进度 (75%) 卡住并回滚】，必选【更新包损坏 (Corrupted update package)】！重新下载安装包就能解决！",
-    "en": "Exam Tip: OS update fails and rolls back at a fixed percentage with ample space/fast network = Corrupted update package."
+    "zh": "口诀：网速快、电源插、个人设备无 MDM，更新【连发起都发不起 (fails to initiate)】，绝对是【存储空间不够用 (Insufficient free storage space)】！",
+    "en": "Exam Tip: Wi-Fi connected + Plugged into charger + Update available, but fails to INITIATE = Insufficient free storage space."
   }
 }
 ]
