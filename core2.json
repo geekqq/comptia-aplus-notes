@@ -2621,5 +2621,87 @@
     "zh": "口诀：私密数据遭外泄、被偷装【管理员特权应用 (Administrative privileges)】，普通卸载防不住，彻底修复必须【恢复出厂默认设置 (Reset to factory defaults)】！",
     "en": "Exam Tip: Exfiltrated data + Unauthorized app with administrative privileges = Reset device to factory defaults."
   }
+},
+{
+  "id": 103,
+  "type": "single",
+  "stem": {
+    "zh": "在下列选项中，哪项操作最不可能改善已经下降/变卡顿的网页浏览器性能？",
+    "en": "Which of the actions listed below is least likely to improve degraded web browser performance?"
+  },
+  "options": [
+    {
+      "key": "A",
+      "text": "Resetting the browser to its defaults"
+    },
+    {
+      "key": "B",
+      "text": "Closing unnecessary browser tabs"
+    },
+    {
+      "key": "C",
+      "text": "Emptying the browser's cache"
+    },
+    {
+      "key": "D",
+      "text": "Removing suspicious browser extensions"
+    },
+    {
+      "key": "E",
+      "text": "Updating the browser"
+    },
+    {
+      "key": "F",
+      "text": "Adjusting the virtual memory settings"
+    }
+  ],
+  "answer": [
+    "F"
+  ],
+  "explanation": {
+    "zh": "【考点：网页浏览器性能故障排查（Web Browser Performance Troubleshooting）】\n正确答案是 F（Adjusting the virtual memory settings / 调整虚拟内存设置）。\n\n• 为什么选 Adjusting the virtual memory settings：\n  - 题干问的是【最不可能（least likely）】改善浏览器性能的操作。\n  - 网页浏览器性能下降（如卡顿、响应迟缓、页面无响应）通常是由于【应用层（Application Level）】内部问题导致的。常见的有效排错手段均针对浏览器自身：关闭不必要的标签页（释放内存占用）、移除可疑/冲突的扩展插件、清空臃肿或损坏的浏览器缓存、重置浏览器配置、以及更新浏览器软件版本以修补漏洞及性能 Bug。\n  - 调整操作系统的虚拟内存（Virtual Memory / Paging File）属于【操作系统底层（OS Level）】的磁盘换页管理。当故障局限于网页浏览器自身的性能退化时，修改 OS 虚拟内存对解决应用程序内部的卡顿问题【最不可能生效（least likely）】。\n\n• 为什么不选 Emptying the browser's cache（清空浏览器缓存，您错选的项）：\n  - 清理浏览器缓存（Cache）可以清除过期的资源文件、坏掉的网页脚本及庞大的临时文件，是提升浏览器响应速度和解决页面加载故障的标准且有效的步骤（因此不符合题干的“最不可能”）。",
+    "en": "The correct answer is F (Adjusting the virtual memory settings). Degraded web browser performance (sluggishness, frozen tabs, high CPU/RAM usage) is an application-layer issue caused by buggy browser extensions, cluttered cached files, resource strain from open tabs, corrupted profile settings, or outdated software builds. Fixing browser degradation requires application-specific actions (resetting defaults, closing tabs, emptying cache, removing extensions, updating). Adjusting OS-level virtual memory (paging file) settings manages system-wide memory swapping and is least likely to resolve a browser-specific application issue.\n\n• Emptying the browser's cache (C) is a standard and effective method to clean corrupted web data and improve browser performance."
+  },
+  "mnemonic": {
+    "zh": "口诀：浏览器卡顿属于【应用层问题】，清理缓存、关标签、删插件、更新重置都有效；改系统【虚拟内存 (Virtual Memory)】管整机 OS 换页，最不可能解决浏览器卡顿！",
+    "en": "Exam Tip: Degraded browser performance = Application-level fixes (Clear cache, disable extensions, close tabs, update/reset browser). Adjusting OS virtual memory is LEAST likely to help."
+  }
+},
+{
+  "id": 104,
+  "type": "single",
+  "stem": {
+    "zh": "用户的 Windows 电脑频繁弹出警报，要求激活某个未知的系统保护工具。应采取什么步骤来解决这一症状？",
+    "en": "A user's Windows PC displays frequent alerts requesting activation of an unknown system protection tool. What step should be taken to address this symptom?"
+  },
+  "options": [
+    {
+      "key": "A",
+      "text": "Disable OS notifications"
+    },
+    {
+      "key": "B",
+      "text": "Ignore the alerts"
+    },
+    {
+      "key": "C",
+      "text": "Update Windows"
+    },
+    {
+      "key": "D",
+      "text": "Run a full malware scan"
+    }
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": {
+    "zh": "【考点：伪毒杀软/恐吓软件（Rogue Antivirus / Scareware）的排查与清除】\n正确答案是 D（Run a full malware scan / 运行全盘恶意软件扫描）。\n\n• 为什么选 Run a full malware scan：\n  - 题干中描述的典型症状“频繁弹出警报提示系统受感染，要求激活/购买某个【未知的系统保护工具（unknown system protection tool）】”，是标准的【假冒杀毒软件 / 恐吓软件（Rogue AV / Scareware）】攻击特征。此类恶意软件通过伪造严肃的系统安全警告来恐吓用户付费或获取凭据。\n  - 解决此类恶意软件感染的标准清除步骤是【使用最新的防恶意软件工具运行全盘扫描（Run a full malware scan）】，定位并彻底查杀恶意程序实体。\n\n• 为什么不选 Update Windows（更新 Windows，您错选的项）：\n  - Windows 更新用于修复操作系统的已知安全漏洞以防止未来受到攻击，但它无法清除【已经在系统内部落地并正在运行的恶意软件/恐吓软件程序】。病毒已经中招，单纯打补丁无法杀毒。\n\n• 为什么不选其它选项：\n  - 选项 A（禁用操作系统通知）与 选项 B（忽略警报）：掩耳盗铃，无法阻止后台恶意软件继续窃取数据或破坏系统，属于无效手段。",
+    "en": "The correct answer is D (Run a full malware scan). Frequent popup alerts requesting the activation or purchase of an unknown system protection tool are classic symptoms of Rogue Antivirus / Scareware. This is malicious software designed to deceive users into believing their PC is infected. The required resolution is to run a comprehensive malware scan with updated anti-malware signatures to detect and quarantine the rogue application.\n\n• Update Windows (C) patches operating system vulnerabilities to mitigate future exploits, but it cannot scan for or remove active malware already running on the host.\n• Disabling OS notifications (A) or ignoring alerts (B) merely hides the symptoms while leaving the security compromise untreated."
+  },
+  "mnemonic": {
+    "zh": "口诀：弹窗要你激活【未知杀软/保护工具】，属于假杀毒恐吓软件（Scareware）！打更新（Update Windows）杀不了现存病毒，必须直接【运行全盘扫描杀毒 (Run a full malware scan)】！",
+    "en": "Exam Tip: Alerts to activate an unknown protection tool = Scareware / Rogue AV. Solution = Run a full malware scan."
+  }
 }
 ]
