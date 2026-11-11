@@ -2473,5 +2473,153 @@
     "zh": "口诀：网速快、电源插、个人设备无 MDM，更新【连发起都发不起 (fails to initiate)】，绝对是【存储空间不够用 (Insufficient free storage space)】！",
     "en": "Exam Tip: Wi-Fi connected + Plugged into charger + Update available, but fails to INITIATE = Insufficient free storage space."
   }
+},
+{
+  "id": 99,
+  "type": "single",
+  "stem": {
+    "zh": "经排查，操作系统安装损坏（corrupted OS installation）被确认为导致用户移动设备持续随机重启的最可能原因。在备份完所有用户数据并给设备充满电后，技术人员接下来应该采取的故障排除步骤是什么？",
+    "en": "A corrupted OS installation has been isolated as the most likely cause of persistent random reboots on a user's mobile device. After backing up all user data and charging the device, what is the next troubleshooting step a technician should take?"
+  },
+  "options": [
+    {
+      "key": "A",
+      "text": "Check for and install the latest OS update"
+    },
+    {
+      "key": "B",
+      "text": "Reboot into diagnostic startup mode"
+    },
+    {
+      "key": "C",
+      "text": "Downgrade the OS to the previous stable version"
+    },
+    {
+      "key": "D",
+      "text": "Perform a factory reset of the device"
+    }
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": {
+    "zh": "【考点：移动设备系统严重损坏的终极修复方案（Factory Reset）】\n正确答案是 D（Perform a factory reset of the device / 执行恢复出厂设置）。\n\n• 为什么选 Perform a factory reset of the device：\n  - 题干明确给出了核心前提：① 已经隔离定位出根因是【操作系统底层文件损坏（corrupted OS installation）】；② 已经完成了前置准备工作——【已备份所有用户数据】并【给设备充满电】。\n  - 当移动设备的 OS 自身文件损坏导致系统崩溃或循环重启时，尝试普通的系统更新（选项 A）通常无法修复已损坏的核心系统镜像（更新程序甚至会因为底层损坏而直接报错安装失败）。在此情况下，唯有通过【恢复出厂设置（Factory Reset）】抹去损坏的系统分区并使用全新的官方基准镜像重新擦写构建，才能彻底解决系统损坏问题。\n\n• 为什么不选 Check for and install the latest OS update（检查并安装最新 OS 更新，您错选的项）：\n  - OS 更新补丁是在现有操作系统健康的基础上进行增量替换或升级；如果操作系统核心文件本身已经损坏（Corrupted OS），更新程序往往无法正常加载执行，或者更新后旧损坏残留依然存在。此时最标准、最直接的解决手段是恢复出厂设置。\n\n• 为什么不选其它选项：\n  - 选项 B（重启至诊断启动模式）：仅用于排查第三方 App 冲突，无法修复损坏的操作系统核心文件。\n  - 选项 C（降级 OS 到上一稳定版）：移动平台（iOS/Android）通常有固件签名验证或系统限制，不支持直接降级；即使降级也需要刷机/恢复，标准流程仍是恢复出厂基线。",
+    "en": "The correct answer is D (Perform a factory reset of the device). When an operating system installation is corrupted to the point of causing persistent system instability or random reboots, the only definitive solution is to perform a factory reset (which wipes the corrupted system partition and restores pristine OS image binaries). Standard OS updates (A) rely on an intact OS base to patch files and will typically fail or hang on a corrupted system.\n\n• Check for and install the latest OS update (A) is incorrect because incrementally patching a corrupted OS base will not replace corrupted system binaries.\n• Reboot into diagnostic mode (B) isolatess third-party software conflicts but does not repair system files.\n• Downgrading the OS (C) is generally restricted by vendor signing policies on mobile devices."
+  },
+  "mnemonic": {
+    "zh": "口诀：已确认【系统 OS 损坏 (Corrupted OS)】，且【数据已备份、电已充满】，下一步绝不打补丁，直接【恢复出厂设置 (Factory Reset)】重洗系统！",
+    "en": "Exam Tip: Confirmed corrupted OS + Data backed up & charged = Perform a factory reset."
+  }
+},
+{
+  "id": 100,
+  "type": "single",
+  "stem": {
+    "zh": "从非受信来源（即官方应用商店以外的网站及第三方应用市场）安装移动应用程序的做法被称为：",
+    "en": "The practice of installing mobile apps from untrusted sources (i.e., websites and app stores other than the official marketplaces) is referred to as:"
+  },
+  "options": [
+    {
+      "key": "A",
+      "text": "Sandboxing"
+    },
+    {
+      "key": "B",
+      "text": "Jailbreaking"
+    },
+    {
+      "key": "C",
+      "text": "Rooting"
+    },
+    {
+      "key": "D",
+      "text": "Sideloading"
+    }
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": {
+    "zh": "【考点：移动安全术语辨析（Sideloading vs. Jailbreaking vs. Rooting）】\n正确答案是 D（Sideloading / 侧载）。\n\n• 核心概念区分：\n  - **Sideloading（侧载）**：特指从官方应用商店（如 Apple App Store、Google Play Store）以外的第三方网站、论坛或本地文件（如 .apk / .ipa）直接安装 App 的行为。\n  - **Jailbreaking（越狱，您错选的项）**：特指在 iOS 设备上移除苹果系统的安全限制与沙盒保护，从而获取最高系统管理权限的行为（越狱后可以更容易进行侧载，但“越狱”动作本身指的是破解系统权限，不是安装 App 这一行为）。\n  - **Rooting（刷机/获取 Root 权限）**：特指在 Android 设备上获取最高管理员（root）控制权限的行为。\n  - **Sandboxing（沙盒化）**：是一种安全隔离机制，限制应用程序只能在特定的受限内存与存储区域运行，无法随意访问系统其它资源。",
+    "en": "Sideloading (D) refers specifically to downloading and installing mobile applications directly from non-official third-party stores, websites, or external storage files (such as APKs on Android or IPAs on iOS) rather than from official vendor marketplaces.\n\n• Jailbreaking (B) refers to breaking Apple's iOS security restrictions to gain elevated privileges.\n• Rooting (C) refers to obtaining root superuser access on Android devices.\n• Sandboxing (A) is an isolated execution environment designed to restrict app permissions."
+  },
+  "mnemonic": {
+    "zh": "口诀：跳过官方商店【装第三方 App】叫【侧载 (Sideloading)】；破解系统【拿最高权限】才叫 iOS 越狱 (Jailbreak) / Android 提权 (Root)！",
+    "en": "Exam Tip: Installing apps from non-official/third-party sources = Sideloading. Gaining full OS administrative control = Jailbreaking (iOS) / Rooting (Android)."
+  }
+},
+{
+  "id": 101,
+  "type": "single",
+  "stem": {
+    "zh": "一名 Android 用户报告称多项系统设置会自动恢复为默认值，且设备频繁重启。技术人员检查发现开发者模式（Developer Mode）已被启用，且从第三方网站侧载（sideloaded）安装了某个应用程序。彻底消除威胁并将设备恢复正常运行的最有效方法是什么？",
+    "en": "An Android user reports that several system settings change back to default automatically and the device frequently reboots. A technician discovers Developer Mode was enabled and an application was sideloaded from a third-party website. What is the most effective method to completely remove the threat and restore the device to normal operation?"
+  },
+  "options": [
+    {
+      "key": "A",
+      "text": "Disable Developer Mode"
+    },
+    {
+      "key": "B",
+      "text": "Force stop the suspicious application"
+    },
+    {
+      "key": "C",
+      "text": "Perform a factory reset of the device"
+    },
+    {
+      "key": "D",
+      "text": "Uninstall the application"
+    }
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": {
+    "zh": "【考点：侧载高危恶意软件后的彻底消除手段（Factory Reset）】\n正确答案是 C（Perform a factory reset of the device / 执行恢复出厂设置）。\n\n• 为什么选 Perform a factory reset of the device：\n  - 题目中的关键线索：开启了开发者模式并【侧载（sideloaded）了来自第三方网站的应用】，随后设备出现了【系统设置被篡改】和【频繁重启】。这表明侧载的应用很可能包含木马或提权恶意软件，已经获取了系统底层权限并在 OS 系统层级写入了恶意驻留逻辑（Persistence mechanisms）。\n  - 面对已提权并篡改系统设置的恶意软件，仅通过简单的卸载应用（选项 D）或关闭开发者模式（选项 A，您错选的项）无法保证隐藏的木马后门、恶意的系统服务或修改过的系统配置文件被完全清除。彻底消除此类高级威胁并恢复设备安全的【最有效方法（most effective method）】是直接【执行恢复出厂设置（Perform a factory reset）】。\n\n• 为什么不选 Disable Developer Mode（禁用开发者模式，您错选的项）：\n  - 开发者模式只是一个系统开启调试权限的开关；禁用它并不能清除已经落地的恶意软件及其获取的系统权限或写入的恶意后门文件。",
+    "en": "Sideloading software from unknown third-party websites while Developer Mode is enabled exposes Android to privileged malware. When malware has altered system settings and causes random reboots, it has likely escalated system privileges and compromised system integrity. Simple app uninstallation (D) or disabling Developer Mode (A) cannot guarantee the complete removal of hidden backdoors or modified OS files. Performing a factory reset (C) is the most effective and definitive remediation method to purge the threat.\n\n• Disabling Developer Mode (A) leaves installed malware untouched.\n• Force stopping (B) or uninstalling (D) leaves potential rootkits or secondary payloads behind."
+  },
+  "mnemonic": {
+    "zh": "口诀：开启开发者模式 + 侧载第三方野应用导致【系统设置被篡改/频繁重启】，说明毒已入骨！简单卸载没用，必须【恢复出厂设置 (Factory Reset)】彻底连根拔起！",
+    "en": "Exam Tip: Sideloaded malware compromising system settings/rebooting = Factory reset required for complete removal."
+  }
+},
+{
+  "id": 102,
+  "type": "single",
+  "stem": {
+    "zh": "一名员工发现自己的私密照片和通讯录在其未同意的情况下被发布到了公共社交媒体网站上。技术人员检查设备后发现了一些拥有管理员特权（administrative privileges）但用户不记得安装过的应用。彻底修复设备并消除未授权访问的最佳应对措施是什么？",
+    "en": "An employee notices their private photos and contacts have been posted to a public social media site without their consent. A technician inspects the device and finds apps with administrative privileges that the user does not remember installing. What is the best course of action to fully remediate the device and remove unauthorized access?"
+  },
+  "options": [
+    {
+      "key": "A",
+      "text": "Uninstall the suspicious apps"
+    },
+    {
+      "key": "B",
+      "text": "Perform a full malware scan"
+    },
+    {
+      "key": "C",
+      "text": "Reset the device to factory defaults"
+    },
+    {
+      "key": "D",
+      "text": "Quarantine the device via MDM"
+    }
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": {
+    "zh": "【考点：移动设备高级间谍/流氓软件（Administrative Privileges）彻底修复】\n正确答案是 C（Reset the device to factory defaults / 将设备重置为出厂默认设置）。\n\n• 为什么选 Reset the device to factory defaults：\n  - 题目描述的症状：数据严重外泄（照片/联系人被盗）、存在【未经授权且拥有管理员特权（administrative privileges）的应用】。这属于高危的间谍软件（Stalkerware / Trojan）或提权恶意软件，它不仅能窃取私密数据，还拥有设备的管理级最高访问权。\n  - 当恶意软件已经获得了管理员/Root 级别特权时，普通的应用卸载（选项 A，您错选的项）往往会被恶意软件自身的防卸载机制阻止，或者卸载后残留后门服务；杀毒扫描（选项 B）也无法完全确保所有提权文件被擦除。针对已被获取最高管理员权限的受污染设备，CompTIA 官方最佳实践是【彻底重置为出厂默认设置（Reset to factory defaults）】，完全清空分区并擦除恶意凭证。\n\n• 为什么不选 Uninstall the suspicious apps（卸载可疑应用，您错选的项）：\n  - 拥有管理员特权（Device Admin / Root）的恶意软件可以通过权限阻止自己被正常卸载，甚至在后台静默分发安装其它恶意子载荷，单纯卸载可疑应用无法保证威胁被完全消除（fully remediate）。\n\n• 为什么不选 Quarantine the device via MDM（通过 MDM 隔离设备）：\n  - MDM 隔离只能防止设备进一步访问公司内网，无法清除设备本地已获取管理员权限的恶意软件。",
+    "en": "When malicious applications have secured administrative privileges on a mobile device and exfiltrated private data, device integrity is completely compromised. Rogue apps with administrative rights can block uninstallation, spawn hidden secondary daemons, or modify OS configuration. Simple app uninstallation (A) or malware scanning (B) cannot guarantee total remediation. Resetting the device to factory defaults (C) is the required standard action to completely destroy the unauthorized access path and wipe the threat.\n\n• Uninstalling suspicious apps (A) is insufficient because administrative malware can resist uninstallation or persist in secondary forms.\n• MDM Quarantine (D) limits network access but fails to clean the local endpoint."
+  },
+  "mnemonic": {
+    "zh": "口诀：私密数据遭外泄、被偷装【管理员特权应用 (Administrative privileges)】，普通卸载防不住，彻底修复必须【恢复出厂默认设置 (Reset to factory defaults)】！",
+    "en": "Exam Tip: Exfiltrated data + Unauthorized app with administrative privileges = Reset device to factory defaults."
+  }
 }
 ]
