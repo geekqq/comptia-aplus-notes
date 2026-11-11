@@ -2814,5 +2814,42 @@
     "zh": "口诀：从【外部供应商买东西/设备 (acquire from external suppliers)】的结构化流程，标准术语就是【采购生命周期 (Procurement life cycle)】！买回来后的盘点维护才叫资产管理！",
     "en": "Exam Tip: Structured process to acquire goods/equipment from external suppliers = Procurement life cycle."
   }
+},
+{
+  "id": 108,
+  "type": "single",
+  "stem": {
+    "zh": "管理员申请用一套新型高性能存储阵列替换一台老化的文件服务器。在变更申请（Change Request）中，管理员通过指出当前服务器已过保且频繁发生硬件超时来证明该替换的合理性。这一细节满足了变更管理流程中的哪一部分？",
+    "en": "An administrator is requesting to replace an aging file server with a new high-performance storage array. In the change request, the administrator justifies the replacement by noting that the current server is out of warranty and experiencing frequent hardware timeouts. Which part of the change management process does this detail satisfy?"
+  },
+  "options": [
+    {
+      "key": "A",
+      "text": "Change type"
+    },
+    {
+      "key": "B",
+      "text": "Identification of affected systems"
+    },
+    {
+      "key": "C",
+      "text": "Purpose of the change"
+    },
+    {
+      "key": "D",
+      "text": "Risk analysis"
+    }
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": {
+    "zh": "【考点：变更管理流程核心要素之变更目的（Purpose of the Change）】\n正确答案是 C（Purpose of the change / 变更目的与正当理由）。\n\n• 为什么选 Purpose of the change（变更目的）：\n  - 题干的核心线索在于：管理员在变更申请中“通过指出当前服务器已过保且频繁发生硬件超时来证明该替换的合理性（justifies the replacement）”。\n  - 在 CompTIA 变更管理（Change Management）标准文档中，【Purpose of the change（变更目的/正当理由）】字段专门用于解释“为什么要实施这项变更”。说明硬件老化、维保到期、故障率高或升级效益等理由，均属于阐述变更的目的与正当性。\n\n• 为什么不选 Risk analysis（风险分析，您错选的项）：\n  - 风险分析（Risk analysis）侧重评估“实施该变更过程中可能引发什么副作用或业务中断（如服务停机风险）”以及“如何制定应对与回滚计划”。此处说明服务器过保与硬件超时是为了给“更换服务器”这一行为寻找理由（justification），因此归属于【变更目的】。\n\n• 为什么不选其它选项：\n  - 选项 A（Change type / 变更类型）：指定变更的分类级别（如 Standard 标准变更、Normal 常规变更、Emergency 紧急变更）。\n  - 选项 B（Identification of affected systems / 识别受影响系统）：详细列出变更实施期间将受影响的机器、子网或业务应用列表。",
+    "en": "The correct answer is C (Purpose of the change). In CompTIA Change Management best practices, the 'Purpose of the change' (or Reason for change) section documents the technical or business justification for initiating a request. Providing details such as hardware aging, expiring warranties, and frequent timeouts satisfies the requirement to justify why the change is necessary.\n\n• Risk analysis (D) is incorrect because it evaluates the potential business impact, downtime risks, or collateral consequences associated with implementing the change.\n• Change type (A) categorizes the change (e.g., Standard, Normal, Emergency).\n• Identification of affected systems (B) inventories the specific hardware, software, or network components affected during implementation."
+  },
+  "mnemonic": {
+    "zh": "口诀：解释【为什么要换/立项合理性 (Justifies replacement)】属于【变更目的 (Purpose of the change)】！评估【换的过程中会出什么岔子】才叫风险分析 (Risk analysis)！",
+    "en": "Exam Tip: Stating WHY a replacement is needed (aging hardware/out of warranty) = Purpose of the change."
+  }
 }
 ]
