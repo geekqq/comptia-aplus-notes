@@ -2851,5 +2851,190 @@
     "zh": "口诀：解释【为什么要换/立项合理性 (Justifies replacement)】属于【变更目的 (Purpose of the change)】！评估【换的过程中会出什么岔子】才叫风险分析 (Risk analysis)！",
     "en": "Exam Tip: Stating WHY a replacement is needed (aging hardware/out of warranty) = Purpose of the change."
   }
+},
+{
+  "id": 109,
+  "type": "single",
+  "stem": {
+    "zh": "某组织计划将其整个本地电子邮件系统迁移至云服务提供商。该过程需要正式的批准与风险评估。根据变更管理流程，这属于哪种变更类型？",
+    "en": "An organization plans to move its entire on-premises email system to a cloud-based provider. This process requires formal approval and risk assessment. According to change management procedures, which change type does this represent?"
+  },
+  "options": [
+    {
+      "key": "A",
+      "text": "Standard change"
+    },
+    {
+      "key": "B",
+      "text": "Normal change"
+    },
+    {
+      "key": "C",
+      "text": "High-impact change"
+    },
+    {
+      "key": "D",
+      "text": "Emergency change"
+    }
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": {
+    "zh": "【考点：变更管理三大标准分类（Standard vs. Normal vs. Emergency Change）】\n正确答案是 B（Normal change / 常规变更）。\n\n• 为什么选 Normal change（常规变更）：\n  - ITIL / CompTIA 变更管理中将变更分为三大标准类型：\n    1. **Normal change（常规变更）**：指非预先批准的重大或中度技术调整（如将本地邮件系统整机迁移至云端）。此类变更必须提交正式的变更申请（RFC），经过详细的风险/影响评估，并由变更控制委员会（CAB）审核批准后方可实施。\n    2. **Standard change（标准变更）**：指频繁发生、低风险、有固定预定流程且【已被预先批准（Pre-approved）】的日常例行操作（如新建用户账号、重置密码、例行补丁）。\n    3. **Emergency change（紧急变更）**：指为了应对突发重大故障、系统崩溃或高危安全漏洞而必须立即执行的极高优先级变更。\n\n• 为什么不选 High-impact change（高影响变更，您错选的项）：\n  - “High-impact（高影响）”是用于评估变更风险等级（Impact Assessment Level）的描述词，【并不是 ITIL/CompTIA 标准变更类型分类（Change Type）的名称】。题干明确询问的是 Change Type，因此应选 Normal change。",
+    "en": "The correct answer is B (Normal change). Change management standards categorize changes into three official types: Standard, Normal, and Emergency. A major system migration, such as moving an on-premises email system to the cloud, is a non-routine modification that requires a formal Request for Change (RFC), risk assessment, and Change Advisory Board (CAB) review, which defines a Normal change.\n\n• High-impact change (C) is incorrect because 'high impact' is a risk severity rating, not an official ITIL/CompTIA Change Type category.\n• Standard change (A) refers to routine, low-risk, pre-approved procedural changes (e.g., password resets).\n• Emergency change (D) is reserved for urgent fixes to active outages or security breaches."
+  },
+  "mnemonic": {
+    "zh": "口诀：ITIL 标准变更【类型只有三种】——预先批准选【Standard】，急救抢修选【Emergency】，重大迁移/常规流程选【Normal】！High-impact 是风险等级不是变更类型！",
+    "en": "Exam Tip: Major system migrations requiring formal RFC and CAB review = Normal change."
+  }
+},
+{
+  "id": 110,
+  "type": "single",
+  "stem": {
+    "zh": "一项拟议的固件更新可能会导致多个部门暂时停机。变更申请表包含一个专用章节，用于记录评估出的潜在负面结果的发生概率。哪个章节应该记录此信息？",
+    "en": "A proposed firmware update could cause temporary outages for several departments. The change request form includes a dedicated section for documenting the assessed likelihood of potential negative outcomes. Which section should record this information?"
+  },
+  "options": [
+    {
+      "key": "A",
+      "text": "Impact analysis"
+    },
+    {
+      "key": "B",
+      "text": "Vulnerability assessment"
+    },
+    {
+      "key": "C",
+      "text": "Downtime estimate"
+    },
+    {
+      "key": "D",
+      "text": "Risk level"
+    }
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": {
+    "zh": "【考点：变更申请表中的风险等级 vs. 影响分析（Risk Level vs. Impact Analysis）】\n正确答案是 D（Risk level / 风险等级与分析）。\n\n• 为什么选 Risk level（风险等级）：\n  - 题干核心关键词：用于记录“评估出的潜在负面结果的【发生概率/可能性（assessed likelihood of potential negative outcomes）】”。\n  - 在变更管理中，**风险（Risk）**的定义是“可能性（Likelihood/Probability）”与“影响程度（Impact/Severity）”的结合。专门量化和评估负面事件发生的可能性/概率的部分归属于【Risk level / Risk analysis（风险等级/风险分析）】章节。\n\n• 为什么不选 Impact analysis（影响分析，您错选的项）：\n  - **影响分析（Impact analysis）**评估的是“如果故障真的发生，【危害范围有多大/影响多少部门和用户】（Severity & Scope）”；而题干问的是评估“故障发生的【可能性概率（assessed likelihood）】”，因此属于 Risk level。\n\n• 为什么不选其它选项：\n  - 选项 B（Vulnerability assessment）：漏洞评估，用于安全扫描找出系统已知安全漏洞。\n  - 选项 C（Downtime estimate）：停机时间预测，仅计算计划内维护停机的时长（如预计停机 2 小时）。",
+    "en": "The correct answer is D (Risk level). Risk evaluation incorporates both the likelihood of a negative outcome occurring and its potential impact. The dedicated section for documenting the assessed probability/likelihood of failure during a change is the Risk level (or Risk Analysis) section.\n\n• Impact analysis (A) is incorrect because it measures the breadth and severity of disruption (e.g., how many users or services are affected if it fails), rather than the likelihood of failure happening.\n• Downtime estimate (C) measures the expected duration of planned service interruption.\n• Vulnerability assessment (B) scans for security weaknesses in infrastructure."
+  },
+  "mnemonic": {
+    "zh": "口诀：问【出岔子的概率/可能性 (Likelihood)】填【Risk level（风险等级）】！问【出了岔子会危害多少部门 (Scope/Severity)】填【Impact analysis（影响分析）】！",
+    "en": "Exam Tip: Documenting the likelihood/probability of negative outcomes = Risk level."
+  }
+},
+{
+  "id": 111,
+  "type": "single",
+  "stem": {
+    "zh": "技术人员提交了一份常规变更申请，以升级所有生产服务器上的操作系统。变更管理流程中的哪个要素能确保该变更获得正式授权？",
+    "en": "A technician submits a normal change request to upgrade the operating system on all production servers. Which element of the change management process ensures that the change is formally authorized?"
+  },
+  "options": [
+    {
+      "key": "A",
+      "text": "Request justification"
+    },
+    {
+      "key": "B",
+      "text": "Managerial sign-off"
+    },
+    {
+      "key": "C",
+      "text": "Assignment of responsible staff members"
+    },
+    {
+      "key": "D",
+      "text": "Change board approvals"
+    }
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": {
+    "zh": "【考点：变更委员会正式授权机制（CAB Approvals）】\n正确答案是 D（Change board approvals / 变更控制委员会批准）。\n\n• 为什么选 Change board approvals：\n  - 题干核心：升级所有生产服务器（production servers）属于非例行的重大变更（Normal Change Request）。在变更管理中，确保此类重大变更获得【正式授权（formally authorized）】的关键环节是通过**变更控制委员会的审议与批准（CAB Approvals / Change Advisory Board Approvals）**。\n\n• 为什么不选 Request justification（申请正当理由/变更目的，您错选的项）：\n  - Request justification（申请理由）仅是技术人员提交变更时解释“为什么要实施变更”的说明文字，它本身【不具备授权约束力】。\n\n• 为什么不选其它选项：\n  - 选项 B（Managerial sign-off / 经理签字）：部门经理签字通常只是提交申请的前置步骤，在涉及生产环境的常规变更中，真正的正式授权机构是 CAB 委员会。\n  - 选项 C（Assignment of responsible staff members / 责任人员分配）：指指定具体谁去执行技术步骤，属于执行计划而非授权机制。",
+    "en": "The correct answer is D (Change board approvals). For a normal change request affecting production infrastructure, formal authorization is granted by the Change Advisory Board (CAB / Change board). Change board approval ensures that business risk, testing, backout plans, and scheduling have been rigorously vetted before authorization.\n\n• Request justification (A) is incorrect because explaining why a change is needed does not provide formal authorization to execute it.\n• Managerial sign-off (B) is often an initial recommendation step, but CAB approval is the formal authorizing body for production changes.\n• Assignment of responsible staff members (C) delegates execution duties, not authority."
+  },
+  "mnemonic": {
+    "zh": "口诀：生产服务器大变更，【正式授权 (Formally authorized)】必须认准【变更委员会批准 (Change board approvals / CAB)】！理由 (Justification) 再充分也不算授权！",
+    "en": "Exam Tip: Element that ensures formal authorization for production changes = Change board approvals (CAB)."
+  }
+},
+{
+  "id": 112,
+  "type": "single",
+  "stem": {
+    "zh": "以下哪个场景最能代表变更管理流程的实施阶段（Implementation phase）？",
+    "en": "Which scenario best represents the implementation phase of the change management process?"
+  },
+  "options": [
+    {
+      "key": "A",
+      "text": "Applying a configuration update to a server according to a documented procedure"
+    },
+    {
+      "key": "B",
+      "text": "Reviewing the proposed technical steps with another administrator for quality assurance"
+    },
+    {
+      "key": "C",
+      "text": "Testing the change in a non-production environment before deployment"
+    },
+    {
+      "key": "D",
+      "text": "Validating that the update resolves the documented bug after the work is complete"
+    }
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": {
+    "zh": "【考点：变更管理生命周期之实施阶段（Implementation Phase）】\n正确答案是 A（Applying a configuration update to a server according to a documented procedure / 根据文档化步骤对服务器应用配置更新）。\n\n• 为什么选选项 A：\n  - **Implementation Phase（实施阶段）**是变更管理中【真正手动或自动在目标生产系统上执行技术修改】的实操过程。按照既定的操作步骤文档对服务器配置进行更新修改，是标准的实施阶段行为。\n\n• 为什么不选 Option B（与另一名管理员审查拟定的技术步骤，您错选的项）：\n  - 审查技术步骤属于【评估与同行评审阶段（Peer Review / Planning Phase）】，发生在实施之前，用于质量保证与风险控制。\n\n• 为什么不选其它选项：\n  - 选项 C（部署前在非生产环境中测试变更）：属于【测试阶段（Testing Phase）】。\n  - 选项 D（工作完成后验证更新是否解决了记录的 Bug）：属于【实施后复盘与验证阶段（Post-Implementation Review / Verification Phase）】。",
+    "en": "The correct answer is A (Applying a configuration update to a server according to a documented procedure). The implementation phase represents the active execution phase where technicians physically or logically apply the planned changes to the production systems following approved procedures.\n\n• Reviewing technical steps for quality assurance (B) occurs during the planning and risk assessment phase.\n• Testing in a non-production environment (C) occurs during the pre-deployment testing phase.\n• Validating bug resolution after completion (D) occurs during the Post-Implementation Review (PIR) / validation phase."
+  },
+  "mnemonic": {
+    "zh": "口诀：【实施阶段 (Implementation)】就是【真刀真枪动手改系统 (Applying updates)】！预先审查步骤叫同行评审 (Review)，事后检查结果叫验证 (Validation)！",
+    "en": "Exam Tip: Implementation phase = Actively applying changes/updates to the server."
+  }
+},
+{
+  "id": 113,
+  "type": "single",
+  "stem": {
+    "zh": "在标准的变更管理工作流中，最终用户验收（End-user acceptance）通常发生在：",
+    "en": "In a standard change management workflow, end-user acceptance typically takes place:"
+  },
+  "options": [
+    {
+      "key": "A",
+      "text": "During the impact analysis phase, before any changes are applied to systems"
+    },
+    {
+      "key": "B",
+      "text": "In a test environment before full production deployment"
+    },
+    {
+      "key": "C",
+      "text": "During the implementation phase, while the change is being applied"
+    },
+    {
+      "key": "D",
+      "text": "After the change is implemented, once all systems are live in production"
+    }
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": {
+    "zh": "【考点：用户验收测试（UAT / End-user Acceptance）的触发时机】\n正确答案是 B（In a test environment before full production deployment / 在正式生产部署前的测试环境中）。\n\n• 为什么选 Option B：\n  - **End-user acceptance（最终用户验收测试 / UAT）**旨在让业务相关方或代表性最终用户在无风险的环境中操作新软件/新配置，确认功能符合需求且不会破坏业务流程。\n  - 标准变更流程要求 UAT 必须在**测试/预发布环境（Test/Staging environment）**中完成，【且必须在全面部署到生产环境之前（before full production deployment）】获得用户签署确认。这样可以确保任何功能缺陷在触及生产数据前被发现。\n\n• 为什么不选 Option A（在影响分析阶段，任何变更应用到系统之前，您错选的项）：\n  - 影响分析阶段尚处于纸面方案规划期，系统还没有在测试环境中完成搭建和配置，用户无从进行实际的功能操作与“验收测试（Acceptance）”。\n\n• 为什么不选其它选项：\n  - 选项 C（实施阶段）：实施期间系统正在变更中，不适合进行验收。\n  - 选项 D（变更实施完成后，系统已在生产上线）：上线后才让用户验收极具破坏风险；如果在生产上线后才发现不合规，会造成巨大的业务中断和回滚成本。",
+    "en": "The correct answer is B (In a test environment before full production deployment). User Acceptance Testing (UAT) allows key end-users to test new software, workflows, or configurations in a controlled, non-production test environment to verify functionality before changes are authorized for live production deployment.\n\n• During impact analysis (A) is incorrect because no functional system build exists yet for users to test.\n• During implementation (C) is incorrect because systems are actively being modified.\n• After live deployment (D) is incorrect because discovering deal-breaking flaws after production release risks severe business disruption."
+  },
+  "mnemonic": {
+    "zh": "口诀：用户验收测试 (UAT) 必须在【测试环境 (Test environment)】做，必须在【上线生产之前 (Before production deployment)】签完字！上线后才验就晚了！",
+    "en": "Exam Tip: End-user acceptance (UAT) takes place in a TEST environment BEFORE full production deployment."
+  }
 }
 ]
