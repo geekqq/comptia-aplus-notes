@@ -3036,5 +3036,130 @@
     "zh": "口诀：用户验收测试 (UAT) 必须在【测试环境 (Test environment)】做，必须在【上线生产之前 (Before production deployment)】签完字！上线后才验就晚了！",
     "en": "Exam Tip: End-user acceptance (UAT) takes place in a TEST environment BEFORE full production deployment."
   }
+},
+{
+  "id": 114,
+  "type": "single",
+  "stem": {
+    "zh": "技术人员正在配置备份计划。目标是确保每日备份仅包含自前一天以来修改过的文件，并且备份过程将这些文件标记为已备份（重置存档位）。应该使用哪种备份类型？",
+    "en": "A technician is configuring a backup schedule. The goal is to ensure that daily backups include only files modified since the previous day and that the backup process marks those files as backed up. Which backup type should be used?"
+  },
+  "options": [
+    {
+      "key": "A",
+      "text": "Differential backup"
+    },
+    {
+      "key": "B",
+      "text": "Full backup"
+    },
+    {
+      "key": "C",
+      "text": "Incremental backup"
+    },
+    {
+      "key": "D",
+      "text": "Synthetic full backup"
+    }
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": {
+    "zh": "【考点：备份类型辨析（Incremental vs. Differential vs. Synthetic Full）】\n正确答案是 C（Incremental backup / 增量备份）[cite: 21]。\n\n• 为什么选 Incremental backup（增量备份）：\n  - 题干的两个核心特征：① 仅备份【自前一天（上一次任何备份）以来修改过的文件（modified since the previous day）】；② 备份过程【将这些文件标记为已备份（marks those files as backed up / 清除存档位 Archive Bit）】。\n  - 增量备份在每次执行时，只抓取自上次完整备份或上次增量备份以来新增/变更的数据，并在完成后清除存档标记。因此每日备份体积最小、速度最快，但恢复时需要完整备份加上之后所有的增量备份链。\n\n• 为什么不选 Differential backup（差异备份）：\n  - 差异备份包含【自上一次完整备份（Full backup）以来】所有修改过的文件，并且【不会清除存档位（does not mark files as backed up）】，因此每天备份的体积会随时间累积越来越大。\n\n• 为什么不选 Synthetic full backup（合成完整备份，您错选的项）：\n  - 合成完整备份是在备份服务器上直接将已有的“完整备份”与随后的“增量备份”在后台合并生成一个新的完整备份包，以减少对生产源服务器的读取压力，并非每日抓取前一天变更数据的备份方式。\n\n• 为什么不选 Full backup（完整备份）：\n  - 完整备份每次都会备份选定的全部数据（无论是否修改过）并清除存档位，耗时最长、占用空间最大。",
+    "en": "The correct answer is C (Incremental backup). An incremental backup copies only the files that have changed or been created since the previous backup (whether full or incremental) and clears the archive bit (marking the files as backed up). This ensures fast daily backups with minimal storage overhead.\n\n• Differential backup (A) backs up all files changed since the last FULL backup and does NOT clear the archive bit.\n• Synthetic full backup (D) consolidates an existing full backup and subsequent incremental backups on the backup server without re-reading data from the source host.\n• Full backup (B) copies all selected files regardless of modification status."
+  },
+  "mnemonic": {
+    "zh": "口诀：只备【前一天新增】且【清除存档标记（标记已备份）】选【增量备份 (Incremental)】；备【上次全备以来所有变动】且【不清除标记】选【差异备份 (Differential)】！",
+    "en": "Exam Tip: Modified since previous backup + clears archive bit = Incremental backup."
+  }
+},
+{
+  "id": 115,
+  "type": "single",
+  "stem": {
+    "zh": "某公司采用一种备份轮换方案：一周内每天执行的备份用于创建每周备份，而每周末创建的备份用于创建每月备份。这种备份轮换方案属于哪种类型？",
+    "en": "A company utilizes a backup rotation scheme where backups performed daily during a week are used to create a weekly backup and backups created at the end of each week are used to create a monthly backup. What type of backup rotation scheme is being used?"
+  },
+  "options": [
+    {
+      "key": "A",
+      "text": "Synthetic full backup"
+    },
+    {
+      "key": "B",
+      "text": "Tower of Hanoi"
+    },
+    {
+      "key": "C",
+      "text": "3-2-1"
+    },
+    {
+      "key": "D",
+      "text": "Grandfather-Father-Son"
+    }
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": {
+    "zh": "【考点：备份轮换方案（Grandfather-Father-Son / GFS）】\n正确答案是 D（Grandfather-Father-Son / 祖父-父亲-儿子轮换方案）[cite: 22]。\n\n• 为什么选 Grandfather-Father-Son（GFS）：\n  - GFS 是企业数据存储中最经典的层级介质轮换策略，按照时间跨度划分三代保留周期：\n    - **Son（儿子）**：每日备份（Daily backups），保留周期最短（如一周）。\n    - **Father（父亲）**：每周备份（Weekly backups），保留数周。\n    - **Grandfather（祖父）**：每月备份（Monthly backups，甚至年度备份），长期归档保存。\n  - 题干精确描述了“每日（Daily）-> 每周（Weekly）-> 每月（Monthly）”的三级递进归档体系，直接对应 GFS。\n\n• 为什么不选 Tower of Hanoi（汉诺塔轮换法，您错选的项）：\n  - 汉诺塔算法使用基于数学指数序列（如 $2^{n-1}$ 天间隔）的复杂磁带轮换周期来平衡介质磨损与历史时间点覆盖，并不按“日 -> 周 -> 月”的三代日历层级命名。\n\n• 为什么不选 3-2-1 或 Synthetic full backup：\n  - **3-2-1** 是备份冗余存储原则（3 份副本、2 种介质、1 份异地），不是时间轮换方案。\n  - **Synthetic full backup** 是合并生成完整备份的技术方法，不属于轮换策略。",
+    "en": "The correct answer is D (Grandfather-Father-Son / GFS). The GFS backup rotation scheme organizes backups into three generational tiers based on calendar intervals: Daily backups (Son), Weekly backups (Father), and Monthly/Annual backups (Grandfather).\n\n• Tower of Hanoi (B) uses an exponential mathematical sequence to rotate media sets rather than a calendar-based daily/weekly/monthly hierarchy.\n• 3-2-1 (C) is a data redundancy rule (3 copies, 2 media types, 1 offsite), not a rotation schedule.\n• Synthetic full backup (A) is a backup consolidation technique."
+  },
+  "mnemonic": {
+    "zh": "口诀：每日是【儿子 (Son)】、每周是【父亲 (Father)】、每月是【祖父 (Grandfather)】，日周月三代同堂必选【GFS (Grandfather-Father-Son)】！",
+    "en": "Exam Tip: Daily -> Weekly -> Monthly backup rotation = Grandfather-Father-Son (GFS)."
+  }
+},
+{
+  "id": 116,
+  "type": "multiple",
+  "stem": {
+    "zh": "下列哪三项可以用来描述 3-2-1 备份策略？（选择 3 项）",
+    "en": "Which of the answers listed below can be used to describe the 3-2-1 backup strategy? (Select 3 answers)"
+  },
+  "options": [
+    {
+      "key": "A",
+      "text": "Keep at least 1 backup copy offsite"
+    },
+    {
+      "key": "B",
+      "text": "Save backups to 3 different storage media types"
+    },
+    {
+      "key": "C",
+      "text": "Keep at least 1 backup copy onsite"
+    },
+    {
+      "key": "D",
+      "text": "Maintain 3 total copies of data (original + 2 backups)"
+    },
+    {
+      "key": "E",
+      "text": "Use at least 2 different storage media types"
+    },
+    {
+      "key": "F",
+      "text": "Keep all 3 backup copies offsite"
+    },
+    {
+      "key": "G",
+      "text": "Create 2 copies of the primary backup copy"
+    }
+  ],
+  "answer": [
+    "A",
+    "D",
+    "E"
+  ],
+  "explanation": {
+    "zh": "【考点：3-2-1 黄金备份原则（3-2-1 Backup Strategy）】\n正确答案是 A、D、E[cite: 23]。\n\n• 3-2-1 备份策略核心拆解：\n  - **3 — 保留 3 份数据总副本（选项 D）**：包括 1 份生产环境中的原始数据（Original）+ 至少 2 份独立备份副本（2 backups）。\n  - **2 — 使用至少 2 种不同的存储介质类型（选项 E）**：例如本地硬盘/NAS 搭配磁带、光盘或云存储，防止单一介质硬件批次缺陷或技术故障导致全部数据损毁。\n  - **1 — 至少将 1 份备份副本保存在异地（选项 A）**：例如异地机房或云端，防范火灾、洪水、盗窃等区域性物理灾难。\n\n• 为什么不选 Option G（Create 2 copies of the primary backup copy，您错选的项）：\n  - 3-2-1 中的“3”是指【1 份原始生产数据 + 2 份备份副本 = 共 3 份总数据】，而不是“在主备份之外再额外复制 2 份副本”（那样就变成 1+1+2=4 份了）。\n\n• 为什么不选其它干扰项：\n  - 选项 B 错误（需要的是 2 种不同介质，不是 3 种）。\n  - 选项 C 并非 3-2-1 公式中的强制规定（虽然通常 1 份在本地以便快速恢复，但官方 3-2-1 定义的三条铁律是 3 份总副本、2 种介质、1 份异地）。\n  - 选项 F 错误（全部放异地会导致本地灾难恢复速度极慢，且不符合 3-2-1 定义）。",
+    "en": "The correct answers are A, D, and E. The industry-standard 3-2-1 backup rule consists of three core requirements:\n1. Maintain 3 total copies of your data: 1 primary production copy plus 2 backup copies (D).\n2. Store the copies on at least 2 different storage media types (e.g., local NAS/HDD and cloud/tape) to protect against media-specific failures (E).\n3. Keep at least 1 backup copy offsite to safeguard against localized physical disasters such as fire or theft (A).\n\n• Creating 2 copies of the primary backup (G) is incorrect because the '3' includes the original live data plus two backups, not three separate backup sets."
+  },
+  "mnemonic": {
+    "zh": "口诀：【3】份总数据（1 原始 + 2 备份）、【2】种不同介质防单点故障、【1】份放异地（Offsite）防天灾！",
+    "en": "Exam Tip: 3-2-1 Rule = 3 total copies (original + 2 backups), 2 different media types, 1 offsite copy."
+  }
 }
 ]
