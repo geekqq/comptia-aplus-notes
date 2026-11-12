@@ -3161,5 +3161,236 @@
     "zh": "口诀：【3】份总数据（1 原始 + 2 备份）、【2】种不同介质防单点故障、【1】份放异地（Offsite）防天灾！",
     "en": "Exam Tip: 3-2-1 Rule = 3 total copies (original + 2 backups), 2 different media types, 1 offsite copy."
   }
-}
+},
+  {
+    "id": 117,
+    "type": "single",
+    "stem": {
+      "zh": "下列哪项陈述是不正确的（not true）？",
+      "en": "Which of the following statements is not true?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "An ESD mat must be connected to an unpainted, grounded metal surface to operate correctly"
+      },
+      {
+        "key": "B",
+        "text": "An ESD mat is designed to be used in conjunction with a grounded ESD wrist strap"
+      },
+      {
+        "key": "C",
+        "text": "An ESD mat alone provides complete protection against electrostatic discharge"
+      },
+      {
+        "key": "D",
+        "text": "An ESD mat requires a physical connection to a verified ground to function as intended"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：静电防护垫（ESD Mat）的工作原理与接地要求】\n正确答案是 C（An ESD mat alone provides complete protection against electrostatic discharge / 单独使用 ESD 防静电垫即可提供完全的静电放电保护）。\n\n• 为什么选 C（题干问“不正确的说法”）：\n  - 防静电垫（ESD Mat）仅保护放置在垫子表面的硬件组件使其达到等电位。如果技术人员没有佩戴接地的防静电腕带（ESD wrist strap），人体身上积聚的静电荷在直接触碰主板、内存条或芯片时依然会产生致命的静电放电（ESD）。因此，“仅靠防静电垫就能提供完全防护”的绝对化表述是错误的。\n\n• 为什么其它选项都是正确的陈述：\n  - **选项 A 与 D（您错选了 D）**：ESD 防静电垫必须通过接地线物理连接到经过验证的接地点或未喷漆的接地金属表面，才能将静电荷安全导走。如果不接地，防静电垫就失去了泄放静电的能力。\n  - **选项 B**：ESD 防静电垫的设计初衷就是与接地的 ESD 防静电腕带配合使用（通常腕带可以直接扣在防静电垫的接地扣上，两者共同连接到大地），形成完整的防静电工作站（EPA）。",
+      "en": "The correct answer is C (An ESD mat alone provides complete protection against electrostatic discharge), as this statement is false. While an ESD mat dissipates static charges from components placed on its surface, it does not discharge static electricity accumulated on the technician's body unless used alongside a grounded ESD wrist strap.\n\n• Option A and Option D (your selection) are both true statements: an ESD mat must be physically connected to a verified electrical ground or an unpainted grounded metal chassis to safely bleed off static charges.\n• Option B is also true: ESD mats and grounded wrist straps are designed to work together to equalize electrical potential across the technician, the work surface, and the components."
+    },
+    "mnemonic": {
+      "zh": "口诀：防静电垫（ESD mat）必须接在【未喷漆的接地金属】上，且必须配合【防静电腕带】一起用；单独靠垫子绝对不能提供完全保护！",
+      "en": "Exam Tip: ESD mat alone does NOT provide complete protection; it must be grounded and paired with an ESD wrist strap."
+    }
+  },
+  {
+    "id": 118,
+    "type": "multiple",
+    "stem": {
+      "zh": "下列哪些设备由于内部积聚高压电，可能会对用电安全构成威胁？（选择所有适用项）",
+      "en": "Which devices may pose a risk to electrical safety due to accumulated high voltage? (Select all that apply)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "CRTs"
+      },
+      {
+        "key": "B",
+        "text": "PSUs"
+      },
+      {
+        "key": "C",
+        "text": "Inverters"
+      },
+      {
+        "key": "D",
+        "text": "GPUs"
+      },
+      {
+        "key": "E",
+        "text": "Laser printers"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanation": {
+      "zh": "【考点：计算机硬件内部高压电危险组件（High-Voltage Components）】\n正确答案是 A、B、C、E（CRTs、PSUs、Inverters、Laser printers）。\n\n• 为什么选这四项（四大经典高压危险源，即便拔掉电源线仍带有致命残余电荷）：\n  - **CRTs（阴极射线管显示器，您漏选的项）**：CRT 内部包含巨大的高压阳极和电容器，能够储存数万伏（高达 25,000V+）的致命高压电，即使断电很久也不会自动释放，非专业人员严禁拆解。\n  - **PSUs（计算机电源供应器）**：电源内部的大容量滤波电容在断电后依然长时间储存高压直流电，因此 PSU 属于不可自行拆修的现场可更换单元（FRU）。\n  - **Inverters（逆变器，常见于老式 LCD 屏幕背光）**：逆变器负责将低电压直流电转换为高电压交流电以点亮 CCFL 背光灯管，工作及断电瞬间存在高电压电击风险。\n  - **Laser printers（激光打印机）**：激光打印机内部的高压电源板（HVPS）为充电辊、显影器和转印辊提供数千伏高压电，且定影组件（Fuser）伴随极高温度。\n\n• 为什么不选 GPUs（显卡）：\n  - 显卡工作在低电压直流环境（通常为 12V、3.3V 及核心 1V 左右），不存在积聚致命高压电的风险。",
+      "en": "The correct answers are A, B, C, and E. CompTIA identifies four primary hardware devices that store or generate dangerous high voltage even after being unplugged:\n1. CRTs (Cathode Ray Tubes): Contain large capacitors capable of holding lethal charges exceeding 25,000 volts.\n2. PSUs (Power Supply Units): House large capacitors that retain hazardous electrical charges long after power is disconnected.\n3. Inverters: Convert low-voltage DC power into high-voltage AC power for older LCD CCFL backlights.\n4. Laser printers: Utilize high-voltage power supplies to charge the imaging drum and transfer toner to paper.\n\n• GPUs (D) operate on low-voltage DC rails (12V and below) and do not pose a high-voltage shock hazard."
+    },
+    "mnemonic": {
+      "zh": "口诀：CompTIA 四大高压电老虎（断电也别乱拆）：老式显示器【CRT】、电脑电源【PSU】、屏幕背光【逆变器 Inverter】、以及【激光打印机 Laser printer】！",
+      "en": "Exam Tip: Four classic high-voltage shock hazards = CRTs, PSUs, Inverters, and Laser printers."
+    }
+  },
+  {
+    "id": 119,
+    "type": "single",
+    "stem": {
+      "zh": "下列哪项陈述最准确地描述了工作站中电气接地（Electrical grounding）的目的？",
+      "en": "Which of the following statements best describes the purpose of electrical grounding in a workstation?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Balances the electrical potential between the user and the internal components"
+      },
+      {
+        "key": "B",
+        "text": "Prevents voltage fluctuations from affecting internal workstation components"
+      },
+      {
+        "key": "C",
+        "text": "Provides a low-resistance path to earth for stray current to protect the user from shock"
+      },
+      {
+        "key": "D",
+        "text": "Prevents high-voltage spikes from damaging the power supply during a lightning strike"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：电气安全接地（Electrical Grounding）的核心作用】\n正确答案是 C（Provides a low-resistance path to earth for stray current to protect the user from shock / 为杂散电流提供一条通往大地的低电阻路径，以保护用户免受电击）。\n\n• 为什么选 C：\n  - 在电气工程与安全规范中，工作站及机箱的**电气接地（Electrical Grounding，通过三孔插座的地线引脚连接大地）**的核心安全目的是人身安全防护。当设备内部发生绝缘破损或电线短路导致金属机箱带电时，地线为故障杂散电流（stray/fault current）提供一条极低电阻的泄放通道直通大地，使电流瞬间激增从而触发断路器（Breaker）或保险丝跳闸断电，防止用户触摸机箱时发生触电事故。\n\n• 为什么不选 Option B（防止电压波动影响内部工作站组件，您错选的项）：\n  - 稳压、平滑电压波动（voltage fluctuations / brownouts / sags）是**不间断电源（UPS）**或**稳压器（Line Conditioner）**的功能，而不是电源地线（Electrical grounding）的作用。\n\n• 为什么不选其它选项：\n  - **选项 A（平衡用户与内部组件之间的电势）**：这是**静电防护设备（ESD wrist strap / ESD mat）**在拆机维护时的作用，而非工作站交流电源系统的电气接地目的。\n  - **选项 D（在雷击期间防止高压尖峰损坏电源）**：这是**浪涌保护器（Surge Protector / Suppressor）**的功能（通过金属氧化物压敏电阻 MOV 吸收高压浪涌）。",
+      "en": "The correct answer is C (Provides a low-resistance path to earth for stray current to protect the user from shock). Electrical grounding connects the conductive metal chassis of a workstation to the earth via the third prong of the power cord. If an internal wire faults and contacts the case, the ground wire provides a low-resistance path for stray current to flow safely to earth, tripping the circuit breaker and protecting users from electrocution.\n\n• Preventing voltage fluctuations (B) is the function of an Uninterruptible Power Supply (UPS) or line conditioner, not electrical grounding.\n• Balancing electrical potential between a user and components (A) describes Electrostatic Discharge (ESD) protection.\n• Absorbing high-voltage spikes/surges (D) is the role of a surge suppressor."
+    },
+    "mnemonic": {
+      "zh": "口诀：电源【接地 (Grounding)】保人身，杂散漏电【低电阻入地防触电】；防电压波动找【UPS/稳压器】，防雷击尖峰找【浪涌保护器 Surge protector】！",
+      "en": "Exam Tip: Electrical grounding = Low-resistance path to earth for stray current (prevents shock). Voltage fluctuations = UPS; Voltage spikes = Surge protector."
+    }
+  },
+  {
+    "id": 120,
+    "type": "multiple",
+    "stem": {
+      "zh": "由于环境与安全危害而受特殊废弃物处置程序监管的设备或组件示例包括：（选择所有适用项）",
+      "en": "Examples of devices/components regulated under special disposal procedures due to environmental/safety hazards include: (Select all that apply)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Heatsinks"
+      },
+      {
+        "key": "B",
+        "text": "CRTs"
+      },
+      {
+        "key": "C",
+        "text": "Toner cartridges"
+      },
+      {
+        "key": "D",
+        "text": "Batteries"
+      }
+    ],
+    "answer": [
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：电子废弃物环保与安全特殊处置规范（Special Disposal Procedures）】\n正确答案是 B、C、D（CRTs、Toner cartridges、Batteries）。\n\n• 为什么选这三项：\n  - **CRTs（阴极射线管显示器，您漏选的项）**：CRT 玻璃中含有大量有毒重金属**铅（Lead）**以及荧光粉等有害化学物质，同时内部存在真空内爆与高压电风险，严禁作为普通垃圾填埋，必须交由具备资质的电子垃圾（E-waste）回收机构处理。\n  - **Toner cartridges（碳粉盒）**：激光打印机碳粉由极细微的塑料聚合物、碳黑及氧化铁粉末构成，吸入肺部有害且粉尘在空气中达到一定浓度存在粉尘爆炸隐患，同时塑料外壳难以降解，需按厂商回收计划或环保规程处置。\n  - **Batteries（电池，如锂电池、镍镉电池、UPS 铅酸电池）**：含有铅、镉、锂及强腐蚀性电解液，随意丢弃会污染土壤水源，且锂电池受挤压穿刺极易引发起火爆炸，必须送往专门的电池回收点。\n\n• 为什么不选 Heatsinks（散热片）：\n  - 散热片通常由纯铝或纯铜制成，不含化学毒物、重金属污染或高压/起火危险，可直接作为普通金属回收，不受特殊危险废弃物法规监管。",
+      "en": "The correct answers are B, C, and D. Environmental and safety regulations mandate specialized recycling/disposal procedures for hazardous IT components:\n1. CRTs: Contain significant amounts of toxic lead in the glass funnel and phosphors, along with implosion and high-voltage hazards.\n2. Toner cartridges: Contain fine particulate matter that poses respiratory and environmental hazards, requiring manufacturer or certified e-waste recycling.\n3. Batteries: Contain toxic heavy metals (lead, cadmium, lithium) and corrosive electrolytes, posing fire/explosion and groundwater contamination risks.\n\n• Heatsinks (A) are made of inert aluminum or copper and can be recycled as standard scrap metal without special hazardous waste procedures."
+    },
+    "mnemonic": {
+      "zh": "口诀：特殊环保危险废弃物三大典型：【CRT 显示器（含重金属铅）】、【电池 Batteries（重金属+易燃）】、【碳粉盒 Toner（微尘污染）】！铝铜散热片（Heatsink）无毒可直接回收！",
+      "en": "Exam Tip: Regulated hazardous disposal items = CRTs (lead), Batteries (heavy metals/fire risk), and Toner cartridges."
+    }
+  },
+  {
+    "id": 121,
+    "type": "single",
+    "stem": {
+      "zh": "哪种类型的灭火剂由于会迅速排挤消耗空间内的氧气，从而对人体构成最大的安全威胁？",
+      "en": "Which type of fire extinguishing agent poses the greatest safety risk to humans due to the rapid displacement of oxygen?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Water-based foam"
+      },
+      {
+        "key": "B",
+        "text": "Clean agent gas"
+      },
+      {
+        "key": "C",
+        "text": "Dry powder chemical"
+      },
+      {
+        "key": "D",
+        "text": "Carbon dioxide"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：机房与电气灭火剂安全特性（Fire Extinguishing Agents）】\n正确答案是 D（Carbon dioxide / 二氧化碳，CO2）。\n\n• 为什么选 Carbon dioxide（二氧化碳）：\n  - 二氧化碳（CO2）灭火器主要用于 B 类（易燃液体）和 C 类（带电电气设备）火灾。其灭火原理是释放高浓度、比空气重的 CO2 气体覆盖火源，通过**迅速排挤并稀释空气中的氧气（rapid displacement of oxygen）**来窒息火焰。因此，在密闭空间（如服务器机房）内喷放 CO2 会导致人员迅速缺氧窒息，对人体安全构成极大威胁（人员必须在释放前撤离）。\n\n• 为什么不选 Water-based foam（水基泡沫，您错选的项）：\n  - 水基泡沫主要通过覆盖冷却并隔绝燃料表面来灭火，不会迅速抽干或排挤整个房间空气中的氧气（且严禁用于通电的电气设备火灾，否则会导致触电）。\n\n• 为什么不选其它选项：\n  - **选项 B（Clean agent gas / 洁净气体灭火剂，如 FM-200 / Halon 替代品）**：专门设计用于有人员驻留的现代数据中心，其灭火机制是通过化学抑制中断燃烧链式反应并吸热，在设计浓度下不会将氧气排挤到危及人类呼吸的水平，对人体安全无毒。\n  - **选项 C（Dry powder chemical / 干粉化学灭火剂）**：通过化学粉末覆盖窒息火源，主要危害是粉尘刺激呼吸道及严重腐蚀损毁精密电子设备，而非通过排挤氧气导致窒息。",
+      "en": "The correct answer is D (Carbon dioxide). Carbon dioxide (CO2) extinguishers are rated for Class B and Class C (electrical) fires and extinguish flames by rapidly displacing oxygen in the surrounding area. Because it reduces oxygen concentration below life-sustaining levels, CO2 poses a severe asphyxiation hazard to humans in enclosed spaces.\n\n• Water-based foam (A) smothers and cools fuel surfaces rather than displacing ambient room oxygen, and cannot be used on live electrical fires.\n• Clean agent gases (B, such as FM-200) extinguish fires via heat absorption and chemical reaction interruption while maintaining safe oxygen levels for personnel.\n• Dry powder chemicals (C) coat fuels to block oxygen at the surface without displacing room air, though they damage electronics."
+    },
+    "mnemonic": {
+      "zh": "口诀：迅速排挤氧气导致人员窒息风险最高的是【二氧化碳 (Carbon dioxide / CO2)】！现代机房用【洁净气体 (Clean agent)】，灭火不缺氧且不毁设备！",
+      "en": "Exam Tip: Rapid displacement of oxygen (asphyxiation hazard) = Carbon dioxide (CO2). Safe for occupied server rooms = Clean agent gas."
+    }
+  },
+  {
+    "id": 122,
+    "type": "single",
+    "stem": {
+      "zh": "在维修激光打印机时，技术人员发现机箱内部洒出了碳粉。在开始清理之前，佩戴哪件安全防护装备最为重要？",
+      "en": "While servicing a laser printer a technician notices spilled toner inside the chassis. Which piece of safety equipment is most important to wear before beginning the cleanup?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Safety goggles"
+      },
+      {
+        "key": "B",
+        "text": "Latex gloves"
+      },
+      {
+        "key": "C",
+        "text": "ESD wrist strap"
+      },
+      {
+        "key": "D",
+        "text": "Air filter mask"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：激光打印机碳粉泄漏清理安全规范（Toner Cleanup & PPE）】\n正确答案是 D（Air filter mask / 空气过滤口罩/防尘面罩）。\n\n• 为什么选 Air filter mask（空气过滤口罩）：\n  - 激光打印机的碳粉（Toner）由极细微的塑料树脂与碳黑颗粒组成（直径仅几微米）。当机箱内部发生碳粉泄漏时，微小颗粒极易悬浮在空气中；一旦被人体吸入肺部，会对呼吸系统造成严重刺激与长期健康损害。因此，在开始清理前，佩戴**空气过滤口罩（Air filter mask / HEPA respirator）**以防止吸入微尘是首要且最重要的安全防护措施。\n  - *补充实操考点*：清理洒出的碳粉必须使用专用的防静电 HEPA 碳粉吸尘器（ESD-safe HEPA toner vacuum）或微湿布擦拭，**严禁使用普通家用吸尘器**（普通滤网会漏出微尘并可能因静电火花引发碳粉粉尘爆炸）。\n\n• 为什么不选 Latex gloves（乳胶手套，您错选的项）：\n  - 手套虽然可以防止碳粉弄脏皮肤（清洗皮肤上的碳粉需用冷水，切忌用热水以免碳粉融化粘连），但相比皮肤沾染，**肺部吸入有毒微尘（Inhalation hazard）**的健康危害严重得多，因此呼吸防护（Air filter mask）优先级最高。\n\n• 为什么不选 Safety goggles 或 ESD wrist strap：\n  - **Safety goggles（护目镜）**：主要在剪线缆、使用压缩空气吹灰或接触腐蚀性液体时防飞溅使用。\n  - **ESD wrist strap（防静电腕带）**：用于防止人体静电击穿主板芯片，不能提供任何人体物理健康防护。",
+      "en": "The correct answer is D (Air filter mask). Toner consists of ultra-fine plastic and carbon particulates that easily become airborne when disturbed. Inhaling toner dust poses an immediate and serious respiratory hazard, making an air filter mask (or particulate respirator) the single most important piece of Personal Protective Equipment (PPE) before cleaning up spilled toner.\n\n• Latex gloves (B) help keep toner off the skin (which should be washed off with cold water, never warm), but preventing respiratory inhalation takes top priority.\n• Safety goggles (A) protect eyes from debris or chemicals.\n• An ESD wrist strap (C) protects sensitive electronics from static discharge, not the technician from inhaling particulates."
+    },
+    "mnemonic": {
+      "zh": "口诀：清理洒出的激光打印机碳粉，首要防肺部吸入微尘，第一装备必戴【空气过滤口罩 (Air filter mask)】！洗手要用【冷水】不能用热水！",
+      "en": "Exam Tip: Spilled toner cleanup -> Most important PPE is an Air filter mask (prevents inhalation of fine particulates)."
+    }
+  }
 ]
