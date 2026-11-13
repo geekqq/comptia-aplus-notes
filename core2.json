@@ -3392,5 +3392,169 @@
       "zh": "口诀：清理洒出的激光打印机碳粉，首要防肺部吸入微尘，第一装备必戴【空气过滤口罩 (Air filter mask)】！洗手要用【冷水】不能用热水！",
       "en": "Exam Tip: Spilled toner cleanup -> Most important PPE is an Air filter mask (prevents inhalation of fine particulates)."
     }
+  },
+  {
+    "id": 123,
+    "type": "multiple",
+    "stem": {
+      "zh": "技术人员正在报废处理一批旧硬件组件。由于存在特殊处理要求，下列哪些物品不应放入标准普通电子垃圾（standard electronic waste）中？（选择所有适用项）",
+      "en": "A technician is decommissioning a variety of older hardware components. Which of the following items should not be placed in standard electronic waste due to special handling requirements? (Select all that apply)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Optical media drives"
+      },
+      {
+        "key": "B",
+        "text": "CRT display units"
+      },
+      {
+        "key": "C",
+        "text": "Laser printer toner cartridges"
+      },
+      {
+        "key": "D",
+        "text": "USB flash drives"
+      },
+      {
+        "key": "E",
+        "text": "Lithium-ion battery packs"
+      }
+    ],
+    "answer": [
+      "B",
+      "C",
+      "E"
+    ],
+    "explanation": {
+      "zh": "【考点：电子废弃物特殊环保处置要求（Special E-waste Disposal Requirements）】\n正确答案是 B、C、E（CRT display units、Laser printer toner cartridges、Lithium-ion battery packs）。\n\n• 为什么选这三项：\n  - **CRT display units（CRT 阴极射线管显示器，您漏选的项）**：CRT 玻璃锥体中含有大量有毒重金属**铅（Lead）**以及有害荧光粉涂层，同时内部真空管存在内爆（Implosion）与残留高压风险，严禁混入常规电子垃圾处理，必须交由具备重金属危险废物资质的机构专项回收。\n  - **Laser printer toner cartridges（激光打印机碳粉盒）**：残留碳粉微尘具有肺部吸入危害、环境微塑料污染及粉尘燃爆风险，需要通过厂商回收计划或专门的耗材处置通道处理。\n  - **Lithium-ion battery packs（锂离子电池组）**：锂电池受损、受挤压或短路时极易发生热失控（Thermal runaway）引发剧烈火灾与爆炸，且含有腐蚀性化学电解液，必须单独绝缘包装并送往专用电池回收设施。\n\n• 为什么不选 Optical media drives（光驱，您错选的项）与 USB flash drives（U盘）：\n  - 光驱（Optical media drives）和 U 盘（USB flash drives，在完成数据销毁后）主要由常规金属外壳、普通塑料和标准电路板组成，不含重金属铅玻璃、易燃锂电芯或有毒碳粉微粒，均可归入常规标准电子垃圾（Standard e-waste）进行正常回收拆解。",
+      "en": "The correct answers are B, C, and E. Certain hardware components pose environmental or physical safety hazards and require specialized disposal procedures rather than standard electronic waste recycling:\n1. CRT display units (B): Contain hazardous amounts of lead in the glass and phosphors, plus implosion and residual high-voltage hazards.\n2. Laser printer toner cartridges (C): Contain fine particulate matter posing respiratory, environmental, and dust-explosion hazards.\n3. Lithium-ion battery packs (E): Pose severe fire/explosion risks (thermal runaway) if crushed or punctured and contain hazardous chemicals.\n\n• Optical media drives (A) and USB flash drives (D, once sanitized) consist of standard metals, plastics, and circuit boards without hazardous toxins or explosion risks, making them suitable for standard e-waste recycling."
+    },
+    "mnemonic": {
+      "zh": "口诀：特殊危废三大件——【CRT 显示器（含铅防内爆）】、【激光碳粉盒（防微尘爆炸）】、【锂电池组（防起火热失控）】！光驱和 U 盘走普通电子垃圾回收！",
+      "en": "Exam Tip: Special hazardous disposal required = CRTs (lead), Toner cartridges, and Lithium-ion batteries."
+    }
+  },
+  {
+    "id": 124,
+    "type": "single",
+    "stem": {
+      "zh": "某服务器机房因静电放电（ESD）导致组件故障的数量异常偏高。以下哪种环境条件是最可能的原因？",
+      "en": "A server room is experiencing an unusually high number of component failures due to ESD. Which environmental condition is the most likely cause?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Humidity levels that are too high"
+      },
+      {
+        "key": "B",
+        "text": "Ambient temperature that is too low"
+      },
+      {
+        "key": "C",
+        "text": "Humidity levels that are too low"
+      },
+      {
+        "key": "D",
+        "text": "Ambient temperature that is too high"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：数据中心/机房温湿度控制与静电放电（ESD）关系】\n正确答案是 C（Humidity levels that are too low / 湿度过低 / 空气过于干燥）。\n\n• 为什么选 Humidity levels that are too low（湿度过低）：\n  - 在物理与机房环境管理中，空气中的水分子能够起到自然导电消散静电荷的作用。当机房**湿度过低（空气过于干燥，通常相对湿度低于 40%）**时，空气绝缘性增强，人体走动、设备气流摩擦产生的静电荷无法通过空气自然泄放，从而在物体表面高度积聚，极易引发高电压的**静电放电（ESD）**击穿服务器主板、内存和网卡芯片。\n\n• 为什么不选 Humidity levels that are too high（湿度过高，您错选的项）：\n  - **湿度过高（通常相对湿度高于 60%~70%）**的危害是导致水汽凝结（Condensation），引发电路板金属引脚氧化、生锈腐蚀以及短路烧毁，而**不是**引发静电放电（潮湿的空气反而会抑制静电积聚）。\n\n• 为什么不选 Ambient temperature（环境温度过高或过低）：\n  - 温度过高会导致硬件过热降频或热关机；温度过低通常不是引发静电放电的直接主因，静电积聚主要由低湿度（干燥）驱动。",
+      "en": "The correct answer is C (Humidity levels that are too low). Low relative humidity (dry air, typically below 40%) prevents static charges from dissipating naturally into the atmosphere, causing static electricity to build up rapidly on personnel and surfaces and leading to frequent Electrostatic Discharge (ESD) component damage.\n\n• Humidity levels that are too high (A) causes moisture condensation, corrosion, and electrical short circuits, rather than ESD.\n• Ambient temperature extremes (B, D) affect thermal dissipation and cooling efficiency rather than electrostatic buildup."
+    },
+    "mnemonic": {
+      "zh": "口诀：冬天干燥易起静电——【湿度过低 (Humidity too low)】引发【静电 ESD】；【湿度过高 (Humidity too high)】引发【水汽凝结与生锈短路】！",
+      "en": "Exam Tip: Low humidity (dry air) = ESD hazard. High humidity = Condensation and corrosion."
+    }
+  },
+  {
+    "id": 125,
+    "type": "multiple",
+    "stem": {
+      "zh": "使用压缩空气罐清洁计算机硬件时，应遵循哪些预防措施以避免与潮湿/液体相关的损坏？（选择 3 项）",
+      "en": "Which precautions should be followed to avoid moisture-related damage when using compressed air to clean computer hardware? (Select 3 answers)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Avoid shaking the can during use"
+      },
+      {
+        "key": "B",
+        "text": "Keep the can upright"
+      },
+      {
+        "key": "C",
+        "text": "Apply long, continuous sprays to ensure all dust is dislodged"
+      },
+      {
+        "key": "D",
+        "text": "Use short, controlled bursts"
+      },
+      {
+        "key": "E",
+        "text": "Shake the can frequently during use to maintain high pressure"
+      },
+      {
+        "key": "F",
+        "text": "Keep the can tilted to prevent liquid leakage"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：压缩空气罐（Compressed Air）防液化霜冻损坏安全规范】\n正确答案是 A、B、D（Avoid shaking the can during use、Keep the can upright、Use short, controlled bursts）。\n\n• 为什么选 A、B、D（防止液态推进剂喷出与冷凝水结霜）：\n  - 压缩空气罐内部装的是高压液化气体推进剂（如二氟乙烷），只有罐体上部才是气态空间：\n    1. **Avoid shaking the can during use（使用过程中避免摇晃罐体，选 A）**：剧烈摇晃会使液态推进剂飞溅至喷嘴吸管入口并随气流喷射到电子元件上，造成极低温冻伤及液体残留短路。\n    2. **Keep the can upright（保持罐体直立，选 B）**：保持垂直直立确保喷管始终抽取顶部气态气体；如果倾斜或倒置（选项 F 错误），液态推进剂会直接喷出。\n    3. **Use short, controlled bursts（使用短促、受控的喷射，选 D）**：短促点喷可以防止罐体因快速汽化吸热而剧烈降温，避免在喷嘴和主板表面形成冷凝水汽或结霜。\n\n• 为什么不选 Option E（使用过程中频繁摇晃罐体以保持高压，您错选的项）：\n  - 压缩空气罐不是喷漆罐，内部没有需要混合的颜料沉淀；摇晃罐体反而会导致液态化学物质喷出损坏电路板（与选项 A 完全相反）。\n\n• 为什么不选 Option C（长时间连续喷射）：\n  - 长时间连续按压会导致罐体迅速结冰降温，在金属表面和硬件上产生冷凝水滴（moisture）。",
+      "en": "The correct answers are A, B, and D. Compressed air dusters contain liquefied propellant gases that can damage circuit boards if expelled as liquid or if rapid cooling creates condensation:\n1. Avoid shaking the can during use (A): Shaking splashes liquid propellant into the nozzle tube, spraying freezing liquid onto components.\n2. Keep the can upright (B): Ensures only gas from the top of the canister is expelled, preventing liquid propellant discharge.\n3. Use short, controlled bursts (D): Prevents rapid canister cooling and moisture condensation on hardware surfaces.\n\n• Shaking the can frequently (E) causes liquid propellant discharge and is strictly prohibited.\n• Long, continuous sprays (C) cause extreme cooling and condensation."
+    },
+    "mnemonic": {
+      "zh": "口诀：压缩空气清灰三原则——【直立拿着 (Keep upright)】、【千万别晃 (Avoid shaking)】、【短促点喷 (Short bursts)】！摇晃或倾斜会喷出液态氟利昂冻坏主板！",
+      "en": "Exam Tip: Compressed air moisture precautions = Keep upright + Avoid shaking + Short, controlled bursts."
+    }
+  },
+  {
+    "id": 126,
+    "type": "single",
+    "stem": {
+      "zh": "术语“电压骤降/低电压运行（Brownout）”指的是哪种电力状况？",
+      "en": "The term \"Brownout\" refers to what kind of situation?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Power fluctuation"
+      },
+      {
+        "key": "B",
+        "text": "Power sag"
+      },
+      {
+        "key": "C",
+        "text": "Prolonged undervoltage"
+      },
+      {
+        "key": "D",
+        "text": "Power outage"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：电力异常术语精确区分（Brownout vs. Sag vs. Blackout）】\n正确答案是 C（Prolonged undervoltage / 持续性低电压）。\n\n• 为什么选 Prolonged undervoltage（持续性低电压）：\n  - **Brownout（降压供电 / 持续性低电压）**：指电网供电电压出现**长时间持续下降（Prolonged undervoltage，通常持续数分钟、数小时甚至更久）**，常见于夏季用电高峰期电网负荷过重或电力公司主动降压限电。由于灯光会变暗发黄（brown），因此得名 Brownout。\n\n• 为什么不选 Power sag（瞬时电压跌落，您错选的项）：\n  - **Power sag（电压瞬降 / 跌落）**：指的是**极短暂的瞬间电压下降（通常仅持续几毫秒到几秒钟）**，例如空调压缩机或大型电机启动瞬间造成的灯光闪一下。CompTIA 题库对两者的时间跨度区分非常严格：短暂瞬间下降叫 Sag，长时间持续低电压叫 Brownout（Prolonged undervoltage）。\n\n• 为什么不选其它选项：\n  - **选项 A（Power fluctuation / 电力波动）**：泛指电压高低不稳的统称，不如 Prolonged undervoltage 精确。\n  - **选项 D（Power outage / Blackout / 停电）**：指电力完全中断（电压降至零）。",
+      "en": "The correct answer is C (Prolonged undervoltage). A brownout is an intentional or unintentional drop in electrical supply voltage that lasts for an extended period (minutes to hours), often caused by high grid demand.\n\n• Power sag (B) refers to a brief, momentary drop in voltage lasting only milliseconds to a few seconds (e.g., when a heavy appliance turns on), whereas a brownout is prolonged.\n• Power outage / Blackout (D) refers to a total loss of electrical power.\n• Power fluctuation (A) is a generic term for irregular voltage changes."
+    },
+    "mnemonic": {
+      "zh": "口诀：短暂几秒电压降叫【Power sag】；长时间持续低电压（灯光发黄暗淡）叫【Brownout = Prolonged undervoltage】；彻底断电叫【Blackout / Outage】！",
+      "en": "Exam Tip: Brownout = Prolonged undervoltage (minutes/hours). Sag = Brief/momentary voltage drop (seconds). Blackout = Total power outage."
+    }
   }
 ]
