@@ -3556,5 +3556,236 @@
       "zh": "口诀：短暂几秒电压降叫【Power sag】；长时间持续低电压（灯光发黄暗淡）叫【Brownout = Prolonged undervoltage】；彻底断电叫【Blackout / Outage】！",
       "en": "Exam Tip: Brownout = Prolonged undervoltage (minutes/hours). Sag = Brief/momentary voltage drop (seconds). Blackout = Total power outage."
     }
+  },
+  {
+    "id": 127,
+    "type": "single",
+    "stem": {
+      "zh": "在记录安全事件报告时，为了保持报告的完整性与客观性，应严格避免包含哪类细节？",
+      "en": "When documenting a security incident, which type of detail should be strictly avoided to maintain the integrity of the report?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Timeline of events"
+      },
+      {
+        "key": "B",
+        "text": "Actions taken during remediation"
+      },
+      {
+        "key": "C",
+        "text": "Personnel involved in the incident"
+      },
+      {
+        "key": "D",
+        "text": "Collected evidence"
+      },
+      {
+        "key": "E",
+        "text": "Speculative statements"
+      }
+    ],
+    "answer": [
+      "E"
+    ],
+    "explanation": {
+      "zh": "【考点：安全事件文档记录准则（Security Incident Documentation & Reporting）】\n正确答案是 E（Speculative statements / 推测性陈述与个人主观臆断）[cite: 34]。\n\n• 为什么选 Speculative statements（推测性陈述）：\n  - 安全事件报告具有高度的法律严肃性，可能会在后续的刑事调查、民事诉讼或合规审计中作为呈堂证供。因此，报告必须严格基于【可验证的客观事实（Verified facts）】。\n  - 任何未经证实的猜测、主观指责或情绪化推断（例如“我认为某员工故意泄密”或“可能是某黑客组织所为”）都会严重损害报告的公信力与法律效力，必须严格避免。\n\n• 为什么其它选项都是事件报告中必须记录的核心内容：\n  - **选项 B（Actions taken during remediation / 修复期间采取的措施，您错选的项）**：必须详细记录应急响应过程中执行的每一步隔离、查杀与修复操作，以便事后复盘与验证。\n  - **选项 A（Timeline of events / 事件时间线）**：按时间顺序准确记录事件发生、发现与处置的节点。\n  - **选项 C（Personnel involved in the incident / 涉事人员名单）**：记录发现人、响应人员及受影响相关人员。\n  - **选项 D（Collected evidence / 收集的证据）**：详细记录获取的日志、镜像、硬件等物证信息。",
+      "en": "The correct answer is E (Speculative statements). Incident documentation may be used in legal proceedings, disciplinary actions, or regulatory audits. To preserve integrity and admissibility, reports must contain strictly objective, verifiable facts—avoiding personal opinions, assumptions, or unverified guesses.\n\n• Timeline of events (A), actions taken during remediation (B), involved personnel (C), and collected evidence (D) are all mandatory, factual components of a proper security incident report."
+    },
+    "mnemonic": {
+      "zh": "口诀：安全事件报告讲求客观事实当呈堂证供，只记时间线、人员、证据和修复动作，严禁写【主观猜测 (Speculative statements)】！",
+      "en": "Exam Tip: Incident reports require strictly objective facts—never include speculative statements or guesses."
+    }
+  },
+  {
+    "id": 128,
+    "type": "single",
+    "stem": {
+      "zh": "以下哪项正确展示了典型计算机系统的基本易失性顺序（Order of Volatility，从最易失到最持久）？",
+      "en": "Which of the answers listed below shows the basic order of volatility for a typical system?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Archival media, Disk, RAM, CPU registers/cache"
+      },
+      {
+        "key": "B",
+        "text": "RAM, CPU registers/cache, Disk, Archival media"
+      },
+      {
+        "key": "C",
+        "text": "Disk, Archival media, CPU registers/cache, RAM"
+      },
+      {
+        "key": "D",
+        "text": "CPU registers/cache, RAM, Disk, Archival media"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：数字取证之易失性顺序（Order of Volatility, RFC 3227）】\n正确答案是 D（CPU registers/cache, RAM, Disk, Archival media）[cite: 34]。\n\n• 为什么选 D（由最易丢失到最持久保存的采集顺序）：\n  - 数字取证的首要铁律是【按易失性顺序（Order of Volatility）收集证据】——越容易在断电或系统运行中瞬间消失的数据，必须最先抢救提取：\n    1. **CPU registers / cache（CPU 寄存器与高速缓存）**：纳秒级刷新，断电或指令切换即刻消失，易失性最高。\n    2. **RAM（系统内存 / 路由表 / 进程状态）**：断电后数秒内数据完全清空，必须在关机前提取内存镜像。\n    3. **Disk（本地硬盘 / SSD 固态存储）**：非易失性存储，断电后数据仍保留在磁盘扇区中。\n    4. **Archival media（归档介质，如磁带、光盘、离线备份）**：设计用于长期物理保存，数据最稳定、最不易丢失。\n\n• 为什么不选 Option A（Archival media, Disk, RAM, CPU registers/cache，您错选的项）：\n  - 选项 A 把顺序完全写反了（从最持久写到了最易失）。如果先花几小时去提取归档介质和备份硬盘，等回头再去抓内存和 CPU 缓存时，易失性证据早已彻底丢失。",
+      "en": "The correct answer is D (CPU registers/cache, RAM, Disk, Archival media). In digital forensics (per RFC 3227), evidence must be collected starting with the most volatile data (shortest lifespan) to the least volatile (most persistent):\n1. CPU registers and cache (most volatile, changes in nanoseconds)\n2. RAM / system memory (lost upon power loss)\n3. Disk storage / hard drives (non-volatile, persists without power)\n4. Archival media / backups (least volatile, designed for long-term storage)\n\n• Option A reverses the required collection order."
+    },
+    "mnemonic": {
+      "zh": "口诀：取证抢救证据按【易失性从高到低（掉电跑得最快的最先抓）】：【CPU 缓存 -> 内存 RAM -> 硬盘 Disk -> 归档磁带 Archival】！",
+      "en": "Exam Tip: Order of Volatility (most to least volatile) = CPU registers/cache -> RAM -> Disk -> Archival media."
+    }
+  },
+  {
+    "id": 129,
+    "type": "single",
+    "stem": {
+      "zh": "在安全事件调查期间，技术人员必须从嫌疑人的存储驱动器中获取数据，同时不能更改其中的任何信息。下列哪项措施可确保驱动器的内容在此过程中不会被修改？",
+      "en": "During an incident investigation, a technician must acquire data from a suspect’s storage drive without altering any information. Which of the following ensures the contents of the drive cannot be modified during this process?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Disk encryption"
+      },
+      {
+        "key": "B",
+        "text": "Password-protected access"
+      },
+      {
+        "key": "C",
+        "text": "Checksum verification"
+      },
+      {
+        "key": "D",
+        "text": "Write blocker"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：数字取证防篡改硬件/软件工具（Write Blocker）】\n正确答案是 D（Write blocker / 写保护器/只读锁）[cite: 35]。\n\n• 为什么选 Write blocker（写保护器）：\n  - 当把嫌疑人的硬盘直接连接到取证工作站时，现代操作系统（如 Windows）会自动向磁盘写入文件访问时间戳（Last Access Timestamp）、更新日志或回收站索引，这会直接污染破坏原始电子证据。\n  - **写保护器（Write blocker）**（通常为串联在嫌疑硬盘与取证电脑之间的专用硬件桥接设备）在物理/协议层允许所有【读取（Read）】指令通过，但会【强制拦截并阻断一切写入（Write）指令】，从而 100% 确保原始存储驱动器内的任何字节在镜像提取过程中绝不会被修改。\n\n• 为什么不选 Checksum verification（校验和验证，您错选的项）：\n  - **校验和验证（如计算 SHA-256 / MD5 哈希值）**的作用是在镜像制作完成后，用于**证明验证**取证副本与原始磁盘内容完全一致（未发生篡改），它是一种“事后检测验证机制”，本身【无法阻止】操作系统在读取过程中向磁盘写入修改数据。\n\n• 为什么不选 Disk encryption 或 Password-protected access：\n  - 磁盘加密和密码保护用于保障数据机密性与访问控制，与取证镜像提取过程中的防写入保护无关。",
+      "en": "The correct answer is D (Write blocker). A hardware or software write blocker sits between the suspect storage drive and the forensic workstation, permitting read commands while blocking all write commands. This prevents the host operating system from altering file timestamps, metadata, or sectors during data acquisition.\n\n• Checksum verification (C) generates cryptographic hashes (e.g., SHA-256) to prove after the fact that the forensic copy matches the original drive, rather than actively preventing modifications during acquisition."
+    },
+    "mnemonic": {
+      "zh": "口诀：提取硬盘证据时【主动阻断任何写入防篡改】靠【写保护器 (Write blocker)】；提取完【事后证明副本与原盘一模一样】靠【哈希校验和 (Checksum)】！",
+      "en": "Exam Tip: Actively prevent drive modification during forensic acquisition = Write blocker. Prove integrity afterward = Checksum/Hash."
+    }
+  },
+  {
+    "id": 130,
+    "type": "single",
+    "stem": {
+      "zh": "下列哪个术语用于描述捕获存储设备每一个扇区（包括已删除文件、隐藏分区和未分配空间）的取证副本？",
+      "en": "Which of the terms listed below is used to describe a forensic copy of a storage device that captures every sector of the drive, including deleted files, hidden partitions, and unallocated space?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Disk mirroring"
+      },
+      {
+        "key": "B",
+        "text": "File system dump"
+      },
+      {
+        "key": "C",
+        "text": "Bit-by-bit image"
+      },
+      {
+        "key": "D",
+        "text": "Snapshot image"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：数字取证全盘镜像制作（Bit-by-bit Image）】\n正确答案是 C（Bit-by-bit image / 逐位镜像，又称 Sector-by-sector clone / Forensic image）[cite: 36]。\n\n• 为什么选 Bit-by-bit image（逐位镜像）：\n  - 标准的逻辑文件复制或普通系统备份只会读取当前文件系统目录树中登记的活跃文件，而会忽略已删除但尚未覆写的数据残留、空闲簇（Slack space）、隐藏分区和未分配空间（Unallocated space）。\n  - **Bit-by-bit image（逐位物理镜像）**在底层物理扇区层面将源驱动器的每一个二进制位（0 和 1）原封不动地克隆出来，完整保留包括已删除文件碎片、隐藏分区与未分配空间在内的全部取证线索。\n\n• 为什么不选其它选项：\n  - **选项 A（Disk mirroring / 磁盘镜像，如 RAID 1）**：是一种实时硬件高可用冗余技术，用于容错，不是取证副本术语。\n  - **选项 B（File system dump / 文件系统转储）**：仅导出逻辑文件结构中的活跃文件，会丢失未分配空间和已删除数据。\n  - **选项 D（Snapshot image / 快照镜像）**：通常用于虚拟机在某一时间点的状态保存，不代表取证级别的逐扇区物理拷贝。",
+      "en": "The correct answer is C (Bit-by-bit image). A bit-by-bit (or sector-by-sector) forensic image creates an exact physical replica of every bit and sector on the storage medium. Unlike standard file-level backups, it preserves deleted files, file slack space, hidden partitions, and unallocated space required for forensic analysis.\n\n• Disk mirroring (A) is a RAID 1 fault-tolerance mechanism.\n• File system dump (B) copies only active logical files, omitting unallocated space.\n• Snapshot image (D) captures point-in-time virtual machine states."
+    },
+    "mnemonic": {
+      "zh": "口诀：取证镜像要求【连已删除文件、隐藏分区、未分配空间一个不漏全抓下来】，必选【逐位镜像 (Bit-by-bit image)】！",
+      "en": "Exam Tip: Forensic copy capturing every sector, deleted files, and unallocated space = Bit-by-bit image."
+    }
+  },
+  {
+    "id": 131,
+    "type": "single",
+    "stem": {
+      "zh": "以下哪项最准确地描述了维护监管链（Chain of Custody）的主要目的？",
+      "en": "Which of the following best describes the primary purpose of maintaining a chain of custody?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "To provide a step-by-step log of the incident remediation process"
+      },
+      {
+        "key": "B",
+        "text": "To track the movement of corporate assets for inventory management purposes"
+      },
+      {
+        "key": "C",
+        "text": "To track which systems were affected during an incident"
+      },
+      {
+        "key": "D",
+        "text": "To preserve the integrity of evidence for potential legal proceedings"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：数字取证之监管链（Chain of Custody）的核心目的】\n正确答案是 D（To preserve the integrity of evidence for potential legal proceedings / 为潜在的法律诉讼程序保持证据的完整性）[cite: 37]。\n\n• 为什么选 Option D：\n  - **监管链（Chain of Custody）**是一份严谨的法律与取证追踪记录，详细登记物证/电子证据自发现采集起，每一次保管权移交、存储位置变更及访问操作的经手人、时间与目的。\n  - 其最核心的目的是**证明证据自始至终处于严密受控状态，未被调包、污染或篡改（preserve the integrity of evidence）**，从而确保该证据在未来的**法庭诉讼（legal proceedings）**中具有合法的可采纳性（Admissibility）。\n\n• 为什么不选 Option B（为库存管理目的追踪公司资产的移动，您错选的项）：\n  - 追踪公司日常 IT 设备（如笔记本电脑、显示器）的入库、调拨和盘点属于【IT 资产管理（Asset Management / CMDB）】的职责，与刑事/安全调查中的“监管链（Chain of Custody）”完全无关。\n\n• 为什么不选 Option A 或 Option C：\n  - 记录修复步骤（A）和受影响系统列表（C）属于一般事件响应报告的内容，并非监管链的核心目的。",
+      "en": "The correct answer is D (To preserve the integrity of evidence for potential legal proceedings). A chain of custody is a chronological legal document tracking the seizure, custody, control, transfer, analysis, and disposition of physical or digital evidence. Its primary goal is to demonstrate that evidence remained intact and untampered with so it remains admissible in a court of law.\n\n• Tracking corporate assets for inventory management (B) describes IT Asset Management / CMDB, not forensic chain of custody."
+    },
+    "mnemonic": {
+      "zh": "口诀：【监管链 (Chain of Custody)】是取证专用术语，核心目的是【保护证据完整性以便上法庭打官司 (Legal proceedings)】！追踪公司资产盘点那是 CMDB 资产管理！",
+      "en": "Exam Tip: Primary purpose of Chain of Custody = Preserve evidence integrity for legal proceedings."
+    }
+  },
+  {
+    "id": 132,
+    "type": "multiple",
+    "stem": {
+      "zh": "在记录监管链（Chain of Custody）文档时，必须始终包含哪两项内容？（选择 2 项）",
+      "en": "Which items must always be included when documenting a chain of custody? (Select 2 answers)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Description of the location where the evidence was found"
+      },
+      {
+        "key": "B",
+        "text": "Method used to collect the evidence"
+      },
+      {
+        "key": "C",
+        "text": "Chronological log of everyone who handled the evidence"
+      },
+      {
+        "key": "D",
+        "text": "Date and time of evidence transfer"
+      },
+      {
+        "key": "E",
+        "text": "List of remediation steps taken after evidence collection"
+      }
+    ],
+    "answer": [
+      "C",
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：监管链（Chain of Custody）表单必备核心字段】\n正确答案是 C（Chronological log of everyone who handled the evidence / 经手该证据的所有人员按时间顺序的记录）和 D（Date and time of evidence transfer / 证据移交的日期与时间）[cite: 37]。\n\n• 为什么选 C 和 D（监管链的核心本质——“谁在什么时候经手了证据”）：\n  - 监管链（Chain of Custody）顾名思义就是一条连续不断的人员交接链条（Chain）。为了证明证据在任何时间点都没有脱离监管，文档中必须始终包含两大核心要素：\n    1. **谁经手了（Who）**：按时间顺序完整记录每一位采集、保管、检验或接触过该证据的人员签名与身份（Chronological log of everyone who handled the evidence，选 C）。\n    2. **什么时候交接的（When）**：每一次证据转移保管权（Transfer of custody）的精确日期与时间戳（Date and time of evidence transfer，选 D）。\n\n• 为什么不选 Option A（发现证据的位置描述，您错选的项）与 Option B（收集证据所用方法）：\n  - 发现位置描述和采集技术方法通常记录在【初始证据采集表（Evidence Collection Form）】或【事件响应报告（Incident Report）】中；而**监管链（Chain of Custody）**最核心的专属追踪字段聚焦于“人（经手人链条）”与“时间（移交时间戳）”。\n\n• 为什么不选 Option E（证据收集后采取的修复步骤列表）：\n  - 事后系统修复步骤属于事件响应报告的【修复与恢复总结（Remediation Summary）】，与证据保管链无关。",
+      "en": "The correct answers are C and D. A chain of custody log specifically establishes continuous accountability for physical or digital evidence by recording:\n1. Who had possession of the evidence: A chronological log with signatures/identities of every individual who collected, handled, transferred, or analyzed the evidence (C).\n2. When custody changed: The exact date and time of every evidence transfer or access event (D).\n\n• Location descriptions (A) and collection methods (B) are typically documented on initial evidence intake/incident reports rather than forming the core transfer tracking elements of the chain of custody log.\n• Remediation steps (E) belong in the post-incident remediation report."
+    },
+    "mnemonic": {
+      "zh": "口诀：【监管链 (Chain of Custody)】死盯两个核心——【谁经手 (Everyone who handled)】+【何时交接 (Date and time of transfer)】！人链与时间链一环都不能断！",
+      "en": "Exam Tip: Chain of Custody must always include WHO handled the evidence (chronological log) and WHEN it was transferred (date/time)."
+    }
   }
 ]
