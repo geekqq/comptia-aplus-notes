@@ -3898,5 +3898,42 @@
       "zh": "口诀：商店、公司【做生意、管库存、处理客户订单】属于商业运营，必须配【企业/商业用途许可证 (Corporate-use license)】！共享软件 (Shareware) 只是免费试用版，商用会侵权！",
       "en": "Exam Tip: Business/retail operations (orders, inventory) = Corporate-use license. Trial evaluation software = Shareware."
     }
+  },
+  {
+    "id": 136,
+    "type": "single",
+    "stem": {
+      "zh": "哪项措施最能确保符合软件许可合规性要求？",
+      "en": "Which action best ensures compliance with software licensing requirements?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Monitoring application launch frequency"
+      },
+      {
+        "key": "B",
+        "text": "Purchasing a perpetual license for every device"
+      },
+      {
+        "key": "C",
+        "text": "Tracking license keys and installations"
+      },
+      {
+        "key": "D",
+        "text": "Enforcing DRM restrictions across all devices"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：企业软件资产管理与许可合规审计（Software License Compliance）】\n正确答案是 C（Tracking license keys and installations / 追踪许可证密钥与实际安装数量）[cite: 41]。\n\n• 为什么选 Tracking license keys and installations（追踪许可证密钥和安装数量）：\n  - 软件许可合规（License compliance）的核心在于确保企业内部实际部署安装的软件副本数量，严格不超过合法采购的授权席位（Seat count）上限。通过系统性地记录与核对所有**许可证密钥（License keys）、购买凭证以及全网终端上的实际安装清单（Installations）**（即软件资产管理 SAM 的核心工作），企业可以及时发现未授权安装或超额部署，从而顺利通过软件厂商的合规审计。\n\n• 为什么不选 Enforcing DRM restrictions across all devices（在所有设备上强制执行 DRM 限制，您错选的项）：\n  - **DRM（数字版权管理）**是由**软件开发商或内容发行商**直接嵌入在软件代码或数字媒体中的技术防盗版机制（如在线激活校验），而不是由企业 IT 管理员在所有内部设备上配置推行的许可合规盘点措施。\n\n• 为什么不选 A 或 B：\n  - **选项 A（Monitoring application launch frequency / 监控应用程序启动频率）**：启动频率反映的是软件的**使用率与活跃度**（常用于评估是否需要续费闲置订阅以节省成本），但即便某个付费商业软件一年只启动一次，只要未经授权安装在机器上依然构成许可违规。\n  - **选项 B（Purchasing a perpetual license for every device / 为每台设备购买永久许可证）**：既不现实也非合规必需——现代企业广泛采用按需订阅制（Subscription）、并发浮动许可（Concurrent license）或企业站点许可（Site license），无需且也无法为每台设备都购买永久买断许可；此外，即便买了许可证，若不追踪安装台账依然会导致密钥混用与合规风险。",
+      "en": "The correct answer is C (Tracking license keys and installations). Maintaining software licensing compliance requires accurate Software Asset Management (SAM)—specifically maintaining a centralized inventory of purchased license keys/entitlements and comparing them against actual software installations across all endpoints to ensure deployment counts never exceed authorized limits.\n\n• Enforcing DRM restrictions across all devices (D) is incorrect because Digital Rights Management (DRM) consists of anti-piracy controls built into software/media by the vendor, rather than an administrative compliance tracking process managed by enterprise IT.\n• Monitoring application launch frequency (A) measures software utilization rather than legal seat entitlement.\n• Purchasing a perpetual license for every device (B) is unnecessary and impractical given subscription, concurrent, and site licensing models, and does not replace audit tracking."
+    },
+    "mnemonic": {
+      "zh": "口诀：企业软件许可合规（License compliance）靠台账管理——一手抓【许可证密钥 (License keys)】，一手抓【实际安装数 (Installations)】，账实相符不超装！DRM 是厂商内置的防盗版锁，不是 IT 管理员的合规盘点手段！",
+      "en": "Exam Tip: Best way to ensure software license compliance = Tracking license keys and installations."
+    }
   }
 ]
