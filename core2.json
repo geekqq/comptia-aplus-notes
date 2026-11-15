@@ -3787,5 +3787,116 @@
       "zh": "口诀：【监管链 (Chain of Custody)】死盯两个核心——【谁经手 (Everyone who handled)】+【何时交接 (Date and time of transfer)】！人链与时间链一环都不能断！",
       "en": "Exam Tip: Chain of Custody must always include WHO handled the evidence (chronological log) and WHEN it was transferred (date/time)."
     }
+  },
+  {
+    "id": 133,
+    "type": "single",
+    "stem": {
+      "zh": "数字版权管理（DRM）的主要目的是：",
+      "en": "The primary purpose of DRM is to:"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Specify the number of permitted software installations"
+      },
+      {
+        "key": "B",
+        "text": "Define legal rights and obligations for software use"
+      },
+      {
+        "key": "C",
+        "text": "Monitor software installation activity for license compliance"
+      },
+      {
+        "key": "D",
+        "text": "Enforce access and usage restrictions on digital content"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：数字版权管理（DRM）与软件许可协议（EULA）的核心区别】\n正确答案是 D（Enforce access and usage restrictions on digital content / 对数字内容强制执行访问与使用限制）。\n\n• 为什么选 D（DRM 的技术强制属性）：\n  - **DRM（Digital Rights Management / 数字版权管理）**是一套内置于软件、电子书、流媒体音视频或游戏中的【技术性保护与强制控制机制】（如加密锁定、在线激活验证、硬件绑定、防复制代码、区域限制等）。它的核心目标是【在技术层面直接强制执行（Enforce）】访问和使用限制，防止用户未经授权复制、篡改或传播数字内容。\n\n• 为什么不选 B（Define legal rights and obligations for software use / 定义软件使用的法律权利和义务，您错选的项）：\n  - 在法律文本层面规定用户享有哪些权利、承担哪些义务的文件是**软件许可协议（如 EULA / 最终用户许可协议）**，而不是 DRM。简单来说：EULA 是“写明法律规矩的合同文本”，而 DRM 是“防止你违规的技术锁”。\n\n• 为什么不选 A 或 C：\n  - **选项 A（Specify the number of permitted software installations / 指定允许安装的软件数量）**：具体的安装台数/席位上限规定在软件许可协议（EULA）及购买的许可证（License）条款中。\n  - **选项 C（Monitor software installation activity for license compliance / 监控软件安装活动以确保许可合规）**：这是企业内部**软件资产管理（SAM, Software Asset Management）**或许可审计工具的职责，并非 DRM 的主要目的。",
+      "en": "The correct answer is D (Enforce access and usage restrictions on digital content). Digital Rights Management (DRM) consists of technological controls—such as encryption, product activation keys, hardware locks, and copy protection—designed to actively enforce access and usage restrictions on copyrighted digital media and software.\n\n• Defining legal rights and obligations (B) is the function of a legal licensing contract such as an End-User License Agreement (EULA), whereas DRM is the technical enforcement mechanism.\n• Specifying permitted installation counts (A) is stated within the EULA or licensing terms.\n• Monitoring enterprise installations for compliance (C) describes Software Asset Management (SAM) auditing."
+    },
+    "mnemonic": {
+      "zh": "口诀：【EULA】是白纸黑字定“法律权利义务”的合同；【DRM】是硬核代码锁死“访问与使用限制（Enforce restrictions）”的技术手段！",
+      "en": "Exam Tip: DRM = Technical enforcement of access and usage restrictions on digital content. EULA = Legal contract defining rights and obligations."
+    }
+  },
+  {
+    "id": 134,
+    "type": "single",
+    "stem": {
+      "zh": "技术人员受命审查一套新软件套件的权限。公司需要了解关于该软件再分发的具体限制，以及超出允许安装数量后的法律后果。哪份文档包含这些信息？",
+      "en": "A technician is tasked with reviewing the permissions for a new software suite. The company needs to know the specific restrictions regarding the redistribution of the software and the consequences of exceeding the allowed installation count. Which document contains this information?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "SLA"
+      },
+      {
+        "key": "B",
+        "text": "EULA"
+      },
+      {
+        "key": "C",
+        "text": "ToS"
+      },
+      {
+        "key": "D",
+        "text": "AUP"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": {
+      "zh": "【考点：IT 法律与合规文档辨析（EULA vs. ToS vs. SLA vs. AUP）】\n正确答案是 B（EULA / End-User License Agreement / 最终用户许可协议）。\n\n• 为什么选 EULA（最终用户许可协议）：\n  - EULA 是软件发行商与购买/使用该软件的用户或企业之间签订的具有法律约束力的许可合同。它详细规定了软件的授权使用范围、**允许安装的最大设备数量（installation count）**、禁止反向工程、**禁止未经授权再分发（redistribution restrictions）**，以及违反许可条款（如超额安装）所需承担的违约责任与法律后果。\n\n• 为什么不选 ToS（Terms of Service / 服务条款，您错选的项）：\n  - **ToS（服务条款）**主要用于规范用户访问和使用**在线网站、云平台或网络服务（如社交网站、在线账户）**时的行为准则与服务提供商的免责声明，并不针对具体本地软件套件的安装数量上限或软件副本再分发进行授权规范。\n\n• 为什么不选 SLA 或 AUP：\n  - **SLA（Service Level Agreement / 服务级别协议，选项 A）**：定义服务提供商与客户之间的服务质量指标（如系统 99.9% 正常运行时间、故障响应时间及赔偿标准）。\n  - **AUP（Acceptable Use Policy / 可接受使用政策，选项 D）**：企业内部制定并要求员工签署的规章制度，规定员工在公司网络与电脑上允许和禁止从事哪些操作（如禁止访问赌博网站、禁止私自下载盗版）。",
+      "en": "The correct answer is B (EULA - End-User License Agreement). A EULA is a legally binding contract between a software vendor and the user/organization that specifies permitted installation counts, restrictions against unauthorized copying or redistribution, and the legal consequences of breaching the license terms.\n\n• ToS (Terms of Service, C) governs the rules for using websites, cloud platforms, and online services rather than software installation limits and redistribution rights.\n• SLA (Service Level Agreement, A) defines guaranteed uptime, performance metrics, and support response times.\n• AUP (Acceptable Use Policy, D) is an internal organizational policy governing how employees may use company IT resources."
+    },
+    "mnemonic": {
+      "zh": "口诀：查软件【装几台、能不能分发、违规什么后果】看【EULA】；网站/云平台规则看【ToS】；服务器在线率/响应时间看【SLA】；公司管员工上网行为看【AUP】！",
+      "en": "Exam Tip: Software installation limits, redistribution rules, and breach consequences = EULA. Online service rules = ToS."
+    }
+  },
+  {
+    "id": 135,
+    "type": "single",
+    "stem": {
+      "zh": "技术人员受命在零售环境中设置一台共享计算机。该计算机将由多名员工用来处理客户订单和管理库存。必须为软件分配以下哪种许可证类型，以确保该企业符合合法使用权？",
+      "en": "A technician is tasked with setting up a shared computer in a retail environment. The computer will be used by various employees to process customer orders and manage inventory. Which of the following license types must be assigned to the software to ensure the business remains compliant with legal usage rights?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Shareware license"
+      },
+      {
+        "key": "B",
+        "text": "Corporate-use license"
+      },
+      {
+        "key": "C",
+        "text": "Perpetual license"
+      },
+      {
+        "key": "D",
+        "text": "Concurrent license"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": {
+      "zh": "【考点：商业与企业软件许可合规（Corporate-use License vs. Shareware / Perpetual / Concurrent）】\n正确答案是 B（Corporate-use license / 企业/商业用途许可证）。\n\n• 为什么选 Corporate-use license（企业/商业用途许可证）：\n  - 题干明确交代了使用场景：**零售商业环境（retail environment）**，且用于**处理客户订单与管理库存（process customer orders and manage inventory）**等日常商业营利活动。\n  - 许多软件（包括免费软件 Freeware、家庭版 Home Edition 或教育版）在许可协议中严格限制“仅限个人非商业用途（Personal/Non-commercial use only）”。企业在商业经营场所部署软件时，必须采购并分配合法的**企业/商业用途许可证（Corporate-use / Commercial license）**，才能满足商业合规性要求。\n\n• 为什么不选 Shareware license（共享软件许可证，您错选的项）：\n  - **Shareware（共享软件）**是指免费提供给用户进行**短期试用评估（Trial basis，通常有时间限制或功能阉割）**的专有软件。在试用期满后继续使用，或在商业零售环境中直接拿共享试用版软件开展日常经营活动，均属于严重的许可侵权违规行为。\n\n• 为什么不选 Perpetual license 或 Concurrent license：\n  - **Perpetual license（永久许可证，选项 C）**：指的是一种**计费与有效期模式**（一次性买断永久使用该版本，区别于按年/按月付费的订阅制 Subscription）。“个人家庭版”也可以是永久许可证，但依然不能合法用于商业零售用途。\n  - **Concurrent license（并发/浮动许可证，选项 D）**：指通过网络许可证服务器限制同一时刻最多允许多少名在线用户**同时并发运行**该软件。本题只有一台店面共享电脑，核心矛盾在于“商业经营合法使用权”，而非多机并发数量控制。",
+      "en": "The correct answer is B (Corporate-use license). Operating software in a commercial retail environment to process customer orders and manage inventory requires a license that explicitly authorizes commercial/corporate use. Personal, home, educational, or trial licenses prohibit business operations.\n\n• Shareware license (A) provides free software on a temporary trial basis for evaluation before purchase, and is not compliant for ongoing commercial business operations.\n• Perpetual license (C) describes a one-time purchase payment model (versus a recurring subscription) rather than commercial usage authorization.\n• Concurrent license (D) restricts the number of simultaneous network users accessing a shared license pool, which is not the compliance issue on a single retail workstation."
+    },
+    "mnemonic": {
+      "zh": "口诀：商店、公司【做生意、管库存、处理客户订单】属于商业运营，必须配【企业/商业用途许可证 (Corporate-use license)】！共享软件 (Shareware) 只是免费试用版，商用会侵权！",
+      "en": "Exam Tip: Business/retail operations (orders, inventory) = Corporate-use license. Trial evaluation software = Shareware."
+    }
   }
 ]
