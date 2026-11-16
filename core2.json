@@ -4804,5 +4804,79 @@
       "zh": "口诀：生成式 AI 一本正经【瞎编不存在的固件版本、假注册表项、假命令】，这就是标准的【AI 幻觉 (Hallucinations)】！模型漂移 (Model drift) 是时间久了现实规律变了导致预测变准度下降！",
       "en": "Exam Tip: Generative AI fabricating non-existent firmware versions, registry keys, or commands = Hallucinations."
     }
+  },
+  {
+    "id": 160,
+    "type": "single",
+    "stem": {
+      "zh": "以下哪项指的是微软开发的、专为闪存驱动器和外部存储设备优化的专有文件系统？",
+      "en": "Which of the answers listed below refers to a Microsoft-developed proprietary file system optimized for flash drives and external storage devices?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "ReFS"
+      },
+      {
+        "key": "B",
+        "text": "FAT32"
+      },
+      {
+        "key": "C",
+        "text": "NTFS"
+      },
+      {
+        "key": "D",
+        "text": "exFAT"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：Windows 文件系统特性与适用场景（exFAT vs. NTFS vs. FAT32 vs. ReFS）】\n正确答案是 D（exFAT / Extended File Allocation Table / 扩展文件分配表）[cite: 65]。\n\n• 为什么选 exFAT：\n  - exFAT 是微软专门针对**闪存介质（USB 闪存盘、SDXC 存储卡）和外部移动存储设备**优化设计的专有文件系统。它彻底突破了传统 FAT32 单个文件最大 4 GB 的容量限制，同时去除了 NTFS 繁重的日志记录（Journaling）与权限元数据开销，既减少了闪存芯片的无效擦写损耗，又能在 Windows 和 macOS 之间实现原生跨平台读写兼容。\n\n• 为什么不选 NTFS（New Technology File System，您错选的项）：\n  - NTFS 是 Windows 内部系统盘的默认日志型文件系统，支持文件级 ACL 权限、EFS 加密和磁盘配额。但正因为其频繁写入日志与安全描述符元数据，对 U 盘等闪存设备并不友好，且 macOS 默认对 NTFS 仅支持只读而不支持原生写入，因此并非专为外部闪存优化的文件系统。\n\n• 为什么不选 ReFS 或 FAT32：\n  - **选项 A（ReFS / Resilient File System / 弹性文件系统）**：微软专为大规模企业级 Windows Server 存储池与高数据完整性/自动纠错设计的服务器文件系统，不用于普通外部闪存盘。\n  - **选项 B（FAT32）**：早期传统文件系统，存在单个文件不能超过 4 GB 的致命限制，无法满足现代大容量移动存储需求。",
+      "en": "The correct answer is D (exFAT - Extended File Allocation Table). Developed by Microsoft specifically for flash drives (USB sticks, SDXC cards) and external storage devices, exFAT eliminates FAT32's 4 GB individual file size limit while avoiding the heavy metadata and journaling overhead of NTFS—preserving flash memory lifespan and providing native read/write compatibility across Windows and macOS.\n\n• NTFS (C) is the standard journaling file system for internal Windows system drives, carrying permission and logging overhead not optimized for removable flash media.\n• ReFS (A) is a server-grade file system engineered for large-scale data resiliency and corruption recovery in Windows Server environments.\n• FAT32 (B) is a legacy file system restricted by a 4 GB maximum file size limit."
+    },
+    "mnemonic": {
+      "zh": "口诀：专为【U 盘、SD 卡等闪存和外部移动硬盘】优化、突破 4GB 限制的文件系统必选【exFAT】！内置系统盘选 NTFS，服务器高容错选 ReFS！",
+      "en": "Exam Tip: Microsoft file system optimized for flash drives and external storage = exFAT."
+    }
+  },
+  {
+    "id": 161,
+    "type": "single",
+    "stem": {
+      "zh": "以下哪项指的是在企业环境中广泛用于大规模部署操作系统的解决方案，尤其是在无法使用物理介质（如 U 盘或光盘）的情况下？",
+      "en": "Which of the following answers refers to a solution widely used in enterprise environments for deploying operating systems at scale, particularly when the use of physical media is not feasible?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "NAS"
+      },
+      {
+        "key": "B",
+        "text": "RDP"
+      },
+      {
+        "key": "C",
+        "text": "PXE"
+      },
+      {
+        "key": "D",
+        "text": "SAN"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：企业级网络无盘引导与批量操作系统部署（PXE Boot）】\n正确答案是 C（PXE / Preboot Execution Environment / 预启动执行环境）[cite: 66]。\n\n• 为什么选 PXE（预启动执行环境）：\n  - PXE 是一种集成在现代网卡固件（UEFI/BIOS）中的行业标准客户端-服务器网络引导接口。当企业需要为成百上千台裸机批量安装操作系统，且逐台插拔 U 盘或光盘（physical media）不切实际时，管理员只需开启网卡的 PXE 启动功能：裸机开机后会自动通过 DHCP 获取 IP 地址及引导服务器位置，利用 TFTP 下载启动镜像，并从部署服务器（如 WDS / SCCM / MDT）拉取完整操作系统镜像实现全自动大规模安装。\n\n• 为什么不选 SAN（Storage Area Network / 存储区域网络，您错选的项）：\n  - SAN 是一种面向企业数据中心服务器的高速专用块级存储网络（通常基于光纤通道 FC 或 iSCSI），用于为数据库和虚拟化集群提供集中共享磁盘阵列存储，而不是用于客户端电脑大规模网络装机的引导部署协议。\n\n• 为什么不选 NAS 或 RDP：\n  - **选项 A（NAS / Network Attached Storage / 网络附加存储）**：提供文件级网络共享与备份存储的专用设备，本身不是在无操作系统的裸机上引导装机的协议机制。\n  - **选项 B（RDP / Remote Desktop Protocol / 远程桌面协议）**：用于远程图形化控制**已经安装并运行 Windows 操作系统**的计算机，无法在没有安装系统的裸机上运行。",
+      "en": "The correct answer is C (PXE - Preboot Execution Environment). PXE is a standardized client-server network boot interface built into network interface cards (NICs) that enables bare-metal computers to boot over the network (via DHCP and TFTP) and install operating systems at enterprise scale without requiring physical USB drives or optical media.\n\n• SAN (Storage Area Network, D) is a dedicated high-speed network providing block-level storage to enterprise servers, not an OS deployment mechanism.\n• NAS (Network Attached Storage, A) provides file-level network storage rather than pre-OS network booting, and RDP (Remote Desktop Protocol, 😎 requires an already-installed, running operating system."
+    },
+    "mnemonic": {
+      "zh": "口诀：不用 U 盘光盘、企业【大规模网络批量装机】认准网卡预启动协议【PXE (Preboot Execution Environment)】！SAN 是服务器高速块存储网络！",
+      "en": "Exam Tip: Deploying operating systems at enterprise scale over the network without physical media = PXE."
+    }
   }
 ]
