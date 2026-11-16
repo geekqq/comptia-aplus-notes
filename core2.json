@@ -4545,5 +4545,116 @@
       "zh": "口诀：脚本本想改个小设置（如改壁纸），结果【误改注册表/环境变量导致其它软件打不开】，标准术语就是【无意中更改系统设置 (Inadvertent changes to system settings)】！",
       "en": "Exam Tip: Configuration script breaks unrelated apps after execution = Inadvertent changes to system settings."
     }
+  },
+  {
+    "id": 153,
+    "type": "single",
+    "stem": {
+      "zh": "下列哪个术语指代专门用于对客户端计算机、服务器和网络进行远程监控、管理、维护和支持的通用软件平台类别？",
+      "en": "Which of the terms listed below refers to a general category of software platforms designed for the remote monitoring, management, maintenance, and support of client computers, servers, and networks?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "EDR"
+      },
+      {
+        "key": "B",
+        "text": "RMM"
+      },
+      {
+        "key": "C",
+        "text": "VDI"
+      },
+      {
+        "key": "D",
+        "text": "MDM"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": {
+      "zh": "【考点：远程监控与管理平台（RMM）的定义与功能范围】\n正确答案是 B（RMM / Remote Monitoring and Management / 远程监控与管理）[cite: 58]。\n\n• 为什么选 RMM（远程监控与管理）：\n  - RMM 是一类专为企业内部 IT 部门和托管服务提供商（MSP）设计的综合性远程运维平台。通过在终端设备上部署轻量级代理（Agent），管理员可以从单一控制台对全网的**客户端电脑、服务器及网络设备**进行持续健康监控、自动补丁分发、脚本批量执行以及远程桌面协助维护。\n\n• 为什么不选 MDM（Mobile Device Management / 移动设备管理，您错选的项）：\n  - MDM 的管理对象主要聚焦于**智能手机、平板电脑等移动终端**（侧重策略下发、应用商店管控、地理定位与丢失远程擦除），并不具备对大型服务器集群和网络基础设施进行全方位性能监控与底层维护的通用能力。\n\n• 为什么不选 EDR 或 VDI：\n  - **选项 A（EDR / Endpoint Detection and Response / 终端检测与响应）**：属于网络安全防御工具，专注于监测终端上的恶意软件行为、威胁狩猎与安全事件隔离，而非日常 IT 运维管理。\n  - **选项 C（VDI / Virtual Desktop Infrastructure / 虚拟桌面基础架构）**：指在数据中心服务器上运行虚拟桌面并流式传输给前端用户的虚拟化架构，并非远程监控运维软件平台。",
+      "en": "The correct answer is B (RMM - Remote Monitoring and Management). RMM platforms are comprehensive software suites used by IT departments and Managed Service Providers (MSPs) to proactively monitor system health, deploy patches, run automation scripts, and provide remote support across client workstations, servers, and network infrastructure.\n\n• MDM (Mobile Device Management, D) specifically governs mobile devices (smartphones and tablets) for policy enforcement, app distribution, and remote wipe, rather than full server and network infrastructure management.\n• EDR (Endpoint Detection and Response, A) is a cybersecurity threat-detection tool, while VDI (Virtual Desktop Infrastructure, C) hosts virtualized desktop environments on centralized servers."
+    },
+    "mnemonic": {
+      "zh": "口诀：题干出现【远程监控、管理、维护客户端+服务器+网络 (Remote monitoring, management, maintenance)】，直接拆出首字母秒选【RMM】！MDM 只管手机平板等移动设备！",
+      "en": "Exam Tip: Remote monitoring, management, and maintenance of endpoints, servers, and networks = RMM."
+    }
+  },
+  {
+    "id": 154,
+    "type": "single",
+    "stem": {
+      "zh": "以下哪项是专为虚拟机访问而设计的开源远程桌面协议？",
+      "en": "Which of the following is an open-source remote desktop protocol designed for virtual machine access?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "WinRM"
+      },
+      {
+        "key": "B",
+        "text": "VNC"
+      },
+      {
+        "key": "C",
+        "text": "DaaS"
+      },
+      {
+        "key": "D",
+        "text": "SPICE"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：虚拟化环境专用开源远程显示协议（SPICE vs. VNC）】\n正确答案是 D（SPICE / Simple Protocol for Independent Computing Environments）[cite: 59]。\n\n• 为什么选 SPICE：\n  - SPICE 是由 Red Hat 主导开发的**开源远程桌面显示协议**，专门针对**虚拟机（Virtual Machine，如 KVM / QEMU 虚拟化环境）**的远程访问而设计。它能够智能判断图形渲染指令是在客户端还是宿主机执行，并提供低延迟的音视频流传输、双向音频、剪贴板共享及本地 USB 设备直通重定向，提供接近本地物理机的虚拟机交互体验。\n\n• 为什么不选 VNC（Virtual Network Computing / 虚拟网络计算，您错选的项）：\n  - 虽然 VNC 也是跨平台的远程桌面协议（基于 RFB 帧缓冲传输），但它是一种**通用型**屏幕像素共享工具（常用于直接连接物理机或通用操作系统桌面），**并非专门针对虚拟机虚拟化架构（Virtual machine access）优化设计**，在多媒体、音频和硬件重定向方面远不如 SPICE。\n\n• 为什么不选 WinRM 或 DaaS：\n  - **选项 A（WinRM / Windows Remote Management）**：是微软基于 WS-Management 的命令行/PowerShell 远程管理协议，用于执行后台命令与脚本，并非图形化远程桌面协议。\n  - **选项 C（DaaS / Desktop as a Service / 桌面即服务）**：是一种云计算托管虚拟桌面服务交付模式（如 Azure Virtual Desktop），而不是开源协议。",
+      "en": "The correct answer is D (SPICE - Simple Protocol for Independent Computing Environments). SPICE is an open-source remote display protocol specifically engineered for virtualized environments (such as KVM/QEMU), providing high-performance graphics rendering, audio streaming, and USB device redirection for virtual machine access.\n\n• VNC (Virtual Network Computing, 😎 is a general-purpose screen-sharing protocol (using RFB) for physical or virtual desktops rather than a protocol specifically designed and optimized for virtual machine virtualization.\n• WinRM (A) is a command-line/PowerShell management protocol for Windows, and DaaS (C) is a cloud-hosted desktop service model."
+    },
+    "mnemonic": {
+      "zh": "口诀：专为【虚拟机访问 (Virtual machine access)】设计的【开源远程桌面协议】，认准虚拟化调料【SPICE】！VNC 是通用帧缓冲屏幕共享，WinRM 是命令行管理！",
+      "en": "Exam Tip: Open-source remote desktop protocol specifically designed for virtual machine access = SPICE."
+    }
+  },
+  {
+    "id": 155,
+    "type": "single",
+    "stem": {
+      "zh": "以下哪项最准确地描述了与 RMM（远程监控与管理）平台相关的最重大架构安全风险？",
+      "en": "Which of the following best describes the most significant architectural security risk associated with RMM platforms?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Data exfiltration"
+      },
+      {
+        "key": "B",
+        "text": "Insecure APIs"
+      },
+      {
+        "key": "C",
+        "text": "Human error"
+      },
+      {
+        "key": "D",
+        "text": "Centralized control"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：RMM 平台的固有架构安全风险（Centralized Control / 单点高权限集中控制）】\n正确答案是 D（Centralized control / 集中化控制）[cite: 60]。\n\n• 为什么选 Centralized control（集中化控制）：\n  - 从系统架构角度来看，RMM 平台采用“一对多”的**高度集中化控制架构（Centralized control）**——成百上千台客户终端和核心服务器均运行着具有最高系统权限（如 Windows SYSTEM 或 Linux `root`）的 RMM 代理，并全部听命于同一个中心控制台。这意味着**RMM 控制台一旦被黑客攻破或遭到供应链劫持，攻击者就能瞬间获得全网所有受管设备的最高控制权**，从而在几分钟内向全企业批量分发勒索软件（典型的 MSP 供应链攻击模型）。\n\n• 为什么不选 Human error（人为失误，您错选的项）：\n  - 人为失误（如管理员点错脚本或误删配置）属于**人员操作层面的通用运维风险**，存在于所有 IT 工具中，并不是 RMM 平台在**系统架构设计（Architectural）**上最核心的固有安全风险。\n\n• 为什么不选 Data exfiltration 或 Insecure APIs：\n  - **选项 A（Data exfiltration / 数据外泄）**：是安全事件发生后可能导致的**恶意后果/攻击目标**，而不是 RMM 本身的架构属性。\n  - **选项 B（Insecure APIs / 不安全的 API 接口）**：属于具体软件代码层面的**实现漏洞（Implementation vulnerability）**，并非 RMM“一控多高权限”这一核心架构特征带来的结构性风险。",
+      "en": "The correct answer is D (Centralized control). By architectural design, RMM platforms provide a single, centralized control plane with high-privilege (SYSTEM/root) agent access across every managed endpoint and server. If the central RMM server or administrator console is compromised, an attacker gains immediate, simultaneous administrative control over the entire organization's infrastructure.\n\n• Human error (C) is an operational risk common to any administrative workflow rather than an inherent architectural flaw.\n• Data exfiltration (A) is a potential post-compromise outcome, and insecure APIs (B) represent an implementation vulnerability rather than the fundamental architectural risk of centralized one-to-many control."
+    },
+    "mnemonic": {
+      "zh": "口诀：RMM 一台控制台管成千上万台高权限电脑，一旦被端全军覆没，最致命的【架构安全风险 (Architectural risk)】就是【集中化控制 (Centralized control)】！",
+      "en": "Exam Tip: Most significant architectural security risk of RMM platforms = Centralized control (single point of high-privilege compromise)."
+    }
   }
 ]
