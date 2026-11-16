@@ -3935,5 +3935,79 @@
       "zh": "口诀：企业软件许可合规（License compliance）靠台账管理——一手抓【许可证密钥 (License keys)】，一手抓【实际安装数 (Installations)】，账实相符不超装！DRM 是厂商内置的防盗版锁，不是 IT 管理员的合规盘点手段！",
       "en": "Exam Tip: Best way to ensure software license compliance = Tracking license keys and installations."
     }
+  },
+  {
+    "id": 137,
+    "type": "single",
+    "stem": {
+      "zh": "PCI DSS 的目的是为以下哪项提供保护：",
+      "en": "The purpose of PCI DSS is to provide protection for:"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Personal health information"
+      },
+      {
+        "key": "B",
+        "text": "Bank account credentials"
+      },
+      {
+        "key": "C",
+        "text": "Intellectual property and trade secrets"
+      },
+      {
+        "key": "D",
+        "text": "Credit cardholder data"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：合规与数据保护标准之 PCI DSS 适用范围】\n正确答案是 D（Credit cardholder data / 信用卡持卡人数据）[cite: 42]。\n\n• 为什么选 Credit cardholder data（信用卡持卡人数据）：\n  - **PCI DSS（Payment Card Industry Data Security Standard / 支付卡行业数据安全标准）**是由 Visa、MasterCard 等主要银行卡组织联合制定的全球强制性安全标准。任何存储、处理或传输支付卡（信用卡/借记卡）交易数据的商户或机构都必须遵守 PCI DSS，以保护**持卡人数据（如主账号 PAN、持卡人姓名、有效期、CVV 安全码等）**免遭窃取与欺诈。\n\n• 为什么不选 Intellectual property and trade secrets（知识产权与商业机密，您错选的项）：\n  - 知识产权（IP）和商业机密属于企业内部核心无形资产，通常通过保密协议（NDA）、专利版权法、访问控制列表（ACL）以及数据防泄漏系统（DLP）进行保护，不属于 PCI DSS 支付卡行业标准的管辖范畴。\n\n• 为什么不选 Personal health information 或 Bank account credentials：\n  - **Personal health information（个人健康信息 / PHI，选项 A）**：受美国医疗隐私法案 **HIPAA**（健康保险流通与责任法案）监管保护。\n  - **Bank account credentials（银行账户凭据，选项 B）**：网银登录凭据与传统银行业务通常受一般金融银行法规（如 GLBA）及多因素身份验证机制保护，而 PCI DSS 专门针对“支付卡（Credit/Debit Card）”交易生态。",
+      "en": "The correct answer is D (Credit cardholder data). The Payment Card Industry Data Security Standard (PCI DSS) is a global information security standard mandated by major credit card brands for all organizations that store, process, or transmit credit or debit cardholder data (such as Primary Account Numbers, expiration dates, and security codes).\n\n• Intellectual property and trade secrets (C) are protected via corporate confidentiality policies, NDAs, and Data Loss Prevention (DLP) controls rather than PCI DSS.\n• Personal health information (A) is governed by HIPAA.\n• Bank account credentials (B) fall under broader banking regulations (such as GLBA) rather than payment card industry standards."
+    },
+    "mnemonic": {
+      "zh": "口诀：看到【PCI（Payment Card Industry 支付卡行业）】，直接秒选【信用卡持卡人数据 (Credit cardholder data)】！医疗健康找 HIPAA，个人隐私找 GDPR！",
+      "en": "Exam Tip: PCI DSS (Payment Card Industry) = Protects credit cardholder data. PHI = HIPAA."
+    }
+  },
+  {
+    "id": 138,
+    "type": "single",
+    "stem": {
+      "zh": "哪种类型的策略规定了受监管数据在永久销毁之前必须保存的所需时间期限？",
+      "en": "Which type of policy defines the required timeframe for the preservation of regulated data prior to its permanent disposal?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Data protection policy"
+      },
+      {
+        "key": "B",
+        "text": "Data classification policy"
+      },
+      {
+        "key": "C",
+        "text": "Data backup policy"
+      },
+      {
+        "key": "D",
+        "text": "Data retention policy"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：安全与合规管理文档之数据保留策略（Data Retention Policy）】\n正确答案是 D（Data retention policy / 数据保留策略）[cite: 43]。\n\n• 为什么选 Data retention policy（数据保留策略）：\n  - 题干的核心关键词是“规定受监管数据在永久销毁前的【保存时间期限（required timeframe for the preservation... prior to its permanent disposal）】”。\n  - **Data retention policy（数据保留策略）**专门用于定义各类业务记录、财务凭证、医疗档案或合规日志必须归档保存的最短和最长期限（例如税务记录必须保留 7 年），以及到期后必须执行的不可逆安全销毁（Secure disposal）流程。\n\n• 为什么不选 Data protection policy（数据保护策略，您错选的项）：\n  - **Data protection policy（数据保护策略）**是一份宏观的综合性安全与隐私管理政策，重点规定如何通过加密、访问控制、防泄漏等手段防止数据在存储和传输过程中被未授权访问或泄露，并不具体规定各类受监管数据必须保存多少年的时间表。\n\n• 为什么不选 Data classification policy 或 Data backup policy：\n  - **Data classification policy（数据分类策略，选项 B）**：用于定义数据的敏感度等级划分标准（如公开 Public、内部 Internal、机密 Confidential、绝密 Restricted）及相应的标签标记规范。\n  - **Data backup policy（数据备份策略，选项 C）**：侧重于业务连续性与灾难恢复，规定备份频率（如每日增量、每周全备）、恢复点目标（RPO）与恢复时间目标（RTO），而非针对法律法规要求的长期归档保存与到期销毁年限。",
+      "en": "The correct answer is D (Data retention policy). A data retention policy establishes the mandatory timeframe for which specific types of regulated, financial, or operational records must be preserved for legal, regulatory, or business compliance before undergoing secure permanent disposal.\n\n• Data protection policy (A) is a broad security and privacy framework governing encryption, access controls, and breach prevention rather than specific archival timeframes.\n• Data classification policy (B) defines sensitivity tiers (e.g., Public, Confidential, Restricted) and labeling procedures.\n• Data backup policy (C) defines backup schedules, RPO/RTO metrics, and disaster recovery procedures."
+    },
+    "mnemonic": {
+      "zh": "口诀：题目只要问【数据要保存多少年/保存时间期限 (Timeframe for preservation)】再销毁，必选【数据保留策略 (Data retention policy)】！定密级看 Classification，定备份频率看 Backup！",
+      "en": "Exam Tip: Required timeframe to preserve regulated data before disposal = Data retention policy."
+    }
   }
 ]
