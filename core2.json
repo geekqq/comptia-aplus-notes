@@ -4206,5 +4206,344 @@
       "zh": "口诀：【澄清客户陈述 (Clarify statements)】专攻把故障事实问清楚——【复述核实 (Restate)】+【提问确认关键细节 (Question to confirm details)】+【开放提问缩小范围 (Open-ended questions)】！调整黑话难度属于另一条沟通风格准则！",
       "en": "Exam Tip: Clarifying customer statements = Restating descriptions + Questioning to confirm key details + Asking open-ended questions to narrow scope."
     }
+  },
+  {
+    "id": 144,
+    "type": "single",
+    "stem": {
+      "zh": "在 Windows 命令提示符（Command Prompt）中运行一系列 DOS 命令的脚本文件，通常会使用哪种文件扩展名？",
+      "en": "Which type of file extension would be found on a script file that runs a sequence of DOS commands in Windows Command Prompt?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": ".bat"
+      },
+      {
+        "key": "B",
+        "text": ".ps1"
+      },
+      {
+        "key": "C",
+        "text": ".sh"
+      },
+      {
+        "key": "D",
+        "text": ".vbs"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": {
+      "zh": "【考点：常见脚本文件扩展名与解释器对应关系（.bat 批处理脚本）】\n正确答案是 A（.bat / Batch file / 批处理文件）[cite: 50]。\n\n• 为什么选 .bat（批处理文件）：\n  - 题干的两个核心关键词：**一系列 DOS 命令（sequence of DOS commands）**和 Windows 命令提示符（Windows Command Prompt / cmd.exe）**。批处理文件（`.bat`）自 MS-DOS 时代起就是专为顺序执行多条 DOS/CMD 命令行指令而设计的纯文本脚本格式。\n\n• 为什么不选 .ps1（PowerShell 脚本，您错选的项）：\n  - `.ps1` 是 **Windows PowerShell 解释器专用的脚本扩展名，基于面向对象架构与 .NET Cmdlet 指令，而不是运行传统 DOS 命令的 Windows Command Prompt 批处理脚本。\n\n• 为什么不选 .sh 或 .vbs：\n  - **选项 C（.sh）**：Linux / Unix / macOS 系统的 Bash/Shell 脚本扩展名。\n  - **选项 D（.vbs）**：VBScript（Visual Basic Scripting Edition）脚本扩展名，由 Windows Script Host（WSH）解释执行。",
+      "en": "The correct answer is A (.bat). A batch file (.bat) is a plain-text script containing a sequence of DOS/CMD commands executed sequentially by the Windows Command Prompt (cmd.exe) interpreter.\n\n• .ps1 (B) is the file extension used by Windows PowerShell scripts rather than legacy DOS Command Prompt scripts.\n• .sh (C) is used for Linux/Unix shell scripts.\n• .vbs (D) is used for VBScript files executed via Windows Script Host."
+    },
+    "mnemonic": {
+      "zh": "口诀：看到【DOS 命令】或【Command Prompt (cmd)】批量执行，秒选批处理【.bat】；看到【PowerShell】选【.ps1】；看到【Linux】选【.sh】！",
+      "en": "Exam Tip: DOS commands / Windows Command Prompt = .bat (Batch file). PowerShell = .ps1."
+    }
+  },
+  {
+    "id": 145,
+    "type": "single",
+    "stem": {
+      "zh": "在 Windows 系统上，由 PowerShell 解释器执行的脚本使用哪种文件扩展名？",
+      "en": "Which file extension is used for scripts executed by the PowerShell interpreter on Windows systems?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": ".vbs"
+      },
+      {
+        "key": "B",
+        "text": ".py"
+      },
+      {
+        "key": "C",
+        "text": ".bat"
+      },
+      {
+        "key": "D",
+        "text": ".ps1"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：PowerShell 脚本扩展名（.ps1）】\n正确答案是 D（.ps1）[cite: 50]。\n\n• 为什么选 .ps1：\n  - PowerShell 是微软开发的现代任务自动化与配置管理框架，其脚本文件扩展名固定为 **`.ps1`**（PS 代表 PowerShell，数字 1 源于微软早期版本命名规范并一直沿用至今，包括 PowerShell 5.1 及跨平台 PowerShell 7+）。\n\n• 为什么不选 .bat（您错选的项）：\n  - .bat 是供传统命令提示符（`cmd.exe`）运行的批处理脚本（Batch file），并非 PowerShell 解释器原生的脚本格式（恰好与上一题形成对照记忆）。\n\n• 为什么不选 .vbs 或 .py：\n  - **选项 A（.vbs）**：VBScript 脚本，由 wscript.exe 或 cscript.exe 解释执行。\n  - **选项 B（.py）**：Python 编程语言脚本，需安装 Python 解释器执行。",
+      "en": "The correct answer is D (.ps1). Scripts written for and executed by the Windows PowerShell interpreter use the .ps1 file extension.\n\n• .bat (C) is used for legacy Command Prompt (cmd.exe) batch scripts.\n• .vbs (A) is used for VBScript files, and .py (B) is used for Python scripts."
+    },
+    "mnemonic": {
+      "zh": "口诀：【P】ower【S】hell 首字母缩写加 1 就是【.ps1】！与传统黑框框 cmd 的【.bat】彻底区分开！",
+      "en": "Exam Tip: PowerShell scripts always use the .ps1 extension."
+    }
+  },
+  {
+    "id": 146,
+    "type": "single",
+    "stem": {
+      "zh": "技术人员需要创建一个登录脚本，在旧版 Windows 工作站上为域用户显示一个图形化（弹出窗口）欢迎消息。应该使用哪种类型的脚本文件？",
+      "en": "A technician needs to create a logon script that displays a graphical (popup) welcome message for domain users on legacy Windows workstations. Which type of script file should be used?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": ".cmd"
+      },
+      {
+        "key": "B",
+        "text": ".bat"
+      },
+      {
+        "key": "C",
+        "text": ".sh"
+      },
+      {
+        "key": "D",
+        "text": ".vbs"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：旧版 Windows 图形弹窗登录脚本（VBScript / .vbs）】\n正确答案是 D（.vbs / VBScript）[cite: 51]。\n\n• 为什么选 .vbs（VBScript）：\n  - 题干的两个核心线索：**旧版 Windows 工作站（legacy Windows workstations）**以及**显示图形化弹出窗口消息（displays a graphical popup welcome message）**。\n  - 自 Windows 98 / Windows 2000 时代起，Windows 系统内置了 Windows Script Host（`wscript.exe`），原生支持运行 VBScript（`.vbs`）**。管理员只需在 `.vbs` 脚本中编写一行简单的 `MsgBox 'Welcome!'` 即可直接弹出标准 Windows 图形化对话框（GUI popup），非常适合早期企业域环境中的用户登录提示。\n\n• 为什么不选 .sh（Shell 脚本，您错选的项）：\n  - `.sh` 是 **Linux / Unix / macOS 操作系统的 Shell 脚本扩展名，旧版 Windows 工作站默认根本无法识别或执行 .sh 文件。\n\n• 为什么不选 .cmd 或 .bat：\n  - .cmd 和 .bat 都是基于纯文本字符界面的命令行批处理脚本，只能在黑色控制台窗口中用 echo 输出文字，本身不具备原生的图形界面（GUI）弹窗对话框函数。",
+      "en": "The correct answer is D (.vbs). VBScript (.vbs) is natively supported on legacy Windows workstations via Windows Script Host (wscript.exe) and can easily generate graphical user interface (GUI) popup dialog boxes (using the MsgBox function) for domain logon notifications.\n\n• .sh (C) is a Unix/Linux shell script extension and is not natively supported on legacy Windows systems.\n• .cmd (A) and .bat (B) are text-based Command Prompt batch scripts that lack native GUI popup window capabilities."
+    },
+    "mnemonic": {
+      "zh": "口诀：旧版 Windows 要做【图形化弹窗 (Graphical popup)】，原生全靠【.vbs (VBScript)】的 MsgBox！.bat/.cmd 只能黑框打字，.sh 是 Linux 的！",
+      "en": "Exam Tip: Graphical (popup) logon message on legacy Windows = .vbs (VBScript)."
+    }
+  },
+  {
+    "id": 147,
+    "type": "single",
+    "stem": {
+      "zh": "Windows 技术人员受命确保按特定的基于时间的计划（time-based schedule）从所有工作站中删除临时文件和文件夹。技术人员应该采取什么措施来为此任务提供基本的自动化？",
+      "en": "A Windows technician is tasked with ensuring that temporary files and folders are deleted from all workstations on a specific time-based schedule. What should the technician do to provide basic automation for this task?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Modify a registry key to automatically purge temporary data"
+      },
+      {
+        "key": "B",
+        "text": "Configure Group Policy to delete temporary data at user logoff"
+      },
+      {
+        "key": "C",
+        "text": "Implement a script to run the deletion task on schedule"
+      },
+      {
+        "key": "D",
+        "text": "Use Disk Cleanup's built-in settings to remove temporary data"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：脚本自动化与定时任务调度（Scheduled Automation Script）】\n正确答案是 C（Implement a script to run the deletion task on schedule / 实施脚本以按计划运行删除任务）[cite: 52]。\n\n• 为什么选 Option C：\n  - 题干明确要求按**特定的基于时间的计划（on a specific time-based schedule）**自动清理临时文件和文件夹。编写清理脚本（如 .ps1 或 `.bat`）并结合 Windows 任务计划程序（Task Scheduler）定时触发执行，正是实现此类基础运维自动化的标准方案。\n\n• 为什么不选 Option B（配置组策略在用户注销时删除临时数据，您错选的项）：\n  - “在用户注销时（at user logoff）”属于**基于登录/注销事件触发（Event-based）**，而不是题干要求的**基于特定时间表触发（Time-based schedule，例如每周日凌晨 2:00）**；如果企业员工习惯锁定屏幕或长期不注销计算机，注销脚本将永远不会执行。\n\n• 为什么不选 Option A 或 Option D：\n  - **选项 A（修改注册表项以自动清除临时数据）**：Windows 注册表本身并不具备按自定义时间表清理任意临时文件夹的内置定时调度引擎。\n  - **选项 D（使用磁盘清理的内置设置）**：Windows 磁盘清理（Disk Cleanup / `cleanmgr.exe`）默认是手动交互式图形工具，没有内置的定时自动运行计划（除非将其封装进脚本并通过任务计划程序定时调用）。",
+      "en": "The correct answer is C (Implement a script to run the deletion task on schedule). Combining an automated cleanup script (such as PowerShell or batch) with Windows Task Scheduler executes the file/folder deletion on a precise, recurring time-based schedule across workstations.\n\n• Configuring Group Policy at user logoff (B) is event-driven rather than time-based, and will fail to run if users lock their workstations instead of logging off.\n• Registry keys (A) do not provide a native time-based file deletion scheduler, and Disk Cleanup (D) is a manual utility unless automated via scripting and Task Scheduler."
+    },
+    "mnemonic": {
+      "zh": "口诀：要求按【特定时间表 (Time-based schedule)】自动执行清理维护，选【编写脚本按计划运行 (Implement a script... on schedule)】！注销触发 (At logoff) 是事件驱动，不是按时间表！",
+      "en": "Exam Tip: Basic automation on a specific time-based schedule = Implement a script to run on schedule."
+    }
+  },
+  {
+    "id": 148,
+    "type": "single",
+    "stem": {
+      "zh": "在现代 Windows 环境中，用于自动化管理任务（例如系统重启）的当前行业标准脚本使用哪种文件扩展名？",
+      "en": "Which file extension is used for scripts that are the current industry standard for automating administrative tasks, such as system restarts, in a modern Windows environment?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": ".bat"
+      },
+      {
+        "key": "B",
+        "text": ".vbs"
+      },
+      {
+        "key": "C",
+        "text": ".cmd"
+      },
+      {
+        "key": "D",
+        "text": ".ps1"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：现代 Windows 运维自动化行业标准（PowerShell / .ps1）】\n正确答案是 D（.ps1）[cite: 53]。\n\n• 为什么选 .ps1（PowerShell 脚本）：\n  - 题干核心关键词：**现代 Windows 环境（modern Windows environment）**以及**当前行业标准（current industry standard for automating administrative tasks）**。\n  - 微软早已将 **PowerShell（`.ps1`）**确立为现代 Windows Server 与 Windows 10/11 企业管理自动化的官方行业标准。它基于 .NET 对象管道、原生支持 WMI/CIM、远程管理（WinRM）及 Active Directory 模块，能够精细控制诸如远程重启（`Restart-Computer`）、服务管理、补丁部署等全部系统级操作。\n\n• 为什么不选 .bat（批处理文件，您错选的项）、.cmd 或 .vbs：\n  - **`.bat`（选项 A）**和 **`.cmd`（选项 C）**属于源自 DOS/早期 Windows NT 的传统批处理格式，功能局限在纯文本字符串处理，缺乏现代错误处理与对象操作能力。\n  - **`.vbs`（选项 B）**属于微软已逐步弃用（Deprecated）的旧时代脚本技术（在现代 Windows 11 中 VBScript 甚至已被列为按需功能并逐步淘汰），绝非当前行业标准。",
+      "en": "The correct answer is D (.ps1). Windows PowerShell (.ps1) is Microsoft's current industry standard for automating administrative tasks (such as Restart-Computer, Active Directory management, and system configuration) in modern Windows environments.\n\n• .bat (A), .cmd (C), and .vbs (B) are legacy scripting formats; VBScript in particular is deprecated in modern Windows versions."
+    },
+    "mnemonic": {
+      "zh": "口诀：看到【现代 Windows (Modern Windows)】+【当前行业标准 (Current industry standard)】，毫无疑问秒选【PowerShell (.ps1)】！.bat 和 .vbs 都是历史遗留老古董！",
+      "en": "Exam Tip: Current industry standard for modern Windows administrative automation = .ps1 (PowerShell)."
+    }
+  },
+  {
+    "id": 149,
+    "type": "multiple",
+    "stem": {
+      "zh": "在企业环境中使用脚本安装应用程序的主要好处有哪些？（选择 3 项）",
+      "en": "What are the primary benefits of using scripts to install applications in enterprise environments? (Select 3 answers)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Ensuring consistent software configuration across multiple systems"
+      },
+      {
+        "key": "B",
+        "text": "Reducing the time required to install software on a single workstation"
+      },
+      {
+        "key": "C",
+        "text": "Improving efficiency and scalability of software deployment"
+      },
+      {
+        "key": "D",
+        "text": "Bypassing the requirement for administrative privileges on target systems"
+      },
+      {
+        "key": "E",
+        "text": "Minimizing errors that occur during manual software deployment"
+      }
+    ],
+    "answer": [
+      "A",
+      "C",
+      "E"
+    ],
+    "explanation": {
+      "zh": "【考点：企业脚本化软件部署的核心优势（Enterprise Scripting Benefits）】\n正确答案是 A、C、E[cite: 54]。\n\n• 为什么选 A、C、E：\n  1. **Ensuring consistent software configuration across multiple systems（确保跨多台系统的软件配置保持一致，选 A）**：脚本严格执行相同的静默安装参数与配置项，保证成百上千台终端获得完全一致的标准化环境。\n  2. **Improving efficiency and scalability of software deployment（提高软件部署的效率与可扩展性，选 C，您漏选的项）**：面对企业级大规模终端扩容，一次编写的脚本可以轻松分发扩展到数千台电脑同时安装，极大提升整体部署效率与规模化能力。\n  3. **Minimizing errors that occur during manual software deployment（最大限度减少人工手动部署软件期间发生的错误，选 E）**：消除技术人员重复点击安装向导、选错安装路径或漏勾组件等人为失误。\n\n• 为什么不选 Option B（减少在单台工作站上安装软件所需的时间，您错选的项）：\n  - 编写、调试并测试一个自动化安装脚本往往需要花费比手动点一次“下一步”更多的时间，因此脚本**并不会缩短在单台机器（single workstation）上的安装时间**；脚本的真正价值在于**规模化（Scalability）部署到多台企业设备**。\n\n• 为什么不选 Option D（绕过目标系统对管理员权限的要求）：\n  - 脚本严格受限于执行上下文的安全权限，绝对不能绕过操作系统的 UAC 或管理员权限控制（若无管理员权限，静默安装依然会因权限不足而失败）。",
+      "en": "The correct answers are A, C, and E. Using scripts for enterprise application deployment provides three primary advantages:\n1. Ensures consistent configuration across multiple endpoints by applying identical installation flags (A).\n2. Improves deployment efficiency and scalability when rolling out software across dozens or thousands of machines (C).\n3. Minimizes human errors caused by repetitive manual installations (E).\n\n• Reducing installation time on a single workstation (B) is incorrect because writing and testing a script takes longer than performing a one-off manual installation; the time savings come from multi-system scalability.\n• Scripts cannot bypass OS administrative privilege requirements (D)."
+    },
+    "mnemonic": {
+      "zh": "口诀：企业脚本批量装软件三大优势——【多机配置一致 (Consistent)】、【规模扩展高效 (Scalability)】、【减少人工手误 (Minimizing errors)】！单台机器写脚本更费时，也不能绕过管理员权限！",
+      "en": "Exam Tip: Enterprise scripting benefits = Consistency across systems + Scalability/efficiency + Minimizing manual errors."
+    }
+  },
+  {
+    "id": 150,
+    "type": "single",
+    "stem": {
+      "zh": "系统管理员使用脚本远程触发多台网络设备下载并安装最新固件。以下哪项最准确地描述了此脚本的主要功能？",
+      "en": "A system administrator uses a script to remotely trigger the download and installation of the latest firmware on several network appliances. Which of the answers listed below best describes the primary function of this script?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Update propagation"
+      },
+      {
+        "key": "B",
+        "text": "Update initiation"
+      },
+      {
+        "key": "C",
+        "text": "Update provisioning"
+      },
+      {
+        "key": "D",
+        "text": "Update enforcement"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": {
+      "zh": "【考点：CompTIA A+ 脚本典型应用场景之发起更新（Initiating Updates）】\n正确答案是 B（Update initiation / 发起更新）[cite: 55]。\n\n• 为什么选 Update initiation（发起更新）：\n  - 在 CompTIA A+ Core 2（Objective 4.6 脚本用途）官方考纲中，明确列出了脚本的几大核心应用场景，其中之一就是 Initiating updates（发起/触发更新）**。\n  - 题干中的关键动作是“管理员使用脚本**远程触发（remotely trigger）**网络设备去下载并安装最新固件”，即由脚本主动发出指令启动设备的更新流程，这与 **Update initiation 完全对应。\n\n• 为什么不选 Update provisioning（更新配置/资源供给，您错选的项）：\n  - 在 IT 运维术语中，**Provisioning（配置/供给）**通常指从零开始为新员工创建用户账号、分配邮箱权限或部署一台全新的虚拟机/服务器基础设施，而不是指触发已有网络设备的固件下载升级。\n\n• 为什么不选 Update propagation 或 Update enforcement：\n  - **Update propagation（更新传播/分发）**：通常指更新服务器（如 WSUS 或分发节点）之间同步复制补丁数据包的过程。\n  - **Update enforcement（更新强制合规）**：通常指通过组策略（GPO）或 MDM 策略强制禁止用户推迟重启或阻断未打补丁设备接入网络。",
+      "en": "The correct answer is B (Update initiation). CompTIA A+ Core 2 explicitly identifies 'initiating updates' as a primary administrative use case for scripting—using a script to remotely trigger devices or endpoints to check for, download, and install firmware or software updates.\n\n• Provisioning (C) refers to the initial creation and setup of user accounts, permissions, or new infrastructure resources.\n• Propagation (A) refers to replicating update packages across distribution servers, and enforcement (D) refers to policy-mandated compliance deadlines."
+    },
+    "mnemonic": {
+      "zh": "口诀：脚本远程【触发/启动 (Trigger)】设备下载安装固件或补丁，直接对应 CompTIA 官方考点【发起更新 (Update initiation)】！Provisioning 是给新设备/新员工初始化开账号！",
+      "en": "Exam Tip: Using a script to remotely trigger firmware/software downloads and installs = Update initiation."
+    }
+  },
+  {
+    "id": 151,
+    "type": "single",
+    "stem": {
+      "zh": "一名 Windows 用户运行用 JavaScript 编写的浏览器自动化脚本，以从多个网页抓取数据。几分钟后，浏览器变得完全无响应，必须通过任务管理器强制终止。以下哪项最准确地描述了此场景中出现的与脚本相关的风险？",
+      "en": "A Windows user runs a browser automation script written in JavaScript to scrape data from multiple web pages. After several minutes, the browser becomes completely unresponsive and must be terminated via Task Manager. Which of the following answers best describes a scripting-related risk presented in this scenario?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Application timeout from low bandwidth"
+      },
+      {
+        "key": "B",
+        "text": "Unintentional introduction of malware"
+      },
+      {
+        "key": "C",
+        "text": "Mishandling of system resources"
+      },
+      {
+        "key": "D",
+        "text": "Incompatible JavaScript runtime version"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：脚本编写与运行风险之系统资源处理不当（Mishandling of System Resources）】\n正确答案是 C（Mishandling of system resources / 系统资源处理不当）[cite: 56]。\n\n• 为什么选 Mishandling of system resources（系统资源处理不当）：\n  - 编写存在逻辑缺陷（如死循环 Infinite loop、未释放 DOM 内存对象导致内存泄漏 Memory leak、或并发抓取线程失控）的自动化脚本，会在运行几分钟内迅速耗尽系统的 **RAM（内存）和 CPU 计算资源**，最终导致应用程序彻底卡死无响应（Unresponsive），必须通过任务管理器强行结束进程。在 CompTIA A+ 考纲中，这类风险被明确归类为 **Mishandling of system resources**。\n\n• 为什么不选 Incompatible JavaScript runtime version（JavaScript 运行时版本不兼容，您错选的项）：\n  - 如果脚本与浏览器的 JavaScript 引擎版本不兼容，脚本在启动执行的**第一秒就会直接抛出语法错误（SyntaxError）或运行异常并立即停止**，而不会正常抓取运行“几分钟后”才把整个浏览器拖垮卡死。\n\n• 为什么不选 Option A 或 Option B：\n  - **选项 A（低带宽导致应用程序超时）**：网络带宽不足只会导致网页加载变慢或请求超时报错，不会让整个浏览器界面进程彻底冻结卡死到必须用任务管理器强杀。\n  - **选项 B（无意中引入恶意软件）**：题干描述的是用户自己运行的网页抓取脚本把浏览器内存/CPU 吃光卡死，并未涉及下载执行恶意病毒木马。",
+      "en": "The correct answer is C (Mishandling of system resources). Poorly optimized scripts—such as those containing infinite loops, memory leaks, or unthrottled web-scraping routines—can exhaust available CPU and RAM, causing the host application or operating system to freeze and become unresponsive.\n\n• An incompatible JavaScript runtime version (D) would cause an immediate syntax or runtime error upon launch rather than freezing the browser after several minutes of execution.\n• Low bandwidth (A) slows network requests without locking up local application processes, and malware (B) is not indicated in this scenario."
+    },
+    "mnemonic": {
+      "zh": "口诀：脚本跑了几分钟把程序/电脑【吃光内存 CPU 彻底卡死无响应】，属于 CompTIA 经典脚本风险【系统资源处理不当 (Mishandling of system resources)】！版本不兼容一秒就报错根本跑不起来！",
+      "en": "Exam Tip: Script causes browser/PC to freeze and become unresponsive after running = Mishandling of system resources."
+    }
+  },
+  {
+    "id": 152,
+    "type": "single",
+    "stem": {
+      "zh": "某公司部署了一个脚本，以在所有工作站上强制设置统一的企业桌面背景。脚本执行后，用户报告某些应用程序无法再正常启动。此场景代表了与脚本相关的哪种风险？",
+      "en": "A script is deployed to enforce a standardized corporate desktop background across the company's workstations. Post-execution, users report that certain applications no longer launch correctly. Which type of risk associated with scripting does this scenario represent?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Unintentional introduction of malware"
+      },
+      {
+        "key": "B",
+        "text": "Increased system resource usage"
+      },
+      {
+        "key": "C",
+        "text": "Software compatibility errors"
+      },
+      {
+        "key": "D",
+        "text": "Inadvertent changes to system settings"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：脚本运行风险之无意更改系统设置（Inadvertent Changes to System Settings）】\n正确答案是 D（Inadvertent changes to system settings / 无意中更改系统设置，您答对了！）[cite: 57]。\n\n• 为什么选 Inadvertent changes to system settings（您做对了！）：\n  - 管理员本意只是通过脚本修改桌面壁纸策略（通常会写入或修改 Windows 注册表键值、组策略缓存或系统环境变量）。由于脚本路径写错、通配符误匹配或覆盖了共享配置项，导致脚本在修改壁纸的同时**意外破坏或篡改了其他关键系统设置（Inadvertent changes to system settings）**，进而造成依赖这些系统路径或注册表项的应用程序无法正常启动。\n  - *防范最佳实践*：所有批量部署的修改类脚本在全网推送前，必须先在非生产沙盒/测试环境中充分验证并做好配置备份。\n\n• 为什么不选其它选项：\n  - **选项 A（无意中引入恶意软件）**：故障是由管理员自己的配置脚本改错系统参数引起的，并非外来恶意程序感染。\n  - **选项 B（系统资源使用率增加）**：壁纸脚本是一次性执行完退出的，并非在后台持续占用大量 CPU/内存导致卡死。\n  - **选项 C（软件兼容性错误）**：应用程序在脚本运行之前原本是可以正常启动的，说明软件本身与操作系统完全兼容，问题根源在于脚本意外修改了系统配置。",
+      "en": "The correct answer is D (Inadvertent changes to system settings). Scripts that modify registry keys, environment variables, or configuration files can unintentionally alter or overwrite critical system parameters if written with bugs or overly broad scope, breaking unrelated applications.\n\n• Malware (A) and resource exhaustion (B) are not involved, and software compatibility errors (C) are ruled out because the applications functioned properly prior to the script's execution."
+    },
+    "mnemonic": {
+      "zh": "口诀：脚本本想改个小设置（如改壁纸），结果【误改注册表/环境变量导致其它软件打不开】，标准术语就是【无意中更改系统设置 (Inadvertent changes to system settings)】！",
+      "en": "Exam Tip: Configuration script breaks unrelated apps after execution = Inadvertent changes to system settings."
+    }
   }
 ]
