@@ -4009,5 +4009,202 @@
       "zh": "口诀：题目只要问【数据要保存多少年/保存时间期限 (Timeframe for preservation)】再销毁，必选【数据保留策略 (Data retention policy)】！定密级看 Classification，定备份频率看 Backup！",
       "en": "Exam Tip: Required timeframe to preserve regulated data before disposal = Data retention policy."
     }
+  },
+  {
+    "id": 139,
+    "type": "single",
+    "stem": {
+      "zh": "以下哪项陈述最准确地描述了在客户支持岗位中展现自信（Projecting confidence）？",
+      "en": "Which of the statements listed below best describes projecting confidence in a customer support role?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Reassuring the customer by minimizing the perceived complexity of the issue"
+      },
+      {
+        "key": "B",
+        "text": "Providing a definitive repair timeline before completing a full diagnostic"
+      },
+      {
+        "key": "C",
+        "text": "Communicating assurance and competence while managing expectations"
+      },
+      {
+        "key": "D",
+        "text": "Minimizing the customer’s questions to maintain control of the interaction"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：客户支持沟通素养之展现自信与预期管理（Projecting Confidence）】\n正确答案是 C（Communicating assurance and competence while managing expectations / 在管理客户预期的同时传达信心与专业胜任力）[cite: 44]。\n\n• 为什么选 Option C：\n  - 在技术支持沟通中，**展现自信（Projecting confidence）**源于扎实的专业能力与透明坦诚的沟通。技术人员既要向客户传达出“我们有能力妥善解决该问题”的定心丸与专业度（assurance and competence），又要结合实际情况**合理管理客户预期（managing expectations）**（例如诚实告知排查步骤与大致时间范围，不作虚假保证），从而建立长久的客户信任。\n\n• 为什么不选 Option A（通过淡化问题的感知复杂性来安抚客户，您错选的项）：\n  - 刻意轻描淡写或低估问题难度（minimizing complexity）会让客户觉得技术人员在敷衍或忽视其痛点；一旦后续发现问题比预想复杂、修复耗时更长，反而会严重破坏信任并引发客户不满。\n\n• 为什么不选 Option B 或 Option D：\n  - **选项 B（在完成全面诊断前给出确切的修复时间表）**：在尚未定位根本原因前就打包票承诺死板的完工时间（overpromising），一旦遇到意外延误就会造成违约与客诉，违背了“合理管理预期”的原则。\n  - **选项 D（减少客户的提问以保持对沟通的控制）**：压制或敷衍客户提问属于傲慢且不耐烦的态度，会让客户感到不被尊重，不符合专业服务礼仪。",
+      "en": "The correct answer is C (Communicating assurance and competence while managing expectations). Projecting confidence in a customer support role means reassuring the customer through demonstrated technical competence and calm professionalism while setting realistic, honest expectations about the troubleshooting process and timeline.\n\n• Minimizing the perceived complexity of the issue (A) undermines credibility if the problem turns out to be more difficult or time-consuming than downplayed.\n• Providing a definitive repair timeline before a full diagnostic (B) risks overpromising and breaking customer trust if unexpected complications arise.\n• Minimizing customer questions (D) comes across as dismissive and unhelpful rather than confident."
+    },
+    "mnemonic": {
+      "zh": "口诀：客服【展现自信 (Projecting confidence)】靠的是【专业底气 + 合理预期管理 (Assurance, competence & managing expectations)】！绝不能轻描淡写糊弄难度，也不能没诊断就乱承诺时间！",
+      "en": "Exam Tip: Projecting confidence = Communicating assurance and competence while realistically managing customer expectations."
+    }
+  },
+  {
+    "id": 140,
+    "type": "single",
+    "stem": {
+      "zh": "哪种行为最能体现使用恰当的专业头衔与称谓（Appropriate professional titles and designations）的沟通准则？",
+      "en": "Which behavior best reflects the guideline to use appropriate professional titles and designations?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Relying on generic respectful terms when unsure about the provided title"
+      },
+      {
+        "key": "B",
+        "text": "Applying titles or designations only when explicitly requested to do so"
+      },
+      {
+        "key": "C",
+        "text": "Omitting titles entirely to focus attention on the technical problem"
+      },
+      {
+        "key": "D",
+        "text": "Addressing a self-identified PhD holder as Dr. followed by the last name"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：客户支持礼仪与文化尊重之恰当使用专业头衔（Professional Titles & Designations）】\n正确答案是 D（Addressing a self-identified PhD holder as Dr. followed by the last name / 将自我标明为博士学位持有者的客户称呼为“Dr. + 姓氏”）[cite: 45, 46]。\n\n• 为什么选 Option D：\n  - 在专业商务与技术支持沟通礼仪中，当客户在工单签名、自我介绍或个人资料中明确标明了自己的学术学位或专业头衔（如拥有博士学位的 PhD 持有者）时，技术人员应当主动使用对应的正式敬称（**Dr. + 姓氏 / Last name**）来称呼对方。这直接体现了对客户专业背景与身份的尊重，也是落实“使用恰当专业头衔”准则的标准示范。\n\n• 为什么不选 Option A（当不确定所提供的头衔时依赖通用敬称，您错选的项）：\n  - 题干考查的是积极践行“使用恰当专业头衔与称谓（use appropriate professional titles and designations）”的具体行为；当客户已经明确标明头衔（如 PhD）时，主动使用其对应的正式头衔（Dr.）才是对这一准则最直接、准确的执行。\n\n• 为什么不选 Option B 或 Option C：\n  - **选项 B（仅在被明确要求时才使用头衔或称谓）**：专业头衔应当主动、自然地尊重使用，而不应等到客户开口纠正或强硬要求后才勉强改口。\n  - **选项 C（完全省略头衔以将注意力集中在技术问题上）**：忽略对方的正式头衔在许多专业领域（如医疗、学术、法律或高管支持）会被视为失礼与缺乏职业素养。",
+      "en": "The correct answer is D (Addressing a self-identified PhD holder as Dr. followed by the last name). Using appropriate professional titles and designations demonstrates respect and cultural awareness by actively acknowledging credentials or titles that a customer has provided (such as addressing a PhD holder as 'Dr. [Last Name]').\n\n• Relying on generic terms (A) avoids applying the specific professional designation provided by the customer.\n• Waiting until explicitly requested (B) or omitting titles entirely (C) can be perceived as disrespectful in formal or professional environments."
+    },
+    "mnemonic": {
+      "zh": "口诀：客户自报博士（PhD）等专业头衔，主动用【Dr. + 姓氏 (Last name)】正式尊称！不省略、不敷衍、不等对方提醒才改口！",
+      "en": "Exam Tip: Using appropriate professional titles = Addressing a self-identified PhD holder as 'Dr.' followed by their last name."
+    }
+  },
+  {
+    "id": 141,
+    "type": "single",
+    "stem": {
+      "zh": "哪种做法最直接地支持“不与客户争辩或产生防御心理（Do not argue with the customer or be defensive）”的沟通准则？",
+      "en": "Which practice most directly supports the guideline to not argue with the customer or be defensive?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Asking the customer to remain calm before continuing"
+      },
+      {
+        "key": "B",
+        "text": "Redirecting the discussion to a different topic"
+      },
+      {
+        "key": "C",
+        "text": "Escalating the issue immediately to avoid conflict"
+      },
+      {
+        "key": "D",
+        "text": "Avoiding counterarguments when facing complaints"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：客户冲突降级与非防御性沟通（Avoid Arguing or Being Defensive）】\n正确答案是 D（Avoiding counterarguments when facing complaints / 面对投诉时避免反驳争辩）[cite: 47]。\n\n• 为什么选 Option D：\n  - 当客户因系统故障、业务中断或服务延误而抱怨甚至指责时，保持冷静客观、**不进行针锋相对的反驳或辩解（Avoiding counterarguments）**是防止冲突升级的最直接做法。技术人员应先耐心倾听并共情客户的沮丧情绪，把对话焦点引导至“如何尽快解决问题”，而不是与客户争论“谁对谁错”。\n\n• 为什么不选 Option A（在继续之前要求客户保持冷静，您错选的项）：\n  - 在客服沟通心理学中，对情绪激动的客户直接说出“请您冷静一下（Remain calm / Calm down）”不仅无法安抚对方，反而带有居高临下的指责意味，极易火上浇油激怒客户，属于典型的沟通大忌。\n\n• 为什么不选 Option B 或 Option C：\n  - **选项 B（将讨论转移到其他话题）**：回避客户的核心诉求并强行转移话题会让客户感到被敷衍和无视，进一步加剧对立情绪。\n  - **选项 C（立即升级工单以避免冲突）**：遇到客户抱怨就未经排查直接把工单甩给上级（推诿升级），既违反了故障排查流程，也不属于正确的沟通应对技巧。",
+      "en": "The correct answer is D (Avoiding counterarguments when facing complaints). When a customer is frustrated or upset, refraining from arguing back, making excuses, or debating fault directly prevents conflict escalation and keeps the interaction focused on resolution.\n\n• Asking an upset customer to 'remain calm' (A) often sounds condescending and tends to escalate anger rather than defuse it.\n• Redirecting the topic (B) dismisses the customer's concern, while immediately escalating without troubleshooting (C) avoids responsibility."
+    },
+    "mnemonic": {
+      "zh": "口诀：客户抱怨别顶嘴，核心守则是【绝不反驳争辩 (Avoiding counterarguments)】！千万别对生气的客户说“请冷静 (Remain calm)”，那只会火上浇油！",
+      "en": "Exam Tip: Do not argue or be defensive = Avoid counterarguments when facing complaints (never tell an upset customer to 'remain calm')."
+    }
+  },
+  {
+    "id": 142,
+    "type": "multiple",
+    "stem": {
+      "zh": "下列哪三项行动符合“避免轻视/否定客户问题（Avoid dismissing customer issues）”的准则？（选择 3 项）",
+      "en": "Which of the actions listed below align with the guideline to avoid dismissing customer issues? (Select 3 answers)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Treating every reported symptom as legitimate until investigated"
+      },
+      {
+        "key": "B",
+        "text": "Restating the customer's concern to confirm understanding"
+      },
+      {
+        "key": "C",
+        "text": "Asking open-ended questions to better understand the complaint"
+      },
+      {
+        "key": "D",
+        "text": "Clarifying customer statements by interrupting them if necessary"
+      },
+      {
+        "key": "E",
+        "text": "Pointing out that the problem is common among other customers"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：积极倾听与尊重客户诉求（Avoid Dismissing Customer Issues）】\n正确答案是 A、B、C[cite: 48]。\n\n• 为什么选 A、B、C：\n  1. **Treating every reported symptom as legitimate until investigated（在完成调查前将每一个报告的症状都视为真实合理的，选 A）**：即使客户描述听起来像是“操作失误”或“小问题”，在经过实际验证前都应认真对待，绝不先入为主地否定客户。\n  2. **Restating the customer's concern to confirm understanding（复述客户的担忧以确认理解准确，选 B）**：用自己的话总结确认客户的诉求，能够向客户传达出“我在认真听且重视你的问题”的积极信号。\n  3. **Asking open-ended questions to better understand the complaint（提出开放式问题以更深入地了解投诉详情，选 C，您漏选的项）**：鼓励客户完整描述故障现象与上下文背景，体现出技术人员积极探寻根因、重视客户体验的专业态度。\n\n• 为什么不选 Option D（必要时通过打断客户来澄清其陈述，您错选的项）：\n  - **打断客户发言（Interrupting）**是典型的不尊重和否定客户表达的行为，违背积极倾听（Active Listening）原则，必须在客户完整表达后再行提问确认。\n\n• 为什么不选 Option E（指出该问题在其他客户中也很常见）：\n  - 对正遭受故障困扰的客户说“大家都会遇到这个问题 / 这很常见”，会向客户传递出“你的麻烦不值得大惊小怪”的冷漠感，属于典型的轻视客户问题（Dismissing the issue）。",
+      "en": "The correct answers are A, B, and C. To avoid dismissing a customer's issue, a technician must demonstrate active listening and take every report seriously:\n1. Treating every reported symptom as legitimate until investigated (A) prevents premature assumptions.\n2. Restating the customer's concern (B) validates that the technician is actively listening and understands the problem.\n3. Asking open-ended questions (C) encourages the customer to share full details without feeling brushed off.\n\n• Interrupting the customer (D) violates active listening and feels disrespectful.\n• Pointing out that the issue is common among others (E) trivializes the customer's frustration."
+    },
+    "mnemonic": {
+      "zh": "口诀：尊重客户不轻视（Avoid dismissing）三件套——【当真排查 (Treat as legitimate)】、【复述确认 (Restate)】、【开放提问 (Open-ended questions)】！绝不打断说话，也别说“别人都这样”！",
+      "en": "Exam Tip: Avoid dismissing customer issues = Treat every symptom as legitimate + Restate concerns + Ask open-ended questions (never interrupt)."
+    }
+  },
+  {
+    "id": 143,
+    "type": "multiple",
+    "stem": {
+      "zh": "在客户支持场景中，哪三项行动最能体现澄清客户陈述（Clarify customer statements）的能力？（选择 3 项）",
+      "en": "In a customer support scenario, which actions best demonstrate the ability to clarify customer statements? (Select 3 answers)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Restating the customer's description to verify understanding"
+      },
+      {
+        "key": "B",
+        "text": "Aligning communication style with the customer's technical level"
+      },
+      {
+        "key": "C",
+        "text": "Correcting the customer's use of non-technical language"
+      },
+      {
+        "key": "D",
+        "text": "Questioning to confirm key details of the reported problem"
+      },
+      {
+        "key": "E",
+        "text": "Asking open-ended questions to narrow the scope of the issue"
+      }
+    ],
+    "answer": [
+      "A",
+      "D",
+      "E"
+    ],
+    "explanation": {
+      "zh": "【考点：故障信息收集与需求澄清技巧（Clarify Customer Statements）】\n正确答案是 A、D、E[cite: 49]。\n\n• 为什么选 A、D、E（三项均直接围绕“核实、确认并细化客户对故障的陈述内容”）：\n  1. **Restating the customer's description to verify understanding（复述客户的描述以核实理解，选 A）**：通过转述确认双方对故障现象的理解完全一致，消除信息误差。\n  2. **Questioning to confirm key details of the reported problem（通过提问确认所报告问题的关键细节，选 D，您漏选的项）**：针对报错信息、发生频率、受影响范围等关键事实进行提问核实，把模糊的口头描述转化为清晰的技术线索。\n  3. **Asking open-ended questions to narrow the scope of the issue（提出开放式问题以缩小问题范围，选 E）**：引导客户补充操作步骤与环境变化，逐步界定故障边界。\n\n• 为什么不选 Option B（使沟通风格与客户的技术水平保持一致，您错选的项）：\n  - 根据客户的技术背景调整用词通俗度（避免使用晦涩的专业黑话 / Jargon），属于另一项独立沟通准则——**使沟通风格适应客户的技术水平（Align communication style with the customer's technical level）**，其核心目的是“让客户听懂技术人员的解释”，而非“澄清客户陈述的故障事实”。\n\n• 为什么不选 Option C（纠正客户使用的非技术性语言）：\n  - 当客户把“机箱”说成“主机/硬盘”或用日常俗语描述故障时，只要技术人员明白其真实意图即可；当面生硬纠正客户的非专业用词会让客户感到尴尬受挫，属于不专业行为。",
+      "en": "The correct answers are A, D, and E. Clarifying customer statements involves actively verifying and refining the facts of the reported problem through:\n1. Restating the customer's description to verify mutual understanding (A).\n2. Asking targeted questions to confirm key details of the problem (D).\n3. Using open-ended questions to gather context and narrow the scope of the issue (E).\n\n• Aligning communication style with the customer's technical level (B) is a separate best practice focused on avoiding technical jargon when speaking to end-users, rather than clarifying their statements.\n• Correcting a customer's non-technical language (C) is unnecessary and can embarrass or alienate the user."
+    },
+    "mnemonic": {
+      "zh": "口诀：【澄清客户陈述 (Clarify statements)】专攻把故障事实问清楚——【复述核实 (Restate)】+【提问确认关键细节 (Question to confirm details)】+【开放提问缩小范围 (Open-ended questions)】！调整黑话难度属于另一条沟通风格准则！",
+      "en": "Exam Tip: Clarifying customer statements = Restating descriptions + Questioning to confirm key details + Asking open-ended questions to narrow scope."
+    }
   }
 ]
