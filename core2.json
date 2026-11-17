@@ -4878,5 +4878,290 @@
       "zh": "口诀：不用 U 盘光盘、企业【大规模网络批量装机】认准网卡预启动协议【PXE (Preboot Execution Environment)】！SAN 是服务器高速块存储网络！",
       "en": "Exam Tip: Deploying operating systems at enterprise scale over the network without physical media = PXE."
     }
+  },
+  {
+    "id": 162,
+    "type": "single",
+    "stem": {
+      "zh": "技术人员已在计算机机箱内部物理安装了一块全新的内置存储驱动器，但系统尚未将其识别为可用存储空间。为了使该驱动器可用于安装操作系统，第一步配置操作应该是什么？",
+      "en": "A technician has physically installed a brand-new internal storage drive inside the computer case, but it is not yet recognized as usable storage. What should be the first configuration step to make the drive accessible for OS installation?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Format the drive"
+      },
+      {
+        "key": "B",
+        "text": "Partition the drive"
+      },
+      {
+        "key": "C",
+        "text": "Initialize the drive"
+      },
+      {
+        "key": "D",
+        "text": "Assign drive letter"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：全新硬盘标准配置流程（Initialize -> Partition -> Format -> Assign Drive Letter）】\n正确答案是 C（Initialize the drive / 初始化驱动器）[cite: 67]。\n\n• 为什么选 Initialize the drive（初始化驱动器）：\n  - 全新出厂的裸盘（Raw disk）没有任何分区表结构，操作系统和固件无法识别其扇区布局与空间分配方式。因此在安装系统或使用存储空间前，必须执行的第一步是**初始化驱动器（Initialize the drive）**，即为硬盘写入底层分区表架构（选择 GPT 或 MBR 分区样式）。\n  - 完整的磁盘准备标准先后顺序为：**1. 初始化（Initialize） -> 2. 创建分区（Partition） -> 3. 格式化文件系统（Format） -> 4. 分配驱动器盘符（Assign drive letter）**。\n\n• 为什么不选 Format the drive（格式化驱动器，您错选的项）：\n  - **格式化（Format）**是在“已经初始化并划分好逻辑分区”的基础上写入具体文件系统（如 NTFS、exFAT）的第三步操作；对于一块尚未初始化且没有分区的全新硬盘，系统无法直接执行格式化。\n\n• 为什么不选 Partition the drive 或 Assign drive letter：\n  - **选项 B（Partition the drive / 分区）**：必须在完成初始化（确定采用 GPT 还是 MBR 分区表）之后才能划分主分区或卷。\n  - **选项 D（Assign drive letter / 分配盘符）**：属于创建并格式化数据卷之后的最后一步操作。",
+      "en": "The correct answer is C (Initialize the drive). A brand-new, raw storage drive lacks a partition table, so the operating system cannot recognize or use it until it is initialized with a partitioning scheme (GPT or MBR). The standard sequential workflow is: Initialize -> Partition -> Format -> Assign drive letter.\n\n• Format the drive (A) applies a file system (such as NTFS) to an already existing partition and cannot be performed on an uninitialized raw disk.\n• Partition the drive (B) occurs only after initialization establishes the partition table structure, and assigning a drive letter (D) is the final step after formatting."
+    },
+    "mnemonic": {
+      "zh": "口诀：新硬盘上机四步曲——第一步先【初始化 (Initialize)】选 GPT/MBR，第二步【分区 (Partition)】，第三步【格式化 (Format)】，第四步【分盘符 (Assign letter)】！",
+      "en": "Exam Tip: New raw disk setup order = 1. Initialize -> 2. Partition -> 3. Format -> 4. Assign drive letter."
+    }
+  },
+  {
+    "id": 163,
+    "type": "single",
+    "stem": {
+      "zh": "在企业环境中，使用单一、一致的配置模板在多台设备上安装和设置操作系统的过程被称为：",
+      "en": "In enterprise environments, the process of setting up operating systems across many devices using a single, consistent configuration template is referred to as:"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "In-place upgrade"
+      },
+      {
+        "key": "B",
+        "text": "Remote network installation"
+      },
+      {
+        "key": "C",
+        "text": "Image deployment"
+      },
+      {
+        "key": "D",
+        "text": "Unattended installation"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：企业级系统批量部署方式辨析（Image Deployment）】\n正确答案是 C（Image deployment / 镜像部署）[cite: 68]。\n\n• 为什么选 Image deployment（镜像部署）：\n  - 题干的核心关键词是“**使用单一、一致的配置模板（using a single, consistent configuration template）**在多台设备上设置操作系统”。在企业 IT 运维中，管理员会先在一台标准参考机上装好操作系统、驱动程序、常用办公软件及统一安全配置，通过封装工具（如 Sysprep）捕获为一个标准的**系统黄金镜像模板（Golden Image / Template）**，随后将该镜像批量克隆部署到成百上千台目标设备上，确保所有终端拥有完全一致的软件与配置环境。\n\n• 为什么不选 Remote network installation（远程网络安装，您错选的项）：\n  - **远程网络安装（如 PXE 网络启动安装）**指的是一种通过网络传输安装介质的**通信与引导分发渠道**，它既可以用来推送预制镜像，也可以只是通过网络加载原版安装光盘进行常规交互式安装，本身并不等同于“使用单一一致的配置模板进行批量部署”这一概念。\n\n• 为什么不选 In-place upgrade 或 Unattended installation：\n  - **选项 A（In-place upgrade / 就地升级）**：指在单台现有计算机上保留原有用户文件、软件和设置的情况下，直接将旧版本操作系统升级到新版本（例如从 Windows 10 升级到 Windows 11）。\n  - **选项 D（Unattended installation / 无人值守安装）**：指利用应答文件（如 `autounattend.xml`）自动填写标准安装向导中的语言、时区、密钥与分区参数以省去人工点击，而非直接克隆整套预装软件的统一配置镜像模板。",
+      "en": "The correct answer is C (Image deployment). Image deployment involves creating a standardized 'golden' reference image (template) containing the OS, drivers, applications, and security configurations, and cloning that exact template across multiple enterprise devices to ensure uniformity.\n\n• Remote network installation (B) describes the network delivery transport mechanism (such as PXE) rather than the template-based cloning methodology itself.\n• In-place upgrade (A) upgrades an existing OS on a single machine while retaining user data, and unattended installation (D) uses an answer file to automate setup prompts rather than deploying a pre-configured system image."
+    },
+    "mnemonic": {
+      "zh": "口诀：看到【单一、一致的配置模板 (Single, consistent configuration template)】批量复制装机，认准【镜像部署 (Image deployment)】！应答文件自动点下一步叫无人值守 (Unattended)！",
+      "en": "Exam Tip: Deploying a single, consistent OS configuration template across many devices = Image deployment."
+    }
+  },
+  {
+    "id": 164,
+    "type": "single",
+    "stem": {
+      "zh": "以下哪项指的是无需使用外部介质即可将操作系统恢复到出厂设置的内置解决方案？",
+      "en": "Which of the following answers refers to a built-in solution for restoring an operating system to its factory settings without the use of external media?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Disk imaging"
+      },
+      {
+        "key": "B",
+        "text": "System restore"
+      },
+      {
+        "key": "C",
+        "text": "Recovery partition"
+      },
+      {
+        "key": "D",
+        "text": "Shadow copy"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：操作系统内置出厂恢复机制（Recovery Partition vs. System Restore）】\n正确答案是 C（Recovery partition / 恢复分区）[cite: 69]。\n\n• 为什么选 Recovery partition（恢复分区）：\n  - **恢复分区（Recovery partition）**是计算机厂商（OEM）或 Windows 安装程序在本地内置硬盘上专门划分并隐藏的一个独立受保护分区。该分区内部存放着 Windows 恢复环境（WinRE）以及原始出厂镜像文件，当系统严重崩溃或需要彻底重置时，用户无需插入任何外部 U 盘、光盘或连接网络，直接从本地恢复分区引导即可将操作系统一键还原至**出厂初始设置（Factory settings）**。\n\n• 为什么不选 System restore（系统还原，您错选的项）：\n  - **系统还原（System restore）**是 Windows 的一项局部回滚功能，它利用系统保护创建的“还原点（Restore Points）”仅将**系统关键文件、注册表设置和最近安装的驱动程序/更新**回退到几天前的正常状态，同时**完全保留用户的个人文件与大部分第三方软件**，并**不会**将电脑抹除并恢复到出厂设置。\n\n• 为什么不选 Disk imaging 或 Shadow copy：\n  - **选项 A（Disk imaging / 磁盘镜像）**：通常需要将完整系统镜像备份存储在外部硬盘、U 盘或网络存储服务器上，依赖外部介质进行恢复。\n  - **选项 D（Shadow copy / 卷影复制）**：通过 Windows 卷影复制服务（VSS）定期保存单个文件或文件夹的历史版本快照（右键“还原以前的版本”），用于找回误删或改坏的文档，无法执行整机出厂重置。",
+      "en": "The correct answer is C (Recovery partition). A recovery partition is a dedicated, hidden partition on the internal storage drive created by the OS or OEM that stores the factory OS image and recovery environment (WinRE), enabling a full factory reset without external USB or optical media.\n\n• System restore (B) rolls back system files, drivers, and registry settings to a previous restore point while preserving personal files—it does not wipe the system back to factory settings.\n• Disk imaging (A) typically relies on external or network storage media, and Shadow copy (D) restores previous versions of individual files/folders rather than performing a factory OS reset."
+    },
+    "mnemonic": {
+      "zh": "口诀：不用外接 U 盘光盘、一键把整机还原到【出厂设置 (Factory settings)】靠内置【恢复分区 (Recovery partition)】！系统还原 (System restore) 只回滚注册表和驱动、不删个人文件！",
+      "en": "Exam Tip: Built-in factory reset without external media = Recovery partition. Rolling back registry/drivers without wiping personal files = System restore."
+    }
+  },
+  {
+    "id": 165,
+    "type": "multiple",
+    "stem": {
+      "zh": "将存储驱动器划分为多个分区的主要好处有哪些？（选择 3 项）",
+      "en": "What are the key benefits of dividing a storage drive into multiple partitions? (Select 3 answers)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Improved data organization"
+      },
+      {
+        "key": "B",
+        "text": "Support for multiboot environments"
+      },
+      {
+        "key": "C",
+        "text": "Larger physical disk capacity utilization"
+      },
+      {
+        "key": "D",
+        "text": "Simplified backup and recovery"
+      },
+      {
+        "key": "E",
+        "text": "Faster data transfer speeds"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：磁盘多分区规划的核心优势（Benefits of Disk Partitioning）】\n正确答案是 A、B、D[cite: 70]。\n\n• 为什么选 A、B、D：\n  1. **Improved data organization（改善数据组织管理，选 A）**：通过将操作系统与应用程序（如 C: 盘）和个人文档、媒体库、工作数据（如 D: 盘）隔离存放在不同逻辑分区中，使文件结构更加清晰有序。\n  2. **Support for multiboot environments（支持多系统启动环境，选 B）**：多分区允许用户在同一块物理硬盘上各自独立安装不同的操作系统或文件系统（例如一个分区安装 Windows NTFS，另一个分区安装 Linux ext4），实现双系统/多系统引导切换。\n  3. **Simplified backup and recovery（简化备份与恢复流程，选 D，您漏选的项）**：当操作系统分区（`C:` 盘）中毒或崩溃需要格式化重装或恢复镜像时，保存在独立数据分区（`D:` 盘）上的个人文件完全不受影响，且管理员可以针对不同分区制定差异化的备份频率。\n\n• 为什么不选 Option E（Faster data transfer speeds / 更快的数据传输速度，您错选的项）：\n  - 划分分区仅仅是在逻辑层面对同一块物理硬盘进行区域切分，**并不会突破硬盘接口总线带宽或闪存/磁头的物理读写速度上限**（对于传统机械硬盘 HDD，跨分区同时读写甚至会增加磁头来回寻道的时间）。\n\n• 为什么不选 Option C（Larger physical disk capacity utilization / 更大的物理磁盘容量利用率）：\n  - 分区不会凭空增加硬盘的物理总容量，相反每个分区表与文件系统元数据还会占用极少量的空间开销。",
+      "en": "The correct answers are A, B, and D. Dividing a storage drive into multiple partitions offers three primary advantages:\n1. Improved data organization (A): Separates operating system and application files from user data.\n2. Support for multiboot environments (B): Enables installing multiple operating systems with different file systems (e.g., Windows and Linux) on separate partitions of the same physical drive.\n3. Simplified backup and recovery (D): Allows backing up or wiping/reinstalling the OS partition without affecting user files stored on a separate data partition.\n\n• Faster data transfer speeds (E) is incorrect because logical partitioning does not increase physical drive throughput or bus bandwidth.\n• Larger physical disk capacity utilization (C) is incorrect because partitioning divides existing storage without increasing total physical capacity."
+    },
+    "mnemonic": {
+      "zh": "口诀：硬盘分区的三大好处——【文件归类整洁 (Data organization)】、【支持双系统多启动 (Multiboot)】、【重装系统不丢数据、备份恢复更简单 (Backup and recovery)】！分区绝不会让硬盘读写变快！",
+      "en": "Exam Tip: Key benefits of multiple partitions = Data organization + Multiboot support + Simplified backup and recovery (never faster speeds)."
+    }
+  },
+  {
+    "id": 166,
+    "type": "single",
+    "stem": {
+      "zh": "计算机系统和软件用来唯一标识硬件实例、软件组件或配置数据的 128 位数字被称为：",
+      "en": "A 128-bit number used by computer systems and software to uniquely identify hardware instances, software components, or configuration data is known as:"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "OID"
+      },
+      {
+        "key": "B",
+        "text": "GUID"
+      },
+      {
+        "key": "C",
+        "text": "URI"
+      },
+      {
+        "key": "D",
+        "text": "OUI"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": {
+      "zh": "【考点：系统与底层标识符辨析（GUID vs. OUI vs. OID vs. URI）】\n正确答案是 B（GUID / Globally Unique Identifier / 全局唯一标识符）[cite: 71]。\n\n• 为什么选 GUID（全局唯一标识符）：\n  - GUID**（在跨平台标准中亦称 UUID）是一个由算法生成的 **128 位（16 字节）整数**，通常表示为由连字符分隔的 32 个十六进制字符（例如 `{3F2504E0-4F89-11D3-9A0C-0305E82C3301}`）。由于其组合空间高达 $2^{128}$，几乎不可能产生重复碰撞，因此被广泛用于唯一标识 **GPT 磁盘分区类型、硬件设备实例、Windows 注册表 COM 组件（CLSID）以及系统配置数据**。\n\n• 为什么不选 OUI（Organizationally Unique Identifier / 组织唯一标识符，您错选的项）：\n  - **OUI 是由 IEEE 分配给网卡硬件制造商的 **24 位（3 字节 / 6 个十六进制字符）**编号，构成 48 位 MAC 地址的前半部分，仅用于识别**网络设备生产厂商**，既不是 128 位数字，也不用于标识软件组件或配置数据。\n\n• 为什么不选 OID 或 URI：\n  - **选项 A（OID / Object Identifier / 对象标识符）**：是一种树状层级结构的点分十进制数字序列（如 `1.3.6.1.2.1`），主要用于 SNMP 网络管理协议的 MIB 库和 X.509 数字证书字段定义，长度不固定且非 128 位整数。\n  - **选项 C（URI / Uniform Resource Identifier / 统一资源标识符）**：用于标识互联网或本地资源的文本字符串名称或地址（URL 属于 URI 的一种）。",
+      "en": "The correct answer is B (GUID - Globally Unique Identifier). A GUID is a 128-bit integer (typically displayed as 32 hexadecimal digits in five hyphen-separated groups) used by operating systems and software to uniquely identify GPT partitions, hardware instances, COM software components, and registry configuration entries.\n\n• OUI (Organizationally Unique Identifier, D) is a 24-bit (3-byte) IEEE-assigned vendor prefix forming the first half of a 48-bit MAC address, not a 128-bit system/software identifier.\n• OID (Object Identifier, A) is a hierarchical dot-notated identifier used in SNMP and X.509 certificates, and URI (Uniform Resource Identifier, C) is a string identifying a web or network resource."
+    },
+    "mnemonic": {
+      "zh": "口诀：【128 位】用来唯一标识分区、硬件实例和软件组件的数字认准【GUID (全局唯一标识符)】！MAC 地址前【24 位】厂商代码才叫【OUI】！",
+      "en": "Exam Tip: 128-bit unique identifier for hardware instances, software components, and GPT partitions = GUID. 24-bit MAC vendor prefix = OUI."
+    }
+  },
+  {
+    "id": 167,
+    "type": "multiple",
+    "stem": {
+      "zh": "以下哪些特征适用于 Windows 中的标准 GPT 分区方案？（选择 3 项）",
+      "en": "Which of the following characteristics apply to the standard GPT partitioning scheme in Windows? (Select 3 answers)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Support for disks larger than 2 TB"
+      },
+      {
+        "key": "B",
+        "text": "Overall number of partitions limited to 4"
+      },
+      {
+        "key": "C",
+        "text": "Native UEFI compatibility"
+      },
+      {
+        "key": "D",
+        "text": "Support for up to 128 partitions"
+      },
+      {
+        "key": "E",
+        "text": "Native compatibility with Legacy BIOS"
+      },
+      {
+        "key": "F",
+        "text": "Maximum disk size limit of 2 TB"
+      }
+    ],
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：现代 GPT 分区表核心技术规格（GPT vs. MBR）】\n正确答案是 A、C、D[cite: 72]。\n\n• 为什么选 A、C、D（注意：本题中您把 GPT 和下一题 MBR 的三组特征刚好完全选反了）：\n  1. Support for disks larger than 2 TB（支持大于 2 TB 的大容量磁盘，选 A）**：GPT 采用 64 位逻辑块寻址（LBA），彻底突破了传统 2 TB 的容量天花板，理论上支持高达 9.4 ZB（在 Windows 中上限为 8 ZiB）的超大硬盘。\n  2. **Native UEFI compatibility（原生兼容 UEFI 固件，选 C）**：GPT 是现代统一可扩展固件接口（UEFI）标准的一部分；在 Windows 系统中，从 GPT 磁盘引导启动操作系统必须使用 UEFI 固件模式。\n  3. **Support for up to 128 partitions（支持最多 128 个主分区，选 D）**：在标准 Windows 环境下，GPT 默认允许创建多达 **128 个主分区**，不再需要“扩展分区 + 逻辑驱动器”的复杂套娃结构，且在磁盘首尾均保存分区表副本及 CRC32 校验提高可靠性。\n\n• 为什么不选 B、E、F（您错选的三项）：\n  - 分区总数限制为 4 个（B）、原生兼容传统 Legacy BIOS（E）以及最大磁盘容量限制为 2 TB（F），这三项全部属于老一代 **MBR（主引导记录） 分区样式的特征。",
+      "en": "The correct answers are A, C, and D. The GUID Partition Table (GPT) is the modern partitioning standard with three defining characteristics in Windows:\n1. Support for disks larger than 2 TB (A), utilizing 64-bit addressing.\n2. Native UEFI compatibility (C), required for booting Windows from a GPT disk.\n3. Support for up to 128 primary partitions (D) in Windows without needing extended or logical partitions.\n\n• Options B (limit of 4 partitions), E (Legacy BIOS compatibility), and F (2 TB maximum disk size) are the legacy limitations of the MBR partitioning style."
+    },
+    "mnemonic": {
+      "zh": "口诀：现代【GPT】三件套——配新版【UEFI】、支持【大于 2 TB (>2 TB)】超大盘、最多【128 个主分区】！老旧 MBR 才是 BIOS + 2TB上限 + 4个分区！",
+      "en": "Exam Tip: GPT = UEFI + Disks > 2 TB + Up to 128 partitions."
+    }
+  },
+  {
+    "id": 168,
+    "type": "multiple",
+    "stem": {
+      "zh": "以下哪些答案描述了 MBR 分区样式的特征？（选择 3 项）",
+      "en": "Which of the answers listed below describe the characteristics of the MBR partition style? (Select 3 answers)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Legacy BIOS"
+      },
+      {
+        "key": "B",
+        "text": "Up to 128 primary partitions"
+      },
+      {
+        "key": "C",
+        "text": "Maximum disk size limit of 2 TB"
+      },
+      {
+        "key": "D",
+        "text": "Overall number of partitions limited to 4"
+      },
+      {
+        "key": "E",
+        "text": "Support for disks larger than 2 TB"
+      },
+      {
+        "key": "F",
+        "text": "UEFI firmware"
+      }
+    ],
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：传统 MBR 分区样式核心技术限制（MBR vs. GPT）】\n正确答案是 A、C、D[cite: 72]。\n\n• 为什么选 A、C、D（与上一题形成完整镜像对照）：\n  1. Legacy BIOS（传统 BIOS 固件，选 A）**：MBR（Master Boot Record / 主引导记录）诞生于 1983 年 IBM PC DOS 2.0 时代，专用于搭配传统的 **Legacy BIOS 固件进行主引导扇区启动。\n  2. Maximum disk size limit of 2 TB（最大磁盘容量限制为 2 TB，选 C）**：由于 MBR 分区表使用 32 位字段记录逻辑扇区总数（每扇区 512 字节），最大可寻址容量为 $2^{32} \\times 512\\text{ B} = 2\\text{ TB}$，超过 2 TB 的部分将无法识别使用。\n  3. **Overall number of partitions limited to 4（分区总数限制为 4 个，选 D）**：MBR 引导扇区仅预留了 64 字节用于存放分区表条目（每条占 16 字节），因此最多只能划分 **4 个主分区**（若需更多分区，必须将其中 1 个改为扩展分区并在内部嵌套逻辑分区）。\n\n• 为什么不选 B、E、F（您错选的三项）：\n  - 最多 128 个主分区（B）、支持大于 2 TB 磁盘（E）以及 UEFI 固件（F）均属于现代 **GPT 分区方案的规格。",
+      "en": "The correct answers are A, C, and D. The legacy Master Boot Record (MBR) partition style is defined by three classic constraints:\n1. Designed for Legacy BIOS firmware (A).\n2. Maximum addressable disk size limit of 2 TB (C) due to 32-bit sector addressing.\n3. Overall partition count limited to 4 primary partitions (D) (or 3 primary plus 1 extended partition).\n\n• Options B (up to 128 primary partitions), E (disks > 2 TB), and F (UEFI firmware) apply to the modern GPT partition style."
+    },
+    "mnemonic": {
+      "zh": "口诀：老古董【MBR】三限制——配老式【Legacy BIOS】、容量死卡【最大 2 TB】、分区总数【最多 4 个】！把这三条和 GPT 的【UEFI + >2TB + 128分区】彻底牢记对照！",
+      "en": "Exam Tip: MBR = Legacy BIOS + Max 2 TB disk size + Overall limit of 4 partitions."
+    }
   }
 ]
