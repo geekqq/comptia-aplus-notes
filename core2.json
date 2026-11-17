@@ -5775,5 +5775,227 @@
       "zh": "口诀：msconfig【引导 (Boot)】选项卡管四个核心底层设置——【安全引导 (Safe boot)】、【引导日志 (Boot log)】、【多系统默认 OS】以及高级选项里的【限制 CPU 核心数与最大内存 (Maximum RAM)】！开机自启软件和后台服务归 Startup 和 Services 管！",
       "en": "Exam Tip: msconfig Boot tab = Safe boot + Boot logging + Default multiboot OS + Advanced options (CPU/Maximum RAM limits)."
     }
+  },
+  {
+    "id": 184,
+    "type": "single",
+    "stem": {
+      "zh": "哪种 AAA 解决方案使用 UDP 作为传输协议，将身份验证（Authentication）和授权（Authorization）合并在一起，并常用于 VPN 和 Wi-Fi 身份验证等网络访问控制场景？",
+      "en": "Which AAA solution uses UDP as its transport protocol, combines authentication and authorization, and is commonly deployed for network access control such as VPNs and Wi-Fi authentication?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "RADIUS"
+      },
+      {
+        "key": "B",
+        "text": "LDAP"
+      },
+      {
+        "key": "C",
+        "text": "TACACS+"
+      },
+      {
+        "key": "D",
+        "text": "Kerberos"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": {
+      "zh": "【考点：AAA 认证协议对比之 RADIUS 特性（UDP + 合并认证与授权 + 网络接入控制）】\n正确答案是 A（RADIUS / Remote Authentication Dial-In User Service）[cite: 84]。\n\n• 为什么选 RADIUS：\n  - RADIUS 是一种开放标准的 AAA（身份验证、授权、计费）协议，使用 UDP 作为传输协议（标准端口 1812/1813，旧版端口 1645/1646）。\n  - 在数据包交互流程中，RADIUS 将**身份验证（Authentication）和授权（Authorization）合并**在同一个 Access-Accept 响应包中完成（且仅加密密码字段），非常适合用于终端用户的**网络接入控制（NAC）**，如企业 **802.1X Wi-Fi 无线认证**和 **VPN 远程拨号接入认证**。\n\n• 为什么不选 LDAP（轻量级目录访问协议，您错选的项）：\n  - **LDAP**（TCP/UDP 389 端口，LDAPS 为 636）是一种用于查询和修改目录数据库（如 Active Directory）的目录服务协议。虽然 RADIUS 服务器后台常常连接 LDAP/AD 来核对用户账号密码，但 LDAP 本身并不是专为 Wi-Fi 和 VPN 接入控制设计的完整 AAA 协议。\n\n• 为什么不选 TACACS+ 或 Kerberos：\n  - **选项 C（TACACS+）**：使用 **TCP**（49 端口），将认证、授权、计费**完全分离**，加密整个数据包载荷，主要用于路由器/交换机等网络设备后台管理（恰好是下一题的考点）。\n  - **选项 D（Kerberos）**：基于票据（Ticket）的网络身份验证协议（端口 88），主要用于 Windows Active Directory 域内单点登录，并非面向 VPN/Wi-Fi 接入的通用 RADIUS/TACACS+ AAA 协议。",
+      "en": "The correct answer is A (RADIUS - Remote Authentication Dial-In User Service). RADIUS is an open-standard AAA protocol that uses UDP (ports 1812/1813), combines authentication and authorization into a single Access-Accept response, and is widely deployed for network access control such as 802.1X Wi-Fi authentication and VPN connections.\n\n• LDAP (B) is a directory lookup/query protocol (port 389) rather than a full AAA network access control solution.\n• TACACS+ (C) uses TCP (port 49), separates authentication, authorization, and accounting, and is primarily used for network device administration.\n• Kerberos (D) is a ticket-based domain authentication protocol (port 88) used primarily in Windows Active Directory environments."
+    },
+    "mnemonic": {
+      "zh": "口诀：【RADIUS】三特征——走【UDP】、把【认证和授权合并 (Combines)】、专管用户连【Wi-Fi 和 VPN】！TACACS+ 才是走 TCP 且三者分离管路由器的！",
+      "en": "Exam Tip: RADIUS = UDP + Combines authentication & authorization + VPN and Wi-Fi network access control."
+    }
+  },
+  {
+    "id": 185,
+    "type": "single",
+    "stem": {
+      "zh": "以下列出的哪种 AAA 解决方案依赖 TCP 协议，将身份验证（Authentication）、授权（Authorization）和计费/审计（Accounting）彼此分离，并常用于企业网络中的网络设备管理？",
+      "en": "Which of the AAA solutions listed below relies on TCP, separates authentication, authorization, and accounting, and is commonly used for device administration in enterprise networks?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "OAuth"
+      },
+      {
+        "key": "B",
+        "text": "TACACS+"
+      },
+      {
+        "key": "C",
+        "text": "SAML"
+      },
+      {
+        "key": "D",
+        "text": "RADIUS"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": {
+      "zh": "【考点：AAA 认证协议对比之 TACACS+ 特性（TCP + 三者分离 + 网络设备管理）】\n正确答案是 B（TACACS+ / Terminal Access Controller Access-Control System Plus）[cite: 85]。\n\n• 为什么选 TACACS+：\n  - TACACS+ 是由思科（Cisco）开发的企业级 AAA 协议，依赖可靠的 TCP 协议（端口 49）传输，并对整个数据包主体进行全程加密。\n  - 其最大架构特点是将**身份验证（Authentication）、授权（Authorization）和计费/命令审计（Accounting）严格分离**为三个独立模块，从而支持精细化的“逐条 CLI 命令级授权”（例如限制初级网工只能执行 show 查看命令而禁止执行 reload 重启命令），因此是企业网络中**路由器、交换机、防火墙等网络设备后台管理（Device administration）**的行业标准。\n\n• 为什么不选 OAuth（开放授权框架，您错选的项）：\n  - OAuth 是基于 HTTP/HTTPS 令牌（Token）的 Web/移动应用第三方 API 委托授权标准（例如“使用 Google/微信账号登录第三方网站”），与网络设备管理（Device administration）及 TCP 49 端口的 AAA 协议毫无关系。\n\n• 为什么不选 SAML 或 RADIUS：\n  - **选项 C（SAML / Security Assertion Markup Language）**：基于 XML 的身份联合协议，主要用于企业 Web 应用之间的单点登录（SSO）。\n  - **选项 D（RADIUS）**：使用 **UDP**，合并认证与授权，主要用于终端用户接入 Wi-Fi 和 VPN，而非网络设备管理员命令权限管控。",
+      "en": "The correct answer is B (TACACS+). TACACS+ relies on TCP (port 49), encrypts the entire packet payload, and separates authentication, authorization, and accounting into distinct processes—allowing granular command-level authorization for enterprise network device administration (routers, switches, and firewalls).\n\n• OAuth (A) is a token-based web/API delegated authorization framework, not a network device AAA protocol.\n• SAML (C) is an XML-based federation standard for web Single Sign-On (SSO), and RADIUS (D) uses UDP and combines authentication and authorization primarily for Wi-Fi/VPN access."
+    },
+    "mnemonic": {
+      "zh": "口诀：【TACACS+】带个加号功能更细——走【TCP】、把【认证/授权/审计全部分离 (Separates)】、专管企业【路由器交换机设备管理 (Device administration)】！",
+      "en": "Exam Tip: TACACS+ = TCP + Separates authentication, authorization, and accounting + Network device administration."
+    }
+  },
+  {
+    "id": 186,
+    "type": "single",
+    "stem": {
+      "zh": "SCADA（数据采集与监控系统）的主要用途是什么？",
+      "en": "What is the primary purpose of a SCADA system?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Managing and automating network infrastructure"
+      },
+      {
+        "key": "B",
+        "text": "Implementing biometric access control for secure facilities"
+      },
+      {
+        "key": "C",
+        "text": "Monitoring and controlling industrial processes remotely"
+      },
+      {
+        "key": "D",
+        "text": "Controlling humidity, temperature, and air quality"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：工业控制系统之 SCADA（数据采集与监控系统）】\n正确答案是 C（Monitoring and controlling industrial processes remotely / 远程监控和控制工业流程，您答对了！）[cite: 86]。\n\n• 为什么选 Option C（您做对了！）：\n  - **SCADA（Supervisory Control and Data Acquisition / 数据采集与监控系统）**是工业控制系统（ICS）的核心架构，专门用于对大型关键基础设施和工业生产流程进行**远程数据采集、状态监控与自动化控制**，典型应用场景包括国家电网变电站、自来水厂、油气输送管道、化工厂及自动化制造生产线。\n\n• 为什么不选其它选项：\n  - **选项 A（管理和自动化网络基础设施）**：属于软件定义网络（SDN）、RMM 或 SNMP 网络管理平台的职责，而非工业生产控制系统的用途。\n  - **选项 B（为安全设施实施生物识别访问控制）**：属于物理门禁安防系统（如指纹、虹膜识别门禁）。\n  - **选项 D（控制湿度、温度和空气质量）**：属于楼宇暖通空调系统（HVAC）或楼宇自动化系统（BMS）的功能。",
+      "en": "The correct answer is C (Monitoring and controlling industrial processes remotely). SCADA (Supervisory Control and Data Acquisition) systems are specialized Industrial Control Systems (ICS) used to gather sensor telemetry and remotely monitor and control heavy industrial infrastructure such as power grids, water treatment facilities, pipelines, and manufacturing plants.\n\n• Managing IT network infrastructure (A) describes SDN or network management tools; biometric access control (B) is physical security; and regulating humidity/temperature/air quality (D) describes an HVAC system."
+    },
+    "mnemonic": {
+      "zh": "口诀：看到【SCADA】直接对应【远程监控工业流程 (Monitoring and controlling industrial processes remotely)】（电网、水厂、油气管道等重工业现场）！",
+      "en": "Exam Tip: SCADA = Supervisory Control and Data Acquisition = Monitoring and controlling industrial processes remotely."
+    }
+  },
+  {
+    "id": 187,
+    "type": "single",
+    "stem": {
+      "zh": "以下哪项用于使用数字签名对出站电子邮件进行签名？",
+      "en": "Which of the following is used to sign an outbound email message with a digital signature?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "SPF"
+      },
+      {
+        "key": "B",
+        "text": "DKIM"
+      },
+      {
+        "key": "C",
+        "text": "DMARC"
+      },
+      {
+        "key": "D",
+        "text": "PEM"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": {
+      "zh": "【考点：电子邮件安全三大验证机制（DKIM vs. SPF vs. DMARC）】\n正确答案是 B（DKIM / DomainKeys Identified Mail / 域名密钥识别邮件）[cite: 87]。\n\n• 为什么选 DKIM（域名密钥识别邮件）：\n  - DKIM 采用非对称加密技术，在发件服务器发送邮件时，使用发件域的**私钥（Private key）**对邮件头和正文生成一段加密的**数字签名（Digital signature）**并附加在邮件头部；收件服务器随后从发件域的 DNS TXT 记录中查询对应的**公钥（Public key）**进行验签，从而确保邮件确实由该域名发出且传输途中未被篡改。\n\n• 为什么不选 SPF（Sender Policy Framework / 发件人策略框架，您错选的项）：\n  - SPF 的作用是在 DNS TXT 记录中公布一份允许代表该域名发信的**授权邮件服务器 IP 地址白名单**，它并**不会**对邮件内容附加密码学数字签名（注意：在本题和下一题中您刚好把 DKIM 和 SPF 选反了）。\n\n• 为什么不选 DMARC 或 PEM：\n  - **选项 C（DMARC）**：建立在 SPF 和 DKIM 之上，用于规定当邮件未通过 SPF/DKIM 验证时收件方应采取的处理策略（`none` 监控、`quarantine` 隔离进垃圾箱、或 reject 拒收）并向域管理员发送报告，本身不负责加盖数字签名。\n  - **选项 D（PEM / Privacy-Enhanced Mail）**：是一种基于 Base64 编码的加密证书与密钥存储文件格式（`.pem`），不是邮件身份验证协议。",
+      "en": "The correct answer is B (DKIM - DomainKeys Identified Mail). DKIM uses asymmetric cryptography to attach a cryptographic digital signature (signed with the sending domain's private key) to outbound emails, allowing receiving servers to verify message authenticity and integrity using the sender's public key published in DNS.\n\n• SPF (A) publishes a DNS list of authorized sender IP addresses rather than applying a cryptographic digital signature.\n• DMARC (C) defines policy actions (none, quarantine, reject) and reporting when SPF or DKIM checks fail, and PEM (D) is a Base64 certificate/key file format."
+    },
+    "mnemonic": {
+      "zh": "口诀：名字里带 Key 的【DKIM (DomainKeys)】用公私钥给邮件加盖【数字签名 (Digital signature)】；【SPF】只管在 DNS 里列【授权发信 IP 地址白名单】；【DMARC】定违规处置策略（放行/隔离/拒收）！",
+      "en": "Exam Tip: DKIM = Cryptographic digital signature on outbound emails. SPF = DNS record of authorized sender IP addresses. DMARC = Policy enforcement & reporting."
+    }
+  },
+  {
+    "id": 188,
+    "type": "single",
+    "stem": {
+      "zh": "以下列出的哪项答案指的是允许域名所有者通过 DNS 记录指定哪些 IP 地址有权代表其域名发送电子邮件的邮件身份验证机制？",
+      "en": "Which of the answers listed below refers to an email authentication mechanism that allows domain owners to specify, via DNS records, which IP addresses are authorized to send emails on behalf of their domain?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "DMARC"
+      },
+      {
+        "key": "B",
+        "text": "PEM"
+      },
+      {
+        "key": "C",
+        "text": "DKIM"
+      },
+      {
+        "key": "D",
+        "text": "SPF"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：电子邮件反伪造之 SPF（发件人策略框架）】\n正确答案是 D（SPF / Sender Policy Framework）[cite: 88]。\n\n• 为什么选 SPF（发件人策略框架）：\n  - SPF 允许域名所有者在域名的 DNS 区域文件中添加一条特殊的 TXT 记录（例如 v=spf1 ip4:203.0.113.10 -all`），明确指定**哪些邮件服务器 IP 地址有权代表其域名发送电子邮件**。当收件方服务器收到邮件时，会核对发信服务器的来源 IP 是否在该域名的 SPF DNS 记录列表内，从而有效防止垃圾邮件发送者伪造域名地址（Email Spoofing）。\n\n• 为什么不选 DKIM（您错选的项）：\n  - **DKIM** 是通过公私钥密码学对邮件加盖**数字签名（Digital signature）**来验证发信域与内容完整性（即上一题），而不是列出授权发信 IP 地址白名单。\n\n• 为什么不选 DMARC 或 PEM：\n  - **选项 A（DMARC）**：在 SPF 和 DKIM 验证结果的基础上执行对齐检查并指示收件服务器执行 `none`、`quarantine 或 reject 策略。\n  - **选项 B（PEM）**：是存储 SSL/TLS 证书或密钥的文本编码文件格式。",
+      "en": "The correct answer is D (SPF - Sender Policy Framework). SPF enables domain owners to publish a DNS TXT record specifying the exact IP addresses or mail servers authorized to send emails on behalf of their domain, helping receiving servers detect and block spoofed messages.\n\n• DKIM (C) signs outbound emails with a cryptographic digital signature rather than listing authorized IP addresses.\n• DMARC (A) enforces policy actions based on SPF and DKIM results, and PEM (B) is a certificate/key container format."
+    },
+    "mnemonic": {
+      "zh": "口诀：在 DNS 里登记【哪些 IP 地址有权代表本域名发邮件】，认准【SPF (Sender Policy Framework)】！把上一题【DKIM = 数字签名】和本题【SPF = 授权发信 IP 列表】牢牢绑定对比！",
+      "en": "Exam Tip: DNS record specifying authorized sender IP addresses = SPF."
+    }
+  },
+  {
+    "id": 189,
+    "type": "single",
+    "stem": {
+      "zh": "DHCP 服务器可分配给客户端的已定义 IP 地址池，其正确的 DHCP 术语是什么？",
+      "en": "What is the correct DHCP term for the defined pool of IP addresses that a DHCP server can assign to clients?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Range"
+      },
+      {
+        "key": "B",
+        "text": "Block"
+      },
+      {
+        "key": "C",
+        "text": "Scope"
+      },
+      {
+        "key": "D",
+        "text": "Group"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：DHCP 核心配置术语之作用域（DHCP Scope）】\n正确答案是 C（Scope / 作用域）[cite: 89]。\n\n• 为什么选 Scope（DHCP 作用域）：\n  - 在标准 DHCP 服务器管理与 CompTIA 认证考纲中，管理员为某个子网配置的可动态分配给客户端的**完整连续 IP 地址池及其附属网络参数**（包括子网掩码、默认网关、DNS 服务器地址、租约期限以及排除地址范围），其官方标准术语被称为 **DHCP 作用域（Scope）**。\n\n• 为什么不选 Range（范围，您错选的项）：\n  - 虽然口语中常说“IP 地址范围”，但在 DHCP 规范术语中，“Range”通常仅指起始 IP 到结束 IP 的纯数字区间（例如在作用域内部单独划出不参与自动分配的静态设备保留区间称为 **Exclusion Range / 排除范围**），而整个可分配的 IP 地址池及策略配置单元的正式专业术语是 **Scope（作用域）**。\n\n• 为什么不选 Block 或 Group：\n  - **选项 B（Block）**：通常指 CIDR 无类域间路由划分出的整体网络地址块（Address block），并非 DHCP 服务器的专属配置术语。\n  - **选项 D（Group）**：一般指安全组或用户组，不用于指代 DHCP 的可分配 IP 地址池。",
+      "en": "The correct answer is C (Scope). In DHCP administration, a Scope is the defined administrative pool of consecutive IP addresses—along with associated subnet mask, default gateway, DNS settings, and lease duration—that a DHCP server can dynamically assign to clients on a subnet.\n\n• Range (A) is a generic term (often used specifically for an 'Exclusion Range' of static IPs withheld within a scope) rather than the formal DHCP term for the assignable address pool itself.\n• Block (B) refers to a CIDR network address block, and Group (D) is not a standard DHCP address pool term."
+    },
+    "mnemonic": {
+      "zh": "口诀：DHCP 服务器里定义的【可分配 IP 地址池 (Defined pool of IP addresses)】，官方专业术语不叫 Range，必须叫【作用域 (Scope)】！",
+      "en": "Exam Tip: Defined pool of IP addresses a DHCP server can assign to clients = Scope."
+    }
   }
 ]
