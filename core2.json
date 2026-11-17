@@ -5163,5 +5163,294 @@
       "zh": "口诀：老古董【MBR】三限制——配老式【Legacy BIOS】、容量死卡【最大 2 TB】、分区总数【最多 4 个】！把这三条和 GPT 的【UEFI + >2TB + 128分区】彻底牢记对照！",
       "en": "Exam Tip: MBR = Legacy BIOS + Max 2 TB disk size + Overall limit of 4 partitions."
     }
+  },
+  {
+    "id": 169,
+    "type": "multiple",
+    "stem": {
+      "zh": "完全格式化（Full format）具有哪些特征？（选择 3 项）",
+      "en": "What are the characteristics of a full format? (Select 3 answers)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Does not check the drive for bad sectors"
+      },
+      {
+        "key": "B",
+        "text": "Suitable for quickly preparing a healthy drive for reuse or OS installation"
+      },
+      {
+        "key": "C",
+        "text": "Overwrites data, reducing chances of recovery"
+      },
+      {
+        "key": "D",
+        "text": "Checks the drive for bad sectors"
+      },
+      {
+        "key": "E",
+        "text": "Significantly slower than a quick format"
+      },
+      {
+        "key": "F",
+        "text": "Deletes file system references but does not erase actual data"
+      }
+    ],
+    "answer": [
+      "C",
+      "D",
+      "E"
+    ],
+    "explanation": {
+      "zh": "【考点：完全格式化与快速格式化的核心差异（Full Format vs. Quick Format）】\n正确答案是 C、D、E[cite: 73]。\n\n• 为什么选 C、D、E：\n  1. **Overwrites data, reducing chances of recovery（覆写数据，降低数据被恢复的可能性，选 C，您漏选的项）**：自 Windows Vista 及后续现代 Windows 版本起，执行**完全格式化（Full format）**不仅会重建文件系统结构，还会向整个分区的所有扇区写入零（Zero-fill）进行底层数据覆写，从而彻底抹除旧数据并大幅降低通过数据恢复软件还原文件的可能性。\n  2. **Checks the drive for bad sectors（检查驱动器是否存在坏道，选 D）**：完全格式化会逐一扫描磁盘上的每一个物理扇区，将检测到的坏道（Bad sectors）标记为不可用，防止系统后续向损坏扇区写入数据导致文件丢失。\n  3. **Significantly slower than a quick format（比快速格式化慢得多，选 E）**：由于必须遍历整块分区执行全盘零填充覆写与坏道扫描，因此完全格式化的耗时远远长于快速格式化。\n\n• 为什么不选 Option B（适合快速准备一块健康的驱动器以供重用或安装操作系统，您错选的项）以及 A、F：\n  - **选项 B**、**选项 A（不检查驱动器坏道）**以及 **选项 F（仅删除文件系统引用索引而不擦除实际数据）**，这三项全部属于**快速格式化（Quick format）**的特征。对于已知健康的新硬盘或内部重装场景，通常使用快速格式化即可在几秒内完成准备。",
+      "en": "The correct answers are C, D, and E. A full format performs three primary actions that distinguish it from a quick format:\n1. Overwrites data with zeros (in Windows Vista and later), significantly reducing the chances of data recovery (C).\n2. Scans the entire partition to detect and mark bad sectors (D).\n3. Takes significantly longer to complete than a quick format due to full-disk sector scanning and zero-writing (E).\n\n• Options A (skips bad sector checks), B (quickly prepares a known-healthy drive for reuse/OS installation), and F (deletes file system pointers without erasing underlying data) all describe a quick format."
+    },
+    "mnemonic": {
+      "zh": "口诀：【完全格式化 (Full format)】三特征——【全盘覆写防恢复 (Overwrites data)】、【逐扇区查坏道 (Checks bad sectors)】、【速度慢得多 (Significantly slower)】！快速格式化才用来快速准备健康盘！",
+      "en": "Exam Tip: Full format = Overwrites data + Checks for bad sectors + Significantly slower than a quick format."
+    }
+  },
+  {
+    "id": 170,
+    "type": "multiple",
+    "stem": {
+      "zh": "以下哪些陈述适用于 Windows 域（Windows domains）？（选择 3 项）",
+      "en": "Which of the statements listed below apply to Windows domains? (Select 3 answers)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Each computer on a Windows domain is governed by its own security policy"
+      },
+      {
+        "key": "B",
+        "text": "Logging into any computer on a Windows domain requires a single set of credentials"
+      },
+      {
+        "key": "C",
+        "text": "Windows domains are based on P2P networking architecture"
+      },
+      {
+        "key": "D",
+        "text": "Security policies and permissions on a Windows domain are administered centrally"
+      },
+      {
+        "key": "E",
+        "text": "All members of a Windows domain must be on the same local network or subnet"
+      },
+      {
+        "key": "F",
+        "text": "Windows domains are based on client-server networking architecture"
+      }
+    ],
+    "answer": [
+      "B",
+      "D",
+      "F"
+    ],
+    "explanation": {
+      "zh": "【考点：Windows 域网络架构与集中管理特性（Windows Domains）】\n正确答案是 B、D、F[cite: 74]。\n\n• 为什么选 B、D、F：\n  1. Logging into any computer on a Windows domain requires a single set of credentials（登录 Windows 域中的任何计算机只需使用同一套凭据，选 B，您漏选的项）**：域用户的账号与密码集中存储在 Active Directory 域控制器（DC）中，员工只需凭**一套域账号凭据（单点登录/统一身份认证）**即可登录域内任意一台已加入域的电脑，无需在每台电脑上单独建号。\n  2. **Security policies and permissions on a Windows domain are administered centrally（Windows 域中的安全策略和权限均集中管理，选 D）**：管理员通过域控制器上的组策略管理控制台（GPMC）和 Active Directory 统一配置并推送全企业的安全策略与资源访问权限。\n  3. **Windows domains are based on client-server networking architecture（Windows 域基于客户端-服务器网络架构，选 F）**：域由提供身份验证和目录服务的专用**域控制器服务器（Server）**与加入域的工作站**客户端（Client）**组成，能够轻松扩展管理数千台设备。\n\n• 为什么不选 Option A（每台计算机由其自身的安全策略管理，您错选的项）、C 或 E：\n  - **选项 A 和 **选项 C（基于 P2P 对等网络架构）**属于 **Windows 工作组（Workgroup）**的特征。\n  - **选项 E（所有域成员必须位于同一本地网络或子网中）**错误：域依托 DNS 进行服务定位，域成员计算机完全可以跨不同子网、跨 VLAN 甚至通过广域网/VPN 分布在不同地理位置。",
+      "en": "The correct answers are B, D, and F. A Windows domain relies on Active Directory Domain Services (AD DS) and is characterized by:\n1. A single set of centralized domain credentials allowing users to log into any domain-joined computer (B).\n2. Centralized administration of security policies (via Group Policy) and resource permissions (D).\n3. A client-server networking architecture anchored by one or more Domain Controllers (F).\n\n• Individual local security policies (A) and peer-to-peer (P2P) architecture (C) apply to Windows workgroups, and domain members do not need to reside on the same local subnet (E)."
+    },
+    "mnemonic": {
+      "zh": "口诀：Windows【域 (Domain)】三核心——【客户端-服务器架构 (Client-server)】、【策略权限集中管 (Administered centrally)】、【一套域账号全网通登 (Single set of credentials)】！",
+      "en": "Exam Tip: Windows Domains = Client-server architecture + Centralized policies/permissions + Single set of credentials."
+    }
+  },
+  {
+    "id": 171,
+    "type": "multiple",
+    "stem": {
+      "zh": "以下哪些答案适用于 Windows 工作组（Windows workgroups）？（选择 3 项）",
+      "en": "Which of the following answers apply to Windows workgroups? (Select 3 answers)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Security policies and permissions in workgroups are administered centrally"
+      },
+      {
+        "key": "B",
+        "text": "Logging into any computer on a workgroup requires a single account (single sign-on feature)"
+      },
+      {
+        "key": "C",
+        "text": "Workgroups are typically recommended for small networks of fewer than twenty computers"
+      },
+      {
+        "key": "D",
+        "text": "There is no limit on the number of hosts that can become a part of a single workgroup"
+      },
+      {
+        "key": "E",
+        "text": "Logging into any computer in a workgroup requires an account on that computer"
+      },
+      {
+        "key": "F",
+        "text": "Each computer in a workgroup has its own security policy"
+      }
+    ],
+    "answer": [
+      "C",
+      "E",
+      "F"
+    ],
+    "explanation": {
+      "zh": "【考点：Windows 工作组分散管理特性（Windows Workgroups）】\n正确答案是 C、E、F[cite: 74]。\n\n• 为什么选 C、E、F：\n  1. **Workgroups are typically recommended for small networks of fewer than twenty computers（工作组通常推荐用于少于 20 台计算机的小型网络，选 C）**：工作组采用去中心化的 P2P 对等架构，没有专用中央服务器；微软官方建议单个工作组中的主机数量**不超过 20 台**（否则手动同步账号与局部广播管理将变得极其繁琐低效）。\n  2. **Logging into any computer in a workgroup requires an account on that computer（登录工作组中的任何计算机都需要在该计算机上拥有本地账号，选 E）**：每台电脑各自维护独立的本地 SAM 账号数据库，用户要在哪台电脑登录，就必须提前在该电脑本地创建对应的用户账户。\n  3. **Each computer in a workgroup has its own security policy（工作组中的每台计算机都有其自身的本地安全策略，选 F，您漏选的项）**：由于没有域控制器集中下发策略，管理员必须逐台使用本地策略工具单独配置每台计算机的安全规则。\n\n• 为什么不选 Option B（登录工作组中的任何计算机只需一个账号/单点登录功能，您错选的项）、A 或 D：\n  - **选项 A（集中管理安全策略）**和 **选项 B（单一账号全网单点登录）**属于 **Windows 域（Domain）**的特性。\n  - **选项 D（加入单个工作组的主机数量没有限制）**错误：受限于广播机制与分散式本地账号管理瓶颈，工作组有明确的小规模上限建议（通常最多 20 台）。",
+      "en": "The correct answers are C, E, and F. A Windows workgroup uses a decentralized peer-to-peer (P2P) model with three key traits:\n1. Recommended only for small networks with fewer than 20 computers (C).\n2. Requires a separate local user account on each individual computer a user needs to log into (E).\n3. Each computer manages its own independent local security policy (F).\n\n• Centralized policy management (A), single sign-on credentials (B), and unlimited host scalability (D) apply to Windows domains rather than workgroups."
+    },
+    "mnemonic": {
+      "zh": "口诀：Windows【工作组 (Workgroup)】三特征——【少于 20 台小网络 (<20 computers)】、【每台电脑单独建本地号 (Account on that computer)】、【每台电脑各自管安全策略 (Own security policy)】！",
+      "en": "Exam Tip: Windows Workgroups = Fewer than 20 computers + Local account required on each machine + Independent local security policies."
+    }
+  },
+  {
+    "id": 172,
+    "type": "single",
+    "stem": {
+      "zh": "允许本地管理员管理“计算机配置”和“用户配置”策略的 Microsoft Windows MMC 管理单元被称为：",
+      "en": "A Microsoft Windows MMC snap-in that allows local administrators to manage system and user configuration policies is called:"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "gpedit.msc"
+      },
+      {
+        "key": "B",
+        "text": "compmgmt.msc"
+      },
+      {
+        "key": "C",
+        "text": "gpmc.msc"
+      },
+      {
+        "key": "D",
+        "text": "lusrmgr.msc"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": {
+      "zh": "【考点：Windows 常用 MMC 管理单元命令（gpedit.msc vs. lusrmgr.msc vs. gpmc.msc）】\n正确答案是 A（gpedit.msc / Local Group Policy Editor / 本地组策略编辑器）[cite: 75]。\n\n• 为什么选 gpedit.msc（本地组策略编辑器）：\n  - `gpedit.msc`**（Group Policy Editor）是 Windows 专业版/企业版/教育版内置的 MMC 管理单元，专供**本地管理员（local administrators）**配置单台计算机上的**计算机配置（Computer Configuration / 系统策略）**和**用户配置（User Configuration / 用户策略）**（包括管理模板、安全设置、登录注销脚本等）。\n\n• 为什么不选 lusrmgr.msc（Local Users and Groups / 本地用户和组，您错选的项）：\n  - **`lusrmgr.msc` 仅用于创建、删除、重命名**本地用户账号（Users）**和分配**本地安全组（Groups，如 Administrators 组）**的成员资格，不能用来管理系统和用户的配置策略（Configuration policies）。\n\n• 为什么不选 compmgmt.msc 或 gpmc.msc：\n  - **选项 B（`compmgmt.msc` / Computer Management / 计算机管理）**：集合了事件查看器、共享文件夹、设备管理器、磁盘管理等工具的综合控制台，本身不是专门的组策略编辑器。\n  - **选项 C（`gpmc.msc` / Group Policy Management Console / 组策略管理控制台）**：用于在 **Active Directory 域控制器**上集中管理整个域及组织单位（OU）的域级别 GPO，而不是供单机本地管理员使用的本地策略管理单元。",
+      "en": "The correct answer is A (gpedit.msc - Local Group Policy Editor). This Microsoft Management Console (MMC) snap-in enables local administrators on Windows Pro, Enterprise, and Education editions to configure local Computer Configuration (system) and User Configuration policies.\n\n• lusrmgr.msc (Local Users and Groups, D) manages local user accounts and group memberships rather than system/user configuration policies.\n• compmgmt.msc (B) opens the general Computer Management console, and gpmc.msc (C) is the Group Policy Management Console used for domain-wide GPOs in Active Directory."
+    },
+    "mnemonic": {
+      "zh": "口诀：单机本地管策略用【gpedit.msc (Local Group Policy Editor)】；管本地用户和组用【lusrmgr.msc】；域控集中管全网策略用【gpmc.msc】！",
+      "en": "Exam Tip: Local system/user policy MMC snap-in = gpedit.msc. Local users and groups = lusrmgr.msc."
+    }
+  },
+  {
+    "id": 173,
+    "type": "single",
+    "stem": {
+      "zh": "以下哪项指的是用于安全启动、磁盘加密和系统完整性验证的嵌入式微控制器？",
+      "en": "Which of the answers listed below refers to an embedded microcontroller used for secure boot, disk encryption, and system integrity verification?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "TPM"
+      },
+      {
+        "key": "B",
+        "text": "SoC"
+      },
+      {
+        "key": "C",
+        "text": "UEFI"
+      },
+      {
+        "key": "D",
+        "text": "HSM"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": {
+      "zh": "【考点：硬件级安全加密芯片（TPM vs. UEFI vs. HSM）】\n正确答案是 A（TPM / Trusted Platform Module / 可信平台模块）[cite: 75]。\n\n• 为什么选 TPM（可信平台模块）：\n  - TPM 是一种焊接在主板上的专用**嵌入式安全微控制器芯片（embedded cryptographic microcontroller）**（或集成在 CPU 固件中的 fTPM）。它在硬件隔离环境中生成并安全存储加密密钥，为 BitLocker 全盘加密**提供密钥保护，并配合安全启动（Secure Boot）度量引导加载程序与系统核心组件的哈希值，执行**系统完整性验证（System integrity verification）**（同时也是 Windows 11 的强制硬件要求）。\n\n• 为什么不选 UEFI（Unified Extensible Firmware Interface / 统一可扩展固件接口，您错选的项）：\n  - **UEFI 是存储在主板 SPI 闪存中的**系统引导固件软件接口**（传统 BIOS 的现代替代品），虽然 UEFI 支持安全启动（Secure Boot）功能，但它本身是**固件接口软件**，而非题干所指的专用“嵌入式加密微控制器芯片（embedded microcontroller）”。\n\n• 为什么不选 SoC 或 HSM：\n  - **选项 B（SoC / System on a Chip / 片上系统）**：将 CPU、GPU、内存控制器等集成在单一硅片上的主处理器架构（常见于手机和轻薄本），并非专职安全加密微控制器。\n  - **选项 D（HSM / Hardware Security Module / 硬件安全模块）**：通常指数据中心服务器使用的独立 PCIe 加密加速卡或外置专用网络硬件安全设备，用于企业级 PKI 根证书与大规模密钥管理，而非主板上用于终端启动和 BitLocker 的嵌入式微控制器。",
+      "en": "The correct answer is A (TPM - Trusted Platform Module). A TPM is a dedicated embedded cryptographic microcontroller on a motherboard (or firmware-based fTPM) that securely generates and stores cryptographic keys for disk encryption (such as BitLocker) and verifies hardware/boot integrity alongside Secure Boot.\n\n• UEFI (Unified Extensible Firmware Interface, C) is the system boot firmware interface that replaces legacy BIOS rather than an embedded cryptographic microcontroller.\n• SoC (System on a Chip, 😎 is a main processor architecture integrating CPU/GPU components, and HSM (Hardware Security Module, D) is a high-end external or PCIe cryptographic appliance used in enterprise servers."
+    },
+    "mnemonic": {
+      "zh": "口诀：主板上专管【安全启动度量、BitLocker 磁盘加密、系统完整性验证】的【嵌入式加密微控制器芯片】，秒选【TPM (可信平台模块)】！UEFI 是固件界面，不是微控制器芯片！",
+      "en": "Exam Tip: Embedded microcontroller for secure boot, disk encryption (BitLocker), and system integrity = TPM."
+    }
+  },
+  {
+    "id": 174,
+    "type": "single",
+    "stem": {
+      "zh": "哪些 64 位版本的 Windows 10 和 Windows 11 的最大内存（RAM）限制为 128 GB？",
+      "en": "Which 64-bit editions of Windows 10 and Windows 11 have a maximum RAM limit of 128 GB?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Home"
+      },
+      {
+        "key": "B",
+        "text": "Pro"
+      },
+      {
+        "key": "C",
+        "text": "Pro for Workstations"
+      },
+      {
+        "key": "D",
+        "text": "Enterprise"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": {
+      "zh": "【考点：Windows 10 / 11 各 64 位版本最大物理内存（RAM）支持上限】\n正确答案是 A（Home / 家庭版）[cite: 76]。\n\n• 为什么选 Home（64 位家庭版）：\n  - 在 CompTIA A+ Core 2 考纲中，必须熟记 Windows 10 与 Windows 11 各 64 位版本的最大物理内存上限阶梯：\n    - Windows 10 / 11 Home（64 位家庭版）**：最大支持 **128 GB RAM。\n    - Windows 10 / 11 Pro（64 位专业版）**：最大支持 **2 TB RAM。\n    - Windows 10 / 11 Pro for Workstations（专业工作站版） & Enterprise（企业版）**：最大支持 **6 TB RAM。\n    - *(补充：所有 32 位版本 Windows 10 均受限于 32 位寻址空间，最大仅支持 4 GB RAM；Windows 11 不再提供 32 位版本)*。\n\n• 为什么不选 Pro（专业版，您错选的项）、Pro for Workstations 或 Enterprise：\n  - 64 位 Pro 专业版**的内存上限高达 **2 TB**（正是下一题的考点），而 **Pro for Workstations 与 Enterprise 高达 **6 TB**，远高于家庭版的 128 GB 限制。",
+      "en": "The correct answer is A (Home). 64-bit editions of Windows 10 Home and Windows 11 Home support a maximum of 128 GB of physical RAM.\n\n• 64-bit Windows 10/11 Pro (B) supports up to 2 TB of RAM.\n• 64-bit Windows 10/11 Pro for Workstations (C) and Enterprise (D) support up to 6 TB of RAM."
+    },
+    "mnemonic": {
+      "zh": "口诀：Win10/11 64 位内存上限三阶梯——【家庭版 Home = 128 GB】、【专业版 Pro = 2 TB】、【工作站/企业版 = 6 TB】！（32 位系统一律 4 GB）",
+      "en": "Exam Tip: 64-bit Windows 10/11 RAM limits: Home = 128 GB | Pro = 2 TB | Pro for Workstations & Enterprise = 6 TB."
+    }
+  },
+  {
+    "id": 175,
+    "type": "single",
+    "stem": {
+      "zh": "64 位专业版（Pro）Windows 10 和 Windows 11 支持的最大物理内存是多少？",
+      "en": "What is the maximum physical memory supported by the 64-bit Pro editions of Windows 10 and Windows 11?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "2 TB"
+      },
+      {
+        "key": "B",
+        "text": "4 TB"
+      },
+      {
+        "key": "C",
+        "text": "6 TB"
+      },
+      {
+        "key": "D",
+        "text": "8 TB"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": {
+      "zh": "【考点：64 位 Windows 10 / 11 Pro 专业版最大内存上限（2 TB）】\n正确答案是 A（2 TB）[cite: 76]。\n\n• 为什么选 2 TB：\n  - 微软官方规格明确规定，64 位版本的 Windows 10 Pro 与 **Windows 11 Pro**（以及 Education 教育版）支持的最大物理内存均为 **2 TB**。\n\n• 为什么不选 4 TB（您错选的项）、6 TB 或 8 TB：\n  - Windows 客户端操作系统中不存在 4 TB 或 8 TB 的内存上限档位；普通专业版（Pro）为 **2 TB**，若需突破 2 TB 限制（最高达到 **6 TB**），则必须升级至 **Windows Pro for Workstations（专业工作站版）**或 **Windows Enterprise（企业版）**。",
+      "en": "The correct answer is A (2 TB). Both 64-bit Windows 10 Pro and 64-bit Windows 11 Pro support a maximum of 2 TB of physical RAM.\n\n• 6 TB (C) is the maximum limit for Pro for Workstations and Enterprise editions, while 4 TB (B) and 8 TB (D) are not valid RAM limits for Windows client editions."
+    },
+    "mnemonic": {
+      "zh": "口诀：64 位【Pro 专业版】最大内存固定卡在【2 TB】！背牢【128 GB (Home) -> 2 TB (Pro) -> 6 TB (Workstation/Enterprise)】三个数字，考试遇到内存上限题直接秒杀！",
+      "en": "Exam Tip: 64-bit Windows 10/11 Pro max RAM = 2 TB (Home = 128 GB; Enterprise/Workstations = 6 TB)."
+    }
   }
 ]
