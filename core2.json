@@ -5452,5 +5452,328 @@
       "zh": "口诀：64 位【Pro 专业版】最大内存固定卡在【2 TB】！背牢【128 GB (Home) -> 2 TB (Pro) -> 6 TB (Workstation/Enterprise)】三个数字，考试遇到内存上限题直接秒杀！",
       "en": "Exam Tip: 64-bit Windows 10/11 Pro max RAM = 2 TB (Home = 128 GB; Enterprise/Workstations = 6 TB)."
     }
+  },
+  {
+    "id": 176,
+    "type": "single",
+    "stem": {
+      "zh": "Windows 11 家庭版（Home）、专业版（Pro）和企业版（Enterprise）默认均包含组策略编辑器（Group Policy Editor）组件。",
+      "en": "Windows 11 Home, Pro, and Enterprise editions include the Group Policy Editor component by default."
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": {
+      "zh": "【考点：Windows 11 各版本内置管理功能差异（Group Policy Editor）】\n正确答案是 B（False / 错误）[cite: 77]。\n\n• 为什么选 False：\n  - 本地组策略编辑器（`gpedit.msc`）是面向企业与高级管理员的配置管理工具，**默认仅内置于 Windows 11 专业版（Pro）、企业版（Enterprise）和教育版（Education）**中。\n  - **Windows 11 家庭版（Home）默认不包含组策略编辑器组件**（也不支持加入 Active Directory 域或 BitLocker 全盘加密等企业级管理特性）。\n\n• 为什么不选 True（您错选的项）：\n  - 题干将家庭版（Home）也包含在默认具备组策略编辑器的版本列表中，因此该陈述是错误的。",
+      "en": "The correct answer is B (False). The Local Group Policy Editor (gpedit.msc) is included by default only in Windows 11 Pro, Enterprise, and Education editions. Windows 11 Home does not include the Group Policy Editor component out of the box."
+    },
+    "mnemonic": {
+      "zh": "口诀：本地组策略（gpedit.msc）是高级管理功能，【家庭版 (Home) 默认绝对没有】，只有【Pro / Enterprise / Education】才自带！",
+      "en": "Exam Tip: Group Policy Editor (gpedit.msc) is included by default in Pro, Enterprise, and Education—NOT Home."
+    }
+  },
+  {
+    "id": 177,
+    "type": "multiple",
+    "stem": {
+      "zh": "以下哪些是安装 Windows 11 的最低系统要求？（选择 3 项）",
+      "en": "Which of the following are minimum requirements for installing Windows 11? (Select 3 answers)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "UEFI firmware with Secure Boot"
+      },
+      {
+        "key": "B",
+        "text": "TPM version 2.0 support"
+      },
+      {
+        "key": "C",
+        "text": "64-bit processor listed on Microsoft’s Windows 11 compatibility list"
+      },
+      {
+        "key": "D",
+        "text": "At least 2 GB of system memory"
+      },
+      {
+        "key": "E",
+        "text": "A minimum of 32 GB of available storage space"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：Windows 11 官方最低硬件与固件系统要求】\n正确答案是 A、B、C[cite: 78]。\n\n• 为什么选 A、B、C：\n  1. **UEFI firmware with Secure Boot（支持安全启动的 UEFI 固件，选 A，您漏选的项）**：Windows 11 彻底淘汰了传统 Legacy BIOS 启动方式，强制要求主板支持 **UEFI 固件并具备安全启动（Secure Boot）能力**。\n  2. **TPM version 2.0 support（支持可信平台模块 TPM 2.0 版本，选 B，您漏选的项）**：Windows 11 强制要求设备启用 **TPM 2.0**（独立安全芯片或处理器内置 fTPM）以保障系统完整性与加密安全。\n  3. **64-bit processor listed on Microsoft’s Windows 11 compatibility list（位于微软 Windows 11 兼容性列表中的 64 位处理器，选 C）**：Windows 11 仅提供 64 位版本，要求双核及以上、主频不低于 1 GHz 且在微软官方 CPU 支持列表中的 64 位处理器。\n\n• 为什么不选 Option D（至少 2 GB 系统内存，您错选的项）和 Option E（至少 32 GB 可用存储空间，您错选的项）：\n  - **内存与存储翻倍升级**：**2 GB 内存**和 **32 GB 存储空间**是老一代 **Windows 10（64 位）**的最低硬件要求；**Windows 11 的最低要求已翻倍提升为至少 4 GB RAM（内存）和 64 GB 可用存储空间**。",
+      "en": "The correct answers are A, B, and C. Microsoft's official minimum requirements for Windows 11 include:\n1. UEFI firmware capable of Secure Boot (A).\n2. Trusted Platform Module (TPM) version 2.0 (B).\n3. A compatible 64-bit processor (1 GHz or faster with 2 or more cores) on Microsoft's approved CPU list (C).\n\n• At least 2 GB of RAM (D) and 32 GB of storage (E) were the minimum requirements for 64-bit Windows 10; Windows 11 doubles both requirements to a minimum of 4 GB of RAM and 64 GB of storage."
+    },
+    "mnemonic": {
+      "zh": "口诀：Win11 硬件门槛大升级——【UEFI + 安全启动】、【TPM 2.0】、【官方列表 64 位 CPU】，内存和硬盘从 Win10 的 2G/32G 全部翻倍到【4 GB 内存 + 64 GB 存储】！",
+      "en": "Exam Tip: Windows 11 minimums = UEFI with Secure Boot + TPM 2.0 + Compatible 64-bit CPU + 4 GB RAM + 64 GB storage."
+    }
+  },
+  {
+    "id": 178,
+    "type": "multiple",
+    "stem": {
+      "zh": "以下哪些答案描述了 Windows 10 和 Windows 11 中任务管理器（taskmgr.exe）的功能？（选择所有适用项）",
+      "en": "Which of the answers listed below describe(s) the function of Task Manager (taskmgr.exe) in Windows 10 and Windows 11? (Select all that apply)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Displays information on programs, processes, and services that are currently running on the computer"
+      },
+      {
+        "key": "B",
+        "text": "Provides access to administrative tools for managing network traffic"
+      },
+      {
+        "key": "C",
+        "text": "Allows users to schedule the launch of programs or scripts at pre-defined times or after specified time intervals"
+      },
+      {
+        "key": "D",
+        "text": "Provides access to startup applications that can be enabled or disabled to launch automatically at sign-in"
+      },
+      {
+        "key": "E",
+        "text": "Allows system administrators to modify user account permissions for currently logged-in users"
+      },
+      {
+        "key": "F",
+        "text": "Provides real-time reports on how a Windows-based computer is using system resources, such as CPU, RAM, Disk, Network, and GPU"
+      }
+    ],
+    "answer": [
+      "A",
+      "D",
+      "F"
+    ],
+    "explanation": {
+      "zh": "【考点：Windows 任务管理器（taskmgr.exe）核心功能范围】\n正确答案是 A、D、F[cite: 79]。\n\n• 为什么选 A、D、F：\n  1. Displays information on programs, processes, and services that are currently running on the computer（显示计算机上当前正在运行的程序、进程和服务信息，选 A）**：对应“进程（Processes）”、“详细信息（Details）”和“服务（Services）”选项卡的核心监控与管理功能。\n  2. **Provides access to startup applications that can be enabled or disabled to launch automatically at sign-in（提供对启动应用程序的访问，可启用或禁用它们在登录时自动启动，选 D）**：对应“启动（Startup）”选项卡，方便用户禁用拖慢开机速度的自启软件。\n  3. **Provides real-time reports on how a Windows-based computer is using system resources, such as CPU, RAM, Disk, Network, and GPU（提供有关 Windows 计算机如何使用 CPU、内存、磁盘、网络和 GPU 等系统资源的实时报告，选 F）**：对应“性能（Performance）”选项卡的实时硬件资源图表。\n\n• 为什么不选 Option B（提供用于管理网络流量的管理工具，您错选的项）、Option C（允许用户安排在预定时间或指定时间间隔后启动程序或脚本，您错选的项）和 Option E：\n  - **选项 B**：任务管理器只能查看各进程和网卡的实时网络吞吐量占用，**不提供用于控制、过滤或配置网络流量的管理工具**（那是 Windows Defender 防火墙、QoS 策略或路由器/专业抓包工具的功能）。\n  - **选项 C**：按预定时间或时间间隔自动触发运行程序和脚本，是 **任务计划程序（Task Scheduler / `taskschd.msc`） 的专属功能，任务管理器不具备定时调度器功能。\n  - 选项 E**：修改用户账户权限和组成员资格需通过 **本地用户和组（`lusrmgr.msc`） 或控制面板完成，任务管理器的“用户（Users）”选项卡仅能查看当前登录会话的资源占用并执行注销/断开连接操作。",
+      "en": "The correct answers are A, D, and F. Windows Task Manager (taskmgr.exe) provides three core capabilities:\n1. Monitoring currently running programs, background processes, and Windows services (A).\n2. Enabling or disabling startup applications that launch automatically upon user sign-in (D).\n3. Reporting real-time hardware resource utilization across CPU, RAM, Disk, Network, and GPU (F).\n\n• Managing or filtering network traffic (B) requires Windows Defender Firewall or network management utilities rather than Task Manager.\n• Scheduling programs or scripts to run at pre-defined times (C) is the function of Task Scheduler (taskschd.msc).\n• Modifying user account permissions (E) is handled through Local Users and Groups (lusrmgr.msc) or User Accounts settings."
+    },
+    "mnemonic": {
+      "zh": "口诀：任务管理器（taskmgr.exe）三大本领——【看运行进程/服务 (A)】、【管开机自启项 (D)】、【盯硬件实时性能 (F)】！定时运行归任务计划程序 (Task Scheduler)，管流量归防火墙！",
+      "en": "Exam Tip: Task Manager functions = View running apps/processes/services + Enable/disable startup apps + Real-time CPU/RAM/Disk/Network/GPU reports."
+    }
+  },
+  {
+    "id": 179,
+    "type": "single",
+    "stem": {
+      "zh": "Windows 任务管理器的哪个选项卡提供了一个界面，用于手动启动、停止或重新启动通常在后台无用户界面（UI）运行的系统应用程序？",
+      "en": "Which tab of the Windows Task Manager provides an interface to manually start, stop, or restart system applications that typically run without a user interface?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Processes"
+      },
+      {
+        "key": "B",
+        "text": "Performance"
+      },
+      {
+        "key": "C",
+        "text": "Startup"
+      },
+      {
+        "key": "D",
+        "text": "Users"
+      },
+      {
+        "key": "E",
+        "text": "Services"
+      }
+    ],
+    "answer": [
+      "E"
+    ],
+    "explanation": {
+      "zh": "【考点：任务管理器各选项卡精准定位——服务（Services）选项卡】\n正确答案是 E（Services / 服务）[cite: 80]。\n\n• 为什么选 Services（服务选项卡）：\n  - 题干精确给出了 Windows 服务的标准定义：“**通常在后台无用户界面运行的系统应用程序（system applications that typically run without a user interface）**”，且要求能够**手动启动（Start）、停止（Stop）或重新启动（Restart）**它们。在任务管理器中，**Services（服务）**选项卡直接列出了所有已注册的 Windows 后台服务（如 Print Spooler、Windows Update 等）及其运行状态与 PID，右键即可直接执行启动、停止或重启操作（并可一键跳转至完整的 services.msc 控制台）。\n\n• 为什么不选 Processes（进程选项卡，您错选的项）：\n  - **Processes（进程）**选项卡主要用于查看应用程序与后台进程的实时 CPU、内存、磁盘、网络占用情况，对其执行的操作是“**结束任务（End task）**”（强制终止进程），而不是规范地对无界面后台系统服务执行“启动（Start）或重新启动（Restart）”。\n\n• 为什么不选 Performance、Startup 或 Users：\n  - **选项 B（Performance / 性能）**：显示整机 CPU、内存、磁盘、网络、GPU 的实时汇总波形图。\n  - **选项 C（Startup / 启动）**：管理随用户登录自动启动的应用程序开关及启动影响评估。\n  - **选项 D（Users / 用户）**：显示当前已登录系统的用户会话及其各自消耗的总资源。",
+      "en": "The correct answer is E (Services). Windows services are specialized background system applications that run without a graphical user interface (GUI). The Services tab in Task Manager displays their current status (Running/Stopped) and allows administrators to manually start, stop, or restart them.\n\n• The Processes tab (A) displays per-process resource consumption and allows ending tasks, rather than starting or restarting background Windows services.\n• Performance (B) shows hardware utilization graphs, Startup (C) manages sign-in auto-start apps, and Users (D) displays active user sessions."
+    },
+    "mnemonic": {
+      "zh": "口诀：看到【无用户界面在后台运行 (Without a user interface)】+【手动启动/停止/重启 (Start, stop, or restart)】，百分百指的就是【服务 (Services)】选项卡！",
+      "en": "Exam Tip: Background system apps without a UI that can be started, stopped, or restarted = Services tab."
+    }
+  },
+  {
+    "id": 180,
+    "type": "single",
+    "stem": {
+      "zh": "Windows 任务管理器中的哪个选项卡提供有关正在运行的应用程序和后台进程所使用系统资源的实时信息？",
+      "en": "Which Task Manager tab in Windows provides real-time information about system resources used by running applications and background processes?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Processes"
+      },
+      {
+        "key": "B",
+        "text": "Performance"
+      },
+      {
+        "key": "C",
+        "text": "Startup"
+      },
+      {
+        "key": "D",
+        "text": "Users"
+      },
+      {
+        "key": "E",
+        "text": "Services"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": {
+      "zh": "【考点：任务管理器选项卡辨析——进程（Processes）vs. 性能（Performance）】\n正确答案是 A（Processes / 进程）[cite: 81]。\n\n• 为什么选 Processes（进程选项卡）：\n  - 题干的关键词是“**由正在运行的应用程序和后台进程所使用的系统资源（system resources used by running applications and background processes）**”。在任务管理器中，**Processes（进程）**选项卡将当前活动的软件按“应用（Apps）”和“后台进程（Background processes）”分组列出，并逐行实时显示**每一个具体进程**各自占用的 CPU 百分比、内存（MB）、磁盘（MB/s）、网络（Mbps）和 GPU 资源，便于快速揪出吃光资源的罪魁祸首。\n\n• 为什么不选 Performance（性能选项卡，您错选的项）：\n  - **Performance（性能）**选项卡展示的是**整个硬件子系统（全机总 CPU、总内存、整块物理磁盘、整张网卡）的宏观汇总图表与硬件规格参数**（如 CPU 核心数、内存插槽与速度、运行时间 Up time），它**不会**按单个应用程序或后台进程拆分列出各自消耗了多少资源。\n\n• 为什么不选 Startup、Users 或 Services：\n  - **选项 C（Startup / 启动）**：仅评估开机登录时的静态启动影响，不监控运行中的实时资源消耗。\n  - **选项 D（Users / 用户）**：按登录用户账户汇总资源，而非按单个应用程序和后台进程展示。\n  - **选项 E（Services / 服务）**：仅显示服务名称、PID、描述和运行/停止状态，不直接展示 CPU/内存占用列。",
+      "en": "The correct answer is A (Processes). The Processes tab categorizes active items into 'Apps' and 'Background processes' and displays a real-time breakdown of CPU, Memory, Disk, Network, and GPU resources consumed by each individual process.\n\n• The Performance tab (B) displays overall, system-wide hardware utilization graphs and hardware specifications (CPU cores, RAM speed, uptime) rather than per-application or per-process resource usage.\n• Startup (C), Users (D), and Services (E) do not provide per-process real-time resource metrics."
+    },
+    "mnemonic": {
+      "zh": "口诀：具体到【每个运行应用和后台进程 (Running applications and background processes)】占用了多少资源，看【进程 (Processes)】选项卡；看整机硬件总负荷波形图，才看【性能 (Performance)】选项卡！",
+      "en": "Exam Tip: Real-time resources used by individual running apps and background processes = Processes tab (overall system hardware graphs = Performance tab)."
+    }
+  },
+  {
+    "id": 181,
+    "type": "single",
+    "stem": {
+      "zh": "以下哪项指的是专为排查系统启动问题而设计的 Microsoft Windows 工具？",
+      "en": "Which of the following refers to a Microsoft Windows tool designed for troubleshooting system startup problems?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "eventvwr.msc"
+      },
+      {
+        "key": "B",
+        "text": "sysdm.cpl"
+      },
+      {
+        "key": "C",
+        "text": "compmgmt.msc"
+      },
+      {
+        "key": "D",
+        "text": "msconfig.exe"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：Windows 系统启动故障排查核心工具（msconfig.exe）】\n正确答案是 D（msconfig.exe / System Configuration / 系统配置）[cite: 82]。\n\n• 为什么选 msconfig.exe（系统配置实用程序）：\n  - `msconfig.exe`**（System Configuration / 系统配置）是 Windows 内置的经典**系统启动与引导故障排查工具**。技术人员利用它可以切换诊断启动（Diagnostic startup）或有选择启动（Selective startup）、配置安全模式（Safe boot）引导选项、开启启动日志（Boot log），以及逐一禁用第三方后台服务来定位导致系统无法正常启动的驱动程序或服务冲突。\n\n• 为什么不选 sysdm.cpl（System Properties / 系统属性，您错选的项）：\n  - **`sysdm.cpl` 打开的是“系统属性”对话框，主要用于修改计算机名、加入工作组或域、调整虚拟内存分页文件、配置环境变量以及管理“系统保护（系统还原点）”，并非专为排查启动引导故障设计的诊断工具。\n\n• 为什么不选 eventvwr.msc 或 compmgmt.msc：\n  - **选项 A（`eventvwr.msc` / Event Viewer / 事件查看器）**：用于查阅系统、应用程序和安全日志记录，虽然可用于事后分析报错日志，但本身不是控制启动模式与引导配置的启动排障工具。\n  - **选项 C（`compmgmt.msc` / Computer Management / 计算机管理）**：集合了磁盘管理、设备管理器、本地用户和组等常规管理单元的综合控制台。",
+      "en": "The correct answer is D (msconfig.exe - System Configuration). System Configuration (msconfig.exe) is the dedicated Windows utility for troubleshooting startup and boot problems, allowing technicians to configure Safe Boot, select Diagnostic or Selective startup modes, enable boot logging, and isolate problematic startup services.\n\n• sysdm.cpl (System Properties, 😎 configures computer name, domain/workgroup membership, virtual memory, environment variables, and System Restore.\n• eventvwr.msc (Event Viewer, A) displays system and application logs, and compmgmt.msc (Computer Management, C) is a general administrative console."
+    },
+    "mnemonic": {
+      "zh": "口诀：排查系统开机启动故障，第一时间运行【msconfig.exe (系统配置)】！sysdm.cpl 是改电脑名/加域/环境变量的“系统属性”！",
+      "en": "Exam Tip: Windows tool designed for troubleshooting system startup problems = msconfig.exe (System Configuration)."
+    }
+  },
+  {
+    "id": 182,
+    "type": "single",
+    "stem": {
+      "zh": "MS Windows 中“系统配置（System Configuration）”实用程序的哪个选项卡包含“正常启动（Normal）”、“诊断启动（Diagnostic）”和“有选择启动（Selective）”系统启动模式的选项？",
+      "en": "Which tab of the System Configuration utility in MS Windows includes the option for normal, diagnostic, and selective system startup modes?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "General"
+      },
+      {
+        "key": "B",
+        "text": "Boot"
+      },
+      {
+        "key": "C",
+        "text": "Services"
+      },
+      {
+        "key": "D",
+        "text": "Startup"
+      },
+      {
+        "key": "E",
+        "text": "Tools"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": {
+      "zh": "【考点：系统配置实用程序（msconfig.exe）五大选项卡功能布局】\n正确答案是 A（General / 常规选项卡）[cite: 82]。\n\n• 为什么选 General（常规选项卡）：\n  - 打开 msconfig.exe 后默认显示的第一个选项卡就是 **General（常规）**，其核心区域“启动选择（Startup selection）”直接提供三种系统启动模式单选按钮：\n    1. **正常启动（Normal startup）**：加载所有设备驱动程序和全部服务。\n    2. **诊断启动（Diagnostic startup）**：仅加载最基本的设备驱动程序和基础系统服务（类似于洁净排障模式）。\n    3. **有选择启动（Selective startup）**：允许技术人员自定义勾选是否加载系统服务（Load system services）以及是否加载启动项（Load startup items）。\n\n• 为什么不选 Startup（启动选项卡，您错选的项）、Boot、Services 或 Tools：\n  - **选项 D（Startup / 启动）**：在 Windows 10 和 Windows 11 中，该选项卡仅包含一个跳转链接（“打开任务管理器 / Open Task Manager”），用于管理用户登录后的自启动应用列表，不包含三种系统启动模式选择。\n  - **选项 B（Boot / 引导）**：用于设置多系统默认引导项、引导超时时间、安全引导（Safe boot）及高级处理器/内存引导限制。\n  - **选项 C（Services / 服务）**：列出所有系统与第三方后台服务，提供“全部隐藏所有 Microsoft 服务”复选框以排查第三方服务冲突。\n  - **选项 E（Tools / 工具）**：提供快速启动系统信息、事件查看器、注册表编辑器、命令提示符等诊断工具的快捷入口。",
+      "en": "The correct answer is A (General). The General tab of the System Configuration utility (msconfig.exe) contains the 'Startup selection' section with three radio buttons: Normal startup, Diagnostic startup, and Selective startup.\n\n• Startup (D) in Windows 10/11 simply redirects to Task Manager's Startup tab to manage user sign-in applications.\n• Boot (B) manages OS boot loader options and Safe Boot, Services (C) toggles background services, and Tools (E) provides quick launchers for Windows diagnostic utilities."
+    },
+    "mnemonic": {
+      "zh": "口诀：msconfig 一打开的第一个【常规 (General)】选项卡，就是管【正常 (Normal)、诊断 (Diagnostic)、有选择 (Selective)】三大启动模式的！Startup 选项卡只负责跳去任务管理器！",
+      "en": "Exam Tip: Normal, Diagnostic, and Selective startup modes = General tab of msconfig.exe."
+    }
+  },
+  {
+    "id": 183,
+    "type": "multiple",
+    "stem": {
+      "zh": "以下列出的哪些设置可以通过 Windows 中“系统配置（System Configuration）”实用程序的“引导（Boot）”选项卡进行管理？（选择所有适用项）",
+      "en": "Which of the settings listed below can be managed through the Boot tab of the System Configuration utility in Windows? (Select all that apply)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Safe boot, including an option to load minimal drivers and services for troubleshooting during system startup"
+      },
+      {
+        "key": "B",
+        "text": "Boot logging, which collects detailed information about the startup process for diagnostic purposes"
+      },
+      {
+        "key": "C",
+        "text": "Selecting the default operating system to load in a multiboot environment"
+      },
+      {
+        "key": "D",
+        "text": "Limits on hardware resources, such as maximum RAM, allocated to the selected OS in a multiboot environment"
+      },
+      {
+        "key": "E",
+        "text": "Startup items, including programs and services set to launch automatically during system boot"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：系统配置实用程序（msconfig.exe）“引导（Boot）”选项卡详细设置项】\n正确答案是 A、B、C、D（共 4 项）[cite: 83]。\n\n• 为什么选 A、B、C、D：\n  1. **Safe boot（安全引导，选 A）**：勾选“安全引导（Safe boot）”并选择 Minimal（最小）、Alternate shell（备用外壳）、Active Directory repair 或 Network（网络），可在下次重启时强制进入 Windows 安全模式进行故障排查。\n  2. **Boot logging（引导日志，选 B，您漏选的项）**：勾选“引导日志（Boot log）”后，系统会在启动过程中将所有成功加载和加载失败的驱动程序记录到 %SystemRoot%\\ntbtlog.txt 日志文件中供诊断分析。\n  3. **Selecting the default operating system to load in a multiboot environment（在多系统启动环境中选择要加载的默认操作系统，选 C）**：在“引导（Boot）”选项卡顶部的操作系统列表中，可点击“设为默认值（Set as default）”指定多系统启动时的默认系统及等待超时秒数（Timeout）。\n  4. **Limits on hardware resources, such as maximum RAM, allocated to the selected OS in a multiboot environment（限制在多系统环境中分配给所选操作系统的硬件资源，如最大内存，选 D，您漏选的项）**：点击“引导（Boot）”选项卡中的“**高级选项（Advanced options...）**”按钮，即可手动限制启动时使用的**处理器核心数（Number of processors）**和**最大内存上限（Maximum memory / RAM）**（常用于模拟低配环境或排查坏内存条）。\n\n• 为什么不选 Option E（启动项，包括设置为在系统启动期间自动启动的程序和服务，您错选的项）：\n  - 在 msconfig.exe 中，**后台服务（Services）**由专门的 **Services（服务）**选项卡管理，而**开机自启动程序（Startup items）**则由 **Startup（启动）**选项卡跳转至任务管理器管理，这两者均不在 **Boot（引导）**选项卡中配置。",
+      "en": "The correct answers are A, B, C, and D. The Boot tab of the Windows System Configuration utility (msconfig.exe) controls four key boot-loader and kernel-level settings:\n1. Safe boot options (Minimal, Alternate shell, Active Directory repair, Network) for startup troubleshooting (A).\n2. Boot logging (ntbtlog.txt) to record loaded and failed drivers during startup (B).\n3. Selecting the default OS and boot menu timeout in a multiboot configuration (C).\n4. Hardware resource limits under 'Advanced options...', allowing technicians to cap the number of processors or maximum RAM allocated to the selected OS (D).\n\n• Startup programs and background services (E) are managed via the Startup tab (Task Manager) and Services tab, not the Boot tab."
+    },
+    "mnemonic": {
+      "zh": "口诀：msconfig【引导 (Boot)】选项卡管四个核心底层设置——【安全引导 (Safe boot)】、【引导日志 (Boot log)】、【多系统默认 OS】以及高级选项里的【限制 CPU 核心数与最大内存 (Maximum RAM)】！开机自启软件和后台服务归 Startup 和 Services 管！",
+      "en": "Exam Tip: msconfig Boot tab = Safe boot + Boot logging + Default multiboot OS + Advanced options (CPU/Maximum RAM limits)."
+    }
   }
 ]
