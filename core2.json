@@ -6071,5 +6071,42 @@
       "zh": "口诀：机器内部算二进制，人类书写表达用【点分十进制 (Decimal numbers)】（如 192.168.1.1）；【十六进制 (Hexadecimal)】才用来写 IPv6 和 MAC 地址！",
       "en": "Exam Tip: IPv4 addresses are expressed using Decimal numbers (dotted-decimal); IPv6 and MAC addresses use Hexadecimal."
     }
+  },
+  {
+    "id": 192,
+    "type": "single",
+    "stem": {
+      "zh": "以下哪个首字母缩写词指的是由提供集中式数据访问的设备组成的专用本地网络？",
+      "en": "Which of the following acronyms refers to a dedicated local network consisting of devices that provide centralized data access?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "SDN"
+      },
+      {
+        "key": "B",
+        "text": "NAS"
+      },
+      {
+        "key": "C",
+        "text": "iSCSI"
+      },
+      {
+        "key": "D",
+        "text": "SAN"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：企业存储网络架构辨析（SAN vs. NAS vs. iSCSI vs. SDN）】\n正确答案是 D（SAN / Storage Area Network / 存储区域网络，您答对了！）[cite: 91]。\n\n• 为什么选 SAN（存储区域网络，您做对了！）：\n  - 题干的关键定义是“**由提供集中式数据访问的设备组成的专用本地网络（a dedicated local network consisting of devices that provide centralized data access）**”。**SAN** 是一种独立于常规企业局域网（LAN）之外的高速**专用存储子网**（通常通过光纤通道 Fibre Channel 或专用高速以太网互联），它将多台磁盘阵列、磁带库等存储设备整合成集中存储池，并以**块级（Block-level）**方式提供给多台服务器访问，在服务器操作系统看来就像本地直连的物理硬盘一样高效。\n\n• 为什么不选 NAS（Network Attached Storage / 网络附加存储）：\n  - NAS 是直接接入**现有常规局域网（LAN）**中的专用文件存储设备，通过 SMB/CIFS 或 NFS 协议提供**文件级（File-level）**共享访问；它本身是一个连接在普通网络上的存储设备节点，而不是题干所描述的一整套“**专用本地存储网络（dedicated local network）**”。\n\n• 为什么不选 iSCSI 或 SDN：\n  - **选项 C（iSCSI / Internet Small Computer Systems Interface）**：是一种基于标准 TCP/IP 网络传输 SCSI 块级存储指令的**通信协议**（常作为构建 IP-SAN 的底层传输协议），并非专用本地网络本身。\n  - **选项 A（SDN / Software-Defined Networking / 软件定义网络）**：是一种将网络控制平面与数据转发平面分离的现代化网络管理架构，与集中式数据存储网络无关。",
+      "en": "The correct answer is D (SAN - Storage Area Network). A SAN is a dedicated, high-speed local network (typically using Fibre Channel or dedicated Ethernet) isolated from standard user LAN traffic that interconnects enterprise storage arrays and servers to provide centralized, block-level data access.\n\n• NAS (Network Attached Storage, 😎 is a dedicated file-level storage appliance connected to an existing standard LAN rather than a dedicated storage network infrastructure itself.\n• iSCSI (C) is a transport protocol that carries SCSI block commands over IP networks (often used to implement an IP-SAN), rather than the network itself.\n• SDN (Software-Defined Networking, A) is a network architecture that separates the control plane from the data plane for programmable network management."
+    },
+    "mnemonic": {
+      "zh": "口诀：一整个【专用高速本地存储网络 (Dedicated local network)】提供块级集中数据访问，认准【SAN (Storage Area Network)】！直接插在普通局域网上的文件共享盒子叫【NAS】！",
+      "en": "Exam Tip: Dedicated local network of devices providing centralized block-level data access = SAN (Storage Area Network)."
+    }
   }
 ]
