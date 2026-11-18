@@ -5997,5 +5997,79 @@
       "zh": "口诀：DHCP 服务器里定义的【可分配 IP 地址池 (Defined pool of IP addresses)】，官方专业术语不叫 Range，必须叫【作用域 (Scope)】！",
       "en": "Exam Tip: Defined pool of IP addresses a DHCP server can assign to clients = Scope."
     }
+  },
+  {
+    "id": 190,
+    "type": "single",
+    "stem": {
+      "zh": "一个 IPv4 地址由多少位（bits）组成？",
+      "en": "An IPv4 address consists of:"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "32 bits"
+      },
+      {
+        "key": "B",
+        "text": "48 bits"
+      },
+      {
+        "key": "C",
+        "text": "64 bits"
+      },
+      {
+        "key": "D",
+        "text": "128 bits"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": {
+      "zh": "【考点：IPv4 地址长度与常见网络标识符位数对比（32 bits）】\n正确答案是 A（32 bits）[cite: 90]。\n\n• 为什么选 32 bits：\n  - 标准 IPv4（Internet Protocol version 4）**地址是一个 **32 位（4 字节）**的逻辑地址，通常划分为 4 个 8 位组（Octets，每组 8 bits，$4 \\times 8 = 32\\text{ bits}$），理论上最多可提供 $2^{32}$（约 42.9 亿）个 IP 地址。\n\n• 为什么不选 48 bits（您错选的项）：\n  - **48 bits（6 字节）**是网卡物理 **MAC 地址（Media Access Control address）**的长度（通常表示为 12 个十六进制字符），而不是第三层逻辑 IPv4 地址的长度。\n\n• 为什么不选 64 bits 或 128 bits：\n  - **选项 C（64 bits）**：通常指标准 **IPv6 地址中后半部分的**接口标识符（主机位 / Interface ID）**长度（如 /64 子网前缀下的主机部分），而非完整的 IPv4 地址长度。\n  - **选项 D（128 bits）**：是完整 **IPv6（Internet Protocol version 6）**地址的总长度（16 字节，提供 $2^{128}$ 个地址）。",
+      "en": "The correct answer is A (32 bits). An IPv4 address is a 32-bit (4-byte) logical address divided into four 8-bit octets (4 x 8 = 32 bits), providing 2^32 (~4.3 billion) unique addresses.\n\n• 48 bits (B) is the length of a physical MAC address (6 bytes), not an IPv4 address.\n• 64 bits (C) represents the host interface identifier portion of a standard /64 IPv6 address.\n• 128 bits (D) is the total bit length of an IPv6 address."
+    },
+    "mnemonic": {
+      "zh": "口诀：网络三大地址位数死记——【IPv4 = 32 位】、【MAC 物理地址 = 48 位】、【IPv6 = 128 位】！",
+      "en": "Exam Tip: IPv4 = 32 bits | MAC address = 48 bits | IPv6 = 128 bits."
+    }
+  },
+  {
+    "id": 191,
+    "type": "single",
+    "stem": {
+      "zh": "IPv4 地址通常使用哪种数字进制格式来表示？",
+      "en": "IPv4 addresses are expressed with the use of:"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Octagonal numbers"
+      },
+      {
+        "key": "B",
+        "text": "Binary numbers"
+      },
+      {
+        "key": "C",
+        "text": "Hexadecimal numbers"
+      },
+      {
+        "key": "D",
+        "text": "Decimal numbers"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：IPv4 地址的标准表示法（点分十进制 / Dotted-Decimal Notation）】\n正确答案是 D（Decimal numbers / 十进制数字）[cite: 90]。\n\n• 为什么选 Decimal numbers（十进制数字）：\n  - 为了方便人类管理员阅读、记忆和手动配置，IPv4 地址采用**点分十进制表示法（Dotted-decimal notation）**来**表达（expressed）**——即将 32 位地址分成 4 个 8 位组，每组转换为 0 到 255 之间的**十进制数字（Decimal numbers）**，并用英文句点分隔（例如 `192.168.1.1`）。\n\n• 为什么不选 Binary numbers（二进制数字，您错选的项）：\n  - 虽然计算机硬件和路由器在底层数据包转发时以**二进制（0 和 1）**处理 IPv4 地址，但人类配置界面、网络文档与操作系统中用于**表达（expressed）**IPv4 地址的标准格式是**十进制（Decimal）**，而非一长串难以阅读的 32 位二进制数。\n\n• 为什么不选 Hexadecimal numbers 或 Octagonal numbers：\n  - **选项 C（Hexadecimal numbers / 十六进制数字）**：用于表示 **IPv6 地址**（冒号分隔十六进制，如 `2001:0db8::1`）和 **MAC 地址**（如 `00:1A:2B:3C:4D:5E`），不用于表达标准 IPv4 地址。\n  - **选项 A（Octagonal numbers / 八边形数）**：属于干扰项（甚至拼写了几何术语 octagonal 而非八进制 octal），不用于网络地址表示。",
+      "en": "The correct answer is D (Decimal numbers). For human readability and configuration, IPv4 addresses are expressed in dotted-decimal notation—four decimal numbers ranging from 0 to 255 separated by periods (e.g., 192.168.1.1).\n\n• Binary numbers (B) represent how computers and routers process IPv4 bits internally at the hardware level, rather than how IPv4 addresses are expressed to users.\n• Hexadecimal numbers (C) are used to express IPv6 addresses and MAC addresses, while octagonal numbers (A) is a distractor term not used in IP addressing."
+    },
+    "mnemonic": {
+      "zh": "口诀：机器内部算二进制，人类书写表达用【点分十进制 (Decimal numbers)】（如 192.168.1.1）；【十六进制 (Hexadecimal)】才用来写 IPv6 和 MAC 地址！",
+      "en": "Exam Tip: IPv4 addresses are expressed using Decimal numbers (dotted-decimal); IPv6 and MAC addresses use Hexadecimal."
+    }
   }
 ]
