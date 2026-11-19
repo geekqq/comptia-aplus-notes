@@ -6108,5 +6108,307 @@
       "zh": "口诀：一整个【专用高速本地存储网络 (Dedicated local network)】提供块级集中数据访问，认准【SAN (Storage Area Network)】！直接插在普通局域网上的文件共享盒子叫【NAS】！",
       "en": "Exam Tip: Dedicated local network of devices providing centralized block-level data access = SAN (Storage Area Network)."
     }
+  },
+  {
+    "id": 193,
+    "type": "multiple",
+    "stem": {
+      "zh": "VA 显示技术的典型特征包括哪些？（选择 3 项）",
+      "en": "The VA display technology can be characterized by: (Select 3 answers)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "High contrast ratios"
+      },
+      {
+        "key": "B",
+        "text": "Low color quality"
+      },
+      {
+        "key": "C",
+        "text": "Good viewing angles"
+      },
+      {
+        "key": "D",
+        "text": "Low contrast ratios"
+      },
+      {
+        "key": "E",
+        "text": "Good color quality"
+      },
+      {
+        "key": "F",
+        "text": "Low viewing angles"
+      }
+    ],
+    "answer": [
+      "A",
+      "C",
+      "E"
+    ],
+    "explanation": {
+      "zh": "【考点：三大 LCD 面板技术特性对比之 VA（垂直排列面板）】\n正确答案是 A、C、E[cite: 77]。\n\n• 为什么选 A、C、E：\n  1. **High contrast ratios（高对比度，选 A，您漏选的项）**：**VA（Vertical Alignment / 垂直排列）**液晶面板最大的招牌优势就是**极高的静态对比度**（通常可达 3000:1 至 6000:1，远超 IPS 的 1000:1 和 TN 面板），在不通电状态下液晶分子垂直排列，能更彻底地阻挡背光泄漏，呈现出深邃的黑色表现。\n  2. **Good viewing angles（良好的可视角度，选 C）**：VA 面板的可视角度显著优于传统 TN 面板（接近广视角水平，仅在极端大斜角下略逊于 IPS）。\n  3. **Good color quality（良好的色彩表现，选 E）**：VA 面板具备优秀的色彩还原度与色深表现，综合画质在 TN 和 IPS 之间取得了极佳平衡。\n\n• 为什么不选 Option D（Low contrast ratios / 低对比度，您错选的项）以及 B、F：\n  - **低对比度（D）**、**色彩质量较差（B）**和**可视角度窄（F）**全都是老一代 **TN（Twisted Nematic / 扭曲向列）**面板的典型缺点（TN 的唯一优势是极快的响应时间和低成本），而 VA 恰恰以**高对比度**著称。",
+      "en": "The correct answers are A, C, and E. Vertical Alignment (VA) LCD panels sit between TN and IPS panels and are characterized by:\n1. High contrast ratios (A) — VA's standout feature, delivering deep blacks by effectively blocking backlight bleed.\n2. Good viewing angles (C) — significantly wider than TN panels.\n3. Good color quality (E) — vibrant color reproduction superior to TN.\n\n• Low contrast ratios (D), low color quality (B), and low viewing angles (F) are all classic drawbacks of Twisted Nematic (TN) panels, not VA."
+    },
+    "mnemonic": {
+      "zh": "口诀：LCD 三兄弟——【TN】响应最快但视角窄、色彩差、对比度低；【IPS】色彩最准、视角最广；【VA】最大王牌就是【超高对比度 (High contrast ratios)】+ 良好色彩与视角！",
+      "en": "Exam Tip: VA panels = High contrast ratios (their signature strength) + Good viewing angles + Good color quality."
+    }
+  },
+  {
+    "id": 194,
+    "type": "multiple",
+    "stem": {
+      "zh": "OLED 显示屏的主要特性有哪些？（选择 3 项）",
+      "en": "What are the key features of an OLED display? (Select 3 answers)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Requires backlight to illuminate the screen"
+      },
+      {
+        "key": "B",
+        "text": "Can reach greater brightness levels, especially in well-lit environments"
+      },
+      {
+        "key": "C",
+        "text": "Enables lightweight, bendable, and ultra-slim screens"
+      },
+      {
+        "key": "D",
+        "text": "Works without backlight"
+      },
+      {
+        "key": "E",
+        "text": "Typically offers longer lifespan and is less vulnerable to burn-in"
+      },
+      {
+        "key": "F",
+        "text": "Provides exceptional contrast ratio and black levels"
+      }
+    ],
+    "answer": [
+      "C",
+      "D",
+      "F"
+    ],
+    "explanation": {
+      "zh": "【考点：OLED 自发光显示技术核心特性与优缺点】\n正确答案是 C、D、F[cite: 77]。\n\n• 为什么选 C、D、F：\n  1. **Enables lightweight, bendable, and ultra-slim screens（可实现轻量化、可弯曲和超薄屏幕，选 C，您漏选的项）**：由于无需厚重的背光模组与多层偏光/液晶玻璃基板，有机发光二极管（OLED）可以直接制作在柔性塑料基底上，从而造就超薄电视以及折叠屏手机/可弯曲显示器。\n  2. **Works without backlight（无需背光源即可工作，选 D）**：OLED 的每个像素点都是由有机化合物组成的独立自发光二极管，通电即发光，完全不需要外部背光层。\n  3. **Provides exceptional contrast ratio and black levels（提供卓越的对比度和纯黑表现，选 F）**：显示纯黑色画面时，OLED 可以将对应像素彻底断电关闭，实现真正的“零亮度纯黑（True black）”与近乎无限大的对比度。\n\n• 为什么不选 Option B（能够达到更高的亮度水平，尤其是在光线充足的环境中，您错选的项）：\n  - 在强光环境下的全屏峰值亮度方面，传统的 **LED 背光 LCD 和 Mini-LED 显示器**远高于 OLED；OLED 受限于有机发光材料寿命与发热老化，在全屏高亮度下无法持久维持超高亮度（这反而是 LCD/Mini-LED 的优势）。\n\n• 为什么不选 Option A 或 Option E：\n  - **选项 A（需要背光）**：这是 LCD 的特征，与 OLED 相反。\n  - **选项 E（寿命更长且不易烧屏）**：恰好相反，OLED 因为采用有机材料，长期显示静态图像更容易出现**烧屏（Burn-in）**现象且整体寿命通常短于无机 LED 背光屏。",
+      "en": "The correct answers are C, D, and F. Organic Light-Emitting Diode (OLED) displays feature self-emissive organic pixels that:\n1. Enable lightweight, bendable/foldable, and ultra-slim form factors (C) due to the absence of a bulky backlight assembly.\n2. Work without a backlight (D).\n3. Deliver exceptional contrast ratios and true black levels (F) by turning individual pixels completely off.\n\n• Reaching higher sustained brightness levels in well-lit environments (B) is an advantage of LED/Mini-LED backlit LCDs rather than OLEDs.\n• OLEDs do not use a backlight (A) and are more susceptible to burn-in with shorter lifespans than LCDs (E)."
+    },
+    "mnemonic": {
+      "zh": "口诀：OLED 三大优势——【无背光自发光 (Works without backlight)】、【无限对比度纯黑 (Exceptional contrast/black)】、【超薄可弯曲折叠 (Lightweight, bendable, ultra-slim)】！高亮抗强光和防烧屏长寿命是 LCD/Mini-LED 的强项！",
+      "en": "Exam Tip: OLED = Works without backlight + Exceptional contrast/black levels + Lightweight, bendable, and ultra-slim."
+    }
+  },
+  {
+    "id": 195,
+    "type": "multiple",
+    "stem": {
+      "zh": "以下列出的哪些陈述指的是 Mini-LED 显示器？（选择 3 项）",
+      "en": "Which of the statements listed below refer to Mini-LED displays? (Select 3 answers)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Use a backlight system with smaller, more densely packed LEDs"
+      },
+      {
+        "key": "B",
+        "text": "Offer excellent contrast due to refined backlight control"
+      },
+      {
+        "key": "C",
+        "text": "Achieve high peak brightness suitable for bright environments"
+      },
+      {
+        "key": "D",
+        "text": "Do not require a backlight to illuminate the screen"
+      },
+      {
+        "key": "E",
+        "text": "Provide true black levels by turning off individual pixels"
+      },
+      {
+        "key": "F",
+        "text": "Enable greater control of color accuracy due to self-emissive pixels"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：Mini-LED 背光液晶技术原理（Mini-LED vs. OLED）】\n正确答案是 A、B、C[cite: 77]。\n\n• 为什么选 A、B、C：\n  1. **Use a backlight system with smaller, more densely packed LEDs（使用包含更小、更密集排列 LED 的背光系统，选 A，您漏选的项）**：**Mini-LED 本质上依然是 LCD 液晶显示器**，它通过将传统背光灯珠微缩化（约 100–200 微米）并密集排布成数千颗 LED 阵列，实现极精细的局部调光分区（Local dimming zones）。\n  2. **Offer excellent contrast due to refined backlight control（由于精细的背光控制而提供出色的对比度，选 B）**：密集的背光分区可以独立调暗暗部区域的背光，显著减少传统 LCD 的光晕漏光问题，大幅提升对比度。\n  3. **Achieve high peak brightness suitable for bright environments（实现适合明亮环境的高峰值亮度，选 C，您漏选的项）**：密集排列的高效无机 LED 灯珠能够爆发极高的峰值亮度（常超过 1000–2000 尼特），在光线充足的房间中依然清晰锐利。\n\n• 为什么不选 Option D（无需背光，您错选的项）、Option E（通过关闭单个像素提供纯黑，您错选的项）和 Option F（自发光像素）：\n  - **无需背光（D）**、**关闭单个像素（E）**以及**自发光像素（F）**这三项全部属于 **OLED**（或未来的 MicroLED）的特征！Mini-LED **仍然依赖背光系统**，且它控制的是“背光分区（Zones）”的明暗，无法像 OLED 那样在像素级关闭单个液晶像素。",
+      "en": "The correct answers are A, B, and C. Mini-LED is an advanced LCD backlighting technology rather than a self-emissive display:\n1. It uses a backlight system composed of thousands of smaller, densely packed LEDs (A).\n2. Fine-grained local dimming zones provide refined backlight control and excellent contrast (B).\n3. High-density inorganic LEDs achieve very high peak brightness ideal for bright environments (C).\n\n• Options D (no backlight), E (turning off individual pixels for true black), and F (self-emissive pixels) describe OLED technology, not Mini-LED."
+    },
+    "mnemonic": {
+      "zh": "口诀：千万别把【Mini-LED】和【OLED】搞混！Mini-LED 依然是带背光的 LCD，三大特征是【密集微小 LED 背光 (Densely packed LEDs)】、【精细控光高对比 (Refined backlight control)】、【超高峰值亮度抗强光 (High peak brightness)】！无背光和单像素自发光是 OLED！",
+      "en": "Exam Tip: Mini-LED is still an LCD with a backlight = Densely packed LED backlight + Refined backlight contrast + High peak brightness."
+    }
+  },
+  {
+    "id": 196,
+    "type": "single",
+    "stem": {
+      "zh": "IPS、TN、VA 和 OLED 都是 LCD 显示技术的具体实现方式。",
+      "en": "IPS, TN, VA, and OLED are all implementations of LCD display technology."
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": {
+      "zh": "【考点：显示技术分类归属（LCD 家族 vs. OLED 自发光技术）】\n正确答案是 B（False / 错误）[cite: 78]。\n\n• 为什么选 False：\n  - **IPS（平面转换）**、**TN（扭曲向列）**和 **VA（垂直排列）**确实都是 **LCD（液晶显示器）**技术的三种不同液晶分子排列实现方式，它们全部依赖背光源照射液晶层来成像。\n  - 然而，**OLED（有机发光二极管）**是一种完全独立的**自发光显示技术**，既不包含液晶（Liquid Crystal）层，也不需要背光模组，因此不属于 LCD 显示技术的实现方式。\n\n• 为什么不选 True（您错选的项）：\n  - 题干将 OLED 混入了 LCD 技术家族中，因此该判断陈述为假。",
+      "en": "The correct answer is B (False). While IPS, TN, and VA are all panel variations of Liquid Crystal Display (LCD) technology that require a backlight, OLED (Organic Light-Emitting Diode) is a distinct, self-emissive display technology that uses neither liquid crystals nor a backlight."
+    },
+    "mnemonic": {
+      "zh": "口诀：LCD 家族只有三兄弟【TN、IPS、VA】；【OLED】是独立的自发光贵族，根本不是 LCD！",
+      "en": "Exam Tip: LCD implementations = TN, IPS, and VA only. OLED is a separate self-emissive technology (False)."
+    }
+  },
+  {
+    "id": 197,
+    "type": "multiple",
+    "stem": {
+      "zh": "以下哪些答案描述了逆变器（Inverter）的主要功能？（选择 3 项）",
+      "en": "Which of the following answers describe key functions of an inverter? (Select 3 answers)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Converts DC power into AC power"
+      },
+      {
+        "key": "B",
+        "text": "Essential for operating DC-powered devices from AC sources"
+      },
+      {
+        "key": "C",
+        "text": "Used for supplying voltage to backlights in older types of LCD panels"
+      },
+      {
+        "key": "D",
+        "text": "Converts AC power into DC power"
+      },
+      {
+        "key": "E",
+        "text": "Essential for operating AC-powered devices from DC sources"
+      },
+      {
+        "key": "F",
+        "text": "Used for supplying voltage to backlights in OLED displays"
+      }
+    ],
+    "answer": [
+      "A",
+      "C",
+      "E"
+    ],
+    "explanation": {
+      "zh": "【考点：逆变器（Inverter）电能转换方向与早期 LCD 背光供电原理】\n正确答案是 A、C、E[cite: 79]。\n\n• 为什么选 A、C、E：\n  1. **Converts DC power into AC power（将直流电 DC 转换为交流电 AC，选 A，您漏选的项）**：**逆变器（Inverter）**的核心定义就是把**直流电（DC）逆变为交流电（AC）**的电力电子装置。\n  2. **Used for supplying voltage to backlights in older types of LCD panels（用于为老式 LCD 面板中的背光源提供工作电压，选 C）**：早期笔记本电脑和显示器采用 **CCFL（冷阴极荧光灯管）**作为 LCD 背光，灯管需要高压交流电驱动；因此屏幕下方配备一块专门的逆变器小板，将主板输出的低压直流电转换为高压交流电点亮背光（若逆变器损坏，屏幕会变得极暗，用手电筒斜照才能隐约看到画面）。\n  3. **Essential for operating AC-powered devices from DC sources（对于使用直流电源运行交流供电设备至关重要，选 E，您漏选的项）**：既然逆变器把 DC 变成 AC，它的典型用途就是让**交流电设备（AC-powered devices）**能够从电池、太阳能板等**直流电源（DC sources）**取电工作。\n\n• 为什么不选 Option B（使用交流电源运行直流设备，您错选的项）、Option D（将交流电转换为直流电，您错选的项）和 Option F：\n  - **把 AC 变成 DC（D）**以及**让 DC 设备接在 AC 插座上工作（B）**，这是**整流器（Rectifier）**或**电源适配器/电脑开关电源（PSU）**的功能，与逆变器方向完全相反。\n  - **选项 F（为 OLED 背光供电）**：OLED 屏幕根本没有背光，不需要逆变器。",
+      "en": "The correct answers are A, C, and E. An inverter is an electrical component that:\n1. Converts Direct Current (DC) power into Alternating Current (AC) power (A).\n2. Supplies high-voltage AC power to illuminate Cold Cathode Fluorescent Lamp (CCFL) backlights in older LCD panels (C).\n3. Enables AC-powered devices to operate from DC power sources such as batteries (E).\n\n• Converting AC to DC (D) and powering DC devices from AC wall outlets (B) are the functions of a rectifier or AC-to-DC power supply unit (PSU), not an inverter.\n• OLED displays (F) do not have backlights."
+    },
+    "mnemonic": {
+      "zh": "口诀：别把逆变器和电源适配器搞反！适配器/整流器是【AC 变 DC】；【逆变器 (Inverter)】是把电池/主板的【DC 逆变成 AC】，专供【交流设备 (AC devices)】和【老式 CCFL LCD 背光灯管】使用！",
+      "en": "Exam Tip: Inverter = DC to AC + Operates AC devices from DC sources + Powers CCFL backlights in older LCD panels."
+    }
+  },
+  {
+    "id": 198,
+    "type": "multiple",
+    "stem": {
+      "zh": "以下哪些答案指的是同轴电缆（Coaxial cabling）？（选择所有适用项）",
+      "en": "Which of the following answers refer(s) to coaxial cabling? (Select all that apply)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Commonly used for cable television signals"
+      },
+      {
+        "key": "B",
+        "text": "Features a single copper conductor surrounded by insulation and shielding"
+      },
+      {
+        "key": "C",
+        "text": "Classified as a copper-based transmission medium"
+      },
+      {
+        "key": "D",
+        "text": "Typically used in broadband cable Internet connections"
+      },
+      {
+        "key": "E",
+        "text": "Contains multiple twisted pairs of copper wires in a single sheath"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：同轴电缆（Coaxial Cabling）物理结构与典型应用场景】\n正确答案是 A、B、C、D（共 4 项）[cite: 80]。\n\n• 为什么选 A、B、C、D：\n  1. **Commonly used for cable television signals（常用于有线电视信号传输，选 A）**：RG-6 / RG-59 同轴电缆配合 F 型接头是家庭和商业有线电视（CATV）信号入户的标准线缆。\n  2. **Features a single copper conductor surrounded by insulation and shielding（具有被绝缘层和屏蔽层包围的单根铜芯导体，选 B）**：同轴电缆采用同心圆层级结构，由内向外依次为：单根实心铜芯导体 -> 绝缘电介质层 -> 金属箔/编织网抗干扰屏蔽层 -> 外部塑料护套。\n  3. **Classified as a copper-based transmission medium（归类为铜缆传输介质，选 C）**：同轴电缆通过内部金属铜芯传输电信号，属于铜质有线传输介质（而非光纤）。\n  4. **Typically used in broadband cable Internet connections（通常用于宽带同轴电缆互联网连接，选 D，您漏选的项）**：有线电视运营商（ISP）通过 DOCSIS 协议利用同一根同轴电缆向家庭和企业提供高速宽带互联网接入（连接到 Cable Modem）。\n\n• 为什么不选 Option E（在单个护套内包含多对双绞铜线）：\n  - 在同一外皮内包含多对相互绞合铜线的线缆是**双绞线（Twisted-pair cabling，如 UTP/STP）**，而不是单芯结构的同轴电缆。",
+      "en": "The correct answers are A, B, C, and D. Coaxial cabling (such as RG-6 with F-connectors) is:\n1. Commonly used to deliver cable television (CATV) signals (A).\n2. Constructed with a single central copper conductor surrounded by dielectric insulation, metallic shielding, and an outer jacket (B).\n3. Classified as a copper-based transmission medium (C).\n4. Typically used for DOCSIS broadband cable Internet connections to a cable modem (D).\n\n• Containing multiple twisted pairs of copper wires inside a single sheath (E) describes twisted-pair cabling (UTP/STP), not coaxial cable."
+    },
+    "mnemonic": {
+      "zh": "口诀：同轴电缆（Coaxial）四大特征——【铜质介质 (Copper-based)】、【单根铜芯+绝缘+屏蔽层 (Single copper conductor)】、【有线电视信号 (Cable TV)】以及【宽带 Cable 上网 (Broadband cable Internet)】！多对绞线那是双绞线！",
+      "en": "Exam Tip: Coaxial cable = Copper medium + Single copper conductor with insulation/shielding + Cable TV + Broadband cable Internet."
+    }
+  },
+  {
+    "id": 199,
+    "type": "single",
+    "stem": {
+      "zh": "以下哪项答案【不】属于 UTP（非屏蔽双绞线）布线的特征？",
+      "en": "Which of the following answers does not refer to UTP cabling?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Used in Ethernet networks and telephone systems"
+      },
+      {
+        "key": "B",
+        "text": "Characterized by low cost and ease of installation"
+      },
+      {
+        "key": "C",
+        "text": "Shielded to reduce external interference"
+      },
+      {
+        "key": "D",
+        "text": "In Ethernet networks, installed with RJ45 connector type"
+      },
+      {
+        "key": "E",
+        "text": "Classified as twisted-pair copper cabling"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：非屏蔽双绞线（UTP）与屏蔽双绞线（STP）的核心区别】\n正确答案是 C（Shielded to reduce external interference / 带有屏蔽层以减少外部电磁干扰）[cite: 81]。\n\n• 为什么选 Option C（注意题干中的否定词 “does not refer to”）：\n  - UTP 的全称是 Unshielded Twisted Pair（非屏蔽双绞线）**。顾名思义，UTP 内部**没有任何金属箔或编织网屏蔽层（Unshielded）**，它完全依靠线对之间精密的绞合节距来抵消串扰和外部电磁干扰（EMI）。\n  - “**带有屏蔽层以减少外部干扰（Shielded to reduce external interference）**”描述的是 **STP（Shielded Twisted Pair / 屏蔽双绞线）**，因此**不**属于 UTP 的特征。\n\n• 为什么不选 Option E（归类为双绞铜缆，您错选的项）以及 A、B、D：\n  - 本题问的是“哪项**不属于 UTP”，而您错选的 **E（属于双绞铜缆）**、**A（用于以太网和电话系统）**、**B（成本低且易于安装）**以及 **D（在以太网中使用 RJ45 水晶头安装）**全都是 UTP 的真实特征，因此不能选。",
+      "en": "The correct answer is C (Shielded to reduce external interference). UTP stands for Unshielded Twisted Pair—it contains no metallic foil or braided shielding and relies solely on wire twisting to mitigate electromagnetic interference (EMI). Having shielding to reduce interference describes STP (Shielded Twisted Pair), NOT UTP.\n\n• Options A, B, D, and E are all accurate characteristics of UTP cabling."
+    },
+    "mnemonic": {
+      "zh": "口诀：做题务必看清否定词【does NOT】！UTP 的 U 就是【Unshielded（无屏蔽）】，只要看到【Shielded（带屏蔽层）】就一定是 STP，直接选它作为“不属于 UTP”的答案！",
+      "en": "Exam Tip: Watch for 'does NOT'! UTP = Unshielded Twisted Pair; 'Shielded to reduce external interference' refers to STP."
+    }
   }
 ]
