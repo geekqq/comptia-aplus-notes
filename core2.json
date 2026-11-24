@@ -6410,5 +6410,389 @@
       "zh": "口诀：做题务必看清否定词【does NOT】！UTP 的 U 就是【Unshielded（无屏蔽）】，只要看到【Shielded（带屏蔽层）】就一定是 STP，直接选它作为“不属于 UTP”的答案！",
       "en": "Exam Tip: Watch for 'does NOT'! UTP = Unshielded Twisted Pair; 'Shielded to reduce external interference' refers to STP."
     }
+  },
+  {
+    "id": 200,
+    "type": "single",
+    "stem": {
+      "zh": "USB 2.0 允许的最大线缆长度是多少？",
+      "en": "What is the maximum allowable cable length for USB 2.0?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "3 meters"
+      },
+      {
+        "key": "B",
+        "text": "4.5 meters"
+      },
+      {
+        "key": "C",
+        "text": "5 meters"
+      },
+      {
+        "key": "D",
+        "text": "10 meters"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：USB 2.0 物理规范与最大线缆长度限制（5 meters）】\n正确答案是 C（5 meters / 5 米）[cite: 82]。\n\n• 为什么选 5 meters：\n  - 根据 USB 2.0 官方技术规范，受限于信号传播延迟（Propagation delay）和总线往返响应时间窗口要求，无源（Passive）USB 2.0 铜缆的**最大允许长度为 5 米**（约 16 英尺 5 英寸）。若需突破 5 米距离，则必须串联有源中继延长线（Active repeater cable）或 USB 集线器（Hub）。\n\n• 为什么不选 10 meters（您错选的项）：\n  - 10 米超出了无源 USB 2.0 信号时序与衰减极限，会导致主控器收不到设备握手响应而识别失败。\n\n• 为什么不选 3 meters 或 4.5 meters：\n  - 选项 A（3 meters / 3 米）**：是 **USB 3.x 高速连接的最大推荐实用线缆长度。\n  - **选项 B（4.5 meters / 4.5 米）**：是传统 **FireWire 400（IEEE 1394a）**接口的单根线缆最大长度。",
+      "en": "The correct answer is C (5 meters). Under the USB 2.0 specification, signal timing and propagation delay constraints limit passive USB 2.0 cables to a maximum length of 5 meters (~16.4 feet) without an active repeater or hub.\n\n• 10 meters (D) exceeds the passive USB 2.0 signal timing limit.\n• 3 meters (A) is the maximum practical cable length for USB 3.x connections, and 4.5 meters (B) is the maximum cable length for FireWire 400 (IEEE 1394a)."
+    },
+    "mnemonic": {
+      "zh": "口诀：常见外设线缆长度死记——【USB 2.0 = 5 米】、【USB 3.x = 3 米】、【FireWire 400 = 4.5 米】！",
+      "en": "Exam Tip: Max cable lengths: USB 2.0 = 5 meters | USB 3.x = 3 meters | FireWire 400 = 4.5 meters."
+    }
+  },
+  {
+    "id": 201,
+    "type": "multiple",
+    "stem": {
+      "zh": "以下哪些答案指的是 USB 3.0 标准？（选择 3 项）",
+      "en": "Which of the following answers refer to the USB 3.0 standard? (Select 3 answers)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "High Speed USB"
+      },
+      {
+        "key": "B",
+        "text": "Backward compatibility with earlier USB versions"
+      },
+      {
+        "key": "C",
+        "text": "3 Gbps data transfer rate"
+      },
+      {
+        "key": "D",
+        "text": "Full Speed USB"
+      },
+      {
+        "key": "E",
+        "text": "5 Gbps data transfer rate"
+      },
+      {
+        "key": "F",
+        "text": "SuperSpeed USB"
+      },
+      {
+        "key": "G",
+        "text": "10 Gbps data transfer rate"
+      },
+      {
+        "key": "H",
+        "text": "No backward compatibility with earlier USB versions"
+      }
+    ],
+    "answer": [
+      "B",
+      "E",
+      "F"
+    ],
+    "explanation": {
+      "zh": "【考点：USB 3.0 核心技术参数与市场命名（SuperSpeed USB / 5 Gbps）】\n正确答案是 B、E、F[cite: 83]。\n\n• 为什么选 B、E、F：\n  1. **Backward compatibility with earlier USB versions（向后兼容早期 USB 版本，选 B）**：USB 3.0 在保留原有 4 根 USB 2.0 触点的基础上新增了 5 根高速差分引脚，因此可完全向下兼容 USB 2.0 和 USB 1.1 设备。\n  2. **5 Gbps data transfer rate（5 Gbps 数据传输速率，选 E，您漏选的项）**：初代 **USB 3.0**（后被 USB-IF 重命名为 USB 3.1 Gen 1 / USB 3.2 Gen 1）的理论最大传输速率为 **5 Gbps**（是 USB 2.0 480 Mbps 的十倍以上）。\n  3. **SuperSpeed USB（超高速 USB，选 F）**：USB 3.0 的官方市场品牌名称为 **SuperSpeed USB**（接口通常采用蓝色舌片并带有 SS 标志）。\n\n• 为什么不选 Option G（10 Gbps data transfer rate，您错选的项）以及 A、C、D、H：\n  - **选项 G（10 Gbps）**：属于下一代 **USB 3.1（Gen 2）**的传输速率（即下一题考点），而不是最初的 USB 3.0 标准。\n  - **选项 A（High Speed USB / 高速 USB）**：指 **USB 2.0**（480 Mbps）。\n  - **选项 D（Full Speed USB / 全速 USB）**：指 **USB 1.1**（12 Mbps）。\n  - **选项 C（3 Gbps）**：是 **SATA II（SATA 3.0 Gbps）**硬盘接口的速率，并非 USB 规范。",
+      "en": "The correct answers are B, E, and F. The original USB 3.0 standard (later renamed USB 3.1 Gen 1 / USB 3.2 Gen 1) is characterized by:\n1. Backward compatibility with earlier USB 2.0 and 1.1 devices (B).\n2. A maximum signaling data transfer rate of 5 Gbps (E).\n3. The official marketing designation 'SuperSpeed USB' (F).\n\n• 10 Gbps (G) applies to USB 3.1 (Gen 2) rather than USB 3.0.\n• High Speed USB (A) refers to USB 2.0 (480 Mbps), Full Speed USB (D) refers to USB 1.1 (12 Mbps), and 3 Gbps (C) is the SATA II interface speed."
+    },
+    "mnemonic": {
+      "zh": "口诀：USB 速度命名三兄弟——USB 1.1 叫【Full Speed (12 Mbps)】、USB 2.0 叫【High Speed (480 Mbps)】、USB 3.0 叫【SuperSpeed (5 Gbps)】且向下兼容！",
+      "en": "Exam Tip: USB 1.1 = Full Speed (12 Mbps) | USB 2.0 = High Speed (480 Mbps) | USB 3.0 = SuperSpeed (5 Gbps) + Backward compatible."
+    }
+  },
+  {
+    "id": 202,
+    "type": "single",
+    "stem": {
+      "zh": "USB 3.1 相比其前代产品有所改进，支持的最大数据传输速率为：",
+      "en": "USB 3.1 improves over its predecessors by supporting a maximum data transfer rate of:"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "6 Gbps"
+      },
+      {
+        "key": "B",
+        "text": "10 Gbps"
+      },
+      {
+        "key": "C",
+        "text": "12 Gbps"
+      },
+      {
+        "key": "D",
+        "text": "20 Gbps"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": {
+      "zh": "【考点：USB 3.x 代际速率演进之 USB 3.1（10 Gbps）】\n正确答案是 B（10 Gbps）[cite: 84]。\n\n• 为什么选 10 Gbps：\n  - USB 3.1**（即 USB 3.1 Gen 2 / SuperSpeed+）通过改进线路编码方案（从 8b/10b 升级为高效的 128b/132b），将 USB 3.0 的 5 Gbps 带宽翻倍提升至 **10 Gbps**。\n\n• 为什么不选 20 Gbps（您错选的项）：\n  - **20 Gbps 是后续 **USB 3.2**（通过 USB-C 双通道合并实现的 USB 3.2 Gen 2x2）的理论最大传输速率（即下一题的考点）。\n\n• 为什么不选 6 Gbps 或 12 Gbps：\n  - **选项 A（6 Gbps）**：是 **SATA III（SATA 6.0 Gbps）**存储接口的速率。\n  - **选项 C（12 Gbps）**：是企业级 **SAS-3（Serial Attached SCSI 3）**存储接口的速率。",
+      "en": "The correct answer is B (10 Gbps). USB 3.1 (specifically USB 3.1 Gen 2 / SuperSpeed USB 10Gbps) doubles the 5 Gbps throughput of USB 3.0 to a maximum data transfer rate of 10 Gbps.\n\n• 20 Gbps (D) is the maximum rate of USB 3.2 (Gen 2x2).\n• 6 Gbps (A) corresponds to SATA III, and 12 Gbps (C) corresponds to SAS-3."
+    },
+    "mnemonic": {
+      "zh": "口诀：USB 3 代速率翻倍阶梯——【USB 3.0 = 5 Gbps】、【USB 3.1 = 10 Gbps】、【USB 3.2 = 20 Gbps】、【USB4 = 40 Gbps】！每代直接乘以 2！",
+      "en": "Exam Tip: USB 3.x doubling ladder: USB 3.0 = 5 Gbps | USB 3.1 = 10 Gbps | USB 3.2 = 20 Gbps | USB4 = 40 Gbps."
+    }
+  },
+  {
+    "id": 203,
+    "type": "single",
+    "stem": {
+      "zh": "USB 3.2 支持的最大理论数据传输速率是多少？",
+      "en": "What is the maximum theoretical data transfer rate supported by USB 3.2?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "10 Gbps"
+      },
+      {
+        "key": "B",
+        "text": "20 Gbps"
+      },
+      {
+        "key": "C",
+        "text": "30 Gbps"
+      },
+      {
+        "key": "D",
+        "text": "40 Gbps"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": {
+      "zh": "【考点：USB 3.2 最大理论传输速率（20 Gbps）】\n正确答案是 B（20 Gbps）[cite: 85]。\n\n• 为什么选 20 Gbps：\n  - USB 3.2**（特别是利用正反盲插 USB Type-C 接口中两组高速通道并行传输的 **USB 3.2 Gen 2x2 规格）将两条 10 Gbps 通道合并，从而达到 20 Gbps 的最大理论数据传输速率。\n\n• 为什么不选 40 Gbps（您错选的项）：\n  - 40 Gbps 是基于 Thunderbolt 3 底层协议架构的 **USB4**（以及 Thunderbolt 3 / Thunderbolt 4）的最大速率，而不是 USB 3.2 的速率。\n\n• 为什么不选 10 Gbps 或 30 Gbps：\n  - **选项 A（10 Gbps）**：属于 **USB 3.1**（单通道 10 Gbps）的速率。\n  - **选项 C（30 Gbps）**：USB 规范中不存在 30 Gbps 速率档位。",
+      "en": "The correct answer is B (20 Gbps). USB 3.2 (specifically USB 3.2 Gen 2x2, which bonds two 10 Gbps lanes over a USB Type-C connector) achieves a maximum theoretical data transfer rate of 20 Gbps.\n\n• 40 Gbps (D) is the maximum transfer rate for USB4, Thunderbolt 3, and Thunderbolt 4.\n• 10 Gbps (A) is the speed of USB 3.1, and 30 Gbps (C) is not a valid USB specification."
+    },
+    "mnemonic": {
+      "zh": "口诀：记牢乘二口诀——3.0 是 5G，3.1 是 10G，【USB 3.2 = 20 Gbps】，【USB4 / 雷电 3 / 雷电 4 = 40 Gbps】！",
+      "en": "Exam Tip: Maximum theoretical speed of USB 3.2 (Gen 2x2) = 20 Gbps (40 Gbps is USB4 / Thunderbolt 3 & 4)."
+    }
+  },
+  {
+    "id": 204,
+    "type": "single",
+    "stem": {
+      "zh": "典型 USB 3.x 连接的最大实用线缆长度是多少？",
+      "en": "What is the maximum practical cable length for a typical USB 3.x connection?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "1 meter"
+      },
+      {
+        "key": "B",
+        "text": "3 meters"
+      },
+      {
+        "key": "C",
+        "text": "4.5 meters"
+      },
+      {
+        "key": "D",
+        "text": "5 meters"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": {
+      "zh": "【考点：USB 3.x 最大实用线缆长度（3 meters）】\n正确答案是 B（3 meters / 3 米）[cite: 86]。\n\n• 为什么选 3 meters：\n  - 虽然 USB 3.x 官方规范未像 USB 2.0 那样设定硬性长度上限，但由于 5 Gbps 至 20 Gbps 高频信号在铜缆中的衰减急剧增大，工业界和 CompTIA A+ 考纲公认的典型无源 USB 3.x 连接最大实用线缆长度为 3 米**（约 9.8 英尺；对于 10 Gbps/20 Gbps 满速连接，无源线缆通常更短，仅 0.8–1 米）。\n\n• 为什么不选 5 meters（您错选的项）：\n  - **5 meters（5 米）**是低频 **USB 2.0 的最大允许线缆长度，在 3 米以上的无源铜缆上运行 USB 3.x 会出现严重误码和降速。\n\n• 为什么不选 1 meter 或 4.5 meters：\n  - **选项 A（1 meter）**：虽然全速 USB 3.1 Gen 2 / 3.2 Gen 2x2（10–20 Gbps）无源线缆通常在 1 米左右，但针对通用 USB 3.x（包含 5 Gbps USB 3.0）的典型最大实用长度标准考题答案为 **3 meters**。\n  - **选项 C（4.5 meters）**：是 FireWire 400 的最大线缆长度。",
+      "en": "The correct answer is B (3 meters). While the USB 3.x specification does not mandate a rigid maximum length, signal attenuation at multi-gigabit speeds limits a typical passive USB 3.x cable to a maximum practical length of 3 meters (~9.8 feet).\n\n• 5 meters (D) is the maximum cable length for USB 2.0.\n• 4.5 meters (C) applies to FireWire 400, and 1 meter (A) is shorter than the general 3-meter practical limit for standard USB 3.x connections."
+    },
+    "mnemonic": {
+      "zh": "口诀：速度越快、线越短！USB 2.0 慢所以能拉【5 米】；【USB 3.x】高频易衰减，最大实用长度只有【3 米】！",
+      "en": "Exam Tip: Typical USB 3.x maximum practical cable length = 3 meters (vs. 5 meters for USB 2.0)."
+    }
+  },
+  {
+    "id": 205,
+    "type": "single",
+    "stem": {
+      "zh": "以下列出的哪项答案指的是用于连接调制解调器、打印机、鼠标和其他外围设备的老式串行电缆标准？",
+      "en": "Which of the answers listed below refers to an older type of serial cable used to connect modems, printers, mice, and other peripheral devices?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "RJ11"
+      },
+      {
+        "key": "B",
+        "text": "RG-6"
+      },
+      {
+        "key": "C",
+        "text": "RS-232"
+      },
+      {
+        "key": "D",
+        "text": "RG-59"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：传统串口通信标准（RS-232 vs. RJ11 vs. 同轴电缆）】\n正确答案是 C（RS-232）[cite: 87]。\n\n• 为什么选 RS-232：\n  - RS-232**（Recommended Standard 232 / 推荐标准 232）是计算机工业经典的**串行数据通信接口标准**，早期 PC 上通常配备 **DB-9（9 针）**或 **DB-25（25 针）**梯形 D-sub 串口（COM 端口），广泛用于连接外置拨号调制解调器（Modem）、串口鼠标、针式打印机、工业仪器以及路由器/交换机的 Console 配置线。\n\n• 为什么不选 RJ11（您错选的项）：\n  - **RJ11 是一种小型塑料模块化水晶头（通常为 6P2C 或 6P4C），专门用于连接**模拟电话线（POTS）和 ADSL 宽带电话线**，并不是连接鼠标、打印机等计算机外设的串行电缆标准。\n\n• 为什么不选 RG-6 或 RG-59：\n  - **选项 B（RG-6）**和 **选项 D（RG-59）**：都是用于传输有线电视（CATV）、卫星电视和同轴宽带信号的**同轴电缆（Coaxial cable）**型号。",
+      "en": "The correct answer is C (RS-232). RS-232 is the legacy serial communication standard (typically terminated with DB-9 or DB-25 connectors) historically used on PCs to connect dial-up modems, serial mice, printers, and network console interfaces.\n\n• RJ11 (A) is a modular telephone jack/connector used for analog POTS phone lines and DSL connections.\n• RG-6 (B) and RG-59 (D) are coaxial cable specifications used for cable television and broadband Internet."
+    },
+    "mnemonic": {
+      "zh": "口诀：连接老式猫（Modem）、串口鼠标和打印机（DB-9/DB-25 针接口）的经典串行线缆标准叫【RS-232】！RJ11 是电话线水晶头，RG-6/RG-59 是有线电视同轴电缆！",
+      "en": "Exam Tip: Legacy serial cable standard (DB-9/DB-25) for modems, printers, and mice = RS-232."
+    }
+  },
+  {
+    "id": 206,
+    "type": "single",
+    "stem": {
+      "zh": "Thunderbolt（雷电）铜缆的最大允许长度是多少？",
+      "en": "What is the maximum allowable length for a Thunderbolt copper cable?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Up to 3 meters"
+      },
+      {
+        "key": "B",
+        "text": "Up to 6 meters"
+      },
+      {
+        "key": "C",
+        "text": "Up to 10 meters"
+      },
+      {
+        "key": "D",
+        "text": "Up to 15 meters"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": {
+      "zh": "【考点：Thunderbolt（雷电）铜缆最大长度限制（Up to 3 meters）】\n正确答案是 A（Up to 3 meters / 最长 3 米）[cite: 88]。\n\n• 为什么选 Up to 3 meters：\n  - **Thunderbolt（雷电）**接口传输高达 20 Gbps 至 40 Gbps 的超高频 PCIe 与 DisplayPort 混合信号。受限于铜导线中的高频信号衰减与串扰，采用纯铜导体的**有源（Active）Thunderbolt 铜缆最大允许长度为 3 米**（约 9.8 英尺；而廉价的无源 Passive 40 Gbps 铜缆甚至更短，仅支持 0.5–0.8 米）。\n\n• 为什么不选 Up to 10 meters（您错选的项）、Up to 6 meters 或 Up to 15 meters：\n  - 任何超过 3 米的金属铜缆都无法维持 Thunderbolt 所需的高频信号完整性；如果需要在机房或演播室进行超远距离雷电设备连接，必须改用内置光电转换芯片的**光纤 Thunderbolt 线缆**（即下一题考点，最长可达 60 米）。",
+      "en": "The correct answer is A (Up to 3 meters). Due to high-frequency signal attenuation at 20–40 Gbps speeds, Thunderbolt copper cables (specifically active copper cables) are limited to a maximum allowable length of 3 meters (~9.8 feet).\n\n• Lengths of 6 meters (B), 10 meters (C), or 15 meters (D) exceed the electrical limits of copper Thunderbolt cables and require fiber-optic Thunderbolt cabling instead."
+    },
+    "mnemonic": {
+      "zh": "口诀：铜线怕衰减——【Thunderbolt 雷电铜缆】最长只能到【3 米 (Up to 3 meters)】（和 USB 3.x 铜缆一样都是 3 米）！想拉长必须换光纤雷电线（60 米）！",
+      "en": "Exam Tip: Thunderbolt copper cable max length = Up to 3 meters (fiber-optic Thunderbolt = up to 60 meters)."
+    }
+  },
+  {
+    "id": 207,
+    "type": "single",
+    "stem": {
+      "zh": "光纤 Thunderbolt（雷电）接口允许的最大线缆长度为：",
+      "en": "The fiber-optic Thunderbolt interface allows for a maximum cable length of:"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "30 meters"
+      },
+      {
+        "key": "B",
+        "text": "40 meters"
+      },
+      {
+        "key": "C",
+        "text": "50 meters"
+      },
+      {
+        "key": "D",
+        "text": "60 meters"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：光纤 Thunderbolt（雷电）线缆最大长度（60 meters）】\n正确答案是 D（60 meters / 60 米）[cite: 89]。\n\n• 为什么选 60 meters：\n  - **光纤 Thunderbolt 线缆（Fiber-optic Thunderbolt cable）**在两端插头内部集成了微型激光收发器，将电信号转换为光脉冲通过玻璃光纤传输，从而彻底摆脱了铜缆的电阻衰减与电磁干扰限制，官方规范允许的**最大线缆长度高达 60 米**（约 200 英尺，注意：光纤雷电线仅传输高速数据与视频信号，不提供 USB-PD 对外供电）。\n\n• 为什么不选 50 meters（您错选的项）、30 meters 或 40 meters：\n  - 30 米、40 米、50 米均为混淆数字，CompTIA A+ 认证考纲中标准化的光纤 Thunderbolt 最大距离规格为 **60 meters**。",
+      "en": "The correct answer is D (60 meters). Fiber-optic Thunderbolt cables use optical transceivers built into the connector housings to transmit data via light pulses, eliminating copper electrical attenuation and allowing a maximum cable length of up to 60 meters (~200 feet).\n\n• 30 meters (A), 40 meters (B), and 50 meters (C) are incorrect distractor figures."
+    },
+    "mnemonic": {
+      "zh": "口诀：雷电线缆长短双雄——【铜缆 Thunderbolt = 3 米】、【光纤 Thunderbolt = 60 米】（整整翻了 20 倍）！",
+      "en": "Exam Tip: Fiber-optic Thunderbolt max cable length = 60 meters (vs. 3 meters for copper Thunderbolt)."
+    }
+  },
+  {
+    "id": 208,
+    "type": "single",
+    "stem": {
+      "zh": "以下哪项答案最准确地描述了 DisplayPort 的信号传输能力？",
+      "en": "Which of the following answers best describes the signal capabilities of DisplayPort?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Analog video"
+      },
+      {
+        "key": "B",
+        "text": "Audio only"
+      },
+      {
+        "key": "C",
+        "text": "Digital audio/video"
+      },
+      {
+        "key": "D",
+        "text": "Video only"
+      },
+      {
+        "key": "E",
+        "text": "Analog audio"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：DisplayPort 接口信号类型（数字音视频同步传输 / Digital Audio/Video）】\n正确答案是 C（Digital audio/video / 数字音频与数字视频）[cite: 90]。\n\n• 为什么选 Digital audio/video：\n  - **DisplayPort（DP）**是由视频电子标准协会（VESA）制定的现代化**全数字显示接口**。与 HDMI 一样，DisplayPort 通过单根线缆即可同时传输高分辨率、高刷新率的**数字视频信号**以及多声道无损**数字音频信号**（并额外支持多流传输 MST 菊花链串联多台显示器）。\n\n• 为什么不选 Analog video（模拟视频，您错选的项）：\n  - **模拟视频（Analog video）**是老一代 **VGA（15 针 D-sub）**接口或 DVI-A 接口传输的信号类型；DisplayPort 从诞生起就是**纯数字接口**，原生不传输模拟视频信号（只有支持 DP++ 双模的接口才可通过专用转接器输出模拟/HDMI 信号）。\n\n• 为什么不选 Audio only、Video only 或 Analog audio：\n  - DisplayPort 既能传视频也能传音频，且两者均为数字信号，因此不是单一信号接口或模拟音频接口。",
+      "en": "The correct answer is C (Digital audio/video). DisplayPort (DP) is a modern VESA-standardized digital display interface capable of transmitting both high-resolution digital video and multi-channel digital audio simultaneously over a single cable.\n\n• Analog video (A) describes legacy VGA or DVI-A connections rather than DisplayPort, which is purely digital.\n• DisplayPort carries both audio and video (ruling out B and D) in digital form (ruling out E)."
+    },
+    "mnemonic": {
+      "zh": "口诀：现代主流两大高清接口【HDMI】和【DisplayPort (DP)】全都是【数字音视频双传 (Digital audio/video)】！只有老式【VGA】才是纯模拟视频 (Analog video)！",
+      "en": "Exam Tip: DisplayPort and HDMI = Digital audio/video. VGA = Analog video only."
+    }
+  },
+  {
+    "id": 209,
+    "type": "single",
+    "stem": {
+      "zh": "USB-C 支持备用模式（Alternate Mode / Alt Mode），允许它使用 DisplayPort 或 HDMI 等协议传输视频信号。通过 Alt Mode，USB-C 可以将视频传输到显示器或电视等外部显示设备，提供与专用视频线缆相同的功能。要连接到大多数外部显示器，USB-C 需要兼容的适配器或线缆，例如 USB-C 转 DisplayPort 或 USB-C 转 HDMI。",
+      "en": "USB-C supports Alternate Mode (Alt Mode), which allows it to transmit video signals using protocols such as DisplayPort or HDMI. Through Alt Mode, USB-C can deliver video to external displays like monitors or TVs, offering the same functionality as dedicated video cables. To connect to most external displays, USB-C requires a compatible adapter or cable, such as USB-C to DisplayPort or USB-C to HDMI."
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": {
+      "zh": "【考点：USB Type-C 备用模式（USB-C Alternate Mode）音视频输出原理】\n正确答案是 A（True / 正确）[cite: 91]。\n\n• 为什么选 True：\n  - USB Type-C 备用模式（Alt Mode）**允许设备将 USB-C 线缆内部的高速差分通道重新分配，直接原生传输非 USB 协议的数据流——其中最常见的就是 **DisplayPort Alt Mode**（以及 HDMI Alt Mode 和 Thunderbolt）。\n  - 借助 Alt Mode，轻薄笔记本电脑、平板或手机可以通过单个 USB-C 接口输出与原生 DP/HDMI 线缆完全同等的数字音视频信号；对于没有原生 USB-C 输入口的传统显示器或电视，只需使用一条 **USB-C 转 DisplayPort 或 USB-C 转 HDMI 线缆/适配器即可直接连接显示，因此题干描述完全正确。\n\n• 为什么不选 False（您错选的项）：\n  - 题干对 USB-C Alt Mode 的技术原理、协议支持（DP/HDMI）以及转接线缆需求的阐述全部准确无误，故判断为 True。",
+      "en": "The correct answer is A (True). USB-C Alternate Mode (Alt Mode) repurposes high-speed lanes in a USB-C connector to natively carry non-USB video protocols—most commonly DisplayPort or HDMI—allowing a USB-C port to drive external monitors or TVs via a USB-C to DisplayPort or USB-C to HDMI cable/adapter."
+    },
+    "mnemonic": {
+      "zh": "口诀：USB-C 不只是传文件和充电，开启【备用模式 (Alt Mode)】就能直接变身【DisplayPort 或 HDMI 视频输出口】，配一根 USB-C 转 DP/HDMI 线就能外接显示器（True）！",
+      "en": "Exam Tip: USB-C Alternate Mode (Alt Mode) natively carries DisplayPort/HDMI video signals to external displays (True)."
+    }
   }
 ]
