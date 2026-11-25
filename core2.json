@@ -6794,5 +6794,461 @@
       "zh": "口诀：USB-C 不只是传文件和充电，开启【备用模式 (Alt Mode)】就能直接变身【DisplayPort 或 HDMI 视频输出口】，配一根 USB-C 转 DP/HDMI 线就能外接显示器（True）！",
       "en": "Exam Tip: USB-C Alternate Mode (Alt Mode) natively carries DisplayPort/HDMI video signals to external displays (True)."
     }
+  },
+  {
+    "id": 210,
+    "type": "multiple",
+    "stem": {
+      "zh": "以下哪些答案指的是 eSATA 接口？（选择所有适用项）",
+      "en": "Which of the following answers refer(s) to eSATA? (Select all that apply)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Data transfer rate of up to 4 Gbps"
+      },
+      {
+        "key": "B",
+        "text": "Maximum cable length of 1 meter"
+      },
+      {
+        "key": "C",
+        "text": "Hot-swappable functionality"
+      },
+      {
+        "key": "D",
+        "text": "A standard cable length of up to 2 meters"
+      },
+      {
+        "key": "E",
+        "text": "External connection for storage"
+      },
+      {
+        "key": "F",
+        "text": "Data transfer rate of up to 6 Gbps"
+      }
+    ],
+    "answer": [
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "explanation": {
+      "zh": "【考点：eSATA（外置串行 ATA）技术规范与线缆长度对比】\n正确答案是 C、D、E、F（共 4 项）[cite: 92]。\n\n• 为什么选 C、D、E、F：\n  1. Hot-swappable functionality（支持热插拔功能，选 C）**：只要主板 BIOS/UEFI 开启了 AHCI 模式，eSATA 接口完全支持在不关闭电脑电源的情况下安全插拔外置硬盘。\n  2. **A standard cable length of up to 2 meters（标准线缆长度最长可达 2 米，选 D，您漏选的项）**：eSATA 采用了屏蔽性能更强的专用线缆和更高的信号电平，因此其标准最大线缆长度达到了 **2 米**（约 6.56 英尺），是机箱内部普通 SATA 线缆的两倍。\n  3. **External connection for storage（用于存储设备的外部连接，选 E，您漏选的项）**：eSATA（External SATA）的设计初衷就是将主板内部的 SATA 总线直接延伸到机箱外部，直接连接外置硬盘盒或磁盘阵列，无需像 USB 硬盘盒那样经过桥接芯片协议转换。\n  4. **Data transfer rate of up to 6 Gbps（数据传输速率最高可达 6 Gbps，选 F）**：遵循 SATA 3.0 规范的 eSATA 接口可提供与内置 SATA III 相同的最高 **6 Gbps 原生传输带宽。\n\n• 为什么不选 Option B（最大线缆长度为 1 米，您错选的项）和 Option A：\n  - **选项 B（1 meter / 1 米）**：**1 米**是**机箱内部普通 SATA 线缆（Internal SATA）**的最大长度限制，而不是外置 eSATA（2 米）的长度。\n  - **选项 A（4 Gbps）**：SATA 历代标准速率只有 1.5 Gbps（SATA I）、3 Gbps（SATA II）和 6 Gbps（SATA III），不存在 4 Gbps 规格。",
+      "en": "The correct answers are C, D, E, and F. External Serial ATA (eSATA) extends the internal SATA bus outside the computer chassis and is characterized by:\n1. Hot-swappable functionality (C) when AHCI mode is enabled.\n2. A standard maximum cable length of up to 2 meters (D) (~6.56 feet), made possible by thicker shielding and slightly higher signal voltage.\n3. Providing an external connection for storage devices (E) with native SATA performance.\n4. Data transfer rates of up to 6 Gbps (F) under the SATA 3.0 specification.\n\n• Maximum cable length of 1 meter (B) applies to internal SATA cables rather than eSATA (2 meters).\n• 4 Gbps (A) is not a valid SATA transfer rate (SATA versions operate at 1.5 Gbps, 3 Gbps, and 6 Gbps)."
+    },
+    "mnemonic": {
+      "zh": "口诀：内置 SATA 线最长【1 米】，外置【eSATA】线加粗屏蔽最长【2 米】！同时具备【外接存储】、【支持热插拔】和【最高 6 Gbps 速率】！",
+      "en": "Exam Tip: eSATA = External storage + Hot-swappable + Up to 6 Gbps + Up to 2 meters cable length (internal SATA = 1 meter)."
+    }
+  },
+  {
+    "id": 211,
+    "type": "multiple",
+    "stem": {
+      "zh": "F 型连接器（F-type connector）的典型特征有哪些？（选择 3 项）",
+      "en": "What are the characteristic features of the F-type connector? (Select 3 answers)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Threaded (screw-on) connector"
+      },
+      {
+        "key": "B",
+        "text": "Satellite/cable TV, broadband Internet connections via cable modems"
+      },
+      {
+        "key": "C",
+        "text": "Twisted-pair copper cabling"
+      },
+      {
+        "key": "D",
+        "text": "Bayonet-style (twist-and-lock) connector"
+      },
+      {
+        "key": "E",
+        "text": "Coaxial cabling"
+      },
+      {
+        "key": "F",
+        "text": "Professional audio and video equipment, CCTV systems, laboratory, and testing equipment"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "E"
+    ],
+    "explanation": {
+      "zh": "【考点：同轴电缆接头辨析（F-type 螺纹接头 vs. BNC 卡口接头）】\n正确答案是 A、B、E[cite: 93]。\n\n• 为什么选 A、B、E：\n  1. **Threaded (screw-on) connector（螺纹旋转拧紧式连接器，选 A，您漏选的项）**：家庭有线电视和宽带猫后面那种带六角螺母、需要一圈圈拧紧固定在接口上的金属接头就是 **F-type（F 型）连接器**。\n  2. **Satellite/cable TV, broadband Internet connections via cable modems（卫星/有线电视，以及通过有线电视调制解调器进行的宽带互联网连接，选 B，您漏选的项）**：F 型接头专门用于家用和商业 **CATV 有线电视、卫星电视接收机以及 DOCSIS Cable Modem 宽带入户连接**。\n  3. **Coaxial cabling（同轴电缆，选 E）**：F 型连接器压接在 RG-6 或 RG-59 **同轴电缆**两端（直接使用同轴电缆本身的实心铜芯作为中心插针）。\n\n• 为什么不选 Option D（卡口旋转锁定式连接器，您错选的项）和 Option F（专业音视频设备、CCTV 监控系统、实验室和测试设备，您错选的项）：\n  - **卡口式（Bayonet-style / twist-and-lock，旋转四分之一圈即锁死）**以及用于 **CCTV 闭路电视监控、广电专业音视频和示波器等实验室测试仪器**的同轴接头，全部是 **BNC 连接器**的特征，而非 F-type 连接器！\n\n• 为什么不选 Option C（Twisted-pair copper cabling / 双绞铜缆）：\n  - 双绞线使用的是 RJ45（网线）或 RJ11（电话线）塑料水晶头，不使用 F 型金属接头。",
+      "en": "The correct answers are A, B, and E. The F-type connector is a coaxial RF connector characterized by:\n1. A threaded (screw-on) coupling nut design (A).\n2. Standard deployment in satellite/cable TV and broadband Internet connections via cable modems (B).\n3. Termination on RG-6 or RG-59 coaxial cabling (E).\n\n• Bayonet-style (twist-and-lock) coupling (D) and usage in professional A/V, CCTV surveillance, and laboratory testing equipment (F) describe the BNC connector, not the F-type connector.\n• Twisted-pair cabling (C) uses RJ45 or RJ11 modular connectors."
+    },
+    "mnemonic": {
+      "zh": "口诀：同轴电缆两大接头别搞混——一圈圈拧螺丝的【F-type (Threaded/screw-on)】接【有线/卫星电视和 Cable 猫】；一拧卡扣锁死的【BNC (Bayonet twist-and-lock)】接【CCTV 监控和实验室仪器】！",
+      "en": "Exam Tip: F-type = Threaded (screw-on) + Coaxial + Cable/Satellite TV & Cable Modems. BNC = Bayonet (twist-and-lock) + CCTV/Lab equipment."
+    }
+  },
+  {
+    "id": 212,
+    "type": "multiple",
+    "stem": {
+      "zh": "以下列出的哪些答案指的是早期移动设备中使用的不可正反盲插（非可逆）连接器类型？（选择所有适用项）",
+      "en": "Which of the answers listed below refer(s) to (a) non-reversible connector type(s) used in older mobile devices? (Select all that apply)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "USB Type-A"
+      },
+      {
+        "key": "B",
+        "text": "MicroUSB"
+      },
+      {
+        "key": "C",
+        "text": "USB-C"
+      },
+      {
+        "key": "D",
+        "text": "MiniUSB"
+      },
+      {
+        "key": "E",
+        "text": "USB Type-B"
+      }
+    ],
+    "answer": [
+      "B",
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：早期移动设备 USB 接口类型（MiniUSB 与 MicroUSB）】\n正确答案是 B、D[cite: 94]。\n\n• 为什么选 B（MicroUSB）和 D（MiniUSB）：\n  - 题干包含两个限定条件：**① 不可正反盲插（non-reversible）** + ② 用于早期移动设备（used in older mobile devices）**。\n  - **MiniUSB（选 D）**：较早期的梯形小型接口，常见于老式数码相机、MP3 播放器、GPS 导航仪和早期的黑莓/功能手机，必须分清正反面才能插入。\n  - **MicroUSB（选 B）**：比 MiniUSB 更扁平、插拔寿命更高的梯形微型接口，在 USB-C 普及之前曾是绝大多数 Android 智能手机、平板电脑、蓝牙耳机和移动电源的标准接口，同样**不可正反盲插**。\n\n• 为什么不选 Option A（USB Type-A，您错选的项）和 Option E（USB Type-B，您错选的项）：\n  - 虽然 **USB Type-A 和标准 USB Type-B 确实也都是不可正反盲插的接口，但它们**并不是用于移动设备（mobile devices）的接口**——USB Type-A 是电脑主机和充电器端的大型扁平主控口，而标准 USB Type-B 是大型方形接口，主要用于桌面打印机、扫描仪和台式外置硬盘盒。\n\n• 为什么不选 Option C（USB-C）：\n  - USB-C 采用对称椭圆形设计，支持**正反盲插（Reversible）**，且用于现代新款移动设备，不符合题干要求。",
+      "en": "The correct answers are B (MicroUSB) and D (MiniUSB). Both MicroUSB and MiniUSB feature asymmetric, keyed trapezoidal shapes that are non-reversible (can only be inserted in one orientation) and were widely used on older mobile devices such as smartphones, tablets, digital cameras, MP3 players, and GPS units.\n\n• USB Type-A (A) and standard USB Type-B (E) are also non-reversible, but they are used on host PCs/chargers and full-size desktop peripherals (such as printers and scanners) rather than mobile devices.\n• USB-C (C) is a reversible connector used in modern devices."
+    },
+    "mnemonic": {
+      "zh": "口诀：审题抓全两个定语——既要【不可盲插 (Non-reversible)】又要【早期移动设备 (Older mobile devices)】，只有【MiniUSB】和【MicroUSB】！Type-A 接电脑，Type-B 接打印机！",
+      "en": "Exam Tip: Non-reversible connectors used in older mobile devices = MiniUSB and MicroUSB (Type-A = host PCs; Type-B = printers)."
+    }
+  },
+  {
+    "id": 213,
+    "type": "multiple",
+    "stem": {
+      "zh": "以下列出的哪些答案指的是静态随机存取存储器（SRAM）的典型特征？（选择所有适用项）",
+      "en": "Which of the answers listed below refer(s) to the characteristic feature(s) of Static Random-Access Memory (SRAM)? (Select all that apply)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Non-volatile storage media type"
+      },
+      {
+        "key": "B",
+        "text": "Faster than Dynamic Random-Access Memory (DRAM)"
+      },
+      {
+        "key": "C",
+        "text": "Widely used as the primary storage media (regular RAM modules installed in memory slots on the motherboard)"
+      },
+      {
+        "key": "D",
+        "text": "More expensive in comparison to Dynamic Random-Access Memory (DRAM)"
+      },
+      {
+        "key": "E",
+        "text": "Slower than Dynamic Random-Access Memory (DRAM)"
+      },
+      {
+        "key": "F",
+        "text": "Volatile storage media type"
+      },
+      {
+        "key": "G",
+        "text": "Utilized for CPU cache memory chips"
+      },
+      {
+        "key": "H",
+        "text": "Less expensive in comparison to Dynamic Random-Access Memory (DRAM)"
+      }
+    ],
+    "answer": [
+      "B",
+      "D",
+      "F",
+      "G"
+    ],
+    "explanation": {
+      "zh": "【考点：静态随机存取存储器（SRAM）核心架构与用途】\n正确答案是 B、D、F、G（共 4 项）[cite: 95]。\n\n• 为什么选 B、D、F、G：\n  1. **Faster than Dynamic Random-Access Memory (DRAM)（速度比动态随机存取存储器 DRAM 更快，选 B）**：SRAM 内部采用双稳态触发器（Flip-flop，通常每个比特需要 6 个晶体管）锁存数据，通电期间无需像 DRAM 那样周期性刷新电荷，因此读写延迟极低、速度远超 DRAM。\n  2. **More expensive in comparison to Dynamic Random-Access Memory (DRAM)（与 DRAM 相比价格更昂贵，选 D）**：由于单个存储单元晶体管数量多、芯片面积大且集成度低，SRAM 的单位容量制造成本非常高昂。\n  3. **Volatile storage media type（易失性存储介质类型，选 F）**：所有 RAM（包括 SRAM 和 DRAM）均为**易失性（Volatile）**存储器，一旦断电，内部保存的数据会立即全部丢失。\n  4. **Utilized for CPU cache memory chips（用于 CPU 高速缓存芯片，选 G）**：正因为 SRAM 速度极快但成本高、容量小，它被直接集成在处理器内部充当 **CPU 一级/二级/三级高速缓存（L1/L2/L3 Cache）**。\n\n• 为什么不选 Option C（广泛用作主存储器，即安装在主板内存插槽中的常规内存条，您错选的项）以及 A、E、H：\n  - **选项 C**：插在主板内存插槽（DIMM/SO-DIMM）上的常规系统主内存条全部采用 **DRAM（SDRAM / DDR 系列）**，因为 SRAM 成本太高、体积太大，不可能做成几十 GB 的主板内存条。",
+      "en": "The correct answers are B, D, F, and G. Static Random-Access Memory (SRAM) uses multi-transistor flip-flop circuits rather than capacitors and is characterized by:\n1. Being significantly faster than DRAM (B) because it requires no periodic refresh cycles.\n2. Being more expensive than DRAM (D) due to higher transistor count and lower storage density.\n3. Being a volatile storage medium (F) that loses its contents when power is removed.\n4. Being utilized for ultra-fast CPU cache memory (L1, L2, L3 cache) (G).\n\n• Regular RAM modules installed in motherboard memory slots (C) use DRAM (DDR SDRAM), not SRAM."
+    },
+    "mnemonic": {
+      "zh": "口诀：【SRAM】四大标签——【易失性 (Volatile)】、【比 DRAM 更快 (Faster)】、【比 DRAM 更贵 (More expensive)】、【专做 CPU 高速缓存 (CPU cache)】！插主板内存槽的内存条是 DRAM！",
+      "en": "Exam Tip: SRAM = Volatile + Faster than DRAM + More expensive than DRAM + Used for CPU cache."
+    }
+  },
+  {
+    "id": 214,
+    "type": "multiple",
+    "stem": {
+      "zh": "以下哪些答案描述了动态随机存取存储器（DRAM）的特征？（选择所有适用项）",
+      "en": "Which of the following answers describes(s) the characteristics of Dynamic Random-Access Memory (DRAM)? (Select all that apply)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Volatile storage media type"
+      },
+      {
+        "key": "B",
+        "text": "Utilized for CPU cache memory chips"
+      },
+      {
+        "key": "C",
+        "text": "More expensive in comparison to Static Random-Access Memory (SRAM)"
+      },
+      {
+        "key": "D",
+        "text": "Non-volatile storage media type"
+      },
+      {
+        "key": "E",
+        "text": "Slower than Static Random-Access Memory (SRAM)"
+      },
+      {
+        "key": "F",
+        "text": "Widely used as the primary storage media (regular RAM modules installed in memory slots on the motherboard)"
+      },
+      {
+        "key": "G",
+        "text": "Faster than Static Random-Access Memory (SRAM)"
+      },
+      {
+        "key": "H",
+        "text": "Less expensive in comparison to Static Random-Access Memory (SRAM)"
+      }
+    ],
+    "answer": [
+      "A",
+      "E",
+      "F",
+      "H"
+    ],
+    "explanation": {
+      "zh": "【考点：动态随机存取存储器（DRAM）核心架构与用途】\n正确答案是 A、E、F、H（共 4 项）[cite: 96]。\n\n• 为什么选 A、E、F、H：\n  1. **Volatile storage media type（易失性存储介质类型，选 A，您漏选的项）**：DRAM 利用微型电容存储电荷来表示 0 和 `1`，不仅断电后数据立即清空，甚至在通电状态下每隔几毫秒就必须刷新补充电荷，因此属于典型的**易失性（Volatile）**存储器。\n  2. **Slower than Static Random-Access Memory (SRAM)（速度比静态随机存取存储器 SRAM 慢，选 E）**：由于电容充放电及周期性刷新开销，DRAM 的访问延迟高于 SRAM。\n  3. **Widely used as the primary storage media (regular RAM modules installed in memory slots on the motherboard)（广泛用作主存储器，即安装在主板内存插槽中的常规内存条，选 F，您漏选的项）**：DRAM 结构极简（每个比特仅需 1 个晶体管 + 1 个电容），集成度极高，因此是现代 PC、服务器和手机中**主系统内存（如 DDR4/DDR5 DIMM 内存条）**的标准选择。\n  4. **Less expensive in comparison to Static Random-Access Memory (SRAM)（与 SRAM 相比价格更便宜，选 H）**：单晶体管加单电容的极高密度使 DRAM 的每 GB 制造成本远低于 SRAM。\n\n• 为什么不选 Option D（Non-volatile storage media type / 非易失性存储介质，您错选的项）以及 B、C、G：\n  - **非易失性（Non-volatile，D）**指的是断电后仍能长期保存数据的存储介质（如 SSD 闪存、机械硬盘 HDD、ROM/BIOS 芯片），**无论是 SRAM 还是 DRAM，只要叫 RAM（除 NVRAM 外），就全都是易失性（Volatile）的**！",
+      "en": "The correct answers are A, E, F, and H. Dynamic Random-Access Memory (DRAM) stores each bit in a tiny capacitor paired with a single transistor and is characterized by:\n1. Being a volatile storage medium (A) that requires constant electrical refreshing and loses data when powered off.\n2. Being slower than SRAM (E) due to capacitor refresh latency.\n3. Being widely used as primary system memory (regular DIMM/SO-DIMM RAM modules installed in motherboard slots) (F).\n4. Being less expensive per gigabyte than SRAM (H) due to its simple one-transistor, one-capacitor cell design.\n\n• Non-volatile storage (D) describes SSDs, HDDs, and ROM—all standard RAM types (both DRAM and SRAM) are volatile."
+    },
+    "mnemonic": {
+      "zh": "口诀：记住【所有常规 RAM（SRAM 和 DRAM）全都是易失性 (Volatile)】！而【DRAM】的另外三大标签是【比 SRAM 慢】、【比 SRAM 便宜】、【插在主板内存槽做主内存条】！",
+      "en": "Exam Tip: DRAM = Volatile + Slower than SRAM + Less expensive than SRAM + Used for regular motherboard RAM modules."
+    }
+  },
+  {
+    "id": 215,
+    "type": "single",
+    "stem": {
+      "zh": "SDRAM 的向后兼容特性为使用不同类型的 SDRAM 内存条组装 PC 提供了便捷方式。",
+      "en": "SDRAM's backward compatibility feature provides a convenient way to build PCs using different types of SDRAM modules."
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": {
+      "zh": "【考点：各代 SDRAM（DDR / DDR2 / DDR3 / DDR4 / DDR5）代际互不兼容性】\n正确答案是 B（False / 错误）[cite: 97]。\n\n• 为什么选 False：\n  - **各代 SDRAM 之间完全不具备向后兼容性（Neither backward nor forward compatible）**！无论是早期的 SDR SDRAM，还是后续的 DDR、DDR2、DDR3、DDR4 和 DDR5，每一代内存的工作电压、电气信号协议、引脚数量以及金手指上的**防呆缺口（Key notch）位置**都互不相同。\n  - 主板内存插槽只支持特定某一代 DDR 规格，不同代际的 SDRAM 内存条既不能混插，也无法物理插入其他代际的内存插槽中（强行按压会损坏主板或内存条），因此题干所谓的“向后兼容特性”完全错误。\n\n• 为什么不选 True（您错选的项）：\n  - DDR 内存与 USB 接口不同，USB 可以向下兼容，但**每一代 DDR 内存之间绝对互不兼容**。",
+      "en": "The correct answer is B (False). Different generations of SDRAM (SDR, DDR, DDR2, DDR3, DDR4, and DDR5) are NOT backward or forward compatible with each other. Each generation uses different operating voltages, signaling standards, pin counts, and physical key-notch positions on the module edge to prevent installing incompatible memory into a motherboard slot."
+    },
+    "mnemonic": {
+      "zh": "口诀：考纲铁律——【所有 DDR/SDRAM 代际之间绝对互不兼容 (NOT backwards compatible)】！每代缺口位置和电压都不同，绝不能混用（False）！",
+      "en": "Exam Tip: DDR/SDRAM generations are NEVER backward compatible—each has a unique notch position, pinout, and voltage (False)."
+    }
+  },
+  {
+    "id": 216,
+    "type": "multiple",
+    "stem": {
+      "zh": "以下哪些答案指的是第三代双倍数据速率同步动态随机存取存储器（DDR3 SDRAM）？（选择 3 项）",
+      "en": "Which of the following answers refer to the Double Data Rate 3 Synchronous Dynamic Random-Access Memory (DDR3 SDRAM)? (Select 3 answers)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "16 GB maximum capacity per memory module"
+      },
+      {
+        "key": "B",
+        "text": "240 contact pins"
+      },
+      {
+        "key": "C",
+        "text": "A notch on the RAM module contact surface prevents the installation of incompatible memory types"
+      },
+      {
+        "key": "D",
+        "text": "288 contact pins"
+      },
+      {
+        "key": "E",
+        "text": "32 GB maximum capacity per memory module"
+      },
+      {
+        "key": "F",
+        "text": "Backwards compatible with earlier DDR SDRAM versions"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanation": {
+      "zh": "【考点：DDR3 SDRAM 物理与容量规格参数】\n正确答案是 A、B、C[cite: 98]。\n\n• 为什么选 A、B、C：\n  1. 16 GB maximum capacity per memory module（单根内存条最大容量为 16 GB，选 A，您漏选的项）**：在 CompTIA A+ 考纲针对标准消费级无缓冲桌面 DIMM 内存的对比标准中，**DDR3 单条最大容量为 16 GB**（后续 DDR4 翻倍为 32 GB，DDR5 再翻倍为 64 GB）。\n  2. **240 contact pins（240 个接触引脚，选 B）**：台式机标准的 DDR3 DIMM 内存条金手指共有 **240 个引脚**（笔记本 DDR3 SO-DIMM 为 204 针）。\n  3. **A notch on the RAM module contact surface prevents the installation of incompatible memory types（内存条接触面上的防呆缺口可防止安装不兼容的内存类型，选 C）**：所有 DDR 内存条底部均设有特定位置的防呆缺口（Key notch），确保只能插入对应代际的主板内存插槽。\n\n• 为什么不选 Option F（向后兼容早期 DDR SDRAM 版本，您错选的项）以及 D、E：\n  - **选项 F**：正如上一题所述，**DDR3 绝不向后兼容 DDR2 或 DDR1**（虽然 DDR2 和 DDR3 桌面版都是 240 针，但防呆缺口位置不同且电气标准不兼容）。\n  - **选项 D（288 contact pins）**和 **选项 E（32 GB maximum capacity）**：属于下一代 **DDR4 SDRAM 的规格参数（即下一题）。",
+      "en": "The correct answers are A, B, and C. Standard desktop DDR3 SDRAM DIMM modules are characterized by:\n1. A maximum module capacity of 16 GB per standard unbuffered DIMM (A).\n2. 240 contact pins on the module edge connector (B) (204 pins for laptop SO-DIMMs).\n3. A precisely positioned key notch on the contact edge to prevent installing incompatible memory generations (C).\n\n• DDR3 is NOT backwards compatible with earlier DDR versions (F).\n• 288 contact pins (D) and 32 GB maximum module capacity (E) apply to DDR4 SDRAM."
+    },
+    "mnemonic": {
+      "zh": "口诀：DDR 桌面内存阶梯表——【DDR3 = 240 针 + 单条最大 16 GB】、【DDR4 = 288 针 + 单条最大 32 GB】、【DDR5 = 288 针 + 单条最大 64 GB】！三代全都有防呆缺口且全都不向下兼容！",
+      "en": "Exam Tip: DDR3 = 240 pins + 16 GB max per module + Key notch (NOT backward compatible)."
+    }
+  },
+  {
+    "id": 217,
+    "type": "multiple",
+    "stem": {
+      "zh": "第四代双倍数据速率同步动态随机存取存储器（DDR4 SDRAM）的典型特征有哪些？（选择 3 项）",
+      "en": "What are the characteristic features of the Double Data Rate 4 Synchronous Dynamic Random-Access Memory (DDR4 SDRAM)? (Select 3 answers)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "32 GB maximum capacity per memory module"
+      },
+      {
+        "key": "B",
+        "text": "288 contact pins"
+      },
+      {
+        "key": "C",
+        "text": "64 GB maximum capacity per memory module"
+      },
+      {
+        "key": "D",
+        "text": "A notch on the RAM module contact surface prevents the installation of incompatible memory types"
+      },
+      {
+        "key": "E",
+        "text": "240 contact pins"
+      },
+      {
+        "key": "F",
+        "text": "Backwards compatible with earlier DDR SDRAM versions"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：DDR4 SDRAM 物理与容量规格参数】\n正确答案是 A、B、D[cite: 99]。\n\n• 为什么选 A、B、D：\n  1. 32 GB maximum capacity per memory module（单根内存条最大容量为 32 GB，选 A，您漏选的项）**：相比 DDR3 的 16 GB，标准消费级无缓冲桌面 **DDR4 内存条的单条最大容量翻倍提升至 32 GB**。\n  2. **288 contact pins（288 个接触引脚，选 B）**：台式机 DDR4 DIMM 内存条将引脚数量从 DDR3 的 240 针增加到 **288 针**（笔记本 DDR4 SO-DIMM 为 260 针）。\n  3. **A notch on the RAM module contact surface prevents the installation of incompatible memory types（内存条接触面上的防呆缺口可防止安装不兼容的内存类型，选 D）**：DDR4 将防呆缺口移动到不同于 DDR3 的位置，从物理上杜绝误插。\n\n• 为什么不选 Option F（向后兼容早期 DDR SDRAM 版本，您错选的项）以及 C、E：\n  - **选项 F**：DDR4 同样**不向后兼容 DDR3 或更早期的 DDR 内存。\n  - 选项 C（64 GB maximum capacity）**：属于下一代 **DDR5 SDRAM 的单条最大容量（即下一题）。\n  - 选项 E（240 contact pins）**：属于早期 **DDR2 / DDR3 的引脚数。",
+      "en": "The correct answers are A, B, and D. Standard desktop DDR4 SDRAM DIMM modules feature:\n1. A maximum capacity of 32 GB per standard unbuffered module (A).\n2. 288 contact pins on the edge connector (B) (260 pins for laptop SO-DIMMs).\n3. A relocated key notch on the contact surface to prevent installation into incompatible memory slots (D).\n\n• DDR4 is NOT backwards compatible with DDR3 or earlier versions (F).\n• 64 GB maximum module capacity (C) applies to DDR5, and 240 contact pins (E) applies to DDR2/DDR3."
+    },
+    "mnemonic": {
+      "zh": "口诀：到了【DDR4】，引脚从 240 升到【288 针】，单条容量从 16 GB 翻倍到【32 GB】，照样有【防呆缺口】且【绝不向下兼容】！",
+      "en": "Exam Tip: DDR4 = 288 pins + 32 GB max per module + Key notch (NOT backward compatible)."
+    }
+  },
+  {
+    "id": 218,
+    "type": "multiple",
+    "stem": {
+      "zh": "以下列出的哪些答案指的是第五代双倍数据速率同步动态随机存取存储器（DDR5 SDRAM）？（选择 3 项）",
+      "en": "Which of the answers listed below refer to Double Data Rate 5 Synchronous Dynamic Random-Access Memory (DDR5 SDRAM)? (Select 3 answers)"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Backwards compatible with earlier DDR SDRAM versions"
+      },
+      {
+        "key": "B",
+        "text": "64 GB maximum capacity per memory module"
+      },
+      {
+        "key": "C",
+        "text": "288 contact pins"
+      },
+      {
+        "key": "D",
+        "text": "A notch on the RAM module contact surface prevents the installation of incompatible memory types"
+      },
+      {
+        "key": "E",
+        "text": "240 contact pins"
+      },
+      {
+        "key": "F",
+        "text": "32 GB maximum capacity per memory module"
+      }
+    ],
+    "answer": [
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：DDR5 SDRAM 物理与容量规格参数】\n正确答案是 B、C、D[cite: 100]。\n\n• 为什么选 B、C、D：\n  1. **64 GB maximum capacity per memory module（单根内存条最大容量为 64 GB，选 B，您漏选的项）**：在 CompTIA A+ 考纲针对标准消费级无缓冲桌面 DIMM 的对比序列中，**DDR5 单条最大容量再次翻倍至 64 GB**（对比 DDR3 的 16 GB 和 DDR4 的 32 GB）。\n  2. **288 contact pins（288 个接触引脚，选 C）**：台式机 DDR5 DIMM 内存条延续了 **288 针**的引脚总数（笔记本 DDR5 SO-DIMM 为 262 针），但内部引脚定义与供电架构已彻底重构。\n  3. **A notch on the RAM module contact surface prevents the installation of incompatible memory types（内存条接触面上的防呆缺口可防止安装不兼容的内存类型，选 D）**：DDR5 将防呆缺口进一步微调至新位置，防止误插入 DDR4 主板插槽。\n\n• 为什么不选 Option A（向后兼容早期 DDR SDRAM 版本，您错选的项）以及 E、F：\n  - **选项 A**：尽管 DDR5 和 DDR4 桌面版同样是 288 针，但**DDR5 绝不向后兼容 DDR4 或任何早期 DDR 版本**。\n  - **选项 E（240 contact pins）**：是 DDR3 的引脚数；**选项 F（32 GB maximum capacity）**：是 DDR4 的单条容量。",
+      "en": "The correct answers are B, C, and D. Standard desktop DDR5 SDRAM DIMM modules are characterized by:\n1. A maximum capacity of 64 GB per standard unbuffered module (B).\n2. 288 contact pins on the edge connector (C) (262 pins for laptop SO-DIMMs).\n3. A distinct key notch position on the contact edge preventing installation into DDR4 or older slots (D).\n\n• DDR5 is NOT backwards compatible with DDR4 or earlier versions (A).\n• 240 contact pins (E) applies to DDR3, and 32 GB maximum module capacity (F) applies to DDR4."
+    },
+    "mnemonic": {
+      "zh": "口诀：三连刷完全打通——【DDR3 = 240 针 / 16 GB】、【DDR4 = 288 针 / 32 GB】、【DDR5 = 288 针 / 64 GB】！全系带【防呆缺口】，全系【不向下兼容】！",
+      "en": "Exam Tip: DDR5 = 288 pins + 64 GB max per module + Key notch (NOT backward compatible)."
+    }
+  },
+  {
+    "id": 219,
+    "type": "single",
+    "stem": {
+      "zh": "某些类型的 RAM 使用一个额外的位（bit）来检测是否发生了数据错误。这个额外的位存储了给定数据串（通常为一个字节）中置为 1 的位数信息。在处理的不同阶段检查该位的值可以检测数据损坏。这个额外位的名称是什么？",
+      "en": "Certain types of RAM use an additional bit to detect whether a data error has occurred. This extra bit stores information about the count of bits set to 1 in a given data string (typically one byte). Examining the value of this bit at different stages of processing allows for the detection of data corruption. What is the name of that extra bit?"
+    },
+    "options": [
+      {
+        "key": "A",
+        "text": "Checksum"
+      },
+      {
+        "key": "B",
+        "text": "Digest"
+      },
+      {
+        "key": "C",
+        "text": "CRC"
+      },
+      {
+        "key": "D",
+        "text": "Parity bit"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": {
+      "zh": "【考点：内存错误检测机制之奇偶校验位（Parity Bit）】\n正确答案是 D（Parity bit / 奇偶校验位）[cite: 101]。\n\n• 为什么选 Parity bit（奇偶校验位）：\n  - 题干精确描述了**奇偶校验内存（Parity RAM）**的工作原理：在每 8 个数据位（1 个字节 / 1 Byte）后面额外附加 1 个校验位（即第 9 位，Parity bit）**，用来记录该字节中比特 `1` 的个数是奇数还是偶数（奇校验 Odd parity 或偶校验 Even parity）。当内存控制器读取该字节时，重新统计 `1` 的数量并与该**奇偶校验位**比对，一旦发现不匹配，就能立刻检测到单比特数据翻转损坏（注：基础 Parity RAM 只能“检测”错误，而更高级的 ECC 内存则能进一步“自动纠正”单比特错误）。\n\n• 为什么不选 CRC（Cyclic Redundancy Check / 循环冗余校验，您错选的项）：\n  - **CRC 是网络数据链路层（如以太网帧尾的 FCS）和磁盘存储中广泛使用的**多比特多项式除法校验码**（通常为 16 位或 32 位校验值），而不是内存字节中通过统计 1 的个数生成的“单个额外比特”。\n\n• 为什么不选 Checksum 或 Digest：\n  - **选项 A（Checksum / 校验和）**：是通过二进制加法求和生成的**多比特校验字段**（常见于 IPv4、TCP、UDP 数据包头部），不是单个奇偶校验位。\n  - **选项 B（Digest / 消息摘要）**：是加密哈希算法（如 SHA-256、MD5）生成的固定长度散列值（通常为 128 至 512 位），用于验证文件或消息完整性。",
+      "en": "The correct answer is D (Parity bit). In parity-checking RAM, an extra 9th bit (the parity bit) is appended to every 8-bit byte to record whether the total count of 1-bits is even or odd. By recalculating the count of 1s during read operations and comparing it against the parity bit, the memory controller can detect single-bit data corruption.\n\n• CRC (Cyclic Redundancy Check, C) is a multi-bit polynomial checksum used in network frames (Ethernet FCS) and storage devices rather than a single bit per byte.\n• Checksum (A) is a multi-bit arithmetic sum used in network headers (IP/TCP/UDP), and Digest (B) is a cryptographic hash output (e.g., SHA-256)."
+    },
+    "mnemonic": {
+      "zh": "口诀：内存里每 8 位（1 字节）额外多加【1 个 bit】、专门数【1 的个数是奇数还是偶数】来查错的，就叫【奇偶校验位 (Parity bit)】！CRC 和 Checksum 都是多位校验值！",
+      "en": "Exam Tip: Extra single bit per byte tracking the count of 1s in RAM = Parity bit."
+    }
   }
 ]
